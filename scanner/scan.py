@@ -32,7 +32,8 @@ DATA = ROOT / "docs" / "data.json"
 MODEL = os.environ.get("MODEL", "claude-haiku-5-5")       # kleines, günstiges Modell
 MAX_NEW = int(os.environ.get("MAX_NEW", "4"))             # max. neue Artikel pro Lauf
 MAX_AGE_H = int(os.environ.get("MAX_AGE_H", "72"))        # nur Funde der letzten X Stunden
-MAX_ITEMS = int(os.environ.get("MAX_ITEMS", "300"))       # so viele Einträge pro Rubrik behalten
+MAX_ITEMS = int(os.environ.get("MAX_ITEMS", "300"))
+STAND_H = int(os.environ.get("STAND_H", "24"))          # „Stand der Technik“ alle X Stunden überarbeiten       # so viele Einträge pro Rubrik behalten
 UA = {"User-Agent": "state-of-the-ai-scanner/1.0 (+https://github.com)"}
 NOW = dt.datetime.now(dt.timezone.utc)
 
@@ -289,6 +290,59 @@ def slug(s):
 
 
 # ---------------- 5. Speichern ----------------
+def update_bereiche(data):
+    """Einmal am Tag: „Stand der Technik“ je Kategorie anhand der neuesten Artikel überarbeiten."""
+    meta = data.get("meta") or {}
+    last = parse_time(meta.get("standAktualisiert") or "")
+    if last and (NOW - last).total_seconds() < STAND_H * 3600:
+        return meta.get("standAktualisiert")
+    bereiche = data.get("bereiche") or []
+    if not bereiche:
+        return meta.get("standAktualisiert")
+    recent = sorted((d for col in ("news", "radar", "projekte") for d in data[col]), key=lambda d: d.get("hinzugefuegt", ""), reverse=True)[:40]
+    funde = "\n".join(f"- [{d.get('hinzugefuegt','')[:10]}] {d.get('titel','')}: {d.get('kurz','')[:200]}" for d in recent)
+    aktuell = json.dumps([{k: b.get(k) for k in ("id", "name", "maximum", "status", "statusText", "tools")} for b in bereiche], ensure_ascii=False)
+    prompt = f"""Du pflegst bei „State of the AI“ die Übersicht „Stand der Technik“: Für jede Kategorie steht dort, was KI darin heute maximal kann.
+
+Aktueller Stand:
+{aktuell}
+
+Neueste Funde der Redaktion:
+{funde}
+
+Aktualisiere jede Kategorie nur dort, wo die Funde einen echten Fortschritt belegen. Sonst übernimm sie unverändert.
+Regeln:
+- Gleiche ids, gleiche Kategorien, keine neuen erfinden.
+- "maximum": 1–2 kurze deutsche Sätze, konkret und ohne Werbesprache.
+- "status": "ok" (Profi-Niveau, sofort nutzbar) oder "mid" (geht, aber mit Einschränkungen).
+- "statusText": 1–3 Wörter, z. B. „Profi-Niveau“, „Mit Nacharbeit“, „Kurz: ja“.
+- "tools": 2–5 aktuelle Spitzenwerkzeuge oder -modelle, nur solche, die im aktuellen Stand oder in den Funden vorkommen.
+- Nichts erfinden, was nicht im Material steht.
+Gib eine Liste von Objekten mit den Feldern id, maximum, status, statusText, tools zurück."""
+    try:
+        res = ask(prompt, 3000)
+    except Exception as e:  # noqa
+        log("Stand-Update fehlgeschlagen:", e); return meta.get("standAktualisiert")
+    if isinstance(res, dict):
+        res = res.get("bereiche") or res.get("items") or []
+    by_id = {b.get("id"): b for b in bereiche}
+    changed = 0
+    for r in res if isinstance(res, list) else []:
+        if not isinstance(r, dict) or r.get("id") not in by_id:
+            continue
+        b = by_id[r["id"]]
+        neu = {
+            "maximum": str(r.get("maximum") or b.get("maximum", ""))[:300],
+            "status": r.get("status") if r.get("status") in ("ok", "mid") else b.get("status"),
+            "statusText": str(r.get("statusText") or b.get("statusText", ""))[:30],
+            "tools": [str(t)[:40] for t in (r.get("tools") or b.get("tools") or [])][:5],
+        }
+        if any(neu[k] != b.get(k) for k in neu):
+            b.update(neu); changed += 1
+    log(f"Stand der Technik geprüft: {changed} Kategorien aktualisiert")
+    return NOW.replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
 def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
     for col in ("news", "radar", "projekte", "bereiche"):
@@ -325,7 +379,8 @@ def main():
         log("Kein ANTHROPIC_API_KEY gesetzt – es werden keine Artikel geschrieben.")
     for col in ("news", "radar", "projekte"):
         data[col] = sorted(data[col], key=lambda d: d.get("hinzugefuegt", ""), reverse=True)[:MAX_ITEMS]
-    data["meta"] = {"letzterScan": NOW.replace(microsecond=0).isoformat().replace("+00:00", "Z"), "neueFunde": added}
+    stand = update_bereiche(data) if os.environ.get("ANTHROPIC_API_KEY") else (data.get("meta") or {}).get("standAktualisiert")
+    data["meta"] = {"letzterScan": NOW.replace(microsecond=0).isoformat().replace("+00:00", "Z"), "neueFunde": added, "standAktualisiert": stand}
     DATA.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     log(f"Fertig: {added} neue Einträge")
 
