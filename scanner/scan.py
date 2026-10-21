@@ -250,7 +250,7 @@ Gemeinsame Felder:
 - "artikel": Liste von Absätzen (150–350 Wörter gesamt), Zwischenüberschriften als eigener Eintrag "## Überschrift"
 - "quellen": [{"titel": ..., "url": ...}] (mindestens die Original-URL)
 - "demo": einer von "video","bild","musik","stimme","code","game","modell","3d","agent","security","paper"
-- "machen": 2–3 kurze Sätze: was kann ein Kreativer/eine Privatperson damit konkret tun?
+- "machen": LISTE mit 2–3 kurzen Punkten (je ein Satz): was kann ein Kreativer/eine Privatperson damit konkret tun?
 - "ausprobieren" (nur wenn es ein nutzbares Tool gibt): {"prompt": kopierbarer Beispiel-Prompt, "tool": Name, "url": offizielle Startseite}
 - "vorschau": Ergebnis-Vorschau passend zum Eintrag. Eine der Szenen:
    {"szene":"terminal","titel":"<programm>","zeilen":["> Eingabe","✓ Erfolg","⚠ Warnung","- entfernt","+ hinzugefügt","● Status"]}
@@ -282,6 +282,15 @@ Seiteninhalt (Auszug): {text}
 
 Gib NUR ein JSON-Objekt zurück mit diesen Feldern:{SCHEMA}"""
     return ask(prompt, 3500)
+
+
+def norm_list(x):
+    """„machen“ immer als Liste kurzer Punkte speichern."""
+    if isinstance(x, list):
+        return [str(i).strip() for i in x if str(i).strip()][:4]
+    if isinstance(x, str) and x.strip():
+        return [t.strip() for t in re.split(r"(?<=[.!?])\s+", x.strip()) if t.strip()][:4]
+    return []
 
 
 def slug(s):
@@ -366,6 +375,8 @@ def main():
                 log("Artikel fehlgeschlagen:", c["titel"], e); continue
             if not isinstance(art, dict) or art.get("skip") or not art.get("titel"):
                 continue
+            art["titel"] = re.sub(r"^State of the AI:\s*", "", art["titel"]).strip()
+            art["machen"] = norm_list(art.get("machen"))
             art["id"] = slug(art["titel"])
             art["hinzugefuegt"] = NOW.replace(microsecond=0).isoformat().replace("+00:00", "Z")
             art.setdefault("quellen", [{"titel": c["quelle"], "url": c["url"]}])

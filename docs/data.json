@@ -24,7 +24,10 @@
     }
    ],
    "demo": "modell",
-   "machen": "Wer mit Sensor-, Verkaufs- oder Finanzdaten arbeitet, kann solche Modelle für eigene Prognosen testen. Für Privatpersonen ist das Thema vor allem dann relevant, wenn Zeitreihen wie Energie- oder Verbrauchsdaten ausgewertet werden sollen.",
+   "machen": [
+    "Wer mit Sensor-, Verkaufs- oder Finanzdaten arbeitet, kann solche Modelle für eigene Prognosen testen.",
+    "Für Privatpersonen ist das Thema vor allem dann relevant, wenn Zeitreihen wie Energie- oder Verbrauchsdaten ausgewertet werden sollen."
+   ],
    "bereich": "Text",
    "datum": "2026-10-15",
    "vorschau": {
@@ -546,7 +549,10 @@
     }
    ],
    "demo": "agent",
-   "machen": "Als Privatperson lässt sich das Paper vor allem als Forschungsstand verfolgen, da laut Abstract Code und Daten veröffentlicht werden. Ein direkt nutzbares Werkzeug wird im Material nicht genannt.",
+   "machen": [
+    "Als Privatperson lässt sich das Paper vor allem als Forschungsstand verfolgen, da laut Abstract Code und Daten veröffentlicht werden.",
+    "Ein direkt nutzbares Werkzeug wird im Material nicht genannt."
+   ],
    "vorschau": {
     "szene": "balken",
     "titel": "Laut Paper: Tokenverbrauch gegenüber Vergleichssystemen (Reduktion)",
@@ -594,7 +600,7 @@
    "hinzugefuegt": "2026-10-21T20:11:40Z"
   },
   {
-   "titel": "State of the AI: Agent S4 entwickelt Computer-Use-Oberflächen aus Erfahrung",
+   "titel": "Agent S4 entwickelt Computer-Use-Oberflächen aus Erfahrung",
    "kurz": "Ein Forschungspapier beschreibt Agent S4, das Schnittstellen für Computer-Use-Agenten selbst entwickelt. Laut Angaben der Autoren steigt damit die Leistung eines offenen Modells deutlich.",
    "artikel": [
     "Computer-Use-Agenten arbeiten bisher mit Schnittstellen, die Menschen von Hand festlegen. Das Papier nennt zwei Beispiele: Ein Agent tippt eine Tabellenzelle nach der anderen, obwohl eine einzelne Codezeile reichen würde, oder er gibt eine ganze Datei aus, um eine einzige Funktion zu finden.",
@@ -616,7 +622,10 @@
     }
    ],
    "demo": "agent",
-   "machen": "Wer Computer-Use-Agenten baut oder testet, kann den veröffentlichten Code auf GitHub prüfen. Privatpersonen können das Thema als Beispiel dafür nutzen, wie Agenten wiederkehrende Arbeitsschritte automatisieren.",
+   "machen": [
+    "Wer Computer-Use-Agenten baut oder testet, kann den veröffentlichten Code auf GitHub prüfen.",
+    "Privatpersonen können das Thema als Beispiel dafür nutzen, wie Agenten wiederkehrende Arbeitsschritte automatisieren."
+   ],
    "vorschau": {
     "szene": "balken",
     "titel": "OSWorld V2, binärer Erfolgswert",
@@ -691,7 +700,10 @@
     }
    ],
    "demo": "bild",
-   "machen": "Mit ComfyUI oder Diffusers kann man Bilder aus Textbeschreibungen erzeugen. Die 8-Schritt-LoRA verkürzt die Rechenzeit deutlich gegenüber den 50 Schritten des Vollmodells.",
+   "machen": [
+    "Mit ComfyUI oder Diffusers kann man Bilder aus Textbeschreibungen erzeugen.",
+    "Die 8-Schritt-LoRA verkürzt die Rechenzeit deutlich gegenüber den 50 Schritten des Vollmodells."
+   ],
    "ausprobieren": {
     "prompt": "a tabby cat holding a sign that says KROMOSS",
     "tool": "Hugging Face Diffusers",
@@ -777,7 +789,10 @@
     }
    ],
    "demo": "code",
-   "machen": "Wer MoE-Modelle lokal auf einer einzelnen Grafikkarte betreiben möchte, kann den veröffentlichten Code ausprobieren und die Ergebnisse mit eigener Hardware prüfen. Für Privatpersonen ist das vor allem ein Hinweis, welche Techniken künftig größere Modelle auf Consumer-Hardware bringen könnten.",
+   "machen": [
+    "Wer MoE-Modelle lokal auf einer einzelnen Grafikkarte betreiben möchte, kann den veröffentlichten Code ausprobieren und die Ergebnisse mit eigener Hardware prüfen.",
+    "Für Privatpersonen ist das vor allem ein Hinweis, welche Techniken künftig größere Modelle auf Consumer-Hardware bringen könnten."
+   ],
    "vorschau": {
     "szene": "balken",
     "titel": "Zeit pro Ausgabe-Token (TPOT), Speedup laut Paper",
