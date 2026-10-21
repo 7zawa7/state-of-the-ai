@@ -465,6 +465,154 @@
  ],
  "radar": [
   {
+   "titel": "Kromoss: Feinabstimmung von MOSS-Image mit 8-Schritt-Turbo-LoRAs",
+   "kurz": "Kromoss ist eine vollständige Feinabstimmung des Bildmodells MOSS-Image-Base für 1024 px, die auf Hugging Face mit 199 Likes im Trend liegt. Zwei LoRA-Dateien erlauben die Bilderzeugung in nur 8 Schritten.",
+   "artikel": [
+    "Das Modell Kromoss basiert auf MOSS-Image-Base vom OpenMOSS-Team und ist eine Text-zu-Bild-Variante. Der Entwickler lodestones hat alle Parameter des Transformers feinabgestimmt, und zwar bei 1024 px mit 704.000 Trainingsbildern im Checkpoint bei Update 11000. Laut Herstellerangabe ist es ein Drop-in-Ersatz für MOSS-Image-SFT, weil Architektur, Pipeline, Textencoder (Qwen3.5-9B) und VAE gleich bleiben.",
+    "## Schnellere Erzeugung mit LoRAs",
+    "Das Repository enthält zwei Turbo-LoRAs, die aus MOSS-Image-Base destilliert wurden. Mit ihnen reichen 8 Schritte und CFG 1, ein Negativ-Zweig entfällt. Die empfohlene Datei 8-steps-dmd2-lora wurde zusätzlich mit einem GAN-Diskriminator gegen echte Bilder nachtrainiert. Laut Angabe des Autors bringt sie etwas mehr Kontrast und Detail.",
+    "## Messwerte",
+    "Im PartiPrompts-Test mit 100 Prompts und dem CLIP-ViT-L/14-Score (Herstellerangabe) erreicht das volle Kromoss-Modell mit 50 Schritten 27,90. Mit der DMD2-LoRA in 8 Schritten steigt der Wert auf 28,13, der höchste Wert der Tabelle. Das Basismodell MOSS-Image-Base kommt bei 50 Schritten und CFG 3 auf 27,19.",
+    "## Nutzung",
+    "Kromoss lässt sich über Diffusers mit einem eigenen Custom-Pipeline-Code laden, außerdem gibt es fertige Single-File-Dateien für ComfyUI, darunter eine int8-Variante mit 5,4 GB. Die LoRAs sollen nicht in die bf16-Gewichte eingerechnet werden, da der Effekt nahe an der Rundungsgenauigkeit von bf16 liegt. Laut Lizenzangabe stehen Gewichte und Inferenzcode unter Apache 2.0.",
+    "## Einordnung",
+    "Die Zahlen stammen aus dem Modell-Repository des Entwicklers. Unabhängige Auswertungen liegen im Material nicht vor."
+   ],
+   "quellen": [
+    {
+     "titel": "lodestones/Kromoss auf Hugging Face",
+     "url": "https://huggingface.co/lodestones/Kromoss"
+    }
+   ],
+   "demo": "bild",
+   "machen": "Mit ComfyUI oder Diffusers kann man Bilder aus Textbeschreibungen erzeugen. Die 8-Schritt-LoRA verkürzt die Rechenzeit deutlich gegenüber den 50 Schritten des Vollmodells.",
+   "ausprobieren": {
+    "prompt": "a tabby cat holding a sign that says KROMOSS",
+    "tool": "Hugging Face Diffusers",
+    "url": "https://huggingface.co/lodestones/Kromoss"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "PartiPrompts-Score (CLIP ViT-L/14, höher = besser)",
+    "balken": [
+     {
+      "label": "MOSS-Image-Base, 50 Schritte",
+      "wert": 27.19,
+      "anzeige": "27,19"
+     },
+     {
+      "label": "Kromoss, 50 Schritte",
+      "wert": 27.9,
+      "anzeige": "27,90"
+     },
+     {
+      "label": "Kromoss + DMD2-LoRA, 8 Schritte",
+      "wert": 28.13,
+      "anzeige": "28,13"
+     }
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "5B"
+    },
+    {
+     "label": "Auflösung",
+     "wert": "1024 px"
+    },
+    {
+     "label": "Trainingsbilder",
+     "wert": "704k"
+    },
+    {
+     "label": "Schritte mit LoRA",
+     "wert": "8"
+    },
+    {
+     "label": "Downloads (letzter Monat)",
+     "wert": "11.608"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    }
+   ],
+   "signal": "Vollständige Feinabstimmung eines Bildmodells mit kompakten 8-Schritt-LoRAs und ComfyUI-Unterstützung; die Leistungswerte stammen laut Quelle vom Entwickler.",
+   "link": "https://huggingface.co/lodestones/Kromoss",
+   "linkLabel": "Modell auf Hugging Face",
+   "id": "kromoss-feinabstimmung-von-moss-image-mit-8-schritt-turbo-lo",
+   "hinzugefuegt": "2026-10-21T20:02:20Z"
+  },
+  {
+   "titel": "Specter: MoE-Modelle schneller auf einer Grafikkarte betreiben",
+   "kurz": "Das Forschungssystem Specter kombiniert quantisiertes spekulatives Decoding mit dem Auslagern von Experten in den Hauptspeicher. Laut Paper ist es im Einzel-Request-Betrieb im Schnitt 1,50-mal schneller als der bisherige Stand der Technik.",
+   "artikel": [
+    "Mixture-of-Experts-Modelle (MoE) sind große Sprachmodelle, die pro Schritt nur einen Teil ihrer Experten-Teilnetze nutzen. Trotzdem passen sie oft nicht vollständig in den Speicher eines einzelnen Beschleunigers, also einer Grafikkarte.",
+    "## Das Problem",
+    "Werden Experten in den Hauptspeicher des Rechners ausgelagert, entsteht laut Paper ein starker Engpass beim PCIe-Bus. Der Grund: Welche Experten gebraucht werden, hängt von den Eingaben ab, und die Datenübertragungen liegen dadurch auf dem kritischen Pfad.",
+    "## Der Ansatz",
+    "Specter nutzt Quantisierung, also eine stark verkleinerte Zahlendarstellung der Gewichte, um ein leichtgewichtiges Entwurfsmodell (Draft-Modell) zu bauen. Dieses läuft laut Autoren effizient auf dem Gerät und sagt voraus, welche Experten in den kommenden Schritten vermutlich aktiv werden. Spekulatives Decoding bedeutet, dass ein kleines Modell Tokens vorschlägt, die das große Modell anschließend prüft.",
+    "Diese Vorausschau über mehrere Schritte erlaubt es dem System, die Verschiebung der Experten und die Berechnung zeitlich zu organisieren. Die Autoren nennen dafür eine bessere Effizienz bei Kommunikation und Ausführung.",
+    "## Zahlen",
+    "Laut Paper erreicht Specter bei Einzel-Request-Inferenz im Mittel eine 1,50-fache Beschleunigung der Zeit pro Ausgabe-Token (TPOT), im Maximum 1,88-fach, jeweils gegenüber dem genannten Stand der Technik. Die Autoren sehen das System damit als Schritt zu praktischerem MoE-Betrieb auf handelsüblicher Hardware mit begrenztem Speicher.",
+    "Hinweis: Die Leistungsangaben stammen von den Autoren selbst und sind nicht unabhängig geprüft. Der Code ist laut Paper öffentlich auf GitHub verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "Specter: Fast MoE Inference via Quantization-Enabled Multi-Step Speculative Offloading (Paper-Seite)",
+     "url": "https://huggingface.co/papers/2511.14102"
+    },
+    {
+     "titel": "Specter Code (laut Paper)",
+     "url": "https://github.com/wwwwwf/specter_asplos"
+    }
+   ],
+   "demo": "code",
+   "machen": "Wer MoE-Modelle lokal auf einer einzelnen Grafikkarte betreiben möchte, kann den veröffentlichten Code ausprobieren und die Ergebnisse mit eigener Hardware prüfen. Für Privatpersonen ist das vor allem ein Hinweis, welche Techniken künftig größere Modelle auf Consumer-Hardware bringen könnten.",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Zeit pro Ausgabe-Token (TPOT), Speedup laut Paper",
+    "balken": [
+     {
+      "label": "Bisheriger Stand der Technik",
+      "wert": 1,
+      "anzeige": "1,00×"
+     },
+     {
+      "label": "Specter (Mittel)",
+      "wert": 1.5,
+      "anzeige": "1,50× (Herstellerangabe)"
+     },
+     {
+      "label": "Specter (Maximum)",
+      "wert": 1.88,
+      "anzeige": "bis 1,88× (Herstellerangabe)"
+     }
+    ]
+   },
+   "tag": "Forschung",
+   "quelle": "Hugging Face",
+   "datum": "2026-10-21",
+   "kennzahlen": [
+    {
+     "label": "Beschleunigung TPOT (Mittel, Einzel-Request)",
+     "wert": "1,50× (Angabe der Autoren)"
+    },
+    {
+     "label": "Beschleunigung TPOT (Maximum)",
+     "wert": "1,88× (Angabe der Autoren)"
+    }
+   ],
+   "signal": "Ein Forschungsansatz, der Expertenauslagerung mit spekulativem Decoding verbindet und laut Autoren den PCIe-Engpass entschärft. Die Zahlen stammen aus dem Paper und sind noch nicht unabhängig reproduziert.",
+   "link": "https://huggingface.co/papers/2511.14102",
+   "linkLabel": "Paper auf Hugging Face ansehen",
+   "id": "specter-moe-modelle-schneller-auf-einer-grafikkarte-betreibe",
+   "hinzugefuegt": "2026-10-21T20:02:20Z"
+  },
+  {
    "artikel": [
     "Das Start-up Hirundo hat am 21. Oktober 2026 einen Test zu Alibabas offenem Coding-Modell Qwen3-Coder-30B-A3B veröffentlicht. Die Frage: Ändert sich die Sicherheit des generierten Codes, wenn im System-Prompt ein anderer Kunde steht? Wichtig vorab: Hirundo verkauft genau die Technik, mit der es das Problem angeblich behebt. Die Zahlen sind also Herstellerangaben.",
     "## Der Aufbau",
@@ -2492,7 +2640,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-21T19:58:45Z",
-  "neueFunde": 0
+  "letzterScan": "2026-10-21T20:02:20Z",
+  "neueFunde": 2
  }
 }
