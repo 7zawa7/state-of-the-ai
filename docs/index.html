@@ -1629,6 +1629,9 @@ async function loadData(){
     state.news = d.news || []; state.radar = d.radar || []; state.projekte = d.projekte || []; state.bereiche = d.bereiche || [];
     const ls = d.meta && d.meta.letzterScan;
     $("c-scan").textContent = ls ? new Date(ls).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"}) : "–";
+    const sig = JSON.stringify([state.news, state.radar, state.projekte, state.bereiche]);
+    if (sig === window.__sig) return;   // nichts Neues: nicht neu zeichnen (Zeitung bleibt auf der Seite)
+    window.__sig = sig;
     render();
   }catch(e){ $("c-scan").textContent = "offline"; }
 }
