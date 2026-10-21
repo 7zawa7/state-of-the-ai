@@ -1,6 +1,109 @@
 {
  "news": [
   {
+   "titel": "Mistral stellt Voxtral 3 vor: Sprachmodelle und SDK für Sprachagenten",
+   "kurz": "Mistral AI hat mit Voxtral 3 eine Modellfamilie für Sprache sowie ein SDK für Sprachagenten vorgestellt. Die Modelle unterstützen laut Hersteller über 50 Sprachen und sollen Zuhören, Denken, Werkzeugaufrufe und Sprechen in einer Echtzeit-Pipeline verbinden.",
+   "artikel": [
+    "Mistral AI hat mit Voxtral 3 eine neue Familie von Sprachmodellen und ein Voice-Agent-SDK vorgestellt. Laut Herstellerangaben sollen Sprachagenten damit zuhören, nachdenken, Werkzeuge aufrufen und antworten können, und zwar in einer einzigen Echtzeit-Pipeline (Streaming). Das Projekt erreichte auf Hacker News 755 Punkte.",
+    "## Drei Bausteine",
+    "Das Speech-to-Text-Modell Voxtral Small Transcribe 3 wandelt Sprache in Text um. Der Hersteller nennt drei Funktionen: Diarisierung, also die Zuordnung, wer wann gesprochen hat, Context-Biasing, bei dem Schlüsselbegriffe die Erkennung verbessern sollen, und die Erkennung des Gesprächsendes (End-of-Turn-Detection), damit ein Agent ohne Verzögerung antworten kann.",
+    "Das Text-to-Speech-Modell Voxtral Mini TTS 3 erzeugt Sprache. Laut Hersteller passen sich die Stimmen in Emotion, Tempo und Betonung dem Gesprächskontext an; unterstützt werden über 35 Sprachen und mehr als 50 Dialekte.",
+    "## Agenten und Datenschutz",
+    "Das SDK verbindet Zuhören, Schlussfolgern, Werkzeugaufrufe und Sprechen. Agenten können laut Anbieter während eines Telefon- oder Webgesprächs Informationen abrufen und Aufgaben in Geschäftssystemen erledigen. Die Modelle sind über die EU-gehostete API von Mistral oder zur Installation auf eigener Infrastruktur verfügbar. Dadurch lässt sich laut Hersteller steuern, wo Audio verarbeitet und ob Gespräche gespeichert werden.",
+    "## Leistungsangaben des Herstellers",
+    "Nach Angaben von Mistral übertrifft das Modell Voxtral Small Transcribe 3 bei mehrsprachiger Transkription Whisper, Scribe v2 und Gemini 3.5 Transcribe. Die Messung erfolgte auf dem FLEURS-Benchmark mit Word Error Rate (WER), also dem Anteil fehlerhafter Wörter; niedriger ist besser. Die kleinere Variante Voxtral Mini Transcribe 3 hat laut Angabe 4 Milliarden Parameter und kostet 0,0035 Dollar pro Minute. Eine unabhängige Prüfung dieser Zahlen liegt im Material nicht vor.",
+    "Mit Pro Voice können laut Hersteller Stimmen eines Sprechers, inklusive Emotionsspektrum und Sprechstil, mit etwa 30 Minuten Audio nachgebildet werden. Dafür sei das Verfahren für professionelle Anwendungen gedacht, wo einfaches Voice Cloning nicht genügt."
+   ],
+   "quellen": [
+    {
+     "titel": "Voxtral 3: Voice Agent SDK & Speech Models in 50+ Languages (Mistral AI)",
+     "url": "https://mistral.ai/news/voxtral-3/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50168396"
+    }
+   ],
+   "demo": "stimme",
+   "bereich": "Stimme",
+   "datum": "2026-11-03",
+   "machen": [
+    "Eigene Sprachassistenten oder Telefonbots für kleine Projekte mit dem SDK testen.",
+    "Transkriptionen von Interviews oder Sprachnotizen in mehreren Sprachen erstellen lassen.",
+    "Mit Pro Voice eine eigene Stimme für Hörbuch- oder Podcast-Vertonung prüfen, sofern die Rechtelage geklärt ist."
+   ],
+   "ausprobieren": {
+    "prompt": "Schreibe einen freundlichen Begrüßungsdialog für einen Terminbuchungsassistenten einer Hausarztpraxis, der auf Deutsch und Französisch antwortet.",
+    "tool": "Mistral AI (Voxtral)",
+    "url": "https://mistral.ai"
+   },
+   "vorschau": {
+    "szene": "stimme",
+    "titel": "Aufnahme 0:10",
+    "sprachen": [
+     [
+      "Deutsch",
+      "Guten Tag, wie kann ich Ihnen heute helfen?"
+     ],
+     [
+      "Französisch",
+      "Bonjour, comment puis-je vous aider aujourd'hui ?"
+     ],
+     [
+      "Englisch",
+      "Hello, how can I help you today?"
+     ]
+    ]
+   },
+   "id": "mistral-stellt-voxtral-3-vor-sprachmodelle-und-sdk-fur-sprac",
+   "hinzugefuegt": "2026-10-21T22:48:22Z"
+  },
+  {
+   "titel": "PHP2Shell: KI hilft bei kritischen Lücken im Kern von PHP",
+   "kurz": "Wiz Research hat mehrere kritische Schwachstellen im Kern der Skriptsprache PHP gefunden, die laut Wiz nahezu jede PHP-Version seit 5.4 betreffen. Der Patch von PHP stammt vom 21. Oktober 2026 und sollte zeitnah eingespielt werden.",
+   "artikel": [
+    "Wiz Research berichtet über mehrere kritische Schwachstellen im Kern von PHP, einer weit verbreiteten Programmiersprache für Webanwendungen. Laut Wiz laufen rund 70 Prozent aller Websites weltweit mit PHP. Betroffen sind unter anderem Systeme wie WordPress, Joomla, Drupal und MediaWiki, also die Software hinter Wikipedia.",
+    "## Was die Lücken ermöglichen",
+    "Die Schwachstellen erlauben Speicherzugriffe, die nicht vorgesehen sind (sogenannte Memory-Safety-Fehler). Laut Wiz können Angreifer ohne Anmeldung Code auf betroffenen Servern ausführen (Remote Code Execution, kurz RCE) oder den Speicher eines PHP-Prozesses auslesen. Dort können Passwörter, Tokens, API-Keys und Zertifikate liegen. Wiz nennt CVSS 9,2 als höchsten Schweregrad.",
+    "## Ursache und Betroffenheit",
+    "Die Fehler treten auf, wenn PHP bei der Verarbeitung von Anfragen auf fatale Fehler stößt, etwa Speichererschöpfung. Dabei kann ein inkonsistenter interner Zustand zurückbleiben, den eine spätere Anfrage wiederverwendet. Laut Wiz ist fast jede PHP-Version betroffen, zurück bis zur Version 5.4. Die Lücken liegen im PHP-Kern, weshalb auch eine einfache Anwendung auf einer verwundbaren Version angreifbar sein kann.",
+    "## Rolle von KI",
+    "Wiz gibt an, dass Frontier-KI-Modelle die Hürde für die Ausnutzung deutlich gesenkt haben. Das Verketten mehrerer Fehler war zuvor kaum praktikabel, lies sich mit den Modellen aber in Stunden umsetzen. Wiz sieht darin einen möglichen Wendepunkt, ähnlich wie bei Heartbleed (2014) und Log4Shell (2021).",
+    "## Handlungsempfehlung",
+    "Wiz rät dringend zum sofortigen Patchen. Für Kunden, die nicht sofort aktualisieren können, nennt Wiz Schutzmaßnahmen mehrerer Anbieter wie Cloudflare, Akamai und AWS. Die Angaben zur Wirkung stammen von Wiz selbst (Herstellerangabe) und wurden nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "PHP2Shell: AI uncovers critical RCE in PHP (Wiz Blog)",
+     "url": "https://www.wiz.io/blog/php2shell-php-rce"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50180836"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Prüfe, welche PHP-Version auf deinem Server oder Hosting-Paket läuft, und spiele den Patch der PHP-Entwickler ein.",
+    "Kontrolliere bei WordPress-, Joomla- oder Drupal-Installationen, ob Hoster oder Plugins bereits Schutzmaßnahmen bereitstellen.",
+    "Ändere Passwörter und API-Keys, falls ein Server längere Zeit ungepatcht lief."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "php -v",
+    "zeilen": [
+     "> php -v",
+     "⚠ Version vor Patch vom 21.10.2026: betroffen",
+     "✓ Nach Update: Patch-Stand prüfen",
+     "● Status: Hersteller-Patch verfügbar"
+    ]
+   },
+   "bereich": "Apps",
+   "datum": "2026-10-21",
+   "id": "php2shell-ki-hilft-bei-kritischen-lucken-im-kern-von-php",
+   "hinzugefuegt": "2026-10-21T22:48:22Z"
+  },
+  {
    "titel": "Mistral stellt Timestral vor: Zeitreihen-Foundation-Modelle in vier Größen",
    "kurz": "Mistral hat mit Timestral seine erste Familie von Foundation-Modellen für Zeitreihen veröffentlicht. Laut Hersteller ist das größte Modell mit 209 Millionen Parametern bei drei großen Benchmarks vorn.",
    "artikel": [
@@ -524,6 +627,82 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Flint: Recursive stellt Mixture-of-Experts-Modell für Coding-Agenten auf Hugging Face vor",
+   "kurz": "Recursive hat auf Hugging Face das Sprachmodell Flint veröffentlicht, das für Coding-Agenten gedacht ist. Laut Herstellerangaben erreicht es hohe Werte in Agenten-Benchmarks.",
+   "artikel": [
+    "Auf Hugging Face ist mit „Flint“ ein neues Sprachmodell des Entwicklers Recursive erschienen. Es richtet sich an sogenannte Coding-Agenten, also KI-Systeme, die selbstständig Codebasen untersuchen, Fehler beheben, Funktionen umsetzen und Tests schreiben sollen. Das Modell verarbeitet Text als Ein- und Ausgabe, kann nachdenken und mehrstufige Werkzeugaufrufe ausführen. Die Seite zeigte zum Zeitpunkt der Erfassung 210 Likes und den Status „Trending“.",
+    "## Aufbau",
+    "Flint ist ein sogenanntes Mixture-of-Experts-Modell (MoE). Insgesamt hat es 39,8 Milliarden Parameter, pro Token werden davon etwa 2,5 Milliarden aktiv genutzt. Das Modell besteht aus 49 Schichten, und pro Schicht werden 6 von 256 Experten ausgewählt. Die Aufmerksamkeit ist teils als Sliding Window mit 513 Token angelegt, teils als volle Aufmerksamkeit. Der dokumentierte Kontext umfasst 262.144 Token, inklusive Eingabe und Ausgabe. Laut Angaben des Herstellers liegt der Wissensstand bei Juni 2026.",
+    "## Herstellerangaben zur Leistung",
+    "Recursive gibt in den eigenen Auswertungen 54,9 Prozent bei Terminal-Bench 2.1, 89,7 Prozent bei SWE-bench Pro v2 und 74,2 Prozent bei SWE-bench Verified an. Diese Werte sind Herstellerangaben. Laut Quelle zählen Lösungen, die über Web-Recherche entstanden sind, bei Terminal-Bench als nicht erfolgreich. Andere Vergleichswerte stammen von den jeweiligen Entwicklern, und die Testbedingungen können sich unterscheiden.",
+    "## Einsatz",
+    "Das Repository enthält den BF16-Checkpoint, die Konfiguration, den Tokenizer, die Chat-Vorlage und ein Serving-Kit für SGLang. Laut Quelle läuft Flint auf einer B300- oder H200-GPU pro Replikat. Quantisierte Varianten für NVIDIA und Apple Silicon sollen separat bereitgestellt werden. Modellcode für Transformers fehlt laut Seite noch."
+   ],
+   "quellen": [
+    {
+     "titel": "RecursiveSI/flint auf Hugging Face",
+     "url": "https://huggingface.co/RecursiveSI/flint"
+    },
+    {
+     "titel": "Recursive Flint Blog",
+     "url": "https://huggingface.co/RecursiveSI/flint"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Ein lokal oder per Server betriebenes Coding-Modell testen, um Fehlerbehebungen in eigenen Projekten zu prüfen.",
+    "Mit dem bereitgestellten SGLang-Kit eine eigene Serving-Umgebung aufsetzen, sofern passende GPU-Hardware vorhanden ist.",
+    "Die Benchmark-Angaben mit eigenen Aufgaben vergleichen, bevor man sich auf die Herstellerzahlen verlässt."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Herstellerangaben: Benchmark-Ergebnisse von Flint",
+    "balken": [
+     {
+      "label": "Terminal-Bench 2.1",
+      "wert": 54.9,
+      "anzeige": "54,9 %"
+     },
+     {
+      "label": "SWE-bench Verified",
+      "wert": 74.2,
+      "anzeige": "74,2 %"
+     },
+     {
+      "label": "SWE-bench Pro v2",
+      "wert": 89.7,
+      "anzeige": "89,7 %"
+     }
+    ]
+   },
+   "tag": "Herstellerangabe",
+   "quelle": "Hugging Face",
+   "datum": "2026-10-21",
+   "kennzahlen": [
+    {
+     "label": "Gesamtparameter",
+     "wert": "39,8 Mrd."
+    },
+    {
+     "label": "Aktive Parameter pro Token",
+     "wert": "ca. 2,5 Mrd."
+    },
+    {
+     "label": "Kontextfenster",
+     "wert": "262.144 Token"
+    },
+    {
+     "label": "Experten pro MoE-Schicht",
+     "wert": "256 (6 aktiv)"
+    }
+   ],
+   "signal": "Ein spezialisiertes Modell für Coding-Agenten mit MoE-Architektur, dessen Leistungsangaben vom Hersteller stammen und noch unabhängig geprüft werden müssen.",
+   "link": "https://huggingface.co/RecursiveSI/flint",
+   "linkLabel": "Modellseite auf Hugging Face",
+   "id": "flint-recursive-stellt-mixture-of-experts-modell-fur-coding-",
+   "hinzugefuegt": "2026-10-21T22:48:22Z"
+  },
   {
    "titel": "Hybrid Reasoning Agents: LLM-Agenten denken im latenten Raum und handeln über Text",
    "kurz": "Ein arXiv-Preprint stellt HybridAgents vor, die zwischen latentem Denken und textbasierter Werkzeugnutzung wechseln. Laut Autoren verbessert das die Leistung bei 11 Benchmarks und senkt Tokenverbrauch und Kosten.",
@@ -1960,6 +2139,55 @@
  ],
  "projekte": [
   {
+   "titel": "Officely: Virtuelles KI-Büro in 3D mit vier Agenten-Robotern",
+   "kurz": "Das Open-Source-Projekt Officely (GitHub-Repository von Tahirpathan-AiLab, 14 Sterne) zeigt ein dreidimensionales Büro, in dem vier KI-Roboter-Agenten chatten, zusammenarbeiten und Aufgaben erledigen. Der Empfangsmanager Zed nimmt Befehle entgegen und verteilt sie.",
+   "artikel": [
+    "Officely ist ein Projekt auf GitHub, das ein virtuelles, agentisches Büro in 3D umsetzt. Vier KI-Roboter-Agenten – Evan, Lummi, Athena und Zed – treten dort miteinander in Kontakt, arbeiten zusammen und erledigen Arbeitsaufträge. Laut Projektbeschreibung ist Zed der Empfangsmanager, der Befehle des Nutzers annimmt und an die anderen Agenten delegiert.",
+    "## Funktionen",
+    "Zum Projekt gehören ein Live-Aktivitätsfenster, das den Status und die Berechtigungen der Agenten anzeigt, sowie ein Aufgabenkalender, den Zed automatisch ausführt. Außerdem werden Erweiterungen wie Gmail, Drive und GitHub genannt.",
+    "## Einordnung",
+    "Das Repository trägt im README den Hinweis „Developing phase“, das Projekt befindet sich also nach eigener Angabe noch in der Entwicklung. Der Stand von 14 Sternen auf GitHub ist eine kleine Zahl und sagt wenig über Reife oder Nutzung aus. Die Beschreibung gibt zudem an, dass die Agenten-Logik im Python-Backend läuft und die 3D-Oberfläche in Electron nur Aktivitäten darstellt.",
+    "Als Hersteller- bzw. Projektangabe gilt die Selbstbeschreibung im Repository. Eine unabhängige Prüfung der Funktionen lag nicht vor."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub – Tahirpathan-AiLab/Officely",
+     "url": "https://github.com/Tahirpathan-AiLab/Officely"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Du kannst das Repository herunterladen und lokal ausprobieren, um zu sehen, wie mehrere Agenten zusammenarbeiten.",
+    "Du kannst den Aufbau mit Orchestrator und Spezialagenten als Vorlage für eigene Agenten-Experimente nutzen.",
+    "Du kannst die Freigabe-Logik für sensible Aktionen studieren, die laut Beschreibung eine Nutzerzustimmung verlangt."
+   ],
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Zed (Empfang)",
+     "Evaan (Design)",
+     "Athena (Architektur)",
+     "Lumi (Entwicklung)"
+    ]
+   },
+   "tag": "Agenten-Büro",
+   "macher": "Tahirpathan-AiLab (GitHub-Nutzer; laut Repository-Link Mrtahirpathan)",
+   "branche": "KI-Agenten / Open Source",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "Python-Backend",
+    "Electron",
+    "Ollama",
+    "OpenAI",
+    "three.js"
+   ],
+   "kennzahlen": "14 ★ auf GitHub",
+   "link": "https://github.com/Tahirpathan-AiLab/Officely",
+   "linkLabel": "Zum Repository",
+   "id": "officely-virtuelles-ki-buro-in-3d-mit-vier-agenten-robotern",
+   "hinzugefuegt": "2026-10-21T22:48:22Z"
+  },
+  {
    "artikel": [
     "Smart-TVs zeigen inzwischen Werbung im Startbildschirm und schicken Nutzungsdaten an Hersteller. Mehrere Entwickler haben sich dagegen KI-Agenten gebaut, TechCrunch hat am 19. Oktober darüber berichtet.",
     "## Wie es funktioniert",
@@ -2861,8 +3089,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-21T20:11:40Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-10-21T22:48:22Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-10-21T20:11:40Z"
  }
 }
