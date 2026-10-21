@@ -169,8 +169,15 @@ def ask(prompt, max_tokens=4000):
     client = client or Anthropic()
     msg = client.messages.create(model=MODEL, max_tokens=max_tokens, messages=[{"role": "user", "content": prompt}])
     text = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text")
-    m = re.search(r"(\{.*\}|\[.*\])", text, re.S)
-    return json.loads(m.group(1)) if m else None
+    text = re.sub(r"```(?:json)?", "", text)
+    starts = [i for i in (text.find("["), text.find("{")) if i >= 0]
+    if not starts:
+        log("Antwort ohne JSON:", text[:300]); return None
+    i = min(starts); j = text.rfind("]" if text[i] == "[" else "}")
+    try:
+        return json.loads(text[i:j + 1])
+    except Exception as e:  # noqa
+        log("JSON nicht lesbar:", e, text[:300]); return None
 
 
 def triage(cands, existing_titles):
@@ -183,14 +190,28 @@ Bereits veröffentlicht (nicht doppelt nehmen): {existing_titles[:60]}
 Kandidaten:
 {lines}
 
-Wähle höchstens {MAX_NEW} Kandidaten, die wirklich relevant, neu und für ein breites, technikinteressiertes Publikum spannend sind.
+Wähle 1 bis {MAX_NEW} Kandidaten (nur wenn wirklich gar nichts taugt, gib [] zurück), die relevant, neu und für ein breites, technikinteressiertes Publikum spannend sind.
 Ignoriere Werbung, Gerüchte, Finanznachrichten ohne Technikbezug und Duplikate.
 Antworte NUR mit JSON: [{{"nr": <Nummer>, "rubrik": "news"|"radar"|"projekte"}}]
 - "news" = große Releases/Ereignisse für alle
 - "radar" = technische Insider-Funde (Repos, Papers, Modelle, Infra)
 - "projekte" = konkrete Werke/Projekte von Menschen, gebaut mit KI"""
-    res = ask(prompt, 600) or []
-    return [(cands[r["nr"]], r["rubrik"]) for r in res if isinstance(r, dict) and 0 <= r.get("nr", -1) < len(cands) and r.get("rubrik") in ("news", "radar", "projekte")]
+    try:
+        res = ask(prompt, 800) or []
+    except Exception as e:  # noqa
+        log("Triage fehlgeschlagen:", e); return []
+    if isinstance(res, dict):
+        res = res.get("auswahl") or res.get("items") or [res]
+    out = []
+    for r in res:
+        if not isinstance(r, dict): continue
+        try: nr = int(r.get("nr", -1))
+        except (TypeError, ValueError): continue
+        rub = str(r.get("rubrik", "")).lower()
+        if 0 <= nr < len(cands) and rub in ("news", "radar", "projekte"):
+            out.append((cands[nr], rub))
+    log(f"Triage: {len(out)} ausgewählt", [c["titel"][:50] for c, _ in out])
+    return out
 
 
 def page_text(url, limit=7000):
