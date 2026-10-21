@@ -1,6 +1,63 @@
 {
  "news": [
   {
+   "titel": "Mistral stellt Timestral vor: Zeitreihen-Foundation-Modelle in vier Größen",
+   "kurz": "Mistral hat mit Timestral seine erste Familie von Foundation-Modellen für Zeitreihen veröffentlicht. Laut Hersteller ist das größte Modell mit 209 Millionen Parametern bei drei großen Benchmarks vorn.",
+   "artikel": [
+    "Mistral hat Timestral vorgestellt, seine erste Familie von Time-Series-Foundation-Models, also Modellen, die auf großen, gemischten Zeitreihen-Datensätzen vortrainiert werden und Prognosen ohne weiteres Training auf neuen Daten erstellen. Die Ankündigung ist auf den 15. Oktober 2026 datiert. Die Angaben stammen vom Hersteller selbst.",
+    "## Was die Modelle leisten",
+    "Nach Herstellerangaben liefert Timestral probabilistische und multivariate Prognosen, also Vorhersagen mit Unsicherheitsbereich, die mehrere zusammenhängende Messreihen gemeinsam betrachten. Vergangene und bekannte zukünftige Einflussgrößen, sogenannte Kovariaten, können einbezogen werden. Das größte Modell hat 209 Millionen Parameter. Mistral gibt an, dass es auf den Benchmarks GIFT-Eval, TIME und fev-bench den ersten Platz belegt und dabei mit etwa zwei Dritteln der Parameter den bisherigen Bestwert übertrifft. Die Ergebnisse wurden laut Hersteller bei den Leaderboards von GIFT-Eval und TIME eingereicht.",
+    "Die Familie umfasst vier Größen mit 5, 28, 123 und 209 Millionen Parametern. Laut Mistral teilen sich alle Varianten dieselbe Architektur und dasselbe Trainingsrezept. Kleinere Modelle sind schneller, größere genauer.",
+    "## Geschwindigkeit",
+    "Mistral nennt für eine Prognose eines Tages aus drei Wochen Verlauf mit 15-Minuten-Werten auf einem Standard-Server-CPU mit 8 Threads 10 Millisekunden beim 5-Millionen-Modell und 140 Millisekunden beim 209-Millionen-Modell. Eine GPU sei für die Inferenz nicht nötig.",
+    "## Einordnung",
+    "Zeitreihen entstehen etwa in Sensordaten, Monitoring und Finanzdaten. Klassische Verfahren wie ARIMA lernen meist nur aus einer einzelnen Reihe. Foundation-Modelle sollen dagegen Muster übertragen, sodass sie auch in Bereichen mit wenig Daten zero-shot, also ohne eigenes Training, prognostizieren können. Mistral beschreibt außerdem ein Anwendungsbeispiel aus der Industrie, bei dem Timestral Anomalien erkennt und ein Agent mit Wartungsprotokollen eine erste Diagnose vorbereitet. Ob sich das in der Praxis so bewährt, ist mit diesen Angaben nicht belegt."
+   ],
+   "quellen": [
+    {
+     "titel": "Timestral: Mistral's time-series foundation models",
+     "url": "https://mistral.ai/news/timestral/"
+    },
+    {
+     "titel": "Hacker-News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50150434"
+    }
+   ],
+   "demo": "modell",
+   "machen": "Wer mit Sensor-, Verkaufs- oder Finanzdaten arbeitet, kann solche Modelle für eigene Prognosen testen. Für Privatpersonen ist das Thema vor allem dann relevant, wenn Zeitreihen wie Energie- oder Verbrauchsdaten ausgewertet werden sollen.",
+   "bereich": "Text",
+   "datum": "2026-10-15",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Parameter pro Modell (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Timestral 5M",
+      "wert": 5,
+      "anzeige": "5M"
+     },
+     {
+      "label": "Timestral 28M",
+      "wert": 28,
+      "anzeige": "28M"
+     },
+     {
+      "label": "Timestral 123M",
+      "wert": 123,
+      "anzeige": "123M"
+     },
+     {
+      "label": "Timestral 209M",
+      "wert": 209,
+      "anzeige": "209M"
+     }
+    ]
+   },
+   "tag": "Zeitreihen",
+   "id": "mistral-stellt-timestral-vor-zeitreihen-foundation-modelle-i",
+   "hinzugefuegt": "2026-10-21T20:11:40Z"
+  },
+  {
    "artikel": [
     "OpenAI hat am 19. Oktober 2026 Ergebnisse zu Programmiersprachen mit wenig Trainingsmaterial veröffentlicht, etwa COBOL, Fortran und Visual Basic. Beide Tests hat OpenAI selbst entworfen und ausgewertet; unabhängig geprüft ist bisher nichts.",
     "## COBOL-Migration",
@@ -464,6 +521,155 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Hybrid Reasoning Agents: LLM-Agenten denken im latenten Raum und handeln über Text",
+   "kurz": "Ein arXiv-Preprint stellt HybridAgents vor, die zwischen latentem Denken und textbasierter Werkzeugnutzung wechseln. Laut Autoren verbessert das die Leistung bei 11 Benchmarks und senkt Tokenverbrauch und Kosten.",
+   "artikel": [
+    "Ein arXiv-Preprint von Forschenden um Jiaru Zou und James Zou beschreibt sogenannte Hybrid Reasoning Agents (HybridAgents). Die Idee: Ein Sprachmodell soll intern in einem latenten Raum denken, also in kontinuierlichen Vektoren statt in ausgeschriebenen Wörtern, und nach außen weiterhin über Text mit Werkzeugen und Umgebungen interagieren.",
+    "## Das Problem",
+    "Heutige LLM-Agenten schlussfolgern und kommunizieren meist über Text. Latentes Denken gilt als effizienter, bietet laut Abstract aber keinen direkten Zugriff auf Werkzeuge und ist schlechter nachvollziehbar. Die Autoren wollen beide Ansätze verbinden.",
+    "## Architektur und Training",
+    "Kernstück ist eine leichtgewichtige Komponente namens HybridLink, die den Wechsel zwischen Text- und latentem Modus ermöglicht. Ein kontinuierliches Arbeitsgedächtnis soll den hybriden Kontext über mehrere Gesprächsrunden verlustfrei erhalten. Für das Nachtraining schlagen die Autoren zwei Verfahren vor: HybridSFT, das dem Modell beibringt, mit HybridLink zusammenzuarbeiten, und HybridRL, das lernt, wann es latent denken und wann es über Text handeln soll.",
+    "## Ergebnisse laut Autoren",
+    "Die Autoren testeten das System in drei Modellgrößen auf elf Benchmarks aus Mathematik, Naturwissenschaften, Medizin, Suche und agentischem Schlussfolgern. Gegenüber Frontier-LLM-Agenten und anderen Agenten-Frameworks gibt das Paper eine durchschnittliche Leistungssteigerung von 10,4 Prozent an, dazu 35,5 bis 54,7 Prozent weniger Tokens, eine 1,8- bis 2,6-fache Inferenzgeschwindigkeit und 2,7- bis 3,7-fache Kostenersparnis. Dies sind Angaben der Autoren, nicht unabhängig geprüft.",
+    "## Einordnung",
+    "Die Arbeit umfasst 45 Seiten und 12 Abbildungen. Code und Daten sollen laut Paper verfügbar sein. Auf Hacker News erreichte der Beitrag 517 Punkte. Ob sich die Ergebnisse außerhalb der Paper-Benchmarks bewähren, ist offen."
+   ],
+   "quellen": [
+    {
+     "titel": "arXiv:2610.18861 – Hybrid Reasoning Agents",
+     "url": "https://arxiv.org/abs/2610.18861"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50145337"
+    }
+   ],
+   "demo": "agent",
+   "machen": "Als Privatperson lässt sich das Paper vor allem als Forschungsstand verfolgen, da laut Abstract Code und Daten veröffentlicht werden. Ein direkt nutzbares Werkzeug wird im Material nicht genannt.",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Laut Paper: Tokenverbrauch gegenüber Vergleichssystemen (Reduktion)",
+    "balken": [
+     {
+      "label": "Vergleich",
+      "wert": 35.5,
+      "anzeige": "-35,5 %"
+     },
+     {
+      "label": "HybridAgents",
+      "wert": 54.7,
+      "anzeige": "-54,7 %"
+     }
+    ]
+   },
+   "quelle": "arXiv",
+   "datum": "2026-10-13",
+   "kennzahlen": [
+    {
+     "label": "Leistungssteigerung (Autorenangabe)",
+     "wert": "10,4 %"
+    },
+    {
+     "label": "Tokenreduktion (Autorenangabe)",
+     "wert": "35,5–54,7 %"
+    },
+    {
+     "label": "Inferenzgeschwindigkeit (Autorenangabe)",
+     "wert": "1,8x–2,6x"
+    },
+    {
+     "label": "Kostenersparnis (Autorenangabe)",
+     "wert": "2,7x–3,7x"
+    },
+    {
+     "label": "Benchmarks",
+     "wert": "11 in 3 Modellgrößen"
+    }
+   ],
+   "signal": "Forschungsansatz, der latentes Denken mit Werkzeugnutzung verbindet. Die Zahlen stammen von den Autoren und sind nicht unabhängig geprüft.",
+   "link": "https://arxiv.org/abs/2610.18861",
+   "linkLabel": "Paper auf arXiv lesen",
+   "id": "hybrid-reasoning-agents-llm-agenten-denken-im-latenten-raum-",
+   "hinzugefuegt": "2026-10-21T20:11:40Z"
+  },
+  {
+   "titel": "State of the AI: Agent S4 entwickelt Computer-Use-Oberflächen aus Erfahrung",
+   "kurz": "Ein Forschungspapier beschreibt Agent S4, das Schnittstellen für Computer-Use-Agenten selbst entwickelt. Laut Angaben der Autoren steigt damit die Leistung eines offenen Modells deutlich.",
+   "artikel": [
+    "Computer-Use-Agenten arbeiten bisher mit Schnittstellen, die Menschen von Hand festlegen. Das Papier nennt zwei Beispiele: Ein Agent tippt eine Tabellenzelle nach der anderen, obwohl eine einzelne Codezeile reichen würde, oder er gibt eine ganze Datei aus, um eine einzige Funktion zu finden.",
+    "## Der Ansatz",
+    "Agent S4 ist laut Autoren ein autonomer Forscher für Computer-Use, der aus Aufgabenerfahrung sogenannte Evolving Agent Interfaces baut. Ein Meta-Agent untersucht die Abläufe von Aufgaben-Agenten auf synthetischen Trainingsaufgaben, ohne Erfolgsbewertung, und legt Schnittstellen sowie Nutzungswissen in einem Repository ab. Eine populationsbasierte Evolution wählt anschließend Repositories nach ihrer Leistung auf Validierungsaufgaben aus, die der Meta-Agent nie sieht.",
+    "## Ergebnisse laut Papier",
+    "Auf OSWorld V2 erreicht Agent S4 mit Qwen3.8-27B und dem entwickelten Repository laut Abstract 21,3 Prozent binärer Erfolgswert. Das ist das 3,8-Fache desselben Modells mit festen Schnittstellen. Die Autoren vergleichen dies mit GPT-5.5 (13,0 Prozent) und Claude Opus 4.8 (20,6 Prozent), bei Kosten von etwa 4,3 bzw. 1,5 Prozent dieser Modelle. Auf ScienceBoard steigt die Erfolgsquote mit denselben Schnittstellen von 41,4 auf 58,6 Prozent.",
+    "## Einordnung",
+    "Die Autoren sehen in der automatischen Gestaltung von Schnittstellen eine Verbesserungsquelle neben Fortschritten bei Modellen und Harnesses. Der Code ist laut Papier auf GitHub veröffentlicht. Die Zahlen stammen aus den Angaben der Autoren und sind bisher nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Evolving Agent Interfaces (arXiv 2610.28601)",
+     "url": "https://huggingface.co/papers/2610.28601"
+    },
+    {
+     "titel": "Code-Repository simular-ai/agent-s",
+     "url": "https://github.com/simular-ai/agent-s"
+    }
+   ],
+   "demo": "agent",
+   "machen": "Wer Computer-Use-Agenten baut oder testet, kann den veröffentlichten Code auf GitHub prüfen. Privatpersonen können das Thema als Beispiel dafür nutzen, wie Agenten wiederkehrende Arbeitsschritte automatisieren.",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "OSWorld V2, binärer Erfolgswert",
+    "balken": [
+     {
+      "label": "Qwen3.8-27B, feste Schnittstellen",
+      "wert": 5.6,
+      "anzeige": "5,6 % (berechnet aus 21,3 % / 3,8)"
+     },
+     {
+      "label": "GPT-5.5",
+      "wert": 13.0,
+      "anzeige": "13,0 %"
+     },
+     {
+      "label": "Claude Opus 4.8",
+      "wert": 20.6,
+      "anzeige": "20,6 %"
+     },
+     {
+      "label": "Agent S4 (Qwen3.8-27B)",
+      "wert": 21.3,
+      "anzeige": "21,3 %"
+     }
+    ]
+   },
+   "tag": "Forschung",
+   "quelle": "arXiv",
+   "datum": "2026-10-20",
+   "kennzahlen": [
+    {
+     "label": "OSWorld V2 Erfolg (Agent S4)",
+     "wert": "21,3 %"
+    },
+    {
+     "label": "OSWorld V2 Erfolg (GPT-5.5)",
+     "wert": "13,0 %"
+    },
+    {
+     "label": "OSWorld V2 Erfolg (Claude Opus 4.8)",
+     "wert": "20,6 %"
+    },
+    {
+     "label": "ScienceBoard Erfolg mit Schnittstellen",
+     "wert": "41,4 % → 58,6 %"
+    }
+   ],
+   "signal": "Laut Autoren können Schnittstellen für Computer-Use-Agenten aus Erfahrung entwickelt werden, was eine Verbesserung neben besseren Modellen darstellt. Die Zahlen sind Herstellerangaben der Autoren und nicht unabhängig geprüft.",
+   "link": "https://huggingface.co/papers/2610.28601",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "state-of-the-ai-agent-s4-entwickelt-computer-use-oberflachen",
+   "hinzugefuegt": "2026-10-21T20:11:40Z"
+  },
   {
    "titel": "Kromoss: Feinabstimmung von MOSS-Image mit 8-Schritt-Turbo-LoRAs",
    "kurz": "Kromoss ist eine vollständige Feinabstimmung des Bildmodells MOSS-Image-Base für 1024 px, die auf Hugging Face mit 199 Likes im Trend liegt. Zwei LoRA-Dateien erlauben die Bilderzeugung in nur 8 Schritten.",
@@ -2555,7 +2761,7 @@
    "id": "3d"
   },
   {
-   "maximum": "Laufende Web-Apps und Mehrspieler-Spiele aus Beschreibungen, oft in Tagen statt Monaten.",
+   "maximum": "Laufende Web-Apps und Mehrspieler-Spiele aus Beschreibungen, oft in Tagen statt Monaten. Ein 3D-Multiplayer-Spiel entstand laut Bericht in 15 Tagen komplett per KI.",
    "name": "Apps & Games",
    "reihenfolge": 5,
    "status": "mid",
@@ -2640,7 +2846,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-21T20:02:20Z",
-  "neueFunde": 2
+  "letzterScan": "2026-10-21T20:11:40Z",
+  "neueFunde": 3,
+  "standAktualisiert": "2026-10-21T20:11:40Z"
  }
 }
