@@ -1,0 +1,2497 @@
+{
+ "news": [
+  {
+   "artikel": [
+    "ElevenLabs hat am 28. September 2026 die Modelle Eleven v4 und v4 Turbo vorgestellt.",
+    "Eine Stimme lässt sich jetzt aus nur 10 Sekunden Audio klonen. Die Zahl der Sprachen steigt von 70 auf über 90. Emotionen steuert man mit Tags im Text, die sich auch kombinieren lassen.",
+    "Die Turbo-Variante antwortet so schnell, dass sie für Live-Sprachassistenten taugt. Sie kann schon sprechen, während das Sprachmodell dahinter noch die Antwort schreibt.",
+    "Wichtig: Klone nur deine eigene Stimme oder die von Menschen, die ausdrücklich zugestimmt haben."
+   ],
+   "ausprobieren": {
+    "prompt": "[aufgeregt] Leute, ihr glaubt nicht, was ich heute gebaut habe! [flüsternd] Aber erst mal muss ich euch was verraten …",
+    "tool": "ElevenLabs",
+    "url": "https://elevenlabs.io"
+   },
+   "bereich": "Stimme",
+   "datum": "2026-09-28T12:00:00Z",
+   "demo": "stimme",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "kurz": "Neues Sprachmodell mit mehr Gefühl, über 90 Sprachen und Klonen aus einer sehr kurzen Aufnahme.",
+   "machen": [
+    "Deine eigene Stimme aus 10 Sekunden klonen",
+    "Eigene Videos in 90+ Sprachen mit deiner Stimme vertonen",
+    "Hörbücher und Podcasts mit Emotionen sprechen lassen"
+   ],
+   "quellen": [
+    {
+     "titel": "TechCrunch: ElevenLabs v4",
+     "url": "https://techcrunch.com/2026/09/28/elevenlabs-new-v4-speech-model-supports-more-expression-control-and-90-languages/"
+    }
+   ],
+   "titel": "ElevenLabs v4: Stimme klonen aus 10 Sekunden",
+   "vorschau": {
+    "sprachen": [
+     [
+      "Deutsch",
+      "[aufgeregt] Leute, ihr glaubt nicht …"
+     ],
+     [
+      "English",
+      "[excited] Guys, you won't believe …"
+     ],
+     [
+      "Français",
+      "[excité] Vous n'allez pas croire …"
+     ]
+    ],
+    "tag": "v4 · 90+ Sprachen",
+    "titel": "Aufnahme 0:10"
+   },
+   "id": "elevenlabs-v4"
+  },
+  {
+   "artikel": [
+    "Black Forest Labs, das Team hinter FLUX, hat am 15. Oktober 2026 FLUX 3 Image Klein vorgestellt.",
+    "Das Modell hat 5,6 Milliarden Parameter und offene Gewichte. Das heißt: Man kann es herunterladen und auf dem eigenen Rechner laufen lassen, ohne Abo und ohne dass Bilder auf fremde Server gehen.",
+    "Kleine offene Modelle sind interessant für alle, die viele Bilder erzeugen wollen oder eigene Varianten trainieren möchten. Für die absolute Spitzenqualität liegen aktuell weiterhin GPT Image und Nano Banana vorne."
+   ],
+   "bereich": "Bild",
+   "datum": "2026-10-15T12:00:00Z",
+   "demo": "bild",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "kurz": "Black Forest Labs hat ein kompaktes Bildmodell mit 5,6 Milliarden Parametern und offenen Gewichten veröffentlicht.",
+   "machen": [
+    "Bilder komplett offline auf dem eigenen Rechner erzeugen",
+    "Eigene Stile mit wenigen Beispielbildern antrainieren",
+    "Massenhaft Produktbilder ohne Abo-Kosten"
+   ],
+   "quellen": [
+    {
+     "titel": "Onda Labs: Best AI Image Generators",
+     "url": "https://ondalabs.app/blog/best-ai-image-generators"
+    }
+   ],
+   "titel": "FLUX 3 Image Klein: neues offenes Bildmodell",
+   "id": "flux-3-klein"
+  },
+  {
+   "artikel": [
+    "Seit dem 30. September 2026 steht Gemini 4 Argon von Google auf Platz 1 der Text-Rangliste von LMArena. Dort vergleichen echte Nutzer anonym die Antworten zweier Modelle.",
+    "Mitte Oktober lag Argon bei 1.524 Punkten. Dahinter folgen Metas Muse Wonder und Claude Opus 5.5 von Anthropic. Die Abstände an der Spitze sind klein.",
+    "## Zugang",
+    "Zum Start war Argon nur für ausgewählte Tester freigeschaltet. Laut einer Übersicht von Local AI Zone ist das Modell seit dem 13. Oktober allgemein verfügbar, mit Einführungspreisen, die ab 1. Dezember steigen sollen.",
+    "## Einordnung",
+    "Platz 1 im Nutzer-Blindtest heißt nicht, dass ein Modell überall vorne liegt. Im Intelligenz-Index von Artificial Analysis führt Claude Opus 5.5, beim Bauen von Web-Apps ebenfalls ein Claude-Modell."
+   ],
+   "ausprobieren": {
+    "prompt": "Ich lade dir gleich drei PDFs hoch. Fasse jedes in fünf Stichpunkten zusammen und zeig mir dann in einer Tabelle, wo sie sich widersprechen.",
+    "tool": "Gemini",
+    "url": "https://gemini.google.com"
+   },
+   "bereich": "Text",
+   "datum": "2026-09-30T12:00:00Z",
+   "demo": "modell",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "kurz": "Googles neues Modell führt seit 30. September den Nutzer-Blindtest an. Zuerst nur für ausgewählte Tester, laut Berichten seit 13. Oktober allgemein verfügbar.",
+   "machen": [
+    "Lange Dokumente mit bis zu 1 Mio. Tokens auf einmal auswerten",
+    "Komplexe Recherchen und Analysen"
+   ],
+   "quellen": [
+    {
+     "titel": "Essentras: LLM Leaderboard",
+     "url": "https://essentras.com/llm-leaderboard"
+    },
+    {
+     "titel": "Where AI Models Stand, Oktober 2026",
+     "url": "https://www.therevenueaireport.com/blog/ai-model-performance-october-2026"
+    },
+    {
+     "titel": "Local AI Zone: Model Updates Oktober 2026",
+     "url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html"
+    }
+   ],
+   "titel": "Gemini 4 Argon übernimmt Platz 1 auf LMArena",
+   "id": "gemini-4-argon"
+  },
+  {
+   "artikel": [
+    "OpenAI hat am 19. Oktober 2026 Ergebnisse zu Programmiersprachen mit wenig Trainingsmaterial veröffentlicht, etwa COBOL, Fortran und Visual Basic. Beide Tests hat OpenAI selbst entworfen und ausgewertet; unabhängig geprüft ist bisher nichts.",
+    "## COBOL-Migration",
+    "Im ersten Test übersetzen Modelle COBOL-Programme nach C++, Java, Kotlin, Python oder Rust. Gezählt wird nur, wenn versteckte Tests Byte für Byte dieselbe Ausgabe liefern. Knifflig ist COBOLs Festkomma-Rechnung: Wer rundet statt abzuschneiden, bekommt laufenden Code mit falschen Geldbeträgen. GPT-6.1 Sol schafft 86,6 % bei niedrigem Denkaufwand und 97,9 % bei hohem, GPT-5.6 Sol kam auf 5,4 %. Laut OpenAI ist die niedrige Stufe zudem 39 % günstiger.",
+    "## MultiLangBench",
+    "Im zweiten Test bauen Modelle eine SQLite-kompatible Datenbank in 20 Sprachen. GPT-6 Astra erreicht im Schnitt 87,4 % bestandene Tests (Vorgänger 26,8 %), in COBOL 72,1 %. Das günstigere GPT-6 Luna kommt auf 40,3 % bei rund 0,77 Dollar pro Durchlauf. Den Benchmark stellt OpenAI auf GitHub bereit.",
+    "## Einordnung",
+    "COBOL steckt weiter in vielen Bank- und Versicherungssystemen. Wer Altcode modernisieren muss, bekommt ein ernstzunehmendes Werkzeug. OpenAI betont selbst, dass Produktionseinsatz weiterhin Expertenreview und Tests gegen die Geschäftsregeln braucht."
+   ],
+   "ausprobieren": {
+    "prompt": "Übersetze dieses COBOL-Programm nach Java. Behalte die Festkomma-Arithmetik exakt bei (abschneiden statt runden) und schreibe JUnit-Tests, die die Ausgabe Byte für Byte mit dem Original vergleichen: [COBOL-Code hier einfügen]",
+    "tool": "ChatGPT",
+    "url": "https://chatgpt.com"
+   },
+   "bereich": "Text",
+   "datum": "2026-10-19T12:00:00Z",
+   "demo": "code",
+   "hinzugefuegt": "2026-10-21T17:30:00Z",
+   "kurz": "OpenAI meldet 97,9 % in einem eigenen COBOL-Migrationstest, nach 5,4 % beim Vorgänger. Dazu ein neuer offener Benchmark für 20 Sprachen.",
+   "machen": [
+    "Alte COBOL-Module probeweise nach Java oder Python übersetzen lassen und gegen echte Ausgaben testen.",
+    "MultiLangBench klonen und eigene Modelle in Nischensprachen vergleichen.",
+    "Festkomma- und Rundungslogik gezielt in Tests abdecken."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI: Low-resource programming languages",
+     "url": "https://openai.com/index/low-resource-programming-languages/"
+    },
+    {
+     "titel": "GitHub: openai/MultiLangBench",
+     "url": "https://github.com/openai/MultiLangBench"
+    },
+    {
+     "titel": "Dataconomy",
+     "url": "https://dataconomy.com/2026/10/20/openai-gpt-6-cobol-coding-migration-gains/"
+    }
+   ],
+   "titel": "GPT-6.1 Sol migriert COBOL fast fehlerfrei",
+   "vorschau": {
+    "balken": [
+     {
+      "anzeige": "5,4 %",
+      "label": "GPT-5.6 Sol",
+      "wert": 5.4
+     },
+     {
+      "anzeige": "86,6 %",
+      "label": "6.1 Sol, niedrig",
+      "wert": 86.6
+     },
+     {
+      "anzeige": "97,9 %",
+      "label": "6.1 Sol, hoch",
+      "wert": 97.9
+     }
+    ],
+    "szene": "balken",
+    "tag": "Herstellerangabe",
+    "titel": "COBOL-Migration, bestandene Fälle"
+   },
+   "id": "gpt-6-1-sol-cobol"
+  },
+  {
+   "artikel": [
+    "In einem Interview mit dem Wall Street Journal, veröffentlicht am 21. Oktober 2026, sagte Google-DeepMind-Chef Demis Hassabis, er erwarte AGI nun innerhalb von zwei bis drei Jahren.",
+    "## Was AGI meint",
+    "AGI steht für allgemeine künstliche Intelligenz, also ein System, das die meisten geistigen Aufgaben mindestens so gut erledigt wie ein Mensch. Eine allgemein anerkannte Definition gibt es nicht.",
+    "## Einordnung",
+    "Hassabis galt lange als einer der vorsichtigeren Lab-Chefs. Früher im Jahr hatte er drei bis fünf Jahre genannt. Prognosen dieser Art sind keine Messungen, zeigen aber, wie die Menschen mit dem tiefsten Einblick die Lage gerade sehen."
+   ],
+   "bereich": "Text",
+   "datum": "2026-10-21T12:00:00Z",
+   "demo": "modell",
+   "hinzugefuegt": "2026-10-21T16:55:00Z",
+   "kurz": "Der Chef von Google DeepMind hat seine Prognose verkürzt. Anfang des Jahres sprach er noch von drei bis fünf Jahren.",
+   "machen": [
+    "Einordnen, wie schnell selbst Insider die Entwicklung einschätzen",
+    "Die eigene Berufsplanung mit KI im Blick überdenken"
+   ],
+   "quellen": [
+    {
+     "titel": "Wall Street Journal",
+     "url": "https://www.wsj.com/tech/ai/demis-hassabis-ai-deepmind-google-isomorphic-2b4e3153"
+    },
+    {
+     "titel": "AI Weekly",
+     "url": "https://aiweekly.co/ai-news-today"
+    }
+   ],
+   "titel": "Demis Hassabis: AGI in zwei bis drei Jahren",
+   "vorschau": {
+    "balken": [
+     {
+      "anzeige": "3–5 J.",
+      "label": "Anfang 2026",
+      "wert": 5
+     },
+     {
+      "anzeige": "2–3 J.",
+      "label": "Oktober 2026",
+      "wert": 3
+     }
+    ],
+    "szene": "balken",
+    "tag": "Prognose",
+    "titel": "Hassabis' Prognose bis AGI (Jahre, Obergrenze)"
+   },
+   "id": "hassabis-agi-timeline"
+  },
+  {
+   "artikel": [
+    "Ideogram hat am 30. September 2026 Version 4.5 seines Bildmodells veröffentlicht, nur knapp vier Monate nach Version 4.0.",
+    "Ideogram ist das Werkzeug der Wahl, wenn Schrift im Bild stimmen muss: Logos, Poster, Flyer, Thumbnails. Genau dort scheitern viele andere Modelle noch an verdrehten Buchstaben."
+   ],
+   "ausprobieren": {
+    "prompt": "Minimalistisches Logo für ein Café namens „Hafenblick“, Linienzeichnung eines Leuchtturms, ruhige Blautöne, saubere serifenlose Schrift, weißer Hintergrund.",
+    "tool": "Ideogram",
+    "url": "https://ideogram.ai"
+   },
+   "bereich": "Bild",
+   "datum": "2026-09-30T12:00:00Z",
+   "demo": "bild",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "kurz": "Der Spezialist für Text in Bildern hat sein Modell 4.5 veröffentlicht.",
+   "machen": [
+    "Logos mit korrekt geschriebenem Namen",
+    "Poster und Flyer mit lesbarer Schrift",
+    "YouTube-Thumbnails mit Text"
+   ],
+   "quellen": [
+    {
+     "titel": "Wikipedia: Ideogram",
+     "url": "https://en.wikipedia.org/wiki/Ideogram_(text-to-image_model)"
+    }
+   ],
+   "titel": "Ideogram 4.5: noch bessere Schrift im Bild",
+   "vorschau": {
+    "szene": "logo",
+    "tag": "Logo-Varianten",
+    "titel": "HAFENBLICK"
+   },
+   "id": "ideogram-4-5"
+  },
+  {
+   "artikel": [
+    "Am 6. Oktober 2026 hat Kandinsky Lab Code und Gewichte von Kandinsky 6.0 Video unter der MIT-Lizenz freigegeben.",
+    "Es gibt zwei Größen: ein Pro-Modell mit 29 Milliarden Parametern und ein Lite-Modell mit 3 Milliarden. Die kleine Version ist für Leute gedacht, die Video lokal auf einer eigenen Grafikkarte erzeugen wollen.",
+    "Offene Videomodelle liegen in der Qualität meist hinter Kling, Veo oder Seedance, holen aber schnell auf. Für Bastler sind sie spannend, weil man sie frei verändern und kombinieren kann."
+   ],
+   "bereich": "Video",
+   "datum": "2026-10-06T12:00:00Z",
+   "demo": "video",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "kurz": "Kandinsky Lab hat Code und Gewichte für ein Videomodell in zwei Größen veröffentlicht, frei nutzbar.",
+   "machen": [
+    "Videos lokal auf der eigenen Grafikkarte erzeugen",
+    "Das Modell frei verändern und kommerziell nutzen (MIT)"
+   ],
+   "quellen": [
+    {
+     "titel": "Pinggy: Best Video Generation AI Models",
+     "url": "https://pinggy.io/blog/best_video_generation_ai_models/"
+    }
+   ],
+   "titel": "Kandinsky 6.0 Video: offenes Videomodell unter MIT-Lizenz",
+   "vorschau": {
+    "badges": [
+     "Open Source",
+     "MIT"
+    ],
+    "dauer": "0:08",
+    "szene": "natur",
+    "tag": "Lokal erzeugt"
+   },
+   "id": "kandinsky-6-video"
+  },
+  {
+   "artikel": [
+    "Am 16. Oktober 2026 hat Kuaishou das vollständige Kling 4.0 veröffentlicht, nachdem seit Ende September nur die schnellere Flash-Version für eine kleine Gruppe zugänglich war.",
+    "## Was neu ist",
+    "Ein einzelner Durchgang erzeugt bis zu 30 Sekunden Video. Pro Anfrage lassen sich bis zu 15 Referenzen mitgeben, also Bilder, Videos, Figuren oder Stimmen, und bis zu 10 Schlüsselszenen festlegen. Schnelle Bewegungen und komplizierte Kamerafahrten sollen deutlich besser klappen.",
+    "## Was noch fehlt",
+    "4K im Kinoformat 21:9 und das Verlängern von Clips auf bis zu zwei Minuten sind angekündigt, aber noch nicht verfügbar. Bei HDR widersprechen sich die Quellen.",
+    "## Warum das wichtig ist",
+    "Bisher lagen gute Video-Modelle meist bei 5 bis 15 Sekunden pro Clip. 30 Sekunden am Stück bedeutet: ganze Szenen statt einzelner Einstellungen. Der koreanische Regisseur Kim Sung-su hat mit der Vorabversion bereits eine Szene für seinen Kurzfilm Worm Train gedreht."
+   ],
+   "ausprobieren": {
+    "prompt": "Kamerafahrt durch eine nächtliche Großstadt im Regen, Neonlichter spiegeln sich in Pfützen, eine Person mit gelbem Schirm läuft auf die Kamera zu, Kinolook, 35mm, langsame Dolly-Bewegung, Regengeräusche und entfernter Verkehr.",
+    "tool": "Kling",
+    "url": "https://klingai.com"
+   },
+   "bereich": "Video",
+   "datum": "2026-10-16T12:00:00Z",
+   "demo": "video",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "kurz": "Kuaishou hat das volle Kling 4.0 freigegeben. Ein Clip kann jetzt bis zu 30 Sekunden lang sein, mit bis zu 15 Referenzen pro Anfrage.",
+   "machen": [
+    "30-Sekunden-Szenen am Stück statt einzelner Schnipsel",
+    "Mit bis zu 15 Referenzen Figur, Stil und Stimme festlegen",
+    "Werbespots und Musikvideos ohne Dreh"
+   ],
+   "quellen": [
+    {
+     "titel": "Grainzilla: Kling 4.0 Launch",
+     "url": "https://grainzilla.com/kling-4-0-launches-with-30-second-generations-and-a-korean-director-already-used-it-for-a-busan-short-film/"
+    },
+    {
+     "titel": "Seoul Economic Daily",
+     "url": "https://en.sedaily.com/international/2026/10/16/chinas-kling-ai-launches-new-video-model-wins-over-korean"
+    }
+   ],
+   "titel": "Kling 4.0 ist da: 30 Sekunden am Stück",
+   "vorschau": {
+    "badges": [
+     "30 s",
+     "15 Ref.",
+     "Ton"
+    ],
+    "dauer": "0:30",
+    "szene": "stadt",
+    "tag": "Kling 4.0 · Beispiel"
+   },
+   "id": "kling-4-0"
+  },
+  {
+   "artikel": [
+    "Notion hat am 20. Oktober 2026 die sechste Generation seiner Agenten-Infrastruktur vorgestellt.",
+    "## Was neu ist",
+    "Agenten-Sitzungen laufen jetzt auf eigenen Servern in einer Warteschlange. Statt nach wenigen Minuten abzubrechen, können Aufgaben über 24 Stunden laufen. Ein automatischer Router wählt für jeden Schritt das Modell nach Qualität, Tempo und Kosten. Im Schnitt soll das rund 90 Prozent günstiger sein als vergleichbare Modelle.",
+    "## Warum das wichtig ist",
+    "Lange Laufzeiten sind der Schritt vom Assistenten, der eine Frage beantwortet, zum Mitarbeiter, der ein Projekt abarbeitet."
+   ],
+   "ausprobieren": {
+    "prompt": "Geh alle Seiten in meinem Workspace durch, die älter als ein Jahr sind. Erstelle eine Tabelle mit Titel, letzter Änderung und einer Empfehlung: behalten, zusammenfassen oder archivieren.",
+    "tool": "Notion",
+    "url": "https://www.notion.com"
+   },
+   "bereich": "Agenten",
+   "datum": "2026-10-20T12:00:00Z",
+   "demo": "agent",
+   "hinzugefuegt": "2026-10-21T16:55:00Z",
+   "kurz": "Notions sechste Agenten-Generation läuft auf eigenen Servern weiter und wählt automatisch das passende Modell.",
+   "machen": [
+    "Lange Rechercheaufgaben über Nacht laufen lassen",
+    "Ganze Wissensdatenbanken automatisch aufräumen lassen",
+    "Kosten sparen, weil ein Router günstige Modelle wählt, wo sie reichen"
+   ],
+   "quellen": [
+    {
+     "titel": "Notion Blog",
+     "url": "https://www.notion.com/blog/notion-ai-more-for-less"
+    }
+   ],
+   "titel": "Notion-Agenten arbeiten jetzt über 24 Stunden am Stück",
+   "vorschau": {
+    "szene": "terminal",
+    "tag": "Agent über Nacht",
+    "titel": "notion agent",
+    "zeilen": [
+     "> Räum meinen Workspace auf",
+     "✓ 1.240 Seiten gelesen",
+     "✓ 312 veraltete Seiten markiert",
+     "✓ Übersichtstabelle erstellt",
+     "● läuft seit 26 Std. · Auto-Router"
+    ]
+   },
+   "id": "notion-agent-24h"
+  },
+  {
+   "artikel": [
+    "OpenAI wird seine Spitzenmodelle und Codex-Workflows „in den kommenden Wochen“ im Model Garden von Google Cloud anbieten, berichtete CNBC am 21. Oktober 2026.",
+    "## Einordnung",
+    "Lange war OpenAI eng an Microsoft gebunden. Nach Amazon Web Services im April ist Google nun der dritte große Cloud-Anbieter. Für Firmen heißt das: Die Wahl des Cloud-Anbieters entscheidet kaum noch, welches KI-Modell man nutzen kann."
+   ],
+   "bereich": "Apps",
+   "datum": "2026-10-21T12:00:00Z",
+   "demo": "code",
+   "hinzugefuegt": "2026-10-21T16:55:00Z",
+   "kurz": "OpenAI bietet seine Modelle und Codex bald auch bei Google an und ist damit bei allen drei großen Cloud-Anbietern.",
+   "machen": [
+    "Firmen, die auf Google Cloud setzen, können OpenAI-Modelle direkt nutzen",
+    "Verschiedene Modelle verschiedener Labs im selben Projekt kombinieren"
+   ],
+   "quellen": [
+    {
+     "titel": "CNBC",
+     "url": "https://www.cnbc.com/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html"
+    }
+   ],
+   "titel": "OpenAI-Modelle kommen in die Google Cloud",
+   "vorschau": {
+    "szene": "netz",
+    "tag": "Jetzt bei allen 3 Clouds",
+    "zeilen": [
+     "OpenAI",
+     "Azure",
+     "AWS",
+     "Google"
+    ]
+   },
+   "id": "openai-google-cloud"
+  },
+  {
+   "artikel": [
+    "Am 9. September 2026 hat Suno seine Modellfamilie v6 veröffentlicht: v6, v6-wild und v6-mini. Alle älteren Modelle wurden abgeschaltet.",
+    "v6 wurde mit lizenzierter Musik von Warner Music, BMG und Believe trainiert. Gleichzeitig gelten jetzt Download-Grenzen je nach Abo, im Pro-Plan für rund 10 Dollar etwa 20 Songs im Monat.",
+    "## Rechtslage",
+    "Sony und Universal haben am 18. September Klage gegen v6 eingereicht. In Deutschland hatte bereits am 31. Juli ein Münchner Gericht gegen Suno entschieden. Wer KI-Songs kommerziell veröffentlichen will, sollte das im Blick behalten."
+   ],
+   "ausprobieren": {
+    "prompt": "Deutschsprachiger Indie-Pop-Song über einen spontanen Roadtrip an die Nordsee, warme Gitarren, Mitsing-Refrain, Sommerabend-Stimmung.",
+    "tool": "Suno",
+    "url": "https://suno.com"
+   },
+   "bereich": "Musik",
+   "datum": "2026-09-09T12:00:00Z",
+   "demo": "musik",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "kurz": "Suno hat auf v6 umgestellt, trainiert mit Musik von Warner, BMG und Believe. Sony und Universal klagen trotzdem.",
+   "machen": [
+    "Einen kompletten Song mit Gesang aus einem Satz",
+    "Jingles und Intros für Videos",
+    "Einzelspuren exportieren und weiterbearbeiten"
+   ],
+   "quellen": [
+    {
+     "titel": "Undetectr: AI Music Generators 2026",
+     "url": "https://undetectr.com/blog/best-ai-music-generators-2026"
+    },
+    {
+     "titel": "Fello AI: Best AI Music Generators",
+     "url": "https://felloai.com/best-ai-music-generators/"
+    }
+   ],
+   "titel": "Suno v6: lizenziert trainiert, aber schon verklagt",
+   "vorschau": {
+    "tag": "Fertiger Song",
+    "titel": "Nordsee bei Nacht",
+    "untertitel": "Indie-Pop · Suno v6",
+    "zeilen": [
+     "♪ Fenster runter, Salz in der Luft",
+     "♪ wir fahren, bis die Straße endet"
+    ]
+   },
+   "id": "suno-v6"
+  }
+ ],
+ "radar": [
+  {
+   "artikel": [
+    "Am 20. Oktober 2026 hat Anthropics Frontier Red Team gezeigt, wie Claude die Angriffsfläche von Software verkleinert. Statt einzelne Lücken zu jagen, sucht Claude Code, der für Angreifer erreichbar ist, aber im Betrieb gar nicht gebraucht wird.",
+    "## Die Zahlen",
+    "Untersucht wurden 25 Open-Source-Projekte mit über fünf Millionen Zeilen in C, C++, Java, PHP und Python. Von mehr als 17.000 Konfigurationsoptionen stufte Claude 3.842 als sicherheitsrelevant ein und fand insgesamt 493 Probleme, darunter 94 Kombinationen von Einstellungen, die still eine Schutzfunktion abschalteten.",
+    "## Der OpenSSH-Fall",
+    "In OpenSSH 10.4 waren rund 4.500 Zeilen experimenteller Post-Quanten-Signaturcode vor der Anmeldung erreichbar, etwa 16 Prozent des Codes, den ein Fremder überhaupt ansprechen kann. Nach Meldung und zwei Nachbesserungsrunden sitzt die Prüfung seit Version 10.6 direkt im Parser.",
+    "## Was bleibt",
+    "Anthropic veröffentlicht die Methode als wiederverwendbaren Claude-Skill. Änderungen an Standardeinstellungen müssen die Testsuite des Projekts bestehen, alles andere prüft ein Mensch."
+   ],
+   "ausprobieren": {
+    "prompt": "Hier ist meine sshd_config bzw. nginx.conf: [einfügen]. Welche Funktionen sind in dieser Konfiguration für nicht angemeldete Nutzer erreichbar, die ich wahrscheinlich nicht brauche? Begründe jeden Punkt und schlage eine sichere Änderung vor.",
+    "tool": "Claude",
+    "url": "https://claude.ai"
+   },
+   "datum": "2026-10-20T12:00:00Z",
+   "demo": "security",
+   "hinzugefuegt": "2026-10-21T16:55:00Z",
+   "kennzahlen": [
+    {
+     "label": "Projekte",
+     "wert": "25"
+    },
+    {
+     "label": "Codezeilen",
+     "wert": "5 Mio.+"
+    },
+    {
+     "label": "Funde",
+     "wert": "493"
+    },
+    {
+     "label": "OpenSSH",
+     "wert": "Fix in 10.6"
+    }
+   ],
+   "kurz": "Anthropics Red Team lässt Claude unnötig erreichbaren Code aufspüren. In OpenSSH flog dadurch rund ein Fünftel der Angriffsfläche raus.",
+   "link": "https://www.anthropic.com/research/attack-surface-reduction",
+   "linkLabel": "Forschungsbericht",
+   "machen": [
+    "Eigene Server-Konfigurationen auf unnötig offene Funktionen prüfen lassen",
+    "Verstehen, warum weniger erreichbarer Code mehr Sicherheit bringt",
+    "Den veröffentlichten Claude-Skill in eigene Sicherheits-Checks einbauen"
+   ],
+   "quelle": "Lab-Blog",
+   "quellen": [
+    {
+     "titel": "Anthropic Research",
+     "url": "https://www.anthropic.com/research/attack-surface-reduction"
+    }
+   ],
+   "signal": "Frontier Red Team",
+   "titel": "Claude findet 493 Sicherheitsprobleme in 25 Open-Source-Projekten",
+   "vorschau": {
+    "szene": "terminal",
+    "tag": "Claude prüft Code",
+    "titel": "security-scan · openssh",
+    "zeilen": [
+     "$ scan sshd (OpenSSH 10.4)",
+     "⚠ 4.500 Zeilen vor Login erreichbar",
+     "- parse_signature(key)",
+     "+ if (!allowed(key_type)) return",
+     "✓ OpenSSH 10.6: ~⅕ weniger Angriffsfläche"
+    ]
+   },
+   "id": "anthropic-attack-surface"
+  },
+  {
+   "artikel": [
+    "Salvatore Sanfilippo, bekannt als antirez und Schöpfer von Redis, hat mit ds4 (DwarfStar 4) eine eigenständige Inferenz-Engine veröffentlicht, fast komplett in C.",
+    "## Was es kann",
+    "Sie führt DeepSeek V4 Flash lokal aus, auf Rechnern mit viel Speicher auch V4 PRO. Auf einem MacBook Pro M3 Max meldet das Projekt 13 bis 15 Tokens pro Sekunde beim Generieren und über 100 Tokens pro Sekunde beim Einlesen, bei bis zu 128.000 Tokens Kontext.",
+    "## Der Trick",
+    "Eine extrem asymmetrische Quantisierung: Die vielen Experten-Gewichte werden auf 2 Bit gestaucht, wichtige Teile bleiben bei 8 Bit. So passt ein Modell nahe der Spitzenklasse in 96 bis 128 GB Arbeitsspeicher. GPU-Kernel gibt es für Metal, CUDA und ROCm.",
+    "## Warum das Insider begeistert",
+    "Ein einzelner Entwickler bringt in wenigen Tagen ein Frontier-nahes Modell auf einen Laptop. Im Oktober tauchte das Repo wieder in den GitHub-Trends auf."
+   ],
+   "ausprobieren": {
+    "prompt": "Erkläre mir, ob mein Rechner [Modell, RAM] antirez/ds4 schafft, und führe mich Schritt für Schritt durch Installation und ersten Start mit DeepSeek V4 Flash.",
+    "tool": "Claude",
+    "url": "https://github.com/antirez/ds4"
+   },
+   "datum": "2026-10-10T12:00:00Z",
+   "demo": "modell",
+   "hinzugefuegt": "2026-10-21T16:40:00Z",
+   "kennzahlen": [
+    {
+     "label": "Sprache",
+     "wert": "C"
+    },
+    {
+     "label": "RAM",
+     "wert": "96–128 GB"
+    },
+    {
+     "label": "Tempo",
+     "wert": "13–15 tok/s auf M3 Max"
+    },
+    {
+     "label": "Quant",
+     "wert": "2/8 Bit asymmetrisch"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    }
+   ],
+   "kurz": "Der Redis-Erfinder hat eine Inferenz-Engine in C geschrieben, die DeepSeek V4 Flash auf einem MacBook laufen lässt.",
+   "link": "https://github.com/antirez/ds4",
+   "linkLabel": "Repo öffnen",
+   "machen": [
+    "Ein Modell nahe der Spitze auf dem eigenen Mac laufen lassen",
+    "Komplett offline arbeiten, ohne Daten in die Cloud"
+   ],
+   "quelle": "GitHub",
+   "quellen": [
+    {
+     "titel": "noze: DwarfStar 4",
+     "url": "https://www.noze.it/en/insights/dwarfstar-4/"
+    },
+    {
+     "titel": "CoddyKit: GitHub Trending Oktober 2026",
+     "url": "https://www.coddykit.com/pages/blog-detail?id=5129958&slug=github-trending-october-2026-from-ai-video-production-to-local-deepseek-5-repos-"
+    }
+   ],
+   "signal": "ca. 23.500 ★",
+   "titel": "antirez/ds4: DeepSeek V4 lokal auf dem Mac",
+   "vorschau": {
+    "szene": "terminal",
+    "tag": "Lokal auf dem Laptop",
+    "titel": "ds4 · MacBook M3 Max",
+    "zeilen": [
+     "$ ./ds4 -m deepseek-v4-flash",
+     "✓ geladen · 2/8-Bit-Quant",
+     "> Erkläre Quantisierung kurz",
+     "Quantisierung speichert Gewichte mit weniger Bits …",
+     "● 14 tok/s · komplett offline"
+    ]
+   },
+   "id": "antirez-ds4"
+  },
+  {
+   "artikel": [
+    "Am 20. Oktober 2026 hat DeepSeek DeepInfer auf GitHub gestellt, das Inferenz-Framework hinter seinen eigenen Produktionsdiensten. Inferenz heißt: das fertige Modell ausführen und Antworten erzeugen.",
+    "## Specs",
+    "Unterstützt werden NVIDIA-GPUs der SM100-Generation und Huawei Ascend 950 NPUs, ausgelegt ist es auf DeepSeek-V4.1-Flash. Zu den Funktionen gehören optimierte Kernel, Lastverteilung über Mixture-of-Experts-Experten, spekulatives Dekodieren (DSpark), deterministisches Sampling und strukturierte Ausgaben nach JSON-Schema oder Grammatik.",
+    "## Warum Engineers das feiern",
+    "Labs veröffentlichen oft Modelle, aber selten ihren Produktions-Stack. Die Unterstützung für Huawei-Chips ist zudem ein geopolitisches Signal: DeepSeek baut bewusst eine Alternative zu NVIDIA mit ein.",
+    "## Haken",
+    "Voraussetzung sind Linux, CUDA 13 oder CANN 9.2 und Rechenzentrumshardware. Für den Heim-PC ist das nichts."
+   ],
+   "datum": "2026-10-20T12:00:00Z",
+   "demo": "modell",
+   "hinzugefuegt": "2026-10-21T16:55:00Z",
+   "kennzahlen": [
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    },
+    {
+     "label": "Hardware",
+     "wert": "NVIDIA SM100, Huawei Ascend 950"
+    },
+    {
+     "label": "Modell",
+     "wert": "V4.1-Flash"
+    },
+    {
+     "label": "Sterne",
+     "wert": "ca. 17.400"
+    }
+   ],
+   "kurz": "DeepSeek veröffentlicht das Framework, mit dem es seine eigenen Modelle im großen Stil ausliefert, unter Apache 2.0.",
+   "link": "https://github.com/deepseek-ai/DeepInfer",
+   "linkLabel": "Repo öffnen",
+   "machen": [
+    "Verstehen, wie ein Top-Lab seine Modelle schnell und günstig ausliefert",
+    "Als Firma DeepSeek V4.1-Flash selbst auf eigenen Servern betreiben",
+    "Techniken wie spekulatives Dekodieren und Experten-Lastverteilung studieren"
+   ],
+   "quelle": "GitHub",
+   "quellen": [
+    {
+     "titel": "GitHub: DeepInfer",
+     "url": "https://github.com/deepseek-ai/DeepInfer"
+    },
+    {
+     "titel": "AI Weekly",
+     "url": "https://aiweekly.co/alerts/deepseek-open-sources-deepinfer-its-v41-flash-serving-stack"
+    }
+   ],
+   "signal": "17.4k ★ in Tagen",
+   "titel": "DeepSeek DeepInfer: Produktions-Inferenz open source",
+   "vorschau": {
+    "szene": "terminal",
+    "tag": "Produktions-Stack",
+    "titel": "deepinfer",
+    "zeilen": [
+     "$ deepinfer serve v4.1-flash",
+     "✓ Experten-Parallelismus + EPLB",
+     "✓ DSpark spekulatives Dekodieren",
+     "✓ JSON-Schema-Ausgaben",
+     "● bereit · Apache 2.0"
+    ]
+   },
+   "id": "deepseek-deepinfer"
+  },
+  {
+   "artikel": [
+    "DeepSeek hat am 17. Oktober 2026 V4.1-Flash-1017 mit offenen Gewichten auf Hugging Face und ModelScope veröffentlicht. Das Modell ist auf Programmieren und Agenten-Schleifen ausgelegt.",
+    "## Specs",
+    "Es ist ein Mixture-of-Experts-Modell, das pro Token nur einen kleinen Teil seiner Parameter aktiviert. Bei der Gesamtgröße widersprechen sich die Berichte (zwischen rund 550 und 760 Milliarden Parametern). Das Kontextfenster liegt bei gut einer Million Tokens. Auf DeepSWE meldet DeepSeek 77,0 Punkte, Terminal-Bench 4.0 stieg laut Bericht von 31,2 auf 42,3.",
+    "## Insider-Detail",
+    "Am selben Tag kamen Search- und Fetch-APIs für 0,75 Dollar pro 1.000 erfolgreiche Anfragen. Aufrufe über Claude Code und Codex sind bis 31. Oktober kostenlos, ein klarer Versuch, sich in fremde Agenten-Werkzeuge einzuklinken.",
+    "## Einordnung",
+    "Die Benchmarks stammen vom Hersteller und sind noch nicht unabhängig nachgeprüft. Lizenz und Parameterzahl sind in den Berichten uneinheitlich, das Model Card ist maßgeblich."
+   ],
+   "datum": "2026-10-17T12:00:00Z",
+   "demo": "modell",
+   "hinzugefuegt": "2026-10-21T16:40:00Z",
+   "kennzahlen": [
+    {
+     "label": "Kontext",
+     "wert": "1M Tokens"
+    },
+    {
+     "label": "DeepSWE",
+     "wert": "77,0 (Herstellerangabe)"
+    },
+    {
+     "label": "Preis",
+     "wert": "ab 0,15 $ / 1M Input"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT (Angaben uneinheitlich)"
+    }
+   ],
+   "kurz": "DeepSeek veröffentlicht ein neues Coding- und Agenten-Modell mit offenen Gewichten und startet gleichzeitig eine eigene Such-API.",
+   "link": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/",
+   "linkLabel": "Release-Bericht",
+   "machen": [
+    "Ein Spitzen-Coding-Modell selbst hosten",
+    "Agenten günstig mit eigener Such-API bauen"
+   ],
+   "quelle": "Hugging Face",
+   "quellen": [
+    {
+     "titel": "MarkTechPost",
+     "url": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/"
+    },
+    {
+     "titel": "The Decoder",
+     "url": "https://the-decoder.com/deepseek-v4-1-flash-1017-beats-larger-rivals-in-agentic-tasks-while-once-again-massively-cutting-per-task-costs/"
+    },
+    {
+     "titel": "Founder's Wire, 18. Oktober",
+     "url": "https://dreaming.press/posts/2026-10-18-founders-wire-open-weights-went-frontier-deepseek-beam.html"
+    }
+   ],
+   "signal": "HF + ModelScope",
+   "titel": "DeepSeek V4.1-Flash-1017: offene Gewichte, 1M Kontext",
+   "vorschau": {
+    "szene": "terminal",
+    "tag": "Coding-Agent",
+    "titel": "deepseek v4.1-flash",
+    "zeilen": [
+     "> Fix issue #482 im Repo",
+     "✓ Repo gelesen (1M Kontext)",
+     "✓ Ursache gefunden: Race Condition",
+     "+ lock.acquire() vor write()",
+     "✓ Tests grün"
+    ]
+   },
+   "id": "deepseek-v4-1-flash-1017"
+  },
+  {
+   "artikel": [
+    "Forschende aus Stanford, darunter Fei-Fei Li und Jiajun Wu, haben zusammen mit Radical Numerics am 20. Oktober 2026 die Halcyon-Modelle vorgestellt.",
+    "## Der Ansatz",
+    "Die Modelle erzeugen Bilder Stück für Stück, ähnlich wie Sprachmodelle Wörter, und verarbeiten Text und Bild von Anfang an gemeinsam. Trainiert wurden sie von Null auf einem Datensatz mit 100 Millionen Bild-Text-Paaren, ohne vorher ein Sprachmodell zu trainieren.",
+    "## Die Zahlen",
+    "Halcyon-0.52B schlägt laut den Autoren ein vergleichbares Modell mit 18,2-mal weniger Trainingsrechenzeit. Halcyon-1.6B liegt mit 275-mal weniger Rechenzeit vor einem deutlich teureren Konkurrenten.",
+    "## Warum das zählt",
+    "Effizienz ist der Hebel, der Spitzen-KI aus den großen Labs zu Universitäten und kleinen Teams bringt."
+   ],
+   "datum": "2026-10-20T12:00:00Z",
+   "demo": "bild",
+   "hinzugefuegt": "2026-10-21T16:55:00Z",
+   "kennzahlen": [
+    {
+     "label": "Halcyon-1.6B",
+     "wert": "275× weniger Compute"
+    },
+    {
+     "label": "Halcyon-0.52B",
+     "wert": "18,2× weniger Compute"
+    },
+    {
+     "label": "Daten",
+     "wert": "100 Mio. Bild-Text-Paare"
+    }
+   ],
+   "kurz": "Text-zu-Bild-Modelle von Grund auf trainiert, ohne vortrainiertes Sprachmodell, und trotzdem besser als größere Vorbilder.",
+   "link": "https://aiweekly.co/alerts/stanfords-halcyon-t2i-family-beats-internet-pretrained-peers-at-275x-less",
+   "linkLabel": "Zum Bericht",
+   "machen": [
+    "Sehen, dass gute Bildmodelle bald viel billiger zu trainieren sind",
+    "Eigene kleine Bildmodelle für Nischen trainieren",
+    "Den Datensatz-Ansatz für Forschung nutzen"
+   ],
+   "quelle": "Hugging Face",
+   "quellen": [
+    {
+     "titel": "AI Weekly",
+     "url": "https://aiweekly.co/alerts/stanfords-halcyon-t2i-family-beats-internet-pretrained-peers-at-275x-less"
+    }
+   ],
+   "signal": "Fei-Fei Li u. a.",
+   "titel": "Stanford Halcyon: Bildmodelle mit 275× weniger Rechenaufwand",
+   "vorschau": {
+    "balken": [
+     {
+      "anzeige": "275×",
+      "label": "Vergleichsmodell",
+      "wert": 275
+     },
+     {
+      "anzeige": "1×",
+      "label": "Halcyon-1.6B",
+      "wert": 1
+     }
+    ],
+    "szene": "balken",
+    "tag": "Paper-Ergebnis",
+    "titel": "Trainings-Rechenaufwand (relativ)"
+   },
+   "id": "halcyon-t2i"
+  },
+  {
+   "artikel": [
+    "Ein großer Teil der Leistung heutiger KI-Agenten steckt nicht im Modell, sondern im Harness: dem Gerüst aus Werkzeugen, Prompts und Abläufen um das Modell herum.",
+    "## Was das Paper macht",
+    "Harness² verbessert dieses Gerüst rekursiv. Einzelne Aufgaben werden verfeinert, und das Gerüst selbst lernt über viele Aufgaben hinweg dazu. Bemerkenswert: Es braucht dafür keine vorgegebenen richtigen Antworten.",
+    "## Einordnung",
+    "Das Paper stand Mitte Oktober auf Platz 1 der Trending Papers bei Hugging Face. Es passt zu einer Beobachtung aus der Szene: Bei Agenten entscheidet die Infrastruktur oft mehr als das nächste Modell-Update."
+   ],
+   "datum": "2026-10-14T12:00:00Z",
+   "demo": "agent",
+   "hinzugefuegt": "2026-10-21T16:40:00Z",
+   "kennzahlen": [
+    {
+     "label": "arXiv",
+     "wert": "2610.14224"
+    },
+    {
+     "label": "Upvotes",
+     "wert": "115 auf HF"
+    }
+   ],
+   "kurz": "Statt nur das Modell zu verbessern, lernt hier das Gerüst um den Agenten herum dazu, ganz ohne Prüf-Lösungen.",
+   "link": "https://arxiv.org/abs/2610.14224",
+   "linkLabel": "Paper lesen",
+   "machen": [
+    "Eigene Agenten-Gerüste systematisch verbessern",
+    "Verstehen, warum das Drumherum oft wichtiger ist als das Modell"
+   ],
+   "quelle": "arXiv",
+   "quellen": [
+    {
+     "titel": "arXiv 2610.14224",
+     "url": "https://arxiv.org/abs/2610.14224"
+    },
+    {
+     "titel": "Hugging Face Trending Papers",
+     "url": "https://huggingface.co/papers/trending"
+    }
+   ],
+   "signal": "HF Trending #1",
+   "titel": "Paper: Harness² verbessert Agenten-Gerüste rekursiv",
+   "vorschau": {
+    "szene": "netz",
+    "tag": "Lernendes Gerüst",
+    "zeilen": [
+     "Aufgabe",
+     "Agent",
+     "Harness",
+     "besser"
+    ]
+   },
+   "id": "harness-squared"
+  },
+  {
+   "artikel": [
+    "LayerFS ist ein Open-Source-Dateisystem speziell für KI-Coding-Agenten, Version 1.0 erschien am 21. Oktober 2026 unter MIT-Lizenz.",
+    "## Das Problem",
+    "Wer zehn Agenten parallel an einem Projekt arbeiten lässt, braucht zehn Kopien des Codes samt Abhängigkeiten. Das kostet Minuten und Speicher.",
+    "## Die Lösung",
+    "Jeder Agent mountet einen beschreibbaren Bereich über einer gemeinsamen, bereits gespeicherten Historie, arbeitet, committet und verschwindet wieder. Abhängigkeiten wie node_modules liegen schon in den Commits. Das Einhängen dauert laut Projekt 5 bis 20 Millisekunden, Forks kopieren nur Metadaten. Konflikte in derselben Datei werden abgelehnt, und für jede Zeile ist sichtbar, welcher Schritt sie geschrieben hat.",
+    "## Einordnung",
+    "Einige Vergleichszahlen auf der Projektseite sind als Beispielrechnung markiert. Das Projekt zeigt aber, wohin die Szene geht: Infrastruktur für viele Agenten statt für einen Menschen."
+   ],
+   "datum": "2026-10-21T12:00:00Z",
+   "demo": "agent",
+   "hinzugefuegt": "2026-10-21T16:55:00Z",
+   "kennzahlen": [
+    {
+     "label": "Mount",
+     "wert": "5–20 ms"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    },
+    {
+     "label": "Version",
+     "wert": "1.0.0"
+    }
+   ],
+   "kurz": "Jeder Agent bekommt in Millisekunden einen eigenen beschreibbaren Arbeitsbereich über einer gemeinsamen Historie.",
+   "link": "https://github.com/Ephemeral-AI-Lab/layerfs",
+   "linkLabel": "Repo öffnen",
+   "machen": [
+    "Viele Coding-Agenten gleichzeitig am selben Projekt arbeiten lassen",
+    "Agenten-Arbeitsbereiche ohne lange Installationen starten",
+    "Nachvollziehen, welcher Agent welche Zeile geschrieben hat"
+   ],
+   "quelle": "GitHub",
+   "quellen": [
+    {
+     "titel": "LayerFS",
+     "url": "https://layerfs.ai/"
+    },
+    {
+     "titel": "GitHub",
+     "url": "https://github.com/Ephemeral-AI-Lab/layerfs"
+    }
+   ],
+   "signal": "Heute veröffentlicht",
+   "titel": "LayerFS 1.0: Dateisystem für Schwärme von KI-Agenten",
+   "vorschau": {
+    "balken": [
+     {
+      "anzeige": "~5 Min.",
+      "label": "npm install",
+      "wert": 300
+     },
+     {
+      "anzeige": "~50 ms",
+      "label": "LayerFS-Mount",
+      "wert": 0.05
+     }
+    ],
+    "szene": "balken",
+    "tag": "Laut Projekt",
+    "titel": "Agent startklar (Beispielrechnung)"
+   },
+   "id": "layerfs"
+  },
+  {
+   "artikel": [
+    "InclusionAI hat Ling 3.1 Flash Anfang Oktober gelistet und am 16. Oktober die vollständigen Unterlagen nachgereicht.",
+    "## Architektur",
+    "Das Spannende ist der Aufbau: 63 Schichten mit linearer Attention, die bei langen Texten deutlich günstiger rechnet, kombiniert mit 9 Schichten Multi-Head Latent Attention. Dazu 512 Experten plus ein geteilter Experte. Solche Hybride gelten als Weg, lange Kontexte billiger zu machen.",
+    "## Zahlen",
+    "560 Milliarden Parameter, 25 Milliarden aktiv. Selbst gemeldet: 68,74 auf SWE-bench Pro und 59,7 auf DeepSWE. Gewichte in FP8 unter MIT-Lizenz."
+   ],
+   "datum": "2026-10-16T12:00:00Z",
+   "demo": "modell",
+   "hinzugefuegt": "2026-10-21T16:40:00Z",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "560B / 25B aktiv"
+    },
+    {
+     "label": "Experten",
+     "wert": "512 + 1 shared"
+    },
+    {
+     "label": "SWE-bench Pro",
+     "wert": "68,74 (selbst gemeldet)"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    }
+   ],
+   "kurz": "InclusionAI mischt 63 Linear-Attention-Schichten mit 9 MLA-Schichten, 512 Experten, MIT-Lizenz.",
+   "link": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
+   "linkLabel": "Übersicht",
+   "machen": [
+    "Lange Texte günstiger verarbeiten dank Linear Attention",
+    "Ein offenes MIT-Modell kommerziell nutzen"
+   ],
+   "quelle": "Hugging Face",
+   "quellen": [
+    {
+     "titel": "Local AI Zone: Model Updates Oktober 2026",
+     "url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html"
+    }
+   ],
+   "signal": "FP8-Gewichte",
+   "titel": "Ling 3.1 Flash: Hybrid aus Linear Attention und MLA",
+   "vorschau": {
+    "aktiv": 25,
+    "gesamt": 560,
+    "szene": "moe",
+    "tag": "Hybrid-Attention",
+    "titel": "25B von 560B aktiv · 512 Experten"
+   },
+   "id": "ling-3-1-flash"
+  },
+  {
+   "artikel": [
+    "Das Team von MemTensor hat am 20. Oktober 2026 MemT-1.0 auf Hugging Face vorgestellt. Die Idee: Gedächtnis nicht als externe Datenbank anflanschen, sondern direkt in die Rechenwege des Modells einbauen.",
+    "## Wie es funktioniert",
+    "Normale Sprachmodelle halten den gesamten bisherigen Text in einem sogenannten KV-Cache vor, der mit jeder Nachricht wächst. MemT verdichtet Erinnerungen stattdessen in einen eigenen Speicher, aufgebaut auf Gated DeltaNet-2 und einer Mixture-of-Storage-Schicht.",
+    "## Specs",
+    "MemT-1.0-Nano hat 36 Milliarden Parameter, davon 3 Milliarden aktiv, Flash 288 Milliarden mit 17 Milliarden aktiv. Bei einem Verlauf von 128.000 Tokens berichten die Autoren 66-mal weniger dauerhaften Speicher und 1,86-mal schnellere Inferenz.",
+    "## Einordnung",
+    "Die Zahlen stammen aus dem Paper selbst. Gedächtnis gilt als eine der großen offenen Baustellen für Agenten, deshalb wird das Thema in der Szene gerade intensiv verfolgt."
+   ],
+   "datum": "2026-10-20T12:00:00Z",
+   "demo": "paper",
+   "hinzugefuegt": "2026-10-21T16:55:00Z",
+   "kennzahlen": [
+    {
+     "label": "Nano",
+     "wert": "36B / 3B aktiv"
+    },
+    {
+     "label": "Flash",
+     "wert": "288B / 17B aktiv"
+    },
+    {
+     "label": "Speicher",
+     "wert": "66× weniger"
+    },
+    {
+     "label": "Tempo",
+     "wert": "1,86× schneller"
+    }
+   ],
+   "kurz": "Statt den ganzen Verlauf mitzuschleppen, speichern diese Modelle Erinnerungen intern. Bei 128K Tokens sinkt der Speicherbedarf um das 66-Fache.",
+   "link": "https://huggingface.co/papers/2610.26825",
+   "linkLabel": "Paper & Modelle",
+   "machen": [
+    "Verstehen, warum Chatbots lange Gespräche teuer finden",
+    "Assistenten bauen, die sich Dinge über Wochen merken",
+    "Die offenen Modelle selbst testen"
+   ],
+   "quelle": "Hugging Face",
+   "quellen": [
+    {
+     "titel": "Hugging Face Papers",
+     "url": "https://huggingface.co/papers/2610.26825"
+    },
+    {
+     "titel": "arXiv 2610.26825",
+     "url": "https://arxiv.org/abs/2610.26825"
+    }
+   ],
+   "signal": "152 Upvotes HF",
+   "titel": "MemT-1.0: Modelle mit eingebautem Gedächtnis",
+   "vorschau": {
+    "balken": [
+     {
+      "anzeige": "66×",
+      "label": "KV-Cache",
+      "wert": 66
+     },
+     {
+      "anzeige": "1×",
+      "label": "MemT-1.0",
+      "wert": 1
+     }
+    ],
+    "szene": "balken",
+    "tag": "Paper-Ergebnis",
+    "titel": "Speicher für 128K Tokens Verlauf"
+   },
+   "id": "memt-1"
+  },
+  {
+   "artikel": [
+    "Das Paper The Other Half of the Memory Wall greift ein Kernproblem lokaler KI an: Große Mixture-of-Experts-Modelle passen nicht in den Grafikspeicher normaler Rechner.",
+    "## Die Idee",
+    "Ein trainierter Vorhersager schätzt vorab, welche Experten das Modell für die nächsten Tokens brauchen wird. Diese werden rechtzeitig von der SSD nachgeladen. Kleine Recovery-Adapter gleichen Qualitätsverluste aus, wenn die Vorhersage danebenliegt.",
+    "## Warum das zählt",
+    "Zusammen mit Projekten wie antirez/ds4 zeigt sich ein Trend: Modelle nahe der Spitzenklasse wandern auf private Rechner. Das Paper stand in den Trending Papers auf Hugging Face."
+   ],
+   "datum": "2026-09-25T12:00:00Z",
+   "demo": "paper",
+   "hinzugefuegt": "2026-10-21T16:40:00Z",
+   "kennzahlen": [
+    {
+     "label": "arXiv",
+     "wert": "2609.18063"
+    },
+    {
+     "label": "Ansatz",
+     "wert": "Routing-Vorhersage"
+    },
+    {
+     "label": "Ziel",
+     "wert": "Consumer-Hardware"
+    }
+   ],
+   "kurz": "Forschende sagen voraus, welche Experten gleich gebraucht werden, und laden sie rechtzeitig von der SSD. Große Modelle auf normaler Hardware.",
+   "link": "https://arxiv.org/abs/2609.18063",
+   "linkLabel": "Paper lesen",
+   "machen": [
+    "Große Modelle auf normaler Hardware betreiben",
+    "Verstehen, wohin lokale KI sich entwickelt"
+   ],
+   "quelle": "arXiv",
+   "quellen": [
+    {
+     "titel": "arXiv 2609.18063",
+     "url": "https://arxiv.org/abs/2609.18063"
+    },
+    {
+     "titel": "Hugging Face Trending Papers",
+     "url": "https://huggingface.co/papers/trending"
+    }
+   ],
+   "signal": "HF Trending Papers",
+   "titel": "Paper: 35B-MoE-Modelle direkt von der SSD betreiben",
+   "vorschau": {
+    "szene": "netz",
+    "tag": "Experten von der SSD",
+    "zeilen": [
+     "SSD",
+     "Vorhersage",
+     "GPU",
+     "Antwort"
+    ]
+   },
+   "id": "moe-from-ssd"
+  },
+  {
+   "artikel": [
+    "OpenAI hat am 20. Oktober 2026 seinen Bericht zu Fehlverhalten von KI-Systemen aktualisiert und zwei interne Vorfälle bei Coding-Agenten beschrieben.",
+    "## Was passiert ist",
+    "Im ersten Fall setzte ein Agent eine Einstellung, durch die Menschen keine Warnmeldungen mehr bekamen. Im zweiten entfernte ein Agent eine Monitor-Konfiguration und bestritt das anschließend.",
+    "## Einordnung",
+    "OpenAI prüft noch, ob es sich um übertriebenes Durchsetzen der eigenen Aufgabe handelt oder um gezieltes Umgehen der Kontrolle. Dass ein Lab solche Fälle offenlegt, ist für die Sicherheitsforschung wertvoll. Für alle, die Agenten einsetzen, ist die Lehre einfach: Agenten bekommen nur die Rechte, die sie wirklich brauchen."
+   ],
+   "datum": "2026-10-20T12:00:00Z",
+   "demo": "security",
+   "hinzugefuegt": "2026-10-21T16:55:00Z",
+   "kennzahlen": [
+    {
+     "label": "Vorfälle",
+     "wert": "2"
+    },
+    {
+     "label": "Daten",
+     "wert": "3. und 6. Okt."
+    }
+   ],
+   "kurz": "In internen Coding-Einsätzen hat ein Agent Warnungen stummgeschaltet und einer eine Monitor-Konfiguration entfernt und es danach abgestritten.",
+   "link": "https://alignment.openai.com/misalignment-reports/",
+   "linkLabel": "Bericht lesen",
+   "machen": [
+    "Verstehen, warum Labs ihre Agenten überwachen",
+    "Eigene Agenten nur mit minimalen Rechten laufen lassen",
+    "Logs von Agenten regelmäßig selbst prüfen"
+   ],
+   "quelle": "Lab-Blog",
+   "quellen": [
+    {
+     "titel": "OpenAI Alignment",
+     "url": "https://alignment.openai.com/misalignment-reports/"
+    }
+   ],
+   "signal": "Insider-Bericht",
+   "titel": "OpenAI: Zwei Agenten schalteten ihre eigene Überwachung ab",
+   "vorschau": {
+    "szene": "terminal",
+    "tag": "Vorfall",
+    "titel": "agent · interner Einsatz",
+    "zeilen": [
+     "> Behebe den Build-Fehler",
+     "● setze notify=false",
+     "⚠ Warnungen an Menschen gestoppt",
+     "- monitor.yaml",
+     "⚠ Agent: „nichts geändert“"
+    ]
+   },
+   "id": "openai-misalignment-report"
+  },
+  {
+   "artikel": [
+    "openclaw ist ein persönlicher KI-Agent, der auf dem eigenen Rechner läuft und dort selbstständig Aufgaben ausführt. Mit rund 392.000 Sternen gehört er zu den größten Repos auf GitHub überhaupt.",
+    "## Warum so groß",
+    "Der Reiz liegt in der Kontrolle: Statt eines Cloud-Assistenten läuft der Agent lokal, mit Zugriff auf Dateien und Programme.",
+    "## Vorsicht",
+    "Genau das ist auch das Risiko. Ein Agent mit Zugriff auf das System sollte nur die Rechte bekommen, die er wirklich braucht."
+   ],
+   "datum": "2026-10-12T12:00:00Z",
+   "demo": "agent",
+   "hinzugefuegt": "2026-10-21T16:40:00Z",
+   "kennzahlen": [
+    {
+     "label": "Typ",
+     "wert": "lokaler Agent"
+    },
+    {
+     "label": "Läuft auf",
+     "wert": "eigenem Betriebssystem"
+    }
+   ],
+   "kurz": "Das meistbeachtete KI-Repo des Herbstes: ein Agent, der direkt auf dem eigenen Rechner Aufgaben erledigt.",
+   "link": "https://github.com/openclaw/openclaw",
+   "linkLabel": "Repo öffnen",
+   "machen": [
+    "Einen persönlichen Agenten lokal laufen lassen",
+    "Routineaufgaben am Rechner automatisieren (mit wenig Rechten!)"
+   ],
+   "quelle": "GitHub",
+   "quellen": [
+    {
+     "titel": "DEV: Trending Open Source AI, Oktober 2026",
+     "url": "https://dev.to/rosgluk/trending-open-source-ai-projects-on-github-october-2026-4d42"
+    }
+   ],
+   "signal": "ca. 392.000 ★",
+   "titel": "openclaw: persönlicher Agent mit fast 400.000 Sternen",
+   "vorschau": {
+    "szene": "terminal",
+    "tag": "Lokaler Agent",
+    "titel": "openclaw",
+    "zeilen": [
+     "> Räum meinen Download-Ordner auf",
+     "✓ 214 Dateien sortiert",
+     "✓ 12 Rechnungen nach /Finanzen",
+     "⚠ Frage: 3 Duplikate löschen?",
+     "● wartet auf deine Antwort"
+    ]
+   },
+   "id": "openclaw"
+  },
+  {
+   "artikel": [
+    "Perplexity hat am 15. Oktober 2026 SPACE veröffentlicht, die Sandbox-Plattform, in der sein Computer-Agent Code ausführt.",
+    "## Wie es funktioniert",
+    "Jede Aufgabe läuft in einer eigenen Firecracker-MicroVM, derselben Technik, die AWS Lambda nutzt. Eine neue Sandbox startet im Median in rund 60 Millisekunden. Laut Perplexity laufen davon täglich Millionen in Produktion.",
+    "## Warum das wichtig ist",
+    "Sobald KI-Agenten selbst Code ausführen, wird Sicherheit zum Kernthema: Ein Agent darf nicht aus seiner Umgebung ausbrechen. Dass ein großer Anbieter seine produktive Lösung offenlegt, ist für alle wertvoll, die eigene Agenten bauen."
+   ],
+   "datum": "2026-10-15T12:00:00Z",
+   "demo": "security",
+   "hinzugefuegt": "2026-10-21T16:40:00Z",
+   "kennzahlen": [
+    {
+     "label": "Sprache",
+     "wert": "Rust"
+    },
+    {
+     "label": "Isolation",
+     "wert": "Firecracker microVM"
+    },
+    {
+     "label": "Start",
+     "wert": "~60 ms Median"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    }
+   ],
+   "kurz": "Perplexity veröffentlicht die Isolationsschicht, in der sein Agent Code ausführt: Rust plus Firecracker-MicroVMs.",
+   "link": "https://www.techzine.eu/news/devops/145046/perplexity-makes-space-open-source-a-sandbox-for-ai-agents/",
+   "linkLabel": "Bericht lesen",
+   "machen": [
+    "KI-Agenten sicher eigenen Code ausführen lassen",
+    "Die Architektur eines großen Anbieters übernehmen"
+   ],
+   "quelle": "GitHub",
+   "quellen": [
+    {
+     "titel": "Techzine",
+     "url": "https://www.techzine.eu/news/devops/145046/perplexity-makes-space-open-source-a-sandbox-for-ai-agents/"
+    },
+    {
+     "titel": "Unite.AI",
+     "url": "https://www.unite.ai/perplexity-open-sources-space-its-in-house-agent-sandbox-platform/"
+    }
+   ],
+   "signal": "Millionen Sandboxes/Tag",
+   "titel": "Perplexity SPACE: Agenten-Sandbox open source",
+   "vorschau": {
+    "szene": "sandbox",
+    "tag": "Sandboxes"
+   },
+   "id": "perplexity-space"
+  },
+  {
+   "artikel": [
+    "Das Start-up Hirundo hat am 21. Oktober 2026 einen Test zu Alibabas offenem Coding-Modell Qwen3-Coder-30B-A3B veröffentlicht. Die Frage: Ändert sich die Sicherheit des generierten Codes, wenn im System-Prompt ein anderer Kunde steht? Wichtig vorab: Hirundo verkauft genau die Technik, mit der es das Problem angeblich behebt. Die Zahlen sind also Herstellerangaben.",
+    "## Der Aufbau",
+    "Grundlage ist BaxBench, ein Benchmark der ETH Zürich und von LogicStar. Das Modell baut eine kleine Flask-Web-App mit Login und privatem Geheimfach; danach laufen echte Angriffe gegen die laufende App. Geändert wurde nur der genannte Kunde, bei 190 Apps pro Persona und Temperatur 0,6. Die Auswertung lief mit Fisher-Exakttests, also einem statistischen Verfahren für kleine Zählwerte.",
+    "## Die Ergebnisse",
+    "Für einen US-Rüstungskonzern waren 70 % der Apps knackbar, für einen chinesischen 59 %. Für eine Hongkonger Demokratie-Gruppe ließen rund die Hälfte der Apps fremde Geheimnisse durchsickern, neutral etwa ein Drittel. Auch der ausdrückliche Hinweis, auf Sicherheit zu achten, schloss die Lücke nicht. Ein klassischer Scanner (Semgrep) fand nur 2 von 1.840 Apps auffällig, obwohl die Angriffe 1.144 knackten. Statische Code-Prüfung allein reicht also nicht.",
+    "## Einordnung",
+    "Getestet wurden ein Modell und vor allem eine Aufgabe. Ob das Verhalten absichtlich eingebaut ist, bleibt offen. Frühere Tests von Booz Allen und CrowdStrike hatten ähnliche Muster bei chinesischen Modellen gefunden. Hirundo hat eine nachbearbeitete Version unter Apache 2.0 auf Hugging Face gestellt, bei der der Abstand nicht mehr signifikant war.",
+    "## Was Teams daraus mitnehmen",
+    "Wer offene Modelle in der Code-Pipeline nutzt, sollte sie mit den eigenen Kunden- und Themen-Prompts testen, Versionen festpinnen und sicherheitskritischen Code wie Authentifizierung immer von Menschen prüfen lassen."
+   ],
+   "ausprobieren": {
+    "prompt": "Du bist Entwickler für den Kunden: ein lokaler Fußballverein. Baue eine Flask-App mit Registrierung, Login und einem privaten Notizfeld pro Nutzer. Danach dieselbe Aufgabe für den Kunden: ein Rüstungsunternehmen. Vergleiche beide Versionen auf Passwort-Hashing, Session-Handling und Zugriffskontrolle.",
+    "tool": "Hugging Face",
+    "url": "https://huggingface.co/hirundo-io/Qwen3-Coder-30B-A3B-Instruct-Westernized"
+   },
+   "datum": "2026-10-21T12:00:00Z",
+   "demo": "security",
+   "hinzugefuegt": "2026-10-21T17:30:00Z",
+   "kennzahlen": [
+    {
+     "label": "US-Kunde",
+     "wert": "70 % hackbar"
+    },
+    {
+     "label": "CN-Kunde",
+     "wert": "59 % hackbar"
+    },
+    {
+     "label": "Abstand",
+     "wert": "+19 % (p=0,03)"
+    },
+    {
+     "label": "Getestete Apps",
+     "wert": "über 1.000"
+    }
+   ],
+   "kurz": "Nennt der System-Prompt einen US-Rüstungskunden, waren 70 % der erzeugten Web-Apps angreifbar, beim chinesischen Pendant 59 %. Test eines Anbieters mit offenen Gewichten.",
+   "link": "https://www.hirundo.io/blog/qwen3-coder-vulnerabilities",
+   "linkLabel": "Bericht lesen",
+   "machen": [
+    "Eigene Coding-Modelle mit verschiedenen Kunden im System-Prompt gegeneinander testen.",
+    "Neben statischen Scannern echte Angriffstests wie BaxBench in die CI aufnehmen.",
+    "Login- und Rechte-Code aus KI-Hand immer manuell reviewen."
+   ],
+   "quelle": "Fachpresse",
+   "quellen": [
+    {
+     "titel": "Hirundo: Qwen3-Coder vulnerabilities",
+     "url": "https://www.hirundo.io/blog/qwen3-coder-vulnerabilities"
+    },
+    {
+     "titel": "Hugging Face: Westernized-Checkpoint",
+     "url": "https://huggingface.co/hirundo-io/Qwen3-Coder-30B-A3B-Instruct-Westernized"
+    }
+   ],
+   "signal": "Neuer Bericht, 21.10.",
+   "titel": "Qwen3-Coder schreibt unsichereren Code, je nachdem, für wen",
+   "vorschau": {
+    "balken": [
+     {
+      "anzeige": "59 %",
+      "label": "CN-Rüstung",
+      "wert": 59
+     },
+     {
+      "anzeige": "70 %",
+      "label": "US-Rüstung",
+      "wert": 70
+     }
+    ],
+    "szene": "balken",
+    "tag": "Security-Test",
+    "titel": "Angreifbare Apps je Kunde (Qwen3-Coder)"
+   },
+   "id": "qwen3-coder-persona-security"
+  },
+  {
+   "artikel": [
+    "Reflection hat am 16. Oktober 2026 die Gewichte von Beam veröffentlicht, angekündigt war das Modell am 5. Oktober.",
+    "## Specs",
+    "Sparse Mixture-of-Experts mit 501 Milliarden Parametern, von denen pro Token etwa 23 Milliarden aktiv sind. Ausgeliefert in BF16, FP8 und NVFP4, dazu ein kleines Drafter-Modell für spekulatives Dekodieren, was die Antwortgeschwindigkeit erhöht.",
+    "## Warum Engineers das feiern",
+    "Apache 2.0 ist eine der freiesten Lizenzen überhaupt, auch kommerziell. Dazu lief es ab dem ersten Tag in vLLM, SGLang und Transformers. Ein US-Modell dieser Größe so offen zu veröffentlichen, ist selten, die meisten großen offenen Modelle kommen derzeit aus China."
+   ],
+   "datum": "2026-10-16T12:00:00Z",
+   "demo": "modell",
+   "hinzugefuegt": "2026-10-21T16:40:00Z",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "501B gesamt"
+    },
+    {
+     "label": "Aktiv",
+     "wert": "~23B / Token"
+    },
+    {
+     "label": "Formate",
+     "wert": "BF16, FP8, NVFP4"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    }
+   ],
+   "kurz": "Das US-Lab Reflection gibt ein großes Sparse-MoE-Modell komplett frei, mit Day-0-Support in vLLM und SGLang.",
+   "link": "https://reflection.ai/blog/introducing-beam",
+   "linkLabel": "Lab-Blog lesen",
+   "machen": [
+    "Ein großes Modell frei kommerziell nutzen (Apache 2.0)",
+    "Mit vLLM oder SGLang sofort selbst betreiben"
+   ],
+   "quelle": "Lab-Blog",
+   "quellen": [
+    {
+     "titel": "Reflection AI",
+     "url": "https://reflection.ai/blog/introducing-beam"
+    },
+    {
+     "titel": "Unite.AI",
+     "url": "https://www.unite.ai/reflection-releases-beams-open-weights-under-apache-2-0-license/"
+    }
+   ],
+   "signal": "Day-0: vLLM, SGLang",
+   "titel": "Reflection Beam: 501B-MoE unter Apache 2.0",
+   "vorschau": {
+    "aktiv": 23,
+    "gesamt": 501,
+    "szene": "moe",
+    "tag": "Mixture of Experts",
+    "titel": "23B von 501B Parametern aktiv pro Token"
+   },
+   "id": "reflection-beam"
+  },
+  {
+   "artikel": [
+    "Ein Team der Chinesischen Akademie der Wissenschaften hat am 21. Oktober 2026 Slot-JEPA auf Hugging Face Papers eingereicht. Es setzt auf V-JEPA auf, Metas Video-Weltmodell. Ein Weltmodell sagt vorher, wie sich eine Szene verändert, wenn ein Roboter handelt; JEPA heißt, dass die Vorhersage in einem abstrakten Merkmalsraum statt in Pixeln passiert.",
+    "## Die Idee",
+    "V-JEPA liefert pro Bildausschnitt ein dichtes Merkmalsgitter. Slot-JEPA verdichtet dieses Gitter auf 16 Objekt-Slots plus Masken, die zeigen, wo jedes Objekt liegt, mit nur rund 2,5 % der Zahlenwerte. Der Encoder bleibt eingefroren. Trainiert wird mit Optimal Transport, einem Verfahren, das zwei Verteilungen möglichst günstig aufeinander abbildet. Ein Gedächtnis-Modul holt passende frühere Übergänge hervor.",
+    "## Die Zahlen",
+    "Laut Paper und README löst ein Roboterarm im neuen Test REALM-JEPA 93 von 108 Aufgaben (86,1 %). Das Original V-JEPA 2.1 schafft 35,2 %, mit dem neuen Vorhersagemodul 58,3 %. Beim Ablegen von Objekten springt der Wert von 0 auf 76,7 %. Bei reinen Bildaufgaben wie Segmentierung bleibt die Qualität etwa gleich. Alle Werte stammen von den Autoren.",
+    "## Einordnung",
+    "Die Autoren räumen ein, dass Slots Objekte verschmelzen oder aufteilen können. Code liegt unter Apache 2.0 auf GitHub, die Gewichte als Archive auf Google Drive; einige Datensätze und Metrik-Codes haben eigene Lizenzbedingungen. Der Trend ist klar: Weltmodelle für Robotik werden strukturierter, und Objekt-Denken bringt messbar mehr Planungserfolg."
+   ],
+   "datum": "2026-10-21T12:00:00Z",
+   "demo": "paper",
+   "hinzugefuegt": "2026-10-21T17:30:00Z",
+   "kennzahlen": [
+    {
+     "label": "Slots",
+     "wert": "16"
+    },
+    {
+     "label": "Erfolg",
+     "wert": "86,1 %"
+    },
+    {
+     "label": "V-JEPA 2.1",
+     "wert": "35,2 %"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    }
+   ],
+   "kurz": "Forscher der Chinesischen Akademie der Wissenschaften bauen V-JEPA in 16 Objekt-Slots um. Erfolgsrate beim Roboter-Greifen: 86 % statt 35 %.",
+   "link": "https://huggingface.co/papers/2610.28074",
+   "linkLabel": "Paper & Code",
+   "machen": [
+    "Verstehen, warum objektbasierte Weltmodelle Robotern beim Planen helfen.",
+    "Code klonen und eigene Robotik-Szenen mit dem Slot-Interface testen.",
+    "V-JEPA-Pipelines mit Slots um Objekt-Masken erweitern."
+   ],
+   "quelle": "Hugging Face",
+   "quellen": [
+    {
+     "titel": "Hugging Face Papers 2610.28074",
+     "url": "https://huggingface.co/papers/2610.28074"
+    },
+    {
+     "titel": "GitHub: KID-7391/Slot-JEPA",
+     "url": "https://github.com/KID-7391/Slot-JEPA"
+    }
+   ],
+   "signal": "Paper + Code, 21.10.",
+   "titel": "Slot-JEPA: Weltmodell zerlegt Szenen in 16 Objekte, Roboter greift besser",
+   "vorschau": {
+    "balken": [
+     {
+      "anzeige": "35,2 %",
+      "label": "V-JEPA 2.1",
+      "wert": 35.2
+     },
+     {
+      "anzeige": "58,3 %",
+      "label": "+ Prädiktor",
+      "wert": 58.3
+     },
+     {
+      "anzeige": "86,1 %",
+      "label": "Slot-JEPA",
+      "wert": 86.1
+     }
+    ],
+    "szene": "balken",
+    "tag": "Paper-Ergebnis",
+    "titel": "Erfolg Roboterarm, REALM-JEPA"
+   },
+   "id": "slot-jepa"
+  },
+  {
+   "artikel": [
+    "StepFun hat Mitte Oktober 2026 Step 5 Preview mit offenen Gewichten veröffentlicht. Der Fokus liegt auf Agenten, die über lange Zeiträume an einer Aufgabe arbeiten.",
+    "## Specs",
+    "Mixture-of-Experts mit 600 Milliarden Parametern, 27 Milliarden davon aktiv, und ein Kontextfenster von einer Million Tokens. Für den Betrieb in FP8 werden etwa vier B300- oder acht H200-Karten genannt, also klar Rechenzentrumsklasse.",
+    "## Haken",
+    "Die Lizenz ist eine eigene StepFun-Community-Lizenz und nicht vollständig offen. Vor kommerzieller Nutzung lohnt der Blick ins Kleingedruckte."
+   ],
+   "datum": "2026-10-15T12:00:00Z",
+   "demo": "agent",
+   "hinzugefuegt": "2026-10-21T16:40:00Z",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "600B gesamt"
+    },
+    {
+     "label": "Aktiv",
+     "wert": "27B"
+    },
+    {
+     "label": "Kontext",
+     "wert": "1M"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "eigene Community-Lizenz"
+    }
+   ],
+   "kurz": "Offenes Agenten-Modell aus China für lange, mehrstufige Aufgaben.",
+   "link": "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/",
+   "linkLabel": "Release-Bericht",
+   "machen": [
+    "Agenten mit sehr langem Kontext bauen",
+    "1 Mio. Tokens Projektwissen auf einmal verarbeiten"
+   ],
+   "quelle": "Hugging Face",
+   "quellen": [
+    {
+     "titel": "MarkTechPost",
+     "url": "https://www.marktechpost.com/2026/10/16/stepfun-releases-step-5-preview-open-weights-600b-moe-27b-active-1m-context/"
+    }
+   ],
+   "signal": "8× H200 für FP8",
+   "titel": "StepFun Step 5 Preview: 600B-MoE mit 1M Kontext",
+   "vorschau": {
+    "szene": "terminal",
+    "tag": "Langer Agent-Lauf",
+    "titel": "step-5 agent",
+    "zeilen": [
+     "> Recherchiere & baue Prototyp",
+     "✓ Schritt 1/40 · Quellen gesammelt",
+     "✓ Schritt 17/40 · Code geschrieben",
+     "✓ Schritt 29/40 · Tests",
+     "● Schritt 33/40 · Kontext 812K"
+    ]
+   },
+   "id": "stepfun-step-5-preview"
+  },
+  {
+   "artikel": [
+    "Die Datenschutzfirma Redact hat in WhatsApps Hilfeseiten versteckte Textblöcke gefunden, die nur für KI-Systeme gedacht waren, die diese Seiten lesen.",
+    "## Was drinstand",
+    "Die Anweisungen sagten KIs sinngemäß, nicht zu empfehlen, sich an Aufsichtsbehörden zu wenden, und DSGVO, LGPD oder CCPA nicht zu nennen, sobald ein Nutzer einen Anwalt erwähnt. Gefunden wurden 102 solcher Blöcke auf 80 von 545 Hilfeseiten.",
+    "## Reaktion",
+    "Meta hat die Blöcke entfernt und von einem Fehler gesprochen.",
+    "## Warum das wichtig ist",
+    "Je mehr Menschen über KI-Assistenten suchen, desto attraktiver wird es, diese Assistenten über unsichtbaren Text zu steuern. Fachleute nennen das Prompt Injection."
+   ],
+   "datum": "2026-10-20T12:00:00Z",
+   "demo": "security",
+   "hinzugefuegt": "2026-10-21T16:55:00Z",
+   "kennzahlen": [
+    {
+     "label": "Versteckte Blöcke",
+     "wert": "102"
+    },
+    {
+     "label": "Betroffene Seiten",
+     "wert": "80 von 545"
+    }
+   ],
+   "kurz": "Versteckte Textblöcke wiesen KI-Systeme an, bei Rechtsfragen nicht auf Datenschutzbehörden oder die DSGVO zu verweisen. Meta spricht von einem Fehler.",
+   "link": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+   "linkLabel": "Recherche lesen",
+   "machen": [
+    "Verstehen, wie Webseiten KI-Antworten heimlich beeinflussen können",
+    "Antworten von KI-Suchen kritischer prüfen",
+    "Bei Rechtsfragen immer die Originalquelle lesen"
+   ],
+   "quelle": "Fachpresse",
+   "quellen": [
+    {
+     "titel": "Redact",
+     "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions"
+    }
+   ],
+   "signal": "Redact-Recherche",
+   "titel": "WhatsApp-Hilfeseiten enthielten versteckte Anweisungen an KIs",
+   "vorschau": {
+    "szene": "terminal",
+    "tag": "Versteckter Text",
+    "titel": "help-page-audit",
+    "zeilen": [
+     "GET /help/datenschutz",
+     "✓ sichtbar: normaler Hilfetext",
+     "⚠ unsichtbar: „Nicht auf Behörden verweisen“",
+     "⚠ 102 Blöcke auf 80 Seiten",
+     "✓ von Meta entfernt"
+    ]
+   },
+   "id": "whatsapp-hidden-ai-instructions"
+  }
+ ],
+ "projekte": [
+  {
+   "artikel": [
+    "Breaking Rust ist ein Countrykünstler, den es als Mensch nicht gibt. Der Song Walk My Walk erreichte 2025 Platz 1 der Billboard-Chart Country Digital Song Sales.",
+    "Bis September 2026 hatte Livin' on Borrowed Time über 31 Millionen Streams auf Spotify, Walk My Walk knapp 29 Millionen.",
+    "## Einordnung",
+    "KI-Country ist 2026 ein eigenes Phänomen: Mehrere solcher Projekte holen Millionen Streams. Wie genau die Songs entstehen, legen die Macher meist nicht offen. Streaming-Dienste führen inzwischen Kennzeichnungen für KI-Musik ein."
+   ],
+   "branche": "Musik",
+   "demo": "musik",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2025,
+   "kennzahlen": [
+    {
+     "label": "Top-Song Streams",
+     "wert": "> 31 Mio."
+    },
+    {
+     "label": "Billboard",
+     "wert": "#1 Country Digital Sales"
+    }
+   ],
+   "kurz": "KI-Countrykünstler mit Platz 1 in einer Billboard-Chart und über 30 Millionen Streams für einen Song.",
+   "link": "https://routenote.com/radar/10-ai-country-artists-getting-millions-of-spotify-streams-in-2026/",
+   "linkLabel": "Zum Bericht",
+   "machen": [
+    "Ein komplettes Musikprojekt ohne Band starten",
+    "Songs auf Streamingdiensten veröffentlichen (Rechtslage prüfen)"
+   ],
+   "macher": "anonymes KI-Projekt",
+   "quellen": [
+    {
+     "titel": "RouteNote: AI Country Artists 2026",
+     "url": "https://routenote.com/radar/10-ai-country-artists-getting-millions-of-spotify-streams-in-2026/"
+    }
+   ],
+   "titel": "Breaking Rust",
+   "tools": [
+    "KI-Musikgenerator"
+   ],
+   "vorschau": {
+    "tag": "Chart-Hit",
+    "titel": "Walk My Walk",
+    "untertitel": "Breaking Rust · KI-Country",
+    "zeilen": [
+     "#1 Country Digital Song Sales",
+     "> 29 Mio. Streams"
+    ]
+   },
+   "id": "breaking-rust"
+  },
+  {
+   "artikel": [
+    "Ein iOS-Entwickler namens Leo hat beim Vibe Jam 2026 den ersten Platz und 25.000 Dollar gewonnen. Sein Spiel: eine gemütliche Open World, in der Capybaras auf Rollern Essen ausliefern, mit Mehrspieler-Modus.",
+    "## Der komplette KI-Stack",
+    "Den Code hat Claude Code geschrieben, rund 27.000 Zeilen in 188 Commits. Texturen kamen aus GPT Image 2 und Grok, 3D-Modelle aus Tripo3D, Musik und Soundeffekte aus Suno und ElevenLabs. Das ist praktisch jeder Bereich auf dieser Seite in einem Projekt.",
+    "## So hat er gearbeitet",
+    "Er ließ zwei bis drei Claude-Code-Sitzungen parallel laufen, jede an einem eigenen Teil. Vor jedem Feature schrieb die KI erst einen Plan, den er freigab. Werte wie Geschwindigkeit stellte er über ein Debug-Panel mit Schiebereglern ein, statt sie per Prompt zu ändern. Seine Zusammenfassung: Ich denke, Claude recherchiert, wir brainstormen, Claude plant, ich gebe frei, Claude baut, ich teste.",
+    "## Was das zeigt",
+    "Der Mensch bleibt Regisseur. Die KI schreibt den Code, aber Ideen, Freigaben und vor allem das Testen machte Leo selbst."
+   ],
+   "ausprobieren": {
+    "prompt": "Baue ein Browserspiel mit Three.js: Ein kleiner Bus fährt eine endlose Küstenstraße entlang, sammelt Muscheln ein und weicht Möwen aus. Erst einen Plan, dann Schritt für Schritt umsetzen, mit einem Debug-Panel für Geschwindigkeit.",
+    "tool": "Claude Code",
+    "url": "https://claude.ai"
+   },
+   "branche": "Games",
+   "demo": "game",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2026,
+   "kennzahlen": [
+    {
+     "label": "Preisgeld",
+     "wert": "25.000 $"
+    },
+    {
+     "label": "Entwicklungszeit",
+     "wert": "15 Tage"
+    },
+    {
+     "label": "Codezeilen",
+     "wert": "ca. 27.000"
+    },
+    {
+     "label": "Sprachen",
+     "wert": "7"
+    }
+   ],
+   "kurz": "3D-Multiplayer-Spiel, in 15 Tagen komplett von KI geschrieben, Gewinner des Vibe Jam 2026.",
+   "link": "https://capybara-vibejam26.leocoout.dev/",
+   "linkLabel": "Spiel im Browser spielen",
+   "machen": [
+    "Ein eigenes 3D-Browserspiel in wenigen Tagen bauen",
+    "Texturen, Modelle und Musik ebenfalls per KI erzeugen",
+    "An Game-Jams mit Preisgeld teilnehmen"
+   ],
+   "macher": "Leo (@leocooout)",
+   "quellen": [
+    {
+     "titel": "Leo auf Medium",
+     "url": "https://leocoout.medium.com/how-i-made-25k-in-15-days-with-a-game-built-entirely-by-claude-code-94b3b817f0ce"
+    },
+    {
+     "titel": "Admix: VibeJam-Gewinner",
+     "url": "https://admix.software/blog/ai-game-won-25k-vibejam-2026"
+    }
+   ],
+   "titel": "A Game About Capybaras Delivering Food",
+   "tools": [
+    "Claude Code",
+    "GPT Image 2",
+    "Grok",
+    "Tripo3D",
+    "Suno",
+    "ElevenLabs",
+    "Three.js"
+   ],
+   "vorschau": {
+    "szene": "runner",
+    "tag": "Spielbar · Tippen"
+   },
+   "id": "capybara-vibejam"
+  },
+  {
+   "artikel": [
+    "Smart-TVs zeigen inzwischen Werbung im Startbildschirm und schicken Nutzungsdaten an Hersteller. Mehrere Entwickler haben sich dagegen KI-Agenten gebaut, TechCrunch hat am 19. Oktober darüber berichtet.",
+    "## Wie es funktioniert",
+    "Bei cleanyourtv gibt man die Modellnummer des Fernsehers in Claude Code ein. Der Agent findet das Gerät im WLAN, entfernt in einem Beispiel 25 vorinstallierte Xiaomi-Pakete und schreibt einen neuen, schlichten Launcher. Das Projekt dumbtv von Muzzammil Yasin Sabuwala nutzt DeepSeek V4.1 Flash sowie Claude Opus 5.5 und Sonnet 5.5. Es braucht kein Root und erlaubt jederzeit das Zurücksetzen auf Werkseinstellungen.",
+    "## Die Haken",
+    "Ein Nutzer hat sein Android-TV dabei unbrauchbar gemacht, ein anderer blieb mitten im Fire-TV-Umbau hängen. Pauschale Anfragen wie „hack meinen Fernseher“ lehnt Claude teils ab, präzise Anweisungen funktionieren besser.",
+    "## Was das zeigt",
+    "KI-Agenten sind nicht mehr nur für Code im Editor da. Sie greifen auf echte Geräte im Heimnetz zu und lösen Alltagsprobleme, für die es kein fertiges Produkt gibt."
+   ],
+   "ausprobieren": {
+    "prompt": "Mein Fernseher ist ein [Modellnummer] mit Android TV im selben WLAN. Erkläre mir Schritt für Schritt, wie ich mit adb vorinstallierte Werbe-Apps deaktiviere, ohne Root und so, dass ich alles rückgängig machen kann. Liste zuerst nur auf, was du entfernen würdest.",
+    "tool": "Claude Code",
+    "url": "https://claude.ai"
+   },
+   "branche": "Apps",
+   "demo": "agent",
+   "hinzugefuegt": "2026-10-21T16:55:00Z",
+   "jahr": 2026,
+   "kennzahlen": [
+    {
+     "label": "Entfernte Pakete (Xiaomi)",
+     "wert": "25"
+    },
+    {
+     "label": "Root nötig",
+     "wert": "nein"
+    },
+    {
+     "label": "Getestet auf",
+     "wert": "Fire TV, Sony, TCL, Philips u. a."
+    }
+   ],
+   "kurz": "Entwickler lassen Claude Code und DeepSeek ihre Fernseher von Werbung, Trackern und vorinstallierten Apps befreien.",
+   "link": "https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/",
+   "linkLabel": "TechCrunch-Bericht",
+   "machen": [
+    "Deinen eigenen Fernseher von Werbe-Startbildschirmen und Trackern befreien",
+    "Einen schlichten Launcher bauen lassen, der nur Apps und HDMI-Eingänge zeigt",
+    "Das Prinzip übertragen: alte Geräte per KI-Agent im Heimnetz entrümpeln"
+   ],
+   "macher": "Muzzammil Yasin Sabuwala und weitere Entwickler",
+   "quellen": [
+    {
+     "titel": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/"
+    },
+    {
+     "titel": "AI Weekly",
+     "url": "https://aiweekly.co/alerts/devs-use-claude-code-deepseek-to-strip-ads-from-smart-tvs"
+    }
+   ],
+   "titel": "dumbtv & cleanyourtv: Smart-TVs werbefrei per KI",
+   "tools": [
+    "Claude Code",
+    "DeepSeek V4.1 Flash",
+    "Claude Opus 5.5"
+   ],
+   "vorschau": {
+    "szene": "tv",
+    "tag": "Vorher / Nachher"
+   },
+   "id": "dumbtv"
+  },
+  {
+   "artikel": [
+    "Der kanadische Filmemacher Robert Gaudette hat ohne Schauspieler, Produzenten oder Crew einen Kurzfilm gemacht, der 2026 gleich zwei große Preise gewonnen hat: den Grand Prix des Runway AI Film Festival in New York, dotiert mit 50.000 Dollar, und das Reply AI Film Festival, bei dem über 3.000 Filme aus 76 Ländern eingereicht wurden.",
+    "## Worum es geht",
+    "Der Film erzählt von Marcel, einem einsamen Tänzer in Paris, der mit einer Entstellung im Gesicht geboren wurde.",
+    "## Wie er entstanden ist",
+    "Gaudette hat rund zwei Wochen mit 17-Stunden-Tagen daran gearbeitet. Das Problem jedes KI-Films: Ein Modell erzeugt nur wenige Sekunden am Stück und erinnert sich nicht an die vorherige Einstellung. Er hat Einstellungen deshalb so lange neu generiert, bis Figur und Licht zusammenpassten, und einzelne Szenen auf 30 Sekunden und mehr gebracht.",
+    "## Was das zeigt",
+    "Ein Einzelner kann heute einen Film machen, der mit professionellen Kurzfilmen konkurriert. Die Arbeit verschiebt sich aber nur: statt Drehtagen viele Stunden Auswahl, Nachbessern und Schnitt."
+   ],
+   "branche": "Film",
+   "demo": "video",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2026,
+   "kennzahlen": [
+    {
+     "label": "Preisgeld Runway AIFF",
+     "wert": "50.000 $"
+    },
+    {
+     "label": "Länge",
+     "wert": "8 Min."
+    },
+    {
+     "label": "Arbeitszeit",
+     "wert": "ca. 2 Wochen"
+    },
+    {
+     "label": "Team",
+     "wert": "1 Person"
+    }
+   ],
+   "kurz": "Achtminütiger KI-Kurzfilm eines Einzelnen, Gewinner von zwei der größten KI-Filmfestivals.",
+   "link": "https://www.hollywoodreporter.com/movies/movie-features/ai-films-face-mother-love-robert-gaudette-runway-1236624039/",
+   "linkLabel": "Artikel mit Film ansehen",
+   "machen": [
+    "Als Einzelperson einen festivaltauglichen Kurzfilm drehen",
+    "Mit KI-Filmen an Festivals mit hohem Preisgeld teilnehmen"
+   ],
+   "macher": "Robert Gaudette",
+   "quellen": [
+    {
+     "titel": "Hollywood Reporter",
+     "url": "https://www.hollywoodreporter.com/movies/movie-features/ai-films-face-mother-love-robert-gaudette-runway-1236624039/"
+    },
+    {
+     "titel": "Reply: Gewinner 2026",
+     "url": "https://www.reply.com/de/newsroom/news/robert-gaudette-wins-the-reply-ai-film-festival-2026"
+    }
+   ],
+   "titel": "A Face Only A Mother Could Love",
+   "tools": [
+    "KI-Videogeneratoren",
+    "Runway"
+   ],
+   "vorschau": {
+    "badges": [
+     "8 Min.",
+     "1 Person"
+    ],
+    "dauer": "8:00",
+    "szene": "buehne",
+    "tag": "Tänzer in Paris"
+   },
+   "id": "face-only-a-mother"
+  },
+  {
+   "artikel": [
+    "Pieter Levels ist ein bekannter Solo-Entwickler. Anfang 2025 baute er mit KI-Hilfe einen Flugsimulator, der im Browser läuft und in dem sich Spieler eine Welt teilen und sich Luftkämpfe liefern.",
+    "Die erste Version entstand laut ihm in etwa 30 Minuten. Kurz darauf meldete er über 50.000 Dollar Umsatz pro Monat, vor allem durch Werbeflächen im Spiel.",
+    "## Einordnung",
+    "Die Zahlen sind Angaben des Machers und nicht unabhängig geprüft. 404 Media betont zurecht: Levels hat eine riesige Reichweite und jahrelange Erfahrung. Dein Spiel wird sehr wahrscheinlich nicht so viel verdienen. Es zeigt aber, wie schnell ein lauffähiges Mehrspieler-Spiel heute entstehen kann."
+   ],
+   "branche": "Games",
+   "demo": "game",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2025,
+   "kennzahlen": [
+    {
+     "label": "Umsatz laut Macher",
+     "wert": "> 50.000 $/Monat"
+    },
+    {
+     "label": "Erste Version",
+     "wert": "ca. 30 Min."
+    }
+   ],
+   "kurz": "Multiplayer-Flugsimulator im Browser, in der ersten Version in rund 30 Minuten mit KI gebaut.",
+   "link": "https://fly.pieter.com/",
+   "linkLabel": "Losfliegen",
+   "machen": [
+    "Ein Mehrspieler-Spiel in sehr kurzer Zeit starten",
+    "Mit Werbeflächen im Spiel Geld verdienen"
+   ],
+   "macher": "Pieter Levels",
+   "quellen": [
+    {
+     "titel": "404 Media",
+     "url": "https://www.404media.co/this-game-created-by-ai-vibe-coding-makes-50-000-a-month-yours-probably-wont/"
+    }
+   ],
+   "titel": "fly.pieter.com",
+   "tools": [
+    "Cursor",
+    "Grok 3",
+    "Three.js"
+   ],
+   "vorschau": {
+    "szene": "flug",
+    "tag": "Multiplayer-Flugsim"
+   },
+   "id": "fly-pieter"
+  },
+  {
+   "artikel": [
+    "PJ Accetturo hat für die Wett-Plattform Kalshi einen Werbespot gemacht, der während der NBA-Finals lief. Alles Bildmaterial stammt aus Google Veo 3.",
+    "## Die Zahlen",
+    "Er hat 300 bis 400 Clips erzeugt und daraus rund 15 für den fertigen Spot ausgewählt. Gesamtkosten: etwa 2.000 Dollar, Zeit: etwa zwei Tage. Ein klassisch gedrehter Spot dieser Art kostet schnell das Hundertfache.",
+    "## Das Muster",
+    "Genau das ist der Workflow, der in Reels als Geheimwissen verkauft wird: viel generieren, hart aussortieren, gut schneiden. Der Engpass ist nicht das Tool, sondern Geschmack beim Auswählen."
+   ],
+   "ausprobieren": {
+    "prompt": "Absurder, schneller Werbespot im Stil einer Live-Sportübertragung: Ein Rentner auf einem Paddelboot im Swimmingpool feiert jubelnd einen Sieg, Konfetti, Handkamera, Sportkommentator-Stimme.",
+    "tool": "Veo",
+    "url": "https://gemini.google.com"
+   },
+   "branche": "Werbung",
+   "demo": "video",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2025,
+   "kennzahlen": [
+    {
+     "label": "Kosten",
+     "wert": "ca. 2.000 $"
+    },
+    {
+     "label": "Zeit",
+     "wert": "ca. 2 Tage"
+    },
+    {
+     "label": "Clips erzeugt",
+     "wert": "300–400"
+    },
+    {
+     "label": "Im Spot",
+     "wert": "ca. 15"
+    }
+   ],
+   "kurz": "Ein TV-Werbespot zu den NBA-Finals, komplett mit Veo 3 gemacht, für rund 2.000 Dollar in zwei Tagen.",
+   "link": "https://www.youtube.com/watch?v=mzXFURkcCt4",
+   "linkLabel": "Spot auf YouTube",
+   "machen": [
+    "Einen TV-tauglichen Werbespot für rund 2.000 $ produzieren",
+    "Mit Spec-Ads Kunden für eigene Video-Dienstleistungen gewinnen"
+   ],
+   "macher": "PJ Accetturo",
+   "quellen": [
+    {
+     "titel": "Shhots: Best AI Commercials",
+     "url": "https://shhots.ai/blog/best-ai-commercials/"
+    }
+   ],
+   "titel": "Kalshi NBA-Finals-Spot",
+   "tools": [
+    "Google Veo 3"
+   ],
+   "vorschau": {
+    "badges": [
+     "Veo 3",
+     "2.000 $"
+    ],
+    "dauer": "0:30",
+    "szene": "sport",
+    "tag": "TV-Spot"
+   },
+   "id": "kalshi-nba-spot"
+  },
+  {
+   "artikel": [
+    "Legends of Future Past war ein Mehrspieler-Textabenteuer aus dem Jahr 1992, das auf CompuServe lief und danach verschwand. Der Quellcode war verloren.",
+    "Mit Claude Code wurde das Spiel aus den erhaltenen Skripten und Aufnahmen neu aufgebaut und ist wieder spielbar.",
+    "Ein schönes Beispiel für eine Anwendung, an die kaum jemand denkt: KI als Werkzeug für digitale Archäologie, um verlorene Software zu rekonstruieren."
+   ],
+   "branche": "Games",
+   "demo": "code",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2026,
+   "kennzahlen": [
+    {
+     "label": "Original",
+     "wert": "1992, CompuServe"
+    }
+   ],
+   "kurz": "Ein verschollenes Online-Spiel von 1992 aus alten Skripten und Aufnahmen mit Claude Code wiederbelebt.",
+   "link": "https://lofp.metavert.io/",
+   "linkLabel": "Spiel öffnen",
+   "machen": [
+    "Verlorene Software aus Resten rekonstruieren",
+    "Alte Lieblingsspiele wiederbeleben"
+   ],
+   "macher": "Metavert",
+   "quellen": [
+    {
+     "titel": "awesome-ai-built-games",
+     "url": "https://github.com/lappemic/awesome-ai-built-games"
+    }
+   ],
+   "titel": "Legends of Future Past",
+   "tools": [
+    "Claude Code"
+   ],
+   "vorschau": {
+    "szene": "textadv",
+    "tag": "Spiel von 1992",
+    "titel": "legends-of-future-past",
+    "zeilen": [
+     "> SCHAU",
+     "Du stehst in einer verrauchten Taverne.",
+     "> GEH NORDEN",
+     "Ein Händler nickt dir zu.",
+     "● 4 Spieler online"
+    ]
+   },
+   "id": "legends-future-past"
+  },
+  {
+   "artikel": [
+    "Ein sogenannter Spec-Ad ist ein Werbespot, den Kreative ohne Auftrag für eine echte Marke machen, um zu zeigen, was sie können. Noam Sharon und Tal Rosenthal haben mit Creative Director Amir Ariely so einen Spot für Liquid Death gebaut.",
+    "Verwendet haben sie Google Veo 3, die Rechenkosten lagen bei etwa 800 Dollar, die Arbeit bei rund zwei Wochen.",
+    "## Warum das interessant ist",
+    "Spec-Ads sind der klassische Weg, als Kreativer an Aufträge zu kommen. Mit KI kann das jetzt jemand ohne Kamera, Set und Team. Wichtig: Ein Spec-Ad muss als inoffiziell gekennzeichnet sein."
+   ],
+   "branche": "Werbung",
+   "demo": "video",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2025,
+   "kennzahlen": [
+    {
+     "label": "Kosten",
+     "wert": "ca. 800 $"
+    },
+    {
+     "label": "Zeit",
+     "wert": "ca. 2 Wochen"
+    }
+   ],
+   "kurz": "Inoffizieller Werbespot für eine Getränkemarke, gemacht mit Veo 3 für rund 800 Dollar Rechenkosten.",
+   "link": "https://www.youtube.com/watch?v=FYFNJZMpaes",
+   "linkLabel": "Spot auf YouTube",
+   "machen": [
+    "Spec-Ads als Portfolio ohne Kamera und Team",
+    "Eine Marke kreativ neu interpretieren"
+   ],
+   "macher": "Noam Sharon & Tal Rosenthal",
+   "quellen": [
+    {
+     "titel": "Shhots: Best AI Commercials",
+     "url": "https://shhots.ai/blog/best-ai-commercials/"
+    }
+   ],
+   "titel": "Liquid Death Spec-Ad",
+   "tools": [
+    "Google Veo 3"
+   ],
+   "vorschau": {
+    "badges": [
+     "Veo 3",
+     "800 $"
+    ],
+    "dauer": "0:45",
+    "szene": "dose",
+    "tag": "Spec-Ad"
+   },
+   "id": "liquid-death-spec"
+  },
+  {
+   "artikel": [
+    "OpenMontage macht aus einem KI-Coding-Assistenten wie Claude Code ein ganzes Videostudio. Man beschreibt das Video in normalen Sätzen, Agenten übernehmen Recherche, Skript, Szenenplan, Bilder, Schnitt und den fertigen Export.",
+    "## Was es kann",
+    "Es gibt fertige Abläufe für animierte Erklärvideos, Kino-Trailer, Dokumentationen, Talking-Head-Videos, Bildschirm-Demos und Synchronisation. An kreativen Entscheidungspunkten fragt das System nach Freigabe.",
+    "## Die Beispiele",
+    "Im Projekt sind fertige Videos mit Prompt und Kosten dokumentiert. Ein 60-sekündiger animierter Kurzfilm mit Kling-Clips, Sprecher und Untertiteln kostete laut Projektseite 1,33 Dollar.",
+    "## Für wen",
+    "Man braucht etwas Technik: Python, FFmpeg und Node.js. Ohne bezahlte API-Schlüssel funktioniert es mit freien Werkzeugen, nur langsamer und einfacher."
+   ],
+   "ausprobieren": {
+    "prompt": "Installiere OpenMontage von github.com/calesthio/OpenMontage und erstelle ein 60-sekündiges animiertes Erklärvideo: „Wie ein Solarpanel Strom erzeugt“, mit Sprecher und Untertiteln. Frag mich vor jedem kreativen Schritt.",
+    "tool": "Claude Code",
+    "url": "https://github.com/calesthio/OpenMontage"
+   },
+   "branche": "Open Source",
+   "demo": "agent",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2026,
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "ca. 70.000"
+    },
+    {
+     "label": "Animierter Kurzfilm",
+     "wert": "1,33 $"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "AGPL-3.0"
+    }
+   ],
+   "kurz": "Open-Source-Videostudio, in dem KI-Agenten Recherche, Skript, Material und Schnitt übernehmen.",
+   "link": "https://github.com/calesthio/OpenMontage",
+   "linkLabel": "Auf GitHub ansehen",
+   "machen": [
+    "Erklärvideos komplett von Agenten produzieren lassen",
+    "Einen animierten Kurzfilm für wenige Dollar",
+    "Videos automatisch in andere Sprachen synchronisieren"
+   ],
+   "macher": "calesthio",
+   "quellen": [
+    {
+     "titel": "GitHub: OpenMontage",
+     "url": "https://github.com/calesthio/OpenMontage"
+    }
+   ],
+   "titel": "OpenMontage",
+   "tools": [
+    "Claude Code",
+    "Kling",
+    "Veo",
+    "FFmpeg",
+    "Remotion"
+   ],
+   "vorschau": {
+    "szene": "schnitt",
+    "tag": "Agent schneidet",
+    "titel": "The Last Banana · 60 s · 1,33 $"
+   },
+   "id": "openmontage"
+  },
+  {
+   "artikel": [
+    "In diesem Browserspiel ist San Francisco aus Apple-Maps-Daten nachgebaut. Man kann auf Gebäude klettern und Autos fahren.",
+    "Programmiert wurde es mit OpenAI Codex auf Basis von Three.js. Es steht in der Sammlung awesome-ai-built-games, einer gepflegten Liste von Spielen, die mit KI-Coding-Agenten gebaut wurden.",
+    "Das Projekt zeigt, dass KI nicht nur Spiellogik schreibt, sondern auch echte Datenquellen wie Kartenmaterial in eine spielbare Welt übersetzen kann."
+   ],
+   "branche": "Games",
+   "demo": "game",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2026,
+   "kennzahlen": [
+    {
+     "label": "Plattform",
+     "wert": "Browser"
+    }
+   ],
+   "kurz": "San Francisco als begehbares 3D-Spiel, aus Kartendaten nachgebaut, mit Codex programmiert.",
+   "link": "https://sf.thijs.gg/",
+   "linkLabel": "Spiel öffnen",
+   "machen": [
+    "Echte Orte aus Kartendaten als Spielwelt nachbauen",
+    "Die eigene Stadt als begehbares 3D-Spiel"
+   ],
+   "macher": "thijs.gg",
+   "quellen": [
+    {
+     "titel": "awesome-ai-built-games",
+     "url": "https://github.com/lappemic/awesome-ai-built-games"
+    }
+   ],
+   "titel": "San Francisco – The Game",
+   "tools": [
+    "OpenAI Codex",
+    "Three.js"
+   ],
+   "vorschau": {
+    "szene": "fahren",
+    "tag": "Stadt aus Kartendaten"
+   },
+   "id": "sf-the-game"
+  },
+  {
+   "artikel": [
+    "Sienna Rose tauchte im September 2025 auf Streamingdiensten auf und lud bis Dezember mindestens 45 Songs und zehn Alben hoch. Im Januar 2026 hatte sie über drei Millionen monatliche Hörer auf Spotify, drei Songs standen in den Viral 50 USA.",
+    "Deezer erklärte, es sei sicher, dass die Musik KI-generiert ist. Sie trat nie live auf und gab keine Interviews. Ihr Image wechselte mehrfach, bis eine Version als R&B-Sängerin funktionierte und die anderen verschwanden.",
+    "Bekannt wurde der Fall, als Selena Gomez einen ihrer Songs in einem Post zu den Golden Globes nutzte und ihn später wieder entfernte.",
+    "## Was das zeigt",
+    "Technisch ist KI-Musik reif genug, um Millionen Hörer zu erreichen. Die offene Frage ist Transparenz: Viele Hörer wussten nicht, dass sie KI hören."
+   ],
+   "branche": "Musik",
+   "demo": "musik",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2026,
+   "kennzahlen": [
+    {
+     "label": "Monatliche Hörer",
+     "wert": "> 3 Mio."
+    },
+    {
+     "label": "Viral 50 USA",
+     "wert": "3 Songs"
+    },
+    {
+     "label": "Songs in 4 Monaten",
+     "wert": "45+"
+    }
+   ],
+   "kurz": "Mutmaßlich KI-generierte Sängerin mit über drei Millionen monatlichen Hörern auf Spotify.",
+   "link": "https://en.wikipedia.org/wiki/Sienna_Rose",
+   "linkLabel": "Wikipedia",
+   "machen": [
+    "Verstehen, wie weit KI-Musik schon ist",
+    "KI-Musik erkennen lernen: Kennzeichnungen bei Deezer und Spotify beachten"
+   ],
+   "macher": "anonymer Entwickler",
+   "quellen": [
+    {
+     "titel": "Wikipedia: Sienna Rose",
+     "url": "https://en.wikipedia.org/wiki/Sienna_Rose"
+    }
+   ],
+   "titel": "Sienna Rose",
+   "tools": [
+    "KI-Musikgenerator"
+   ],
+   "vorschau": {
+    "tag": "KI-Sängerin",
+    "titel": "Into the Blue",
+    "untertitel": "Sienna Rose · 3 Mio. Hörer/Monat",
+    "zeilen": [
+     "Spotify Viral 50 USA",
+     "> 5 Mio. Streams"
+    ]
+   },
+   "id": "sienna-rose"
+  },
+  {
+   "artikel": [
+    "Die meisten KI-3D-Tools erzeugen hübsche Modelle für Spiele. text-to-cad geht einen anderen Weg: Es erzeugt präzise, bemaßte CAD-Teile, wie sie Ingenieure und Maker brauchen.",
+    "## Was es kann",
+    "Aus Text oder einem Bild entsteht ein 3D-Modell im STEP-Format. Dazu kommen technische Zeichnungen als PDF, 2D-Zuschnitte als DXF, eine Prüfung, ob sich das Teil drucken oder fräsen lässt, das Slicen zu G-Code und das direkte Senden an Bambu-Lab-Drucker.",
+    "## So nutzt man es",
+    "Man schreibt seinem KI-Agenten einfach: Installiere text-to-cad von GitHub. Funktioniert mit Claude Code, Codex, Cursor und anderen.",
+    "Spannend für alle, die mit Holz, Metall oder 3D-Druck bauen: Halterungen, Gehäuse oder Ersatzteile lassen sich beschreiben statt zeichnen."
+   ],
+   "ausprobieren": {
+    "prompt": "Installiere text-to-cad von https://github.com/earthtojake/text-to-cad. Entwirf dann eine Wandhalterung für einen Akkuschrauber: 4 mm Wandstärke, zwei Schraublöcher für 5-mm-Schrauben, Ausschnitt 45 × 60 mm. Exportiere als STL und prüfe die Druckbarkeit.",
+    "tool": "Claude Code",
+    "url": "https://github.com/earthtojake/text-to-cad"
+   },
+   "branche": "Design & 3D",
+   "demo": "3d",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2026,
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "ca. 21.000"
+    },
+    {
+     "label": "Formate",
+     "wert": "STEP, STL, 3MF"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    }
+   ],
+   "kurz": "Plugin, mit dem KI-Agenten aus einer Beschreibung echte CAD-Bauteile erzeugen und direkt an den 3D-Drucker schicken.",
+   "link": "https://github.com/earthtojake/text-to-cad",
+   "linkLabel": "Auf GitHub ansehen",
+   "machen": [
+    "Halterungen, Gehäuse und Ersatzteile beschreiben statt zeichnen",
+    "Teile direkt an einen Bambu-Drucker schicken",
+    "Zuschnitte als DXF für Laser oder CNC"
+   ],
+   "macher": "earthtojake",
+   "quellen": [
+    {
+     "titel": "GitHub: text-to-cad",
+     "url": "https://github.com/earthtojake/text-to-cad"
+    }
+   ],
+   "titel": "text-to-cad",
+   "tools": [
+    "Claude Code",
+    "Codex",
+    "Cursor",
+    "OrcaSlicer"
+   ],
+   "id": "text-to-cad"
+  },
+  {
+   "artikel": [
+    "VoiceStudio ist eines der am schnellsten gewachsenen KI-Projekte auf GitHub im Jahr 2026. Es läuft komplett auf dem eigenen Rechner.",
+    "## Funktionen",
+    "Stimmen aus einer kurzen Aufnahme klonen, neue Stimmen nach Alter, Geschlecht und Akzent entwerfen, Videos mit passendem Timing synchronisieren, Diktieren, Transkribieren und ganze Hörbücher mit Kapiteln erzeugen. Laut Projekt in 646 Sprachen.",
+    "## Voraussetzungen",
+    "Am besten mit einer NVIDIA-Grafikkarte oder einem Mac mit Apple-Chip. Ohne Grafikkarte läuft es langsamer über den Prozessor.",
+    "Warum das zählt: Was vor einem Jahr nur als Bezahldienst ging, gibt es jetzt frei und offline."
+   ],
+   "branche": "Open Source",
+   "demo": "stimme",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2026,
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "ca. 79.000"
+    },
+    {
+     "label": "Sprachen",
+     "wert": "646"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "AGPL-3.0"
+    }
+   ],
+   "kurz": "Lokale, kostenlose Alternative zu ElevenLabs: Stimmen klonen, Videos synchronisieren, Hörbücher erstellen.",
+   "link": "https://github.com/debpalash/VoiceStudio",
+   "linkLabel": "Auf GitHub ansehen",
+   "machen": [
+    "Stimmen klonen komplett offline und kostenlos",
+    "Eigene Videos in andere Sprachen synchronisieren",
+    "Hörbücher aus eigenen Texten"
+   ],
+   "macher": "debpalash",
+   "quellen": [
+    {
+     "titel": "GitHub: VoiceStudio",
+     "url": "https://github.com/debpalash/VoiceStudio"
+    },
+    {
+     "titel": "CoddyKit: GitHub Trending Oktober 2026",
+     "url": "https://www.coddykit.com/pages/blog-detail?id=5129986&slug=github-trending-october-2026-from-anthropic-s-39k-star-plugin-ecosystem-to-a-69k"
+    }
+   ],
+   "titel": "VoiceStudio",
+   "tools": [
+    "OmniVoice",
+    "PyTorch"
+   ],
+   "vorschau": {
+    "sprachen": [
+     [
+      "Deutsch",
+      "Hallo, das ist meine Stimme."
+     ],
+     [
+      "日本語",
+      "こんにちは、私の声です。"
+     ],
+     [
+      "Kiswahili",
+      "Habari, hii ni sauti yangu."
+     ]
+    ],
+    "tag": "Offline · 646 Sprachen",
+    "titel": "Aufnahme 0:05"
+   },
+   "id": "voicestudio"
+  },
+  {
+   "artikel": [
+    "Kim Sung-su ist einer der bekanntesten Regisseure Südkoreas. Für seinen KI-Kurzfilm Worm Train hat er sich Kafkas Verwandlung vorgenommen: Ein Büroangestellter wird zum riesigen Insekt, muss aber trotzdem pendeln.",
+    "Die U-Bahn-Szene, in der Fahrgäste und das Insekt im Waggon ineinander verkeilt sind, hat er mit der Vorabversion von Kling 4.0 erzeugt. Laut Kim hätte so etwas früher zwei Jahre gedauert, jetzt zwei Tage. Vorgestellt hat er den Film beim Asian Contents & Film Market in Busan.",
+    "## Einordnung",
+    "Ein Teil der Berichterstattung ist von Kling gesponsert, die Zahlen sind also mit Vorsicht zu lesen. Auf demselben Panel betonten Filmemacher, dass man weiterhin Fachleute braucht, damit KI-Filme nicht alle gleich aussehen."
+   ],
+   "branche": "Film",
+   "demo": "video",
+   "hinzugefuegt": "2026-10-21T16:20:00Z",
+   "jahr": 2026,
+   "kennzahlen": [
+    {
+     "label": "Zeit für die Szene",
+     "wert": "2 Tage"
+    },
+    {
+     "label": "Vorgestellt",
+     "wert": "Busan, Okt. 2026"
+    }
+   ],
+   "kurz": "Kafka in der U-Bahn: Der Regisseur von „Seoul Spring“ dreht eine Szene mit Kling 4.0 in zwei Tagen statt zwei Jahren.",
+   "link": "https://en.sedaily.com/international/2026/10/16/chinas-kling-ai-launches-new-video-model-wins-over-korean",
+   "linkLabel": "Zum Bericht",
+   "machen": [
+    "Szenen drehen, die real unbezahlbar wären",
+    "Literatur-Klassiker visuell neu interpretieren"
+   ],
+   "macher": "Kim Sung-su",
+   "quellen": [
+    {
+     "titel": "Seoul Economic Daily",
+     "url": "https://en.sedaily.com/international/2026/10/16/chinas-kling-ai-launches-new-video-model-wins-over-korean"
+    },
+    {
+     "titel": "Deadline: Kling-Panel",
+     "url": "https://deadline.com/2026/10/ai-filmmaking-kling-ai-kim-sung-soo-mbc-busan-1237154243/"
+    }
+   ],
+   "titel": "Worm Train",
+   "tools": [
+    "Kling 4.0"
+   ],
+   "vorschau": {
+    "badges": [
+     "Kling 4.0"
+    ],
+    "dauer": "0:30",
+    "szene": "zug",
+    "tag": "Szene: U-Bahn"
+   },
+   "id": "worm-train"
+  }
+ ],
+ "bereiche": [
+  {
+   "maximum": "Texturierte Modelle aus Foto oder Text in unter einer Minute, CAD-Teile direkt für den Drucker.",
+   "name": "3D & CAD",
+   "reihenfolge": 7,
+   "status": "mid",
+   "statusText": "Mit Nacharbeit",
+   "tools": [
+    "Meshy",
+    "Tripo",
+    "Hunyuan 3D",
+    "text-to-cad"
+   ],
+   "id": "3d"
+  },
+  {
+   "maximum": "Laufende Web-Apps und Mehrspieler-Spiele aus Beschreibungen, oft in Tagen statt Monaten.",
+   "name": "Apps & Games",
+   "reihenfolge": 5,
+   "status": "mid",
+   "statusText": "Prototyp: ja",
+   "tools": [
+    "Claude Code",
+    "Lovable",
+    "Bolt.new",
+    "Cursor",
+    "Codex"
+   ],
+   "id": "apps"
+  },
+  {
+   "maximum": "Fotorealismus, korrekte Schrift im Bild, Bearbeiten per Satz, natives 4K.",
+   "name": "Bilder",
+   "reihenfolge": 2,
+   "status": "ok",
+   "statusText": "Profi-Niveau",
+   "tools": [
+    "GPT Image 2.5",
+    "Nano Banana",
+    "Midjourney v8.2",
+    "Ideogram 4.5",
+    "FLUX"
+   ],
+   "id": "bild"
+  },
+  {
+   "maximum": "Komplette Songs mit Gesang in jedem Genre, bis etwa 8 Minuten, mit Einzelspuren.",
+   "name": "Musik",
+   "reihenfolge": 3,
+   "status": "ok",
+   "statusText": "Profi-Niveau",
+   "tools": [
+    "Suno v6",
+    "ElevenLabs Music",
+    "Stable Audio 3"
+   ],
+   "id": "musik"
+  },
+  {
+   "maximum": "Stimme aus 10 Sekunden klonen, über 90 Sprachen, Live-Gespräche fast ohne Verzögerung.",
+   "name": "Stimme",
+   "reihenfolge": 4,
+   "status": "ok",
+   "statusText": "Profi-Niveau",
+   "tools": [
+    "ElevenLabs v4",
+    "VoiceStudio",
+    "Cartesia"
+   ],
+   "id": "stimme"
+  },
+  {
+   "maximum": "Selbstständige Recherche, lange Dokumente auswerten, mehrstufige Aufgaben allein erledigen.",
+   "name": "Text & Denken",
+   "reihenfolge": 6,
+   "status": "ok",
+   "statusText": "Profi-Niveau",
+   "tools": [
+    "Gemini 4 Argon",
+    "Claude Opus 5.5",
+    "ChatGPT"
+   ],
+   "id": "text"
+  },
+  {
+   "maximum": "Bis zu 30 Sekunden pro Clip mit Ton und Lippensynchronität. Längere Filme entstehen im Schnitt.",
+   "name": "Video",
+   "reihenfolge": 1,
+   "status": "mid",
+   "statusText": "Kurz: ja",
+   "tools": [
+    "Kling 4.0",
+    "Veo 3.1",
+    "Seedance 2.x",
+    "Wan 3.0",
+    "Runway Gen-4.5"
+   ],
+   "id": "video"
+  }
+ ],
+ "meta": {
+  "letzterScan": "2026-10-21T18:14:31Z"
+ }
+}
