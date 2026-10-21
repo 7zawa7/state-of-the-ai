@@ -164,25 +164,38 @@ def known_urls(data):
 client = None
 
 
+TOOL = {"name": "antwort", "description": "Gibt das geforderte Ergebnis als strukturierte Daten zurück.",
+        "input_schema": {"type": "object", "properties": {"data": {"description": "Das geforderte Ergebnis: ein JSON-Objekt oder eine JSON-Liste, genau im verlangten Format."}}, "required": ["data"]}}
+
+
+def _parse(text):
+    text = re.sub(r"```(?:json)?", "", text or "")
+    starts = [k for k in (text.find("["), text.find("{")) if k >= 0]
+    if not starts:
+        return None
+    a = min(starts); b = text.rfind("]" if text[a] == "[" else "}")
+    return json.loads(text[a:b + 1])
+
+
 def ask(prompt, max_tokens=4000):
+    """Fragt das Modell und erzwingt die Antwort als Tool-Aufruf, damit immer gültiges JSON zurückkommt."""
     global client
     client = client or Anthropic()
-    text = ""
-    for mt in (max(max_tokens, 4000), 16000):
-        msg = client.messages.create(model=MODEL, max_tokens=mt, messages=[{"role": "user", "content": prompt}])
-        text = "".join(getattr(b, "text", "") for b in msg.content if getattr(b, "type", "") == "text")
-        if text.strip():
-            break
-        log("Leere Antwort:", "stop_reason=", getattr(msg, "stop_reason", None), "blocks=", [getattr(b, "type", "?") for b in msg.content], "model=", getattr(msg, "model", None))
-    text = re.sub(r"```(?:json)?", "", text)
-    starts = [i for i in (text.find("["), text.find("{")) if i >= 0]
-    if not starts:
-        log("Antwort ohne JSON:", text[:300]); return None
-    i = min(starts); j = text.rfind("]" if text[i] == "[" else "}")
-    try:
-        return json.loads(text[i:j + 1])
-    except Exception as e:  # noqa
-        log("JSON nicht lesbar:", e, text[:300]); return None
+    for mt in (max(max_tokens, 4000), 12000):
+        msg = client.messages.create(model=MODEL, max_tokens=mt, tools=[TOOL], tool_choice={"type": "tool", "name": "antwort"},
+                                     messages=[{"role": "user", "content": prompt + "\n\nGib das Ergebnis über das Werkzeug „antwort“ im Feld data zurück."}])
+        for blk in msg.content:
+            if getattr(blk, "type", "") == "tool_use":
+                data = (blk.input or {}).get("data")
+                if isinstance(data, str):
+                    try:
+                        data = _parse(data)
+                    except Exception as e:  # noqa
+                        log("JSON nicht lesbar:", e); data = None
+                if data is not None:
+                    return data
+        log("Keine verwertbare Antwort:", "stop_reason=", getattr(msg, "stop_reason", None), "blocks=", [getattr(b, "type", "?") for b in msg.content])
+    return None
 
 
 def triage(cands, existing_titles):
