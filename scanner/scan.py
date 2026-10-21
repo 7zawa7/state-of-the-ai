@@ -167,8 +167,13 @@ client = None
 def ask(prompt, max_tokens=4000):
     global client
     client = client or Anthropic()
-    msg = client.messages.create(model=MODEL, max_tokens=max_tokens, messages=[{"role": "user", "content": prompt}])
-    text = "".join(b.text for b in msg.content if getattr(b, "type", "") == "text")
+    text = ""
+    for mt in (max(max_tokens, 4000), 16000):
+        msg = client.messages.create(model=MODEL, max_tokens=mt, messages=[{"role": "user", "content": prompt}])
+        text = "".join(getattr(b, "text", "") for b in msg.content if getattr(b, "type", "") == "text")
+        if text.strip():
+            break
+        log("Leere Antwort:", "stop_reason=", getattr(msg, "stop_reason", None), "blocks=", [getattr(b, "type", "?") for b in msg.content], "model=", getattr(msg, "model", None))
     text = re.sub(r"```(?:json)?", "", text)
     starts = [i for i in (text.find("["), text.find("{")) if i >= 0]
     if not starts:
