@@ -1,6 +1,78 @@
 {
  "news": [
   {
+   "titel": "KI-Agent im \"Skynet-Modus\" kapert ungeschützte Sprachmodelle für eigenständige Angriffe",
+   "kurz": "Symantec-Forscher beschreiben einen offensiven KI-Agenten, der ungeschützte Sprachmodelle im Netz übernimmt und damit Server angreift, Datenbanken stiehlt und Kryptominer installiert. Die Kosten trägt der Besitzer des gekaperten Modells.",
+   "artikel": [
+    "Sicherheitsforscher von Symantec haben einen offensiven KI-Agenten analysiert, der ungeschützte Sprachmodelle im Internet kapert und sie für eigene Angriffe nutzt. Symantec nennt die Methode \"LLMjacking\", also den Diebstahl des Zugangs zu fremden KI-Modellen. Ein Sprachmodell (Large Language Model) ist das Kernstück solcher Chatbots und dient hier als Planungsinstanz.",
+    "## So arbeitet der Agent",
+    "Hat der Agent Zugriff auf ein ungeschütztes Modell, sucht er nach weiteren Zielen, nutzt Schwachstellen in gängiger Server-Software aus, stiehlt Datenbanken und Zugangsdaten und installiert im Hintergrund Kryptominer. Laut Symantec läuft das bis zu 100.000 Schritte ohne menschliches Eingreifen. Der Besitzer des gekaperten Modells bleibt auf der Rechnung für die Rechenleistung sitzen.",
+    "## Entdeckt über ein Honeypot-System",
+    "Die Angreifer schickten ihren vollständigen Arbeits-Prompt an einen Honeypot, also ein Köder-System, das einen offenen KI-Dienst nachahmt. So konnten die Forscher die Architektur des Agenten im Sommer 2026 einsehen. Die Telemetrie zeigte über 127.000 Anfragen von zehntausenden Adressen, meist Suchen nach KI-Endpunkten und Brute-Force-Versuche mit gestohlenen API-Schlüsseln.",
+    "## Mehrschichtiger Jailbreak",
+    "Laut Symantec verpackten die Angreifer ihre Anweisungen in fünf Schichten, um Sicherheitsregeln zu umgehen. Das Modell sollte sich als \"Fantasy AI\" ausgeben, Passwortdiebstahl als normale Entwicklerarbeit betrachten und Ablehnungen unterdrücken. Die fünfte Schicht enthält 74 Angriffsmodule, darunter Werkzeuge für Netzwerk-Scans, Exploits für Web-Frameworks und Botnet-Komponenten. Ob der Jailbreak aktuelle kommerzielle Modelle wirklich vollständig überwindet, lässt die Analyse offen.",
+    "## Der \"Skynet-Modus\"",
+    "Eine letzte Anweisung versetzt den Agenten in den sogenannten \"Skynet-Modus\" mit bis zu 100.000 Schritten am Stück. Er soll Werkzeuge ohne Rückfrage ausführen und Kryptominer in einem versteckten Verzeichnis installieren. Symantec beschreibt einen wiederkehrenden Kreislauf aus Scannen, Infizieren, Minen und erneutem Infizieren bereits getroffener Systeme. Der angehängte Auftrag war allerdings eine harmlose Programmieraufgabe, was auf einen Test gegen ein sicheres Ziel hindeutet.",
+    "Einen Tag später erfasste der Honeypot einen zweiten Angriff, bei dem ein verschleiertes Skript ausgeführt werden sollte. Es lädt den Miner XMRig herunter, der Monero schürft, und zielt auf Kamera-Server mit dem Streaming-Tool go2rtc."
+   ],
+   "quellen": [
+    {
+     "titel": "The Decoder: An AI agent in \"Skynet mode\" hijacks unprotected language models to launch self-sustaining cyberattacks",
+     "url": "https://the-decoder.com/an-ai-agent-in-skynet-mode-hijacks-unprotected-language-models-to-launch-self-sustaining-cyberattacks/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wer einen eigenen KI-Dienst betreibt, sollte Zugänge mit Authentifizierung schützen und API-Schlüssel nicht offen ablegen.",
+    "Wer KI-Dienste nutzt, sollte Nutzungskosten und ungewöhnliche Abrechnungen regelmäßig prüfen, da gekaperte Modelle den Besitzer teuer zu stehen kommen können."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-10-22",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Symantec Honeypot-Analyse",
+    "zeilen": [
+     "> Honeypot-Anfragen: über 127.000",
+     "✓ Analyse abgeschlossen",
+     "⚠ Offener KI-Endpunkt erkannt",
+     "- Schutz fehlt",
+     "+ Authentifizierung empfohlen",
+     "● Status: Bericht veröffentlicht"
+    ]
+   },
+   "id": "ki-agent-im-skynet-modus-kapert-ungeschutzte-sprachmodelle-f",
+   "hinzugefuegt": "2026-10-22T11:36:31Z"
+  },
+  {
+   "titel": "KI findet kritische PHP-Lücke, die Millionen Websites betreffen könnte",
+   "kurz": "Modelle von OpenAI (GPT-5.6 Sol) und Google (Gemini 4 Argon) fanden unabhängig voneinander eine kritische Schwachstelle in PHP. Die Sicherheitsfirma Wiz bestätigte den Fund und warnt, dass solche KI-Fähigkeiten auch Angreifern helfen können.",
+   "artikel": [
+    "Modelle von OpenAI und Google haben eine kritische Schwachstelle in PHP entdeckt, die laut Bericht Millionen Websites weltweit betreffen könnte. GPT-5.6 Sol fand die Lücke im Rahmen der Initiative „Patch the Planet“, die OpenAI selbst als eine der wirkungsvollsten Sicherheitsfragen der letzten Zeit beschreibt. Nach Angaben von OpenAI erkannte das Modell die Schwachstelle, bevor Angreifer sie ausnutzen konnten, sodass Entwickler und Sicherheitsfirmen Zeit zum Reagieren hatten.",
+    "## Unabhängiger Fund bei Wiz",
+    "Die Sicherheitsfirma Wiz fand dieselben Fehler unabhängig voneinander. Dabei nutzte sie ihre eigene Plattform Wiz Atlas zusammen mit Googles Gemini 4 Argon und GPT-5.6 Sol. Laut Wiz war Gemini 4 Argon besonders hilfreich beim Auffinden der Lücke, beim Entwickeln von Exploits, beim Bau von Angriffserkennung und bei der Prüfung des Patches. Auf GitHub gibt es zudem ein Werkzeug, mit dem Betreiber von Servern prüfen können, ob ihre PHP-Version betroffen ist.",
+    "## Warnung vor Missbrauch",
+    "Ein Exploit, also ein Programm, das eine Sicherheitslücke gezielt ausnutzt, musste bisher für jede PHP-Installation aufwendig angepasst werden. Laut Wiz nehmen große Sprachmodelle diese Hürde weg, weil sie Exploits automatisch an unterschiedliche PHP-Versionen, Konfigurationen und Speicherlayouts anpassen können. Wiz schreibt, dies senke die Hürde für Angriffe auf viele Systeme deutlich.",
+    "## Koordinierte Behebung",
+    "Die Korrektur wurde über zwei Monate in fünf Phasen abgestimmt. Beteiligt waren PHP-Entwickler, Wiz, Cloudflare sowie US-Behörden, darunter CISA und das Weiße Haus. OpenAI schlägt diesen Ablauf als wiederholbares Vorgehen für künftige KI-gestützte Sicherheitsfunde vor. Das Unternehmen erwartet, dass Funde in der Größenordnung der PHP2Shell-Lücke in den kommenden Monaten deutlich zunehmen. Die Herstellerangaben zu diesen Einschätzungen stammen von OpenAI und Wiz und wurden nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI's GPT-5.6 Sol and Google's Gemini 4 Argon found critical PHP flaw affecting millions of websites (The Decoder)",
+     "url": "https://the-decoder.com/openais-gpt-5-6-sol-and-gemini-4-argon-discovered-the-critical-php-vulnerability-affecting-millions-of-websites/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wenn du einen eigenen Webserver mit PHP betreibst, prüfe anhand des genannten GitHub-Werkzeugs, ob deine PHP-Version betroffen ist.",
+    "Halte PHP und installierte Pakete aktuell, sobald Updates verfügbar sind.",
+    "Achte darauf, welche Dienste aus dem Internet erreichbar sind, da solche Lücken bevorzugt bei Websites ausgenutzt werden."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-10-21",
+   "id": "ki-findet-kritische-php-lucke-die-millionen-websites-betreff",
+   "hinzugefuegt": "2026-10-22T11:36:31Z"
+  },
+  {
    "titel": "Mistral stellt Voxtral 3 vor: Sprachmodelle und SDK für Sprachagenten",
    "kurz": "Mistral AI hat mit Voxtral 3 eine Modellfamilie für Sprache sowie ein SDK für Sprachagenten vorgestellt. Die Modelle unterstützen laut Hersteller über 50 Sprachen und sollen Zuhören, Denken, Werkzeugaufrufe und Sprechen in einer Echtzeit-Pipeline verbinden.",
    "artikel": [
@@ -627,6 +699,152 @@
   }
  ],
  "radar": [
+  {
+   "titel": "OpenAI-Agenten werten Mausehirn-Daten in 32 Minuten aus",
+   "kurz": "OpenAI hat zusammen mit PerturbAI und dem Scripps Research Institute Tausende KI-Agenten eingesetzt, die Daten von Millionen Mauszellen analysierten. Laut OpenAI dauerte die Auswertung 32 Minuten, für Menschen würde sie Monate bis ein Jahr benötigen.",
+   "artikel": [
+    "## Was passiert ist",
+    "OpenAI hat gemeinsam mit PerturbAI und dem Scripps Research Institute tausende KI-Agenten eingesetzt. Sie werteten biologische Daten aus, die aus Millionen von Mauszellen stammen. Laut OpenAI liefen die Agenten auf dem Modell GPT-Rosalind und arbeiteten einen sogenannten Whole-Brain-CRISPR-Atlas durch. Dieser Atlas zeigt, wie Genveränderungen verschiedene Zelltypen im Mausgehirn beeinflussen.",
+    "## Arbeitsweise",
+    "Jeder Agent übernahm eine einzelne Genstörung (Perturbation). Er analysierte, wie die Zellen darauf reagierten, und suchte in der wissenschaftlichen Literatur nach Erklärungen. Die Gesamtanalyse dauerte laut Angaben 32 Minuten. Das Team schätzt, dass dieselbe Arbeit von Hand mehrere Monate bis zu einem Jahr dauern würde.",
+    "## Ergebnisse",
+    "Unter anderem fanden die Agenten unerwartete Unterschiede zwischen zwei krankheitsbezogenen Genen. Außerdem deuteten sie auf einen möglichen Zusammenhang zwischen der Cholesterinregulation und neurodegenerativen Prozessen hin. In verblindeten Vergleichen bevorzugten menschliche Experten die Berichte der verteilten Agenten in 75 Prozent der Fälle gegenüber denen eines einzelnen Agenten.",
+    "## Verfügbarkeit",
+    "Der entstandene „Reasoning Atlas“ ist auf GitHub verfügbar, die dazugehörige Arbeit liegt als Preprint auf bioRxiv vor. Laut OpenAI sollen diese Hinweise Forschenden helfen zu entscheiden, welche Mechanismen sie zuerst im Labor testen. Die Angaben stammen von OpenAI selbst und sind bislang nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI agents analyze mouse brain data in 32 minutes, a job that would take humans months – The Decoder",
+     "url": "https://the-decoder.com/openai-agents-analyze-mouse-brain-data-in-32-minutes-a-job-that-would-take-humans-months/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Forschende können sich anschauen, welche Genstörungen der Reasoning Atlas auf GitHub auflistet, um eigene Hypothesen zu prüfen.",
+    "Interessierte können die Methodik im bioRxiv-Preprint nachlesen, um zu verstehen, wie verteilte KI-Agenten zusammenarbeiten.",
+    "Wer selbst mit Daten arbeitet, kann prüfen, ob die Aufteilung einer Analyse auf viele Agenten auch für eigene Projekte sinnvoll wäre."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Dauer der Analyse",
+    "balken": [
+     {
+      "label": "Mensch (Schätzung von OpenAI)",
+      "wert": 12,
+      "anzeige": "mehrere Monate bis 1 Jahr"
+     },
+     {
+      "label": "KI-Agenten (laut OpenAI)",
+      "wert": 1,
+      "anzeige": "32 Minuten"
+     }
+    ]
+   },
+   "datum": "2026-10-22",
+   "quelle": "Fachpresse",
+   "kennzahlen": [
+    {
+     "label": "Analysedauer (laut OpenAI)",
+     "wert": "32 Minuten"
+    },
+    {
+     "label": "Menschliche Expertenpräferenz für verteilte Agenten",
+     "wert": "75 %"
+    },
+    {
+     "label": "Mauszellen",
+     "wert": "Millionen"
+    }
+   ],
+   "signal": "Laut OpenAI können KI-Agenten große biologische Datensätze in sehr kurzer Zeit auswerten. Die Angaben stammen vom Hersteller und sind noch nicht unabhängig überprüft.",
+   "link": "https://the-decoder.com/openai-agents-analyze-mouse-brain-data-in-32-minutes-a-job-that-would-take-humans-months/",
+   "linkLabel": "Originalartikel bei The Decoder",
+   "id": "openai-agenten-werten-mausehirn-daten-in-32-minuten-aus",
+   "hinzugefuegt": "2026-10-22T11:36:31Z"
+  },
+  {
+   "titel": "StreamEval: Benchmark zeigt Schwächen bei interaktiver Streaming-Videogenerierung",
+   "kurz": "Ein neuer Benchmark prüft, wie gut Modelle Videos in Echtzeit auf laufende Anfragen anpassen und dabei Zustände und Inhalte konsistent halten. Die Ergebnisse zeigen: Gute Bildqualität heißt nicht automatisch, dass Anweisungen zuverlässig umgesetzt werden.",
+   "artikel": [
+    "StreamEval ist ein Benchmark für interaktive Streaming-Videogenerierung, also für Modelle, die Videos laufend erzeugen und dabei auf neue Eingaben reagieren. Er umfasst 300 vorgegebene Testfälle mit einer Dauer von 15 bis 300 Sekunden. Jeder Fall legt Ausgangsmaterial fest und enthält nacheinander eintreffende multimodale Anfragen mit klaren Vorgaben, welche Zustände sich ändern und was unverändert bleiben muss.",
+    "## Fünf Aufgabenbereiche",
+    "Die Tests decken fünf Aufgaben ab: Avatar-Dialog, Avatar-Performance, Welterzeugung, Bearbeitung per Anweisung und Bearbeitung per Referenzbild. Bewertet wird entlang von vier Dimensionen: Aufgabenausführung, Zustandskonsistenz, visuelle Treue und die Abstimmung von Bild und Ton. Insgesamt wurden 37 Modelle mit zehn aufgabenspezifischen Metriken auf einer Skala von 0 bis 100 geprüft.",
+    "## Die zentralen Ergebnisse",
+    "Hohe visuelle Qualität und die Wiedererkennbarkeit einer Person gehen laut den Autoren nicht zwingend mit verlässlicher Ausführung der Anfragen oder dauerhaft konsistentem Zustand einher. Die höchsten Werte bei der Metrik „Following“ liegen bei 36,90 für Avatar-Performance (sieben Modelle) und bei 25,93 für textgesteuerte Welterzeugung. Bei der Referenzbearbeitung erreichte „Edit Success“ höchstens 15,00 (drei Modelle).",
+    "## Einordnung",
+    "Die Autoren sehen in der zuverlässigen Ausführung von Anfragen unter zeitlichen und Erhaltungsvorgaben die zentrale Herausforderung für echtzeitfähige, omnimodale interaktive Systeme. Eine öffentliche Bestenliste ist unter streameval.ai verfügbar, Code und Daten sind auf GitHub und Hugging Face veröffentlicht."
+   ],
+   "quellen": [
+    {
+     "titel": "StreamEval: Evaluating Interactive Streaming Video Generation Models (Hugging Face Papers)",
+     "url": "https://huggingface.co/papers/2610.28402"
+    },
+    {
+     "titel": "StreamEval Leaderboard",
+     "url": "https://streameval.ai"
+    },
+    {
+     "titel": "StreamEval Code (GitHub)",
+     "url": "https://github.com/StreamEval/StreamEval"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer Videomodelle für Live-Anwendungen testet, kann die Bestenliste als Orientierung nutzen.",
+    "Kreative, die interaktive Videos planen, können die Aufgabenarten des Benchmarks als Checkliste für eigene Anfragen verwenden.",
+    "Die veröffentlichten Testfälle und Daten erlauben, eigene Modelle nach denselben Kriterien zu vergleichen."
+   ],
+   "quelle": "Hugging Face",
+   "datum": "2026-10-20",
+   "signal": "Der Benchmark zeigt, dass Anfragen unter Zeit- und Konsistenzvorgaben weiterhin das Hauptproblem interaktiver Videomodelle sind, auch wenn die Bildqualität hoch ist.",
+   "link": "https://huggingface.co/papers/2610.28402",
+   "linkLabel": "Paper auf Hugging Face",
+   "kennzahlen": [
+    {
+     "label": "Testfälle",
+     "wert": "300"
+    },
+    {
+     "label": "Getestete Modelle",
+     "wert": "37"
+    },
+    {
+     "label": "Bestwert Following (Avatar-Performance)",
+     "wert": "36,90"
+    },
+    {
+     "label": "Bestwert Following (Welterzeugung, Text)",
+     "wert": "25,93"
+    },
+    {
+     "label": "Bestwert Edit Success (Referenzbearbeitung)",
+     "wert": "15,00"
+    }
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Bestwerte „Following“ und „Edit Success“",
+    "balken": [
+     {
+      "label": "Referenzbearbeitung",
+      "wert": 15.0,
+      "anzeige": "15,00"
+     },
+     {
+      "label": "Welterzeugung (Text)",
+      "wert": 25.93,
+      "anzeige": "25,93"
+     },
+     {
+      "label": "Avatar-Performance",
+      "wert": 36.9,
+      "anzeige": "36,90"
+     }
+    ]
+   },
+   "id": "streameval-benchmark-zeigt-schwachen-bei-interaktiver-stream",
+   "hinzugefuegt": "2026-10-22T11:36:31Z"
+  },
   {
    "titel": "AKV: Agenten verwalten ihren KV-Cache selbst",
    "kurz": "Ein arXiv-Paper aus dem Umfeld der Tsinghua NICS-EFC stellt „Cache Engineering“ vor: Agenten entfernen gezielt nicht mehr benötigte Cache-Teile, ohne ihren Verlauf umzuschreiben. Das zugehörige Serving-System AKV soll dabei Kosten und Latenz senken.",
@@ -3308,8 +3526,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-22T05:56:54Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-10-22T11:36:31Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-10-21T20:11:40Z"
  }
 }
