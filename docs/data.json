@@ -794,6 +794,130 @@
  ],
  "radar": [
   {
+   "titel": "OpenShell: Laufzeitumgebung soll KI-Agenten kontrolliert arbeiten lassen",
+   "kurz": "OpenShell ist eine Open-Source-Laufzeit von NVIDIA, in der autonome KI-Agenten isoliert laufen und nur die Zugriffe haben, die in einer Richtlinie festgelegt sind. Auf Hacker News erreichte das Projekt 253 Punkte.",
+   "artikel": [
+    "OpenShell beschreibt sich selbst als sichere, private Laufzeitumgebung für Flotten autonomer KI-Agenten. Agenten sollen Dateien lesen, Pakete installieren, APIs aufrufen und Zugangsdaten nutzen können, ohne unbegrenzten Zugriff auf Daten, Geheimnisse oder das Netzwerk zu bekommen. Laut Projektbeschreibung legt man in einer Richtlinie (Policy) fest, was jeder Agent berühren darf, und OpenShell setzt diese durch.",
+    "## Durchsetzung auf Kernel-Ebene",
+    "Jeder Agent läuft in einer isolierten Sandbox. Kernel-Kontrollen (Mechanismen des Betriebssystemkerns) begrenzen, auf welche Dateien und Systemaufrufe (Schnittstellen zwischen Programm und Betriebssystem) er zugreifen kann. Jede Netzwerkverbindung durchläuft vor dem Verlassen der Sandbox eine Richtlinienprüfung. Echte Zugangsdaten sehen die Agenten laut Projekt nie; sie werden erst bei Anfragen an freigegebene Endpunkte ergänzt.",
+    "## Formale Verifikation von Änderungen",
+    "Vor der Freigabe einer Richtlinienänderung soll formale Verifikation (mathematisches Prüfverfahren, das Aussagen über ein System beweisen kann) riskante neue Zugriffe markieren, etwa den Zugriff auf einen neuen Host mit Zugangsdaten. Solche Änderungen warten dann auf menschliche Prüfung.",
+    "## Einordnung",
+    "Die Angaben stammen aus der Projektseite auf GitHub und sind Herstellerangaben von NVIDIA. Unabhängige Tests lagen nicht vor. Laut Readme unterstützt das Projekt Linux, macOS auf Apple Silicon sowie Windows mit WSL 2 (experimentell), zusätzlich ist Docker, Podman oder Host-Virtualisierung nötig. Das Projekt nennt sich selbst im Versionsstand 0.1.x mit einem stabilen Release-Rhythmus. Die Telemetrie ist laut Readme standardmäßig aktiv und lässt sich abschalten."
+   ],
+   "quellen": [
+    {
+     "titel": "NVIDIA/OpenShell auf GitHub",
+     "url": "https://github.com/NVIDIA/OpenShell"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50198675"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Du kannst einen Agenten in einer isolierten Sandbox laufen lassen und vorher festlegen, auf welche Dateien und Netzwerkziele er Zugriff hat.",
+    "Du kannst die Installation über das Installationsskript testen, sofern Linux, macOS auf Apple Silicon oder WSL 2 verfügbar ist.",
+    "Du kannst die Skills für Coding-Agenten installieren, um den OpenShell-CLI-Einsatz und Richtlinien schreiben zu lassen."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "openshell",
+    "zeilen": [
+     "> openshell sandbox create --name demo",
+     "✓ Sandbox erstellt",
+     "● Status: laufend",
+     "⚠ Netzwerkzugriff nur nach Freigabe"
+    ]
+   },
+   "tag": "Agenten-Sicherheit",
+   "quelle": "Hacker News",
+   "datum": "2026-05-01",
+   "kennzahlen": [
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "253"
+    },
+    {
+     "label": "Commits im Repository",
+     "wert": "1.852"
+    },
+    {
+     "label": "Unterstützte Plattformen",
+     "wert": "Linux, macOS (Apple Silicon), Windows mit WSL 2 (experimentell)"
+    }
+   ],
+   "signal": "Ein Open-Source-Projekt von NVIDIA setzt auf Isolation und Richtlinien für Agenten statt auf blindes Vertrauen. Die Angaben sind Herstellerangaben und noch unabhängig zu prüfen.",
+   "link": "https://github.com/NVIDIA/OpenShell",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "openshell-laufzeitumgebung-soll-ki-agenten-kontrolliert-arbe",
+   "hinzugefuegt": "2026-10-22T23:11:22Z"
+  },
+  {
+   "titel": "Google Agent Compute Engine: Jeder Gemini-Agent bekommt eigene Mikro-VM",
+   "kurz": "Google hat die Agent Compute Engine angekündigt, die jedem KI-Agenten eine eigene, hardwareisolierte virtuelle Maschine gibt. Der Dienst läuft laut Google bereits für Gemini und soll in den kommenden Monaten als Preview öffnen.",
+   "artikel": [
+    "Google hat mit der Agent Compute Engine einen Dienst vorgestellt, der jedem KI-Agenten eine eigene, isolierte virtuelle Maschine zuweist. Laut Google setzt Gemini diesen Dienst bereits ein. Eine öffentliche Vorschau ist für die kommenden Monate angekündigt.",
+    "## Effizienz als Kern",
+    "Jeder Agent läuft in einer sogenannten MicroVM, also einer besonders schlanken virtuellen Maschine. Diese wird laut Google durch den hauseigenen Titanium-Chip abgesichert. Ist ein Agent untätig, pausiert seine VM automatisch und gibt die Hardware für andere frei. Geteilter Speicher zwischen den VMs soll die Betriebskosten senken.",
+    "Laut Autor sind VMs ein großer Kostenfaktor beim Betrieb agentischer Systeme, weshalb Google hier auf Effizienz setzt. Dazu gehört auch Agent Substrate, eine als Open Source veröffentlichte Laufzeitumgebung für Kubernetes. Google gibt an, damit zehnmal so viele Agenten auf einem Server unterbringen zu können.",
+    "## Messwerte laut Google",
+    "In einem Test mit 200.000 Agenten dauerten Anhalten und Fortsetzen laut Google weniger als 500 Millisekunden. Diese Zahlen stammen vom Anbieter selbst und sind nicht unabhängig geprüft.",
+    "## Kontrolle und Verwaltung",
+    "Google ergänzt außerdem Token-Tracking, Model-Routing und Unterstützung für externe Identitätsanbieter wie Ping Identity und SailPoint. Diese Steuerungsfunktionen sollen auf Cloud Run, GKE und verwaltete Endpunkte ausgeweitet werden."
+   ],
+   "quellen": [
+    {
+     "titel": "Google's Agent Compute Engine gives every Gemini agent its own hardware-isolated micro virtual machine (The Decoder)",
+     "url": "https://the-decoder.com/googles-agent-compute-engine-gives-every-gemini-agent-its-own-hardware-isolated-micro-virtual-machine/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Entwickler können verfolgen, welche Kosten einzelne Agenten über Token-Tracking verursachen, sobald der Dienst verfügbar ist.",
+    "Wer eigene Agenten betreibt, kann Agent Substrate als Open-Source-Laufzeit auf Kubernetes testen.",
+    "Teams mit Identitätsdiensten wie Ping Identity oder SailPoint können prüfen, wie sich Agenten damit verwalten lassen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Agenten pro Server (laut Google)",
+    "balken": [
+     {
+      "label": "Bisher",
+      "wert": 1,
+      "anzeige": "1x"
+     },
+     {
+      "label": "Agent Substrate",
+      "wert": 10,
+      "anzeige": "10x (Herstellerangabe)"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-10-22",
+   "kennzahlen": [
+    {
+     "label": "Agenten pro Server",
+     "wert": "bis zu 10x mehr (Herstellerangabe)"
+    },
+    {
+     "label": "Suspend/Resume im Test mit 200.000 Agenten",
+     "wert": "unter 500 ms (Herstellerangabe)"
+    },
+    {
+     "label": "Isolation",
+     "wert": "MicroVM, abgesichert durch Titanium-Chip (Herstellerangabe)"
+    }
+   ],
+   "signal": "Google organisiert Agenten-Infrastruktur als eigene Schicht mit Fokus auf Kosten und Governance. Die Leistungszahlen sind Herstellerangaben und noch nicht unabhängig belegt.",
+   "link": "https://the-decoder.com/googles-agent-compute-engine-gives-every-gemini-agent-its-own-hardware-isolated-micro-virtual-machine/",
+   "linkLabel": "Artikel bei The Decoder lesen",
+   "id": "google-agent-compute-engine-jeder-gemini-agent-bekommt-eigen",
+   "hinzugefuegt": "2026-10-22T23:11:22Z"
+  },
+  {
    "titel": "WorldTUI: Ein 360M-Modell spielt ein Terminal nur vor",
    "kurz": "Ein Entwickler hat ein kleines Sprachmodell (360M Parameter) so trainiert, dass es ein Terminal simuliert: Es gibt keine echte Shell dahinter, sondern das Modell sagt voraus, wie sich der Bildschirm nach jedem Tastendruck verändert.",
    "artikel": [
@@ -3805,7 +3929,7 @@
    "id": "stimme"
   },
   {
-   "maximum": "Selbstständige Recherche, lange Dokumente auswerten, mehrstufige Aufgaben allein erledigen.",
+   "maximum": "Selbstständige Recherche, lange Dokumente auswerten, mehrstufige Aufgaben allein erledigen. Im Test der Redaktion löste ein Agent eigenständig Sicherheitslücken in PHP, die Wiz bestätigte.",
    "name": "Text & Denken",
    "reihenfolge": 6,
    "status": "ok",
@@ -3813,7 +3937,8 @@
    "tools": [
     "Gemini 4 Argon",
     "Claude Opus 5.5",
-    "ChatGPT"
+    "ChatGPT",
+    "GPT-6.1 Sol"
    ],
    "id": "text"
   },
@@ -3834,8 +3959,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-22T19:56:16Z",
-  "neueFunde": 3,
-  "standAktualisiert": "2026-10-21T20:11:40Z"
+  "letzterScan": "2026-10-22T23:11:22Z",
+  "neueFunde": 2,
+  "standAktualisiert": "2026-10-22T23:11:22Z"
  }
 }
