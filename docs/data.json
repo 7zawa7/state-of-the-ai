@@ -628,6 +628,79 @@
  ],
  "radar": [
   {
+   "titel": "AKV: Agenten verwalten ihren KV-Cache selbst",
+   "kurz": "Ein arXiv-Paper aus dem Umfeld der Tsinghua NICS-EFC stellt „Cache Engineering“ vor: Agenten entfernen gezielt nicht mehr benötigte Cache-Teile, ohne ihren Verlauf umzuschreiben. Das zugehörige Serving-System AKV soll dabei Kosten und Latenz senken.",
+   "artikel": [
+    "Große Sprachmodell-Agenten bearbeiten immer längere Abläufe aus Beobachtungen und Aktionen. Dabei wächst der sogenannte KV-Cache (Key-Value-Cache, also der Zwischenspeicher der Attention-Werte im Modell), und Ein- und Ausgabe sowie Speicherung dieses Caches werden zum größten Kostenfaktor.",
+    "## Der Ansatz",
+    "Bisherige Verfahren des Context Engineering kürzen den Verlauf oder fassen ihn zusammen. Das verändert aber den Anfang der Sequenz, wodurch nachfolgende Cache-Zustände ungültig werden und der beibehaltene Kontext teuer neu berechnet werden muss. Beim Cache Engineering dagegen kann der Agent aktiv steuern, welcher Cache weiter für die Attention genutzt wird. Dafür gibt es die Operation „drop“, die Teile vom weiteren Lesen ausschließt, und „repos“, die die Positionskodierung verbleibender Keys anpasst.",
+    "## Das Serving-System AKV",
+    "Die Autoren weisen darauf hin, dass identische Tokenfolgen je nach Reihenfolge der Cache-Operationen unterschiedliche Cache-Zustände ergeben können. Einfaches Präfix-Matching reicht deshalb für eine korrekte Wiederverwendung nicht aus. AKV bietet eine zustandslose Schnittstelle, die zu bestehenden Serving-APIs passt, und verwaltet intern Wiederverwendung, Verdrängung und Wiederherstellung des Caches.",
+    "## Ergebnisse laut Paper",
+    "Laut den Autoren verbessert eine Rolling-Drop-Strategie für Tool-Antworten den durchschnittlichen Benchmark-Wert um 1,7 Punkte und senkt die durchschnittlichen Kosten um 27,7 Prozent, verglichen mit einer schwellenbasierten Zusammenfassung. Mit AKV seien bis zu 1,2-fache Ausgabedurchsatz und 1,5-fache Beschleunigung der P95-Latenz möglich. Eine rekursive Selbstverbesserung der Cache-Strategien senkte die Kosten zusätzlich um 7,1 Prozent gegenüber manuell entworfenen Regeln. Dies sind Angaben der Autoren, die nicht unabhängig geprüft wurden."
+   ],
+   "quellen": [
+    {
+     "titel": "Cache Engineering for Agents (Hugging Face Paper-Seite)",
+     "url": "https://huggingface.co/papers/2610.28577"
+    },
+    {
+     "titel": "Projektseite AKV",
+     "url": "https://fuvty.github.io/thinking_yard_project_page/projects/akv/"
+    },
+    {
+     "titel": "Code-Repository AKV (GitHub)",
+     "url": "https://github.com/thu-nics/AKV"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer selbst LLM-Agenten betreibt, kann prüfen, ob sich das Paper-Konzept auf den eigenen Einsatz übertragen lässt.",
+    "Entwickler können den verlinkten Code auf GitHub ansehen, um die Cache-Operationen nachzuvollziehen.",
+    "Interessierte können die Projektseite mit Demo-Video durchgehen, um die Idee ohne Fachlektüre zu verstehen."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "AKV – Kennzahlen laut Paper",
+    "zeilen": [
+     "> Kosten gegenüber Zusammenfassung",
+     "✓ -27,7 % (Angabe der Autoren)",
+     "✓ Durchsatz bis 1,2x",
+     "✓ P95-Latenz bis 1,5x schneller",
+     "● Quelle: arXiv 2610.28577"
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-10-22",
+   "kennzahlen": [
+    {
+     "label": "Benchmark-Verbesserung (Rolling-Drop)",
+     "wert": "+1,7 Punkte"
+    },
+    {
+     "label": "Kostenreduktion (Rolling-Drop)",
+     "wert": "-27,7 %"
+    },
+    {
+     "label": "Output-Durchsatz mit AKV",
+     "wert": "bis 1,2x"
+    },
+    {
+     "label": "P95-Latenz mit AKV",
+     "wert": "bis 1,5x schneller"
+    },
+    {
+     "label": "Zusätzliche Kostensenkung durch rekursive Selbstverbesserung",
+     "wert": "-7,1 %"
+    }
+   ],
+   "signal": "Das Paper verlagert Kontextverwaltung vom Verlauf auf den Cache selbst. Die Zahlen stammen von den Autoren und sind nicht unabhängig geprüft.",
+   "link": "https://huggingface.co/papers/2610.28577",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "akv-agenten-verwalten-ihren-kv-cache-selbst",
+   "hinzugefuegt": "2026-10-22T05:56:54Z"
+  },
+  {
    "titel": "MemT-1.0: Sprachmodell mit eingebautem, mitwachsendem Gedächtnis",
    "kurz": "MemT-1.0 ist eine Familie von Speichermodellen, bei denen ein persistenter, sich dynamisch entwickelnder Speicher Teil der Modellberechnung ist. Das öffentliche GitHub-Repository enthält laut Seite Inferenz-Code und einen technischen Bericht.",
    "artikel": [
@@ -3235,8 +3308,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-22T00:57:43Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-10-22T05:56:54Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-10-21T20:11:40Z"
  }
 }
