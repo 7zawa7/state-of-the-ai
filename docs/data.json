@@ -628,6 +628,152 @@
  ],
  "radar": [
   {
+   "titel": "MemT-1.0: Sprachmodell mit eingebautem, mitwachsendem Gedächtnis",
+   "kurz": "MemT-1.0 ist eine Familie von Speichermodellen, bei denen ein persistenter, sich dynamisch entwickelnder Speicher Teil der Modellberechnung ist. Das öffentliche GitHub-Repository enthält laut Seite Inferenz-Code und einen technischen Bericht.",
+   "artikel": [
+    "MemT-1.0 ist laut Projektseite eine neue Generation von „Memory Foundation Models“. Gemeint ist: Ein Modell, bei dem persistenter, sich über Interaktionen hinweg verändernder Speicher fest zur Berechnung gehört, statt nur als externer Textspeicher neben dem Modell zu liegen.",
+    "## Aufbau",
+    "Ein Native Memory Block läuft parallel zur Aufmerksamkeit (Attention) des Basismodells. Er besteht aus einem Local Memory Block, einer dynamischen Speichermatrix mit mehreren Kanälen, und einem Hyper Memory Block mit trainierbaren Projektionen sowie Schreib-, Lösch- und Vergessenstoren. Ein Gate ist ein Steuerungsmechanismus, der bestimmt, wie stark Informationen durchgelassen werden.",
+    "Laut Seite wird der Speicherzustand nach jedem Gesprächsabschnitt mit GDN-2 aktualisiert. Die Projektseite nennt dafür keine weiteren Details.",
+    "## Angaben der Hersteller",
+    "Die Entwickler geben an, dass der persistente Zustand konstant groß bleibt. Gegenüber einem vollständigen KV-Cache (dem Zwischenspeicher aller bisherigen Token) soll er bei 128K Verlaufslänge etwa 66-mal weniger Speicherplatz brauchen. Diese Angabe stammt von den Herstellern und ist nicht unabhängig geprüft.",
+    "Bei 11 Speicher-Benchmarks sollen MemT-1.0-Flash und MemT-1.0-Nano unter den bewerteten parametrischen Speicher-Methoden auf Platz eins und zwei liegen. Laut Seite bleiben starke textbasierte Speichersysteme insgesamt vorn, besonders bei langen Verläufen mit detaillierter Beweissuche.",
+    "## Modelle",
+    "MemT-1.0-Nano basiert auf Qwen3.6-35B-A3B und hat laut Tabelle 36 Mrd. Parameter insgesamt, 3 Mrd. aktiviert und 451 Mio. trainierbare Speicherparameter. MemT-1.0-Flash basiert auf DeepSeek-V4-Flash mit 288 Mrd. Parametern insgesamt, 17 Mrd. aktiviert und 3,61 Mrd. trainierbaren Speicherparametern.",
+    "Das Repository enthält laut Auszug einen Inferenz-Ordner mit Installationsanleitung für SGLang, einem Serving-Framework für Sprachmodelle. Es wird ein NVIDIA-CUDA-System mit Python 3.11 oder neuer vorausgesetzt."
+   ],
+   "quellen": [
+    {
+     "titel": "MemTensor/MemT-1.0 (GitHub)",
+     "url": "https://github.com/MemTensor/MemT-1.0"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler mit NVIDIA-GPU können laut Anleitung einen lokalen Server mit dem Nano-Checkpoint starten.",
+    "Wer Speicherverhalten testen will, kann Gespräche mit gespeichertem Zustand fortsetzen, sofern die Checkpoints vorliegen.",
+    "Für Privatpersonen ohne GPU-Server ist das Projekt im Auszug kaum direkt nutzbar."
+   ],
+   "ausprobieren": {
+    "prompt": "Installiere im inference-Ordner per „uv pip install '.[server]'“ und starte den Nano-Server mit „sh start_memt_nano.sh /models/MemT-1.0-Nano“.",
+    "tool": "MemT-1.0 (GitHub)",
+    "url": "https://github.com/MemTensor/MemT-1.0"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Speicherbedarf bei 128K Verlauf (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Full-Context KV-Cache",
+      "wert": 66,
+      "anzeige": "66×"
+     },
+     {
+      "label": "MemT-1.0 Zustand",
+      "wert": 1,
+      "anzeige": "1×"
+     }
+    ]
+   },
+   "quelle": "GitHub",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Nano: Parameter gesamt / aktiviert",
+     "wert": "36B / 3B"
+    },
+    {
+     "label": "Nano: trainierbare Speicherparameter",
+     "wert": "451M"
+    },
+    {
+     "label": "Flash: Parameter gesamt / aktiviert",
+     "wert": "288B / 17B"
+    },
+    {
+     "label": "Flash: trainierbare Speicherparameter",
+     "wert": "3,61B"
+    },
+    {
+     "label": "Speicherersparnis vs. KV-Cache (Herstellerangabe)",
+     "wert": "ca. 66× bei 128K"
+    }
+   ],
+   "signal": "Ein Speicherkonzept, das im Modell selbst verankert ist, statt als externe Datenbank zu laufen. Die Benchmark-Angaben stammen von den Herstellern.",
+   "link": "https://github.com/MemTensor/MemT-1.0",
+   "linkLabel": "Repository auf GitHub",
+   "tag": "Open Source",
+   "id": "memt-1-0-sprachmodell-mit-eingebautem-mitwachsendem-gedachtn",
+   "hinzugefuegt": "2026-10-22T00:57:43Z"
+  },
+  {
+   "titel": "Self-Credit: Agenten-KI lernt, welche Schritte zählen",
+   "kurz": "Ein arXiv-Paper (Meta-Beteiligung laut HF-Seite) stellt Self-Credit vor, ein Verfahren, mit dem LLM-Agenten aus spärlichen Endergebnis-Belohnungen dichtere Lernsignale gewinnen. Laut Paper übertrifft es starke Agenten-Baselines bei Such- und Recherche-Aufgaben um 4 bis 8 Prozentpunkte.",
+   "artikel": [
+    "Viele LLM-Agenten werden mit RLVR trainiert, also mit einer Belohnung, die nur am Ende prüft, ob das Ergebnis stimmt. Bei langen Aufgaben mit vielen Schritten ist dann kaum erkennbar, welche Zwischenschritte zum Erfolg beigetragen haben. Dieses Problem heißt Credit Assignment, also die Zuordnung von Verdienst zu einzelnen Aktionen.",
+    "## Die Grundidee",
+    "Self-Credit lässt das Modell selbst Zusammenfassungen schreiben, während es Aufgaben bearbeitet. Diese Zusammenfassungen verweisen auf frühere Schritte, die laut Modell wichtige Belege enthalten. Diese Verweise dienen als selbst erzeugte Gutschrift.",
+    "## Intra-Group-Rescaling",
+    "Die Gutschriften werden anschließend innerhalb einer Gruppe von Versuchen zum gleichen Prompt verglichen. Zitierte Aktionen aus erfolgreichen und gescheiterten Durchläufen werden gegenübergestellt. Übereinstimmung und Abweichung innerhalb der Gruppe helfen, unberechtigte Gutschriften zu entfernen und kritische Aktionen stärker zu gewichten. Besonders bei gescheiterten Durchläufen soll dieser Schritt wichtig sein.",
+    "## Ergebnisse",
+    "Laut den Autoren verbessert sich das Verfahren auf BrowseComp-Plus gegenüber den Basismodellen um 37,0 Punkte bei Qwen3 8B und 36,2 Punkte bei Qwen3 32B. Gegenüber den stärksten Agenten-RL-Baselines sind es 8,5 bzw. 5,6 Punkte. Auf GAIA und xBench-DeepSearch werden laut Paper Vorteile von 4,9 bzw. 4,7 Punkten gegenüber den stärksten Baselines berichtet.",
+    "Die Zahlen stammen aus dem Paper der Autoren und sind nicht unabhängig geprüft. Der Eintrag beschreibt eine Forschungsarbeit, kein fertiges Produkt oder Werkzeug, das man direkt ausprobieren könnte."
+   ],
+   "quellen": [
+    {
+     "titel": "Self-Credit: Credit Assignment for Long-Horizon Agentic RL via Intra-group Rescaling (Hugging Face Papers)",
+     "url": "https://huggingface.co/papers/2610.28388"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer Agenten-Training selbst betreibt, kann das Prinzip der Gruppenvergleiche bei sparsen Belohnungen prüfen.",
+    "Entwickler von Recherche-Agenten können die Idee der zitierten Zwischenschritte als Protokollierungsmuster übernehmen.",
+    "Privatpersonen können den Eintrag als Überblick nutzen, ein direkt nutzbares Tool ist hier aber nicht enthalten."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Ergebnis auf BrowseComp-Plus (Verbesserung gegenüber Basismodell, Qwen3 8B)",
+    "balken": [
+     {
+      "label": "Basismodell",
+      "wert": 0,
+      "anzeige": "Basis"
+     },
+     {
+      "label": "Self-Credit",
+      "wert": 37.0,
+      "anzeige": "+37,0 Punkte"
+     }
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-10-20",
+   "kennzahlen": [
+    {
+     "label": "BrowseComp-Plus Verbesserung Qwen3 8B",
+     "wert": "+37,0 Punkte"
+    },
+    {
+     "label": "BrowseComp-Plus Verbesserung Qwen3 32B",
+     "wert": "+36,2 Punkte"
+    },
+    {
+     "label": "Vorsprung zu stärksten Baselines (8B / 32B)",
+     "wert": "+8,5 / +5,6 Punkte"
+    },
+    {
+     "label": "Vorsprung GAIA / xBench-DeepSearch",
+     "wert": "+4,9 / +4,7 Punkte"
+    }
+   ],
+   "signal": "Dichtere Lernsignale aus spärlichen Belohnungen könnten Agenten bei langen Aufgaben verbessern. Die Ergebnisse stammen aus dem Paper selbst.",
+   "link": "https://huggingface.co/papers/2610.28388",
+   "linkLabel": "Paper auf Hugging Face ansehen",
+   "id": "self-credit-agenten-ki-lernt-welche-schritte-zahlen",
+   "hinzugefuegt": "2026-10-22T00:57:43Z"
+  },
+  {
    "titel": "Flint: Recursive stellt Mixture-of-Experts-Modell für Coding-Agenten auf Hugging Face vor",
    "kurz": "Recursive hat auf Hugging Face das Sprachmodell Flint veröffentlicht, das für Coding-Agenten gedacht ist. Laut Herstellerangaben erreicht es hohe Werte in Agenten-Benchmarks.",
    "artikel": [
@@ -3089,8 +3235,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-21T22:48:22Z",
-  "neueFunde": 4,
+  "letzterScan": "2026-10-22T00:57:43Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-10-21T20:11:40Z"
  }
 }
