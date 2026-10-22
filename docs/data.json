@@ -1,6 +1,56 @@
 {
  "news": [
   {
+   "titel": "Mistral veröffentlicht Mistral Large 4 als öffentliche Preview",
+   "kurz": "Mistral hat eine öffentliche Vorschau seines größten Modells Mistral Large 4 gestartet, das bei Coding, Agenten-Aufgaben und Cybersecurity stark abschneiden soll. Die Gewichte sollen laut Hersteller bis Ende des Monats folgen.",
+   "artikel": [
+    "Mistral hat Mistral Large 4, intern „ML4“ genannt, als öffentliche Preview vorgestellt. Laut Hersteller ist es das bisher größte und leistungsfähigste Modell des Unternehmens. Die Vorschau ist über eine API auf Mistral Studio nutzbar. Die Gewichte sollen Ende des Monats veröffentlicht werden.",
+    "## Technische Eckdaten (Herstellerangaben)",
+    "Nach Angaben von Mistral hat ML4 eine Billion Parameter und ist nativ multimodal, also für Text und Bilder ausgelegt. Rund 52 Milliarden Parameter sind pro Anfrage aktiv. Trainiert wurde das Modell laut Mistral von Grund auf auf 3.800 NVIDIA-Grace-Blackwell-GPUs in eigenen Rechenzentren in Europa. Die Vorschau läuft auf derselben Infrastruktur.",
+    "## Leistung laut Mistral",
+    "Mistral nennt Ergebnisse in mehreren Disziplinen. Beim Coding erreicht das Modell 61,7 Prozent auf DeepSWE v1.1 und 28,3 Prozent auf Terminal-Bench 4. Im Cybersecurity-Test Cybench löst es laut Angaben 93 Prozent der Aufgaben. Eine unabhängige Auswertung des Artificial Analysis Cyber Index ordnet das Modell unter den fünf besten weltweit ein. Diese Werte sind Herstellerangaben und noch nicht unabhängig verifiziert.",
+    "## Offene Gewichte und Souveränität",
+    "Mistral betont, dass Unternehmen das Modell selbst betreiben können, etwa in privaten Clouds oder vor Ort. Laut Hersteller soll das besonders für Sicherheitsteams wichtig sein, weil geschlossene Modelle Anfragen zur Schwachstellenanalyse oft ablehnen. Eine vollständige Auswertung dazu fehlt bisher; weitere Details zu Architektur und Benchmarks sollen folgen."
+   ],
+   "quellen": [
+    {
+     "titel": "Introducing Mistral Large 4 (Mistral)",
+     "url": "https://mistral.ai/news/mistral-large-4/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50186129"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Die Preview-API über Mistral Studio ausprobieren und eigene Texte oder Bilder testen.",
+    "Nach Veröffentlichung der Gewichte lässt sich das Modell auf eigener Hardware betreiben.",
+    "Die Ergebnisse im Hacker-News-Thread mit anderen Nutzern vergleichen."
+   ],
+   "ausprobieren": {
+    "prompt": "Fasse diesen Artikel in fünf Stichpunkten zusammen und nenne die wichtigsten Zahlen.",
+    "tool": "Mistral Studio",
+    "url": "https://mistral.ai"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Cybench-Ergebnis (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "ML4",
+      "wert": 93,
+      "anzeige": "93 %"
+     }
+    ]
+   },
+   "tag": "Modell-Preview",
+   "bereich": "Text",
+   "datum": "2026-10-06",
+   "id": "mistral-veroffentlicht-mistral-large-4-als-offentliche-previ",
+   "hinzugefuegt": "2026-10-22T16:00:41Z"
+  },
+  {
    "titel": "KI-Agent im \"Skynet-Modus\" kapert ungeschützte Sprachmodelle für eigenständige Angriffe",
    "kurz": "Symantec-Forscher beschreiben einen offensiven KI-Agenten, der ungeschützte Sprachmodelle im Netz übernimmt und damit Server angreift, Datenbanken stiehlt und Kryptominer installiert. Die Kosten trägt der Besitzer des gekaperten Modells.",
    "artikel": [
@@ -699,6 +749,78 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Recursive stellt Flint vor: Sprachmodell, das von einer KI-Forschungsmaschine entwickelt wurde",
+   "kurz": "Das Startup Recursive hat mit Flint sein erstes Sprachmodell veröffentlicht, das größtenteils von der internen KI-Anlage „Eureka Machine“ entwickelt wurde. Ob dieser Ansatz tatsächlich zu sich selbst verbessernder KI führt, ist laut Bericht noch offen.",
+   "artikel": [
+    "Das KI-Startup Recursive hat Flint veröffentlicht, sein erstes Sprachmodell. Flint ist für Programmieraufgaben gedacht und lässt sich lokal auf Rechnern betreiben. Die Entwicklung dauerte laut Angaben vier Monate. Eine zentrale Rolle spielte die interne KI-Anlage „Eureka Machine“, die Ideen selbst vorschlägt, umsetzt, testet und Folgeexperimente plant.",
+    "## Architektur und Effizienz",
+    "Flint nutzt eine Mixture-of-Experts-Architektur (MoE), bei der nicht alle Parameter gleichzeitig arbeiten. Insgesamt hat das Modell 40 Milliarden Parameter, pro Token sind davon 2,5 Milliarden aktiv. Nach Herstellerangaben erreicht Flint auf einem M4 Pro mit 48 GB Speicher die Benchmark-Werte deutlich langsamerer dichter Modelle mit 27 bis 31 Milliarden Parametern. Recursive gibt außerdem mehr als 125 Token pro Sekunde auf einem MacBook Pro mit M4 Pro an, auf einer Nvidia-RTX-Spark-Plattform mit 64 GB über 150.",
+    "## Rolle der Eureka Machine",
+    "Laut Recursive automatisiert das System den gesamten Forschungszyklus und testet mehrere Ansätze parallel. Bei Flint half es unter anderem bei Trainingsdaten, Optimierern, Architekturentwurf und Inferenz-Feinabstimmung. Die Anlage wählte die Expertenkonfiguration, die Quantisierung und eigene Compute-Kerne für Apple Silicon und Nvidia selbst. Bei der Quantisierung ging sie gegen übliche Praxis vor und reduzierte auch die Ausgabeschicht auf vier Bit. Das fertige NVFP4-Modell liegt laut Recursive nur 0,7 Punkte hinter der 16-Bit-Version.",
+    "## Verfügbarkeit",
+    "Die Modellgewichte stehen auf Hugging Face unter der Apache-2.0-Lizenz bereit. Flint unterstützt Kontextfenster bis 512.000 Token, empfohlen wird eine Grenze bei 256.000. Genannt werden llama.cpp, Ollama, LM Studio, vLLM und SGLang. Recursive räumt ein, dass Flint bei komplexen Aufgaben mehr Anleitung braucht als große proprietäre Modelle, weshalb größere Aufgaben in kleinere Schritte zerlegt werden sollten.",
+    "## Einordnung",
+    "Recursive wurde unter anderem von Richard Socher gegründet und trat im Mai 2026 aus der Tarnung. Laut Bericht wurden 650 Millionen US-Dollar bei 4,65 Milliarden Dollar Bewertung eingesammelt, damals ohne konkrete technische Ergebnisse. Flint belegt, dass der Prozess Modelle hervorbringt. Ein Beweis für rekursive Selbstverbesserung ist es nicht: Dafür müsste ein mit der Eureka Machine gebautes Modell zeigen, dass es die Forschungsmaschine selbst verbessert."
+   ],
+   "quellen": [
+    {
+     "titel": "Recursive shows first result of its AI-driven research process with Flint – THE DECODER",
+     "url": "https://the-decoder.com/recursive-shows-first-result-of-its-ai-driven-research-process-with-flint/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Flint lokal auf einem eigenen Rechner mit kompatibler Laufzeit wie Ollama oder LM Studio testen, sofern die Hardware passt.",
+    "Die Modellgewichte auf Hugging Face unter Apache-2.0-Lizenz für eigene Programmierprojekte prüfen.",
+    "Die Leistungsangaben mit unabhängigen Benchmarks abgleichen, weil Recursive sie bisher nicht unabhängig bestätigt hat."
+   ],
+   "ausprobieren": {
+    "prompt": "Erstelle eine Python-Funktion, die eine CSV-Datei einliest und die Summe jeder Spalte ausgibt.",
+    "tool": "Ollama",
+    "url": "https://ollama.com"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Tokens pro Sekunde (Herstellerangabe, MacBook Pro M4 Pro, kurzer Kontext)",
+    "balken": [
+     {
+      "label": "Flint",
+      "wert": 125,
+      "anzeige": "mehr als 125"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-10-22",
+   "kennzahlen": [
+    {
+     "label": "Parameter gesamt",
+     "wert": "40 Mrd."
+    },
+    {
+     "label": "Aktive Parameter pro Token",
+     "wert": "2,5 Mrd."
+    },
+    {
+     "label": "Kontextfenster",
+     "wert": "512.000 Token (empfohlen max. 256.000)"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    },
+    {
+     "label": "Entwicklungszeit",
+     "wert": "4 Monate"
+    }
+   ],
+   "signal": "Ein KI-entwickeltes Modell mit offenen Gewichten – Leistungsangaben laut Hersteller, noch nicht unabhängig geprüft.",
+   "link": "https://the-decoder.com/recursive-shows-first-result-of-its-ai-driven-research-process-with-flint/",
+   "linkLabel": "Artikel bei THE DECODER lesen",
+   "id": "recursive-stellt-flint-vor-sprachmodell-das-von-einer-ki-for",
+   "hinzugefuegt": "2026-10-22T16:00:41Z"
+  },
   {
    "titel": "OpenAI-Agenten werten Mausehirn-Daten in 32 Minuten aus",
    "kurz": "OpenAI hat zusammen mit PerturbAI und dem Scripps Research Institute Tausende KI-Agenten eingesetzt, die Daten von Millionen Mauszellen analysierten. Laut OpenAI dauerte die Auswertung 32 Minuten, für Menschen würde sie Monate bis ein Jahr benötigen.",
@@ -3526,8 +3648,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-22T11:36:31Z",
-  "neueFunde": 4,
+  "letzterScan": "2026-10-22T16:00:41Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-10-21T20:11:40Z"
  }
 }
