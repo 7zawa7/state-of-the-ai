@@ -1,6 +1,49 @@
 {
  "news": [
   {
+   "titel": "Anthropic: Claude beweist mathematisch, dass Code korrekt ist",
+   "kurz": "Anthropic ließ Claude gemeinsam mit Partner Theorem bestehenden Code formal verifizieren und dafür rund 180 Millionen Zeilen Beweiscode für 123 Open-Source-Bibliotheken erzeugen. Dabei fand das Modell Fehler, die jahrelange Tests übersehen hatten.",
+   "artikel": [
+    "Anthropic hat Claude eingesetzt, um bestehende Software mathematisch auf Korrektheit zu prüfen. Das Modell erzeugte in wenigen Wochen rund 180 Millionen Zeilen Beweiscode für 123 Open-Source-Bibliotheken aus dem Testprogramm OSS-Fuzz von Googles Sicherheitsprojekt.",
+    "## Vom Crash-Test zum mathematischen Beweis",
+    "Claude übersetzte Crash-Tests in mathematische Probleme, analysierte den kompilierten Maschinencode und erstellte umfangreiche Beweise. Die Beweise prüft das unabhängige Programm Rocq automatisch. Laut Anthropic ist dafür fast keine menschliche Prüfung nötig. Die Forscher sprechen von „vollständig autonomer“ Beweiserzeugung, die Werkzeuge und formalen Grundlagen stammen jedoch von Menschen bei Theorem.",
+    "## Fehler, die Tests übersehen haben",
+    "Während der Arbeit stieß Claude auf hunderte Fehler und durfte sie selbst beheben. Viele wären mit herkömmlichen Tests unentdeckt geblieben, weil sie nur unter sehr speziellen Bedingungen auftreten. Bei der Prüfung eines weit verbreiteten PDF-Readers fand das Team in einer Woche so viele Sicherheitslücken, wie für diese Software sonst in einem ganzen Jahr gemeldet werden. In einer anderen Anwendung entdeckte Claude einen logischen Fehler, der über zehn Jahre unbemerkt geblieben war.",
+    "## Grenzen der formalen Verifikation",
+    "Anthropic betont, dass „formal verifiziert“ nicht „fehlerfrei“ bedeutet. Die Beweise gelten nur unter engen Bedingungen: eine bestimmte Prozessorarchitektur, Programme mit nur einem Thread und Eingaben unter 64 MB. In der Praxis laufen die Bibliotheken jedoch auf unterschiedlicher Hardware. Der Rechenaufwand ist hoch, einzelne Beweise laufen über hunderte Millionen Tokens. Gesamtkosten nennt Anthropic nicht.",
+    "Eine kleinere Testreihe zeigte, dass Beweise wiederverwendbar sind. Neuere Modelle werden zudem effizienter: Opus 5.5 löst laut Anthropic die Hälfte der Beweise mit rund 40 Prozent weniger Tokens als Opus 5.",
+    "Anthropic erwartet, dass formale Verifikation mit KI bald so praktikabel wird wie normale Tests. Theorems Fahrplan zielt bereits auf kritische Infrastruktur wie glibc, OpenSSL und cURL."
+   ],
+   "quellen": [
+    {
+     "titel": "Anthropic's Claude now writes code and proves it safe automatically, The Decoder",
+     "url": "https://the-decoder.com/anthropics-claude-now-writes-code-and-proves-it-safe-automatically/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Entwickler können die Ergebnisse als Beispiel dafür verfolgen, wie KI-generierter Code automatisch geprüft werden kann.",
+    "Wer eigene Open-Source-Projekte pflegt, kann prüfen, ob Fuzzing-Tests bereits systematisch genutzt werden.",
+    "Man kann sich über die Grenzen formaler Verifikation informieren, bevor man KI-Code blind vertraut."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-10-23",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "claude verify",
+    "zeilen": [
+     "> Crash-Test in Beweisproblem übersetzt",
+     "✓ Beweis erzeugt und durch Rocq geprüft",
+     "⚠ Beweis gilt nur für bestimmte Architektur",
+     "- Fehler übersehen durch Tests",
+     "+ Logikfehler nach über zehn Jahren gefunden",
+     "● 123 Bibliotheken verarbeitet"
+    ]
+   },
+   "id": "anthropic-claude-beweist-mathematisch-dass-code-korrekt-ist",
+   "hinzugefuegt": "2026-10-23T11:58:17Z"
+  },
+  {
    "titel": "OpenAI-Modelle kommen zu Google Cloud",
    "kurz": "OpenAI und Google Cloud arbeiten zusammen, damit OpenAI-Modelle und Codex in Googles Model Garden verfügbar werden. Die allgemeine Verfügbarkeit ist laut Ankündigung für die kommenden Wochen geplant.",
    "artikel": [
@@ -3299,6 +3342,84 @@
  ],
  "projekte": [
   {
+   "titel": "Hedra: Ein Open-World-RPG, das ein Schüler von Grund auf selbst programmierte",
+   "kurz": "Project Hedra ist ein low-poly Open-World-RPG mit prozedural erzeugten Welten, das der Entwickler als Schüler begann, um OpenGL zu lernen. Der Code umfasst laut Readme rund 100.000 Zeilen.",
+   "artikel": [
+    "Project Hedra, im Repository kurz Hedra genannt, ist ein 3D-Open-World-RPG im Low-Poly-Stil. Der Entwickler Maxi Levi begann das Projekt nach eigenen Angaben etwa im Alter von 15 Jahren in der Schule, um zu verstehen, wie OpenGL funktioniert. Aus dem kleinen Lernprojekt wurde über die Jahre ein vollständiges 3D-Spiel samt eigener Spiel-Engine.",
+    "## Spielinhalte",
+    "Laut Readme wählt man eine von vier Klassen mit je zwei Spezialisierungen, schaltet Fertigkeiten über einen Skillbaum frei und löst prozedural erzeugte Quests. Die Welten sind unendlich groß, weil sie in Chunks aufgeteilt sind. Außerdem gibt es über 100 Gegenstände mit Seltenheitsstufen, Handel, NPCs und Begleiter.",
+    "## Engine und Technik",
+    "Die Engine nutzt modernes OpenGL, unterstützt Schatten, Screen-Space-Reflexionen und Level-of-Detail-Stufen. Ein Marching-Cubes-Verfahren, eine Isoflächen-Methode, wandelt die voxelbasierte Welt in glatte Oberflächen um. Der Autor schreibt, dass die Welt bei der Darstellung in nur drei Draw-Calls gerendert wird, also drei Zeichenaufrufen an die Grafikkarte.",
+    "Interessant ist auch der Verzicht auf Speicherstände für die Welt: Gespeichert werden nur der Spielerfortschritt und der Welt-Seed. Der Rest entsteht zur Laufzeit neu. Modding wird unterstützt, weil das Spiel als Mod der eigenen Engine aufgebaut ist; der Autor wollte so die Modding-Schnittstelle aktuell halten.",
+    "## Einordnung",
+    "Das Projekt steht auf GitHub unter einer Lizenz und hat laut Seite 156 Sterne. Auf Hacker News erhielt der Beitrag 212 Punkte. Der Autor beschreibt das Projekt als Sammlung von Features, die über die Jahre durch Scope Creep gewachsen sind. Eine Steam-Seite existiert ebenfalls.",
+    "Hinweis: Die Angaben zu Umfang und Funktionen stammen aus der Readme-Beschreibung des Autors, also aus einer Herstellerangabe, und wurden nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: maxilevi/project-hedra (Branch pre-ai)",
+     "url": "https://github.com/maxilevi/project-hedra/tree/pre-ai"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50199389"
+    },
+    {
+     "titel": "Steam: Project Hedra",
+     "url": "https://store.steampowered.com/app/1009960/Project_Hedra/"
+    }
+   ],
+   "demo": "game",
+   "machen": [
+    "Den Quellcode auf GitHub ansehen, um zu lernen, wie ein Spiel mit OpenGL und C# aufgebaut sein kann.",
+    "Die Modding-Schnittstelle nutzen, um eigene Skripte oder Inhalte für das Spiel zu schreiben.",
+    "Das Spiel auf Steam ausprobieren, sofern man Linux oder Windows nutzt."
+   ],
+   "vorschau": {
+    "szene": "buehne",
+    "titel": "Hedra",
+    "badges": [
+     "Open World",
+     "Low-Poly",
+     "RPG"
+    ],
+    "dauer": "0:30"
+   },
+   "tag": "Spiel-Engine",
+   "macher": "Maxi Levi (Einzelentwickler)",
+   "branche": "Games / Spiel-Engine",
+   "jahr": 2026,
+   "tools": [
+    "C#",
+    "OpenGL",
+    "BulletPhysics",
+    "OpenAL",
+    "Python (IronPython-Mods)"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Codeumfang laut Readme (Herstellerangabe)",
+     "wert": "ca. 100.000 Zeilen"
+    },
+    {
+     "label": "GitHub-Sterne",
+     "wert": "156"
+    },
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "212"
+    },
+    {
+     "label": "Klassen (laut Readme)",
+     "wert": "4 mit je 2 Spezialisierungen"
+    }
+   ],
+   "link": "https://github.com/maxilevi/project-hedra/tree/pre-ai",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "hedra-ein-open-world-rpg-das-ein-schuler-von-grund-auf-selbs",
+   "hinzugefuegt": "2026-10-23T11:58:17Z"
+  },
+  {
    "titel": "Officely: Virtuelles KI-Büro in 3D mit vier Agenten-Robotern",
    "kurz": "Das Open-Source-Projekt Officely (GitHub-Repository von Tahirpathan-AiLab, 14 Sterne) zeigt ein dreidimensionales Büro, in dem vier KI-Roboter-Agenten chatten, zusammenarbeiten und Aufgaben erledigen. Der Empfangsmanager Zed nimmt Befehle entgegen und verteilt sie.",
    "artikel": [
@@ -4250,7 +4371,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-23T06:26:36Z",
+  "letzterScan": "2026-10-23T11:58:17Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-10-22T23:11:22Z"
  }
