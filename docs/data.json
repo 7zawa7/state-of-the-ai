@@ -794,6 +794,154 @@
  ],
  "radar": [
   {
+   "titel": "LLMs machen formale Softwareverifikation im großen Maßstab machbar",
+   "kurz": "Anthropic berichtet, dass Claude in Zusammenarbeit mit Theorem Sicherheitseigenschaften von über 100 Open-Source-Bibliotheken auf Assembler-Ebene (RISC-V) formal bewiesen hat. Dabei fand das Modell auch Fehler, die jahrelang unentdeckt geblieben waren.",
+   "artikel": [
+    "Die meisten Softwareprojekte enthalten Fehler, die KI heute leicht finden und ausnutzen kann. Klassische Schutzmaßnahmen reichen daher laut Anthropic nicht mehr aus. Formale Verifikation könnte eine Garantie liefern, dass Code frei von bestimmten Fehlern ist, war bisher aber sehr aufwendig.",
+    "## Was Claude getan hat",
+    "Formale Verifikation bedeutet, Code in ein mathematisches Modell zu übersetzen und zu beweisen, dass er festgelegte Sicherheitsregeln immer einhält. Scheitert ein Beweis, deutet das auf einen möglichen Fehler hin. Laut Anthropic hat Claude für 123 Open-Source-Bibliotheken bewiesen, dass bestimmte Programme unter definierten Annahmen nie mit Speicherfehlern oder fehlschlagenden Assertions abbrechen. Die Annahmen umfassen unter anderem Eingaben unter 64 MB, eine Single-Threaded-Static-Binary auf einer RISC-V-CPU mit Linux.",
+    "## Wie die Spezifikation entsteht",
+    "Eine Spezifikation beschreibt, was „korrekt“ bedeutet. Für viele Programme fehlt sie. Anthropic wandelt deshalb vorhandene Test-Suiten automatisch in eine Spezifikation um, nach der die Testsuite immer bestanden werden muss. Als Einstiegspunkt dienten Fuzz-Tests, bei denen ein Testwerkzeug massenhaft zufällige und veränderte Eingaben erzeugt.",
+    "## Einordnung",
+    "Anthropic betont, dass man damit noch lange nicht alle möglichen Fehler behebt, der Ansatz aber einen Fahrplan dorthin bietet. Die Kosten für das Schreiben von Beweisen sinken laut Anthropic mit besseren Modellen, und wiederverwendbare Beweise könnten die Kosten weiter senken. Anthropic veröffentlicht einen Teil der Beweise sowie eine Claude-Skill, und Theorem bietet an, die Pipeline auf weitere Open-Source-Projekte anzuwenden.",
+    "Herstellerangabe: Die genannten Zahlen und Ergebnisse stammen von Anthropic und wurden nicht unabhängig geprüft. Laut Anthropic hat Claude beim Schreiben der Beweise auch Fehler gefunden, die trotz Billionen von Testläufen unentdeckt blieben."
+   ],
+   "quellen": [
+    {
+     "titel": "LLMs are making formal software verification feasible at a much larger scale (Anthropic)",
+     "url": "https://www.anthropic.com/research/formal-verification"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50202217"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Entwickler können prüfen, ob die veröffentlichten Beweise für eigene Bibliotheken nachvollziehbar sind.",
+    "Wer eigene Open-Source-Projekte pflegt, kann Theorems angebotene Pipeline für die Verifikation anfragen.",
+    "Interessierte können die von Anthropic veröffentlichte Claude-Skill ausprobieren, um mit der Verifikation des eigenen Codes zu beginnen."
+   ],
+   "quelle": "Hacker News",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Open-Source-Bibliotheken mit bewiesenen Eigenschaften",
+     "wert": "123"
+    },
+    {
+     "label": "Maximale Eingabegröße je Beweis",
+     "wert": "64 MB"
+    },
+    {
+     "label": "Beispiel: seL4 Implementierung zu Verifikation",
+     "wert": "2 vs. 20 Personenjahre"
+    }
+   ],
+   "signal": "Herstellerangabe Anthropic: LLMs können Korrektheitsbeweise für reale Software weitgehend autonom erstellen, was formale Verifikation erstmals in größerem Umfang praktikabel machen könnte.",
+   "link": "https://www.anthropic.com/research/formal-verification",
+   "linkLabel": "Zum Anthropic-Beitrag",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Aufwand für formale Verifikation des seL4-Kernels (Personenjahre)",
+    "balken": [
+     {
+      "label": "Implementierung",
+      "wert": 2,
+      "anzeige": "2 Personenjahre"
+     },
+     {
+      "label": "Formale Verifikation",
+      "wert": 20,
+      "anzeige": "20 Personenjahre (Herstellerangabe)"
+     }
+    ]
+   },
+   "id": "llms-machen-formale-softwareverifikation-im-grosen-masstab-m",
+   "hinzugefuegt": "2026-10-23T06:26:36Z"
+  },
+  {
+   "titel": "AI Roadmap 2026: Lernpfad vom Einstieg bis Production",
+   "kurz": "Das GitHub-Repository h9-tec/ai-roadmap-2026 beschreibt einen fünfstufigen Lernpfad für Einsteiger in AI Engineering, mit kostenlosen Ressourcen und einem Mini-Projekt pro Stufe. Es hat 123 Sterne und steht unter CC BY 4.0.",
+   "artikel": [
+    "Das Repository h9-tec/ai-roadmap-2026 führt Einsteiger in fünf Schritten durch die Fähigkeiten, die laut der zugrunde liegenden Marktanalyse 2026 gefragt sind. Die Stufen heißen Foundations, LLM Engineering, Agents, Evaluation und Production (LLMOps). Jede Stufe endet mit einem Mini-Projekt, das man vorzeigen kann.",
+    "## Was der Pfad verspricht",
+    "Laut Repository hat sich AI Engineering 2026 von „Modelle trainieren“ hin zu „verlässliche agentische Systeme bauen“ verschoben, und zwar auf bereits vorhandenen Modellen. Als Fähigkeiten, die in jeder Stellenbeschreibung auftauchen, nennt die Analyse RAG, Agents und Evals. RAG steht für Retrieval-Augmented Generation, also das Anreichern von Modellantworten mit eigenen Dokumenten. Evals sind systematische Tests, die prüfen, ob ein KI-System gute Ergebnisse liefert.",
+    "## Zeitplan",
+    "Für die Stufen rechnet das Repository mit etwa 10 Stunden pro Woche. Insgesamt ergeben sich rund 25 Wochen. Die Stufe Evaluation wird ausdrücklich als Startpunkt empfohlen, falls man nur eine Sache lernen will. Alternativ gibt es einen 12-Wochen-Beispielplan.",
+    "## Einordnung",
+    "Das Projekt hat 123 Sterne und 13 Forks. Die Angaben beziehen sich auf den Stand der Seite. Das Repository ist ein Lernpfad und keine Software; Inhalte stehen unter der Lizenz CC BY 4.0."
+   ],
+   "quellen": [
+    {
+     "titel": "h9-tec/ai-roadmap-2026 auf GitHub",
+     "url": "https://github.com/h9-tec/ai-roadmap-2026"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Man kann die fünf Stufen nacheinander durcharbeiten und nach jeder das passende Mini-Projekt bauen.",
+    "Man kann mit Layer 4 Evaluation beginnen, wenn man nur eine Fähigkeit lernen möchte.",
+    "Man kann den 12-Wochen-Beispielplan nutzen, um den Lernfortschritt zu strukturieren."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Zeitplan nach Stufen (Wochen)",
+    "balken": [
+     {
+      "label": "1. Foundations",
+      "wert": 4,
+      "anzeige": "~4 Wochen"
+     },
+     {
+      "label": "2. LLM Engineering",
+      "wert": 6,
+      "anzeige": "~6 Wochen"
+     },
+     {
+      "label": "3. Agents",
+      "wert": 5,
+      "anzeige": "~5 Wochen"
+     },
+     {
+      "label": "4. Evaluation",
+      "wert": 4,
+      "anzeige": "~4 Wochen"
+     },
+     {
+      "label": "5. Production",
+      "wert": 6,
+      "anzeige": "~6 Wochen"
+     }
+    ]
+   },
+   "quelle": "GitHub",
+   "datum": "<UNKNOWN>",
+   "kennzahlen": [
+    {
+     "label": "Sterne",
+     "wert": "123"
+    },
+    {
+     "label": "Forks",
+     "wert": "13"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "CC BY 4.0"
+    },
+    {
+     "label": "Dauer gesamt",
+     "wert": "ca. 25 Wochen bei ~10 Std./Woche"
+    }
+   ],
+   "signal": "Das Repository zeigt, dass Evaluation und Agenten-Systeme als Schwerpunkte für Einsteiger im AI Engineering gesehen werden. Die Angaben zur Marktlage stammen laut Repository aus einer nicht näher benannten Marktanalyse und LinkedIn Jobs on the Rise 2026; sie sind nicht unabhängig geprüft.",
+   "link": "https://github.com/h9-tec/ai-roadmap-2026",
+   "linkLabel": "Zum Repository",
+   "id": "ai-roadmap-2026-lernpfad-vom-einstieg-bis-production",
+   "hinzugefuegt": "2026-10-23T06:26:36Z"
+  },
+  {
    "titel": "Alle KI-Modelle haben dieselbe „kontroverse“ Meinung über Menschen",
    "kurz": "Ein Test von ModelCompare fragte zwölf KI-Modelle nach ihrer kontroversesten Ansicht über Menschen. Viele lieferten fast identische Antworten: Menschen hängen eher an der Gruppenzugehörigkeit als an der Wahrheit.",
    "artikel": [
@@ -4102,7 +4250,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-23T01:34:03Z",
+  "letzterScan": "2026-10-23T06:26:36Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-10-22T23:11:22Z"
  }
