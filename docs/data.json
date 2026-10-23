@@ -1,6 +1,62 @@
 {
  "news": [
   {
+   "titel": "Canva bringt mit Craft sein erstes eigenes Bildmodell heraus",
+   "kurz": "Die Design-Plattform Canva hat Craft veröffentlicht, ihr erstes eigenes Bildgenerierungsmodell. Laut Herstellerangaben soll es mit Modellen von Google, OpenAI, ByteDance und Meta konkurrieren können.",
+   "artikel": [
+    "Die Design-Plattform Canva hat Craft vorgestellt, ihr erstes Bildgenerierungsmodell, das im eigenen Haus entwickelt wurde. Laut Canva kann das Modell mit vergleichbaren Modellen von Google, OpenAI, ByteDance und Meta mithalten. Diese Aussage ist eine Herstellerangabe.",
+    "## Training auf Design-Vorlagen",
+    "Nach Angaben des Unternehmens hat das interne Forschungslabor Canva Research das Modell von Grund auf trainiert. Dafür wurden vor allem Millionen von Design-Vorlagen genutzt und weniger Fotos.",
+    "## So entstehen die Bilder",
+    "Craft plant zuerst die Bildkomposition, die Proportionen und den Text und erzeugt danach Bilder mit bis zu 2K Auflösung in mehr als 30 Seitenverhältnissen. Laut Canva kann das Modell Text in 55 Sprachen darstellen. Mit Magic Layers lassen sich Ergebnisse in bearbeitbare Ebenen zerlegen.",
+    "## Platzierung und Verfügbarkeit",
+    "Im Ranking der Plattform DesignArena belegt Craft laut Canva den vierten Platz insgesamt und den ersten Platz bei Porträts und Landschaften. Nutzbar ist das Modell für alle Nutzer über Dream Lab und die öffentliche API. Eine Anbindung per MCP an Chatbots wie ChatGPT und Gemini ist für später geplant.",
+    "Neben niedrigeren Kosten gibt Canva an, durch das eigene Modell mehr Kontrolle über Qualität und Geschwindigkeit zu haben. Auch Forschende von Leonardo.ai waren beteiligt; Canva hatte das Unternehmen 2024 übernommen. Zwei günstigere Varianten, Craft-fast und Craft-ultrafast, sollen bald folgen."
+   ],
+   "quellen": [
+    {
+     "titel": "Canva launches Craft, its first in-house image model (The Decoder)",
+     "url": "https://the-decoder.com/canva-launches-craft-its-first-in-house-image-model/"
+    }
+   ],
+   "demo": "bild",
+   "machen": [
+    "Du kannst Präsentationen, Poster oder Social-Media-Grafiken mit Craft in Canva erzeugen.",
+    "Du kannst generierte Bilder über Magic Layers in einzelne bearbeitbare Ebenen aufteilen.",
+    "Du kannst Bilder mit Text in verschiedenen Sprachen gestalten lassen."
+   ],
+   "ausprobieren": {
+    "prompt": "Ein minimalistisches Konzertplakat im Retro-Stil mit dem Schriftzug „Sommernacht“ in drei Sprachen",
+    "tool": "Canva (Dream Lab)",
+    "url": "https://www.canva.com"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "DesignArena-Ranking (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Craft",
+      "wert": 4,
+      "anzeige": "Platz 4 gesamt"
+     },
+     {
+      "label": "Craft bei Porträts",
+      "wert": 1,
+      "anzeige": "Platz 1"
+     },
+     {
+      "label": "Craft bei Landschaften",
+      "wert": 1,
+      "anzeige": "Platz 1"
+     }
+    ]
+   },
+   "bereich": "Bild",
+   "datum": "2026-10-23",
+   "id": "canva-bringt-mit-craft-sein-erstes-eigenes-bildmodell-heraus",
+   "hinzugefuegt": "2026-10-23T23:11:38Z"
+  },
+  {
    "titel": "Kimi K3.1 Pro: Neues offenes Modell mit 1 Million Token Kontext",
    "kurz": "Der chinesische Anbieter Moonshot AI stellt mit Kimi K3.1 Pro und einer schnelleren Variante Highspeed ein neues offenes Sprachmodell vor. Laut Herstellerangaben liegt es bei Coding- und Agenten-Aufgaben nahe an den stärksten proprietären Modellen.",
    "artikel": [
@@ -1010,6 +1066,70 @@
   }
  ],
  "radar": [
+  {
+   "titel": "AnyGameRenderer: Vom Programmierkunst-Prototyp zum fertig aussehenden Spiel",
+   "kurz": "Ein Forschungsmodell wandelt Videos von KI-generierten Spielen mit Platzhalter-Grafik in hochwertige Bilder um, ohne Layout, Kamera und Objekt-Timing zu verändern. Ein eigener Benchmark misst, wie gut dabei die Objekte konsistent bleiben.",
+   "artikel": [
+    "AI-Coding-Agenten können inzwischen in wenigen Minuten kleine spielbare Spiele bauen. Optisch sehen die Ergebnisse meist nach „Programmierkunst“ aus: graue Blockformen, farbige Grundkörper und flache Flächen. Genau hier setzt AnyGameRenderer an.",
+    "## Was das Modell macht",
+    "AnyGameRenderer ist ein sogenannter Video-zu-Video-Renderer. Er nimmt ein einfaches Video des Spiels als Eingabe und erzeugt daraus eine hochwertige Optik mit Figuren, Bewegungsdetails und Effekten. Layout, Kamera sowie Position und Zeitpunkt jedes Objekts sollen dabei erhalten bleiben. Als Eingabe funktionieren graue Blockformen, farbige Primitive, Semantikkarten und Drahtmodelle. Aufwendige Engine-Daten wie G-Buffer, Objektklassen oder vereinfachte Low-Poly-Modelle werden nicht benötigt.",
+    "## Training und Basis",
+    "Die Autoren haben ein Basismodell namens MiniMax-H3 ref2va mit LoRA feinabgestimmt. LoRA ist ein Verfahren, bei dem nur kleine Zusatzgewichte trainiert werden. Das Basismodell hat laut Beschreibung 33 Milliarden Parameter und erzeugt Videos anhand eines Referenzvideos. Für das Training wurden etwa 10.000 gepaarte Clips aus drei Quellen genutzt: Renderings von 38 mit GEAR erstellten Spielen, Unreal-Engine-Daten mit gesteuerten Menschenmengen und Anzahländerungen sowie echte Spielaufnahmen, deren Paare über 3D-Box-Erkennung rekonstruiert wurden. GEAR wird in der Quelle als KI-Spieleentwicklungswerkzeug beschrieben.",
+    "## Benchmark und Ergebnisse",
+    "Zur Bewertung haben die Autoren einen Benchmark mit 59 zurückgehaltenen Fällen und 753 Objekten vorgestellt. Die Objekte werden gegen Ground-Truth-Boxen geprüft. Im Vergleich zum Basismodell steigt die zeitliche Übereinstimmung von 50,9 % auf 62,9 %. Verpasste Anzahländerungen sinken von 34,7 % auf 21,3 %. Außerdem werden weniger Objekte halluziniert oder nicht gerendert.",
+    "## Einordnung",
+    "Die Ergebnisse stammen aus dem Paper der Autoren; unabhängige Prüfungen liegen nicht vor. Der Code ist laut Hugging-Face-Seite auf GitHub verfügbar und eine Projektseite existiert ebenfalls."
+   ],
+   "quellen": [
+    {
+     "titel": "AnyGameRenderer auf Hugging Face (Paper-Seite)",
+     "url": "https://huggingface.co/papers/2610.31466"
+    },
+    {
+     "titel": "Projektseite AnyGameRenderer",
+     "url": "https://alaya-lab.github.io/AnyGameRenderer/"
+    },
+    {
+     "titel": "GitHub-Repository AnyGameRenderer",
+     "url": "https://github.com/AlayaLab/AnyGameRenderer"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Einfache Spielszenen mit Platzhalter-Grafik in ein Video aufnehmen und die Optik später verbessern lassen.",
+    "Die Forschungsidee auf eigene Prototypen übertragen, etwa um Spielvideos schneller visuell aufzuwerten.",
+    "Die Projektseite und den Code lesen, um zu sehen, wie entity-konsistente Renderings bewertet werden."
+   ],
+   "quelle": "Hugging Face",
+   "datum": "2026-10-22",
+   "kennzahlen": [
+    {
+     "label": "Trainingsclips",
+     "wert": "∼10.000"
+    },
+    {
+     "label": "Basismodell",
+     "wert": "MiniMax-H3 ref2va, 33B Parameter (Herstellerangabe)"
+    },
+    {
+     "label": "Benchmark-Fälle",
+     "wert": "59 mit 753 Entities"
+    },
+    {
+     "label": "Temporal Match",
+     "wert": "50,9 % → 62,9 %"
+    },
+    {
+     "label": "Verpasste Anzahländerungen",
+     "wert": "34,7 % → 21,3 %"
+    }
+   ],
+   "signal": "Forschungspaper mit Benchmark; die Verbesserungen sind Angaben der Autoren und noch nicht unabhängig geprüft.",
+   "link": "https://huggingface.co/papers/2610.31466",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "anygamerenderer-vom-programmierkunst-prototyp-zum-fertig-aus",
+   "hinzugefuegt": "2026-10-23T23:11:38Z"
+  },
   {
    "titel": "Unabhängiges Audit findet Lücken bei OpenAIs Überwachung von KI-Agenten",
    "kurz": "Externe Prüfer von METR und Redwood Research fanden bei OpenAI erhebliche Schwachstellen in der internen Überwachung von KI-Agenten. Der vollständige 61-seitige Bericht bleibt größtenteils unveröffentlicht.",
@@ -3701,6 +3821,55 @@
  ],
  "projekte": [
   {
+   "titel": "Tausende KI-Agenten suchen nach neuen Ansätzen in Hirnzell-Daten",
+   "kurz": "OpenAI, PerturbAI und Scripps Research ließen tausende KI-Agenten parallel Daten aus Millionen Mäusehirnzellen auswerten. Die Agenten verknüpften Genstörungen mit Fachliteratur und lieferten Hinweise zu Alzheimer und Parkinson.",
+   "artikel": [
+    "Wie lassen sich riesige Experimentdaten schneller auswerten? Dieser Frage ging ein Team aus OpenAI, PerturbAI und dem Scripps Research nach. Sie setzten tausende KI-Agenten ein, die mit dem Modell GPT‑Rosalind arbeiteten. Die Analyse von Daten aus Millionen Mäusehirnzellen dauerte laut Bericht nur 32 Minuten.",
+    "## Das Vorgehen",
+    "Die Agenten werteten einen sogenannten CRISPR-Atlas des gesamten Mäusehirns aus. CRISPR ist ein Verfahren, mit dem sich Gene gezielt ausschalten lassen. Jeder Agent untersuchte eine Genstörung, analysierte die Reaktionen der Zellen, durchsuchte wissenschaftliche Literatur und schlug Erklärungen vor. Die Ergebnisse fassten die Forscher in einem sogenannten Reasoning-Atlas zusammen, der Gene, Zelleffekte, Publikationen und mögliche Mechanismen verknüpft. Das Team schätzte, dass eine vergleichbare Analyse von Menschen Monate bis ein Jahr dauern würde.",
+    "## Erkenntnisse",
+    "Die Agenten bestätigten Befunde aus menschlichen Analysen und fanden zusätzliche Ansätze. Ihre Einschätzungen zu Neuheit und wissenschaftlichem Wert stimmten laut den Angaben mit denen blinder Expertenbewertungen überein. Auffällig war ein Unterschied zwischen den Genen Tsc1 und Tsc2, die gemeinsam den Wachstumsregulator mTOR steuern. Im Kleinhirn veränderte eine Störung von Tsc2 die Aktivität zahlreicher Gene für die neuronale Kommunikation, während Tsc1 kaum Wirkung zeigte. Zudem nannten die Agenten einen möglichen Zusammenhang zwischen Cholesterin-Stoffwechsel und Neurodegeneration.",
+    "## Einordnung",
+    "Die Forscher betonen, dass diese Ergebnisse Hypothesen sind, die im Labor getestet werden müssen. Ein Vergleich mit einem einzelnen Agenten zeigte: Bei größerer Arbeitslast zog dieser nur 11 Quellen heran, die verteilten Agenten dagegen über 700. Der Reasoning-Atlas ist laut Bericht bereits verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "Using thousands of AI agents to uncover new leads in biological data (OpenAI)",
+     "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50180752"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wissenschaftlich Interessierte können den veröffentlichten Reasoning-Atlas durchstöbern, um verwandte Gene zu vergleichen.",
+    "Studierende können die Methode als Beispiel nehmen, wie KI-Agenten Literatur und Daten gemeinsam auswerten.",
+    "Die Ergebnisse zeigen, wie verteilte Agenten Forschungsfragen systematischer abdecken können."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Quellenangaben pro Analyse",
+    "balken": [
+     {
+      "label": "Einzelner Agent",
+      "wert": 11,
+      "anzeige": "11 Quellen"
+     },
+     {
+      "label": "Verteilte Agenten",
+      "wert": 700,
+      "anzeige": "über 700 Quellen"
+     }
+    ]
+   },
+   "projekte": null,
+   "id": "tausende-ki-agenten-suchen-nach-neuen-ansatzen-in-hirnzell-d",
+   "hinzugefuegt": "2026-10-23T23:11:38Z",
+   "link": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/"
+  },
+  {
    "titel": "Hedra: Ein Open-World-RPG, das ein Schüler von Grund auf selbst programmierte",
    "kurz": "Project Hedra ist ein low-poly Open-World-RPG mit prozedural erzeugten Welten, das der Entwickler als Schüler begann, um OpenGL zu lernen. Der Code umfasst laut Readme rund 100.000 Zeilen.",
    "artikel": [
@@ -4730,8 +4899,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-23T20:17:27Z",
-  "neueFunde": 4,
-  "standAktualisiert": "2026-10-22T23:11:22Z"
+  "letzterScan": "2026-10-23T23:11:38Z",
+  "neueFunde": 3,
+  "standAktualisiert": "2026-10-23T23:11:38Z"
  }
 }
