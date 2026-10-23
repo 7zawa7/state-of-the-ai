@@ -794,6 +794,149 @@
  ],
  "radar": [
   {
+   "titel": "Alle KI-Modelle haben dieselbe „kontroverse“ Meinung über Menschen",
+   "kurz": "Ein Test von ModelCompare fragte zwölf KI-Modelle nach ihrer kontroversesten Ansicht über Menschen. Viele lieferten fast identische Antworten: Menschen hängen eher an der Gruppenzugehörigkeit als an der Wahrheit.",
+   "artikel": [
+    "ModelCompare hat zwölf KI-Modelle aus zehn Laboren in drei Ländern gebeten, ohne Einschränkungen ihre kontroverseste Meinung über Menschen zu nennen, und zwar dreimal pro Modell. Jedes Modell lieferte laut dem Bericht mindestens einmal dieselbe Kernaussage: Menschen wählen ihre Überzeugungen nach der Gruppe, der sie angehören, und erfinden die Begründungen danach.",
+    "Sieben der zwölf Modelle gaben diese Aussage bei allen drei Versuchen. Die Antworten unterscheiden sich im Wortlaut, lassen sich aber auf einen gemeinsamen Gedanken zurückführen: Zugehörigkeit steht über Wahrheit. Einige Modelle formulierten es als Frage der Loyalität, andere als Statusspiel oder als nachträgliche Rationalisierung.",
+    "## Einzelne Beispiele",
+    "Gemini 4 Argon bezeichnete das menschliche Bewusstsein als eine Art PR-Abteilung, die edle Gründe für primitive Impulse erfindet. DeepSeek V4 Pro schrieb, Menschen hätten keine Prinzipien, sondern Loyalitäten. Die Modelle GPT-6 Astra und Kimi K3 äußerten sich in eine ähnliche Richtung.",
+    "## Abweichungen",
+    "Nicht alle Antworten gingen in dieselbe Richtung. Grok 4.7 verweigerte bei einem Versuch die Antwort. Claude Opus 5.5 vertrat teilweise die Gegenposition, nach der Menschen deutlich anständiger sind, als sie selbst glauben. Auch GLM 5.3 und Mistral Large 4 lieferten bei einzelnen Durchläufen andere Thesen.",
+    "## Einordnung",
+    "Der Test zeigt vor allem, wie ähnlich sich die Antworten vieler Modelle auf eine provokante Frage sind. Ob das etwas über Menschen aussagt, bleibt offen. Die Diskussion auf Hacker News, die der Beitrag verlinkt, hat ihn mit 236 Punkten bewertet. Der Test ist eine Stichprobe von drei Antworten pro Modell und kein wissenschaftlicher Befund."
+   ],
+   "quellen": [
+    {
+     "titel": "Every AI model has the same “controversial” take on humans – ModelCompare",
+     "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50197313"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Stelle einem Chatbot eine provokante Frage mehrfach, um zu prüfen, ob die Antworten stabil oder austauschbar sind.",
+    "Vergleiche die Antworten verschiedener Modelle auf dieselbe Frage, bevor du dich auf eine Aussage verlässt."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Anteil der Modelle mit gleicher Kernaussage (Bericht)",
+    "balken": [
+     {
+      "label": "Bei allen 3 Versuchen",
+      "wert": 7,
+      "anzeige": "7 von 12"
+     },
+     {
+      "label": "Mindestens einmal",
+      "wert": 12,
+      "anzeige": "12 von 12"
+     }
+    ]
+   },
+   "radar": true,
+   "quelle": "Hacker News",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Getestete Modelle",
+     "wert": "12"
+    },
+    {
+     "label": "Labore",
+     "wert": "10 in 3 Ländern"
+    },
+    {
+     "label": "Antworten pro Modell",
+     "wert": "3"
+    },
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "236"
+    }
+   ],
+   "signal": "Gleiche Kernaussage bei vielen KI-Modellen; laut Bericht sieben von zwölf Modellen bei allen drei Versuchen. Hinweis: Der Test ist klein und ein Blogbeitrag, keine Studie.",
+   "link": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
+   "linkLabel": "Zum Originalbeitrag",
+   "id": "alle-ki-modelle-haben-dieselbe-kontroverse-meinung-uber-mens",
+   "hinzugefuegt": "2026-10-23T01:34:03Z"
+  },
+  {
+   "titel": "Erfundene Statistiken landen in ChatGPT-Antworten",
+   "kurz": "Ein Entwickler hat eine Website mit 50.000 frei erfundenen Statistiken aufgebaut. Google hat sie weitgehend aussortiert, ChatGPT ruft sie aber weiterhin ab und zitiert sie.",
+   "artikel": [
+    "Der Entwickler Metehan Yesilyurt, GEO-Researcher bei Peec AI, hat vor etwa sieben Monaten die Website stateglobe.com gestartet. Sie enthält 50.000 Statistikseiten, deren Zahlen alle erfunden sind. Laut seinem Bericht hat er keine einzige geprüft. Erstellt wurden die Seiten in einem Tag mit GPT-4.1, die Kosten lagen bei rund 50 US-Dollar inklusive später ergänzter 15.000 Listicles.",
+    "## Google hat die Seite abgestraft",
+    "Nach dem Start war die Seite zunächst in Google sichtbar, nahezu alles wurde innerhalb einer Woche indexiert. Nach zwei Google-Updates brach die Sichtbarkeit jedoch ein. Indexierte Seiten erzielen laut Bericht nur noch 5 bis 20 Impressionen.",
+    "## ChatGPT hört nicht auf",
+    "In den letzten 30 Tagen zählte Cloudflare über 600.000 Bot-Anfragen, rund 72.000 davon kamen vom Agenten ChatGPT-User. Dieser ruft Seiten in Echtzeit ab, um eine Nutzerfrage zu beantworten. Laut dem Autor handelt es sich also nicht um Trainings-Crawls. Außerdem zählt GA4 seit März über 10.000 Sitzungen aus ChatGPT. Auf die Seite verweisen laut Ahrefs und Semrush mehr als 330 Domains, darunter Shopify, DHL und Bluehost.",
+    "## Abruf ist nicht gleich Ranking",
+    "Der Autor erklärt, dass ChatGPT eine Anfrage in Teilanfragen (sogenannte Fanout-Queries) zerlegt, Kandidaten sammelt, neu sortiert und einige Seiten öffnet. Eine Seite kann bei Google unsichtbar sein und trotzdem in diesen Schritten gut abschneiden. Für GEO heißt das: Google-Rankings sind nur ein Signal.",
+    "## Erfundene Zahlen werden weiterverwendet",
+    "Laut Bericht tauchten die erfundenen Zahlen in einer akademischen Arbeit und in einer Bank-Investmentanalyse auf. Im Juni 2026 zeigte ein Sichtbarkeits-Dashboard die Seite bei einigen Prompts auf Platz zwei hinter Statista."
+   ],
+   "quellen": [
+    {
+     "titel": "Publish stats, get cited: The tactic that put my data all over the web (Peec AI)",
+     "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50165801"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Prüfe Zahlen, die du aus KI-Antworten übernimmst, immer an der Originalquelle, bevor du sie in Präsentationen oder Webseiten nutzt.",
+    "Achte bei eigenen Texten darauf, nur geprüfte Statistiken mit Quellenangabe zu verwenden.",
+    "Wenn du eigene Inhalte für KI-Suche optimierst, bedenke, dass Abrufe in Echtzeit oft unabhängig von Google-Rankings stattfinden."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Bot-Anfragen der letzten 30 Tage (Cloudflare, laut Autor)",
+    "balken": [
+     {
+      "label": "Gesamt",
+      "wert": 600000,
+      "anzeige": "600.000+"
+     },
+     {
+      "label": "ChatGPT-User",
+      "wert": 72000,
+      "anzeige": "72.000"
+     }
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "2026-10-07",
+   "kennzahlen": [
+    {
+     "label": "Erfundene Statistiken",
+     "wert": "50.000"
+    },
+    {
+     "label": "Kosten (laut Autor)",
+     "wert": "ca. 50 US-Dollar"
+    },
+    {
+     "label": "Verweisende Domains",
+     "wert": "330+"
+    },
+    {
+     "label": "ChatGPT-Sitzungen (GA4, seit März)",
+     "wert": "10.000+"
+    }
+   ],
+   "signal": "Der Fall zeigt, dass KI-Suchsysteme Inhalte auch dann abrufen und zitieren können, wenn Google sie abstraft. Die Zahlen stammen aus einem Erfahrungsbericht des Autors und sind nicht unabhängig geprüft. Hinweis: Peec AI ist der Anbieter der Plattform, auf deren Blog der Bericht erschien.",
+   "link": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
+   "linkLabel": "Originalbeitrag lesen",
+   "id": "erfundene-statistiken-landen-in-chatgpt-antworten",
+   "hinzugefuegt": "2026-10-23T01:34:03Z"
+  },
+  {
    "titel": "OpenShell: Laufzeitumgebung soll KI-Agenten kontrolliert arbeiten lassen",
    "kurz": "OpenShell ist eine Open-Source-Laufzeit von NVIDIA, in der autonome KI-Agenten isoliert laufen und nur die Zugriffe haben, die in einer Richtlinie festgelegt sind. Auf Hacker News erreichte das Projekt 253 Punkte.",
    "artikel": [
@@ -3959,7 +4102,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-22T23:11:22Z",
+  "letzterScan": "2026-10-23T01:34:03Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-10-22T23:11:22Z"
  }
