@@ -1188,6 +1188,155 @@
  ],
  "radar": [
   {
+   "titel": "Node2Shell wird zu HTTP2Shell: Brotli-Lücke CVE-2026-111497 betrifft viele HTTP-Bibliotheken",
+   "kurz": "Eine Schwachstelle im Brotli-Dekomprimierer (CVE-2026-111497) kann laut Aikido Speicherschäden und im Extremfall Codeausführung ermöglichen und betrifft nun auch zahlreiche HTTP-Bibliotheken und Anwendungen. Patches sind für viele Projekte verfügbar, für einige folgen sie noch.",
+   "artikel": [
+    "Brotli ist ein von Google entwickeltes Kompressionsverfahren, das Daten verkleinert und vor allem bei HTTP-Kompression für Webinhalte wie HTML, CSS und JavaScript eingesetzt wird. Die Sicherheitslücke CVE-2026-111497 steckt im Brotli-Dekomprimierer und ist laut Aikido ein Out-of-Bounds-Write, also ein Schreibzugriff außerhalb des vorgesehenen Speicherbereichs.",
+    "Ein entfernter, nicht authentifizierter Angreifer kann einen präparierten Brotli-Datenstrom senden. Dadurch lassen sich Speicher beschädigen, sensible Daten auslesen oder der Prozess zum Absturz bringen. Im ungünstigen Fall kann der Angreifer eigenen Code ausführen. Die CVSS-v4.0-Bewertung liegt bei 9,2 (kritisch).",
+    "## Vom Node.js-Problem zur breiten Betroffenheit",
+    "Am 21. Oktober hat Node.js die Lücke als „node2shell“ veröffentlicht, am folgenden Tag zog Python nach. Laut Aikido zeigte sich am 23. Oktober, dass auch andere große Sprachen und Dienste betroffen sind. Betroffen sind laut Quelle Versionen 1.0.3 bis 1.2.0 des Brotli-Decoders sowie brotlicffi 1.2.0.x. Das Problem wurde laut Aikido bereits im Februar von OpenAI gefunden und gemeldet; der Grundfehler war im Quellcode behoben, wurde aber damals nicht als Sicherheitsproblem erkannt.",
+    "## Betroffen sind auch HTTP-Clients",
+    "Python-Clients wie requests, httpx und aiohttp laden Brotli-Pakete automatisch, sobald sie installiert sind. Laut Aikido erkennen Advisory-Datenbanken die CVE zum Stichtag 23. Oktober noch nicht den PyPI-Paketen zu, weshalb pip-audit, Dependabot und Safety verwundbare Versionen noch nicht melden.",
+    "## Was zu tun ist",
+    "Laut Aikido sollten Brotli auf 1.2.1 bzw. brotlicffi auf 1.2.1.0 aktualisiert und Container-Images neu gebaut werden. Für Node.js werden 22.23.4, 24.22.1 oder 26.12.1 genannt, für Envoy und Istio jeweils bestimmte Patch-Versionen. Ist noch kein Patch verfügbar, empfiehlt Aikido, die Brotli-Dekomprimierung abzuschalten. Apache und Nginx dekomprimieren Brotli laut Quelle standardmäßig nicht."
+   ],
+   "quellen": [
+    {
+     "titel": "Node2Shell evolves to HTTP2Shell (Aikido)",
+     "url": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497"
+    },
+    {
+     "titel": "HN-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50219177"
+    }
+   ],
+   "demo": "security",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "brotli-Update",
+    "zeilen": [
+     "> pip show brotli",
+     "⚠ Version 1.2.0 ist verwundbar",
+     "- brotli 1.2.0",
+     "+ brotli 1.2.1",
+     "✓ Container neu gebaut",
+     "● Status: gepatcht"
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "2026-10-23",
+   "kennzahlen": [
+    {
+     "label": "CVE",
+     "wert": "CVE-2026-111497"
+    },
+    {
+     "label": "CVSS v4.0",
+     "wert": "9,2 (Critical)"
+    },
+    {
+     "label": "Betroffene Brotli-Versionen",
+     "wert": "1.0.3 bis 1.2.0"
+    },
+    {
+     "label": "Gepatchte Brotli-Version",
+     "wert": "1.2.1"
+    },
+    {
+     "label": "Gepatchte brotlicffi-Version",
+     "wert": "1.2.1.0"
+    }
+   ],
+   "signal": "Herstellerangaben (Aikido): Die Lücke betrifft nicht nur Node.js, sondern viele Python-HTTP-Clients und weitere Software, Patches sind noch nicht überall verfügbar. Community-Diskussion auf Hacker News mit 184 Punkten.",
+   "link": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497",
+   "linkLabel": "Aikido-Blog lesen",
+   "machen": [
+    "Prüfe, ob in deinen Python-Projekten brotli oder brotlicffi installiert ist, etwa über pip show brotli.",
+    "Aktualisiere betroffene Pakete auf brotli 1.2.1 bzw. brotlicffi 1.2.1.0 und baue Container-Images neu.",
+    "Wenn noch kein Patch verfügbar ist, kannst du laut Aikido die Brotli-Dekomprimierung vorübergehend abschalten."
+   ],
+   "id": "node2shell-wird-zu-http2shell-brotli-lucke-cve-2026-111497-b",
+   "hinzugefuegt": "2026-10-24T17:38:22Z"
+  },
+  {
+   "titel": "DeepSeek-V4.1-Flash als GGUF-Quantisierung: 763B-Modell auf einer 12-GB-GPU",
+   "kurz": "DASLab (IST Austria) hat das 763-Milliarden-Parameter-Modell DeepSeek-V4.1-Flash-1017 in drei ungleich quantisierten GGUF-Varianten veröffentlicht. Laut Herstellerangabe läuft die kleinste bis größte Variante mit der Runtime Strata auf einer einzelnen GPU mit 12 GB VRAM.",
+   "artikel": [
+    "Die Forschungsgruppe Deep Algorithms and Systems Lab (DASLab) am Institute of Science and Technology Austria stellt auf Hugging Face GGUF-Quantisierungen des Modells DeepSeek-V4.1-Flash-1017 bereit. Es handelt sich um ein Mixture-of-Experts-Modell (MoE) mit 763,2 Milliarden Parametern, 384 Experten pro Schicht, von denen pro Token 6 aktiv sind, und einem Kontextfenster von 1 Million Token.",
+    "## Ungleiche Quantisierung",
+    "Quantisierung bedeutet, Gewichte mit weniger Bit zu speichern, um Speicherbedarf zu senken. Anders als bei einheitlicher Quantisierung bekommt hier jeder Tensor einen eigenen Typ. Das Verfahren GSQ (Gumbel-Softmax Quantization) quantisiert skalar nach dem Training, RCO (Riemannian Constrained Optimization) verteilt die Typen unter einem Größenbudget.",
+    "## Drei Größen",
+    "Die Varianten IQ1_M (1,75 Bit pro Gewicht), IQ2_XXS (2,00 Bit) und IQ2_XS (2,25 Bit) wiegen als Backbone zwischen rund 121 und 155 GB. Der gemeinsame Engram-Lookup-Teil mit 110,6 GB wird nur einmal benötigt. Laut Modellkarte gilt IQ2_XXS als empfohlene Variante.",
+    "## Ergebnisse laut Modellkarte",
+    "Die Angaben stammen von den Autoren und sind Herstellerangaben: IQ2_XXS erreicht im eigenen Test bei AIME25, GPQA-Diamond und LiveCodeBench v6 den Durchschnitt des Basismodells von 93,54. Die kleinere IQ1_M-Variante verliert laut Karte 1,2 Punkte und liegt bei 98,7 Prozent. Die Werte wurden mit Reasoning-Effort 50 gemessen.",
+    "## Laufzeit",
+    "Laut Modellkarte unterstützt llama.cpp DeepSeek-V4.1 zum Stand 23. Oktober 2026 noch nicht. Ausgeführt werden die Dateien daher derzeit mit Strata, das laut Angabe einen OpenAI-kompatiblen Endpunkt auf localhost bietet."
+   ],
+   "quellen": [
+    {
+     "titel": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
+     "url": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Lokal ausprobieren, sobald llama.cpp oder Strata die Dateien unterstützt, sofern genug Systemspeicher und eine 12-GB-GPU vorhanden sind.",
+    "Die Modellkarte als Beispiel nutzen, um zu verstehen, wie ungleiche Quantisierung pro Tensor funktioniert.",
+    "Die Benchmarkwerte mit eigenen Aufgaben vergleichen, da die Zahlen Herstellerangaben sind."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Gewichte nach Bit-Breite (Backbone, Herstellerangabe)",
+    "balken": [
+     {
+      "label": "IQ1_M",
+      "wert": 120.72,
+      "anzeige": "120,72 GB"
+     },
+     {
+      "label": "IQ2_XXS",
+      "wert": 138.24,
+      "anzeige": "138,24 GB"
+     },
+     {
+      "label": "IQ2_XS",
+      "wert": 155.23,
+      "anzeige": "155,23 GB"
+     }
+    ]
+   },
+   "bereich": "Text",
+   "datum": "2026-10-23",
+   "quelle": "Hugging Face",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "763,2 Mrd. (MoE, 384 Experten, 6 aktiv)"
+    },
+    {
+     "label": "Kontextfenster",
+     "wert": "1 Mio. Token"
+    },
+    {
+     "label": "Varianten",
+     "wert": "IQ1_M 1,75 bpw · IQ2_XXS 2,00 bpw · IQ2_XS 2,25 bpw"
+    },
+    {
+     "label": "Speicherbedarf GPU",
+     "wert": "12 GB VRAM (mit Strata, Herstellerangabe)"
+    },
+    {
+     "label": "Downloads",
+     "wert": "32.479"
+    }
+   ],
+   "signal": "Hohe Aufmerksamkeit auf Hugging Face (174 Likes, Trending). Ungleiche Quantisierung mit Gradientensuche könnte große MoE-Modelle auf Consumer-Hardware bringen, ist aber laut Karte noch nicht in llama.cpp verfügbar.",
+   "link": "https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
+   "linkLabel": "Modellkarte auf Hugging Face",
+   "id": "deepseek-v4-1-flash-als-gguf-quantisierung-763b-modell-auf-e",
+   "hinzugefuegt": "2026-10-24T17:38:22Z"
+  },
+  {
    "titel": "Anthropic sandbox-runtime: OS-Sandbox für KI-Agenten ohne Container",
    "kurz": "Anthropics Open-Source-Tool sandbox-runtime (srt) beschränkt Dateizugriffe und Netzwerkverbindungen beliebiger Prozesse direkt über Funktionen des Betriebssystems. Es ist die Sandbox hinter Claude Code und lässt sich auch für eigene Agenten nutzen.",
    "artikel": [
@@ -4442,6 +4591,63 @@
  ],
  "projekte": [
   {
+   "titel": "Live-Büro für Claude-Code- und Codex-Agenten auf dem eigenen Rechner",
+   "kurz": "Das Open-Source-Projekt whatsmyagentdoing zeigt per Befehl /myoffice in einem Browser-Büro, was alle lokalen Claude-Code-, Codex- und Gemini-CLI-Agenten gerade tun. Es liest dafür nur lokale Logdateien.",
+   "artikel": [
+    "whatsmyagentdoing ist eine Skill-Erweiterung für Claude Code und Codex. Wer /myoffice eintippt, sieht im Browser ein kleines isometrisches Büro, in dem jeder laufende Agent an einem Schreibtisch sitzt. Das Projekt steht auf GitHub mit 137 Sternen und trägt den Namen Charonyuu/whatsmyagentdoing.",
+    "## Status der Agenten",
+    "Die Darstellung zeigt den Zustand jeder Sitzung: Ein Gedankenbläschen bedeutet Nachdenken, ein laufender Werkzeugaufruf wird mit Tippen am Monitor dargestellt. Steht ein Agent auf und winkt, wartet er auf eine Rückmeldung oder Freigabe. Kürzlich beendete Agenten bleiben kurz im Büro und bewegen sich frei, etwa an der Kaffeemaschine oder am Kicker.",
+    "## Zwei Ansichten und Listenmodus",
+    "Die Medium-Variante ist eine handgezeichnete 2D-Ansicht ohne Abhängigkeiten. Die High-Variante (3D) nutzt laut Projekt Kenney-Modelle unter CC0-Lizenz und lädt erst bei Auswahl nach. Wer es schlicht mag, wechselt in die Listenansicht mit Gruppen wie „Braucht dich“, „Arbeitet“ und „Fertig“.",
+    "## Installation und Datenschutz",
+    "Die Installation erfolgt laut Projekt durch Klonen des Repositorys in den Skill-Ordner und benötigt Node.js 18 oder neuer. Das Projekt beschreibt, dass es Logdateien nur liest, keine API-Schlüssel braucht und den Server ausschließlich an 127.0.0.1 bindet. Laut Angabe der Entwickler verlässt nichts den eigenen Rechner.",
+    "## Einschränkungen",
+    "Die Entwickler weisen darauf hin, dass Logs pro fertigem Block und nicht pro Token geschrieben werden. Claude Code protokolliert Berechtigungsabfragen laut Projekt nicht, weshalb solche Aufgaben als „Läuft“ erscheinen, bis man antwortet. Google Antigravity wird noch nicht unterstützt."
+   ],
+   "quellen": [
+    {
+     "titel": "whatsmyagentdoing – GitHub-Repository",
+     "url": "https://github.com/Charonyuu/whatsmyagentdoing"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Mit /myoffice alle laufenden Claude-Code- oder Codex-Sitzungs­läufe auf dem eigenen Rechner im Blick behalten.",
+    "Im Listenmodus schnell sehen, welche Agenten auf eine Freigabe warten.",
+    "Mit --private die Anzeige so starten, dass Prompts und Antworten bei einer Bildschirmfreigabe verborgen bleiben."
+   ],
+   "ausprobieren": {
+    "prompt": "Install the myoffice skill from https://github.com/Charonyuu/whatsmyagentdoing : clone it with git clone --depth 1 into ~/.claude/skills/myoffice, check that node --version is 18 or newer, then tell me to start a new session and type /myoffice.",
+    "tool": "Claude Code",
+    "url": "https://github.com/Charonyuu/whatsmyagentdoing"
+   },
+   "vorschau": {
+    "szene": "moe",
+    "titel": "3 von 5 aktiv",
+    "gesamt": 5,
+    "aktiv": 3
+   },
+   "macher": "Charonyuu",
+   "branche": "Entwicklerwerkzeuge",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "Claude Code",
+    "Codex",
+    "Gemini CLI",
+    "Node.js"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "137"
+    }
+   ],
+   "link": "https://github.com/Charonyuu/whatsmyagentdoing",
+   "linkLabel": "Zum Repository",
+   "id": "live-buro-fur-claude-code-und-codex-agenten-auf-dem-eigenen-",
+   "hinzugefuegt": "2026-10-24T17:38:22Z"
+  },
+  {
    "titel": "Manga Generator: Open-Source-Werkzeug von Originaltext zur fertigen Manga-PDF",
    "kurz": "Das GitHub-Projekt „stockedge/manga-generator“ soll aus einer Romanvorlage mit Codex eine Manga-Produktion bis zum PDF unterstützen. Es hat laut Seite 69 Sterne und ist unter der MIT-Lizenz veröffentlicht.",
    "artikel": [
@@ -5661,7 +5867,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-24T14:46:29Z",
+  "letzterScan": "2026-10-24T17:38:22Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-10-23T23:11:38Z"
  }
