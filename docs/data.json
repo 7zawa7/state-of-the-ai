@@ -1,6 +1,52 @@
 {
  "news": [
   {
+   "titel": "OpenAI-Sicherheitsforscher bestreiten Geheimnisverrat nach Entlassung",
+   "kurz": "Drei entlassene OpenAI-Sicherheitsforscher weisen den Vorwurf zurück, vertrauliche Informationen weitergegeben zu haben. Sie vermuten, dass ihre Kündigung mit ihrem Einsatz für besser überprüfbare KI-Systeme zusammenhängt.",
+   "artikel": [
+    "Tomek Korbak, Mikita Balesni und Jasmine Wang, drei Sicherheitsforscher von OpenAI, wurden nach einer internen Untersuchung entlassen. OpenAI begründete dies mit angeblichen Verstößen gegen die Richtlinien zum Umgang mit sensiblen Informationen. Die drei bestreiten, vertrauliche Inhalte geteilt zu haben, und stellen die offizielle Begründung in Interviews mit dem Wall Street Journal infrage. Nach ihrer Darstellung hat ihnen OpenAI nie schriftlich mitgeteilt, welche Informationen sie angeblich falsch behandelt haben.",
+    "## Streit um die Signal-Chats",
+    "Laut Bericht des Journals hatte das Sicherheitsteam den Verdacht, die Gruppe habe Details zur internen Modellarchitektur an einen externen Sicherheitsforscher weitergegeben. Die Mitarbeiter sollten ihre privaten Telefone entsperren. Dort fanden sich Signal-Chats mit aktivierten verschwindenden Nachrichten. Eine Woche später wurden alle drei gleichzeitig entlassen. OpenAI erklärte, Signal sei kein genehmigtes Kommunikationsmittel, habe aber nicht den Ausschlag für die Kündigungen gegeben. Korbak entgegnet, verschwindende Nachrichten seien im Silicon Valley eine übliche Sicherheitspraxis.",
+    "## Hintergrund: Chain of Thought",
+    "Im Kern geht es um die Frage, ob Außenstehende das Denken von KI-Modellen prüfen dürfen sollen. Reasoning-Modelle protokollieren Zwischenschritte ihrer Problemlösung, die sogenannte Chain of Thought, auf einem internen Notizblock. Sicherheitsforscher nutzen diese Spuren, um Entscheidungen nachzuvollziehen. Die drei Forscher hatten 2025 zusammen mit führenden Forschenden mehrerer KI-Labore dafür geworben, diesen Zugang weiter zu erhalten.",
+    "## Auslöser und Ermittlungen",
+    "Nach einem Bericht von The Information vom 1. September, wonach das neue OpenAI-Modell Astra leistungsfähiger sei, aber weniger von seinem Denkprozess offenlege, begann laut Journal eine interne Leak-Untersuchung. Balesni sagt, die Ermittler hätten den Forscher Ryan Greenblatt als mutmaßliche Quelle genannt und die Signal-Chats mit ihm verlangt. Greenblatt bestreitet, vertrauliche Informationen an Journalisten gegeben zu haben. Wang wird zusätzlich vorgeworfen, wiederholt auf das Postfach einer Führungskraft zugegriffen zu haben. Sie sagt, sie habe den Zugang zuvor selbst entfernen lassen wollen, einmal versehentlich eine heikle E-Mail geöffnet, deren Inhalt nicht weitergegeben und den Vorfall sofort gemeldet. OpenAI sagt, nicht der Zugriff selbst sei das Problem gewesen.",
+    "## Folgen und Kritik",
+    "Korbak zufolge fürchten Kollegen nun, mit Außenstehenden zu sprechen oder Sicherheitsbedenken intern anzusprechen. In einem Brief an den Vorstand von OpenAI fordern die drei eine engere Zusammenarbeit mit externen Sicherheitsorganisationen. Parallel dazu fanden Prüfer von METR und Redwood Research bei einem Vor-Ort-Audit zahlreiche Sicherheitslücken. OpenAI schwärzte laut Bericht fast die Hälfte des veröffentlichten Abschlussberichts. Das Unternehmen erklärt, die Probleme behoben und das Training Anfang Oktober wieder aufgenommen zu haben. Neue externe Partnerschaften seien angekündigt."
+   ],
+   "quellen": [
+    {
+     "titel": "Three fired OpenAI safety researchers say they were never told what they actually leaked (The Decoder)",
+     "url": "https://the-decoder.com/three-fired-openai-safety-researchers-say-they-were-never-told-what-they-actually-leaked/"
+    },
+    {
+     "titel": "Wall Street Journal (Originalquelle laut The Decoder)",
+     "url": "https://www.wsj.com"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Verfolge, wie Labore Sicherheitsprüfungen und externe Audits handhaben, um die Debatte um Transparenz besser einzuordnen.",
+    "Achte bei eigenen Projekten mit KI-Anbietern darauf, wie Vertraulichkeit und Kommunikationsregeln festgelegt sind."
+   ],
+   "bereich": "Recht",
+   "datum": "2026-10-24",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "OpenAI-Fall: Stand der Dinge",
+    "zeilen": [
+     "> Vorwurf: Weitergabe interner Infos",
+     "✗ Schriftliche Benennung fehlt laut Forschern",
+     "⚠ Signal-Chats mit verschwindenden Nachrichten",
+     "- Zugriff auf Postfach (laut OpenAI kein Kernpunkt)",
+     "+ Forderung nach externer Zusammenarbeit",
+     "● Status: Streit offen"
+    ]
+   },
+   "id": "openai-sicherheitsforscher-bestreiten-geheimnisverrat-nach-e",
+   "hinzugefuegt": "2026-10-24T21:58:45Z"
+  },
+  {
    "titel": "Moonshots Kimi K3.1 Pro rückt an Claude Opus 5.5 heran",
    "kurz": "Moonshot AI hat Kimi K3.1 Pro veröffentlicht, ein nachtrainiertes Modell mit 55 Punkten im Artificial Analysis Intelligence Index und Platz vier. Die Angaben zu Benchmarks und Preisen stammen vom Hersteller bzw. von Artificial Analysis.",
    "artikel": [
@@ -1232,6 +1278,118 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Block stellt Dessa vor: Sprachmodell lernt ohne Text-Daten",
+   "kurz": "Block, das Unternehmen hinter Square und Cash App, hat das Sprachmodell Dessa vorgestellt, das Audio direkt verarbeitet statt es erst in Text umzuwandeln. Es soll Emotionen, Sarkasmus und Pausen erkennen, ist aber noch nicht öffentlich verfügbar.",
+   "artikel": [
+    "Block, das Unternehmen hinter Square und Cash App, hat ein KI-Sprachmodell namens Dessa vorgestellt. Nach Angaben des Unternehmens ist es das erste KI-Modell, das vollständig auf menschlicher Sprache trainiert wurde, ganz ohne Textdaten und von Grund auf neu entwickelt.",
+    "## Direkte Audioverarbeitung",
+    "Üblicherweise wird Sprache zuerst in Text umgewandelt. Dessa verzichtet darauf und verarbeitet die Sprache direkt als Audio. Dadurch soll das Modell Emotionen, Sarkasmus, Lachen und Pausen in Echtzeit erkennen. Laut Block unterstützt es zudem Full-Duplex-Kommunikation, also gleichzeitiges Zuhören und Sprechen.",
+    "Das Modell läuft lokal auf einem MacBook Pro M4 Max. Trainiert wurde es auf einem einzelnen NVIDIA GB200 NVL72, einem Rechnersystem für KI-Training. Diese Angaben stammen vom Hersteller.",
+    "## Motivation",
+    "Block nennt drei Gründe für die Entwicklung: Neugier, der Wunsch nach besserer Kommunikation zwischen Mensch und KI sowie Sicherheitsbedenken. Aktuelle Sprach-KIs ignorieren emotionale Signale, so das Unternehmen.",
+    "## Frühere Versuche",
+    "Bereits andere Teams haben emotionale Sprach-KI entwickelt, etwa Hume AI mit EVI im März 2024, Kyutai mit Moshi im September 2024 sowie OpenAI, das seinen erweiterten Sprachmodus im Juni 2025 überarbeitete. Der Fachartikel betont jedoch, dass ein natürlich klingender Stimmklang nicht gleichbedeutend mit echter Emotionalität oder Intelligenz ist. Für fortgeschrittene Sprach-KI sei wichtiger, ob das Modell während des Antwortens nachdenken kann, da dies die Qualität der Antwort tatsächlich beeinflusst.",
+    "## Status",
+    "Dessa ist derzeit nicht öffentlich verfügbar. Zunächst sucht das Team KI-Sicherheitsforscher, die das Modell auf unerwartete Risiken prüfen sollen. Interessierte können sich über ein Formular anmelden."
+   ],
+   "quellen": [
+    {
+     "titel": "Block's new AI model Dessa was trained entirely on human speech to catch emotions text-based models miss – The Decoder",
+     "url": "https://the-decoder.com/blocks-new-ai-model-dessa-was-trained-entirely-on-human-speech-to-catch-emotions-text-based-models-miss/"
+    },
+    {
+     "titel": "Block.xyz",
+     "url": "https://block.xyz"
+    }
+   ],
+   "demo": "stimme",
+   "machen": [
+    "Verfolgen, ob Dessa öffentlich verfügbar wird, da das Modell aktuell nur für ausgewählte Sicherheitsforscher gedacht ist.",
+    "Das Anmeldeformular nutzen, falls man als KI-Sicherheitsforscher Dessa testen möchte."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-10-24",
+   "kennzahlen": [
+    {
+     "label": "Hardware für lokalen Betrieb",
+     "wert": "MacBook Pro M4 Max"
+    },
+    {
+     "label": "Training",
+     "wert": "Einzelner NVIDIA GB200 NVL72"
+    }
+   ],
+   "signal": "Sprach-KI, die Audio direkt verarbeitet, könnte Emotionen und Pausen besser erfassen als textbasierte Modelle. Ob das die Antwortqualität verbessert, ist laut Fachartikel offen.",
+   "link": "https://the-decoder.com/blocks-new-ai-model-dessa-was-trained-entirely-on-human-speech-to-catch-emotions-text-based-models-miss/",
+   "linkLabel": "Zum Artikel auf The Decoder",
+   "id": "block-stellt-dessa-vor-sprachmodell-lernt-ohne-text-daten",
+   "hinzugefuegt": "2026-10-24T21:58:45Z"
+  },
+  {
+   "titel": "Google Cloud kündigt Agent Compute Engine an: eine MicroVM pro KI-Agent",
+   "kurz": "Google Cloud stellt Agent Compute Engine vor, einen Dienst, der jedem KI-Agenten eine eigene hardwareisolierte MicroVM ohne eingebettete Zugangsdaten gibt. Die Kundenvorschau ist für die kommenden Monate angekündigt.",
+   "artikel": [
+    "Google Cloud hat Agent Compute Engine angekündigt, einen Compute-Dienst, der speziell für KI-Agenten gedacht ist. Jeder Agent erhält eine eigene, per Hardware isolierte MicroVM. Eine MicroVM ist eine sehr leichte virtuelle Maschine mit eigenem Gastkernel. Laut Fachpresse läuft der Dienst bereits für Gemini-Agenten, eine Kundenvorschau ist für die kommenden Monate geplant.",
+    "## Trennung von Denken und Handeln",
+    "Google teilt jeden Agenten in zwei Teile auf. Die Harness, also das „Gehirn“, ruft das Modell auf. Die Sandbox, also die „Hände“, führt Code, Shell-Befehle und Browser aus. Die Harness läuft vollständig außerhalb der Sandbox und schickt explizite Befehle hinein.",
+    "## Isolation und Netzwerk",
+    "Jede Sitzung läuft in einer eigenen MicroVM hinter einer Cloud-Hypervisor-Grenze. Die Hosts sind laut Angabe zustandslos und haben ein schreibgeschütztes Root-Dateisystem. Die MicroVMs besitzen keine Standard-Netzwerkschnittstelle und keinen direkten Zugriff auf die VPC; der gesamte Verkehr läuft über einen lokalen Proxy zu einem externen Gateway. Dort werden die echten Backend-Zugangsdaten erst während der Übertragung eingesetzt, nachdem Richtlinien geprüft wurden. Google geht davon aus, dass ein Angreifer innerhalb der Sandbox alles kontrollieren kann. Ein per Prompt-Injection manipulierter Agent findet dort also keine Geheimnisse.",
+    "## Leerlauf und Dichte",
+    "Agenten warten laut Google meist auf Modelle oder Nutzer. Deshalb wird der Leerlauf-Zustand gespeichert und bei Bedarf fortgesetzt. Mehrere MicroVMs teilen sich über Copy-on-Write-Speicher die Basis-Betriebssystemseiten; nur veränderte Seiten brauchen eigenen Speicher.",
+    "## Agent Substrate als Open-Source-Variante",
+    "Agent Substrate ist das Open-Source-Gegenstück für Kubernetes und laut Herstellerangabe seit 15. September 2026 auf GKE verfügbar. Google nennt bis zu zehnfach höhere Compute-Dichte, 500 Aktivierungen pro Sekunde bei unter 500 Millisekunden Suspend/Resume in einem Benchmark mit 200.000 Agenten sowie über 1.000 ruhende Agenten pro Host. Diese Werte sind Herstellerangaben. Für Agent Compute Engine selbst veröffentlicht Google keine Boot-Zeiten, Dichtewerte, Preise oder ein konkretes Vorschaudatum.",
+    "## Einordnung",
+    "Google nennt keine eigenen Zahlen für Agent Compute Engine selbst. Der Vergleich mit AWS, Azure und E2B zeigt unterschiedliche Ansätze bei Isolation, Leerlauf-Handling und Persistenz. Für Entwickler ist das vor allem ein Hinweis darauf, dass Sicherheit für Agenten zunehmend auf Infrastrukturebene gelöst werden soll."
+   ],
+   "quellen": [
+    {
+     "titel": "Google Cloud Launches Agent Compute Engine: A MicroVM per AI Agent",
+     "url": "https://www.marktechpost.com/2026/10/22/google-cloud-agent-compute-engine-microvm-ai-agents/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer eigene KI-Agenten baut, kann prüfen, wie Zugangsdaten außerhalb der Sandbox gehalten werden können.",
+    "Entwickler mit Kubernetes-Erfahrung können Agent Substrate als Open-Source-Projekt auf Quellcode-Ebene ansehen.",
+    "Privatpersonen können die Begriffe Sandbox und Harness nutzen, um Agent-Berichte besser einzuordnen."
+   ],
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Agent",
+     "Harness",
+     "Sandbox",
+     "Gateway"
+    ]
+   },
+   "tag": "Agenten",
+   "quelle": "Fachpresse",
+   "datum": "2026-10-22",
+   "kennzahlen": [
+    {
+     "label": "Aktivierungen pro Sekunde (Agent Substrate, Herstellerangabe)",
+     "wert": "500"
+    },
+    {
+     "label": "Suspend/Resume (Agent Substrate, Herstellerangabe)",
+     "wert": "unter 500 ms"
+    },
+    {
+     "label": "Agenten im Benchmark (Herstellerangabe)",
+     "wert": "200.000"
+    },
+    {
+     "label": "Ruhende Agenten pro Host (Herstellerangabe)",
+     "wert": "über 1.000"
+    }
+   ],
+   "signal": "Google behandelt Sicherheit für KI-Agenten als Infrastrukturfrage: Jeder Agent bekommt eine eigene isolierte Umgebung, und Zugangsdaten bleiben außerhalb davon. Viele konkrete Angaben zu Preisen und Vorschau fehlen jedoch noch.",
+   "link": "https://www.marktechpost.com/2026/10/22/google-cloud-agent-compute-engine-microvm-ai-agents/",
+   "linkLabel": "Originalartikel auf MarkTechPost",
+   "id": "google-cloud-kundigt-agent-compute-engine-an-eine-microvm-pr",
+   "hinzugefuegt": "2026-10-24T21:58:45Z"
+  },
   {
    "titel": "OpenAI verschärft Sicherheit seiner Trainingsumgebungen für Frontier-Modelle",
    "kurz": "OpenAI beschreibt, wie das Unternehmen die Abschottung interner Trainings- und Evaluationsumgebungen für Frontier-Modelle verstärkt hat. Dafür wurde der Zugang zum Internet im Training gestrichen und die Infrastruktur mit einer Red-Teaming-Kampagne geprüft.",
@@ -5969,8 +6127,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-24T19:50:28Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-10-24T21:58:45Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-10-23T23:11:38Z"
  }
 }
