@@ -1,6 +1,54 @@
 {
  "news": [
   {
+   "titel": "NVIDIA veröffentlicht Nemotron 3.5 Bolt E4B: kleines offenes Sprachmodell für lokale Sprachagenten, Spielfiguren und Roboter",
+   "kurz": "NVIDIA hat mit Nemotron 3.5 Bolt E4B ein offenes kleines Sprachmodell (SLM) veröffentlicht, das laut Hersteller lokal auf RTX- und Jetson-Hardware mit etwa 4 GB VRAM laufen soll. Es richtet sich an Sprachassistenten, Spielfiguren und Robotersteuerungen.",
+   "artikel": [
+    "NVIDIA hat Nemotron 3.5 Bolt E4B veröffentlicht, ein offenes kleines Sprachmodell (englisch Small Language Model, kurz SLM) für schnelle Dialogagenten. Laut NVIDIA ist es für Sprachassistenten, Spielfiguren (NPCs) und Roboter-Schnittstellen gedacht, die lokal auf RTX-, Jetson- und Spark-Hardware laufen. Das Modell basiert auf Googles Gemma 4 E4B und wurde ausschließlich mit Reinforcement Learning nachtrainiert.",
+    "## Eckdaten",
+    "Laut Herstellerangabe hat das Modell 8 Milliarden Parameter insgesamt, davon 4 Milliarden effektiv, und ein Kontextfenster von 64K Token. NVIDIA nennt einen Speicherbedarf von etwa 4 GB VRAM (Grafikspeicher). In eigenen Tests lag die Quantisierung Q4_K_M, eine komprimierte Variante des Modells, bei 3,1 bis 4,3 GB. Die GGUF-Datei auf Hugging Face ist dagegen 6,18 GB groß, das ‚4GB‘ im Namen beschreibt also den Speicherbedarf und nicht die Dateigröße.",
+    "## Training",
+    "NVIDIA verzichtete laut eigener Forschungsveröffentlichung auf Supervised Fine-Tuning (SFT). Dieses Verfahren hatte zwar das Tool-Calling verbessert, aber die Gesprächsqualität und Ausführlichkeit von Gemma verschlechtert. Stattdessen kamen RLVR und RLHF zum Einsatz. Laut Hersteller wurden Trainingsbeispiele in Denk- und Nicht-Denk-Modus genutzt. Datensätze und Rezept sind öffentlich.",
+    "## Leistung",
+    "Laut NVIDIA erzielte Bolt in 15 von 21 Benchmarks die Bestwerte gegenüber Gemma 4 E4B, Qwen3.5-4B und Nemotron 3 Nano 4B. Die Messungen stammen von NVIDIA selbst. Beim IHEval-Test erreichte Bolt 84,8 Punkte, Gemma 4 E4B 67,0. Schwächer schneidet Bolt bei Tau2-Bench mit 55,1 gegenüber 75,1 bei Qwen3.5-4B ab. Auf einer RTX 5070 soll Bolt mit dem DFlash-Drafter 272,6 Tokens pro Sekunde erreichen, laut Hersteller 1,21-mal schneller als Gemma 4 E4B mit MTP-Drafter.",
+    "## Einsatz",
+    "Das Modell ist auf Hugging Face, Ollama, LM Studio, Unsloth und Jetson AI Lab verfügbar und wird auch als NVIDIA NIM sowie über das In-Game Inferencing SDK angeboten. Die Lizenz ist laut Angaben OpenMDW-1.1."
+   ],
+   "quellen": [
+    {
+     "titel": "NVIDIA Releases Nemotron 3.5 Bolt E4B 4GB – MarkTechPost",
+     "url": "https://www.marktechpost.com/2026/10/23/nvidia-nemotron-3-5-bolt-e4b-4gb/"
+    }
+   ],
+   "demo": "modell",
+   "bereich": "Text",
+   "datum": "2026-10-23",
+   "machen": [
+    "Mit dem Modell lässt sich ein lokaler Sprachassistent auf einem RTX-Rechner mit etwa 4 GB Grafikspeicher testen.",
+    "Über Ollama oder LM Studio kann man das Modell ohne Cloud-Zugang ausprobieren.",
+    "Für Spielfiguren oder Hobbyrobotik ist es laut Hersteller als Dialogmodell gedacht."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Tokens pro Sekunde auf RTX 5070 (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Gemma 4 E4B (MTP)",
+      "wert": 225.9,
+      "anzeige": "225,9 Tokens/s"
+     },
+     {
+      "label": "Nemotron 3.5 Bolt (DFlash)",
+      "wert": 272.6,
+      "anzeige": "272,6 Tokens/s"
+     }
+    ]
+   },
+   "tag": "Open Model",
+   "id": "nvidia-veroffentlicht-nemotron-3-5-bolt-e4b-kleines-offenes-",
+   "hinzugefuegt": "2026-10-24T06:31:08Z"
+  },
+  {
    "titel": "Canva bringt mit Craft sein erstes eigenes Bildmodell heraus",
    "kurz": "Die Design-Plattform Canva hat Craft veröffentlicht, ihr erstes eigenes Bildgenerierungsmodell. Laut Herstellerangaben soll es mit Modellen von Google, OpenAI, ByteDance und Meta konkurrieren können.",
    "artikel": [
@@ -1066,6 +1114,99 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Kyutai CADRE: Video-Autoencoder senken die Reaktionszeit von Welt-Modellen unter 230 ms",
+   "kurz": "Kyutai hat CADRE veröffentlicht, eine Familie von sieben offenen Video-Autoencodern für interaktive Welt-Modelle. Laut Herstellerangaben reagieren darauf aufgebaute Modelle in unter 230 ms bei 20 fps auf einer H100.",
+   "artikel": [
+    "Kyutai hat CADRE veröffentlicht, eine Familie von sieben offenen, kausalen Diffusions-Video-Autoencodern für interaktive Welt-Modelle. Ein Welt-Modell erzeugt Bilder im latenten Raum des Autoencoders. Die Kompression bestimmt deshalb sowohl den Rechenaufwand pro Bild als auch die Verzögerung zwischen Aktion und Reaktion.",
+    "## Das Problem: Aktionsverzögerung",
+    "Viele Welt-Modelle übernehmen Autoencoder aus Text-zu-Video-Generatoren. Diese fassen viele Bilder in einem einzigen Latent zusammen, sodass jede Aktion warten muss. Laut Kyutai bemerken Menschen eine Verzögerung ihrer eigenen Bewegung ab etwa 230 ms.",
+    "## Aufbau",
+    "Der Encoder übernimmt das Rezept von MIRA. Ein eingefrorenes DINOv3-Modell extrahiert Merkmale pro Bildausschnitt, eine trainierte 3D-Faltung verdichtet sie auf ein Latent mit 64 Kanälen. Zwischen den sieben Varianten ändert sich nur dieser Engpass. Der Decoder ist ein kausaler Diffusions-Transformer mit 24 Blöcken, der chunkweise streamt und mit ein oder zwei Schritten dekodiert.",
+    "## Ergebnisse",
+    "Laut Herstellerangabe erreicht CADRE-2×32×32 auf einer H100 eine Reaktionszeit von 185 ms bei 23,4 fps mit einem Dekodierschritt. Der Wan-2.2-Autoencoder braucht 317 ms, LTX-2 492 ms und Cosmos 605 ms. Bei Fahraufnahmen liegt der FVD-Wert (Bewegungsqualität, niedriger ist besser) für CADRE-2×16×16 bei 162,6, Wan 2.2 bei 599,7.",
+    "## Grenzen",
+    "Nicht alle Vergleiche gewinnt CADRE. Bei Roboter-Manipulation erreicht Cosmos einen FVD von 39,5, das beste CADRE-Modell mit einem Schritt 47,6. Wan 2.2 rekonstruiert Videos außerdem deutlich besser. Lange Latents hinterlassen sichtbare Nähte zwischen den Chunks. Alle Zahlen stammen von Kyutai selbst.",
+    "## Lizenz",
+    "Der Code steht unter MIT-Lizenz, die Gewichte unter CC BY-NC 4.0. Kommerzielle Nutzung ist damit ausgeschlossen."
+   ],
+   "quellen": [
+    {
+     "titel": "Kyutai CADRE: Video Autoencoders That Cut World Model Lag Below 230 ms (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/10/23/kyutai-cadre-video-autoencoders-interactive-world-models/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Forscher oder Entwickler können die Gewichte nicht kommerziell für eigene Welt-Modelle testen.",
+    "Wer Interesse hat, kann die Live-Demo nutzen, um die Modelle per Tastatur zu steuern.",
+    "Für Vergleiche eignet sich die Tabelle mit Latenz und FVD als Orientierung."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Reaktionszeit auf einer H100 (ms, niedriger ist besser)",
+    "balken": [
+     {
+      "label": "DC-AE",
+      "wert": 118,
+      "anzeige": "118 ms"
+     },
+     {
+      "label": "CADRE-2×32×32",
+      "wert": 185,
+      "anzeige": "185 ms"
+     },
+     {
+      "label": "Wan 2.2",
+      "wert": 317,
+      "anzeige": "317 ms"
+     },
+     {
+      "label": "LTX-2",
+      "wert": 492,
+      "anzeige": "492 ms"
+     },
+     {
+      "label": "Cosmos",
+      "wert": 605,
+      "anzeige": "605 ms"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-10-23",
+   "kennzahlen": [
+    {
+     "label": "Modelle / Autoencoder",
+     "wert": "7 Autoencoder, je ca. 476M trainierte Parameter (Herstellerangabe)"
+    },
+    {
+     "label": "Welt-Modell",
+     "wert": "1,2 Mrd. Parameter, 288×512, 20 fps"
+    },
+    {
+     "label": "Hardware",
+     "wert": "1× H100 (bf16, Batch 1)"
+    },
+    {
+     "label": "Reaktionszeit",
+     "wert": "185 ms (CADRE-2×32×32, Herstellerangabe)"
+    },
+    {
+     "label": "Trainingsdaten",
+     "wert": "23 öffentliche Videoquellen, ca. 76.000 Stunden"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Code MIT, Gewichte CC BY-NC 4.0"
+    }
+   ],
+   "signal": "Kyutai zeigt, dass die Kompression des Autoencoders bei Welt-Modellen den Unterschied zwischen träger und direkter Reaktion ausmacht. Alle Werte sind Herstellerangaben.",
+   "link": "https://www.marktechpost.com/2026/10/23/kyutai-cadre-video-autoencoders-interactive-world-models/",
+   "linkLabel": "Artikel bei MarkTechPost",
+   "id": "kyutai-cadre-video-autoencoder-senken-die-reaktionszeit-von-",
+   "hinzugefuegt": "2026-10-24T06:31:08Z"
+  },
   {
    "titel": "FilmFlow: KI-Agenten planen virtuelle Kamerafahrten in 3D-Szenen",
    "kurz": "FilmFlow ist ein Multi-Agenten-System, das Kameraanweisungen in natürlicher Sprache oder aus Referenzvideos in ausführbare Kamerabahnen für dynamische 3D-Umgebungen übersetzt. Dazu kommt mit CinemaBench ein eigener Benchmark mit 150 Blender-Szenen.",
@@ -3951,6 +4092,147 @@
  ],
  "projekte": [
   {
+   "titel": "Manga Generator: Open-Source-Werkzeug von Originaltext zur fertigen Manga-PDF",
+   "kurz": "Das GitHub-Projekt „stockedge/manga-generator“ soll aus einer Romanvorlage mit Codex eine Manga-Produktion bis zum PDF unterstützen. Es hat laut Seite 69 Sterne und ist unter der MIT-Lizenz veröffentlicht.",
+   "artikel": [
+    "Das Projekt „Manga Generator“ richtet sich an Menschen, die aus Romanen oder Texten Comics bzw. Mangas erstellen möchten. Laut Beschreibung führt es vom Originaltext über Drehbuch, Namen (Storyboard-Skizzen) und Bildgeneration bis zur Textplatzierung, Prüfung und PDF-Ausgabe. Die Steuerung erfolgt über Codex, einen KI-Coding-Agenten von OpenAI.",
+    "## Arbeitsweise",
+    "Die Texte und Sprechblasen werden getrennt von den Bildern platziert. Laut Projektseite lassen sich Dialoge dadurch nachträglich leichter überarbeiten, ohne die Zeichnungen neu erzeugen zu müssen. Ein Beispiel auf der Seite ist die Eröffnung eines Webnovel-Manga mit zwei Panels.",
+    "## Einrichtung",
+    "Die Anleitung ist auf Menschen ohne Programmierkenntnisse zugeschnitten: Ein vorgefertigter Prompt soll Codex die Installation von Node.js, Browser, Schriftarten, Python-Bibliotheken und Poppler übernehmen lassen. Für die Bildgenerierung, die visuelle Prüfung und die unabhängige Gegenprüfung müssen laut Readme die entsprechenden Funktionen in der eigenen Codex-Umgebung verfügbar sein. Fehlen sie, soll der Prozess den Stand speichern und das Problem melden, statt Erfolg vorzutäuschen.",
+    "## Einordnung",
+    "Das Readme nennt außerdem alternative Wege mit Claude Code und einer externen ComfyUI-Installation. Für die Bildgenerierung dort wird eine GPU vorausgesetzt. Die Projektseite gibt an, dass Quellcode und Dokumentation unter der MIT-Lizenz stehen, während Originaltexte, Referenzmaterial, externe Modelle und Ergebnisse eigenen Regeln unterliegen. Eigene Leistungsangaben oder unabhängige Tests liegen im Material nicht vor."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: stockedge/manga-generator",
+     "url": "https://github.com/stockedge/manga-generator"
+    }
+   ],
+   "demo": "bild",
+   "machen": [
+    "Wer einen eigenen Text hat, kann prüfen, ob die Werkzeugkette mit Codex für eine kurze Manga-Probe funktioniert.",
+    "Wer Manga-Seiten plant, kann sich die Trennung von Bild und Sprechblase als Arbeitsweise für spätere Textkorrekturen ansehen.",
+    "Wer Entwickler ist, kann den Quellcode unter MIT-Lizenz lesen oder anpassen."
+   ],
+   "tag": "Open Source",
+   "macher": "stockedge (GitHub-Nutzer)",
+   "branche": "Comic / Manga, KI-Werkzeuge",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "Codex",
+    "Claude Code",
+    "ComfyUI",
+    "Node.js",
+    "Python",
+    "Poppler"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "69"
+    },
+    {
+     "label": "Forks",
+     "wert": "13"
+    },
+    {
+     "label": "Commits",
+     "wert": "14"
+    }
+   ],
+   "link": "https://github.com/stockedge/manga-generator",
+   "linkLabel": "Zum Repository auf GitHub",
+   "id": "manga-generator-open-source-werkzeug-von-originaltext-zur-fe",
+   "hinzugefuegt": "2026-10-24T06:31:08Z"
+  },
+  {
+   "titel": "OnKey: Gesangstrainer für den Mac zeigt, wo man schief singt",
+   "kurz": "OnKey ist ein kostenloser, quelloffener Gesangstrainer für macOS, der die Melodie eines Songs lernt und die eigene Tonhöhe während des Singens über den Noten einblendet. Das Projekt erschien auf Hacker News mit 219 Punkten.",
+   "artikel": [
+    "OnKey ist ein Gesangstrainer für den Mac, den der Entwickler Daniel Murrell als Open-Source-Projekt veröffentlicht hat. Die Idee entstand, weil er nach eigenen Angaben selbst ein schlechter Sänger ist. Das Programm läuft neben einer Musik-App wie Spotify, Apple Music oder YouTube im Browser und hört mit, während man mitsingt.",
+    "## So funktioniert es",
+    "Beim ersten Abspielen zeigt OnKey den Songtext. Ist das Lied zu Ende, lernt das Programm die Gesangsmelodie. Dafür trennt ein Modell die Gesangsstimme von der Begleitung, ein Tonhöhen-Modell namens CREPE verfolgt die Tonhöhe, und das Noten-Modell GAME macht daraus einen Balken pro Silbe. Bei späteren Durchgängen erkennt OnKey die Stelle im Lied anhand der Musik selbst und verfolgt die eigene Stimme live. Eine Oktave tiefer zu singen wird laut Projekt ebenfalls akzeptiert.",
+    "## Datenschutz",
+    "Nach Angaben des Projekts speichert OnKey die gehörte Musik nicht, sondern analysiert den Klang nur im Arbeitsspeicher. Aufnahmen und gelernte Lieder bleiben auf dem Mac. Es gibt kein Konto, keine Analysen und keine Absturzberichte. Einige Dienste werden trotzdem angefragt, etwa Shazam zur Titelerkennung, LRCLIB für Liedtexte und iTunes für Cover und Liedlänge. In den Einstellungen lassen sich Shazam, Liedtexte und die Update-Prüfung abschalten.",
+    "## Voraussetzungen und Lizenz",
+    "Laut Herstellerangabe benötigt man einen Mac mit Apple-Silicon-Chip (M1 oder neuer) und macOS 14.2 oder neuer. Der Quellcode steht unter der MIT-Lizenz. Der Autor bittet darum, die gelernten Melodien nicht zu teilen und nur mit Musik zu üben, für die man die Rechte besitzt.",
+    "Auf Hacker News wurde das Projekt mit 219 Punkten bewertet. Auf GitHub hat das Repository laut Seite 250 Sterne und 9 Forks."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: dsmurrell/onkey",
+     "url": "https://github.com/dsmurrell/onkey"
+    },
+    {
+     "titel": "Hacker News: Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50195488"
+    }
+   ],
+   "demo": "musik",
+   "machen": [
+    "Eigene Gesangsübungen mit Lieblingssongs machen und Tonhöhen über mehrere Durchgänge vergleichen.",
+    "Eine eigene Aufnahme als kurzes Video mit Tonhöhen-Linie teilen, ohne Musik im Clip.",
+    "Den Quellcode anschauen oder selbst bauen, wenn man dem fertigen Programm nicht vertrauen möchte."
+   ],
+   "ausprobieren": {
+    "prompt": "Spiele einen Song in Spotify ab, öffne OnKey und singe beim ersten Durchgang mit, um die Melodie lernen zu lassen.",
+    "tool": "OnKey",
+    "url": "https://singonkey.app"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Stimmen-Abweichung je Silbe (Beispiel-Darstellung)",
+    "balken": [
+     {
+      "label": "Silbe 1",
+      "wert": 3,
+      "anzeige": "knapp daneben"
+     },
+     {
+      "label": "Silbe 2",
+      "wert": 1,
+      "anzeige": "fast richtig"
+     },
+     {
+      "label": "Silbe 3",
+      "wert": 2,
+      "anzeige": "leicht daneben"
+     }
+    ]
+   },
+   "macher": "Daniel Murrell",
+   "branche": "Musik / Gesangstraining",
+   "jahr": 2026,
+   "tools": [
+    "Tauri",
+    "Rust",
+    "ONNX",
+    "CREPE",
+    "GAME",
+    "wav2vec 2.0",
+    "UVR MDX-Net Karaoke 2"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "219"
+    },
+    {
+     "label": "GitHub-Sterne",
+     "wert": "250"
+    },
+    {
+     "label": "Forks",
+     "wert": "9"
+    }
+   ],
+   "link": "https://github.com/dsmurrell/onkey",
+   "linkLabel": "GitHub-Repository",
+   "id": "onkey-gesangstrainer-fur-den-mac-zeigt-wo-man-schief-singt",
+   "hinzugefuegt": "2026-10-24T06:31:08Z"
+  },
+  {
    "titel": "Tausende KI-Agenten suchen nach neuen Ansätzen in Hirnzell-Daten",
    "kurz": "OpenAI, PerturbAI und Scripps Research ließen tausende KI-Agenten parallel Daten aus Millionen Mäusehirnzellen auswerten. Die Agenten verknüpften Genstörungen mit Fachliteratur und lieferten Hinweise zu Alzheimer und Parkinson.",
    "artikel": [
@@ -5029,8 +5311,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-24T01:38:54Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-10-24T06:31:08Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-10-23T23:11:38Z"
  }
 }
