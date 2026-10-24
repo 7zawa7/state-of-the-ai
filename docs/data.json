@@ -1067,6 +1067,136 @@
  ],
  "radar": [
   {
+   "titel": "FilmFlow: KI-Agenten planen virtuelle Kamerafahrten in 3D-Szenen",
+   "kurz": "FilmFlow ist ein Multi-Agenten-System, das Kameraanweisungen in natürlicher Sprache oder aus Referenzvideos in ausführbare Kamerabahnen für dynamische 3D-Umgebungen übersetzt. Dazu kommt mit CinemaBench ein eigener Benchmark mit 150 Blender-Szenen.",
+   "artikel": [
+    "FilmFlow ist ein agentisches System für virtuelle Filmkamera-Arbeit in 3D. Es nimmt Anweisungen in natürlicher Sprache oder Referenzvideos entgegen und erzeugt daraus explizite Kamerabahnen, also den genauen Verlauf, den eine virtuelle Kamera nehmen soll.",
+    "## Wie das System arbeitet",
+    "Zentral ist ein Director-Agent, der aus gleichzeitig laufenden Grundoperationen Kamerapläne zusammensetzt. Diese Grundoperationen steuern Verschiebung, Drehung und Bildausschnitt gemeinsam. Unterstützt wird der Director von drei spezialisierten Agenten: einem Interpreter, der die filmische Absicht aus der Szene herausliest, einem Scout, der Startperspektiven wählt, und einem Critic, der gerenderte Ergebnisse bewertet und Rückmeldungen für die schrittweise Verbesserung des Plans gibt.",
+    "## CinemaBench",
+    "Die Autoren stellen außerdem CinemaBench vor. Der Benchmark umfasst 150 Blender-Szenen aus eigenen und lizenzierten Quellen, dazu fünf Kameraanweisungen pro Szene, also 750 textgesteuerte Aufgaben, sowie 60 Referenzvideos zu einem Teil der Szenen. Damit lassen sich sowohl textgesteuerte als auch videogesteuerte Kameragenerierung bewerten.",
+    "## Ergebnisse",
+    "Laut den Autoren erzielt FilmFlow im Vergleich mit mehreren Basismodellen die beste Benchmark-Leistung und die höchste Nutzerpräferenz. Die Autoren führen das auf räumliches Denken, zeitliche Koordination und Bildkomposition zurück. Unabhängige Überprüfungen liegen zum Zeitpunkt dieses Eintrags nicht vor; die Angaben stammen aus dem Paper selbst.",
+    "Hinweis: Das Paper ist eine Forschungsarbeit auf arXiv und wurde auf Hugging Face mit 13 Upvotes geteilt. Es gibt kein nutzbares Tool zum Ausprobieren."
+   ],
+   "quellen": [
+    {
+     "titel": "FilmFlow: Agentic System for 3D Virtual Film Cinematography (Hugging Face Paper Page)",
+     "url": "https://huggingface.co/papers/2610.30753"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer 3D-Szenen oder Animationen plant, kann das Paper als Referenz für agentische Kameraplanung lesen.",
+    "Forschende können CinemaBench als Vergleichsgrundlage für textgesteuerte und videogesteuerte Kameragenerierung betrachten.",
+    "Filmemacher ohne Tool-Zugang können die beschriebene Aufteilung in Interpreter, Scout und Critic als Denkmodell für Kameraplanung nutzen."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "FilmFlow Pipeline",
+    "zeilen": [
+     "> Eingabe: Text oder Referenzvideo",
+     "● Interpreter: filmische Absicht",
+     "● Director: Kameraplan aus Grundoperationen",
+     "● Scout: Startperspektiven",
+     "✓ Critic: Feedback und Verfeinerung"
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-10-22",
+   "kennzahlen": [
+    {
+     "label": "Szenen in CinemaBench",
+     "wert": "150"
+    },
+    {
+     "label": "Textaufgaben",
+     "wert": "750"
+    },
+    {
+     "label": "Referenzvideos",
+     "wert": "60"
+    },
+    {
+     "label": "Upvotes auf Hugging Face",
+     "wert": "13"
+    }
+   ],
+   "signal": "Ein Forschungspaper zu agentischer Kameraplanung in 3D, das einen eigenen Benchmark mitliefert. Die Leistungsangaben stammen von den Autoren selbst.",
+   "link": "https://huggingface.co/papers/2610.30753",
+   "linkLabel": "Paper auf Hugging Face ansehen",
+   "id": "filmflow-ki-agenten-planen-virtuelle-kamerafahrten-in-3d-sze",
+   "hinzugefuegt": "2026-10-24T01:38:54Z"
+  },
+  {
+   "titel": "Dessa: Sprachmodell, das nur aus menschlicher Sprache lernt",
+   "kurz": "Block hat mit Dessa ein Speech-to-Speech-Modell vorgestellt, das ohne Text und ohne vortrainierte Modelle allein aus Gesprächsaudio gelernt haben soll. Es hört und spricht gleichzeitig und ist derzeit nur über eine Warteliste zugänglich.",
+   "artikel": [
+    "Der Forschungsbereich von Block, der nach eigenen Angaben sehr klein ist, stellt Dessa als Konversationsmodell vor. Die Entwickler bezeichnen es als »most authentic full-duplex speech model ever built«, also als authentischstes Full-Duplex-Sprachmodell überhaupt. Full-Duplex bedeutet, dass das Modell gleichzeitig zuhört und spricht, so wie Menschen im Gespräch.",
+    "## Lernen ohne Text",
+    "Dessa wurde nach Angaben des Teams von Grund auf nur auf menschlichen Gesprächen trainiert, ohne Textdaten und ohne vortrainierte Modelle. Laut Herstellerangaben lernte es Sprache aus hunderten Mal weniger Wörtern als große Sprachmodelle. Das Training lief auf einem einzigen NVIDIA GB200 NVL72. Der Entwickler begründet das mit Neugier, besserem Verständnis zwischen Mensch und KI und Sicherheit.",
+    "## Was das Modell kann",
+    "Laut den Demos erkennt Dessa Emotionen, Ironie, Lachen und Seufzer direkt aus dem Klang, weil keine Umwandlung in Text stattfindet. Es lacht mitten im Satz, gibt passende Rückmeldungen wie »yeah« und passt seine Lautstärke an, wenn man es bittet. Herstellerangaben zufolge läuft die Inferenz schneller als Echtzeit und lokal auf einem MacBook Pro M4 Max oder besser.",
+    "## Einordnung und Vorbehalte",
+    "Alle Aufnahmen auf der Seite sind laut Anbieter echte Gespräche, bei denen niemand das Modell steuert. Eine Demo zeigt ein Gespräch mit GPT-Live-1, einem Drittmodell, dessen Entwickler nicht mit Block verbunden ist und Dessa nicht geprüft hat. Block sucht außerdem externe KI-Sicherheitsforscher, die frühen Zugang erhalten sollen, um Risiken zu finden. Unabhängige Tests oder Veröffentlichungen zu Leistung gibt es im Material nicht."
+   ],
+   "quellen": [
+    {
+     "titel": "Dessa - the Conversation Model trained only on speech (block.xyz)",
+     "url": "https://block.xyz/dessa"
+    },
+    {
+     "titel": "Hacker News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50213925"
+    }
+   ],
+   "demo": "stimme",
+   "machen": [
+    "Du kannst dich auf die Warteliste setzen, um Dessa später auszuprobieren, sofern Block Zugang gewährt.",
+    "Als Forscherin oder Forscher mit Interesse an Sicherheit kannst du dich laut Seite für den frühen Zugang bewerben.",
+    "Du kannst die veröffentlichten Hörbeispiele anhören, um den Unterschied zu textbasierten Sprachassistenten selbst zu beurteilen."
+   ],
+   "vorschau": {
+    "szene": "stimme",
+    "titel": "Aufnahme 0:10",
+    "sprachen": [
+     [
+      "Lachen",
+      "Mitten im Satz, ohne Verzögerung"
+     ],
+     [
+      "Rückmeldung",
+      "»yeah!«, »got it!«, »ooh«"
+     ],
+     [
+      "Emotion",
+      "Seufzer und Stimmbruch werden direkt gehört"
+     ]
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "2026-05-01",
+   "kennzahlen": [
+    {
+     "label": "Training",
+     "wert": "1× NVIDIA GB200 NVL72 (Herstellerangabe)"
+    },
+    {
+     "label": "Lokal lauffähig",
+     "wert": "MacBook Pro M4 Max oder besser (Herstellerangabe)"
+    },
+    {
+     "label": "Hacker News",
+     "wert": "228 Punkte"
+    }
+   ],
+   "signal": "Ein Sprachmodell, das ohne Text trainiert wurde, wäre ein ungewöhnlicher Ansatz. Die Angaben stammen aber vom Anbieter selbst, unabhängige Prüfung fehlt bisher.",
+   "link": "https://block.xyz/dessa",
+   "linkLabel": "Dessa auf block.xyz",
+   "id": "dessa-sprachmodell-das-nur-aus-menschlicher-sprache-lernt",
+   "hinzugefuegt": "2026-10-24T01:38:54Z"
+  },
+  {
    "titel": "AnyGameRenderer: Vom Programmierkunst-Prototyp zum fertig aussehenden Spiel",
    "kurz": "Ein Forschungsmodell wandelt Videos von KI-generierten Spielen mit Platzhalter-Grafik in hochwertige Bilder um, ohne Layout, Kamera und Objekt-Timing zu verändern. Ein eigener Benchmark misst, wie gut dabei die Objekte konsistent bleiben.",
    "artikel": [
@@ -4899,8 +5029,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-23T23:11:38Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-10-24T01:38:54Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-10-23T23:11:38Z"
  }
 }
