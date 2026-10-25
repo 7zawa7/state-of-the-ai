@@ -1331,6 +1331,235 @@
  ],
  "radar": [
   {
+   "titel": "Anthropic: Ein einzelner Agent schlägt viele Subagenten",
+   "kurz": "Anthropic empfiehlt Unternehmen zu prüfen, ob sich mehrere Subagenten zu einem einzigen Agenten zusammenfassen lassen, der Kontext bei Bedarf lädt. In einem Architekturvergleich lief der Einzelagent laut Anthropic etwa doppelt so schnell.",
+   "artikel": [
+    "Anthropic rät Unternehmen, ihre Agenten-Systeme zu überprüfen. Viele spezialisierte Subagenten führen laut dem Unternehmen zu höherer Latenz, steigenden Kosten und Informationsverlust bei jeder Übergabe. Ein einzelner Agent, der Kontext nur bei Bedarf lädt, liefere oft bessere Ergebnisse bei Qualität, Kosten und Latenz.",
+    "## Warum weniger Agenten besser sein können",
+    "Laut Anthropic können neuere Modelle, beginnend mit Opus 4.5 sowie Opus 5.5 und Fable 5.1, komplexe Ppläne direkt in einer einzigen Schleife abarbeiten. Das senkt Kosten und Wartezeiten. In einem Vergleich war die Einzel-Agent-Architektur laut Anthropic etwa doppelt so schnell wie die Multi-Agent-Variante. Die Empfehlung stammt laut Anthropic aus Projekten mit mehreren Unternehmenskunden.",
+    "Ein Beispiel aus der Praxis: Ein Kunde hatte zwölf spezialisierte Subagenten in seinem kundenseitigen Agenten. Das erschwerte ein einheitliches Markenerlebnis und führte zu hoher Latenz.",
+    "## Typische Fallen",
+    "Anthropic beschreibt ein Muster, das es als \"Conway's Law\" für Agenten bezeichnet: Die Architektur kopiert das Organigramm, jedes Team liefert einen eigenen Subagenten, und am Ende entstehen viele überlappende Agenten ohne gemeinsame Standards. Daraus folgt laut dem Unternehmen ein \"Frankenprompt\", in dem Regeln aus verschiedenen Teams einander widersprechen.",
+    "In einem Test mit einem Support-Agenten senkte ein eingebundener Subagent zwar die Latenz, brach aber einen zuvor funktionierenden Ablauf. Der Hauptagent antwortete selbst, statt den richtigen Spezialisten zu fragen. Anthropic warnt deshalb davor, blind zusammenzuführen.",
+    "## Empfehlungen",
+    "Laut Anthropic reichen oft ein schlanker Systemprompt, vier bis fünf schlanke Datenwerkzeuge und feste Ausgabe-Leitplanken. Fähigkeiten (Skills) und Werkzeuge sollen nur bei Bedarf geladen werden. Anthropic gab an, den Claude-Code-Systemprompt für neuere Modelle um mehr als 80 Prozent gekürzt zu haben.",
+    "Subagenten bleiben laut Anthropic sinnvoll, wenn die Leistung des Kontextfensters messbar nachlässt, wenn Aufgaben parallel mit getrennten Kontextfenstern laufen müssen oder wenn ein Agent Schwierigkeiten bei der Werkzeugauswahl hat. Die Werkzeugauswahl verschlechtert sich laut Anthropic jenseits von 30 bis 50 Werkzeugdefinitionen. Für die Migration hat Anthropic ein Migration Kit auf GitHub veröffentlicht.",
+    "## Einordnung",
+    "Eine Studie von Vals kommt laut Quelle zu ähnlichen Ergebnissen: Agententeams können schneller sein als Einzelagenten, liefern aber keine höhere Qualität. Beim Hochskalieren von zehn auf 30 oder 100 Agenten gab es laut Studie keine Qualitätsgewinne, aber deutlich höhere Kosten. Eric Provencher, Entwickler bei OpenAI, bezweifelt den Nutzen von Agenten-Schwärmen."
+   ],
+   "quellen": [
+    {
+     "titel": "Anthropic says one AI agent beats many subagents now that models can handle complexity alone – The Decoder",
+     "url": "https://the-decoder.com/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-complexity-alone/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer eigene KI-Assistenten baut, kann prüfen, ob ein einzelner Agent mit nachladbarem Kontext genügt.",
+    "Teams können Workflows als Skills bündeln, statt für jede Abteilung einen eigenen Agenten zu bauen.",
+    "Wer Agenten nutzt, kann auf Anzahl der Werkzeuge achten, da laut Anthropic die Auswahl ab 30 bis 50 Definitionen nachlässt."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Laut Anthropic: Zeit für einen Architekturvergleich",
+    "balken": [
+     {
+      "label": "Multi-Agent",
+      "wert": 2,
+      "anzeige": "langsamer"
+     },
+     {
+      "label": "Ein Agent",
+      "wert": 1,
+      "anzeige": "etwa 2× schneller"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-10-25",
+   "kennzahlen": [
+    {
+     "label": "Geschwindigkeit Einzelagent (Anthropic-Vergleich)",
+     "wert": "etwa 2× so schnell wie Multi-Agent"
+    },
+    {
+     "label": "Kürzung Claude-Code-Systemprompt (Anthropic-Angabe)",
+     "wert": "über 80 %"
+    },
+    {
+     "label": "Werkzeugauswahl lässt nach",
+     "wert": "ab 30–50 Werkzeugdefinitionen"
+    }
+   ],
+   "signal": "Herstellerangabe Anthropic: Laut Anthropic läuft ein Einzelagent mit nachladbarem Kontext in einem Vergleich etwa doppelt so schnell. Eine unabhängige Studie (Vals) stützt laut Quelle, dass Agententeams nicht besser in der Qualität sind.",
+   "link": "https://the-decoder.com/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-complexity-alone/",
+   "linkLabel": "Zum Artikel bei The Decoder",
+   "id": "anthropic-ein-einzelner-agent-schlagt-viele-subagenten",
+   "hinzugefuegt": "2026-10-25T09:27:12Z"
+  },
+  {
+   "titel": "OpenMobile-2: Offene Smartphone-Agenten sollen mit proprietären Modellen mithalten",
+   "kurz": "Forschende aus Nanjing, SenseTime und weiteren Universitäten stellen OpenMobile-2 vor, zwei offene Agentenmodelle für Smartphones. Entscheidend für bessere Leistung sei nicht mehr Datenmenge, sondern die Anzahl verschiedener trainierter Apps.",
+   "artikel": [
+    "Smartphone-Agenten, also KI-Systeme, die Apps selbstständig bedienen, lernen vor allem durch Übung. Die dafür nötigen Daten liegen laut dem Bericht jedoch größtenteils bei großen Unternehmen, weshalb offene Modelle zurückliegen. OpenMobile-2 soll diese Lücke schließen.",
+    "Die Autoren veröffentlichen zwei Agentenmodelle: eines auf Basis von Qwen3.5 mit 9 Milliarden Parametern und eines auf Basis von Qwen3.6 mit 27 Milliarden Parametern. Dazu kommen die komplette Trainingsumgebung, die Daten und Anleitungen zur Reproduktion.",
+    "## Trainingsumgebung mit über 110 Apps",
+    "Statt auf echten Apps zu trainieren, die Logins, echte Käufe und fehlende Rücksetzmöglichkeiten mit sich bringen, bauten die Forschenden 35 Apps nach, darunter Taobao, JD, DiDi und Meituan sowie Slack und Google Drive. Zusammen mit bestehenden Simulationen und Apps im Android-Emulator ergibt das mehr als 110 Anwendungen. Die Simulationen setzen sich nach jedem Durchlauf automatisch zurück. Der Agent sieht nur Screenshots.",
+    "Aus diesem Aufbau entstanden rund 11.600 Beispielabläufe und über 2.000 Übungsaufgaben mit automatischen Erfolgsprüfungen. Als Lehrermodell diente Gemini 3.1 Pro von Google. Das bedeutet laut Bericht, dass OpenMobile-2 indirekt von einem geschlossenen System lernt.",
+    "## Mehr Apps statt mehr Daten",
+    "Bei gleicher Datenmenge stieg die Erfolgsrate auf unbekannten Apps von 60,7 auf 67,5 Prozent, sobald der Agent auf mehr verschiedenen Apps trainierte. Vielfalt wiegt hier also schwerer als zusätzliche Beispiele aus wenigen Apps.",
+    "## Ergebnisse",
+    "Auf dem Benchmark AndroidWorld erreicht das größere Modell 79,9 Punkte, nach 67,1 zuvor. Das kleinere Modell steigt von 54,3 auf 74 Punkte. Auf dem Test SPA-Bench mit echten Android-Geräten erreicht das größere Modell 59,6 Punkte, nach 31,9 vor dem Training. Laut den Autoren ist das der höchste Wert unter offenen Modellen.",
+    "Verstärkendes Lernen (Reinforcement Learning, also Training durch Belohnung) brachte laut Bericht nur begrenzte Zuwächse. Auf AndroidWorld fiel das größere Modell danach sogar leicht auf 79,9 statt 80,8 Punkte.",
+    "## Direkte Befehle als Abkürzung",
+    "Mehr als 50 simulierte Apps bieten direkte Befehle wie „in den Warenkorb“, die Menüs umgehen. Ohne gezieltes Training ignorieren die Modelle diese Abkürzungen weitgehend. Nach dem Training lösten die Agenten bis zu 10,3 Prozentpunkte mehr Aufgaben und brauchten etwa fünf Schritte weniger. Die Forschenden sagen, diese Fähigkeit übertrage sich auch auf unbekannte Werkzeuge. Die Autoren selbst bezeichnen den Ansatz als experimentell, und die Schnittstellen existieren bisher nur in den Simulationen.",
+    "Zum Vergleich verweist der Bericht auf Oppo mit dem offenen Agenten X-OmniClaw, der auf echten Geräten läuft. Google hat Smartphone-Steuerung laut Bericht direkt in Gemini 3.5 Flash eingebaut. Diese Angaben stammen von den jeweiligen Anbietern und wurden nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenMobile-2 proves open-source smartphone agents can rival proprietary models – The Decoder",
+     "url": "https://the-decoder.com/openmobile-2-proves-open-source-smartphone-agents-can-rival-proprietary-models/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer Android-Automatisierung entwickelt, kann die offenen Modelle und die Trainingsumgebung herunterladen und selbst ausprobieren.",
+    "Technisch Interessierte können die Ergebnisse auf AndroidWorld und SPA-Bench mit anderen Agenten vergleichen.",
+    "Privatpersonen können die Entwicklung verfolgen, da die Modelle noch Forschungsstand sind und nicht als fertiges Produkt beschrieben werden."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "AndroidWorld-Ergebnis (größeres Modell)",
+    "balken": [
+     {
+      "label": "Vor Training",
+      "wert": 67.1,
+      "anzeige": "67,1"
+     },
+     {
+      "label": "OpenMobile-2",
+      "wert": 79.9,
+      "anzeige": "79,9"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-10-25",
+   "kennzahlen": [
+    {
+     "label": "Parameter (Modell 1)",
+     "wert": "9 Mrd."
+    },
+    {
+     "label": "Parameter (Modell 2)",
+     "wert": "27 Mrd."
+    },
+    {
+     "label": "Apps in Trainingsumgebung",
+     "wert": "über 110"
+    },
+    {
+     "label": "Beispielabläufe",
+     "wert": "rund 11.600"
+    },
+    {
+     "label": "SPA-Bench (27B, real)",
+     "wert": "31,9 → 59,6"
+    }
+   ],
+   "signal": "Offene Smartphone-Agenten rücken mit der Anzahl trainierter Apps an proprietäre Modelle heran. Die Ergebnisse stammen laut Bericht großteils von den Autoren selbst.",
+   "link": "https://the-decoder.com/openmobile-2-proves-open-source-smartphone-agents-can-rival-proprietary-models/",
+   "linkLabel": "Zum Artikel bei The Decoder",
+   "id": "openmobile-2-offene-smartphone-agenten-sollen-mit-proprietar",
+   "hinzugefuegt": "2026-10-25T09:27:12Z"
+  },
+  {
+   "titel": "Microsoft Research stellt Agensh als Open Source vor: Multi-Agent-Harness ohne zentralen Orchestrator",
+   "kurz": "Microsoft Research hat Agensh veröffentlicht, ein Framework, in dem bis zu 1.024 Coding-Agenten sich selbst Aufgaben zuweisen und ohne zentrale Steuerung zusammenarbeiten. Laut Herstellerangaben steigt die Testleistung auf ProgramBench mit mehr Agenten deutlich.",
+   "artikel": [
+    "Microsoft Research hat Agensh als Open-Source-Projekt veröffentlicht. Es handelt sich um ein sogenanntes Multi-Agent-Harness, also eine Umgebung, in der viele KI-Agenten gemeinsam an Programmieraufgaben arbeiten. Anders als viele Frameworks verzichtet Agensh auf einen zentralen Orchestrator, also einen leitenden Agenten, der Aufgaben plant, verteilt und zusammenführt.",
+    "## Dezentrale Zusammenarbeit",
+    "Jeder Worker wählt eine Teilaufgabe selbst, teilt seine Ergebnisse und führt seinen Code in ein gemeinsames Git-Repository zusammen. Die Koordination läuft über drei Dienste: Gitea für den gemeinsamen Arbeitsbereich, Mattermost für Team- und Direktnachrichten sowie ein geteiltes Kontext-Board mit typisierten Notizen. Laut Angaben des Teams steckt die Schleife nicht im Programmcode, sondern im Prompt, den alle Worker mit Ausnahme ihrer ID gleich erhalten.",
+    "## Ergebnisse auf ProgramBench",
+    "Getestet wurden die fünf schwersten ProgramBench-Aufgaben, darunter FFmpeg und pandoc. Mit GPT-5.6-sol stieg der mittlere Testerfolg von 19,31 Prozent bei einem Agenten auf 28,78 Prozent bei 128 Agenten. Das entspricht laut Artikel einem Zuwachs von 9,47 Prozentpunkten. Bei pandoc erreichte das Modell mit 1.024 Agenten 55,06 Prozent. Laut README erreichte GPT-6.1-sol mit 32 Agenten auf pandoc 79,59 Prozent; diese Zahlen stehen nach Angaben des Artikels nicht im v1-Paper.",
+    "## Verhalten im Schwarm",
+    "Mit wachsender Gruppe entstanden laut Forschungsteam eigene Rollen: Agenten einigten sich auf Schnittstellen, prüften gegenseitig Arbeit und übernahmen als Integratoren das Zusammenführen. Diese Rollen seien nicht fest vorgegeben gewesen.",
+    "Die Angaben stammen von Microsoft Research und werden im Artikel als Herstellerangaben dargestellt. Der Quellcode ist laut Bericht unter MIT-Lizenz verfügbar, die Token-Kosten sind jedoch nicht angegeben."
+   ],
+   "quellen": [
+    {
+     "titel": "Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/10/24/microsoft-agensh-multi-agent-harness-1024-agents/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer Coding-Agenten einsetzt, kann den Quellcode unter MIT-Lizenz prüfen und lokal mit einem Docker-Compose-Setup ausprobieren.",
+    "Entwickler können die Idee der dezentralen Koordination über einen gemeinsamen Git-Stand und ein Notizboard auf eigene Agenten-Workflows übertragen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "pandoc-Testerfolg (GPT-5.6-sol), Agenten-Anzahl",
+    "balken": [
+     {
+      "label": "1 Agent",
+      "wert": 33.89,
+      "anzeige": "33,89 %"
+     },
+     {
+      "label": "8 Agenten",
+      "wert": 41.75,
+      "anzeige": "41,75 %"
+     },
+     {
+      "label": "32 Agenten",
+      "wert": 43.11,
+      "anzeige": "43,11 %"
+     },
+     {
+      "label": "128 Agenten",
+      "wert": 50.94,
+      "anzeige": "50,94 %"
+     },
+     {
+      "label": "1.024 Agenten",
+      "wert": 55.06,
+      "anzeige": "55,06 %"
+     }
+    ]
+   },
+   "tag": "Multi-Agent",
+   "quelle": "Fachpresse",
+   "datum": "2026-10-24",
+   "kennzahlen": [
+    {
+     "label": "Getestete Agenten",
+     "wert": "1 bis 1.024"
+    },
+    {
+     "label": "Kontextfenster pro Worker (Input)",
+     "wert": "272.000 Token"
+    },
+    {
+     "label": "Ausgabelimit pro Worker",
+     "wert": "128.000 Token"
+    },
+    {
+     "label": "Speicherlimit pro Worker",
+     "wert": "64 GiB"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    }
+   ],
+   "signal": "Herstellerangabe: Microsoft Research zeigt, dass ein Schwarm ohne zentralen Orchestrator mit steigender Agentenzahl bessere Ergebnisse auf schweren Programmieraufgaben erzielt. Unabhängige Überprüfung liegt nicht vor.",
+   "link": "https://www.marktechpost.com/2026/10/24/microsoft-agensh-multi-agent-harness-1024-agents/",
+   "linkLabel": "Zum Artikel",
+   "id": "microsoft-research-stellt-agensh-als-open-source-vor-multi-a",
+   "hinzugefuegt": "2026-10-25T09:27:12Z"
+  },
+  {
    "titel": "Cognition veröffentlicht Open-Source-Plugin gegen kritische PHP-, Node.js- und GitLab-Lücken",
    "kurz": "Cognition hat das Devin Vulnerability Fixes plugin als kostenlose Open-Source-Sammlung von Agent-Skills vorgestellt. Es soll drei kritische Remote-Code-Execution-Lücken in PHP, Node.js und selbst gehostetem GitLab beheben und pro Repository einen Pull Request öffnen.",
    "artikel": [
@@ -5082,6 +5311,68 @@
  ],
  "projekte": [
   {
+   "titel": "Community-Sammlung: 25 Gemini-4-Carbon-Demos mit Quellen und Grenzen",
+   "kurz": "Ein GitHub-Repository (4 Sterne) sammelt 25 öffentliche Community-Beispiele, die laut ihren Veröffentlichern mit Gemini 4 Carbon in der frühen Rollout-Phase entstanden sind. Die Sammlung ordnet sie nach 3D-Objekten, Voxel-Welten, SVG, Spielen und Modellvergleichen.",
+   "artikel": [
+    "Das Projekt awesome-gemini-4-carbon-guide-and-use-cases ist eine kuratierte Liste von Anwendungsbeispielen zu Gemini 4 Carbon. Es verlinkt jeweils auf die Originalquelle, meist ein Video oder Bild, und beschreibt, welche Aufgabe gestellt wurde, was zu sehen ist und welche Grenzen gelten.",
+    "## Kategorien der Sammlung",
+    "Insgesamt enthält die Übersicht 25 Anwendungsfälle in fünf Kategorien. Dazu gehören mechanische 3D-Objekte wie eine Blume oder eine Biene, Voxel-Landschaften mit Burgen, Pagoden und Leuchttürmen, interaktive SVG-Grafiken etwa von Controllern oder Fahrrädern, einfache Spielszenen wie ein Jump-and-Run-Prototyp sowie einen Vergleich verschiedener Modelle anhand einer Fahrradanimation. Voxel bezeichnet dabei Welten aus würfelförmigen Bausteinen, SVG steht für skalierbare Vektorgrafiken.",
+    "## Angaben mit Vorsicht lesen",
+    "Der Autor betont, dass Modellnamen, Generierungszeiten und Qualitätsurteile von den jeweiligen Quellen stammen. Das ist also eine Herstellerangabe beziehungsweise Angabe der Veröffentlicher, keine unabhängige Messung. Ein Arena-Anzeigename wie gemini-4-argon belegt zudem nicht automatisch die Backend-Version. Eine Aufnahme beweist außerdem nicht, dass der Code lauffähig ist oder ein Ergebnis reproduzierbar ist.",
+    "Einige Beispiele sind ausdrücklich ausgewählte Ergebnisse. Bei einer Burgszene etwa steht, dass es das beste von vier Versuchen sei. Vergleiche mit anderen Modellen beruhen meist auf einzelnen Einschätzungen ohne gemeinsames Testprotokoll, etwa die Angabe, ein Ergebnis sei zwei- bis viermal langsamer als das Vorgängermodell Argon gewesen.",
+    "## Einordnung",
+    "Die Sammlung eignet sich als Überblick darüber, welche Aufgaben in der frühen Phase getestet wurden. Für belastbare Aussagen über Qualität oder Geschwindigkeit fehlen jedoch kontrollierte Tests, Prompts und Wiederholungen. Das Repository liegt mit 4 Sternen auf GitHub noch im Frühstadium und wird in mehreren Sprachen angeboten, darunter Deutsch."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: cheercheung/awesome-gemini-4-carbon-guide-and-use-cases",
+     "url": "https://github.com/cheercheung/awesome-gemini-4-carbon-guide-and-use-cases"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Die Beispiele als Ideenquelle nutzen, etwa um eigene Voxel- oder SVG-Motive mit einem Modell zu testen.",
+    "Die verlinkten Originalvideos mit den eigenen Prompts vergleichen, um die Angaben der Veröffentlicher selbst zu prüfen.",
+    "Die dokumentierten Grenzen als Checkliste für eigene Tests verwenden, bevor man Ergebnisse weitergibt."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "awesome-gemini-4-carbon",
+    "zeilen": [
+     "> 25 usecases across 5 categories",
+     "✓ Originalquellen verlinkt",
+     "⚠ Modellnamen und Zeiten sind Herstellerangaben",
+     "- ohne Reproduzierbarkeit",
+     "+ Kategorien: 3D, Voxel, SVG, Spiele, Vergleich",
+     "● Status: Community-Sammlung, 4 ★"
+    ]
+   },
+   "macher": "cheercheung (Community-Repository, Autor nicht näher angegeben)",
+   "branche": "KI / Community-Demos",
+   "jahr": 2026,
+   "tools": [
+    "Gemini 4 Carbon (Herstellerangabe der Veröffentlicher)"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Anwendungsfälle",
+     "wert": "25"
+    },
+    {
+     "label": "Kategorien",
+     "wert": "5"
+    },
+    {
+     "label": "GitHub-Sterne",
+     "wert": "4"
+    }
+   ],
+   "link": "https://github.com/cheercheung/awesome-gemini-4-carbon-guide-and-use-cases",
+   "linkLabel": "Repository auf GitHub",
+   "id": "community-sammlung-25-gemini-4-carbon-demos-mit-quellen-und-",
+   "hinzugefuegt": "2026-10-25T09:27:12Z"
+  },
+  {
    "titel": "Live-Büro für Claude-Code- und Codex-Agenten auf dem eigenen Rechner",
    "kurz": "Das Open-Source-Projekt whatsmyagentdoing zeigt per Befehl /myoffice in einem Browser-Büro, was alle lokalen Claude-Code-, Codex- und Gemini-CLI-Agenten gerade tun. Es liest dafür nur lokale Logdateien.",
    "artikel": [
@@ -6358,8 +6649,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-25T04:48:37Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-10-25T09:27:12Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-10-25T00:10:45Z"
  }
 }
