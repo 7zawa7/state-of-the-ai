@@ -1331,6 +1331,75 @@
  ],
  "radar": [
   {
+   "titel": "Cognition veröffentlicht Open-Source-Plugin gegen kritische PHP-, Node.js- und GitLab-Lücken",
+   "kurz": "Cognition hat das Devin Vulnerability Fixes plugin als kostenlose Open-Source-Sammlung von Agent-Skills vorgestellt. Es soll drei kritische Remote-Code-Execution-Lücken in PHP, Node.js und selbst gehostetem GitLab beheben und pro Repository einen Pull Request öffnen.",
+   "artikel": [
+    "Cognition hat das Devin Vulnerability Fixes plugin veröffentlicht, eine kostenlose Sammlung aus drei Agent-Skills unter MIT-Lizenz. Sie zielen auf drei kritische Remote-Code-Execution-Lücken (RCE): PHP2Shell, ein Node.js-Sicherheitsupdate vom 21. Oktober 2026 und einen GitLab-Fehler mit CVSS 10.0. Die Skills laufen in Devin und in jedem Coding-Agenten, der SKILL.md-Dateien liest.",
+    "## Was das Plugin tut",
+    "Das Plugin folgt immer demselben Ablauf: Zuerst scannt der Agent nur lesend Dockerfiles, Basis-Images, Systempakete, CI, Helm, Terraform und weitere Konfigurationen. Danach wartet er auf eine Freigabe, bevor etwas verändert wird. Die Zielversionen werden gegen die offizielle Quelle geprüft, Tests laufen vor und nach der Änderung, und am Ende steht ein Pull Request pro Repository mit Versionen, Testergebnissen und Rollback-Plan.",
+    "## Die Lücken",
+    "PHP2Shell umfasst zwei Fehler (CVE-2026-109618 und CVE-2026-109619), die PHP mit CVSS v4.0 9.2 bewertet. Node.js behebt im Oktober-Release zehn CVEs, der wichtigste ist eine Schreiboperation außerhalb des Speichers im Brotli-Decoder. GitLab-CVE-2026-110264 ist ein Integer-Überlauf im Compiler für reguläre Ausdrücke, der nicht authentifizierte Codeausführung erlaubt und laut Herstellerangabe die Versionen ab 7.0 betrifft. Laut GitLab sind GitLab.com und GitLab Dedicated bereits gepatcht.",
+    "## Grenzen",
+    "Der Anbieter veröffentlicht keine Benchmark-Zahl zur Fehlerbehebungsquote. Die Qualität der Änderungen hängt laut Artikel davon ab, wie gut die eigenen Tests sind. Verwaltete Laufzeitumgebungen, Appliances und Electron-Apps werden nur markiert, nicht gepatcht.",
+    "## Einordnung",
+    "Im Vergleich zu Dependabot oder Snyk Agent Fix zielt das Plugin laut Artikel auf die Laufzeitebene: Basis-Images, Systempakete und Infrastruktur-als-Code statt Anwendungsabhängigkeiten und Quellcode."
+   ],
+   "quellen": [
+    {
+     "titel": "Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/10/24/cognition-devin-vulnerability-fixes-plugin-php2shell-nodejs-gitlab/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wer selbst PHP, Node.js oder ein eigenes GitLab betreibt, kann die Skills auf Repositories anwenden und die vorgeschlagenen Änderungen vor dem Merge prüfen.",
+    "Wer Docker-Images pflegt, kann den Inventar-Schritt nutzen, um veraltete Basis-Images zu finden.",
+    "Vor dem Einsatz sollte die eigene Testabdeckung geprüft werden, da der Artikel sie als entscheidend für die Validierung nennt."
+   ],
+   "ausprobieren": {
+    "prompt": "Please fix my PHP vulnerability.",
+    "tool": "Devin Vulnerability Fixes plugin",
+    "url": "https://www.marktechpost.com/2026/10/24/cognition-devin-vulnerability-fixes-plugin-php2shell-nodejs-gitlab/"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "devin-vuln-fixes",
+    "zeilen": [
+     "> Please fix my PHP vulnerability.",
+     "✓ Read-only inventory abgeschlossen",
+     "⚠ Freigabe erforderlich vor Änderungen",
+     "- alte PHP-Version entfernt",
+     "+ PHP 8.3.36 eingetragen",
+     "● Ein Pull Request pro Repository"
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-10-24",
+   "kennzahlen": [
+    {
+     "label": "PHP2Shell CVSS v4.0 (Herstellerangabe)",
+     "wert": "9.2"
+    },
+    {
+     "label": "GitLab-Lücke CVSS",
+     "wert": "10.0"
+    },
+    {
+     "label": "Node.js-CVEs im Oktober-Release",
+     "wert": "10"
+    },
+    {
+     "label": "Skills im Plugin",
+     "wert": "3"
+    }
+   ],
+   "signal": "Ein Open-Source-Werkzeug zielt auf die Laufzeitebene wie Basis-Images und Systempakete. Eine veröffentlichte Erfolgsquote fehlt jedoch.",
+   "link": "https://www.marktechpost.com/2026/10/24/cognition-devin-vulnerability-fixes-plugin-php2shell-nodejs-gitlab/",
+   "linkLabel": "Originalartikel lesen",
+   "id": "cognition-veroffentlicht-open-source-plugin-gegen-kritische-",
+   "hinzugefuegt": "2026-10-25T04:48:37Z"
+  },
+  {
    "titel": "Liquid AI stellt RIPL vor: Inference-Engine für Sub-50-ms-LFMs",
    "kurz": "Liquid AI hat mit RIPL eine Serving-Engine für seine Foundation Models (LFMs) vorgestellt, die laut Herstellerangaben vollständige Antworten in unter 50 ms liefern soll. Die Benchmarks stammen vom Hersteller selbst und sind nur für Enterprise-Kunden gedacht.",
    "artikel": [
@@ -6289,8 +6358,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-25T00:10:45Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-10-25T04:48:37Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-10-25T00:10:45Z"
  }
 }
