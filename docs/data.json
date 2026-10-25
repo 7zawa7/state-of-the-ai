@@ -1,6 +1,58 @@
 {
  "news": [
   {
+   "titel": "Kein erkennbarer KI-Nutzen außerhalb des Techsektors",
+   "kurz": "Laut einer Analyse des Apollo-Chefökonomen Torsten Slok bringt KI den Unternehmen außerhalb der Tech-Branche bisher kaum finanziellen Gewinn. Die Entscheidung über die KI-Geschichte falle daher im S&P 493, nicht bei den Mag 7.",
+   "artikel": [
+    "Torsten Slok, Chefökonom des Vermögensverwalters Apollo, beschreibt in seinem Beitrag „The Daily Spark“ vom 24. Oktober 2026, dass künstliche Intelligenz (KI) bisher keinen messbaren finanziellen Ertrag für Unternehmen außerhalb des Techsektors gebracht hat, trotz hoher Investitionen und viel Aufmerksamkeit.",
+    "## Zahlen aus der Analyse",
+    "Laut den von Apollo genannten Daten steigt der Umsatz je Beschäftigtem bei den Mag 7, den großen Technologiekonzernen, während er bei den übrigen Unternehmen des S&P 493 flach verläuft. Ähnlich ist es bei den Gewinnmargen: Sie steigen bei den Mag 7, bleiben beim S&P 493 aber unverändert. Auch die Produktivität zeigt laut Slok noch keine Anzeichen eines Anstiegs durch KI.",
+    "## Token-Ausgaben als Kostenfaktor",
+    "Als Token bezeichnet man die Recheneinheiten, nach denen KI-Modelle abgerechnet werden. Slok schreibt, klassische Unternehmen sähen ihre Token-Ausgaben zunehmend nicht als Wachstumsquelle, sondern als Kostenstelle, die die Margen belaste. Venture-Capital-finanzierte Firmen gäben immer mehr für Tokens aus, doch etablierte Unternehmen brauchten das neueste Modell oft nicht und seien nicht bereit, dafür zu zahlen.",
+    "## Begrenzte Wirkung auf die Gesamtwirtschaft",
+    "Solange sogenannte agentische KI, also Systeme, die selbstständig mehrstufige Aufgaben erledigen, und der Token-Verbrauch nur einen kleinen Teil der Wirtschaft betreffen, seien die makroökonomischen Effekte laut Slok sehr begrenzt. Offen sei, ob Unternehmen mit zunehmend günstiger werdender Intelligenz künftig höhere Umsätze und Margen erzielen können.",
+    "## Einschätzung des Autors",
+    "Slok argumentiert, Urteilsvermögen hänge vom Kontext ab, und KI verstehe unter anderem keine Verantwortung, kein Vertrauen und keine Fairness. Diese Faktoren beeinflussten aber Reputationsrisiken und letztlich Umsatz und Marge. Sein Fazit: Bisher gebe es keine Belege dafür, dass sich Umsatzwachstum oder Margen außerhalb des Techsektors verbessern.",
+    "Hinweis: Die Aussagen stammen von Apollo selbst und sind als Einschätzung eines Herstellers beziehungsweise Anbieters zu lesen. Die Diagramme beruhen laut Quellenangabe auf Daten von Bloomberg, Macrobond, der Federal Reserve Bank of San Francisco, dem US Bureau of Labor Statistics und Ramp."
+   ],
+   "quellen": [
+    {
+     "titel": "No Signs of AI Payoff Outside the Tech Sector (Apollo, The Daily Spark)",
+     "url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50224463"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Vergleiche die Ausgaben für KI-Dienste in deinem eigenen Projekt mit dem Nutzen, den du tatsächlich messen kannst.",
+    "Achte bei KI-Angeboten darauf, ob sie Zeit sparen oder nur Kosten verursachen.",
+    "Lies Studien zur KI-Produktivität kritisch und prüfe, wer die Daten geliefert hat."
+   ],
+   "bereich": "Text",
+   "datum": "2026-10-24",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Umsatz je Beschäftigtem (laut Apollo-Grafik, qualitativ)",
+    "balken": [
+     {
+      "label": "S&P 493",
+      "wert": 1,
+      "anzeige": "flach"
+     },
+     {
+      "label": "Mag 7",
+      "wert": 2,
+      "anzeige": "steigend"
+     }
+    ]
+   },
+   "id": "kein-erkennbarer-ki-nutzen-auserhalb-des-techsektors",
+   "hinzugefuegt": "2026-10-25T19:55:00Z"
+  },
+  {
    "titel": "Anthropic startet kostenlosen KI-Schwachstellenscanner für Open-Source-Projekte",
    "kurz": "Anthropic hat den OSS Scanner gestartet, ein kostenloses Opt-in-Programm, das kritische Open-Source-Projekte mit KI-Modellen auf Sicherheitslücken prüft. Die Berichte gehen ohne menschliche Vorprüfung direkt an die Maintainer.",
    "artikel": [
@@ -1424,6 +1476,83 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Hugging Face veröffentlicht Carbon-X: offenes 14,8B-DNA-Sprachmodell",
+   "kurz": "Hugging Face hat Carbon-X veröffentlicht, ein offenes Sprachmodell mit 14,8 Milliarden Parametern, das rohe DNA-Sequenzen im Chat lesen und auf Englisch beantworten kann. Die Gewichte stehen unter Apache-2.0-Lizenz zur Verfügung.",
+   "artikel": [
+    "## Was ist Carbon-X?",
+    "Carbon-X ist ein Decoder-only-Modell, das auf Qwen3-14B aufbaut und von Hugging Face Bio stammt. DNA und Text laufen in einem gemeinsamen Token-Strom durch einen einzigen Decoder; einen separaten DNA-Encoder gibt es nicht. Ein hybrider Tokenizer behält den BPE-Wortschatz für Text und ergänzt 5.515 DNA-Tokens, wobei ein DNA-Token jeweils 6 Basenpaare abdeckt. Das Modell kann Mutationen als harmlos oder krankheitsverursachend einordnen, regulatorische Regionen markieren, Organismen klassifizieren und nächste Basen vorhersagen.",
+    "## Training",
+    "Das Training lief in vier Stufen: Zunächst wurden nur die neuen DNA-Embeddings bei eingefrorenem Transformer trainiert, danach folgte Mid-Training mit 302 Milliarden Tokens. Anschließend kamen überwachtes Feintuning und Reinforcement Learning (asynchrones GRPO) hinzu. Laut Veröffentlichung war die Lernrate die schwierigste Stellschraube: Hohe Raten lernten DNA, ließen das Modell aber Englisch vergessen.",
+    "## Leistung (Herstellerangaben)",
+    "Alle Werte stammen laut Hugging Face selbst und sind damit Herstellerangaben. Im Schnitt erreicht Carbon-X 66,7 % über fünf DNA-Benchmarks, knapp 0,8 Punkte unter GPT-6.1 Sol. Besonders stark ist es bei BioReason Coding mit 74,9 %. Schwächer ist es bei Spleißstellen-Fragen in GenomeQA mit 29,8 %; das Modell ist nicht klinisch validiert.",
+    "## Betrieb",
+    "Laut Herstellerangabe kostet der Betrieb auf einer H200 rund 5 Dollar pro Stunde, was etwa 1/1.800 der Inferenzkosten von GPT-6.1 Sol pro Problem entspricht. Das Modell läuft auf einer 80-GB-GPU in bfloat16, eine Q8_0-GGUF-Version mit 15,8 GB ist ebenfalls verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "Hugging Face Releases Carbon-X, a 14B Open DNA Language Model (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/10/25/hugging-face-carbon-x-14b-dna-language-model/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Forschende können Carbon-X lokal auf eigenen GPUs laufen lassen, damit sensible Sequenzen das Labor nicht verlassen.",
+    "Wer mit DNA-Daten arbeitet, kann das Modell per vLLM oder Transformers testen und eigene Fragen stellen.",
+    "Entwickler können Carbon-X als Werkzeug in Coding-Agenten einbinden, da das Repo dafür einen Skill mitliefert."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "DNA-Benchmark-Durchschnitt (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Qwen3-14B",
+      "wert": 39.7,
+      "anzeige": "~40 %"
+     },
+     {
+      "label": "Kimi K3 (Low)",
+      "wert": 50.4,
+      "anzeige": "50,4 %"
+     },
+     {
+      "label": "Carbon-X",
+      "wert": 66.7,
+      "anzeige": "66,7 %"
+     }
+    ]
+   },
+   "tag": "Open Source",
+   "quelle": "Fachpresse",
+   "datum": "2026-10-25",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "14,8 Mrd."
+    },
+    {
+     "label": "Kontextlänge",
+     "wert": "40.960 Tokens"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    },
+    {
+     "label": "Speicherbedarf (GPU)",
+     "wert": "1 × 80 GB"
+    },
+    {
+     "label": "DNA-Benchmark-Durchschnitt (Herstellerangabe)",
+     "wert": "66,7 %"
+    }
+   ],
+   "signal": "Ein offenes Modell, das DNA und Englisch verbindet, senkt die Hürde für lokale Genomanalysen. Alle Leistungswerte sind Herstellerangaben und nicht unabhängig geprüft.",
+   "link": "https://www.marktechpost.com/2026/10/25/hugging-face-carbon-x-14b-dna-language-model/",
+   "linkLabel": "Originalartikel lesen",
+   "id": "hugging-face-veroffentlicht-carbon-x-offenes-14-8b-dna-sprac",
+   "hinzugefuegt": "2026-10-25T19:55:00Z"
+  },
   {
    "titel": "Cerebras zeigt, wie Billionen-Parameter-Modelle auf Wafer-Chips laufen",
    "kurz": "Cerebras beschreibt in einem Blogbeitrag, wie das offene Modell Kimi K3 mit rund 3 Billionen Parametern auf mehrere WSE-3T-Wafer verteilt wird. Die Technik basiert auf Pipeline-Verarbeitung und einer Aufteilung der Schichten nach Speicherbedarf.",
@@ -7008,7 +7137,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-25T17:33:30Z",
+  "letzterScan": "2026-10-25T19:55:00Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-10-25T00:10:45Z"
  }
