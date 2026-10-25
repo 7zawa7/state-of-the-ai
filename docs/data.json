@@ -1,6 +1,100 @@
 {
  "news": [
   {
+   "titel": "Anthropic startet kostenlosen KI-Schwachstellenscanner für Open-Source-Projekte",
+   "kurz": "Anthropic hat den OSS Scanner gestartet, ein kostenloses Opt-in-Programm, das kritische Open-Source-Projekte mit KI-Modellen auf Sicherheitslücken prüft. Die Berichte gehen ohne menschliche Vorprüfung direkt an die Maintainer.",
+   "artikel": [
+    "Anthropic hat den OSS Scanner vorgestellt, ein kostenloses Werkzeug, das kritische Open-Source-Projekte auf Schwachstellen untersucht. Teilnehmen können Projekte nur freiwillig. Laut Anthropic laufen die Prüfungen mit den stärksten Modellen des Unternehmens, darunter Claude Mythos.",
+    "## Ablauf und Aufbau",
+    "Projekte melden sich über einen Pull Request im Repository anthropics/oss-scanner an. Dafür wird eine project.yaml mit Angaben wie Repository und Kontakt sowie ein Dockerfile benötigt. Der Bauprozess läuft mit Netzzugang, die eigentliche Prüfung anschließend in einer VM ohne Internetverbindung. Die Berichte enthalten einen reproduzierbaren Testfall, eine Erklärung des Fehlers und möglichst einen Patch-Vorschlag. Das Werkzeug orientiert sich laut Quelle an Googles OSS-Fuzz, setzt aber Sprachmodelle statt Fuzzer ein.",
+    "## Zahlen laut Anthropic",
+    "Nach Angaben von Anthropic waren bis zum 19. Oktober 114 Projekte aufgenommen, bei rund 650 Bewerbungen. In den ersten elf Tagen nach dem Start am 8. Oktober meldete Anthropic 77 kritische und 803 hohe Befunde, die vom Modell bewertet wurden. Dabei handelt es sich um Herstellerangaben.",
+    "## Genauigkeit",
+    "Anthropic ließ 97 kritische und hohe Befunde aus 48 Projekten von eigenen Penetration-Testern prüfen. 85 davon (88 Prozent) erfüllten die Schwelle für die koordinierte Offenlegung. 11 waren echt, aber doppelt oder bereits bekannt, einer war ungültig. Der Hersteller nennt diese Werte selbst. Die Maintainer von wolfSSL berichteten, dass 72 von 74 Meldungen gültig waren.",
+    "## Kritik",
+    "Da keine menschliche Prüfung vor der Zustellung stattfindet, verlagert sich die Sichtungsarbeit auf die Projektteams. Maintainer berichteten laut Quelle zudem von übertriebenen Schweregraden."
+   ],
+   "quellen": [
+    {
+     "titel": "Anthropic Launches OSS Scanner, a Free AI Vulnerability Scanner – MarkTechPost",
+     "url": "https://www.marktechpost.com/2026/10/25/anthropic-launches-oss-scanner-a-free-ai-vulnerability-scanner/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wenn du Maintainer eines kritischen Open-Source-Projekts bist, kannst du prüfen, ob dein Projekt aufgenommen werden kann.",
+    "Als Nutzer kannst du Sicherheitsmeldungen der Projekte, die du verwendest, aufmerksam verfolgen.",
+    "Du kannst die Angaben zum Verfahren im Originalartikel und in den verlinkten Quellen selbst nachlesen."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-10-25",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Befunde in den ersten 11 Tagen (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Kritisch",
+      "wert": 77,
+      "anzeige": "77"
+     },
+     {
+      "label": "Hoch",
+      "wert": 803,
+      "anzeige": "803"
+     }
+    ]
+   },
+   "id": "anthropic-startet-kostenlosen-ki-schwachstellenscanner-fur-o",
+   "hinzugefuegt": "2026-10-25T13:52:22Z"
+  },
+  {
+   "titel": "Anthropic-Mitgründer Jack Clark rückt Prognose für sich selbst verbessernde KI auf 2027 vor",
+   "kurz": "Anthropic-Mitgründer Jack Clark hält sich selbst verbessernde KI nun schon 2027 für möglich, nachdem ein neuer Benchmark von P-Zero Research eine sehr steile Entwicklung bei der Versuchsplanung zeigt.",
+   "artikel": [
+    "Ein neuer Benchmark namens TasteVal der Forschungsgruppe P-Zero Research misst, wie gut KI-Modelle selbstständig Experimente entwerfen und deren Ergebnisse auswerten. Laut Anthropic-Mitgründer Jack Clark hat sich diese Fähigkeit seit Dezember 2025 etwa alle drei Monate verdoppelt. Daraus leitet er ab, dass rekursive Selbstverbesserung (RSI), bei der KI-Systeme ihre eigenen Nachfolger entwickeln, bereits 2027 möglich sein könnte. Bisher hatte er 2028 erwartet.",
+    "## Was TasteVal misst",
+    "P-Zero Research nennt die Fähigkeit „Research Taste“, also das Gespür dafür, die richtigen Experimente auszuwählen und daraus korrekte Schlüsse zu ziehen. Der Benchmark prüft allerdings nur die beiden letzten Teile: Experimente planen und Ergebnisse deuten. Die Wahl der vielversprechendsten Forschungsrichtung ist im Test bereits vorgegeben. Acht Aufgaben decken Bereiche wie Auswahl von Trainingsdaten, Vor- und Feintraining von Sprachmodellen sowie Abwehr von Adversarial Prompts ab, also gezielt manipulierten Eingaben. Alle Läufe nutzen einen einzigen Nvidia H100 und enden nach 40 GPU-Stunden oder 120 Stunden Laufzeit.",
+    "Als menschliche Vergleichsgruppe dienten 24 Experten, die zuvor unter anderem bei OpenAI, Google DeepMind, Nvidia und Microsoft Research gearbeitet hatten. Als Maßstab galt jeweils der beste menschliche Versuch pro Aufgabe. Das beste getestete Modell übertraf diese Gruppe laut Bericht zu einem Bruchteil der Kosten.",
+    "## Der Compute-Multiplikator",
+    "Um Research Taste messbar zu machen, übersetzt P-Zero Research sie in Recheneffizienz: Wer die richtigen Experimente wählt, braucht weniger Läufe für denselben Fortschritt. Das Spitzenmodell, laut Quelle Anthropics Opus 5.5, erreichte einen Compute-Multiplikator von 2,3, benötigte also weniger als die Hälfte der Rechenleistung für Expertenniveau. Die statistische Spanne reicht jedoch von 1,15 bis 4,37. Die Verdopplungszeit wird mit 1,7 bis 5,0 Monaten angegeben. Die Autoren selbst warnen, die Ergebnisse könnten das Tempo der Verbesserung überschätzen.",
+    "## Einordnung",
+    "Clark hatte sich in einem langen Essay im Mai vorsichtiger geäußert: etwa 30 Prozent Wahrscheinlichkeit bis 2027 und rund 60 Prozent bis Ende 2028 für ein System, das eigenständig einen stärkeren Nachfolger trainiert. Da er Mitgründer des Unternehmens ist, dessen Modell an der Spitze steht, weist die Quelle auf eine mögliche Voreingenommenheit hin. Der KI-Forscher Herbie Bradley widersprach im Mai und sah Forschungsgeschmack und langfristige Planung noch weit entfernt. Eine Studie der Fudan-Universität zeigt zudem: KI-Agenten lieferten bis zu 55 Prozent der Methodenvorschläge, die endgültigen Entscheidungen trafen jedoch zu über 85 Prozent Menschen.",
+    "Der Benchmark misst also nur einen engen Ausschnitt wissenschaftlicher Arbeit und beweist nicht, dass sich KI-Systeme bereits selbst verbessern. Er zeigt aber, dass sich die Debatte verschiebt: weg von reiner Modellleistung hin zur Frage, wie viel eigenständige Forschungsarbeit Sprachmodelle übernehmen können. Anthropic selbst schrieb im Juni, RSI sei noch nicht erreicht, könne aber schneller kommen, als Institutionen vorbereitet seien."
+   ],
+   "quellen": [
+    {
+     "titel": "Anthropic co-founder Jack Clark moves his prediction for self-improving AI forward to 2027 (The Decoder)",
+     "url": "https://the-decoder.com/anthropic-co-founder-jack-clark-moves-his-prediction-for-self-improving-ai-forward-to-2027/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Verfolge, wie Forschungsbenchmarks wie TasteVal die Debatte über selbstverbessernde KI prägen.",
+    "Lies die Originalstudie von P-Zero Research, um die Methodik und Unsicherheiten selbst zu prüfen.",
+    "Achte bei Aussagen einzelner Labore darauf, dass Gründer und Hersteller oft eigene Interessen haben."
+   ],
+   "bereich": "Text",
+   "datum": "2026-10-25",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Compute-Multiplikator des Spitzenmodells (Quelle: P-Zero Research)",
+    "balken": [
+     {
+      "label": "Expertenbaseline",
+      "wert": 1,
+      "anzeige": "1,0×"
+     },
+     {
+      "label": "Opus 5.5 (Herstellerangabe Anthropic)",
+      "wert": 2.3,
+      "anzeige": "2,3×"
+     }
+    ]
+   },
+   "id": "anthropic-mitgrunder-jack-clark-ruckt-prognose-fur-sich-selb",
+   "hinzugefuegt": "2026-10-25T13:52:22Z"
+  },
+  {
    "titel": "Moonshot AI stellt Kimi K3.1 Pro vor: 2,8 Billionen Parameter, 1 Million Token Kontext",
    "kurz": "Moonshot AI hat mit Kimi K3.1 Pro das erste Modell seiner K3.1-Reihe veröffentlicht. Die Gewichte sollen laut Ankündigung erst im November 2026 folgen; die API ist bereits nutzbar.",
    "bereich": "Text",
@@ -1330,6 +1424,147 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Nvidia Flora: Open-Source-Datenengine labelt Roboter-Videos deutlich günstiger",
+   "kurz": "Nvidia stellt mit Flora eine offene Datenengine vor, die Annotationen für Roboter-Videos laut eigenen Angaben etwa 125-mal günstiger erstellt als GPT-6 Astra. Bei Fehlererkennung ist das System stark, bei Beschreibungsgenauigkeit schwächer.",
+   "artikel": [
+    "## Was Flora macht",
+    "Große KI-Modelle für Roboter lernen aus Videos, die mit Textbeschreibungen versehen sein müssen. Laut Nvidias Forschungslabor GEAR sind dafür drei Arten von Labels nötig: Beschreibungen, welche Aktion wann passiert, Bewertungen, wie gut ein Roboter Schritt für Schritt vorankommt, und Urteile, ob eine Aufgabe erfolgreich abgeschlossen wurde. Die meisten bestehenden Werkzeuge liefern nur eine dieser Arten. Große Sprachmodelle wie GPT-6 Astra können mehrere erzeugen, sind für die riesigen Videomengen aber zu teuer. Flora zerlegt Videos in Zeitabschnitte, beschreibt jede Aktion und bewertet Ausführung und Ergebnis einer Episode.",
+    "## Aufbau",
+    "Flora besteht aus drei feinabgestimmten Modellen auf Basis von Qwen3.5. Ein 9B-Modell teilt Videos in Aktionssegmente auf, ein 27B-Modell beschreibt diese unter Berücksichtigung dessen, was davor und danach geschah. Ein zweites 27B-Modell namens Flora-Rewarder bewertet den Erfolg einer Episode auf einer Skala von 1 bis 5 und stuft jeden halbsekündigen Schritt als normal, suboptimal oder Fehler ein. Laut Nvidia läuft das System bereits beim Training der eigenen GR00T-Modelle und annotiert dort bis zu 200.000 Videostunden pro Tag auf 512 GB300-GPUs. Die Modelle sind auf Hugging Face verfügbar.",
+    "## Kosten und Qualität (Herstellerangaben)",
+    "Nvidia gibt an, dass Flora in einem Test mit 50 Videos leicht besser abschnitt als GPT-6 Astra. Eine Stunde Video kostet laut Nvidia mit Flora etwa 72 Cent, mit GPT-6 Astra rund 88,50 Dollar. Das wären etwa 125-mal weniger. Diese Kostenzahlen sind jedoch Hochrechnungen, keine Messungen aus dem Produktivbetrieb, und basieren auf einem angenommenen Mietpreis von 10 Dollar pro GPU und Stunde.",
+    "## Stärken und Schwächen",
+    "Laut Nvidias eigenen Tests erkennt Flora Aktionsgrenzen besser, während Astra Beschreibungen oft genauer formuliert. Bei Fehlern innerhalb einer Episode liegt Flora deutlich vorn: Der Rewarder erkennt 53,3 Prozent der fehlerhaften Schritte, während kein Konkurrent über 11,7 Prozent kommt. Der Preis dafür: Etwa 11 Prozent normaler Schritte werden fälschlich als Fehler markiert. Flora zerteilt längere Aktionen manchmal in zu viele kleine Schritte und liefert gelegentlich falsche Beschreibungen. Die Forscher räumen außerdem ein, dass Astra die Beschreibungen bewertet, obwohl es selbst zu den getesteten Modellen gehört.",
+    "## Einordnung",
+    "Flora ist eine offene Alternative zu kommerziellen Diensten wie Scale AIs Physical AI Data Engine. Nvidia positioniert das Werkzeug als Baustein seiner Strategie, die gesamte Robotik-Wertschöpfungskette abzudecken, von Hardware über Trainingsdaten bis zu Simulation und Modellen."
+   ],
+   "quellen": [
+    {
+     "titel": "Nvidia open-sources Flora to make robot video labeling 125x cheaper than GPT-6 Astra",
+     "url": "https://the-decoder.com/nvidia-open-sources-flora-to-make-robot-video-labeling-125x-cheaper-than-gpt-6-astra/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Forschende können Flora nutzen, um eigene Robotik-Datensätze mit Aktions- und Bewertungslabels zu erweitern.",
+    "Entwickler können die auf Hugging Face verfügbaren Modelle testen, etwa für das Übertragen menschlicher Demonstrationen auf Roboter.",
+    "Teams können prüfen, ob sich die Kosten für eigene Videoannotationen mit einem offenen Modell senken lassen."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-10-25",
+   "kennzahlen": [
+    {
+     "label": "Kosten pro Stunde Video (Flora, Herstellerangabe)",
+     "wert": "0,72 $"
+    },
+    {
+     "label": "Kosten pro Stunde Video (GPT-6 Astra, Herstellerangabe)",
+     "wert": "ca. 88,50 $"
+    },
+    {
+     "label": "Annotationsqualität Flora (Herstellerangabe)",
+     "wert": "57,1 %"
+    },
+    {
+     "label": "Annotationsqualität GPT-6 Astra (Herstellerangabe)",
+     "wert": "53,7 %"
+    },
+    {
+     "label": "Erkannte fehlerhafte Schritte Flora-Rewarder",
+     "wert": "53,3 %"
+    }
+   ],
+   "signal": "Nvidia will mit einer offenen, günstigen Datenengine die Robotik-Trainingsdaten und das eigene Hardware-Ökosystem stärken. Die Kostenangaben sind Herstellerschätzungen, nicht unabhängig geprüft.",
+   "link": "https://the-decoder.com/nvidia-open-sources-flora-to-make-robot-video-labeling-125x-cheaper-than-gpt-6-astra/",
+   "linkLabel": "Artikel bei THE DECODER lesen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Kosten pro Stunde Video (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "GPT-6 Astra",
+      "wert": 88.5,
+      "anzeige": "ca. 88,50 $"
+     },
+     {
+      "label": "Flora",
+      "wert": 0.72,
+      "anzeige": "0,72 $"
+     }
+    ]
+   },
+   "id": "nvidia-flora-open-source-datenengine-labelt-roboter-videos-d",
+   "hinzugefuegt": "2026-10-25T13:52:22Z"
+  },
+  {
+   "titel": "TokenGate: Gelernte Token-Auswahl beschleunigt lange Eingaben bei LLMs",
+   "kurz": "Forschende von Stanford und UC Berkeley stellen TokenGate vor, ein Zusatzmodul, das die Vorverarbeitung langer Kontexte in LLMs laut eigenen Angaben um das 1,4- bis 11,3-Fache beschleunigt. Die Zahlen stammen aus den Messungen der Autoren in deren eigenem Aufbau.",
+   "artikel": [
+    "## Worum es geht",
+    "Stanford und UC Berkeley haben TokenGate veröffentlicht, ein Modul für die Verarbeitung langer Eingaben (Prefill) in großen Sprachmodellen. Es lässt ein bestehendes Modell den Eingabetext gewissermaßen überfliegen: Nur die relevanten Tokens (Textbausteine) werden vollständig verarbeitet. Laut den Autoren sinkt damit die Zeit bis zum ersten Ausgabe-Token (TTFT) um den Faktor 1,4 bis 11,3, der Spitzenbedarf an Speicher um den Faktor 1,5 bis 3,4, ohne Genauigkeitsverlust.",
+    "## Wie das Verfahren funktioniert",
+    "Normalerweise durchläuft jedes Token alle Schichten des Modells, und der Aufwand der Aufmerksamkeit (Attention) wächst quadratisch mit der Länge. TokenGate fügt ein kleines MLP-Gate hinzu, das jedem Token anhand seines Zustands in einer Schicht eine Bewertung gibt. Ein Top-K-Auswahlverfahren behält die besten Tokens; die oberen Schichten verarbeiten nur diese. Nur der Dokumentteil eines Prompts wird gekürzt, die Frage bleibt erhalten. Da die harte Auswahl nicht differenzierbar ist, übernehmen die Autoren eine Idee aus Mixture-of-Experts-Modellen: Die Bewertung wird als Verzerrung auf die Aufmerksamkeitswerte gelegt, sodass sich das Gate trainieren lässt.",
+    "## Ergebnisse laut Autoren",
+    "Getestet wurde Qwen3-1.7B auf fünf Aufgaben, darunter RepoBench-P, 2WikiMultihopQA und Needle-in-a-Haystack (NIAH), gegen sechs Vergleichsverfahren. Gegenüber dem jeweils nächstbesten Verfahren nennen die Autoren 1,2- bis 6,4-fache Beschleunigung der TTFT. Bei 2WikiMultihopQA lief der Prefill bei 95 Prozent der Genauigkeit des vollen Kontexts 3,0-mal schneller. Auch auf dem hybriden Modell Qwen3.5-2B funktionierte das Verfahren, wo FastKV nur Attention-Schichten kürzen kann. Die Autoren betonen, dass die Vergleichswerte aus unterschiedlichen Setups stammen und nicht direkt vergleichbar sind.",
+    "## Einsatz",
+    "Code und Checkpoints liegen laut Artikel auf GitHub unter Apache-2.0. Voraussetzungen sind Python 3.10+ und PyTorch 2.9+ mit CUDA. Ein Training dauert laut Autoren etwa 1,8 statt 2,2 A100-Stunden im Mittel, jeder Schritt ist jedoch 1,3-mal langsamer als normales LoRA. Die Angaben zu Geschwindigkeit und Speicher sind Herstellerangaben der Forschungsgruppe und noch nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Researchers from Stanford and UC Berkeley Introduce TokenGate (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/10/25/stanford-berkeley-tokengate-learned-token-pruning-llm-prefill/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler mit langen Dokumenten oder Code-Repositories können prüfen, ob das Modul die Antwortzeit ihrer Qwen3-Modelle senkt.",
+    "Wer selbst Modelle feinabstimmt, kann das Gate-Training mit dem beschriebenen TRL/PEFT-Rezept nachbauen.",
+    "Privatpersonen mit schwacher Hardware profitieren eher indirekt, da der Code frei verfügbar ist."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "TTFT-Beschleunigung bei 128k (laut Autoren)",
+    "balken": [
+     {
+      "label": "Vollständiger Prefill",
+      "wert": 1,
+      "anzeige": "1x"
+     },
+     {
+      "label": "TokenGate",
+      "wert": 13,
+      "anzeige": "13,0x"
+     }
+    ]
+   },
+   "tag": "Herstellerangabe",
+   "quelle": "Fachpresse",
+   "datum": "2026-10-25",
+   "kennzahlen": [
+    {
+     "label": "TTFT-Beschleunigung",
+     "wert": "1,4x bis 11,3x (Autorenangabe)"
+    },
+    {
+     "label": "Speicherersparnis Prefill",
+     "wert": "1,5x bis 3,4x (Autorenangabe)"
+    },
+    {
+     "label": "Basismodelle",
+     "wert": "Qwen3-1.7B, Qwen3.5-2B"
+    },
+    {
+     "label": "Kontextlänge",
+     "wert": "bis 128k Tokens"
+    }
+   ],
+   "signal": "Lange Kontexte werden laut Autoren deutlich günstiger, wenn ein Gate nur wichtige Tokens weiterreicht. Die Zahlen sind Eigenangaben und sollten unabhängig geprüft werden.",
+   "link": "https://github.com",
+   "linkLabel": "Code auf GitHub",
+   "id": "tokengate-gelernte-token-auswahl-beschleunigt-lange-eingaben",
+   "hinzugefuegt": "2026-10-25T13:52:22Z"
+  },
   {
    "titel": "Anthropic: Ein einzelner Agent schlägt viele Subagenten",
    "kurz": "Anthropic empfiehlt Unternehmen zu prüfen, ob sich mehrere Subagenten zu einem einzigen Agenten zusammenfassen lassen, der Kontext bei Bedarf lädt. In einem Architekturvergleich lief der Einzelagent laut Anthropic etwa doppelt so schnell.",
@@ -6649,7 +6884,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-25T09:27:12Z",
+  "letzterScan": "2026-10-25T13:52:22Z",
   "neueFunde": 4,
   "standAktualisiert": "2026-10-25T00:10:45Z"
  }
