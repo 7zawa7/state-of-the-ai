@@ -1,6 +1,63 @@
 {
  "news": [
   {
+   "titel": "Altes CNN schlägt GPT-6 Astra und Claude Fable 5.1 bei Hautkrebs-Erkennung",
+   "kurz": "Ein zehn Jahre altes, nachtrainiertes CNN (Inception v3) erkannte in einem Test mit 200 biopsierten Hautläsionen 62 Prozent der Diagnosen richtig, zwei aktuelle Sprachmodelle nur je 42 Prozent. Die Ergebnisse stammen von einem einzelnen Blog-Experiment.",
+   "artikel": [
+    "Ein Blog-Beitrag des Lynch Lab vergleicht drei KI-Modelle bei der Einschätzung von Hautläsionen. Getestet wurden die beiden Sprachmodelle GPT-6 Astra und Claude Fable 5.1 sowie ein Convolutional Neural Network (CNN), also ein auf Bilderkennung spezialisiertes neuronales Netz. Das CNN ist Inception v3, das Google 2015 veröffentlicht hat und das hier mit öffentlichen Dermatologie-Bildern nachtrainiert wurde.",
+    "## Testaufbau",
+    "Grundlage ist der öffentliche Datensatz MILK10k, in dem jede Läsion zweimal fotografiert wurde: als klinische Nahaufnahme und als Dermatoskopie-Bild, also durch die beleuchtete Lupe, die Hautärzte verwenden. Der Autor wählte 200 zufällige Läsionen aus, alle durch Histopathologie (Gewebeuntersuchung) bestätigt. 100 davon sollten nicht entlassen werden, 100 gelten als unbedenklich. Auch die gutartigen Fälle waren biopsiert, weshalb sie schwerer zu diagnostizieren sind.",
+    "Die Sprachmodelle erhielten nur die beiden Bilder und sollten die wahrscheinlichste von sechs Diagnosen nennen, zusätzlich Sicherheit, eine Zweitwahl und ob die Läsion ohne Behandlung entlassen werden kann. Das CNN wurde auf 68.011 Bildern aus dem ISIC-Archiv trainiert; die 200 Testläsionen waren dabei ausgeschlossen.",
+    "## Ergebnisse",
+    "Bei der ersten Antwort lag das CNN bei 125 von 200 Läsionen (62 Prozent). GPT-6 Astra kam auf 84 (42 Prozent), Claude Fable 5.1 auf 85 (42 Prozent). Mit einer Zweitwahl erreichte das CNN 173 von 200, die Sprachmodelle 134 und 138. Bei Melanomen erkannte das CNN 13 von 30, GPT-6 Astra 8 und Claude Fable 5.1 11.",
+    "Besonders groß war der Abstand bei harmlosen Läsionen: Das CNN erkannte 37 von 50 Muttermalen und 26 von 50 seborrhoischen Keratosen (gutartige Warzen-ähnliche Hautveränderungen). GPT-6 Astra kam hier auf 16 und 13, Claude Fable 5.1 auf 33 und 6. Bei Basalzellkarzinomen lag das CNN knapp hinter GPT-6 Astra, bei aktinischen Keratosen hinter beiden Sprachmodellen.",
+    "Die Modelle machten unterschiedliche Fehler: GPT-6 Astra nannte 75 Läsionen Basalzellkarzinom, obwohl nur 25 so waren. Claude Fable 5.1 nannte 53 Läsionen aktinische Keratose, obwohl es 20 waren.",
+    "## Einordnung",
+    "Der Autor betont, dass das CNN bewusst nicht State of the Art ist. Es handelt sich um einen einzelnen Test mit 200 Fällen und einem Autor; die Ergebnisse sind keine klinische Studie. Die Herstellerangaben zu den Modellen (etwa GPT-6 Astra, Claude Fable 5.1) wurden hier nicht geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis – Lynch Lab",
+     "url": "https://lynchlab.net/llm-skin-cancer"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50233779"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Die Ergebnisse zeigen, dass für bestimmte Bildaufgaben spezialisierte Modelle auch gegenüber großen Sprachmodellen bestehen können.",
+    "Wer sich für den Test interessiert, kann die Bildauswahl im Blog nachvollziehen, aber keine Diagnosen daraus ableiten.",
+    "Das CNN lässt sich laut Autor im Browser ausführen, ohne dass Bilder hochgeladen werden."
+   ],
+   "bereich": "Text",
+   "datum": "2026-10-01",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Richtige Erstdiagnose (von 200 Läsionen)",
+    "balken": [
+     {
+      "label": "GPT-6 Astra",
+      "wert": 84,
+      "anzeige": "84 (42%)"
+     },
+     {
+      "label": "Claude Fable 5.1",
+      "wert": 85,
+      "anzeige": "85 (42%)"
+     },
+     {
+      "label": "CNN (Inception v3)",
+      "wert": 125,
+      "anzeige": "125 (62%)"
+     }
+    ]
+   },
+   "id": "altes-cnn-schlagt-gpt-6-astra-und-claude-fable-5-1-bei-hautk",
+   "hinzugefuegt": "2026-10-25T22:25:44Z"
+  },
+  {
    "titel": "Kein erkennbarer KI-Nutzen außerhalb des Techsektors",
    "kurz": "Laut einer Analyse des Apollo-Chefökonomen Torsten Slok bringt KI den Unternehmen außerhalb der Tech-Branche bisher kaum finanziellen Gewinn. Die Entscheidung über die KI-Geschichte falle daher im S&P 493, nicht bei den Mag 7.",
    "artikel": [
@@ -5799,6 +5856,67 @@
  ],
  "projekte": [
   {
+   "titel": "Kinoloom: Lokales KI-Filmstudio für eine Windows-Grafikkarte mit 8 GB",
+   "kurz": "Kinoloom ist ein Open-Source-Projekt auf GitHub, das auf einem einzelnen Windows-PC mit 8-GB-NVIDIA-Karte Geschichten schreibt, Figuren besetzt und Szenen mit Videomodellen rendert. Es verbindet kurze Clips innerhalb des Modells zu langen Einstellungen und basiert auf ComfyUI.",
+   "artikel": [
+    "Das Projekt Kinoloom des GitHub-Nutzers harlixay7 ist ein lokales KI-Filmstudio für einen einzelnen Windows-PC mit einer NVIDIA-Grafikkarte mit 8 GB Videospeicher. Laut Repository schreibt man dort die Geschichte und besetzt die Figuren, das System rendert anschließend die Einstellungen und schneidet den Film auf dem eigenen Rechner.",
+    "## Ablauf und Modelle",
+    "Für das Rendern nennt das Projekt drei Modelle: LTX-2.5, MiniMax H3 und Qwen-Image 2.1. Die Gewichte von MiniMax H3 muss man selbst beschaffen, der Installer lädt die übrigen Dateien. Die Software baut auf ComfyUI auf, einer Oberfläche für Bild- und Videomodelle.",
+    "Ein Fachbegriff aus der Beschreibung ist „Seamless Chain“: Videomodelle erzeugen nur wenige Sekunden am Stück. Kinoloom reicht das Ende eines Abschnitts als sogenannte Latents, also interne Zwischenwerte vor der Umwandlung in Bilder, an den nächsten Abschnitt weiter und verbindet die Teile dort. Laut Projektseite entfällt dadurch der sichtbare Schnitt an jeder Verbindungsstelle.",
+    "## Hardware-Anspruch",
+    "Das Projekt beschreibt einen Testrechner mit RTX 3070 (8 GB) und 64 GB Arbeitsspeicher. Die Modelle sind laut Beschreibung weit größer als der Grafikspeicher. Kinoloom gibt die Karte deshalb jeweils nur einem Modell gleichzeitig und streamt die Teile, die nicht hineinpassen, aus dem Arbeitsspeicher nach.",
+    "## Status",
+    "Laut Projektseite ist Kinoloom ein Ein-Personen-Projekt, das bisher nur auf einer Maschine getestet wurde. Die Modellgewichte liegen nicht im Git-Repository. Die Projektseite weist darauf hin, dass einige Modelle die kommerzielle Nutzung oder den Einsatzort einschränken. Das Repository hatte zum Zeitpunkt der Abfrage 5 Sterne."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: harlixay7/Kinoloom",
+     "url": "https://github.com/harlixay7/Kinoloom"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Ein eigenes kurzes Storyboard mit einer Figur und mehreren Einstellungen auf einem kompatiblen Windows-PC lokal rendern.",
+    "Die Projektdokumentation zu Hardware und Installation prüfen, bevor man den Installer startet.",
+    "Die Lizenzen der einzelnen Modelle lesen, bevor man Ergebnisse veröffentlicht oder kommerziell nutzt."
+   ],
+   "macher": "harlixay7",
+   "branche": "Video / Open Source",
+   "jahr": "",
+   "tools": [
+    "ComfyUI",
+    "LTX-2.5",
+    "MiniMax H3",
+    "Qwen-Image 2.1"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "5"
+    },
+    {
+     "label": "Grafikspeicher (Testrechner)",
+     "wert": "8 GB"
+    },
+    {
+     "label": "Arbeitsspeicher (Testrechner)",
+     "wert": "64 GB"
+    },
+    {
+     "label": "LTX-2.5 Parameter (Herstellerangabe)",
+     "wert": "22 Mrd."
+    }
+   ],
+   "link": "https://github.com/harlixay7/Kinoloom",
+   "linkLabel": "Zum Repository",
+   "vorschau": {
+    "szene": "schnitt",
+    "titel": "Kinoloom"
+   },
+   "id": "kinoloom-lokales-ki-filmstudio-fur-eine-windows-grafikkarte-",
+   "hinzugefuegt": "2026-10-25T22:25:44Z"
+  },
+  {
    "titel": "Community-Sammlung: 25 Gemini-4-Carbon-Demos mit Quellen und Grenzen",
    "kurz": "Ein GitHub-Repository (4 Sterne) sammelt 25 öffentliche Community-Beispiele, die laut ihren Veröffentlichern mit Gemini 4 Carbon in der frühen Rollout-Phase entstanden sind. Die Sammlung ordnet sie nach 3D-Objekten, Voxel-Welten, SVG, Spielen und Modellvergleichen.",
    "artikel": [
@@ -7137,7 +7255,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-25T19:55:00Z",
+  "letzterScan": "2026-10-25T22:25:44Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-10-25T00:10:45Z"
  }
