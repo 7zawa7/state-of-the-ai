@@ -1425,6 +1425,130 @@
  ],
  "radar": [
   {
+   "titel": "Cerebras zeigt, wie Billionen-Parameter-Modelle auf Wafer-Chips laufen",
+   "kurz": "Cerebras beschreibt in einem Blogbeitrag, wie das offene Modell Kimi K3 mit rund 3 Billionen Parametern auf mehrere WSE-3T-Wafer verteilt wird. Die Technik basiert auf Pipeline-Verarbeitung und einer Aufteilung der Schichten nach Speicherbedarf.",
+   "artikel": [
+    "Cerebras erklärt in einem Blogbeitrag, wie sich sehr große KI-Modelle auf den eigenen Wafer-Scale-Chips betreiben lassen. Als Beispiel dient das offene Modell Kimi K3 mit etwa 3 Billionen Parametern. Parameter sind die gelernten Gewichte eines Modells; bei dieser Größe brauchen sie allein Terabytes an Speicher, während ein einzelner WSE-3T-Wafer laut Hersteller 44 GB On-Chip-Speicher (SRAM) hat.",
+    "## Schichten passend verteilen",
+    "Bei 4 Bit pro Parameter und 93 Schichten entfallen laut Beitrag etwa 16 GB auf eine Schicht. Dabei gibt es zwei Typen: Volle Aufmerksamkeitsschichten (Dense Layers) brauchen zusätzlich Platz für den KV-Cache, der Schlüssel und Werte jedes Tokens speichert. Lineare Aufmerksamkeitsschichten halten dagegen nur einen kleinen, festen Zustand pro Anfrage. Deshalb liegt auf jedem Wafer eine volle Schicht, während auf die linearen Schichten jeweils zwei passen. Daraus ergeben sich laut Cerebras 59 Wafer für das Modell.",
+    "## Pipeline statt Warten",
+    "Die Wafer arbeiten wie eine Fließbandkette: Jeder Wafer führt einige Schichten aus und gibt nur die Aktivierungen an den nächsten weiter, etwa über RDMA über Ethernet mit rund 2 Mikrosekunden pro Sprung. Die Gewichte bleiben meist auf dem Chip. Viele Anfragen laufen gleichzeitig durch die Stufen, sodass nicht jede Stufe auf das Ende einer einzelnen Anfrage warten muss.",
+    "## Wie viele Anfragen passen",
+    "Die Zahl gleichzeitiger Anfragen hängt davon ab, wie viel Speicher nach der Dense-Schicht für den KV-Cache übrig bleibt. Cerebras nennt als Maßstab eine angenommene durchschnittliche Anfragegröße von 256k Tokens. Der Beitrag betont außerdem, dass für die Bewertung eines Inferenzsystems vor allem der Token-Durchsatz pro Leistungseinheit zählt, etwa Tokens pro Sekunde pro Megawatt.",
+    "Laut Cerebras soll das Verfahren auch für noch größere Modelle funktionieren, indem weitere Wafer hinzukommen. Die Angaben zu Geschwindigkeit (1000 bis 2000+ Tokens pro Sekunde) stammen vom Hersteller und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "How we deploy Trillion-parameter frontier models on Cerebras",
+     "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras"
+    },
+    {
+     "titel": "Hacker News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50227356"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer Interesse an Inferenz großer Modelle hat, kann den Blogbeitrag als Einstieg in Pipeline-Parallelität nutzen.",
+    "Entwickler können laut Beitrag über die kostenlose Cerebras-API eigene Modelle oder Anwendungen testen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Herstellerangabe: Geschwindigkeit pro Sekunde",
+    "balken": [
+     {
+      "label": "Untere Angabe",
+      "wert": 1000,
+      "anzeige": "1000 Tokens/s"
+     },
+     {
+      "label": "Obere Angabe",
+      "wert": 2000,
+      "anzeige": "2000+ Tokens/s"
+     }
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "2026-10-22",
+   "kennzahlen": [
+    {
+     "label": "On-Chip-Speicher pro WSE-3T-Wafer",
+     "wert": "44 GB"
+    },
+    {
+     "label": "Modellgröße Kimi K3",
+     "wert": "ca. 3 Billionen Parameter"
+    },
+    {
+     "label": "Speicher pro Schicht (4 Bit)",
+     "wert": "ca. 16 GB"
+    },
+    {
+     "label": "Wafer für Kimi K3",
+     "wert": "59"
+    },
+    {
+     "label": "Übergabe zwischen Wafern",
+     "wert": "ca. 2 µs pro Sprung"
+    }
+   ],
+   "signal": "Cerebras zeigt eine konkrete Methode, Modelle mit rund 3 Billionen Parametern über mehrere Wafer zu verteilen. Die Zahlen stammen aus dem Hersteller-Blog und sind nicht unabhängig geprüft.",
+   "link": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+   "linkLabel": "Cerebras-Blog lesen",
+   "id": "cerebras-zeigt-wie-billionen-parameter-modelle-auf-wafer-chi",
+   "hinzugefuegt": "2026-10-25T17:33:30Z"
+  },
+  {
+   "titel": "OpenAI skaliert Habitat: Azure Cosmos DB mit co-verwalteten Containern",
+   "kurz": "OpenAI beschreibt, wie der Speicherdienst Habitat für über eine Milliarde ChatGPT-Nutzer ausgebaut wurde. Im zweiten Teil geht es um die Optimierung von Azure Cosmos DB, die laut OpenAI 12× schnellere Lesezugriffe bringt.",
+   "artikel": [
+    "OpenAI betreibt mit Habitat eine Speicherplattform für Online-Daten, auf die Produkte wie ChatGPT, die API und Codex zugreifen. Laut OpenAI soll Habitat Anfragen in Millisekunden beantworten, für über eine Milliarde Nutzer in 40 Regionen weltweit. Insgesamt verwaltet die Plattform nach Angaben des Unternehmens mehr als 500 Petabyte Daten.",
+    "## Multi-Tenancy",
+    "Mit Multi-Tenancy teilen sich mehrere Produkte eine zentrale Datenbankinstanz. Das spart Kapazität, bringt aber das Problem von „Noisy Neighbors“: Ein Kunde mit sehr hoher Last kann die Leistung für andere beeinträchtigen. OpenAI hat laut eigener Darstellung mehrere Modelle getestet, von einem großen Multi-Tenant-Container über einzelne Container pro Dienst bis zurück zu einem Multi-Tenant-Container als Standard.",
+    "## Azure Cosmos DB",
+    "Ein Cosmos-DB-Container hat einen festen Durchsatz in Request Units pro Sekunde (RU/s). Daten werden über einen logischen Partitionsschlüssel auf physische Partitionen verteilt. Das Limit von 10.000 RU/s gilt laut Beitrag für logische Schlüssel, tatsächlich aber teilen sich alle Schlüssel einer physischen Partition deren Grenzen.",
+    "## Ergebnis",
+    "In der ersten Phase verließ sich OpenAI auf die Grenzen von Cosmos DB, wodurch häufige Kollisionen bei üblichen Schlüsseln wie user_id auftraten. In der zweiten Phase setzte das Team auf co-verwaltete Container. Laut OpenAI ergibt sich daraus eine gute Leseleistung im globalen Maßstab. Der Beitrag enthält Herstellerangaben, die unabhängig nicht überprüft sind."
+   ],
+   "demo": "stimme",
+   "machen": [
+    "Wer eigene Apps mit vielen Nutzern baut, kann prüfen, wie geteilte Datenbanken mit Lastspitzen umgehen.",
+    "Entwickler können sich mit Partitionsschlüsseln und Durchsatzlimits in Cosmos DB beschäftigen.",
+    "Interessierte können den Teil I der Serie lesen, um den Weg von Habitat zu verstehen."
+   ],
+   "quellen": [
+    {
+     "titel": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+     "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two"
+    }
+   ],
+   "quelle": "Lab-Blog",
+   "datum": "2026-10-23",
+   "kennzahlen": [
+    {
+     "label": "Lesezugriffe",
+     "wert": "12× schneller (Herstellerangabe)"
+    },
+    {
+     "label": "Regionen",
+     "wert": "40"
+    },
+    {
+     "label": "Datenvolumen",
+     "wert": "über 500 Petabyte"
+    },
+    {
+     "label": "Durchsatz pro logischem Partitionsschlüssel",
+     "wert": "10.000 RU/s (Limit laut Beitrag)"
+    }
+   ],
+   "signal": "Ein großer Betreiber beschreibt offen, wie er Multi-Tenancy und Noisy Neighbors in einer Cloud-Datenbank löst.",
+   "link": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+   "linkLabel": "Zum Originalbeitrag",
+   "id": "openai-skaliert-habitat-azure-cosmos-db-mit-co-verwalteten-c",
+   "hinzugefuegt": "2026-10-25T17:33:30Z"
+  },
+  {
    "titel": "Nvidia Flora: Open-Source-Datenengine labelt Roboter-Videos deutlich günstiger",
    "kurz": "Nvidia stellt mit Flora eine offene Datenengine vor, die Annotationen für Roboter-Videos laut eigenen Angaben etwa 125-mal günstiger erstellt als GPT-6 Astra. Bei Fehlererkennung ist das System stark, bei Beschreibungsgenauigkeit schwächer.",
    "artikel": [
@@ -6884,8 +7008,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-25T13:52:22Z",
-  "neueFunde": 4,
+  "letzterScan": "2026-10-25T17:33:30Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-10-25T00:10:45Z"
  }
 }
