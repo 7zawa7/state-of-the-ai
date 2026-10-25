@@ -1,6 +1,58 @@
 {
  "news": [
   {
+   "titel": "Moonshot AI stellt Kimi K3.1 Pro vor: 2,8 Billionen Parameter, 1 Million Token Kontext",
+   "kurz": "Moonshot AI hat mit Kimi K3.1 Pro das erste Modell seiner K3.1-Reihe veröffentlicht. Die Gewichte sollen laut Ankündigung erst im November 2026 folgen; die API ist bereits nutzbar.",
+   "bereich": "Text",
+   "datum": "2026-10-23",
+   "artikel": [
+    "Moonshot AI hat Kimi K3.1 Pro veröffentlicht, das erste Modell der K3.1-Reihe. Das Modell arbeitet nach dem Mixture-of-Experts-Prinzip (MoE): Insgesamt hat es 2,8 Billionen Parameter, aktiv sind bei jeder Anfrage davon 104 Milliarden. Das Kontextfenster umfasst eine Million Token.",
+    "## Leistung laut Herstellerangaben",
+    "Alle Zahlen stammen laut Quelle von Moonshot selbst (Herstellerangaben) und wurden mit maximalem Reasoning-Aufwand ermittelt. Beim Programmier-Benchmark Terminal-Bench 4.0 erreicht das Modell 65,7 Prozent, knapp hinter Claude Opus 5.5 mit 66,4 Prozent. Bei SWE-Marathon liegt es mit 51,7 vorn, Opus 5.5 kommt auf 46,3. Schwächer schneidet es beim wissenschaftlichen Terminal-Test Terminal-Bench Science 0.1 ab: 38,1 Punkte, verglichen mit 68,1 bei GPT-6 Astra.",
+    "Für Halluzinationen nennt Moonshot auf einem eigenen Stresstest einen Rückgang der Fehlerquote von 23,4 auf 8,3 Prozent. Einige der behaupteten Vorteile stammen aus internen Benchmarks, die andere Teams nicht prüfen konnten.",
+    "## Zugang und Preise",
+    "Das Modell ist über Kimi.ai, Kimi Work, Kimi Code und die Kimi API verfügbar. Die API ist laut Quelle OpenAI-kompatibel. Der Preis liegt bei 2 US-Dollar pro Million Eingabe-Token und 10 US-Dollar pro Million Ausgabe-Token, also günstiger als K3 mit 3 bzw. 15 Dollar. Eine Schnellvariante, Highspeed, kostet 4 bzw. 20 Dollar.",
+    "## Einschränkungen",
+    "Die Gewichte sind noch nicht öffentlich, eine Selbstinstallation ist daher derzeit nicht möglich. Die Größe spricht für Serversysteme mit mehreren Knoten, nicht für eine einzelne Grafikkarte. Bei wissenschaftlichen Terminal-Aufgaben liegt das Modell laut Quelle deutlich hinter der Konkurrenz zurück."
+   ],
+   "quellen": [
+    {
+     "titel": "Moonshot AI Releases Kimi K3.1 Pro (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/10/23/moonshot-ai-kimi-k3-1-pro-open-weight-model/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler können das Modell über die Kimi API mit einem OpenAI-kompatiblen Client ansprechen.",
+    "Wer Programmieraufgaben oder Agenten testen möchte, kann die Kosten pro Million Token mit anderen Modellen vergleichen.",
+    "Privatpersonen können über Kimi.ai ohne eigene Infrastruktur erste Anfragen ausprobieren."
+   ],
+   "ausprobieren": {
+    "prompt": "Erkläre mir in drei Sätzen, wie ein Mixture-of-Experts-Modell Rechenaufwand spart.",
+    "tool": "Kimi",
+    "url": "https://kimi.ai"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Terminal-Bench 4.0 (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Kimi K3.1 Pro",
+      "wert": 65.7,
+      "anzeige": "65,7 %"
+     },
+     {
+      "label": "Claude Opus 5.5",
+      "wert": 66.4,
+      "anzeige": "66,4 %"
+     }
+    ]
+   },
+   "tag": "Herstellerangaben",
+   "id": "moonshot-ai-stellt-kimi-k3-1-pro-vor-2-8-billionen-parameter",
+   "hinzugefuegt": "2026-10-25T00:10:45Z"
+  },
+  {
    "titel": "OpenAI-Sicherheitsforscher bestreiten Geheimnisverrat nach Entlassung",
    "kurz": "Drei entlassene OpenAI-Sicherheitsforscher weisen den Vorwurf zurück, vertrauliche Informationen weitergegeben zu haben. Sie vermuten, dass ihre Kündigung mit ihrem Einsatz für besser überprüfbare KI-Systeme zusammenhängt.",
    "artikel": [
@@ -1278,6 +1330,116 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Liquid AI stellt RIPL vor: Inference-Engine für Sub-50-ms-LFMs",
+   "kurz": "Liquid AI hat mit RIPL eine Serving-Engine für seine Foundation Models (LFMs) vorgestellt, die laut Herstellerangaben vollständige Antworten in unter 50 ms liefern soll. Die Benchmarks stammen vom Hersteller selbst und sind nur für Enterprise-Kunden gedacht.",
+   "artikel": [
+    "Liquid AI hat RIPL veröffentlicht, kurz für „Real-time Inference Pipeline“. Dabei handelt es sich um eine Engine mit geringer Latenz, die Liquid Foundation Models (LFMs) direkt im Live-Anfragepfad bereitstellt. Laut Hersteller liefert sie vollständige, generierte Antworten End-to-End in unter 50 ms, auch wenn der Traffic bei Spitzenlast kontinuierlich eintrifft.",
+    "## Welches Problem adressiert RIPL?",
+    "Die meisten Serving-Stacks sind auf große Batches und lange agentische Aufgaben ausgelegt, bei denen einige Sekunden pro Anfrage akzeptabel sind. Suchranking, Betrugsprüfungen oder Zahlungsfreigaben brauchen dagegen Antworten im Millisekundenbereich. Liquid AI argumentiert, dass Teams deshalb oft klassische Modelle verwenden, weil die LLM-Bereitstellung zu langsam ist.",
+    "## Benchmarks gegenüber vLLM",
+    "Liquid AI maß die p95-Latenz (also den Wert, unter dem 95 % der Anfragen liegen) auf einer einzelnen B200-GPU unter offener Poisson-Last. Die LFMs liefen auf RIPL, die Vergleichsmodelle auf vLLM, einer Open-Source-Engine. Im besten Fall, LFM2.5-1.2B mit 256 Eingabe- und 128 Ausgabe-Token, nannte Liquid 155,8 ms gegenüber 4.431 ms für Qwen3.5-0.8B, also eine Verbesserung um den Faktor 28,4. Im schwächsten Fall, LFM2.5-2.6B, lag der Faktor bei 5,6. Bei längeren Anfragen wird die 50-ms-Grenze laut den Angaben nicht eingehalten.",
+    "## Einordnung",
+    "Liquid AI nennt bei gleichem Modell (LFM2.5-350M) ebenfalls einen Vorteil von RIPL gegenüber vLLM, was einen Teil des Gewinns der Engine und nicht der Modellarchitektur zuschreibt. Die Zahlen sind jedoch Herstellerangaben und nicht unabhängig geprüft. RIPL ist laut Artikel Enterprise-only und geschlossen; vLLM ist dagegen Open Source.",
+    "## Einsatz in der Praxis",
+    "Laut Liquid AI setzt Shopify LFMs in latenzkritischen Commerce-Workloads ein, im Suchumfeld mit Inferenz unter 20 ms im Produktivbetrieb. Diese Angabe stammt ebenfalls von Liquid AI."
+   ],
+   "quellen": [
+    {
+     "titel": "Liquid AI Launches RIPL, a Real-Time Inference Engine for Sub-50 ms LFMs – MarkTechPost",
+     "url": "https://www.marktechpost.com/2026/10/22/liquid-ai-ripl-real-time-inference-engine/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Entwickler mit Interesse an schnellen Modellantworten können prüfen, ob ein kleines LFM ihre Latenzanforderungen erfüllt.",
+    "Wer eigene Anwendungen betreibt, kann die Benchmark-Werte nur als Herstellerangaben lesen und vor einer Entscheidung eigene Messungen durchführen."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-10-22",
+   "kennzahlen": [
+    {
+     "label": "p95-Latenz LFM2.5-1.2B (RIPL, 256 in/128 out)",
+     "wert": "155,8 ms"
+    },
+    {
+     "label": "p95-Latenz Qwen3.5-0.8B (vLLM, 256 in/128 out)",
+     "wert": "4.431 ms"
+    },
+    {
+     "label": "Faktor Verbesserung (Herstellerangabe)",
+     "wert": "28,4x"
+    },
+    {
+     "label": "GPU (Benchmark)",
+     "wert": "1× NVIDIA B200"
+    }
+   ],
+   "signal": "Herstellerangaben zu Latenz; Enterprise-only, nicht unabhängig geprüft.",
+   "link": "https://www.marktechpost.com/2026/10/22/liquid-ai-ripl-real-time-inference-engine/",
+   "linkLabel": "Originalbeitrag lesen",
+   "id": "liquid-ai-stellt-ripl-vor-inference-engine-fur-sub-50-ms-lfm",
+   "hinzugefuegt": "2026-10-25T00:10:45Z"
+  },
+  {
+   "titel": "Gradium veröffentlicht Phonon: kleine Sprachausgabe-Modelle für den Gerätebetrieb",
+   "kurz": "Gradium hat die Phonon-Familie als Open-Weight-Modelle für Text-to-Speech veröffentlicht, die lokal auf Geräten laufen. Das englische 31M-Modell steht unter Apache 2.0 und ist laut Hersteller rund 64,5 MB groß.",
+   "artikel": [
+    "Das Pariser Voice-AI-Unternehmen Gradium, eine Ausgründung von Kyutai, hat Phonon veröffentlicht. Phonon ist eine Familie kleiner Text-to-Speech-Modelle (TTS), also Modelle, die geschriebenen Text in gesprochene Sprache umwandeln. Sie sind dafür gedacht, direkt auf dem Gerät zu laufen, ohne Cloud-Aufruf, ohne GPU und ohne Abrechnung pro Zeichen.",
+    "## Drei Modelle mit unterschiedlichen Lizenzen",
+    "Die Familie umfasst drei Varianten. Phonon 31m ist nur englisch, hat 37 eingebaute Stimmen und steht unter Apache 2.0. Phonon 40m gibt es pro Sprache als eigenes Modell für Englisch, Französisch, Deutsch, Spanisch und Portugiesisch, lizenziert unter CC BY-NC 4.0. Eine mehrsprachige 40m-Variante mit 102 Stimmen fällt ebenfalls unter CC BY-NC 4.0, also eine nicht-kommerzielle Lizenz.",
+    "## Technik in Kürze",
+    "Laut Herstellerangaben nutzt Phonon einen kausalen Transformer. Der Text wird mit einem SentencePiece-Tokenizer verarbeitet, ohne Umwandlung in Lautschrift (Phoneme). Das Modell erzeugt pro 80-ms-Abschnitt einen Latent-Vektor; ein sogenannter Flow-Matching-Kopf macht daraus in einem einzigen Schritt eine Audio-Repräsentation, die ein Decoder in 24-kHz-Audio umsetzt. Die Modelle wurden per Destillation aus einem größeren Lehrermodell gewonnen.",
+    "## Herstellerangaben zur Leistung",
+    "Gradium gibt an, dass Phonon 31m in Hörtests mit 1.189 Teilnehmenden die beste englische Elo-Bewertung unter den getesteten offenen Modellen erreicht. Bei einem eigenen Test mit 500 schwierigen Sätzen (Zahlen, E-Mails, Postleitzahlen) lag die Wortfehlerrate laut Gradium bei 1,70 Prozent, gegenüber 3,50 Prozent für Kokoro. Auf dem einfacheren Seed-TTS-Set verringert sich dieser Abstand; dort liegt Kokoro leicht vorn. Alle diese Werte stammen von Gradium selbst.",
+    "## Geschwindigkeit",
+    "Gradium nennt für einen MacBook Air M5 mit vier Threads etwa 6,9 ms bis zur ersten Audioausgabe. Auf einem Raspberry Pi 5 sind es laut Herstellerangabe 38 ms, bei 3,7-facher Echtzeitgeschwindigkeit.",
+    "## Einsatz",
+    "Die Laufzeitumgebung steht unter MIT oder Apache-2.0 und unterstützt unter anderem Python, Rust, Swift und den Browser. Phonon lässt sich laut Angaben in Transformers, MLX-Audio, Ollama und LM Studio laden."
+   ],
+   "quellen": [
+    {
+     "titel": "Gradium Open-Sources Phonon, a 31M-Parameter On-Device TTS Model Under Apache 2.0 (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/10/22/gradium-phonon-31m-on-device-tts/"
+    }
+   ],
+   "demo": "stimme",
+   "machen": [
+    "Lokal eine Vorlesefunktion für eigene Texte oder Artikel bauen, ohne Daten in die Cloud zu schicken.",
+    "Auf einem Laptop oder Raspberry Pi einen kleinen Sprachassistenten für Heimprojekte testen.",
+    "Das englische 31m-Modell unter Apache 2.0 in eigene, auch kommerzielle Projekte einbinden, die Mehrsprachmodelle sind dagegen nicht-kommerziell lizenziert."
+   ],
+   "bereich": "Stimme",
+   "datum": "2026-10-22",
+   "quelle": "Fachpresse",
+   "kennzahlen": [
+    {
+     "label": "Parameter (Phonon 31m, ohne Tokenizer)",
+     "wert": "31 Mio."
+    },
+    {
+     "label": "Gewicht (q8 GGUF)",
+     "wert": "64,5 MB"
+    },
+    {
+     "label": "Ausgabe",
+     "wert": "24 kHz mono"
+    },
+    {
+     "label": "Zeit bis erste Audioausgabe, MacBook Air M5 CPU (Herstellerangabe)",
+     "wert": "6,9 ms"
+    },
+    {
+     "label": "Wortfehlerrate, 500 harte Sätze (Herstellerangabe)",
+     "wert": "1,70 %"
+    }
+   ],
+   "signal": "Kleine Sprachmodelle mit Apache-2.0-Lizenz werden für den lokalen Einsatz auf Laptops, Handys und Browsern immer praxistauglicher. Alle Leistungsangaben stammen vom Hersteller und sind nicht unabhängig geprüft.",
+   "link": "https://www.marktechpost.com/2026/10/22/gradium-phonon-31m-on-device-tts/",
+   "linkLabel": "Zum Artikel",
+   "id": "gradium-veroffentlicht-phonon-kleine-sprachausgabe-modelle-f",
+   "hinzugefuegt": "2026-10-25T00:10:45Z"
+  },
   {
    "titel": "Block stellt Dessa vor: Sprachmodell lernt ohne Text-Daten",
    "kurz": "Block, das Unternehmen hinter Square und Cash App, hat das Sprachmodell Dessa vorgestellt, das Audio direkt verarbeitet statt es erst in Text umzuwandeln. Es soll Emotionen, Sarkasmus und Pausen erkennen, ist aber noch nicht öffentlich verfügbar.",
@@ -6127,8 +6289,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-24T21:58:45Z",
+  "letzterScan": "2026-10-25T00:10:45Z",
   "neueFunde": 3,
-  "standAktualisiert": "2026-10-23T23:11:38Z"
+  "standAktualisiert": "2026-10-25T00:10:45Z"
  }
 }
