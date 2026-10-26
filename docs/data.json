@@ -6044,6 +6044,142 @@
  ],
  "projekte": [
   {
+   "titel": "Chaos Intelligence: Programmiersprache, die KI-Agenten wie Funktionen aufruft",
+   "kurz": "Chaos ist eine funktionale Programmiersprache, in der sich Agenten wie Funktionen aufrufen lassen. Das Projekt auf GitHub hat 161 Sterne und ist quelloffen einsehbar, darf aber nicht für KI-Training verwendet werden.",
+   "artikel": [
+    "Chaos Intelligence ist ein Projekt auf GitHub, das eine eigene Programmiersprache mit dem Namen Chaos vorstellt. Der Leitgedanke lautet laut Projektbeschreibung, Agenten als Funktionen zu behandeln und Ideen als Programm zu schreiben. Berechnungen und Abläufe werden als Funktionen formuliert, während Verstehen und Erzeugen von Text an Agenten übergeben wird.",
+    "## Was die Sprache ausmacht",
+    "Laut Readme basiert Chaos auf Funktionen und behandelt Agenten als aufrufbare Werte. Die Sprache umfasst Funktionen, Closures, Module, Muster, Makros, Generatoren und asynchrone Aufgaben. Ein Agent wird in einem Block deklariert, etwa mit Anbieter, Rolle, Prompt, Werkzeugen und einer maximalen Schrittzahl. Der Aufruf erst in der letzten Zeile löst die eigentliche Modellanfrage aus.",
+    "## Werkzeuge und Oberflächen",
+    "Das Projekt beschreibt eine Kommandozeile, eine Web-IDE, zielorientierte Bots und Live-Oberflächen. Die Dokumentation nennt außerdem eine Schnittstelle für Python sowie eine HTTP-Schnittstelle. Laut Herstelleraussage läuft die Installation mit Python 3.9 oder neuer. Die Angaben zu Hardware- und Geräteunterstützung sind laut Projekt vom Einzelfall abhängig und nicht überall praktisch geprüft.",
+    "## Lizenz",
+    "Der Quellcode ist einsehbar, die Lizenz „Chaos No-AI-Training License 1.0“ erlaubt Lernen, Ausführen, Ändern, Verteilen und kommerzielle Nutzung. Modelltraining mit dem Material ist ohne gesonderte schriftliche Erlaubnis untersagt. Laut Readme ist es keine OSI-Open-Source-Lizenz."
+   ],
+   "quellen": [
+    {
+     "titel": "Chaos Intelligence auf GitHub",
+     "url": "https://github.com/Cattmonkey/ChaosIntelligence"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Kleine Funktionen schreiben und mit der Kommandozeile ausführen, etwa das Beispiel mit der Zahl 42.",
+    "Einen Agenten mit Rolle und Prompt deklarieren und ihn wie eine Funktion aufrufen, sofern ein Modell konfiguriert ist.",
+    "Eine Seite oder einen Bericht als Programmergebnis erzeugen und in der Web-IDE ansehen."
+   ],
+   "ausprobieren": {
+    "prompt": "./chaos -c '40 + 2'",
+    "tool": "Chaos (Kommandozeile)",
+    "url": "https://github.com/Cattmonkey/ChaosIntelligence"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "chaos -c '40 + 2'",
+    "zeilen": [
+     "> ./chaos -c '40 + 2'",
+     "✓ Ergebnis: 42",
+     "● Status: Herstellerbeispiel laut Readme"
+    ]
+   },
+   "macher": "Cattmonkey",
+   "branche": "Software / Entwicklerwerkzeuge",
+   "jahr": "",
+   "tools": [
+    "Chaos-Sprache",
+    "Web-IDE",
+    "CLI",
+    "Python SDK",
+    "HTTP API"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "161"
+    },
+    {
+     "label": "Forks",
+     "wert": "0"
+    }
+   ],
+   "link": "https://github.com/Cattmonkey/ChaosIntelligence",
+   "linkLabel": "Repository auf GitHub",
+   "id": "chaos-intelligence-programmiersprache-die-ki-agenten-wie-fun",
+   "hinzugefuegt": "2026-10-26T11:27:48Z"
+  },
+  {
+   "titel": "trompe: Ganze Spiel-Level mit Bildmodellen texturieren",
+   "kurz": "Das Open-Source-Projekt trompe texturiert ein komplettes Spiel-Level aus einem grauen Blockout mithilfe von Bildmodellen. Es plant Kameras, lässt die Ansichten malen, projiziert sie zurück auf das Level und backt eine Textur.",
+   "artikel": [
+    "trompe ist ein Projekt auf GitHub, das ein ganzes Spiel-Level aus einem grauen Blockout – einem groben Platzhaltermodell ohne Texturen – mit Bildmodellen einfärbt. Das Werkzeug arbeitet in vier Schritten: Es plant Kameras an Stellen, an denen ein Spieler stehen kann, lässt ein Bildmodell malen, was jede Kamera sieht, projiziert jedes Bild zurück auf das Level und backt daraus eine einzige Textur.",
+    "## Wie das Malen funktioniert",
+    "Die Textur entsteht bei bedecktem Himmelslicht, damit sie nahezu die reine Albedo, also die Grundfarbe ohne Schatten, enthält. Die Engine kann das Level danach mit echten Schatten beleuchten. Die Bilder erzeugen die Modelle FLUX 3 Klein und Fibo 2 über die Plattform fal. Laut Projektangaben kostet ein Beispiel-Lauf mit 128 Ansichten 4,44 Dollar und dauert 26 Minuten. Diese Zahlen stammen vom Entwickler selbst und sind Herstellerangaben des Projekts, nicht unabhängig geprüft.",
+    "## Bedienung",
+    "Man wählt ein Beispiel-Level oder lädt eine eigene .glb-Datei mit UV-Koordinaten und Y-nach-oben-Ausrichtung hoch. Die Stilbeschreibung sollte aus Materialien bestehen, etwa Kalkstein oder Putz. Objekte wie Brunnen oder Marktstände sollte man nicht nennen, da sie sonst auf die Wände gemalt werden. Die Planung und Projektion laufen im Browser auf der eigenen Grafikkarte, nur die Bildmodelle laufen bei fal. Es gibt auch einen Kommandozeilenmodus mit gespeicherten Läufen.",
+    "## Technik",
+    "Die Planung wählt Kameras so, dass möglichst viel begehbare Fläche gut erfasst wird. Ein Lichtmodus „outdoor“ backt dagegen Schatten einer Sonne ein, die sich nicht mehr nachträglich umstellen lässt. Ein Lösch-Durchgang füllt zuletzt ungemalte Lücken nach."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub – Patch-gg/trompe",
+     "url": "https://github.com/Patch-gg/trompe"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Ein eigenes .glb-Level mit UV-Koordinaten hochladen und mit einer Materialbeschreibung texturieren lassen.",
+    "Die Demo-Level Village, Courtyard oder Hall ausprobieren, um das Ergebnis zu sehen.",
+    "Mit dem Kommandozeilen-Befehl kleine Änderungen an Prompts testen, bevor ein voller Lauf startet."
+   ],
+   "ausprobieren": {
+    "prompt": "a sunlit Mediterranean hill village: weathered limestone and ochre plaster walls, terracotta roofs",
+    "tool": "trompe",
+    "url": "https://github.com/Patch-gg/trompe"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Kosten eines Beispiel-Laufs (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Laufkosten",
+      "wert": 4.44,
+      "anzeige": "4,44 $"
+     }
+    ]
+   },
+   "macher": "Patch-gg (@patch_gg)",
+   "branche": "3D / Games",
+   "jahr": "",
+   "tools": [
+    "FLUX 3 Klein",
+    "Fibo 2 Edit",
+    "fal",
+    "glTF",
+    "Vite"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Ansichten im Beispiel-Lauf",
+     "wert": "128"
+    },
+    {
+     "label": "Kosten laut Herstellerangabe",
+     "wert": "4,44 $"
+    },
+    {
+     "label": "Dauer laut Herstellerangabe",
+     "wert": "26 Minuten"
+    },
+    {
+     "label": "GitHub-Sterne",
+     "wert": "47 ★"
+    }
+   ],
+   "link": "https://github.com/Patch-gg/trompe",
+   "linkLabel": "Zum Repository auf GitHub",
+   "id": "trompe-ganze-spiel-level-mit-bildmodellen-texturieren",
+   "hinzugefuegt": "2026-10-26T11:27:48Z"
+  },
+  {
    "titel": "Chrome-Erweiterung räumt KI-Bots aus Bilibili-Kommentaren",
    "kurz": "Das Open-Source-Projekt dafeiyu-cleaner ist eine Browser-Erweiterung für Chrome, Edge und Firefox, die auf Bilibili Kommentare von KI-gesteuerten Bot-Konten erkennt und lokal ausblendet. Der Entwickler nennt es ausdrücklich ein Community-Projekt ohne Verbindung zu DeepSeek.",
    "artikel": [
@@ -7517,8 +7653,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-26T05:24:45Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-10-26T11:27:48Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-10-26T00:37:28Z"
  }
 }
