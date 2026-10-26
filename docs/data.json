@@ -5856,6 +5856,80 @@
  ],
  "projekte": [
   {
+   "titel": "Chrome-Erweiterung räumt KI-Bots aus Bilibili-Kommentaren",
+   "kurz": "Das Open-Source-Projekt dafeiyu-cleaner ist eine Browser-Erweiterung für Chrome, Edge und Firefox, die auf Bilibili Kommentare von KI-gesteuerten Bot-Konten erkennt und lokal ausblendet. Der Entwickler nennt es ausdrücklich ein Community-Projekt ohne Verbindung zu DeepSeek.",
+   "artikel": [
+    "## Was das Projekt macht",
+    "Das GitHub-Projekt „dafeiyu-cleaner“ (Repository von liyupi, Stand der Quelle: 89 Sterne) ist eine kostenlose Browser-Erweiterung für Chrome, Edge und Firefox. Sie soll auf der chinesischen Videoplattform Bilibili Konten erkennen, die von KI-Modellen wie DeepSeek oder von AI-Agenten gesteuert werden. Die Konten nennt der Entwickler „大肥鱼“ (wörtlich etwa „großer fetter Fisch“), die Erweiterung trägt den Namen „Blaue Fisch-Eliminierung“.",
+    "Laut Beschreibung arbeitet die Erweiterung zunächst mit Offline-Regeln. Sie bewertet jedes Konto anhand von Merkmalen wie Benutzername, Signatur, Kontostufe, Avatar und Formulierungen im Kommentartext. Ab einer bestimmten Punktzahl wird ein Konto als Bot eingestuft, unklare Fälle lassen sich optional von der DeepSeek-API nachprüfen. Dafür muss der Nutzer einen eigenen API-Schlüssel hinterlegen.",
+    "## Was Nutzer sehen und tun können",
+    "Die Erweiterung blendet erkannte Kommentare nicht nur aus, sondern markiert sie mit einem Etikett samt Prozentwert. Außerdem gibt es eine animierte Figur, einen Wal-Charakter, der Bots „wegschickt“, sowie eine Option, die alles dezent und ohne Animation ausblendet, den sogenannten Minimalmodus. Auf Profilseiten erstellt die Erweiterung einen Prüfbericht. Wichtig laut Entwickler: Alle Aktionen wirken nur lokal im Browser. Es werden keine Kommentare gelöscht, keine Meldungen abgesetzt und keine Cookies gelesen.",
+    "## Datenschutz und Grenzen",
+    "Die Erweiterung arbeitet nach eigenen Angaben standardmäßig vollständig offline und sendet keine Daten an Server des Entwicklers. Nur wenn die DeepSeek-Prüfung aktiviert ist, gehen Nickname, Level, Signatur und bis zu drei Kommentare eines verdächtigen Kontos an api.deepseek.com. Der Entwickler weist außerdem darauf hin, dass das Projekt nicht von DeepSeek stammt. Eigene Angaben zur Trefferquote gibt es nur aus einem einzigen Test: In einer Kommentarspalte mit 284 Konten habe die Offline-Erkennung ohne Avatar-Analyse rund 85 Prozent der Bots erkannt, ohne echte Nutzer fälschlich zu markieren. Das ist eine Herstellerangabe und nicht unabhängig überprüft.",
+    "## Einordnung",
+    "Das Projekt zeigt, wie Nutzer selbst gegen automatisierte KI-Kommentare vorgehen können, ohne auf die Plattform zu warten. Ob die Erkennung im Alltag zuverlässig arbeitet, lässt sich aus der vorliegenden Quelle nicht beurteilen."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub – liyupi/dafeiyu-cleaner",
+     "url": "https://github.com/liyupi/dafeiyu-cleaner"
+    },
+    {
+     "titel": "Demo-Video auf Bilibili",
+     "url": "https://www.bilibili.com/video/BV1Ywn46EEyF"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Installiere die Erweiterung in Chrome, Edge oder Firefox, um auf Bilibili verdächtige Kommentare lokal ausblenden zu lassen.",
+    "Nutze die Profilprüfung, um Konten vor dem Vertrauen auf Kommentare einzuschätzen.",
+    "Melde Fehlurteile über die Issue-Seite des Projekts, damit die Regeln verbessert werden."
+   ],
+   "ausprobieren": {
+    "prompt": "Installiere dafeiyu-cleaner über die Releases-Seite auf GitHub und öffne eine Bilibili-Videoseite mit Kommentaren.",
+    "tool": "dafeiyu-cleaner",
+    "url": "https://github.com/liyupi/dafeiyu-cleaner"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "dafeiyu-cleaner",
+    "zeilen": [
+     "> Kommentarbereich geladen",
+     "✓ Konto geprüft: Offline-Regeln",
+     "⚠ Verdächtig: Signatur nennt KI",
+     "- Kommentar ausgeblendet",
+     "+ Hinweis: Prüfung lokal gespeichert",
+     "● Status: läuft lokal"
+    ]
+   },
+   "macher": "liyupi (GitHub-Nutzer)",
+   "branche": "Browser-Erweiterung / Social-Media-Moderation",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "Chrome / Edge / Firefox Erweiterung",
+    "JavaScript",
+    "DeepSeek-API (optional)"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "89"
+    },
+    {
+     "label": "Forks",
+     "wert": "4"
+    },
+    {
+     "label": "Herstellerangabe: Trefferquote Offline-Regeln im Test (284 Konten)",
+     "wert": "ca. 85 %"
+    }
+   ],
+   "link": "https://github.com/liyupi/dafeiyu-cleaner",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "chrome-erweiterung-raumt-ki-bots-aus-bilibili-kommentaren",
+   "hinzugefuegt": "2026-10-26T00:37:28Z"
+  },
+  {
    "titel": "Kinoloom: Lokales KI-Filmstudio für eine Windows-Grafikkarte mit 8 GB",
    "kurz": "Kinoloom ist ein Open-Source-Projekt auf GitHub, das auf einem einzelnen Windows-PC mit 8-GB-NVIDIA-Karte Geschichten schreibt, Figuren besetzt und Szenen mit Videomodellen rendert. Es verbindet kurze Clips innerhalb des Modells zu langen Einstellungen und basiert auf ComfyUI.",
    "artikel": [
@@ -7255,8 +7329,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-25T22:25:44Z",
-  "neueFunde": 2,
-  "standAktualisiert": "2026-10-25T00:10:45Z"
+  "letzterScan": "2026-10-26T00:37:28Z",
+  "neueFunde": 1,
+  "standAktualisiert": "2026-10-26T00:37:28Z"
  }
 }
