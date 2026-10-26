@@ -1,6 +1,63 @@
 {
  "news": [
   {
+   "titel": "GPT-6.1 Terra: OpenAI halbiert API-Preise der Mittelklasse",
+   "kurz": "OpenAI hat mit GPT-6.1 Terra ein Mittelklasse-Modell veröffentlicht, dessen API-Preise laut Herstellerangabe nur halb so hoch sind wie beim Vorgänger. Unabhängige Benchmarks der Analysefirma Artificial Analysis sehen ein besseres Verhältnis von Leistung zu Kosten.",
+   "artikel": [
+    "OpenAI hat GPT-6.1 Terra vorgestellt, ein Modell der mittleren Leistungsklasse. Laut Angaben des Unternehmens kostet die API nur die Hälfte im Vergleich zum Vorgänger GPT-5.6 Terra: Eingabe-Tokens 1 US-Dollar pro Million, Ausgabe-Tokens 5 US-Dollar. Gecachte Eingaben sinken auf 0,05 US-Dollar pro Million Tokens. Diese Preisangaben stammen von OpenAI.",
+    "## Preis-Leistung laut Analysten",
+    "Artificial Analysis bezeichnet das Modell als neuen Maßstab für Intelligenz pro Dollar. Bei maximalem Reasoning-Aufwand liegt es im Intelligence Index 6 Punkte über GPT-5.6 Terra, kostet pro Aufgabe aber weniger als ein Drittel (0,40 statt 1,40 US-Dollar). Bei niedrigerem Aufwand sind die Zugewinne laut dieser Auswertung größer. Der Begriff „Pareto-Front“ beschreibt dabei den Punkt, an dem Kosten und Leistung nicht mehr gleichzeitig verbessert werden können.",
+    "## Weniger Halluzinationen",
+    "Im privaten AA-Omniscience-Test rät das Modell laut Quelle nur noch in 38 Prozent der Fälle, wenn ihm die Antwort fehlt. Beim Vorgänger waren es 88 Prozent. Die Trefferquote stieg um zwei Punkte. Im Coding Agent Index v2.0 erreicht Terra 48 Punkte, sechs weniger als GPT-6.1 Sol.",
+    "## Fokus auf Computersteuerung und Programmierung",
+    "OpenAI positioniert das Modell für Büroaufgaben und die automatisierte Steuerung von Software, etwa beim Ausfüllen von Formularen oder bei der Auswertung technischer Zeichnungen. Laut Unternehmen ist es bei Agents' Last Exam so stark wie GPT-6 Astra, kostet aber nur ein Zehntel der Token-Preise. Bei Terminal-Bench 4.0 löst Terra laut Herstellerangabe 50,3 Prozent der Aufgaben, der Vorgänger 21,5 Prozent.",
+    "## Sicherheit",
+    "Laut Systemkarte erreicht das Modell beim Schutz vor indirekten Prompt Injections eine Abwehrrate von 98,8 Prozent, nach 96,2 Prozent beim Vorgänger. OpenAI stuft es zudem im Bereich Cybersicherheit als „Critical“ ein. Für die anspruchsvollsten Programmieraufgaben empfiehlt OpenAI weiterhin GPT-6.1 Sol und GPT-6 Astra.",
+    "Verfügbar ist GPT-6.1 Terra laut OpenAI für Plus-, Pro-, Enterprise- und Edu-Nutzer in ChatGPT Work und Codex sowie über die API. Alle Leistungsangaben stammen von OpenAI oder den zitierten Benchmarks und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "GPT-6.1 Terra halves OpenAI's API prices and still gains ground on its larger models (The Decoder)",
+     "url": "https://the-decoder.com/gpt-6-1-terra-halves-openais-api-prices-and-still-gains-ground-on-its-larger-models/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer die API nutzt, kann mit dem halbierten Preis günstiger Texte, Entwürfe oder Formulare automatisieren.",
+    "Privatpersonen können das Modell in ChatGPT nutzen, sofern sie einen passenden Plus- oder Pro-Zugang haben, um Angebote oder technische Zeichnungen auszuwerten."
+   ],
+   "ausprobieren": {
+    "prompt": "Fülle dieses Formular für eine Hausratversicherung aus und markiere alle Felder, die ich noch ergänzen muss: [Formular einfügen]",
+    "tool": "ChatGPT",
+    "url": "https://chatgpt.com"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Preis pro Million Eingabe-Tokens (US-Dollar)",
+    "balken": [
+     {
+      "label": "Claude Sonnet 5.5",
+      "wert": 2,
+      "anzeige": "2 $ (Herstellerangabe Vergleich)"
+     },
+     {
+      "label": "GPT-5.6 Terra",
+      "wert": 2,
+      "anzeige": "2 $"
+     },
+     {
+      "label": "GPT-6.1 Terra",
+      "wert": 1,
+      "anzeige": "1 $ (Herstellerangabe)"
+     }
+    ]
+   },
+   "bereich": "Text",
+   "datum": "2026-10-26",
+   "id": "gpt-6-1-terra-openai-halbiert-api-preise-der-mittelklasse",
+   "hinzugefuegt": "2026-10-26T21:49:07Z"
+  },
+  {
    "titel": "Altes CNN schlägt GPT-6 Astra und Claude Fable 5.1 bei Hautkrebs-Erkennung",
    "kurz": "Ein zehn Jahre altes, nachtrainiertes CNN (Inception v3) erkannte in einem Test mit 200 biopsierten Hautläsionen 62 Prozent der Diagnosen richtig, zwei aktuelle Sprachmodelle nur je 42 Prozent. Die Ergebnisse stammen von einem einzelnen Blog-Experiment.",
    "artikel": [
@@ -7653,8 +7710,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-26T17:34:40Z",
-  "neueFunde": 0,
+  "letzterScan": "2026-10-26T21:49:07Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-10-26T00:37:28Z"
  }
 }
