@@ -1534,6 +1534,194 @@
  ],
  "radar": [
   {
+   "titel": "Nanbeige4.3-33B: offenes 33B-Coding-Modell mit 512K Kontext",
+   "kurz": "Das Nanbeige LLM Lab hat das dichte 33B-Modell Nanbeige4.3-33B unter Apache-2.0-Lizenz auf Hugging Face veröffentlicht. Laut eigener Tabelle führt es bei agentischem Coding und Büroaufgaben, die Angaben sind jedoch Herstellerangaben.",
+   "artikel": [
+    "Das Nanbeige LLM Lab, das innerhalb der Recruiting-Plattform BOSS Zhipin sitzt, hat Nanbeige4.3-33B auf Hugging Face veröffentlicht. Das Modell ist für agentisches Coding und Büroaufgaben gedacht. Zusätzlich gibt es ein Basismodell (Nanbeige4.3-33B-Base) für eigenes Nachtraining.",
+    "## Eckdaten",
+    "Es hat 33 Milliarden Parameter und ist ein sogenanntes dichtes Modell, also ohne Mixture-of-Experts-Routing: Bei jedem Token laufen alle Parameter. Das Kontextfenster umfasst 524.288 Token (512K). Die Gewichte liegen in BF16 vor. Laut Herstellerangabe braucht man dafür Multi-GPU-Server; die Rechnung des Artikels ergibt rund 66 GB für die Gewichte.",
+    "## Leistung laut Hersteller",
+    "Nanbeige vergleicht das Modell mit Qwen3.8-27B, Muse-Glimmer-30B und Gemma4-31B und gibt an, im eigenen Vergleich 17 von 20 Zeilen zu führen. Bei Terminal-Bench 2.1 nennt der Hersteller 80,9 Punkte gegenüber 73,0 für Qwen3.8-27B. Bei SWE-Bench Pro liegt Qwen3.8-27B mit 61,7 zu 60,3 vorn. Alle Werte sind Selbstangaben von Nanbeige.",
+    "## Unstimmigkeiten bei Konkurrenzwerten",
+    "Einige Vergleichswerte weichen von den Angaben der anderen Labore ab. Meta nennt für Muse-Glimmer-30B 51,2 auf SWE-Bench Pro und für Gemma4-31B 36,9; Nanbeige listet die Werte umgekehrt. Google gibt für Gemma 4 31B 84,3 bei GPQA Diamond an, Nanbeige zeigt 91,3. Unterschiedliche Testumgebungen erklären manche Abweichungen. Der Artikel rät, diese Zeilen als vorläufig zu behandeln, bis unabhängige Messungen vorliegen.",
+    "## Einordnung",
+    "Nanbeige nennt das Modell den Lehrer einer Serie: Zuerst soll ein starkes Grundmodell entstehen, dann sollen agentische Fähigkeiten in kleinere Modelle destilliert werden, beginnend mit Nanbeige4.3-3B. Laut Artikel war zum Veröffentlichungszeitpunkt kein Hugging-Face-Inferenzanbieter für das Modell verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/10/25/nanbeige-releases-nanbeige4-3-33b-open-agentic-coding-model/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Das Modell mit Apache-2.0-Lizenz lokal oder auf eigenen Servern ausprobieren, sofern genügend GPU-Speicher vorhanden ist.",
+    "Das Basismodell für eigenes Nachtraining auf eigene Daten nutzen.",
+    "Die Modellkarte mit Transformers-, SGLang- oder vLLM-Rezepten als Startpunkt für eigene Coding-Agenten verwenden."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-10-25",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "33B dense"
+    },
+    {
+     "label": "Kontextfenster",
+     "wert": "524.288 Token (512K)"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    },
+    {
+     "label": "Terminal-Bench 2.1 (Herstellerangabe)",
+     "wert": "80,9"
+    },
+    {
+     "label": "Gewichte BF16 (Rechnung)",
+     "wert": "ca. 66 GB"
+    }
+   ],
+   "signal": "Ein offenes 33B-Modell mit 512K Kontext und Apache-2.0-Lizenz, dessen Leistungsangaben vom Hersteller stammen und teils mit Konkurrenz-Modellkarten nicht übereinstimmen.",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Terminal-Bench 2.1 (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Qwen3.8-27B",
+      "wert": 73.0,
+      "anzeige": "73,0"
+     },
+     {
+      "label": "Nanbeige4.3-33B",
+      "wert": 80.9,
+      "anzeige": "80,9"
+     }
+    ]
+   },
+   "link": "https://www.marktechpost.com/2026/10/25/nanbeige-releases-nanbeige4-3-33b-open-agentic-coding-model/",
+   "linkLabel": "Originalartikel lesen",
+   "id": "nanbeige4-3-33b-offenes-33b-coding-modell-mit-512k-kontext",
+   "hinzugefuegt": "2026-10-26T05:24:45Z"
+  },
+  {
+   "titel": "Broccoli2Shell: Sicherheitslücke im Brotli-Decoder betrifft Node.js, Python und weitere Software",
+   "kurz": "In Googles Referenz-Decoder für Brotli steckt eine Schwachstelle (CVE-2026-111497), die im schlimmsten Fall zu Remote Code Execution führen kann. Betroffen sind Brotli 1.0.3 bis 1.2.0 und darauf aufbauende Software wie Node.js und Python-Pakete.",
+   "artikel": [
+    "Brotli ist ein Kompressionsverfahren, das vor allem bei Webinhalten (HTTP-Header „Content-Encoding: br“) verbreitet ist. Der Referenz-Decoder von Google, eine C-Bibliothek, enthält laut Quelle einen Fehler, der unter dem Namen „Broccoli2Shell“ bekannt geworden ist.",
+    "## Der Fehler",
+    "Ein Brotli-Stream ist in Blöcke aufgeteilt, zwischen denen der Decoder wechselt. Bei einem bestimmten, manipulierten Stream fordert der Decoder einen Blockwechsel an, der nicht möglich ist. Er interpretiert das als Bedarf nach mehr Eingabedaten und schreibt angreifergesteuerte Bytes in einen acht Byte großen Puffer über dessen Ende hinaus. Ein solcher Out-of-Bounds-Write kann laut Quelle zu Absturz, Speicherleck oder Codeausführung führen.",
+    "Die Korrektur gibt nun einen harten Formatfehler (BROTLI_DECODER_ERROR_FORMAT_BLOCK_SWITCH) zurück. Die Quelle nennt CWE-252 und CWE-787 als Einordnung. GitHub bewertet die Lücke mit 9.2 (CVSS 4.0, kritisch), Node.js stuft sie als hoch ein.",
+    "## Wer ist betroffen",
+    "Gefährdet ist, wer Brotli-Daten verarbeitet, die von Dritten stammen. Dazu zählen laut Quelle auch HTTP-Clients, die Brotli-Antworten automatisch dekomprimieren, etwa Node.js fetch(), Python requests/urllib3 und aiohttp, sobald ein Brotli-Paket installiert ist. Bei Express 5.0.0 bis 5.3.0 und body-parser 2.0.0 bis 2.3.0 können Brotli-Request-Bodies betroffen sein. Node.js bringt eine eigene Brotli-Kopie mit, daher kommt es dort nur auf die Node.js-Version an.",
+    "## Updates und Nachwirkungen",
+    "Ein Update allein reicht oft nicht: Laufende Prozesse behalten den alten Decoder, bis sie neu gestartet werden, und Container müssen auf einem gepatchten Basis-Image neu gebaut werden. Node.js 20, 23 und 25 sowie ältere Versionen erhalten laut Hersteller keinen Fix und sollten auf 22, 24 oder 26 wechseln. Auch manche Projekte mit eingebauter Kopie des Decoders, etwa DuckDB oder Apache Arrow, waren laut Quelle zum Stand der Meldung noch nicht gepatcht."
+   ],
+   "quellen": [
+    {
+     "titel": "Broccoli2Shell (Originalseite)",
+     "url": "https://broccoli2shell.com/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50219177"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Prüfe, ob in deinen Projekten Node.js, Python-Pakete wie Brotli oder brotlicffi installiert sind, und aktualisiere sie.",
+    "Starte laufende Prozesse und baue Container nach einem Update neu, da alte Decoder sonst weiterlaufen.",
+    "Verlasse dich bei Python nicht allein auf Scanner, sondern prüfe die Versionen manuell."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "brotli-Version prüfen",
+    "zeilen": [
+     "> node --version",
+     "✓ Node.js 22.23.4 oder neuer",
+     "⚠ Node.js 20 erhält keinen Fix",
+     "> pip show brotli",
+     "● Ab 1.2.1 gepatcht",
+     "- Prozesse neu starten"
+    ]
+   },
+   "radar": null,
+   "quelle": "Hacker News",
+   "datum": "2026-10-26",
+   "kennzahlen": [
+    {
+     "label": "CVSS 4.0 (GitHub)",
+     "wert": "9.2 Critical"
+    },
+    {
+     "label": "Betroffene Brotli-Versionen",
+     "wert": "1.0.3 bis 1.2.0"
+    },
+    {
+     "label": "Gefixte Brotli-Versionen",
+     "wert": "1.0.10, 1.1.1, 1.2.1"
+    },
+    {
+     "label": "CVE",
+     "wert": "CVE-2026-111497"
+    }
+   ],
+   "signal": "Sicherheitslücke in verbreiteter Kompressionsbibliothek; Herstellerangaben (GitHub, Node.js) zur Einstufung sind als solche gekennzeichnet.",
+   "link": "https://broccoli2shell.com/",
+   "linkLabel": "Originalseite lesen",
+   "id": "broccoli2shell-sicherheitslucke-im-brotli-decoder-betrifft-n",
+   "hinzugefuegt": "2026-10-26T05:24:45Z"
+  },
+  {
+   "titel": "Kuratierte Liste: Werkzeuge zur Durchsetzung von Qualitätsstandards",
+   "kurz": "Das GitHub-Projekt mokevnin/dev-quality-gates (107 Sterne) sammelt eine meinungsstarke, kuratierte Auswahl an Werkzeugen, die Entwicklungsstandards erzwingen. Pro Aufgabe wird nur ein Werkzeug empfohlen.",
+   "artikel": [
+    "Das Repository »dev-quality-gates« ist keine klassische Awesome-Liste. Es listet nicht jeden Linter für jede Sprache, sondern empfiehlt für jede Aufgabe in der Regel genau ein Werkzeug und nennt dazu, wo es an seine Grenzen stößt.",
+    "## Prinzipien",
+    "Die Auswahl folgt einigen festen Grundsätzen. Ein Werkzeug muss einen Build fehlschlagen lassen, wenn ein Standard verletzt wird, also mit einem Exit-Code ungleich null enden. Berichte, die niemand liest, zählen laut Projekt nicht. Außerdem sind KI-Coding-Agenten ausdrücklich als Nutzer vorgesehen, weshalb nicht-interaktive und maschinenlesbare Ausgaben gefordert werden. Schnelle, nativ in Rust geschriebene Werkzeuge, die Linting, Formatierung und Analyse in einem Binary vereinen, werden bevorzugt.",
+    "## Beispiele aus der Liste",
+    "Für GitHub Actions wird jactionlint empfohlen, ein Fork von actionlint, dessen Sicherheitsregeln den Prüfungen von zizmor folgen. Für JavaScript und TypeScript nennt die Liste unter anderem Knip für ungenutzte Dateien, Exporte und Abhängigkeiten sowie Oxlint mit oxfmt als schnelle Alternative zu ESLint und Prettier. Für Python wird Ruff genannt, das Linter und Formatter vereint. Der Typprüfer ty wird als Beta mit Version 0.0.x beschrieben, weshalb die Versionsnummer festgelegt werden sollte.",
+    "## Einordnung",
+    "Die Liste versteht sich ausdrücklich nicht als vollständiger Stack. Kategorien ohne verifizierte Empfehlung bleiben leer. Laut Projekt wurden alle Einträge am 23.10.2026 in einem einzigen Durchgang geprüft; wo ein Werkzeug tatsächlich ausgeführt wurde, ist das vermerkt. Herstellerangaben, etwa zu Geschwindigkeit oder Release-Zyklen, sind daher als solche zu lesen."
+   ],
+   "quellen": [
+    {
+     "titel": "mokevnin/dev-quality-gates auf GitHub",
+     "url": "https://github.com/mokevnin/dev-quality-gates"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Ein bestehendes Projekt mit den empfohlenen Prüfwerkzeugen auf Lint- und Typfehler untersuchen, bevor man sie in Hooks oder CI einbindet.",
+    "Die Auswahl für die eigene Sprache durchsehen und nur die Einträge übernehmen, die zum Projekt passen."
+   ],
+   "quelle": "GitHub",
+   "datum": "2026-10-23",
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "107"
+    }
+   ],
+   "signal": "Eine kuratierte, meinungsstarke Liste mit dem Anspruch, pro Aufgabe nur ein Werkzeug zu empfehlen, die Standards per Exit-Code durchsetzt und KI-Agenten als Nutzer einplant.",
+   "link": "https://github.com/mokevnin/dev-quality-gates",
+   "linkLabel": "Zum Repository",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "dev-quality-gates",
+    "zeilen": [
+     "> Apply dev-quality-gates to this repository",
+     "✓ Werkzeuge nach Sprache ausgewählt",
+     "⚠ Nur Einträge, die zum Projekt passen",
+     "+ Prüfungen in Hooks und CI eingebunden",
+     "● Status: Plan vor Änderungen"
+    ]
+   },
+   "id": "kuratierte-liste-werkzeuge-zur-durchsetzung-von-qualitatssta",
+   "hinzugefuegt": "2026-10-26T05:24:45Z"
+  },
+  {
    "titel": "Hugging Face veröffentlicht Carbon-X: offenes 14,8B-DNA-Sprachmodell",
    "kurz": "Hugging Face hat Carbon-X veröffentlicht, ein offenes Sprachmodell mit 14,8 Milliarden Parametern, das rohe DNA-Sequenzen im Chat lesen und auf Englisch beantworten kann. Die Gewichte stehen unter Apache-2.0-Lizenz zur Verfügung.",
    "artikel": [
@@ -7329,8 +7517,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-26T00:37:28Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-10-26T05:24:45Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-10-26T00:37:28Z"
  }
 }
