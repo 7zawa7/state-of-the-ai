@@ -1,6 +1,57 @@
 {
  "news": [
   {
+   "titel": "LLM-Preise purzeln: OpenAI und Anthropic senken Kosten um bis zu 80 Prozent",
+   "kurz": "Innerhalb weniger Monate haben OpenAI und Anthropic ihre Preise für große Sprachmodelle stark gesenkt, teils um bis zu 80 Prozent. Der Blogger Max Woolf sieht dafür vor allem Wettbewerbsdruck durch austauschbare Modelle und günstige Open-Weight-Konkurrenz.",
+   "artikel": [
+    "Ein Blogbeitrag von Max Woolf zeichnet nach, wie sich die Preise für große Sprachmodelle (LLMs) zwischen Juni und September 2026 entwickelt haben. Die Preise werden jeweils als Input / Output / Cache-Lesen pro eine Million Token (MTok) angegeben. Die Zahlen sind Herstellerangaben.",
+    "## Die Zeitleiste",
+    "Im Juni brachte OpenAI GPT-5.6 Sol und Luna heraus, Anthropic folgte Ende Juni mit Claude Sonnet 5. Ende Juli erschien Claude Opus 5, und am 30. Juli senkte OpenAI den Preis von GPT-5.6 Luna um laut Beitrag 80 Prozent. Im August wurde der zunächst befristete Startpreis von Sonnet 5 dauerhaft übernommen, und OpenAI reduzierte den Preis von GPT-5.6 Sol für drei Monate um etwa 20 Prozent. Anfang September folgte Anthropic mit Fable 5.1, dessen Cache-Lesepreis um 75 Prozent sank. Ende September kündigten beide Anbieter neue Modelle mit deutlich niedrigeren Preisen an.",
+    "## Warum das Cache-Lesen wichtig ist",
+    "Beim Programmieren mit Agenten machen Cache-Lesekosten laut dem Beitrag 96 bis 99 Prozent der Token-Ausgaben aus, weil der gesamte bisherige Gesprächsverlauf bei jedem Schritt erneut gelesen wird. Ein Cache-Treffer bezeichnet dabei das Wiederverwenden bereits verarbeiteter Eingaben. Eine Senkung dieser Kosten um 75 Prozent entspreche daher grob einer Senkung der Gesamtkosten um 70 bis 75 Prozent.",
+    "## Wettbewerb statt Marktmacht",
+    "Der Autor vermutet, dass sich OpenAI und Anthropic gegenseitig beeinflussen. Modelle seien durch einfache Umstellung leicht austauschbar, etwa über OpenRouter, einen Dienst, der viele Modelle über eine Schnittstelle anbietet. Dadurch entstehe wenig Bindung an einen Anbieter und Preisdruck. Besonders wichtig sei die Konkurrenz durch günstige Open-Weight-Modelle wie DeepSeek V4 Flash. Dessen Cache-Lesepreis lag laut Beitrag bei nur 2 Prozent des Input-Preises. Der Autor vermutet, dass die Luna-Preissenkung gezielt auf diese kleinen Modelle reagierte.",
+    "## Qualität und Einordnung",
+    "Laut Beitrag blieb die Ausgabequalität trotz der Preissenkungen offenbar unverändert. Daten des KI-Gateways von Vercel zeigen einen Rückgang der Kosten pro Token auf 43,3 Prozent des Werts von April 2026. Die Gesamtausgaben steigen trotzdem, weil die Modelle schneller besser als günstiger werden. Die Preissenkungen gelten laut Beitrag auch für Abos in Agenten-Werkzeugen wie Codex und Claude Code."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+     "url": "https://minimaxir.com/2026/10/cheap-llms/"
+    },
+    {
+     "titel": "Hacker-News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50236102"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Vergleiche die aktuellen Preise der Anbieter, bevor du ein Modell für eigene Projekte festlegst.",
+    "Teste über einen Dienst wie OpenRouter, wie sich ein günstigeres Modell bei deinen Aufgaben schlägt.",
+    "Achte beim Einsatz von Agenten auf die Cache-Kosten, da sie den Großteil der Ausgaben ausmachen."
+   ],
+   "bereich": "Text",
+   "datum": "2026-10-24",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Output-Preis GPT-5.6 Sol vs. GPT-6 Sol (USD pro MTok)",
+    "balken": [
+     {
+      "label": "GPT-5.6 Sol",
+      "wert": 30,
+      "anzeige": "$30"
+     },
+     {
+      "label": "GPT-6 Sol",
+      "wert": 10,
+      "anzeige": "$10"
+     }
+    ]
+   },
+   "id": "llm-preise-purzeln-openai-und-anthropic-senken-kosten-um-bis",
+   "hinzugefuegt": "2026-10-27T12:19:04Z"
+  },
+  {
    "titel": "IBM-CEO: Open-Weight-Modelle lokal inzwischen konkurrenzfähig und günstig",
    "kurz": "IBM-CEO Arvind Krishna sagt im Q3-Earnings-Call, offene Modelle (Open Weight) seien für den Betrieb im eigenen Rechenzentrum (On-Prem) inzwischen gut und günstig genug. Laut ihm liegen sie bei rund 90 Prozent der Leistung der Spitzenmodelle zu einem Bruchteil der Kosten.",
    "artikel": [
@@ -6297,6 +6348,74 @@
  ],
  "projekte": [
   {
+   "titel": "AstrBot und NapCat direkt auf dem Android-Handy betreiben",
+   "kurz": "Das Open-Source-Projekt AstrBot for Android bündelt die Chatbot-Plattform AstrBot und den QQ-Dienst NapCat in einer einzigen APK. Die Verwaltung läuft lokal auf dem Smartphone, ohne Root-Zugriff.",
+   "artikel": [
+    "AstrBot for Android ist eine Anwendung für Android-Geräte, mit der sich die Chatbot-Plattform AstrBot und der QQ-Dienst NapCat lokal auf dem eigenen Handy installieren und verwalten lassen. Laut Projektbeschreibung läuft alles aus einer einzigen APK heraus.",
+    "## Funktionen",
+    "Die App startet und stoppt beide Dienste, zeigt Status, Verbindungen und Fehler an und bietet eine Logansicht mit automatischem Nachlauf. Eine integrierte PRoot-Ubuntu-Umgebung stellt die Laufzeit bereit, PRoot ist dabei eine Technik, mit der Linux-Umgebungen ohne Root-Rechte simuliert werden. Über eine eingebettete WebView werden die Weboberflächen von AstrBot und NapCat geöffnet, etwa für QQ-Login, Modellanbindung und Plugins.",
+    "Weitere Bausteine sind Backup und Wiederherstellung, Verwaltung von Persönlichkeitsprofilen, Zugriff aus dem lokalen Netz sowie optionale Erweiterungen wie SSH und cpolar zur Internet-Freigabe. cpolar ist ein Dienst für Netzwerk-Tunnel zum Erreichen des Geräts von außen.",
+    "## Einordnung und Voraussetzungen",
+    "Laut Herstellerangaben benötigt die App Android 8.0 oder neuer mit ARM64-Prozessor. Die komplette APK ist etwa 720 MiB groß, und zusätzlicher Speicher wird für Laufzeitumgebung, QQ-Daten und Backups gebraucht. Das Projekt weist außerdem darauf hin, dass Dauerbetrieb eigene Akkueinstellungen erfordert und es derzeit keinen automatischen Start nach einem Neustart gibt.",
+    "Das Repository steht unter der MIT-Lizenz. Die aktuelle Version laut Projektseite ist v1.0.0. Auf GitHub hat das Projekt laut Angabe 146 Sterne.",
+    "Hinweis: Die Angaben zu Funktionen und Voraussetzungen stammen aus der Projektbeschreibung des Herstellers und wurden nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "JunWan666/astrbot-for-android auf GitHub",
+     "url": "https://github.com/JunWan666/astrbot-for-android"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Man kann AstrBot und NapCat auf einem älteren Android-Handy betreiben, ohne einen Server zu mieten.",
+    "Man kann über die integrierte Weboberfläche QQ-Login, Modellanbindung und Plugins konfigurieren.",
+    "Man kann Backups erstellen und Persönlichkeitsprofile für den Bot verwalten."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "AstrBot for Android",
+    "zeilen": [
+     "> Dienste starten: AstrBot + NapCat",
+     "✓ Umgebung initialisiert",
+     "● Status: läuft",
+     "⚠ Akkuoptimierung aktiv – Ausnahme empfohlen"
+    ]
+   },
+   "macher": "JunWan666",
+   "branche": "Open Source · Mobile Apps · KI-Chatbots",
+   "jahr": "2026",
+   "tools": [
+    "AstrBot",
+    "NapCatQQ",
+    "PRoot Ubuntu",
+    "Kotlin",
+    "Jetpack Compose"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "146"
+    },
+    {
+     "label": "Version (laut Projektseite)",
+     "wert": "v1.0.0"
+    },
+    {
+     "label": "APK-Größe (Herstellerangabe)",
+     "wert": "ca. 720 MiB"
+    },
+    {
+     "label": "Mindestsystem (Herstellerangabe)",
+     "wert": "Android 8.0 / API 26, ARM64"
+    }
+   ],
+   "link": "https://github.com/JunWan666/astrbot-for-android",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "astrbot-und-napcat-direkt-auf-dem-android-handy-betreiben",
+   "hinzugefuegt": "2026-10-27T12:19:04Z"
+  },
+  {
    "titel": "BAMA: Native Mac-Apps mit KI-Agenten bauen",
    "kurz": "BAMA ist eine Sammlung von Agent-Skills, mit denen KI-Agenten eine bestehende App screenshotten, neu planen und als native macOS-App in Swift und SwiftUI bauen können. Das Projekt steht als Open-Source-Repository auf GitHub mit 112 Sternen.",
    "artikel": [
@@ -8122,8 +8241,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-27T06:08:19Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-10-27T12:19:04Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-10-27T00:53:33Z"
  }
 }
