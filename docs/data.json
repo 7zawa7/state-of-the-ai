@@ -1,6 +1,86 @@
 {
  "news": [
   {
+   "titel": "Google Deepmind stellt Genie 4 vor: Echtzeit-Welt-Modell mit Ton und Dialog",
+   "kurz": "Google Deepmind hat Genie 4 vorgestellt, ein Welt-Modell, das interaktive 3D-Welten Bild für Bild in Echtzeit berechnet und erstmals passende Hintergrundgeräusche sowie Figurendialoge erzeugt. Zugang haben vorerst nur ausgewählte Tester.",
+   "artikel": [
+    "Google Deepmind hat Genie 4 vorgestellt, den Nachfolger von Genie 3, das das Unternehmen im August 2025 gezeigt hat. Ein Welt-Modell (also ein KI-System, das simulierte Umgebungen erzeugt) liefert hier kein fertiges Video, sondern berechnet jede Szene Bild für Bild und reagiert dabei auf Eingaben. Nutzer bewegen sich mit der Tastatur durch die Szene und lenken das Geschehen per Textprompt.",
+    "## Ton und Figuren",
+    "Laut Deepmind ist Genie 4 das erste Echtzeit-Welt-Modell des Unternehmens, das Klang direkt erzeugt. Jede Welt bekommt eigene Hintergrundgeräusche, etwa Wind in den Bäumen. Außerdem können Figuren miteinander sprechen und in Echtzeit auf Nutzereingaben oder Ereignisse reagieren. Der größte Fortschritt beim Realismus liegt laut Deepmind bei der Darstellung von Menschen: Sie sollen sich natürlich bewegen und auf ihre Umgebung reagieren.",
+    "## Gemini plant im Hintergrund",
+    "Genie 4 baut laut Deepmind auf Fähigkeiten des Videomodells Gemini Omni auf. Weitere Gemini-Modelle planen den Ablauf der Simulation, damit die Welt konsistent bleibt. Ändert ein Nutzer etwa das Wetter per Prompt, passt Gemini die Anweisung an die laufende Szene an. Zwischen den Eingaben lenkt Gemini außerdem Ereignisse, damit sich die Welt sinnvoll weiterentwickelt. Mehrstufige Aufgaben zerlegt das System in Schritte: Gemini 3.8 Flash beobachtet die Szene laufend und prüft anhand neuer Bilder, ob jeder Schritt funktioniert hat. Bei Änderungen passt das Modell seinen Plan an. Zusätzlich testet Deepmind Gemini 4 Argon, das die Arbeit an Genie mit der Robotikforschung verbindet. In einer Demo simuliert Genie 4 laut Deepmind den humanoiden Roboter Apollo des Herstellers Apptronik beim Damespiel, ohne dass ein echter Roboter beteiligt ist.",
+    "## Noch experimentell",
+    "Deepmind bezeichnet Genie 4 als frühes, experimentelles Modell. Die Welt bleibt bei kurzen Sitzungen konsistent, doch bei längeren Simulationen oder nach mehreren komplexen Prompt-Änderungen können sich Bilddetails verschieben und Objekte verschwinden. Weiter erforscht Deepmind komplexe physikalische Interaktionen, präzisen Echtzeit-Ton und lesbare Schrift.",
+    "## Verfügbarkeit",
+    "Derzeit ist Genie 4 nur ausgewählten Testern als Forschungsvorschau zugänglich. Google AI Ultra-Abonnenten sollen es später in der Web-App Project Genie erhalten, dazu Partner mit frühem Zugang zur Gemini API und zu Google AI Studio. Laut Google tragen alle Videos und Audiospuren das SynthID-Wasserzeichen, das KI-Inhalte unsichtbar markiert. Deepmind sieht solche Modelle später als Trainingsumgebungen für Roboter und KI-Agenten."
+   ],
+   "quellen": [
+    {
+     "titel": "Google Deepmind's Genie 4 puts a modern spin on agent designs that predate LLMs (The Decoder)",
+     "url": "https://the-decoder.com/google-deepminds-genie-4-puts-a-modern-spin-on-agent-designs-that-predate-llms/"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Mit Zugang zu Project Genie oder Google AI Studio lassen sich eigene Umgebungen per Textprompt steuern, sobald das Modell breiter verfügbar ist.",
+    "Wer Welt-Modelle verfolgt, kann die Angaben von Google mit unabhängigen Tests vergleichen, da bisher nur Herstellerangaben vorliegen.",
+    "Kreative können Hintergrundgeräusche und Figuren-Dialoge als Idee für interaktive Szenen im Auge behalten."
+   ],
+   "bereich": "3D",
+   "datum": "2026-10-27",
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Szene Bild für Bild",
+     "Ton & Dialog",
+     "Gemini plant",
+     "Tester-Zugang"
+    ]
+   },
+   "tag": "Herstellerangabe",
+   "id": "google-deepmind-stellt-genie-4-vor-echtzeit-welt-modell-mit-",
+   "hinzugefuegt": "2026-10-27T18:04:23Z"
+  },
+  {
+   "titel": "OpenAI legt drei mathematische und physikalische Beweise vor und lässt sie extern prüfen",
+   "kurz": "OpenAI berichtet, dass interne KI-Modelle drei offene Fragen aus Mathematik, Informatik und Physik gelöst haben. Unabhängige Experten, darunter ein Nobelpreisträger, prüfen nun, ob die Beweise standhalten.",
+   "artikel": [
+    "OpenAI zufolge haben interne KI-Modelle ein zentrales Dogma der Informatik widerlegt und einen Teil eines der Millennium-Probleme bewiesen, jeweils mit einem Preisgeld von einer Million Dollar. Das Unternehmen hat die Ergebnisse in einem Blogbeitrag vorgestellt. Ob die Beweise halten, sollen nun externe Fachleute entscheiden. (Herstellerangabe: Alle Aussagen zu den Ergebnissen stammen von OpenAI.)",
+    "## Die Informatik-Behauptung",
+    "Der Informatik-Befund betrifft die Exponentialzeit-Hypothese (ETH). Sie geht um das Erffüllbarkeitsproblem SAT, bei dem man prüft, ob sich die Variablen einer logischen Formel so auf wahr und falsch setzen lassen, dass die gesamte Formel wahr wird. Die ETH besagt, dass es dafür im schlimmsten Fall keine echte Abkürzung gibt: Der Rechenaufwand wächst mit jeder zusätzlichen Variable exponentiell. OpenAI behauptet nun, die ETH sei falsch. Falls das stimmt, verlieren laut Bericht Hunderte Fachartikel aus Graphentheorie, Computerbiologie, Datenbanken und Geometrie ihre Grundlage. Ihre Ergebnisse wären dann nicht automatisch falsch, aber nicht mehr bewiesen.",
+    "Praktische Folgen sind unklar. SAT-Löser prüfen etwa Chipdesigns und Software, arbeiten aber meist mit Formeln, die weit einfacher sind als der Worst Case. MIT-Professor Ryan Williams äußerte sich vorsichtig: Man wisse noch nicht, was Entwickler zuerst bemerken würden.",
+    "## Die Mathematik-Behauptung",
+    "Das Ergebnis aus der Mathematik betrifft die lokale Glättungsvermutung, die der Mathematiker Christopher Sogge 1991 formulierte. Sie beschreibt, dass extreme Konzentrationen von Wellen nur kurz auftreten und sich über die Zeit gleichmäßiger verhalten. Bisher war sie nur für zwei Dimensionen bewiesen. OpenAI sagt, seine Modelle hätten nun einen Beweis für alle Dimensionen erzeugt. Daraus würden auch die Kakeya-Vermutung und Steins Restriktionsvermutung folgen.",
+    "## Prüfung durch Experten",
+    "OpenAI bezeichnet die Manuskripte als eine Art Rohdaten der Forschung, die noch verstanden werden müssen. Externe Experten, sogenannte Shepherds, begleiten die Ergebnisse, und das Unternehmen geht je nach deren Rat unterschiedlich vor. Die Mathe- und Informatik-Beweise wurden in Lean übersetzt, eine Programmiersprache, mit der ein Computer jeden Schritt eines Beweises prüfen kann. Das garantiert aber keine Fehlerfreiheit, denn Lean prüft nur die Aussage, wie sie in Lean formuliert ist. Die ETH-Autoren Russell Impagliazzo, Ramamohan Paturi und Ryan Williams wollen das Ergebnis unbezahlt und ohne Geheimhaltungsvereinbarung prüfen, betonen aber, dass ihre Teilnahme keine Zustimmung bedeutet. OpenAI veröffentlicht die Rohdaten und hat eine Konferenz zu den Folgen finanziert."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI asks outside experts, including a Nobel laureate, to check proofs its AI produced in math, computer science, and physics",
+     "url": "https://the-decoder.com/openai-asks-outside-experts-including-a-nobel-laureate-to-check-proofs-its-ai-produced-in-math-computer-science-and-physics/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Den Eintrag verfolgen, sobald die externen Prüfungen der Beweise veröffentlicht werden.",
+    "Die Erklärungen zu SAT und Lean nutzen, um die Grundlagen des P-versus-NP-Problems zu verstehen."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Beweisprüfung (Lean)",
+    "zeilen": [
+     "> Beweis in Lean eingeben",
+     "✓ Schritte formal geprüft",
+     "⚠ Aussage muss das Gewollte erfassen",
+     "● Status: Prüfung durch Experten läuft"
+    ]
+   },
+   "bereich": "Text",
+   "datum": "2026-10-27",
+   "id": "openai-legt-drei-mathematische-und-physikalische-beweise-vor",
+   "hinzugefuegt": "2026-10-27T18:04:23Z"
+  },
+  {
    "titel": "LLM-Preise purzeln: OpenAI und Anthropic senken Kosten um bis zu 80 Prozent",
    "kurz": "Innerhalb weniger Monate haben OpenAI und Anthropic ihre Preise für große Sprachmodelle stark gesenkt, teils um bis zu 80 Prozent. Der Blogger Max Woolf sieht dafür vor allem Wettbewerbsdruck durch austauschbare Modelle und günstige Open-Weight-Konkurrenz.",
    "artikel": [
@@ -1690,6 +1770,82 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Unlimited-OCR-2: OCR-Modell für ultralange Dokumente",
+   "kurz": "Baidu hat auf Hugging Face das Modell Unlimited-OCR-2 veröffentlicht, das laut Hersteller auch sehr lange Dokumente ohne feste Seitenbegrenzung parsen soll. Das Modell ist unter MIT-Lizenz verfügbar und hat dort 204 Likes.",
+   "artikel": [
+    "Das Modell baidu/Unlimited-OCR-2 ist auf Hugging Face als Vision-Language-Modell für OCR eingeordnet. Es wandelt Bilder von Dokumenten in Text um. Laut Seite ist es unter der MIT-Lizenz veröffentlicht und hat zum Zeitpunkt des Eintrags 204 Likes sowie 513 Downloads.",
+    "## Kernidee: SR-SWA",
+    "Laut Herstellerangabe setzt das Modell auf Sparse Reference Sliding Window Attention (SR-SWA). Das ist ein Aufmerksamkeitsverfahren, das die Wechselwirkungen zwischen Text und Bild auf eine feste Menge von Arbeitsreferenzen beschränkt, etwa 512 Tokens. Dadurch soll der Rechenaufwand pro Dekodierschritt und der Speicherbedarf nahezu konstant bleiben, unabhängig von der Dokumentlänge. Ein Token ist dabei eine kleine Texteinheit, mit der das Modell rechnet.",
+    "## Herstellerangaben zur Leistung",
+    "Baidu gibt an, das Modell erreiche auf Benchmarks mit einigen Dutzend Seiten (etwa MPDocBench) sowie mit hundertseitigen Dokumenten (etwa MarathonDocBench) den Stand der Technik. Dies sind Herstellerangaben, die nicht unabhängig geprüft wurden. Zusätzlich hat Baidu mit MarathonDocBench einen neuen Benchmark für die Verarbeitung ultralanger Dokumente veröffentlicht.",
+    "## Einsatz",
+    "Die Seite nennt zwei Wege: Transformers für schnelle Tests und SGLang für den Serverbetrieb, den der Anbieter empfiehlt. Für Mehrseitendokumente gibt es eine Funktion, die alle Seiten in einer Anfrage verarbeitet, damit das Modell seitenübergreifenden Kontext nutzen kann. Für den SGLang-Betrieb werden Fenster von Seiten verarbeitet, bei denen der KV-Tail des vorherigen Fensters wiederverwendet wird. Die Anleitung nennt Python 3.10 und eine NVIDIA A800-80GB als getestete Umgebung.",
+    "## Einordnung",
+    "Das Projekt baut laut Seite auf dem Modell Unlimited-OCR auf, das Ende Juni 2026 vorgestellt wurde und auf DeepSeek-OCR aufsetzen soll. Die zugehörige Arbeit ist auf arXiv verfügbar. Weitere Angaben zur Leistung außerhalb der Herstellerseite liegen im Material nicht vor."
+   ],
+   "quellen": [
+    {
+     "titel": "baidu/Unlimited-OCR-2 auf Hugging Face",
+     "url": "https://huggingface.co/baidu/Unlimited-OCR-2"
+    },
+    {
+     "titel": "Unlimited OCR Works (arXiv:2606.23050)",
+     "url": "https://arxiv.org/abs/2606.23050"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Ganze mehrseitige Dokumente in einer Anfrage per OCR in Text umwandeln lassen, sofern man eine passende GPU hat.",
+    "Die Transformers-Anleitung nutzen, um das Modell lokal mit eigenen Scans auszuprobieren."
+   ],
+   "ausprobieren": {
+    "prompt": "Multi page parsing.",
+    "tool": "Unlimited-OCR-2 (Hugging Face)",
+    "url": "https://huggingface.co/baidu/Unlimited-OCR-2"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "unlimited-ocr-2",
+    "zeilen": [
+     "> model.infer_multi(tokenizer, image_files=pages)",
+     "✓ Modell geladen (bfloat16)",
+     "✓ Seiten in einer Anfrage verarbeitet",
+     "⚠ Herstellerangabe, nicht unabhängig geprüft",
+     "● Status: fertig"
+    ]
+   },
+   "tag": "OCR · Modell",
+   "quelle": "Hugging Face",
+   "datum": "2026-10-27",
+   "kennzahlen": [
+    {
+     "label": "Likes",
+     "wert": "204"
+    },
+    {
+     "label": "Downloads",
+     "wert": "513"
+    },
+    {
+     "label": "Pipeline",
+     "wert": "image-text-to-text"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    },
+    {
+     "label": "Parameter (laut Seite)",
+     "wert": "ca. 3,34 Mrd. (BF16)"
+    }
+   ],
+   "signal": "Trending auf Hugging Face: Modell für sehr lange Dokumente mit konstantem Speicherbedarf laut Herstellerangabe.",
+   "link": "https://huggingface.co/baidu/Unlimited-OCR-2",
+   "linkLabel": "Modell auf Hugging Face ansehen",
+   "id": "unlimited-ocr-2-ocr-modell-fur-ultralange-dokumente",
+   "hinzugefuegt": "2026-10-27T18:04:23Z"
+  },
   {
    "titel": "DynaFlow: Hauptagent schreibt eigene Workflows für Sub-Agenten",
    "kurz": "DynaFlow ist ein Framework für Multi-Agent-Systeme, bei dem ein Hauptagent je nach Aufgabe ausführbare Abläufe erzeugt, um Sub-Agenten zu koordinieren. Laut Paper erreicht es im Schnitt 88,08 % Genauigkeit über sechs Benchmarks.",
@@ -6348,6 +6504,84 @@
  ],
  "projekte": [
   {
+   "titel": "anymove: Motion Capture für beliebige Fantasiewesen aus einem KI-Video",
+   "kurz": "Das Open-Source-Projekt anymove macht aus einem einzigen KI-generierten Videoclip eine Animation für ein rigged 3D-Wesen, inklusive Flügel, Schwänze und acht Beine. Die Methode stammt laut Repository von CanItCode, die MiniMax-H3-LoRA-Idee von Graalitoo.",
+   "artikel": [
+    "anymove nimmt ein Video, in dem ein Fantasiewesen aus zwei Kameras gleichzeitig zu sehen ist: von vorn links und von der Seite rechts. Ein eigens trainierter Gelenkleser (ein Bildmodell auf DINOv2-Basis) findet in beiden Ansichten jedes Gelenk. Da ein Gelenk auf beiden Ansichten auf gleicher Höhe liegt, lässt sich seine Position im dreidimensionalen Raum bestimmen.",
+    "## Ablauf",
+    "Aus einem Bild entsteht zunächst ein texturiertes 3D-Modell in Originalgröße. Danach werden Knochen gesetzt und das Modell eingebunden. Jede Gliedmaße erhält eine eigene Farbe, damit links und rechts nicht verwechselt werden. Der Gelenkleser wird mit rund 2.200 zufälligen Posen trainiert, deren Gelenke bekannt sind; sein durchschnittlicher Fehler sinkt dabei laut Repository von 40 auf 6 Pixel. Anschließend wird das Skelett Bild für Bild an die gefundenen Punkte angepasst und als GLB-Datei mit 24 Bildern pro Sekunde exportiert.",
+    "## Kosten und Laufzeit",
+    "Laut Repository kostet ein Clip mit MiniMax H3 Max auf fal 0,26 US-Dollar für fünf Sekunden; ein Mesh mit Tripo H3.1 wird mit 0,40 US-Dollar angegeben. Herstellerangaben sind damit als solche zu betrachten. Das Anpassen eines Clips soll laut Projekt weniger als eine Minute dauern. Zum Trainieren des Lesers wird eine NVIDIA-GPU mit 24 GB genannt.",
+    "## Ergebnisse",
+    "Im Repository werden vier Beispielwesen mit Skelettgröße und Fehlerwerten aufgeführt, etwa ein Drache mit 42 Knochen und 50 Gelenken. Die Übereinstimmung der beiden Ansichten liegt dort zwischen 0,73 und 1,00. Die Angaben stammen von den Projektautoren und wurden nicht unabhängig geprüft.",
+    "Das Projekt steht unter Claude-Code-Plugin-Unterstützung zur Verfügung und lässt sich mit Blender 5.x und einem fal-Schlüssel nutzen."
+   ],
+   "quellen": [
+    {
+     "titel": "patch-gg/anymove auf GitHub",
+     "url": "https://github.com/patch-gg/anymove"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Wer eigene Fantasiewesen in Blender rigged, kann anymove nutzen, um Bewegungen aus einem KI-Clip zu übertragen.",
+    "Mit dem enthaltenen Beispiel-Drachen lässt sich die Pipeline ohne eigene GPU auf dem Prozessor testen.",
+    "Wer nur Clips animieren will, findet im Repository Anleitungen für neue Bewegungen, etwa einen Schwanzhieb."
+   ],
+   "ausprobieren": {
+    "prompt": "the dragon whips its tail from side to side, then stands still.",
+    "tool": "anymove",
+    "url": "https://github.com/patch-gg/anymove"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Ergebnis-Fehler des Gelenklesers (Pixel, Trainingsverlauf)",
+    "balken": [
+     {
+      "label": "vor Training",
+      "wert": 40,
+      "anzeige": "40 px"
+     },
+     {
+      "label": "nach Training",
+      "wert": 6,
+      "anzeige": "6 px"
+     }
+    ]
+   },
+   "tag": "Open Source · GitHub",
+   "macher": "patch-gg (Repository-Autoren; Methode laut Repo von CanItCode, Idee der H3-LoRA von Graalitoo)",
+   "branche": "3D-Animation / Motion Capture",
+   "jahr": "",
+   "tools": [
+    "Blender 5.x",
+    "PyTorch",
+    "DINOv2",
+    "MiniMax H3 Max (fal)",
+    "Tripo H3.1",
+    "Flux",
+    "GLB"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "138 ★"
+    },
+    {
+     "label": "Kosten pro Clip (Herstellerangabe)",
+     "wert": "0,26 US-Dollar"
+    },
+    {
+     "label": "Gelenkleser-Fehler (Training)",
+     "wert": "40 → 6 px"
+    }
+   ],
+   "link": "https://github.com/patch-gg/anymove",
+   "linkLabel": "Zum Repository",
+   "id": "anymove-motion-capture-fur-beliebige-fantasiewesen-aus-einem",
+   "hinzugefuegt": "2026-10-27T18:04:23Z"
+  },
+  {
    "titel": "AstrBot und NapCat direkt auf dem Android-Handy betreiben",
    "kurz": "Das Open-Source-Projekt AstrBot for Android bündelt die Chatbot-Plattform AstrBot und den QQ-Dienst NapCat in einer einzigen APK. Die Verwaltung läuft lokal auf dem Smartphone, ohne Root-Zugriff.",
    "artikel": [
@@ -8241,8 +8475,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-27T12:19:04Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-10-27T18:04:23Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-10-27T00:53:33Z"
  }
 }
