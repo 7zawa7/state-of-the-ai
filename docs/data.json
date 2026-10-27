@@ -1591,6 +1591,80 @@
  ],
  "radar": [
   {
+   "titel": "Warum KI-Texte so anstrengend zu lesen sind: sechs sprachliche Muster",
+   "kurz": "Eine Studie der New York University und der University of Texas at Austin zeigt, dass Sprachmodelle bestimmte schwer verdauliche Satzmuster überbetonen. Die Forscher führen das auf Training mit Code und Mathe zurück, wo Korrektheit belohnt wird, Verständlichkeit aber nicht.",
+   "artikel": [
+    "Wer regelmäßig mit ChatGPT, Claude oder anderen Sprachmodellen arbeitet, kennt das Gefühl: Die Antworten stimmen oft sachlich, lesen sich aber mühsam. Eine Studie der New York University und der University of Texas at Austin liefert dafür Daten.",
+    "## Sechs auffällige Muster",
+    "Die Forscher untersuchten 14 Sprachmodelle, darunter Claude, GPT-5.6, GLM-5, Kimi K2.5 sowie kleinere Open-Source-Modelle wie Llama und Olmo. Verglichen wurde mit von Menschen geschriebenen Texten aus Filmuntertiteln, StackExchange und Studienaufsätzen. Insgesamt wurden 120 Gespräche, 45 Coding-Sitzungen und 980 Aufsätze ausgewertet.",
+    "Zu den Mustern gehören ungewöhnliche Wortkombinationen, die im menschlichen Schreiben selten vorkommen, sowie Satzteile, die weit auseinanderstehen und das Arbeitsgedächtnis belasten. Außerdem verkürzen Modelle Verweise, indem sie etwa ein Relativpronomen weglassen, was Leser kurz verwirren kann. Gestapelte Substantive wie „horror movie soundtrack generator“ zwingen dazu, selbst herauszufinden, welches Wort welches andere beschreibt.",
+    "Hinzu kommt, dass Modelle Substantive wie Verben verwenden, wo Menschen das nicht täten, und unbelebten Dingen menschliche Tätigkeiten zuschreiben. Die Bedeutung ist meist erkennbar, kostet aber einen zusätzlichen Moment.",
+    "## Kleinere Modelle schreiben menschlicher",
+    "Llama und das Olmo-Basismodell kommen den menschlichen Texten am nächsten. Innerhalb der Olmo-Familie steigen die Werte vom Basismodell über die Instruct-Variante bis zum Reasoning-Modell Olmo Think, was die Forscher auf das Post-Training zurückführen. Claude Opus 5.5 schlägt seinen Vorgänger Opus 5 in 19 von 21 Vergleichen, was laut Studie darauf hindeutet, dass gezieltes Feintuning die Lesbarkeit verbessern kann.",
+    "## Belohnung für Informationsdichte",
+    "Menschliche Sprache balanciert Produktionsaufwand und Verständlichkeit. Moderne Modelle werden jedoch zunehmend auf Aufgaben wie Mathe, Code und logisches Schließen trainiert. Die Forscher sprechen von einem Wechsel von RLHF (Verstärkendes Lernen aus menschlichem Feedback) zu RLVR (Verstärkendes Lernen mit überprüfbaren Belohnungen), bei dem Menschen aus der Rückkopplungsschleife verschwinden. Ein kleines Testmodell mit Strafterm für lange Antworten bevorzugte kürzere Formulierungen fast ohne Ausnahme, auch in neuen Satzmustern.",
+    "Ein Anthropic-Mitarbeiter, der an Claude-Feintuning arbeitet, beschrieb laut Bericht, dass Modelle auf Mathe und Code optimiert einen Stil entwickeln, der für KI gut funktioniert, für Menschen aber zu dicht wirkt. Laut Artikel ging Anthropic mit Opus 5.5 erstmals gezielt gegen diese Verdichtung vor. Die Studie stützt diesen Eindruck."
+   ],
+   "quellen": [
+    {
+     "titel": "Researchers find six patterns that make AI text so exhausting to read – The Decoder",
+     "url": "https://the-decoder.com/researchers-find-six-patterns-that-make-ai-text-so-exhausting-to-read/"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Lies KI-generierte Texte vor dem Veröffentlichen auf schwer lesbare Satzkonstruktionen durch und kürze sie.",
+    "Bitte Sprachmodelle explizit um klare, kurze Sätze ohne gestapelte Substantive.",
+    "Achte beim Vergleich von Modellen auch auf Lesbarkeit, nicht nur auf Korrektheit."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Olmo-Familie: Nähe zu menschlichem Text",
+    "balken": [
+     {
+      "label": "Olmo Basismodell",
+      "wert": 1,
+      "anzeige": "nah am Menschen"
+     },
+     {
+      "label": "Olmo Think",
+      "wert": 2,
+      "anzeige": "Frontier-Niveau"
+     }
+    ]
+   },
+   "radar": true,
+   "quelle": "Fachpresse",
+   "datum": "2026-10-26",
+   "kennzahlen": [
+    {
+     "label": "Getestete Sprachmodelle",
+     "wert": "14"
+    },
+    {
+     "label": "Analysierte Gespräche",
+     "wert": "120"
+    },
+    {
+     "label": "Coding-Sitzungen",
+     "wert": "45"
+    },
+    {
+     "label": "Analysierte Essays",
+     "wert": "980"
+    },
+    {
+     "label": "Opus 5.5 gegen Opus 5",
+     "wert": "19 von 21 Vergleichen"
+    }
+   ],
+   "signal": "Lesbarkeit von KI-Texten wird zum eigenen Qualitätsmerkmal, und Feintuning scheint sie verbessern zu können.",
+   "link": "https://the-decoder.com/researchers-find-six-patterns-that-make-ai-text-so-exhausting-to-read/",
+   "linkLabel": "Originalartikel bei The Decoder",
+   "id": "warum-ki-texte-so-anstrengend-zu-lesen-sind-sechs-sprachlich",
+   "hinzugefuegt": "2026-10-27T00:53:33Z"
+  },
+  {
    "titel": "Nanbeige4.3-33B: offenes 33B-Coding-Modell mit 512K Kontext",
    "kurz": "Das Nanbeige LLM Lab hat das dichte 33B-Modell Nanbeige4.3-33B unter Apache-2.0-Lizenz auf Hugging Face veröffentlicht. Laut eigener Tabelle führt es bei agentischem Coding und Büroaufgaben, die Angaben sind jedoch Herstellerangaben.",
    "artikel": [
@@ -6101,6 +6175,145 @@
  ],
  "projekte": [
   {
+   "titel": "trompe: Ganze Spiel-Level mit Bildmodellen texturieren",
+   "kurz": "Das Open-Source-Projekt trompe texturiert ein graues Level-Blockout komplett mit KI-Bildmodellen. Es plant Kameras, lässt Bilder malen, projiziert sie zurück auf die Geometrie und backt eine Textur.",
+   "artikel": [
+    "trompe ist ein Werkzeug auf GitHub (patch-gg/trompe), das ein ganzes Spiel-Level aus einem grauen Blockout mit Bildmodellen einfärbt. Der Ablauf besteht aus Planen, Malen, Projizieren und Backen. Laut Projektbeschreibung wurde ein Beispiel-Dorf mit 128 Ansichten erstellt, die Kosten lagen bei 4,44 Dollar und die Laufzeit bei 26 Minuten.",
+    "## Wie der Ablauf funktioniert",
+    "Zuerst plant trompe Kameras an Stellen, wo ein Spieler stehen kann. Ein Bildmodell malt dann, was jede Kamera sieht. Anschließend wird jedes Bild zurück auf das Level projiziert, und am Ende entsteht eine einzige Textur. Die Planung, Projektion und das Backen laufen im Browser auf der eigenen Grafikkarte, nur die Bildmodelle laufen über den Dienst fal.",
+    "Die Bilder werden bei diffusem Wolkenlicht gemalt. Die Textur entspricht dadurch annähernd dem Albedo, also der reinen Grundfarbe ohne Licht. Die Engine kann dann echte Schatten selbst berechnen. Ein optionaler Modus mit Sonnenlicht bäckt dagegen Schatten ein, die sich später nicht mehr umleuchten lassen.",
+    "## Bedienung",
+    "Man wählt ein Beispiel-Level oder lädt eine eigene .glb-Datei mit UV-Koordinaten und Y-nach-oben. Die Materialien werden beschrieben, etwa Kalkstein- oder Putzwände. Objekte sollte man nicht namentlich nennen, weil sie sonst auf Wände gemalt werden. Ein Befehlszeilenmodus und eine Option zum Weiterführen eines Laufs sind ebenfalls vorhanden.",
+    "## Einordnung",
+    "Die Angaben zu Kosten, Laufzeit und Modellen (FLUX 3 Klein, Fibo 2 Edit) sind Angaben des Autors bzw. der Projektbeschreibung und nicht unabhängig geprüft. Der Repository-Stand zeigte 103 Sterne. Die Projektbeschreibung nennt außerdem Nachteile: Paralleles Malen ist schneller, erzeugt aber sichtbare Nähte."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: patch-gg/trompe",
+     "url": "https://github.com/patch-gg/trompe"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Ein eigenes graues Blockout-Level in einer .glb-Datei mit Materialbeschreibungen texturieren lassen.",
+    "Die Textur als Albedo in eine Engine übernehmen und dort die Beleuchtung und Schatten selbst berechnen.",
+    "Den Quellcode auf GitHub ansehen und die Ergebnisse mit eigenen Prompts vergleichen."
+   ],
+   "ausprobieren": {
+    "prompt": "a sunlit Mediterranean hill village: weathered limestone and ochre plaster walls, terracotta roofs",
+    "tool": "trompe",
+    "url": "https://github.com/patch-gg/trompe"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Kosten pro Lauf (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Beispiel-Lauf",
+      "wert": 4.44,
+      "anzeige": "4,44 $"
+     }
+    ]
+   },
+   "tag": "Open Source",
+   "macher": "patch-gg",
+   "branche": "3D / Gamedev",
+   "jahr": "2025",
+   "tools": [
+    "FLUX 3 Klein",
+    "Fibo 2 Edit",
+    "fal",
+    "glTF",
+    "Vite"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Ansichten",
+     "wert": "128"
+    },
+    {
+     "label": "Kosten (Herstellerangabe)",
+     "wert": "4,44 $"
+    },
+    {
+     "label": "Laufzeit",
+     "wert": "26 Minuten"
+    },
+    {
+     "label": "GitHub-Sterne",
+     "wert": "103"
+    }
+   ],
+   "link": "https://github.com/patch-gg/trompe",
+   "linkLabel": "Zum Repository",
+   "id": "trompe-ganze-spiel-level-mit-bildmodellen-texturieren-1793062428",
+   "hinzugefuegt": "2026-10-27T00:53:33Z"
+  },
+  {
+   "titel": "TokenBar: Open-Source-Monitor zeigt KI-Nutzungslimits auf allen Geräten",
+   "kurz": "TokenBar ist ein quelloffenes Programm, das die Nutzungslimits, Guthaben und Reset-Zeiten vieler KI-Dienste an einer Stelle anzeigt. Es läuft unter Windows, macOS, Linux, Android und iOS und wurde mit Flutter gebaut.",
+   "artikel": [
+    "TokenBar ist ein Open-Source-Projekt auf GitHub, das die Restkontingente verschiedener KI-Dienste übersichtlich darstellt. Laut Projektseite deckt es 50 Dienste ab, darunter Codex, Claude, Cursor, OpenRouter und DeepSeek. Das Projekt ist vom macOS-Programm CodexBar inspiriert und bringt diese Idee auf weitere Plattformen.",
+    "## Was angezeigt wird",
+    "Pro Dienst zeigt die App die verbleibenden Kontingente, das Guthaben und einen Countdown bis zum Zurücksetzen. Ein sogenannter Pace-Marker vergleicht den bisherigen Verbrauch mit einem gleichmäßigen Tempo und schätzt, wie viel bis zum Reset verbraucht sein wird. Die Anzeige erfolgt in der Form, die der jeweilige Anbieter selbst meldet.",
+    "## Wie die Zugangsdaten genutzt werden",
+    "Auf dem Desktop liest TokenBar den Login, den offizielle CLI-Werkzeuge oder Apps bereits gespeichert haben, nur lesend. Auf anderen Geräten fügt man einen API-Schlüssel oder ein Cookie ein. Laut Projektangaben fragt die App nie nach einem Passwort und meldet sich nicht selbst an. Die Abfragen erfolgen direkt vom eigenen Gerät aus an den jeweiligen Anbieter. Ein optionaler Sync-Server empfängt laut Projektangaben nur Nutzungsdaten, keine Zugangsdaten.",
+    "## Funktionen",
+    "Es gibt ein Tray-Symbol, dessen zwei Balken das knappste Kontingent zeigen, sowie eine Übersicht aller Konten. Verlaufsdiagramme, Benachrichtigungen bei niedrigen Kontingenten, eine Android-Widget-Unterstützung und eine Kommandozeilen-Funktion sind ebenfalls enthalten. Die App ist auf Chinesisch und Englisch verfügbar.",
+    "## Einordnung",
+    "Die Angaben stammen aus der Projektbeschreibung auf GitHub und sind Herstellerangaben des Projekts. Der Repository-Stand mit 85 Sternen zeigt ein kleines, junges Projekt. Einige Zugriffe nutzen inoffizielle Schnittstellen, die laut Projektseite nicht öffentlich sind und sich ohne Vorankündigung ändern können."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: lwh0630/TokenBar",
+     "url": "https://github.com/lwh0630/TokenBar"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Man kann die Restkontingente seiner KI-Abos und API-Konten auf einen Blick im Tray oder auf dem Handy verfolgen.",
+    "Man kann mit der Kommandozeilenfunktion die Nutzungsdaten im Terminal oder als JSON abrufen.",
+    "Man kann Warnungen bei niedrigen Kontingenten einrichten, um rechtzeitig reagieren zu können."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Verbleibende Quota-Anzeige (Beispiel aus der Quelle nicht vorhanden)",
+    "balken": [
+     {
+      "label": "Anzahl unterstützter Dienste",
+      "wert": 50,
+      "anzeige": "50 Dienste laut Projektseite"
+     }
+    ]
+   },
+   "tag": "Open Source",
+   "macher": "lwh0630 (GitHub-Nutzer)",
+   "branche": "KI-Werkzeuge / Monitoring",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "Flutter",
+    "Codex",
+    "Claude",
+    "Cursor",
+    "OpenRouter",
+    "DeepSeek"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "85"
+    },
+    {
+     "label": "Unterstützte Dienste",
+     "wert": "50 (laut Herstellerangabe)"
+    }
+   ],
+   "link": "https://github.com/lwh0630/TokenBar",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "tokenbar-open-source-monitor-zeigt-ki-nutzungslimits-auf-all",
+   "hinzugefuegt": "2026-10-27T00:53:33Z"
+  },
+  {
    "titel": "Chaos Intelligence: Programmiersprache, die KI-Agenten wie Funktionen aufruft",
    "kurz": "Chaos ist eine funktionale Programmiersprache, in der sich Agenten wie Funktionen aufrufen lassen. Das Projekt auf GitHub hat 161 Sterne und ist quelloffen einsehbar, darf aber nicht für KI-Training verwendet werden.",
    "artikel": [
@@ -7710,8 +7923,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-26T21:49:07Z",
-  "neueFunde": 1,
-  "standAktualisiert": "2026-10-26T00:37:28Z"
+  "letzterScan": "2026-10-27T00:53:33Z",
+  "neueFunde": 3,
+  "standAktualisiert": "2026-10-27T00:53:33Z"
  }
 }
