@@ -1,6 +1,55 @@
 {
  "news": [
   {
+   "titel": "IBM-CEO: Open-Weight-Modelle lokal inzwischen konkurrenzfähig und günstig",
+   "kurz": "IBM-CEO Arvind Krishna sagt im Q3-Earnings-Call, offene Modelle (Open Weight) seien für den Betrieb im eigenen Rechenzentrum (On-Prem) inzwischen gut und günstig genug. Laut ihm liegen sie bei rund 90 Prozent der Leistung der Spitzenmodelle zu einem Bruchteil der Kosten.",
+   "artikel": [
+    "IBM-Chef Arvind Krishna hat Investoren berichtet, dass offene Modelle, bei denen die Gewichte veröffentlicht werden (sogenannte Open-Weight-Modelle), für den unternehmensinternen Einsatz inzwischen sinnvoll sind. Auf dem Q3-Earnings-Call des Unternehmens verwies er darauf, dass geschlossene Spitzenmodelle im Jahr 2024 den offenen Alternativen klar überlegen waren.",
+    "## Kleiner werdende Lücke",
+    "Krishna beschrieb, dass sich der Abstand Ende 2025 verringert habe. In einem breit angelegten Benchmark erreiche das Spitzenmodell etwa 70 Punkte, ein offenes Modell früher 20 oder 30, inzwischen eher rund 50. Laut Krishna kosten offene Modelle derzeit zwischen 25 und 10 Prozent der Token-Kosten (Token: Recheneinheit für Texteingabe und -ausgabe) der Spitzenmodelle, bei etwa 90 Prozent der Wirksamkeit. Diese Zahlen sind Aussagen des CEO und keine unabhängig geprüften Messwerte.",
+    "## Einsatz im eigenen Rechenzentrum",
+    "Krishna meint, die meisten Aufgaben wie das Zusammenfassen von E-Mails, die Prüfung von Verträgen oder die Beantwortung von Kundenanrufen ließen sich mit dem günstigeren Modell ebenso gut erledigen. Nur einige Aufgaben brauchten das teurere Spitzenmodell. Laut ihm sieht IBM stark steigendes Interesse an On-Prem-KI-Infrastruktur und hält für viele Unternehmen zwei oder drei Server-Racks für ausreichend. Schwierig sei jedoch der Betrieb, etwa das Know-how für Kernel-Engineering, Netzwerk und Caching. IBM wolle dafür Software anbieten, die Einführungen erleichtert; Details nannte er nicht.",
+    "## Zahlen zum Quartal",
+    "IBM meldete einen Quartalsumsatz von 17,1 Milliarden Dollar, ein Plus von fünf Prozent. Die Infrastruktursparte wuchs um fünf Prozent auf 3,7 Milliarden Dollar, die Software um neun Prozent auf 7,8 Milliarden Dollar. Der Mainframe-Umsatz sank dagegen um 20 Prozent, was IBM laut Bericht erwartet hatte. Red Hat wuchs um elf Prozent. Die Angaben zu Umsatz und Wachstum stammen aus der Berichterstattung über IBMs eigene Zahlen."
+   ],
+   "quellen": [
+    {
+     "titel": "IBM CEO says open weight models are now irresistibly good and cheap on-prem – The Register",
+     "url": "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50238088"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer mit KI-Modellen im eigenen Haus arbeiten will, kann Open-Weight-Modelle mit Standardaufgaben wie E-Mail-Zusammenfassungen testen und die Kosten mit geschlossenen Angeboten vergleichen.",
+    "Unternehmen können prüfen, ob für Routineaufgaben ein günstigeres Modell reicht, bevor sie teure Spitzenmodelle einsetzen."
+   ],
+   "bereich": "Apps",
+   "datum": "2026-10-22",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Kosten-Verhältnis laut IBM-CEO (Herstelleraussage)",
+    "balken": [
+     {
+      "label": "Spitzenmodell",
+      "wert": 100,
+      "anzeige": "100 % Token-Kosten"
+     },
+     {
+      "label": "Open-Weight (Herstellerangabe)",
+      "wert": 10,
+      "anzeige": "10–25 % Token-Kosten"
+     }
+    ]
+   },
+   "tag": "Herstellerangabe",
+   "id": "ibm-ceo-open-weight-modelle-lokal-inzwischen-konkurrenzfahig",
+   "hinzugefuegt": "2026-10-27T06:08:19Z"
+  },
+  {
    "titel": "GPT-6.1 Terra: OpenAI halbiert API-Preise der Mittelklasse",
    "kurz": "OpenAI hat mit GPT-6.1 Terra ein Mittelklasse-Modell veröffentlicht, dessen API-Preise laut Herstellerangabe nur halb so hoch sind wie beim Vorgänger. Unabhängige Benchmarks der Analysefirma Artificial Analysis sehen ein besseres Verhältnis von Leistung zu Kosten.",
    "artikel": [
@@ -1590,6 +1639,79 @@
   }
  ],
  "radar": [
+  {
+   "titel": "DynaFlow: Hauptagent schreibt eigene Workflows für Sub-Agenten",
+   "kurz": "DynaFlow ist ein Framework für Multi-Agent-Systeme, bei dem ein Hauptagent je nach Aufgabe ausführbare Abläufe erzeugt, um Sub-Agenten zu koordinieren. Laut Paper erreicht es im Schnitt 88,08 % Genauigkeit über sechs Benchmarks.",
+   "artikel": [
+    "Viele Multi-Agent-Systeme arbeiten mit festen Zusammenarbeitsstrukturen, die sich schlecht an unterschiedliche Aufgaben anpassen. DynaFlow, vorgestellt in einem arXiv-Paper vom Oktober 2026, setzt dagegen auf frei formulierte, ausführbare Workflows.",
+    "## Wie der Ansatz funktioniert",
+    "Der Hauptagent entscheidet selbst, wann Zusammenarbeit nötig ist, und erzeugt dafür ein aufgabenspezifisches Programm. Dieses steuert Sub-Agenten nacheinander oder parallel, regelt den strukturierten Informationsaustausch und sieht Verifikationsschritte vor. Ergebnisse und Ausführungsprotokolle fließen in die nächsten Entscheidungen ein. Ein Workflow ist hier also eine Abfolge von Schritten, die der Agent als Code formuliert und ausführt.",
+    "## Training",
+    "Trainiert wird nur der Hauptagent, und zwar per überwachtem Feintuning (Supervised Fine-Tuning) auf destillierten Ablaufspuren. Danach folgt eine Verfeinerung mit gefilterten Beispielen, etwa solchen mit nicht belegten Prämissen oder fehlerhafter Informationsweitergabe. Die Sub-Agenten bleiben unverändert, sodass das Lernen der Orchestrierung getrennt von der Verbesserung der ausführenden Agenten bleibt.",
+    "## Ergebnisse",
+    "Über sechs Benchmarks aus Mathematik, wissenschaftlichen Fragen und mehrstufiger Suche erreicht DynaFlow im Modus „Forced“ laut Autoren 88,08 % Gesamtgenauigkeit. Der stärkste verglichene Baseline lag demnach 10,90 Prozentpunkte darunter; beide nutzen dasselbe Qwen3.5-27B-Modell als Grundlage. Eine Workflow-Analyse zeigt nach dem Training häufigere explizite Nutzung, Prüfung und Überarbeitung vorheriger Ausgaben. Die Autoren sehen darin den Informationsfluss zwischen Stufen als zentrale Dimension der Orchestrierung.",
+    "Hinweis: Die Zahlen stammen aus dem Paper der Autoren und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "DynaFlow: Learning Free-Form Multi-Agent Orchestration (Hugging Face Papers)",
+     "url": "https://huggingface.co/papers/2610.34467"
+    },
+    {
+     "titel": "arXiv 2610.34467",
+     "url": "https://arxiv.org/abs/2610.34467"
+    },
+    {
+     "titel": "Projektseite DynaFlow",
+     "url": "https://amiya-special.github.io/DynaFlow-website"
+    },
+    {
+     "titel": "GitHub: amiya-special/Dynaflow",
+     "url": "https://github.com/amiya-special/Dynaflow"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer eigene Agenten-Workflows baut, kann den Ansatz des Paper-Codes auf eigene Aufgaben übertragen.",
+    "Forschende können die veröffentlichten Ablaufspuren und Benchmarks als Vergleich für eigene Orchestrierung nutzen.",
+    "Entwickelnde können prüfen, wie Verifikationsschritte zwischen Teilagenten die Ergebnisqualität beeinflussen."
+   ],
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Hauptagent",
+     "Sub-Agent A",
+     "Sub-Agent B",
+     "Verifikation"
+    ]
+   },
+   "tag": "Forschung",
+   "quelle": "arXiv",
+   "datum": "2026-10-25",
+   "kennzahlen": [
+    {
+     "label": "Gesamtgenauigkeit (Forced-Modus, laut Autoren)",
+     "wert": "88,08 %"
+    },
+    {
+     "label": "Vorsprung vor stärkster Baseline (laut Autoren)",
+     "wert": "10,90 Prozentpunkte"
+    },
+    {
+     "label": "Backbone-Modell",
+     "wert": "Qwen3.5-27B"
+    },
+    {
+     "label": "Benchmarks",
+     "wert": "6"
+    }
+   ],
+   "signal": "Der Informationsfluss zwischen Verarbeitungsstufen wird als zentrale Stellschraube für Multi-Agent-Systeme beschrieben. Die Ergebnisse stammen von den Autoren selbst; eine unabhängige Prüfung liegt nicht vor.",
+   "link": "https://huggingface.co/papers/2610.34467",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "dynaflow-hauptagent-schreibt-eigene-workflows-fur-sub-agente",
+   "hinzugefuegt": "2026-10-27T06:08:19Z"
+  },
   {
    "titel": "Warum KI-Texte so anstrengend zu lesen sind: sechs sprachliche Muster",
    "kurz": "Eine Studie der New York University und der University of Texas at Austin zeigt, dass Sprachmodelle bestimmte schwer verdauliche Satzmuster überbetonen. Die Forscher führen das auf Training mit Code und Mathe zurück, wo Korrektheit belohnt wird, Verständlichkeit aber nicht.",
@@ -6175,6 +6297,83 @@
  ],
  "projekte": [
   {
+   "titel": "BAMA: Native Mac-Apps mit KI-Agenten bauen",
+   "kurz": "BAMA ist eine Sammlung von Agent-Skills, mit denen KI-Agenten eine bestehende App screenshotten, neu planen und als native macOS-App in Swift und SwiftUI bauen können. Das Projekt steht als Open-Source-Repository auf GitHub mit 112 Sternen.",
+   "artikel": [
+    "BAMA steht für „Build Any Mac App“. Das Projekt von Dave Ebbelaar bündelt sogenannte Agent-Skills: Anleitungen, mit denen ein KI-Agent eine macOS-App von der Idee bis zum Dock-Symbol begleitet. Gebaut wird mit Swift und SwiftUI, die Daten bleiben laut Projektbeschreibung lokal, und Xcode muss nicht über die grafische Oberfläche bedient werden.",
+    "## Ablauf",
+    "Der Ablauf gliedert sich in drei Schritte. Beim Klonen öffnet der Agent eine vorhandene App, macht Screenshots jedes Bildschirms und schreibt einen Screen-Index. Danach macht er daraus Nutzerstories mit prüfbaren Akzeptanzkriterien, gruppiert in Meilensteine. Beim Bauen entsteht pro Story ein eigener Commit; vor jedem Commit werden alle Seiten im hellen und dunklen Modus fotografiert und die Tests ausgeführt.",
+    "## Bausteine",
+    "Die Skills decken Planung, Code, Design und Auslieferung ab. Dazu gehören etwa eine Vorlage für eine neue Swift-Package-App, Hinweise zu Swift-6-Nebenläufigkeit, Integrationen wie globale Tastenkürzel und Menüleisten-Apps sowie Werkzeuge zur Leistungsmessung. Ein Skill „Liquid Glass“ beschreibt den neuen Apple-Designstil. Laut Readme enthält das Repository außerdem zwölf Bauanleitungen für kleine Mac-Apps im Ordner specs/.",
+    "## Voraussetzungen",
+    "Vorausgesetzt werden macOS 26 oder neuer sowie Xcode 26 für den Swift-6.2-Compiler. Für das Klonen nativer Apps mit Computer Use ist laut Readme ein Claude-Pro- oder Max-Abo nötig. Die Installation ist für Claude Code, Codex sowie weitere Agenten über skills.sh möglich. Das Projekt steht unter der MIT-Lizenz.",
+    "## Einordnung",
+    "Die Idee und das Versprechen „any“ stammen laut Readme von REA, einem Projekt, das zeigt, dass ein Agent beliebige Apps per Reverse Engineering nachbauen kann. Der Readme-Hinweis auf das Tool Glaido ist eine Herstellerangabe des Autors, der Glaido selbst entwickelt; der Autor weist selbst auf seine Befangenheit hin."
+   ],
+   "quellen": [
+    {
+     "titel": "daveebbelaar/bama auf GitHub",
+     "url": "https://github.com/daveebbelaar/bama"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Du kannst eine kleine App, die dir gefällt, als eigene native Mac-App nachbauen lassen.",
+    "Du kannst mit einem Agenten aus einer Idee einen Einseiter-Plan und eine Nutzerstory-Liste erstellen lassen.",
+    "Du kannst eine der zwölf Bauanleitungen aus specs/ kopieren und umsetzen lassen."
+   ],
+   "ausprobieren": {
+    "prompt": "Clone my to-do app as a native Mac app. Screenshot every screen, write the user stories, and build milestone 1.",
+    "tool": "BAMA",
+    "url": "https://github.com/daveebbelaar/bama"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "bama",
+    "zeilen": [
+     "> npx skills@latest add daveebbelaar/bama",
+     "✓ Skills installiert",
+     "⚠ Voraussetzung: macOS 26 oder neuer",
+     "+ clone: Screenshots jedes Bildschirms",
+     "+ user-stories: Akzeptanzkriterien in Meilensteinen",
+     "● Status: bereit für Milestone 1"
+    ]
+   },
+   "tag": "Open Source",
+   "macher": "Dave Ebbelaar",
+   "branche": "Software-Entwicklung / macOS-Apps",
+   "jahr": 2026,
+   "tools": [
+    "Swift",
+    "SwiftUI",
+    "Claude Code",
+    "Codex",
+    "SwiftData"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "112"
+    },
+    {
+     "label": "Forks",
+     "wert": "28"
+    },
+    {
+     "label": "Mindestversion macOS",
+     "wert": "26"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    }
+   ],
+   "link": "https://github.com/daveebbelaar/bama",
+   "linkLabel": "Zum Repository",
+   "id": "bama-native-mac-apps-mit-ki-agenten-bauen",
+   "hinzugefuegt": "2026-10-27T06:08:19Z"
+  },
+  {
    "titel": "trompe: Ganze Spiel-Level mit Bildmodellen texturieren",
    "kurz": "Das Open-Source-Projekt trompe texturiert ein graues Level-Blockout komplett mit KI-Bildmodellen. Es plant Kameras, lässt Bilder malen, projiziert sie zurück auf die Geometrie und backt eine Textur.",
    "artikel": [
@@ -7923,7 +8122,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-27T00:53:33Z",
+  "letzterScan": "2026-10-27T06:08:19Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-10-27T00:53:33Z"
  }
