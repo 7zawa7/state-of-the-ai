@@ -1811,6 +1811,59 @@
  ],
  "radar": [
   {
+   "titel": "Constrained Decoding: schadet es dem Denken von LLMs wirklich?",
+   "kurz": "Eine arXiv-Arbeit (Oktober 2025) argumentiert, dass Constrained Decoding die Schlussfolgerungen von Sprachmodellen nicht grundsätzlich verschlechtert. Entscheidend ist, welche Art von Einschränkung verwendet wird.",
+   "artikel": [
+    "Constrained Decoding erzwingt, dass ein Large Language Model (LLM) nur Ausgaben erzeugt, die einem vorgegebenen Format entsprechen, etwa gültigem JSON. Verbreitet ist die Annahme, dass dies die Argumentation des Modells beeinträchtigt. Eine Arbeit mit dem Titel „Constrained Decoding: Harmful or Beneficial?“ prüft genau diese Annahme.",
+    "## Drei Arten von Einschränkungen",
+    "Die Autoren unterscheiden drei Typen: Formatbeschränkungen legen nur die Struktur der Ausgabe fest. Validitätsbeschränkungen maskieren ungültige Antworten. Reasoning-Beschränkungen engen die Denkwege ein, die das Modell beschreiten darf.",
+    "## Was die Experimente zeigen",
+    "Laut Abstract lässt sich ein Teil des scheinbaren Leistungsverlusts auf nicht gleichwertige Prompts und Ausgabeformate zurückführen, nicht auf das Maskieren im Decoder selbst. Die Untersuchung umfasst vier Modellfamilien und elf Open-Source-Modelle, jeweils mit kausalen Ablationen auf verschiedenen Benchmarks.",
+    "Validitätsbeschränkungen sollen die Zuverlässigkeit und die Auswertbarkeit der Antworten verbessern, weil ungültige Antworten wegfallen. Reasoning-Beschränkungen können die Argumentation und damit die Genauigkeit steigern, wenn sie vorteilhafte Denkwege erzwingen.",
+    "## Einordnung",
+    "Die Autoren schreiben, die Wirkung hänge vom Typ der Einschränkung und vom Ausgaberaum ab, den sie entfernt. Der Eintrag beruht ausschließlich auf der Zusammenfassung der Arbeit auf Hugging Face und dem Abstract; Details der Benchmarks sind dort nicht enthalten. Der Code ist laut Seite verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "Constrained Decoding: Harmful or Beneficial? Revisiting Its Impact on LLM Performance (Hugging Face Papers)",
+     "url": "https://huggingface.co/papers/2610.35328"
+    },
+    {
+     "titel": "arXiv:2610.35328",
+     "url": "https://arxiv.org/abs/2610.35328"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer eigene LLM-Anwendungen mit strukturierter Ausgabe baut, kann prüfen, ob eine Einschränkung Formatfehler reduziert, ohne die Antworten zu verschlechtern.",
+    "Wer Modelle für Aufgaben mit festen Antwortoptionen nutzt, kann Validitätsbeschränkungen testen, die ungültige Antworten ausschließen.",
+    "Wer die Arbeit liest, erhält einen Überblick, wie sich Prompt- und Formatunterschiede auf Benchmark-Ergebnisse auswirken können."
+   ],
+   "tag": "Forschung",
+   "titel_radar": "Constrained Decoding",
+   "quelle": "arXiv",
+   "datum": "2025-10-26",
+   "kennzahlen": [
+    {
+     "label": "Modellfamilien",
+     "wert": "4"
+    },
+    {
+     "label": "Open-Source-Modelle",
+     "wert": "11"
+    },
+    {
+     "label": "Upvotes Hugging Face",
+     "wert": "7"
+    }
+   ],
+   "signal": "Die Arbeit stellt die verbreitete Annahme infrage, dass Constrained Decoding zwangsläufig das Schlussfolgern verschlechtert, und unterscheidet nach Einschränkungstyp.",
+   "link": "https://huggingface.co/papers/2610.35328",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "constrained-decoding-schadet-es-dem-denken-von-llms-wirklich",
+   "hinzugefuegt": "2026-10-28T01:12:53Z"
+  },
+  {
    "titel": "EmbodiedLab: Benchmark testet Roboter, die durch Experimente lernen",
    "kurz": "EmbodiedLab ist ein Benchmark für verkörperte KI-Agenten, die in einem physikalischen Simulationslabor selbst experimentieren, um ein vorab unbekanntes Ergebnis herauszufinden. Der stärkste getestete Agent erreicht mit nativer Steuerung weniger als die Hälfte der Aufgaben.",
    "artikel": [
@@ -8641,8 +8694,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-27T22:06:16Z",
-  "neueFunde": 3,
-  "standAktualisiert": "2026-10-27T00:53:33Z"
+  "letzterScan": "2026-10-28T01:12:53Z",
+  "neueFunde": 1,
+  "standAktualisiert": "2026-10-28T01:12:53Z"
  }
 }
