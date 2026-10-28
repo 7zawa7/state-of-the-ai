@@ -1,6 +1,51 @@
 {
  "news": [
   {
+   "titel": "Google öffnet Android-Entwicklung für externe KI-Agenten",
+   "kurz": "Google öffnet Android Studio für über 40 externe Coding-Agenten wie Claude und Codex und stellt neue Gemini-APIs vor. Die Neuerungen wurden auf dem Android Dev Summit angekündigt.",
+   "artikel": [
+    "Google richtet seine Entwicklungsumgebung für Android stärker auf KI-Agenten aus. Auf dem Android Dev Summit kündigte der Konzern an, dass Android Studio über die Funktion „Bring Your Own Agent“ (BYOA) mehr als 40 Coding-Agenten unterstützt. Entwickler sind damit nicht mehr auf Googles eigene KI-Werkzeuge beschränkt. Die Agenten laufen über das offene Agent Client Protocol (ACP) direkt in der IDE, also der integrierten Entwicklungsumgebung. Genannt werden unter anderem Anthropics Claude Agent, OpenAIs Codex und Google Antigravity.",
+    "## Neue Werkzeuge gegen hohen Token-Verbrauch",
+    "Google erweiterte außerdem die Kommandozeile Android CLI, die auch in Terminal oder CI-Pipelines genutzt werden kann. Laut Google-Herstellerangaben, die auf internen Tests beruhen, erledigten Agenten UI-Aufgaben damit 77 Prozent schneller und verbrauchten bis zu dreimal weniger Tokens. Tokens sind die Recheneinheiten, nach denen KI-Modelle abgerechnet werden. Für die Speicheranalyse wurde die Bibliothek LeakCanary eingebunden; in einem Google-A/B-Test mit Claude Opus 5.5 fand und behob der Agent Speicherlecks laut Google fast doppelt so schnell und mit rund 25 Prozent weniger Tokens.",
+    "## Neue APIs für Agenten auf dem Smartphone",
+    "Für lokale Verarbeitung auf dem Gerät bringt Google eine Alpha-Version der Agentic API auf Basis von Gemini Nano 4 in ML Kit. Die Schnittstelle führt Funktionen automatisch aus, speichert den Chatverlauf und bietet Sicherheitsfilter. Über das Model Context Protocol (MCP) sollen Apps Funktionen für lokale oder systemweite Agenten bereitstellen. Mit dem Connected Apps Platform in der Vorschau können Apps auch in Google Suche und die Gemini-App eingebunden werden. Laut Google sind bereits über 50 Partnerintegrationen, etwa von Adobe, Peloton und Experian, in der Gemini-App aktiv.",
+    "## XREAL AURA",
+    "Zusammen mit dem Hardwarehersteller XREAL stellte Google die Datenbrille XREAL AURA vor, die mit Android XR läuft. Laut Herstellerangaben wiegt sie unter 95 Gramm und kostet 1.099 US-Dollar. Die Rechen- und Akkueinheit steckt in einem externen Puck mit Qualcomm-Chip. Nutzer können bis zu fünf Android-Apps gleichzeitig im Sichtfeld platzieren."
+   ],
+   "quellen": [
+    {
+     "titel": "Google opens Android development to third-party AI agents and unveils new Gemini APIs (The Decoder)",
+     "url": "https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Du kannst in Android Studio einen eigenen oder bereits vorhandenen KI-Coding-Agenten installieren und Apps damit entwickeln.",
+    "Als Hobby-Entwickler kannst du mit der Android CLI KI-Agenten im Terminal Oberflächen prüfen lassen.",
+    "Du kannst Apps so vorbereiten, dass Gemini sie über MCP-Schnittstellen nutzen kann."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-10-28",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "UI-Aufgaben: Zeit bis zum Abschluss (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Bisher",
+      "wert": 100,
+      "anzeige": "100 %"
+     },
+     {
+      "label": "Mit Android CLI",
+      "wert": 23,
+      "anzeige": "77 % schneller"
+     }
+    ]
+   },
+   "id": "google-offnet-android-entwicklung-fur-externe-ki-agenten",
+   "hinzugefuegt": "2026-10-28T23:27:44Z"
+  },
+  {
    "titel": "Google DeepMind veröffentlicht Gemini 4 Carbon zwei Wochen nach Argon",
    "kurz": "Google DeepMind hat Gemini 4 Carbon vorgestellt, das laut Artificial Analysis Intelligence Index v5 mit 59 Punkten vorne liegt. Der Zugang ist wegen der Cybersicherheitsfähigkeiten zunächst auf ausgewählte Sicherheitsexperten beschränkt.",
    "artikel": [
@@ -1900,6 +1945,137 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Prox: MoE-Decoding ohne Kalibrierungsdaten",
+   "kurz": "Ein arXiv-Paper zeigt, dass die Kanalauswahl bei Mixture-of-Experts-Modellen ohne Kalibrierungsdaten auskommt. Top-k-Auswahl ist laut den Autoren der kalibrierten Schwellenwertmethode meist ebenbürtig oder überlegen, und ein Leser aus den Modellgewichten erreicht 1,60- bis 1,90-fache Beschleunigung gegenüber vLLM bei Batch-Größe eins.",
+   "artikel": [
+    "Mixture-of-Experts-Modelle (MoE) werden beim interaktiven Decodieren mit kleinen Batch-Größen vor allem durch das Laden der Gewichte der gerouteten Experten aus dem Speicher ausgebremst. Viele Zwischenkanäle eines Experten tragen für ein einzelnes Token wenig bei. Sogenannte Kanal-Selektoren sagen deshalb voraus, welche Kanäle wichtig sind, und lesen nur deren Gewichte. Bisher wurde dafür meist ein Schwellenwert verwendet, der auf Offline-Daten kalibriert wird.",
+    "## Zwei Befunde gegen den Schwellenwert",
+    "Die Autoren zeigen erstens, dass ein kalibrierter Schwellenwert die Lesemenge nicht zuverlässig festlegt, weil die Zahl der Kanäle über dem Schwellenwert je nach Eingabe schwankt. Ein auf 18 Prozent Lesebudget kalibrierter Prox-Schwellenwert las im Mittel nur 12,9 Prozent. Zweitens behält die Top-k-Variante pro Token die k Kanäle mit den höchsten Werten und braucht dafür keine Kalibrierung. Bei 13 und 18 Prozent Budget war sie in 40 von 43 Vergleichen gleich gut oder besser, darunter in allen 23 Vergleichen bei Generierungsaufgaben. Außerdem vermeidet sie laut Paper die Wiederholungsschleifen, die kalibrierte Schwellenwerte beim Modell Gemma 4 verursachten.",
+    "## Leser aus den Modellgewichten",
+    "Zusätzlich stellen die Autoren einen Leser vor, der nur aus den Gewichten des Modells entsteht. Er siebt Kanäle mit einer ternären Skizze, also einer groben Vorauswahl mit den Werten minus eins, null und plus eins, und holt die übersprungenen Kanäle über eine Abbildung niedrigen Rangs zurück. Über drei nachtrainierte MoE-Modelle behält er laut Paper 98,1 Prozent der Genauigkeit des Vollmodells, bei 17,8 Prozent der Lesezugriffe auf die gerouteten Experten. Die Triton-Kernel laufen laut den Autoren bei Batch-Größe eins 1,60- bis 1,90-mal so schnell wie optimiertes vLLM und bei größeren Batches bis zu 2,69-mal so schnell. Diese Zahlen stammen aus den Angaben der Autoren und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data (arXiv / Hugging Face Paper-Seite)",
+     "url": "https://huggingface.co/papers/2610.37386"
+    },
+    {
+     "titel": "Code-Repository (GitHub, laut Paper-Seite)",
+     "url": "https://github.com/AidenGeunGeun/calibration-free-moe"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer lokal MoE-Modelle betreibt, kann den verlinkten Code auf eigener Hardware ausprobieren und die Geschwindigkeit mit der bisherigen Methode vergleichen.",
+    "Entwickler mit langsamem Speicher, etwa bei kleinen GPUs, finden im Repository einen Ansatz ohne aufwendige Kalibrierungsdaten."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Geschwindigkeit der MoE-Blöcke bei Batch 1 (laut Autoren, gegenüber vLLM)",
+    "balken": [
+     {
+      "label": "vLLM (Basis)",
+      "wert": 1,
+      "anzeige": "1,0×"
+     },
+     {
+      "label": "Prox (Autoren, untere Grenze)",
+      "wert": 1.6,
+      "anzeige": "1,60×"
+     },
+     {
+      "label": "Prox (Autoren, obere Grenze)",
+      "wert": 1.9,
+      "anzeige": "1,90×"
+     }
+    ]
+   },
+   "quelle": "arXiv",
+   "datum": "2026-10-27",
+   "kennzahlen": [
+    {
+     "label": "Erhaltene Genauigkeit des Vollmodells",
+     "wert": "98,1 %"
+    },
+    {
+     "label": "Anteil gelesener gerouteter Experten-Gewichte",
+     "wert": "17,8 %"
+    },
+    {
+     "label": "Beschleunigung MoE-Block bei Batch 1 (Autoren)",
+     "wert": "1,60–1,90×"
+    },
+    {
+     "label": "Vergleiche, in denen Top-k gleich gut oder besser war",
+     "wert": "40 von 43"
+    }
+   ],
+   "signal": "Kalibrierte Schwellenwerte liefern weder ein festes Lesebudget noch einen verlässlichen Genauigkeitsgewinn, so die Autoren. Top-k ohne Kalibrierung ist laut Paper die einfachere und stabilere Wahl.",
+   "link": "https://huggingface.co/papers/2610.37386",
+   "linkLabel": "Paper auf Hugging Face ansehen",
+   "id": "prox-moe-decoding-ohne-kalibrierungsdaten",
+   "hinzugefuegt": "2026-10-28T23:27:44Z"
+  },
+  {
+   "titel": "EmbeddingGemma 2: Ein offenes Embedding-Modell für Text, Bild, Audio und Video",
+   "kurz": "Google stellt laut technischem Bericht auf Hugging Face EmbeddingGemma 2 vor, ein offenes Modell, das alle genannten Medienarten in einem gemeinsamen Vektorraum abbildet. Die Autoren geben an, dabei neue Bestwerte auf der Pareto-Grenze zu erreichen.",
+   "artikel": [
+    "Ein Embedding-Modell wandelt Eingaben wie Texte oder Bilder in Zahlenvektoren um, mit denen sich Ähnlichkeiten berechnen und Suchen durchführen lassen. EmbeddingGemma 2 soll Text, Bilder, Audio, Video und Kombinationen daraus nativ in einem einzigen Raum darstellen.",
+    "## Vorgehen der Autoren",
+    "Laut Zusammenfassung des Papers setzt das Team auf vereinfachte Embeddings pro Schicht sowie auf einen mehrstufigen Trainingsplan. Dabei wird Schritt für Schritt eine zusätzliche Modalität bzw. ein weiteres Trainingsziel eingeführt. Nach Angaben der Autoren soll so die Qualität bei unimodalen, cross-modalen und gemischten Aufgaben stabil bleiben.",
+    "## Herstellerangaben",
+    "Die Autoren schreiben, EmbeddingGemma 2 übertreffe in umfassenden Embedding-Benchmarks über alle Modalitäten hinweg sowohl spezialisierte Modelle als auch Modelle, die zwei- bis zwölfmal größer sind. Dies sind Angaben der Entwickler; unabhängige Nachprüfung liegt im vorliegenden Material nicht vor.",
+    "## Kompakte Größe",
+    "Laut einem Kommentar auf der Hugging-Face-Seite hat das Modell 740 Millionen Parameter und lässt sich bei Bedarf durch Abschalten einzelner Teile verkleinern. Das Modell ist auf Hugging Face unter dem Namen google/embeddinggemma-2 verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "EmbeddingGemma 2: Unified and Efficient Multimodal Representations (Paper)",
+     "url": "https://huggingface.co/papers/2610.37364"
+    },
+    {
+     "titel": "google/embeddinggemma-2 (Modellseite)",
+     "url": "https://huggingface.co/google/embeddinggemma-2"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Bilder und Videos nach Inhalt durchsuchen, indem man Text als Suchanfrage nutzt.",
+    "Eine eigene kleine Suche für persönliche Fotos- oder Dokumentensammlungen aufbauen.",
+    "Die Modellseite auf Hugging Face ansehen und ausprobieren, ob es für eigene Projekte passt."
+   ],
+   "quelle": "Hugging Face",
+   "datum": "2026-10-28",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "740 Mio. (laut Kommentar auf Hugging Face)"
+    },
+    {
+     "label": "Modalitäten",
+     "wert": "Text, Bild, Audio, Video, Kombinationen"
+    },
+    {
+     "label": "Upvotes Hugging Face",
+     "wert": "15"
+    }
+   ],
+   "signal": "Herstellerangabe: Neuer Pareto-Bestwert über alle Modalitäten, laut Autoren vor Modellen bis zu zwölfmal größer. Unabhängig nicht geprüft.",
+   "link": "https://huggingface.co/papers/2610.37364",
+   "linkLabel": "Paper auf Hugging Face lesen",
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Text",
+     "Bild",
+     "Audio",
+     "Video"
+    ]
+   },
+   "id": "embeddinggemma-2-ein-offenes-embedding-modell-fur-text-bild-",
+   "hinzugefuegt": "2026-10-28T23:27:44Z"
+  },
   {
    "titel": "Diskrete visuelle Tokens: Verlieren sie wirklich Bedeutung?",
    "kurz": "Ein arXiv-Paper zeigt, dass diskrete visuelle Tokens bei multimodalem Verstehen mit kontinuierlichen Repräsentationen mithalten können. Entscheidend ist laut den Autoren nicht der Quantisierungsfehler, sondern das effektive Bitbudget.",
@@ -9135,8 +9311,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-28T19:26:22Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-10-28T23:27:44Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-10-28T01:12:53Z"
  }
 }
