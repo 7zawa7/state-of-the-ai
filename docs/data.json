@@ -1811,6 +1811,69 @@
  ],
  "radar": [
   {
+   "titel": "Hy-Nomas: Open-Source-Weltmodell für interaktive Videowelten",
+   "kurz": "Hy-Nomas ist ein Videomodell, das per Text und Kamerasteuerung über mehrere Eingaben hinweg interaktiv Welten erzeugt. Laut Tencent-Angaben ist es vollständig quelloffen.",
+   "artikel": [
+    "Hy-Nomas ist ein sogenanntes Weltmodell: Ein KI-System, das aus Texteingaben und Kamerabewegungen fortlaufend Videosegmente einer virtuellen Umgebung erzeugt. Das Modell nutzt ein Diffusionsmodell mit 8 Milliarden Parametern als Grundgerüst und unterstützt freie Textanweisungen sowie eine kontinuierliche Kamerasteuerung über mehrere Interaktionsschritte hinweg.",
+    "## Kernidee",
+    "Der Ansatz kombiniert strukturierte Videobeschreibungen mit sogenannter aktionsbewusster kausaler Aufmerksamkeit. Beschreibende Kontexte bleiben über Segmente hinweg zugänglich, während Handlungsanweisungen auf ihre vorgesehenen Zeitfenster beschränkt werden. Eine vision-language-basierte Komponente, der sogenannte Prompt Enhancer, übersetzt Nutzerwünsche und bisherige multimodale Verläufe in strukturierte Vorgaben für das nächste Segment.",
+    "## Training und Bewertung",
+    "Das Training verläuft in mehreren Stufen, unter anderem mit kausaler Generierung, Textinteraktion, Kamerasteuerung und Training auf modellerzeugten Verläufen. Anschließend folgt eine Diffusions-Destillation. In einer menschlichen Bewertung schnitt Hy-Nomas laut den Autoren besser ab als bestehende Weltmodelle. Die Autoren veröffentlichen Modellgewichte, Code und Benchmarks.",
+    "## Einordnung",
+    "Die Angaben stammen von den Autoren des technischen Berichts beziehungsweise von Tencent, unabhängig überprüft wurden sie hier nicht. Die Projektseite nennt eine kostenlose Demo; laut einem Kommentar der Autoren auf Hugging Face soll das Modell ähnliche Funktionen wie ein genanntes Modell „Genie4“ bieten, was ebenfalls eine Herstellerangabe ist."
+   ],
+   "quellen": [
+    {
+     "titel": "Hugging Face Paper-Seite: Hy-Nomas",
+     "url": "https://huggingface.co/papers/2610.36729"
+    },
+    {
+     "titel": "Projektseite Hy-Nomas",
+     "url": "https://hy-nomas.hy.tencent.com/"
+    },
+    {
+     "titel": "GitHub: Tencent-Hunyuan/Hy-Nomas",
+     "url": "https://github.com/Tencent-Hunyuan/Hy-Nomas"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Mit der kostenlosen Demo lassen sich eigene Textanweisungen und Kamerafahrten in einer generierten Welt ausprobieren.",
+    "Wer mit Entwicklung zu tun hat, kann Code und Gewichte von GitHub herunterladen und lokal testen.",
+    "Für Forschungsprojekte bietet das Release Benchmarks, mit denen sich interaktive Weltmodelle vergleichen lassen."
+   ],
+   "ausprobieren": {
+    "prompt": "Eine Waldlichtung im Morgennebel, Kamera fährt langsam nach vorne, danach: Ein Bach fließt von links ins Bild.",
+    "tool": "Hy-Nomas Demo",
+    "url": "https://hy-nomas.hy.tencent.com/demo"
+   },
+   "vorschau": {
+    "szene": "sandbox"
+   },
+   "tag": "Weltmodell",
+   "quelle": "Hugging Face",
+   "datum": "2026-10-27",
+   "kennzahlen": [
+    {
+     "label": "Diffusions-Backbone",
+     "wert": "8B Parameter (Herstellerangabe)"
+    },
+    {
+     "label": "Upvotes Hugging Face",
+     "wert": "78"
+    },
+    {
+     "label": "GitHub-Sterne",
+     "wert": "274"
+    }
+   ],
+   "signal": "Ein offen veröffentlichtes, interaktives Weltmodell mit Mehrschritt-Steuerung per Text und Kamera; Leistungsangaben stammen von den Autoren.",
+   "link": "https://huggingface.co/papers/2610.36729",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "hy-nomas-open-source-weltmodell-fur-interaktive-videowelten",
+   "hinzugefuegt": "2026-10-28T06:53:37Z"
+  },
+  {
    "titel": "Constrained Decoding: schadet es dem Denken von LLMs wirklich?",
    "kurz": "Eine arXiv-Arbeit (Oktober 2025) argumentiert, dass Constrained Decoding die Schlussfolgerungen von Sprachmodellen nicht grundsätzlich verschlechtert. Entscheidend ist, welche Art von Einschränkung verwendet wird.",
    "artikel": [
@@ -6723,6 +6786,138 @@
  ],
  "projekte": [
   {
+   "titel": "MoonReel: Open-Source-Tool automatisiert Meta Muse für Kurzvideos",
+   "kurz": "MoonReel ist ein kostenloses Open-Source-Projekt, das aus einer Idee ein fertiges, untertiteltes Kurzvideo erstellt. Da Meta für Muse bislang keine Video-API anbietet, steuert es die Video-Erzeugung über die Web-App muse.ai.",
+   "artikel": [
+    "MoonReel ist ein Open-Source-Projekt auf GitHub, das die Videoerzeugung mit Meta Muse automatisiert. Laut Projektbeschreibung gibt es bisher keine Video-API für Muse, deshalb übernimmt MoonReel den Ablauf über muse.ai.",
+    "## Was das Tool macht",
+    "Man gibt eine Idee ein, und das Tool erstellt ein Skript, das zu einer Nische passt. Danach entstehen Schlüsselbilder mit einer festen Figurenbesetzung, daraus kurze Clips per Bild-zu-Video, eine MP4-Datei mit Untertiteln und drei vertikale Shorts für TikTok, Reels, Shorts oder YouTube.",
+    "## Technik",
+    "Laut Readme läuft der Zugriff auf Muse über muse2api, eine selbst gehostete Brücke unter MIT-Lizenz. Sie wandelt Muse-Chat, Text-zu-Bild und Bild-zu-Video in HTTP-Aufrufe um. Die Verarbeitung läuft als Hintergrundjobs mit Wiederholungen bei Fehlern und wird per FFmpeg zusammengesetzt. Die Web-App nutzt Next.js, PostgreSQL und pg-boss.",
+    "## Einschränkungen",
+    "Die Brücke ist laut Projekt inoffiziell und arbeitet mit den Sitzungs-Cookies des eigenen muse.ai-Kontos. Die Readme empfiehlt daher ein zweites Konto. Laut Herstellerangabe ist Muse-Videoerzeugung nur in der muse.ai-App verfügbar, etwa rund zehn Sekunden lange 720p-Clips mit Ton. Meta bestätigt das Projekt nicht; es ist laut Hinweis weder mit Meta verbunden noch von Meta unterstützt.",
+    "## Stand",
+    "Das Repository hat 9 Sterne, keine Forks und eine MVP-Phase. Die Readme nennt Pläne für eine offizielle Muse-Video-API, Kling oder Seedance als weitere Anbieter."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: siri2moon/moonreel",
+     "url": "https://github.com/siri2moon/moonreel"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Aus einer einzigen Idee ein untertiteltes Kurzvideo mit Skript erstellen lassen.",
+    "Aus einem Video drei vertikale Shorts mit Hook und Untertiteln schneiden lassen.",
+    "Eigene Nischen-Kanäle mit wiederkehrenden Figuren für TikTok oder YouTube planen."
+   ],
+   "ausprobieren": {
+    "prompt": "Erstelle eine 30-sekündige Erklärung über drei Tipps für besseren Schlaf mit einer wiederkehrenden Figur im Stil einer Zeichnung.",
+    "tool": "MoonReel",
+    "url": "https://github.com/siri2moon/moonreel"
+   },
+   "vorschau": {
+    "szene": "stadt",
+    "badges": [
+     "Skript",
+     "Figuren",
+     "Untertitel",
+     "3 Shorts"
+    ],
+    "dauer": "0:30"
+   },
+   "tag": "Open Source",
+   "macher": "siri2moon",
+   "branche": "Video / Content-Automatisierung",
+   "jahr": "2026",
+   "tools": [
+    "Meta Muse",
+    "muse.ai",
+    "muse2api",
+    "Next.js",
+    "PostgreSQL",
+    "FFmpeg"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "9"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    },
+    {
+     "label": "Formate",
+     "wert": "9:16 und 16:9"
+    }
+   ],
+   "link": "https://github.com/siri2moon/moonreel",
+   "linkLabel": "Repository auf GitHub",
+   "id": "moonreel-open-source-tool-automatisiert-meta-muse-fur-kurzvi",
+   "hinzugefuegt": "2026-10-28T06:53:37Z"
+  },
+  {
+   "titel": "Capri: Cyberpunk-Desktop-Agent für Windows, der vorhandene KI-Assistenten steuert",
+   "kurz": "Capri ist ein Open-Source-ähnlicher Projekteintrag auf GitHub (170 Sterne) für einen KI-Agenten auf dem Windows-Desktop im Cyberpunk-Look. Das Projekt setzt auf Claude Code, Codex und Antigravity auf und bietet eine grafische Oberfläche statt Terminal.",
+   "artikel": [
+    "## Was ist Capri?",
+    "Capri beschreibt sich selbst als Cyberpunk-KI-Agenten für den Windows-Desktop. Man beschreibt eine Aufgabe in einfacher Sprache, und Capri plant die Schritte, nutzt passende Werkzeuge und führt sie auf dem Rechner aus. Das Projekt versteht sich als Oberfläche und Agentenschicht über bereits genutzten KI-Assistenten: Der Nutzer wählt das „Gehirn“, Capri stellt den „Körper“ bereit. Der Name und der Neon-Stil sind vom KI-Konstrukt aus Cyberpunk: Edgerunners 2 inspiriert.",
+    "## Funktionen und Einsatz",
+    "Laut Projektseite kann Capri Dateien und ganze Projektordner finden, lesen, organisieren und bearbeiten. Ein Agent (ein Programm, das eigenständig Aufgaben in Teilschritten abarbeitet) plant Aufgaben, prüft das Ergebnis und meldet zurück. Vor sensiblen Aktionen wie Löschen oder Verschieben zeigt Capri den geplanten Schritt an, den der Nutzer bestätigen oder ablehnen kann. Als Beispiele nennt die Seite das Aufräumen des Downloads-Ordners und das Zusammenfassen aller PDFs eines Ordners in ein Dokument.",
+    "## Technik und Verfügbarkeit",
+    "Die Anwendung ist laut Readme derzeit nur für Windows 10 oder neuer verfügbar, als Installer oder als portable Version ohne Installation. Eine Konfiguration legt unter anderem den Motor, den Berechtigungsmodus („ask“, „auto“ oder „read-only“) und erlaubte Ordner fest. Unterstützt werden laut Tabelle Claude Code, Codex und Antigravity; weitere Assistenten sollen über eigene Adapter angebunden werden. macOS, Linux, Sprachsteuerung und ein Plugin-System stehen auf der Roadmap.",
+    "## Einordnung",
+    "Die Angaben stammen aus der Readme des Projekts auf GitHub und sind Herstellerangaben der Entwickler. Unabhängige Tests oder Nutzerzahlen liegen im Material nicht vor. Die Projektseite weist außerdem darauf hin, dass neue, wenig verbreitete Programme bei Windows eine SmartScreen-Warnung auslösen können."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub – ChannelCooperStart/capri-ai",
+     "url": "https://github.com/ChannelCooperStart/capri-ai"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Unordentliche Download-Ordner per Auftrag in Typen sortieren lassen, nachdem man den Plan freigegeben hat.",
+    "Mehrere PDFs eines Ordners in eine gemeinsame Zusammenfassung umwandeln lassen.",
+    "Wiederkehrende Sicherungen eines Dokumentenordners als Automatisierung einrichten."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Capri",
+    "zeilen": [
+     "> Clean up my Downloads folder",
+     "● Plan: Dateien nach Typ gruppieren",
+     "⚠ Freigabe erforderlich",
+     "- Alte Duplikate entfernt",
+     "+ Ordner „Bilder“ hinzugefügt",
+     "✓ Aufgabe abgeschlossen"
+    ]
+   },
+   "macher": "ChannelCooperStart (GitHub-Nutzer; weitere Angaben im Material nicht enthalten)",
+   "branche": "Desktop-Software / KI-Agenten",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "Claude Code",
+    "Codex",
+    "Antigravity"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "170"
+    },
+    {
+     "label": "Unterstützte Systeme",
+     "wert": "Windows 10 oder neuer"
+    }
+   ],
+   "link": "https://github.com/ChannelCooperStart/capri-ai",
+   "linkLabel": "Projekt auf GitHub ansehen",
+   "id": "capri-cyberpunk-desktop-agent-fur-windows-der-vorhandene-ki-",
+   "hinzugefuegt": "2026-10-28T06:53:37Z"
+  },
+  {
    "titel": "anymove: Motion Capture für beliebige Fantasiewesen aus einem KI-Video",
    "kurz": "Das Open-Source-Projekt anymove macht aus einem einzigen KI-generierten Videoclip eine Animation für ein rigged 3D-Wesen, inklusive Flügel, Schwänze und acht Beine. Die Methode stammt laut Repository von CanItCode, die MiniMax-H3-LoRA-Idee von Graalitoo.",
    "artikel": [
@@ -8694,8 +8889,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-28T01:12:53Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-10-28T06:53:37Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-10-28T01:12:53Z"
  }
 }
