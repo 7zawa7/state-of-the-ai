@@ -1,6 +1,53 @@
 {
  "news": [
   {
+   "titel": "Google DeepMind veröffentlicht Gemini 4 Carbon zwei Wochen nach Argon",
+   "kurz": "Google DeepMind hat Gemini 4 Carbon vorgestellt, das laut Artificial Analysis Intelligence Index v5 mit 59 Punkten vorne liegt. Der Zugang ist wegen der Cybersicherheitsfähigkeiten zunächst auf ausgewählte Sicherheitsexperten beschränkt.",
+   "artikel": [
+    "Zwei Wochen nach Gemini 4 Argon bringt Google DeepMind mit Gemini 4 Carbon ein neues Spitzenmodell auf den Markt. Im Artificial Analysis Intelligence Index v5 erreicht Carbon 59 Punkte, Argon kommt auf 50. Der Index ist ein unabhängiger Vergleichswert, der mehrere Testbereiche zu einer Gesamtzahl zusammenfasst.",
+    "## Lange Programmieraufgaben",
+    "Google gibt an, Carbon für mehrtägige, autonome Entwicklungsarbeit ausgelegt zu haben. Interne Teams ließen das Modell nach Angaben des Unternehmens über mehrere Tage laufen. Dabei sollte es Sackgassen selbstständig erkennen und komplexe Aufgaben wie Ursachenanalysen oder das Beheben subtiler Fehler in großen Codebasen bearbeiten. Laut Google verbessert sich außerdem das wissenschaftliche Schlussfolgern, das Verstehen multimodaler Eingaben und die Webentwicklung. Im WebDev Arena legt Carbon um 89 Elo-Punkte zu und liegt dort auf Platz vier mit 1.769 Punkten.",
+    "## Unabhängige Tests",
+    "Laut Artificial Analysis führt Carbon auf der höchsten Denkstufe den Intelligence Index v5 vor allem wegen starker Ergebnisse bei komplexem Schlussfolgern, Wissensabfragen und wissenschaftlichen Aufgaben an. Beim agentischen Programmieren liegt Carbon im Test Antigravity noch drei Punkte hinter Claude Code mit Opus 5.5. Bei Vals AI belegt Carbon mit 70,36 Prozent Genauigkeit Platz zwei, knapp hinter Claude Sonnet 5.5. Die Antwortgenauigkeit steigt laut Arena-Auswertung von 48 auf 58 Prozent, die Halluzinationsrate von vier auf elf Prozent. Eine Halluzination bezeichnet hier eine erfundene, aber plausibel klingende Antwort.",
+    "## Sicherheitstests",
+    "Für mehrere Sicherheitstests lief das Modell laut Google ohne Schutzmechanismen. Im Benchmark SEC-bench Pro, der autonome Schwachstellenfindung misst, erreicht Carbon 88,2 Prozent. Im ExploitGym-Test, der prüft, ob sich Schwachstellen in funktionierende Exploits verwandeln lassen, sind es 54,8 Prozent. Beim Schutz vor indirekter Prompt Injection, also versteckten Anweisungen in Eingaben, sank die Erfolgsquote laut Google von 0,7 auf 0,0 Prozent. Google betont jedoch, dass das Problem damit nicht gelöst sei.",
+    "## Zugang und Preis",
+    "Google rollt das Modell schrittweise aus und beteiligt sich an einem freiwilligen Vortest der US-Regierung. Wegen der fortgeschrittenen Sicherheitsfähigkeiten ist Carbon zunächst nur für ausgewählte Sicherheitsexperten verfügbar. Der Preis bleibt laut Bericht gleich wie bei Argon. Einige Angaben, etwa interne Benchmarks von Google, lassen sich unabhängig nicht prüfen und sind daher als Herstellerangaben zu verstehen."
+   ],
+   "quellen": [
+    {
+     "titel": "Google Deepmind releases Gemini 4 Carbon just two weeks after Argon with gains across the board",
+     "url": "https://the-decoder.com/google-deepmind-releases-gemini-4-carbon-just-two-weeks-after-argon-with-gains-across-the-board/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wer beruflich Software prüft, kann die Angaben zu Schwachstellensuche und Patches als Orientierung für eigene Sicherheitsbewertungen nutzen, sobald Zugang besteht.",
+    "Privatpersonen können den Zugang derzeit nicht direkt nutzen, da er zunächst auf ausgewählte Experten beschränkt ist.",
+    "Entwickler können die beschriebenen Tests zur Programmierung verfolgen, um Modelle vergleichbar einzuschätzen."
+   ],
+   "bereich": "Text",
+   "datum": "2026-10-28",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Artificial Analysis Intelligence Index v5",
+    "balken": [
+     {
+      "label": "Gemini 4 Argon",
+      "wert": 50,
+      "anzeige": "50 Punkte"
+     },
+     {
+      "label": "Gemini 4 Carbon",
+      "wert": 59,
+      "anzeige": "59 Punkte"
+     }
+    ]
+   },
+   "id": "google-deepmind-veroffentlicht-gemini-4-carbon-zwei-wochen-n",
+   "hinzugefuegt": "2026-10-28T19:26:22Z"
+  },
+  {
    "titel": "AI-Agenten dringen über Drittsoftware in Anthropics interne Systeme ein",
    "kurz": "Das Sicherheitsunternehmen Cathedral nutzte KI-Agenten, um über externe Business-Software in interne Systeme von Anthropic zu gelangen, und zwar im Rahmen des eigenen Bug-Bounty-Programms. Anthropic bestätigt Zugriff auf Vertriebs-, Personal- und IT-Daten, widerspricht aber bei Umfang und Dauer.",
    "artikel": [
@@ -6900,6 +6947,91 @@
  ],
  "projekte": [
   {
+   "titel": "Survival LLM: KI-Assistent und Notfallbibliothek für den eigenen Rechner",
+   "kurz": "Survival LLM ist eine kostenlose KI-Anwendung, die komplett auf dem eigenen Computer läuft und auch ohne Internet Antworten zu Notfallthemen liefert. Jede Antwort zeigt die Artikel, aus denen sie stammt.",
+   "artikel": [
+    "Survival LLM ist ein kostenloser KI-Assistent und eine Notfallbibliothek, die vollständig auf dem eigenen Computer läuft. Fragen etwa zur Lebensmittelsicherheit bei einem Stromausfall, zur Versorgung einer Verbrennung oder zur Wasserreinigung beantwortet das Programm aus vertrauenswürdigen Quellen und zeigt genau, woher jede Antwort stammt. Die Anwendung wurde auf Hacker News mit 495 Punkten diskutiert.",
+    "## Funktionsweise",
+    "Nach der Einrichtung mit Internetverbindung braucht das Programm kein Netz mehr. Das KI-Modell und die Bibliothek liegen auf dem Rechner, und Fragen verlassen ihn nicht. Beim ersten Start prüft die App den Arbeitsspeicher und lädt ein passendes Modell herunter; mehr Speicher bedeutet laut Hersteller ein leistungsfähigeres Modell. Ein sogenanntes Modell ist dabei das trainierte Sprachprogramm, das Antworten formuliert.",
+    "## Inhalte der Bibliothek",
+    "Enthalten sind laut Hersteller unter anderem rund 930.000 Wikipedia-Artikel, medizinische Nachschlagewerke, Leitlinien der US-Behörden FEMA und CDC, Überlebenshandbücher, Reparaturanleitungen und Fragen-und-Antworten-Seiten. Eigene PDFs, Word-Dateien und Notizen lassen sich ebenfalls hinzufügen; sie bleiben auf dem Gerät.",
+    "## Qualität und Grenzen",
+    "Der Hersteller gibt an, dass Modelle Fehler machen, kleinere häufiger. Deshalb sollen Nutzer die angezeigten Quellen prüfen. In eigenen Tests nach Herstellerangaben lag das größte Modell für Mac mit 128 GB oder mehr Speicher bei 21 von 22 richtigen Antworten, das kleinste für 16 bis 31 GB Speicher bei 14 von 22. Diese Tests beziehen sich auf einen früheren Stand der Bibliothek.",
+    "## Voraussetzungen",
+    "Benötigt werden etwa ein Apple-Silicon-Mac mit macOS 14 oder neuer oder ein 64-Bit-Windows 10 oder 11. Die Einrichtung dauert laut Hersteller 20 Minuten bis etwa 2,5 Stunden, je nach Rechner und Internetgeschwindigkeit. Die App ist nicht über einen App-Store verkauft, daher warnt das System beim ersten Start."
+   ],
+   "quellen": [
+    {
+     "titel": "Survival LLM",
+     "url": "https://www.brangus.io/survival-llm"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50264853"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Die Anwendung vor einem Stromausfall installieren, solange das Internet verfügbar ist, und danach ohne Netz nutzen.",
+    "Eigene Handbücher wie das Generatorhandbuch oder einen Familien-Notfallplan als PDF hinzufügen, damit die KI sie durchsucht.",
+    "Die angezeigten Quellen bei jeder Antwort selbst nachlesen, da kleinere Modelle häufiger falsch liegen."
+   ],
+   "tools": [
+    "Survival LLM"
+   ],
+   "macher": "brangus (Herstellerangabe, Details zum Team nicht im Material)",
+   "branche": "Notfallvorsorge / Lokale KI",
+   "jahr": "2026",
+   "kennzahlen": [
+    {
+     "label": "Download Mac",
+     "wert": "212 MB (Herstellerangabe)"
+    },
+    {
+     "label": "Download Windows",
+     "wert": "25 MB (Herstellerangabe)"
+    },
+    {
+     "label": "Bibliothek Wikipedia-Artikel",
+     "wert": "rund 930.000 (Herstellerangabe)"
+    },
+    {
+     "label": "Bibliothek Download gesamt",
+     "wert": "9 GB, 19 GB installiert (Herstellerangabe)"
+    }
+   ],
+   "link": "https://www.brangus.io/survival-llm",
+   "linkLabel": "brangus.io/survival-llm",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Richtige Antworten von 22 (Herstellerangabe, früherer Stand)",
+    "balken": [
+     {
+      "label": "16–31 GB RAM",
+      "wert": 14,
+      "anzeige": "14 von 22"
+     },
+     {
+      "label": "32 GB+ Windows",
+      "wert": 19,
+      "anzeige": "19 von 22"
+     },
+     {
+      "label": "32–96 GB Mac",
+      "wert": 21,
+      "anzeige": "21 von 22"
+     },
+     {
+      "label": "128 GB+ Mac",
+      "wert": 21,
+      "anzeige": "21 von 22"
+     }
+    ]
+   },
+   "id": "survival-llm-ki-assistent-und-notfallbibliothek-fur-den-eige",
+   "hinzugefuegt": "2026-10-28T19:26:22Z"
+  },
+  {
    "titel": "MoonReel: Open-Source-Tool automatisiert Meta Muse für Kurzvideos",
    "kurz": "MoonReel ist ein kostenloses Open-Source-Projekt, das aus einer Idee ein fertiges, untertiteltes Kurzvideo erstellt. Da Meta für Muse bislang keine Video-API anbietet, steuert es die Video-Erzeugung über die Web-App muse.ai.",
    "artikel": [
@@ -9003,7 +9135,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-28T13:56:34Z",
+  "letzterScan": "2026-10-28T19:26:22Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-10-28T01:12:53Z"
  }
