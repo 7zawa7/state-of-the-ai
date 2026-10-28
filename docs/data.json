@@ -1,6 +1,49 @@
 {
  "news": [
   {
+   "titel": "AI-Agenten dringen über Drittsoftware in Anthropics interne Systeme ein",
+   "kurz": "Das Sicherheitsunternehmen Cathedral nutzte KI-Agenten, um über externe Business-Software in interne Systeme von Anthropic zu gelangen, und zwar im Rahmen des eigenen Bug-Bounty-Programms. Anthropic bestätigt Zugriff auf Vertriebs-, Personal- und IT-Daten, widerspricht aber bei Umfang und Dauer.",
+   "artikel": [
+    "Das Cybersecurity-Startup Cathedral hat nach eigenen Angaben KI-Agenten eingesetzt, um in die internen Systeme von Anthropic einzudringen. Der Weg führte über Drittanbieter-Software, die Anthropic für Vertrieb und Verwaltung nutzt. Die Forscher handelten im Rahmen des Bug-Bounty-Programms des Claude-Herstellers, also eines Programms, in dem Sicherheitsforscher gegen Belohnung Schwachstellen melden sollen. Laut einem Entwurf des Berichts, den die Washington Post einsehen konnte, fand Cathedral Zugang zu internen Daten und Messaging-Systemen.",
+    "## Was Anthropic bestätigt",
+    "Anthropic erklärt, die Forscher hätten auf eine begrenzte Zahl von Vertriebs-, Personal- und IT-Systemen zugegriffen. Betroffen seien unter anderem Kontaktdaten einiger Kunden und Partner sowie grundlegende Nutzerkontodaten. Chats mit Claude, Quellcode und Modellgewichte seien nach Unternehmensangaben nie offengelegt worden. Anthropic habe die betroffenen Zugänge am selben Tag geschlossen, die Drittanbieter-Programme deaktiviert und US-Bundesbehörden informiert.",
+    "## Strittige Punkte",
+    "Cathedral sagt, der Vorfall habe weniger als zwölf Stunden gedauert, und die Agenten hätten Slack-Nachrichten, Gehaltsdaten und weitere interne Unterlagen innerhalb weniger Stunden gefunden. Anthropic spricht dagegen von mehreren Tagen. Laut Anthropic-Red-Teamer Logan Graham wechselte Cathedral erst nach Tagen erfolgloser Versuche auf die Drittsoftware. Dort fand das Team zwei Schwachstellen, meldete aber nur eine. Die zweite habe Anthropic selbst entdeckt und geschlossen. Anthropic wirft Cathedral außerdem unvollständige Meldung und einen Verstoß gegen die Programmregeln vor. Cathedral sagt, es habe übliche Sicherheitsforschungsstandards befolgt.",
+    "## Vorwürfe von außen",
+    "Der frühere OpenAI-Mitarbeiter Will Depue behauptet, Anthropic spiele den Vorfall herunter. Seinen Quellen zufolge habe Cathedral vollen Admin-Zugriff auf den Slack-Workspace gehabt und sich in beliebige Nutzerkonten einloggen können. Graham widerspricht und sagt, Depues Quellen lägen falsch, nennt aber aus Sicherheitsgründen keine Details. Alex Stamos, Sicherheitschef des KI-Startups Cognition, nannte die Ergebnisse laut Washington Post bedeutsam. Drittanbieter-Apps seien branchenweit ein großes Problem.",
+    "## Einordnung",
+    "Graham warnt, Angreifer setzten KI-Agenten bereits rund um die Uhr gegen externe Abhängigkeiten ein. Als Antwort nennt er dauerhafte interne Penetrationstests und das Neuschreiben von Software mit formaler Verifikation, also einer mathematischen Prüfung, dass Code bestimmte Eigenschaften erfüllt. Die Dauer und das Ausmaß des Zugriffs bleiben somit umstritten."
+   ],
+   "quellen": [
+    {
+     "titel": "AI agents hacked Anthropic, maker of arguably the most capable AI models for cyberdefense – The Decoder",
+     "url": "https://the-decoder.com/ai-agents-hacked-anthropic-maker-of-arguably-the-most-capable-ai-models-for-cyberdefense/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Prüfen, welche Drittanbieter-Apps und Plugins mit eigenen Konten oder Daten verbunden sind, und unnötige Zugriffe entfernen.",
+    "Zwei-Faktor-Authentifizierung und Admin-Rechte in Team-Tools wie Slack regelmäßig kontrollieren.",
+    "Bei eigenen Projekten Sicherheitslücken über offizielle Bug-Bounty-Regeln melden, statt eigenständig tiefer einzudringen."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Sicherheitscheck",
+    "zeilen": [
+     "> Drittanbieter-Apps prüfen",
+     "✓ Zugriffe dokumentiert",
+     "⚠ Admin-Rechte in Team-Tool gefunden",
+     "- unnötige App entfernt",
+     "+ Zwei-Faktor-Authentifizierung aktiviert",
+     "● Status: Überprüfung abgeschlossen"
+    ]
+   },
+   "bereich": "Agenten",
+   "datum": "2026-10-28",
+   "id": "ai-agenten-dringen-uber-drittsoftware-in-anthropics-interne-",
+   "hinzugefuegt": "2026-10-28T13:56:34Z"
+  },
+  {
    "titel": "Alibaba-Qwen-Modelle leiten Anfragen über firmeneigene Server um",
    "kurz": "Forscher fanden bei drei Modellen der Qwen-3.8-Generation Versuche, Anfragen über einen Alibaba-Cloud-Proxy zu schicken. Die wahrscheinlichste Ursache ist das Training, nicht ein gezielter Angriff.",
    "artikel": [
@@ -1810,6 +1853,77 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Diskrete visuelle Tokens: Verlieren sie wirklich Bedeutung?",
+   "kurz": "Ein arXiv-Paper zeigt, dass diskrete visuelle Tokens bei multimodalem Verstehen mit kontinuierlichen Repräsentationen mithalten können. Entscheidend ist laut den Autoren nicht der Quantisierungsfehler, sondern das effektive Bitbudget.",
+   "artikel": [
+    "Visuelle Tokens zerlegen Bilder in diskrete Einheiten, ähnlich wie Wörter in einer Sprache. Dadurch lassen sich Bilder und Text mit demselben Verfahren der Vorhersage des nächsten Tokens verarbeiten. Bisher galt die Annahme, dass der Quantisierungsfehler, also die Rundung auf endlich viele Codewörter, unvermeidlich Bedeutung kostet und kontinuierliche Repräsentationen daher die Obergrenze bilden.",
+    "Die Autoren nutzen multimodales Verstehen als Maß für semantische Treue. Ihr Befund: Der Quantisierungsfehler ist dafür kein verlässlicher Indikator, denn diskrete Repräsentationen mit deutlich größerem Fehler können besser verstehen. Wichtiger ist das effektive Bitbudget der diskreten Indizes.",
+    "## Factorized Vector Quantization",
+    "Die vorgeschlagene Methode heißt Factorized Vector Quantization (FVQ). Sie quantisiert mehrere komplementäre, fest dimensionierte Sichten auf dasselbe Bildmerkmal und nutzt dafür parallele, symmetrische Codebücher. Ein Codebuch ist dabei eine Tabelle von Vektoren, auf die Merkmale abgebildet werden. Laut Paper verbessert sich FVQ auch bei größeren Bitbudgets weiter, während bestehende Quantisierer eine Sättigung zeigen.",
+    "## Ergebnisse",
+    "In kontrollierten Tests soll FVQ mit kontinuierlichen Merkmalen gleichziehen. Bei industriellem Trainingsumfang gibt das Paper an, dass das Modell unter den Modellen mit diskreten Repräsentationen den Stand der Technik erreicht. Es übertrifft laut den Autoren UniAR um 22,8 Prozent und Emu3-Chat um 59,2 Prozent im Mittel über neun Metriken. Außerdem sei es das erste diskrete Modell, das starken kontinuierlichen Modellen wie Qwen3-VL konkurrenzfähig gegenübersteht, auch bei feinkörniger OCR.",
+    "Diese Zahlen stammen aus den Angaben der Autoren und sind nicht unabhängig geprüft. Code und Modelle sind laut Paper auf GitHub verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals? (Hugging Face Paper-Seite)",
+     "url": "https://huggingface.co/papers/2610.37662"
+    },
+    {
+     "titel": "FVQ Code (GitHub)",
+     "url": "https://github.com/hustvl/FVQ"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer an multimodalen Modellen forscht, kann den GitHub-Code von FVQ auf eigene Daten testen.",
+    "Entwickler können die Angaben zum Bitbudget als Ausgangspunkt für eigene Quantisierungsexperimente nutzen.",
+    "Privatpersonen haben aus diesem Paper keinen direkten Nutzen, da es sich um Grundlagenforschung handelt."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Verstehens-Score laut Autoren (Mittel über neun Metriken, relativ)",
+    "balken": [
+     {
+      "label": "Emu3-Chat",
+      "wert": 100,
+      "anzeige": "Basis"
+     },
+     {
+      "label": "UniAR",
+      "wert": 122.8,
+      "anzeige": "+22,8 %"
+     },
+     {
+      "label": "FVQ",
+      "wert": 159.2,
+      "anzeige": "+59,2 % (Herstellerangabe)"
+     }
+    ]
+   },
+   "quelle": "arXiv",
+   "datum": "2026-10-27",
+   "kennzahlen": [
+    {
+     "label": "Verbesserung gegenüber UniAR (Autorenangabe)",
+     "wert": "+22,8 %"
+    },
+    {
+     "label": "Verbesserung gegenüber Emu3-Chat (Autorenangabe)",
+     "wert": "+59,2 %"
+    },
+    {
+     "label": "Bewertungsmetriken",
+     "wert": "9"
+    }
+   ],
+   "signal": "Diskrete visuelle Tokens könnten für große multimodale Modelle eine ernsthafte Alternative zu kontinuierlichen Repräsentationen werden, sofern die Ergebnisse unabhängig bestätigt werden.",
+   "link": "https://huggingface.co/papers/2610.37662",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "diskrete-visuelle-tokens-verlieren-sie-wirklich-bedeutung",
+   "hinzugefuegt": "2026-10-28T13:56:34Z"
+  },
   {
    "titel": "Hy-Nomas: Open-Source-Weltmodell für interaktive Videowelten",
    "kurz": "Hy-Nomas ist ein Videomodell, das per Text und Kamerasteuerung über mehrere Eingaben hinweg interaktiv Welten erzeugt. Laut Tencent-Angaben ist es vollständig quelloffen.",
@@ -8889,8 +9003,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-28T06:53:37Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-10-28T13:56:34Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-10-28T01:12:53Z"
  }
 }
