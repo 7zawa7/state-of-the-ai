@@ -1,6 +1,57 @@
 {
  "news": [
   {
+   "titel": "Mistral veröffentlicht die Gewichte von Mistral Large 4",
+   "kurz": "Mistral hat die Gewichte seines 1-Billionen-Parameter-Modells Mistral Large 4 („Le Chonk“) offen verfügbar gemacht. Laut Herstellerangaben ist es das beste Open-Weight-Modell für Coding.",
+   "artikel": [
+    "Mistral AI hat die Gewichte von Mistral Large 4, intern „Le Chonk“ genannt, veröffentlicht. Die Gewichte sind die gelernten Zahlenwerte eines KI-Modells; wer sie besitzt, kann das Modell selbst betreiben und anpassen. Das Modell ist laut Hersteller ein multimodales Sprachmodell mit einer Billion Parametern, also neben Text auch andere Eingabearten verarbeiten kann. Zuvor war es bereits in einer öffentlichen Vorschau verfügbar.",
+    "## Fortschritte beim Coding",
+    "Nach der Vorschau hat Mistral nach eigenen Angaben weiter per Reinforcement Learning trainiert, einem Verfahren, bei dem ein Modell durch Belohnungen für gute Ergebnisse lernt. Laut Herstellerangaben liegt Mistral Large 4 im Cognition-Benchmark FrontierCode 2.0 mit 19,7 Prozent vorn. Im Artificial Analysis Coding Agent Index erreicht es 48 Prozent und liegt damit gleichauf mit GLM-5.3, verbraucht laut Hersteller aber im Schnitt 47 Prozent weniger Tokens pro Aufgabe. Tokens sind die Textbausteine, die ein Modell verarbeitet und die die Betriebskosten bestimmen. Im Terminal-Bench 4.0 gibt Mistral 41 Prozent an, 13 Prozentpunkte mehr als in der Vorschau.",
+    "## Drei Denkmodi",
+    "Entwickler können nun zwischen den Modi Low, Medium und High wählen, wobei High der Standard ist. Low eignet sich für einfache Aufgaben, Medium für den Alltag und High für besonders anspruchsvolle Fälle.",
+    "## Cybersicherheit",
+    "Für defensive Sicherheitsarbeit nennt Mistral 51 Prozent im Artificial Analysis Cyber Index, der die Fähigkeit misst, Schwachstellen zu finden, zu reproduzieren und zu beheben. Laut Hersteller lehnt das Modell bei schädlichen Cyberanfragen durchschnittlich in 96,6 Prozent der Fälle ab, legitime Verteidigungsaufgaben beantwortet es dagegen ohne unnötige Ablehnungen. Ein Unternehmen, Booz Allen, berichtet in einem Test von einer guten Erkennungsrate bei Quellcode-Analysen.",
+    "## Souveränität und Offenheit",
+    "Mistral betont, das Modell sei in Europa von Grund auf trainiert worden und lasse sich selbst hosten und anpassen. Diese Angaben stammen vom Hersteller und wurden hier nicht unabhängig geprüft. Auf Hacker News erreichte der Beitrag 962 Punkte."
+   ],
+   "quellen": [
+    {
+     "titel": "Mistral Large 4 (Le Chonk) is now open weight",
+     "url": "https://mistral.ai/news/mistral-large-4-oss/"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50289418"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Das Modell auf eigener Hardware oder bei einem Hoster betreiben, sofern die Lizenz und die Ressourcen es erlauben.",
+    "Mit den drei Denkmodi testen, wie sich Qualität und Kosten für eigene Coding-Aufgaben verhalten.",
+    "Eigene Coding-Agenten oder Werkzeuge auf Basis der offenen Gewichte bauen."
+   ],
+   "bereich": "Text",
+   "datum": "2026-05-01",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Coding Agent Index (Artificial Analysis)",
+    "balken": [
+     {
+      "label": "GLM-5.3",
+      "wert": 48,
+      "anzeige": "48 %"
+     },
+     {
+      "label": "Mistral Large 4",
+      "wert": 48,
+      "anzeige": "48 % (47 % weniger Tokens)"
+     }
+    ]
+   },
+   "id": "mistral-veroffentlicht-die-gewichte-von-mistral-large-4",
+   "hinzugefuegt": "2026-10-29T20:59:34Z"
+  },
+  {
    "titel": "Google öffnet Android-Entwicklung für externe KI-Agenten",
    "kurz": "Google öffnet Android Studio für über 40 externe Coding-Agenten wie Claude und Codex und stellt neue Gemini-APIs vor. Die Neuerungen wurden auf dem Android Dev Summit angekündigt.",
    "artikel": [
@@ -7312,6 +7363,61 @@
  ],
  "projekte": [
   {
+   "titel": "Pink Peach: ComfyUI-Node-Paket für Krea 2 Turbo",
+   "kurz": "Pink Peach ist ein Node-Paket für ComfyUI, das auf das Modell Krea 2 Turbo zugeschnitten ist. Es bündelt die Generierung von Modell-Laden bis Bildspeichern und soll typische Turbo-Eigenheiten wie fehlende Wirkung negativer Prompts bei CFG 1 abfangen.",
+   "artikel": [
+    "Pink Peach ist ein Node-Paket für ComfyUI, eine grafische Oberfläche zum Aufbauen von Bild-Generierungs-Workflows. Laut Projektbeschreibung ist es speziell auf Krea 2 Turbo abgestimmt, ein sogenanntes Turbo-Modell, also eine auf sehr wenige Schritte optimierte Variante. Die Entwickler beschreiben solche Modelle als schnell, aber schwierig im Umgang.",
+    "## Probleme, die adressiert werden",
+    "Laut Beschreibung reagieren Turbo-Modelle schlecht auf CFG, ignorieren gewöhnliche negative Prompts und erzeugen über verschiedene Seeds hinweg oft ähnliche Gesichtszüge. CFG (Classifier-Free Guidance) steuert, wie stark der Prompt das Ergebnis bestimmt. Seeds sind Startwerte für den Zufallsgenerator.",
+    "## Zentrale Bausteine",
+    "Die Node NAG soll negative Prompts bei CFG 1 direkt in den Cross-Attention-Schichten des Modells wirksam machen. Die Variance-Node fügt in frühen Schritten semantisches Rauschen hinzu, damit Posen, Layouts und Gesichtsformen vielfältiger ausfallen. Dazu kommen eigene Scheduler und Sampler, ein Lader für UNET, CLIP und VAE in einem Node sowie bis zu zehn LoRAs in einem Node.",
+    "## Nachbearbeitung und Oberfläche",
+    "Enthalten ist eine Nachbearbeitungs-Suite mit Farbkorrektur, LUTs im .cube-Format, Filmkorn und weiteren Effekten. Zum Vergleichen von Bildern gibt es A/B-Ansicht und lupe. Die Oberfläche ist laut Projektseite rosa gestaltet und bietet Themes sowie einen Theme-Creator.",
+    "## Einordnung",
+    "Die Angaben stammen aus der Projektseite auf GitHub. Laut dieser Seite kostet NAG etwa das 1,5- bis 2-Fache an Inferenzzeit. Die Projektseite nennt 14 Sterne; eine unabhängige Prüfung der Leistungsangaben lag nicht vor."
+   ],
+   "quellen": [
+    {
+     "titel": "pink-qink/ComfyUI-Pink-Peach auf GitHub",
+     "url": "https://github.com/pink-qink/ComfyUI-Pink-Peach"
+    }
+   ],
+   "demo": "bild",
+   "machen": [
+    "Turbo-Modelle in ComfyUI mit NAG-Negativprompts bei CFG 1 ausprobieren.",
+    "Mit der Variance-Node mehrere Seeds vergleichen, um vielfältigere Gesichter und Posen zu erzeugen.",
+    "Eigene Looks über LUTs und die Nachbearbeitungs-Suite als Presets speichern."
+   ],
+   "tag": "ComfyUI-Erweiterung",
+   "macher": "pink-qink (GitHub-Nutzer)",
+   "branche": "Bildgenerierung / Open Source",
+   "jahr": null,
+   "tools": [
+    "ComfyUI",
+    "Krea 2 Turbo",
+    "Qwen3-VL"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "14 ★"
+    }
+   ],
+   "link": "https://github.com/pink-qink/ComfyUI-Pink-Peach",
+   "linkLabel": "Zum GitHub-Repository",
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Loader",
+     "NAG",
+     "Variance",
+     "Sampler"
+    ]
+   },
+   "id": "pink-peach-comfyui-node-paket-fur-krea-2-turbo",
+   "hinzugefuegt": "2026-10-29T20:59:34Z"
+  },
+  {
    "titel": "DSH-Android: DeepSeek Harness als einzelne APK für Android",
    "kurz": "Das Community-Projekt DSH-Android lässt den DeepSeek Harness ohne Root und ohne Termux auf Android laufen. Eine APK genügt, und der Agent kann Dateien, Apps und Systemeinstellungen per Sprachbefehl bedienen.",
    "artikel": [
@@ -9725,7 +9831,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-29T15:59:49Z",
+  "letzterScan": "2026-10-29T20:59:34Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-10-29T02:43:57Z"
  }
