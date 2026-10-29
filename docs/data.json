@@ -1946,6 +1946,73 @@
  ],
  "radar": [
   {
+   "titel": "Timestral: Vier Zeitreihen-Modelle setzen neue Bestwerte bei Prognosen",
+   "kurz": "Das Paper stellt Timestral vor, eine Familie von vier Zeitreihen-Foundation-Modellen für probabilistische Prognosen. Laut Autoren setzen die Modelle auf GIFT-Eval, TIME und fev-bench einen neuen Stand der Technik.",
+   "artikel": [
+    "Timestral ist eine Familie von vier sogenannten Zeitreihen-Foundation-Modellen, also großen, vortrainierten Modellen für Zeitreihen. Sie haben 5, 28, 123 und 209 Millionen Parameter. Parameter sind die gelernten Gewichte eines Modells; mehr davon bedeuten meist mehr Kapazität. Die Modelle sind für probabilistische Prognosen gedacht, liefern also Wahrscheinlichkeitsbereiche statt nur einzelner Werte.",
+    "## Was laut Paper neu ist",
+    "Die Autoren nennen drei Bausteine. Der wichtigste heißt Decoupled Horizon Forecasting (DHF). Dabei werden Vorhersage-Token vom kausal kodierten Kontext getrennt. Dadurch lassen sich längere Prognosehorizonte trainieren, ohne den Kontext zu maskieren, und jeder beobachtete Wert dient sowohl als Prognoseziel als auch als Kontext für spätere Vorhersagen.",
+    "## Ergebnisse laut Autoren",
+    "Nach Angaben der Autoren belegen Timestral-209M und Timestral-123M auf allen Metriken die beiden vorderen Plätze. Diese Werte stammen aus dem Paper und sind nicht unabhängig geprüft. Die Angaben beziehen sich auf die Benchmarks GIFT-Eval, TIME und fev-bench. Ob und wie gut sich die Modelle im Alltag außerhalb dieser Tests schlagen, geht aus dem vorliegenden Material nicht hervor.",
+    "Eine Kovariaten-Komponente wird im Auszug nur angerissen; Details dazu fehlen in der vorliegenden Quelle. Das Paper wurde auf Hugging Face mit sechs Upvotes bewertet, was nur ein kleines Interesse anzeigt."
+   ],
+   "quellen": [
+    {
+     "titel": "Timestral – arXiv-Paper auf Hugging Face",
+     "url": "https://huggingface.co/papers/2610.37585"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer Zeitreihen wie Verkäufe oder Energieverbrauch prognostizieren will, kann die Benchmarks und Ansätze des Papers als Vergleichsrahmen nutzen.",
+    "Entwickler können prüfen, ob die im Paper beschriebenen Modelle für eigene Prognoseaufgaben verfügbar und geeignet sind."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Modellgrößen (Parameter)",
+    "balken": [
+     {
+      "label": "Timestral-5M",
+      "wert": 5,
+      "anzeige": "5 Mio."
+     },
+     {
+      "label": "Timestral-28M",
+      "wert": 28,
+      "anzeige": "28 Mio."
+     },
+     {
+      "label": "Timestral-123M",
+      "wert": 123,
+      "anzeige": "123 Mio."
+     },
+     {
+      "label": "Timestral-209M",
+      "wert": 209,
+      "anzeige": "209 Mio."
+     }
+    ]
+   },
+   "tag": "Zeitreihen",
+   "quelle": "arXiv",
+   "datum": "2026-10-29",
+   "kennzahlen": [
+    {
+     "label": "Modellgrößen",
+     "wert": "5M, 28M, 123M, 209M Parameter"
+    },
+    {
+     "label": "Benchmarks",
+     "wert": "GIFT-Eval, TIME, fev-bench"
+    }
+   ],
+   "signal": "Laut Autoren neuer Stand der Technik bei Zeitreihenprognosen; Ergebnisse sind Herstellerangaben der Autoren und nicht unabhängig geprüft.",
+   "link": "https://huggingface.co/papers/2610.37585",
+   "linkLabel": "Paper auf Hugging Face ansehen",
+   "id": "timestral-vier-zeitreihen-modelle-setzen-neue-bestwerte-bei-",
+   "hinzugefuegt": "2026-10-29T02:43:57Z"
+  },
+  {
    "titel": "Prox: MoE-Decoding ohne Kalibrierungsdaten",
    "kurz": "Ein arXiv-Paper zeigt, dass die Kanalauswahl bei Mixture-of-Experts-Modellen ohne Kalibrierungsdaten auskommt. Top-k-Auswahl ist laut den Autoren der kalibrierten Schwellenwertmethode meist ebenbürtig oder überlegen, und ein Leser aus den Modellgewichten erreicht 1,60- bis 1,90-fache Beschleunigung gegenüber vLLM bei Batch-Größe eins.",
    "artikel": [
@@ -7123,6 +7190,86 @@
  ],
  "projekte": [
   {
+   "titel": "NamiGPT: GPT-2 in PyTorch von Grund auf selbst nachbauen",
+   "kurz": "Das Open-Source-Projekt NamiGPT ist ein Lernmaterial auf Chinesisch, das GPT-2 Schritt für Schritt mit PyTorch neu schreibt. Die Anleitung richtet sich an Einsteiger ohne Vorkenntnisse in Large Language Models.",
+   "artikel": [
+    "Das GitHub-Repository aa1143/NamiGPT ist eine Lehrreihe zu großen Sprachmodellen (LLM, Large Language Models). Der Autor baut darin GPT-2 mit PyTorch komplett von Null auf. PyTorch ist eine verbreitete Python-Bibliothek für neuronale Netze. Laut Readme sind dafür nur grundlegende Python-Kenntnisse und ein Verständnis von Matrixmultiplikation nötig.",
+    "## Aufbau des Projekts",
+    "Die Materialien bestehen aus 15 Artikeln, die einzelne Bausteine erklären, etwa Tokenizer, Embedding, Positional Encoding, Self-Attention, Multi-Head Attention, Layer Normalization und Feed-Forward-Netze. Als durchgehendes Beispiel dient der kurze Satz „猫吃鱼“ (Katze frisst Fisch). Jeder Artikel hat ein zugehöriges Python-Skript, das sich einzeln ausführen lässt.",
+    "Laut Readme umfasst das Modellcode-Verzeichnis gpt2/ weniger als 200 Zeilen für model.py. Auf Transformer-Module aus Bibliotheken wird dabei verzichtet. Die Ergebnisse werden mit der Implementierung von HuggingFace abgeglichen, und Tests prüfen die Übereinstimmung.",
+    "## Praktischer Einstieg",
+    "Das Projekt lässt sich mit git clone und pip install -r requirements.txt einrichten. Im Readme wird außerdem ein Gradio-Webdemo gezeigt, das Texte fortsetzt und die Wahrscheinlichkeiten der nächsten Wörter anzeigt. Die Demo nutzt die offiziellen OpenAI-Gewichte des 124-Millionen-Parameter-Modells, die über HuggingFace geladen werden. Der Autor empfiehlt für Nutzer in China einen HuggingFace-Spiegel.",
+    "Wichtig ist eine Einschränkung: GPT-2 ist nicht für Dialoge feinabgestimmt. Es setzt Text nur fort und beantwortet keine Fragen. Die Trainingsdaten sind überwiegend Englisch, deshalb wird englische Eingabe empfohlen.",
+    "## Lizenz und Stand",
+    "Der Code steht unter der MIT-Lizenz, die Artikel unter CC BY-NC 4.0. Das bedeutet, dass Texte nicht kommerziell genutzt werden dürfen. Das Repository hatte zum Zeitpunkt der Quelle 111 Sterne und 8 Forks auf GitHub."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: aa1143/NamiGPT",
+     "url": "https://github.com/aa1143/NamiGPT"
+    },
+    {
+     "titel": "NamiAI Artikel (Autor)",
+     "url": "https://namiai.tech/articles"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Den Code von GPT-2 Zeile für Zeile nachvollziehen und mit eigenen Änderungen ausprobieren.",
+    "Mit dem Gradio-Webdemo sehen, wie ein kleines Sprachmodell Wahrscheinlichkeiten für das nächste Wort berechnet.",
+    "Die 15 Artikel als Lernpfad nutzen, um Attention und Embeddings praktisch zu verstehen."
+   ],
+   "ausprobieren": {
+    "prompt": "pip install gradio && python demo/app.py",
+    "tool": "NamiGPT Gradio-Demo",
+    "url": "https://github.com/aa1143/NamiGPT"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "NamiGPT Demo",
+    "zeilen": [
+     "> pip install gradio",
+     "✓ Abhängigkeiten installiert",
+     "> python demo/app.py",
+     "● Webdemo läuft lokal",
+     "⚠ GPT-2 setzt nur Text fort, beantwortet keine Fragen",
+     "+ 15 Lektionen verfügbar"
+    ]
+   },
+   "macher": "aa1143 (Autor auf namiai.tech, Projektname NamiGPT)",
+   "branche": "Bildung / Open-Source-Lernmaterial",
+   "jahr": "",
+   "tools": [
+    "PyTorch",
+    "HuggingFace",
+    "tiktoken",
+    "Gradio",
+    "GPT-2"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "111"
+    },
+    {
+     "label": "Forks",
+     "wert": "8"
+    },
+    {
+     "label": "Lektionen",
+     "wert": "15"
+    },
+    {
+     "label": "Modellgröße im Beispiel",
+     "wert": "124 Mio. Parameter"
+    }
+   ],
+   "link": "https://github.com/aa1143/NamiGPT",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "namigpt-gpt-2-in-pytorch-von-grund-auf-selbst-nachbauen",
+   "hinzugefuegt": "2026-10-29T02:43:57Z"
+  },
+  {
    "titel": "Survival LLM: KI-Assistent und Notfallbibliothek für den eigenen Rechner",
    "kurz": "Survival LLM ist eine kostenlose KI-Anwendung, die komplett auf dem eigenen Computer läuft und auch ohne Internet Antworten zu Notfallthemen liefert. Jede Antwort zeigt die Artikel, aus denen sie stammt.",
    "artikel": [
@@ -9288,6 +9435,7 @@
    "statusText": "Profi-Niveau",
    "tools": [
     "Gemini 4 Argon",
+    "Gemini 4 Carbon",
     "Claude Opus 5.5",
     "ChatGPT",
     "GPT-6.1 Sol"
@@ -9311,8 +9459,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-28T23:27:44Z",
-  "neueFunde": 3,
-  "standAktualisiert": "2026-10-28T01:12:53Z"
+  "letzterScan": "2026-10-29T02:43:57Z",
+  "neueFunde": 2,
+  "standAktualisiert": "2026-10-29T02:43:57Z"
  }
 }
