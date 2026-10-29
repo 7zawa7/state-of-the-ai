@@ -1946,6 +1946,74 @@
  ],
  "radar": [
   {
+   "titel": "Hermit: Open-Source-Framework passt KI-Agenten über eine externe Harness-Schicht an",
+   "kurz": "Infini-AI-Lab hat Hermit veröffentlicht, ein Apache-2.0-Framework, das eine externe „Harness-Adapter“-Schicht für KI-Agenten trainiert, ohne Modell und Harness zu verändern. Die Ergebnisse sind laut Hersteller selbst berichtet und meist Einzelläufe.",
+   "artikel": [
+    "## Worum es geht",
+    "Infini-AI-Lab hat Hermit als Open-Source-Framework für KI-Agenten veröffentlicht. Die erste Version v0.1.0 erschien laut Quelle am 25. Oktober 2026. Ein Harness-Adapter ist eine trainierbare externe Schicht um einen bestehenden Agenten, ähnlich einem Plugin mit eingebautem Training. Anders als LoRA, das ein Modell anpasst, passt er den Agenten selbst an. Der Adapter kann Anweisungen, Skills, Speicher, Werkzeuge und Koordinationslogik enthalten. Modell und Harness bleiben dabei unverändert.",
+    "## Wie das Training funktioniert",
+    "Hermit nutzt eine RL-artige Trainingsschleife. Ein Trainer lässt Aufgaben mit dem aktuellen Adapter laufen, ein Richter bewertet die Ergebnisse, und ein Evolver schlägt auf Basis der Protokolle eine neue Adapter-Version vor. Jede Version liegt in einem Git-Baum und kann geprüft, zurückgesetzt oder ausgeliefert werden. Fünf Evolutionsmethoden sind laut Projekt bereits enthalten, ACE und ReHarness sind angekündigt.",
+    "## Ergebnisse",
+    "Die Angaben stammen aus den Beispiel-READMEs des Repos und sind laut Quelle selbst berichtet. Als Testmodell diente GLM 5.3 Flash. Bei OfficeQA mit 172 Fragen erreichte Harness² 0,651 gegenüber 0,541 ohne Adapter. Bei CL-Bench erreichte der MWM-Adapter bei der Datenbank-Exploration 0,795 gegenüber 0,580 im In-Context-Vergleich. Der reine Prompt-Adapter lag dort mit 0,470 unter dem Ausgangswert. Die Quelle weist darauf hin, dass die meisten Ergebnisse Einzelläufe sind.",
+    "## Installation und Einsatz",
+    "Installation ist per pip mit dem Paket hermit-harness möglich. Die CLI deckt Prüfen, Trainieren, Evaluieren, Deployen und Konvertieren ab. Laut Quelle lassen sich Adapter für Codex, Claude Code oder Pi bereitstellen und als Plugin exportieren. Lokale Läufe nutzen vLLM, SGLang oder Ollama, für die Schnellstart-Variante ist laut Quelle keine GPU nötig. Sandboxed-Läufe benötigen Linux mit bubblewrap."
+   ],
+   "quellen": [
+    {
+     "titel": "Infini-AI-Lab Releases Hermit, an Open-Source Harness Adapter Framework for AI Agents",
+     "url": "https://www.marktechpost.com/2026/10/29/infini-ai-lab-hermit-harness-adapter-framework/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Eigene Agenten wie Codex oder Claude Code auf neue Aufgaben anpassen, ohne deren Code zu verändern.",
+    "Einen trainierten Adapter als Versionsstand in Git prüfen, zurückrollen oder weitergeben.",
+    "Das Framework per pip installieren und die mitgelieferten Beispiele lokal ausprobieren."
+   ],
+   "ausprobieren": {
+    "prompt": "pip install hermit-harness",
+    "tool": "Hermit",
+    "url": "https://www.marktechpost.com/2026/10/29/infini-ai-lab-hermit-harness-adapter-framework/"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "hermit",
+    "zeilen": [
+     "> pip install hermit-harness",
+     "✓ Erfolg",
+     "⚠ Ergebnisse sind laut Hersteller selbst berichtet",
+     "- Prompt-Adapter (0,470) unter Ausgangswert",
+     "+ MWM-Adapter (0,795) auf CL-Bench",
+     "● Status: v0.1.0, Apache-2.0"
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-10-25",
+   "kennzahlen": [
+    {
+     "label": "Lizenz",
+     "wert": "Apache-2.0"
+    },
+    {
+     "label": "Version",
+     "wert": "v0.1.0"
+    },
+    {
+     "label": "Evolutionsmethoden",
+     "wert": "5"
+    },
+    {
+     "label": "CL-Bench Datenbank (Herstellerangabe)",
+     "wert": "0,795 vs. 0,580"
+    }
+   ],
+   "signal": "Ein Framework, das Agenten von außen trainiert statt Modelle oder Harnesses umzubauen. Die Ergebnisse sind jedoch Herstellerangaben aus Einzelläufen.",
+   "link": "https://www.marktechpost.com/2026/10/29/infini-ai-lab-hermit-harness-adapter-framework/",
+   "linkLabel": "Originalartikel bei MarkTechPost",
+   "id": "hermit-open-source-framework-passt-ki-agenten-uber-eine-exte",
+   "hinzugefuegt": "2026-10-29T08:56:50Z"
+  },
+  {
    "titel": "Timestral: Vier Zeitreihen-Modelle setzen neue Bestwerte bei Prognosen",
    "kurz": "Das Paper stellt Timestral vor, eine Familie von vier Zeitreihen-Foundation-Modellen für probabilistische Prognosen. Laut Autoren setzen die Modelle auf GIFT-Eval, TIME und fev-bench einen neuen Stand der Technik.",
    "artikel": [
@@ -7190,6 +7258,75 @@
  ],
  "projekte": [
   {
+   "titel": "AgentFlux: Selbst gehostete Plattform für visuelle KI-Workflows und Agenten",
+   "kurz": "AgentFlux ist eine agentische KI-Plattform, mit der sich Dokumente, Datenquellen und Sprachmodelle in visuellen Workflows verbinden lassen. Sie läuft per Docker auf dem eigenen Rechner oder Server und ist laut Projektseite auf Einzelnutzung ausgelegt.",
+   "artikel": [
+    "AgentFlux ist ein Open-Source-Projekt auf GitHub (davemessew/AgentFlux) mit rund 190 Sternen. Es beschreibt sich selbst als agentische KI-Plattform für visuelle Workflows und autonome Agenten. Dokumente, Datenquellen und Sprachmodelle werden in einer Oberfläche im Browser zusammengeführt, und die Ergebnisse bleiben laut Projektseite lokal.",
+    "## Funktionen",
+    "Workflows lassen sich auf einer Arbeitsfläche aus Schritten zusammensetzen. Laut Readme stehen 17 vorkonfigurierte Schritte, acht Vorlagen, Verzweigungen sowie Rückgängig und Wiederherstellen zur Verfügung. Ein Agent kann aus einer Aufgabenbeschreibung ebenfalls einen Workflow erzeugen. Dateien wie PDF, DOCX, XLSX, CSV, JSON und Text lassen sich importieren.",
+    "Eigene Modelle lassen sich über Ollama, LM Studio, vLLM oder OpenAI-kompatible Schnittstellen anbinden. Ein sogenannter OpenAI-kompatibler Endpunkt ist eine Schnittstelle, die dieselben Anfragen wie die OpenAI-API versteht. Das Docker-Image enthält laut Projektseite kein Modell.",
+    "## Videoanalyse",
+    "Eine Aufnahme kann in einen bearbeitbaren Workflow umgewandelt werden. Dabei werden bis zu 24 gleichmäßig verteilte JPEG-Bilder an den gewählten Modellserver geschickt. Audio wird nicht ausgewertet, und kurze Aktionen zwischen den Bildern können übersehen werden. Diese Funktion ist laut Projektseite im Quellcode enthalten, nicht jedoch im vorgebauten Docker-Image v0.2.0.",
+    "## Betrieb und Sicherheit",
+    "Die mitgelieferte Konfiguration bindet Port 4310 an localhost. Laut Projektseite hat AgentFlux keine Anmeldung und ist für einen einzelnen Nutzer gedacht; gemeinsamer Zugriff erfordert eine zusätzliche Zugriffskontrolle. Cloud-Modelle und externe HTTP-POST-Schritte brauchen eine ausdrückliche Freigabe. Die Daten liegen im benannten Volume agentflux-data, das vor dem Löschen gesichert werden sollte.",
+    "Die Installation erfolgt laut Anleitung über Docker Compose mit dem Release-Image v0.2.0 für Linux/amd64. Unter Windows wird Docker Desktop im Linux-Containermodus benötigt. Andere Architekturen sind laut Projektseite nur aus dem Quellcode baubar und nicht getestet."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: davemessew/AgentFlux",
+     "url": "https://github.com/davemessew/AgentFlux"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Einen eigenen Dokumenten-Workflow aufbauen, etwa Dateien importieren, verarbeiten und die Ergebnisse als JSON oder CSV exportieren.",
+    "Ein lokales Modell über Ollama oder LM Studio anbinden und damit Dokumente zusammenfassen lassen.",
+    "Eine Videoaufnahme von Arbeitsschritten analysieren lassen, um daraus einen bearbeitbaren Workflow zu erhalten, sofern eine Quellcode-Version genutzt wird."
+   ],
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Dokumente",
+     "Datenquellen",
+     "Sprachmodell",
+     "Ergebnis lokal"
+    ]
+   },
+   "macher": "davemessew (GitHub-Nutzer)",
+   "branche": "Open-Source-Software / KI-Automatisierung",
+   "jahr": "",
+   "tools": [
+    "Docker",
+    "Ollama",
+    "LM Studio",
+    "vLLM",
+    "Node.js",
+    "pnpm"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "190"
+    },
+    {
+     "label": "Vorkonfigurierte Schritte (Herstellerangabe)",
+     "wert": "17"
+    },
+    {
+     "label": "Vorlagen (Herstellerangabe)",
+     "wert": "8"
+    },
+    {
+     "label": "Version (Herstellerangabe)",
+     "wert": "v0.2.0"
+    }
+   ],
+   "link": "https://github.com/davemessew/AgentFlux",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "agentflux-selbst-gehostete-plattform-fur-visuelle-ki-workflo",
+   "hinzugefuegt": "2026-10-29T08:56:50Z"
+  },
+  {
    "titel": "NamiGPT: GPT-2 in PyTorch von Grund auf selbst nachbauen",
    "kurz": "Das Open-Source-Projekt NamiGPT ist ein Lernmaterial auf Chinesisch, das GPT-2 Schritt für Schritt mit PyTorch neu schreibt. Die Anleitung richtet sich an Einsteiger ohne Vorkenntnisse in Large Language Models.",
    "artikel": [
@@ -9459,7 +9596,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-29T02:43:57Z",
+  "letzterScan": "2026-10-29T08:56:50Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-10-29T02:43:57Z"
  }
