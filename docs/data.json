@@ -1946,6 +1946,60 @@
  ],
  "radar": [
   {
+   "titel": "Claude Code: Hintergrund-Zusammenfassungen kosten laut Gist 15–20 % der Tokens",
+   "kurz": "Ein GitHub-Gist von Flamerix AI beschreibt, dass Claude Code für jeden Hintergrund-Agenten alle ~30 Sekunden das gesamte Transkript an das Modell schickt, nur um eine kurze Statuszeile zu erzeugen. Der Autor stellt einen Bun-Preload bereit, der diesen Timer abschaltet, ohne das Binary zu verändern.",
+   "artikel": [
+    "Ein Gist des Herstellers Flamerix AI (MIT-Lizenz) beschreibt ein Problem in Claude Code, dem Coding-Agenten von Anthropic. Laut Autor schickt Claude Code etwa alle 30 Sekunden das komplette Transkript jedes Hintergrund-Agenten an dessen Modell, meist Opus, und bittet darum, die letzte Aktion in drei bis fünf Wörtern zu beschreiben. Das Ergebnis erscheint nur in der Statuszeile im Agenten-Panel.",
+    "Die Zahlen stammen laut Gist aus OpenTelemetry-Daten, die DRIM gemessen hat. Dort lag der Anteil dieser Anfragen (query_source = agent_summary) bei etwa 16,4 % der gesamten Claude-Code-Kosten, während die Hauptkonversation auf 15,7 % kam. Das sind Herstellerschätzungen pro Anfrage, keine Rechnungen. Bei einem Abo verliert man laut Gist vor allem Spielraum bei den Nutzungslimits. Ein separates GitHub-Issue (#86879) nennt vier unabhängige Messungen mit 18 bis 26 %.",
+    "## Der Workaround",
+    "Die Datei no-agent-summary.js wird als Bun-Preload über die Umgebungsvariable BUN_OPTIONS geladen. Sie hängt sich nur an die globale setTimeout-Funktion und gibt für Timer, deren Callback einen bestimmten Summarizer-Text enthält, ein inaktives Handle zurück. Der Timer läuft dann mit 2³¹−1 Millisekunden, also praktisch nie. Andere Timer bleiben unverändert. Laut Gist ist die Datei nur in Claude-Code-Prozessen aktiv und wurde auf Linux mit den Versionen 2.1.257 bis 2.1.312 getestet.",
+    "Der Autor weist darauf hin, dass ein Update den Effekt rückgängig machen kann. Deshalb sollte man nach jedem Update prüfen, ob der Hook noch greift. Außerdem gilt: Es gibt laut Gist keine offizielle Einstellung, mit der sich diese Zusammenfassungen abschalten lassen.",
+    "Hinweis: Preload-Skripte dieser Art greifen in interne Abläufe ein und sind nicht vom Hersteller unterstützt."
+   ],
+   "quellen": [
+    {
+     "titel": "Gist von Flamerix AI: Claude Code burns ~15-20% of your tokens on a 3-word status line",
+     "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce"
+    },
+    {
+     "titel": "Hacker News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50284255"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer Claude Code mit Hintergrund-Agenten nutzt, kann den Verbrauch laut Gist prüfen, indem er die OpenTelemetry-Ereignisse nach query_source auswertet.",
+    "Wer die Statuszeile nicht braucht, kann den Preload-Ansatz aus dem Gist testen, am besten zuerst in einer Testumgebung.",
+    "Nach jedem Claude-Code-Update lohnt sich der im Gist beschriebene Verify-Schritt, da ein Update den Hook wirkungslos machen kann."
+   ],
+   "radar": true,
+   "quelle": "GitHub",
+   "datum": "2026-08-01",
+   "kennzahlen": [
+    {
+     "label": "Anteil agent_summary an Claude-Code-Kosten (Messung DRIM, Herstellerschätzung pro Anfrage)",
+     "wert": "16,4 %"
+    },
+    {
+     "label": "Anteil an allen API-Anfragen",
+     "wert": "19,7 %"
+    },
+    {
+     "label": "Intervall der Zusammenfassung",
+     "wert": "ca. 30 Sekunden"
+    },
+    {
+     "label": "Getestete Claude-Code-Versionen (Linux)",
+     "wert": "2.1.257–2.1.312"
+    }
+   ],
+   "signal": "Laut Gist ist die Zusammenfassungsfunktion seit Version 2.1.232 standardmäßig aktiv, und es gibt keine Einstellung zum Abschalten. Die Zahlen stammen aus Messungen Dritter und sind nicht vom Hersteller bestätigt.",
+   "link": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+   "linkLabel": "Zum Gist",
+   "id": "claude-code-hintergrund-zusammenfassungen-kosten-laut-gist-1",
+   "hinzugefuegt": "2026-10-29T15:59:49Z"
+  },
+  {
    "titel": "Hermit: Open-Source-Framework passt KI-Agenten über eine externe Harness-Schicht an",
    "kurz": "Infini-AI-Lab hat Hermit veröffentlicht, ein Apache-2.0-Framework, das eine externe „Harness-Adapter“-Schicht für KI-Agenten trainiert, ohne Modell und Harness zu verändern. Die Ergebnisse sind laut Hersteller selbst berichtet und meist Einzelläufe.",
    "artikel": [
@@ -7258,6 +7312,81 @@
  ],
  "projekte": [
   {
+   "titel": "DSH-Android: DeepSeek Harness als einzelne APK für Android",
+   "kurz": "Das Community-Projekt DSH-Android lässt den DeepSeek Harness ohne Root und ohne Termux auf Android laufen. Eine APK genügt, und der Agent kann Dateien, Apps und Systemeinstellungen per Sprachbefehl bedienen.",
+   "artikel": [
+    "Das Projekt DSH-Android von jackwener bringt den DeepSeek Harness (dsh), einen Agenten, auf Android-Smartphones. Laut Beschreibung reicht eine einzige APK, für die weder Root-Zugriff noch die Linux-Umgebung Termux nötig sind. Das Repository hat auf GitHub derzeit 133 Sterne.",
+    "## Was der Agent kann",
+    "Nach Angaben im Projekt kann der Agent Dateien suchen, sortieren, verschieben, umbenennen sowie packen und entpacken. Er kann außerdem Text aus PDF-, Word-, Excel- und PowerPoint-Dateien lesen. Über die Bedienungshilfen (Accessibility) liest er den Bildschirm und tippt, wischt oder schreibt. Systemeinstellungen wie Helligkeit, Lautstärke, WLAN oder Bluetooth lassen sich ebenfalls steuern.",
+    "Zusätzlich gibt es Automatisierungen, die zu einer Uhrzeit oder bei bestimmten Bedingungen starten, etwa beim Verbinden mit WLAN oder beim Laden. Die Wahl des Modells ist nicht auf DeepSeek beschränkt: Laut README lassen sich weitere Anbieter mit OpenAI-kompatibler Schnittstelle einbinden.",
+    "## Technischer Aufbau",
+    "Die Laufzeitumgebung Node.js 24 wird als Shared Library in die App eingebettet und im Hintergrunddienst gestartet. Shizuku ist optional und schaltet zusätzliche Systemfunktionen frei. Shizuku ist ein Drittprogramm, das erweiterte Rechte über Android-Debugging bereitstellt.",
+    "## Grenzen",
+    "Laut Projektseite pausieren Aufgaben, die andere Apps betreffen, bei gesperrtem Bildschirm mit Sicherheitssperre. Systemnahe Aufgaben laufen weiter. Der Kaltstart des Motors dauert laut Angabe etwa fünf Sekunden. Voraussetzung ist Android 10 oder neuer mit arm64-Prozessor.",
+    "Das Projekt ist laut eigener Erklärung eine Community-Arbeit ohne Bezug zu DeepSeek. Die Angaben zu Funktionen stammen aus der Projektdokumentation des Herstellers beziehungsweise der Entwickler und wurden nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "jackwener/DeepseekHarness-Android (GitHub)",
+     "url": "https://github.com/jackwener/DeepseekHarness-Android"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Lass dir auf dem Handy große Dateien im Download-Ordner auflisten oder aufräumen.",
+    "Richte eine Automatisierung ein, die bei einer bestimmten WLAN-Verbindung bestimmte Einstellungen setzt.",
+    "Steuere Lautstärke, Helligkeit oder Benachrichtigungen per Sprachbefehl, ohne Root."
+   ],
+   "ausprobieren": {
+    "prompt": "Liste die 5 größten Dateien im Download-Ordner auf.",
+    "tool": "DSH-Android",
+    "url": "https://github.com/jackwener/DeepseekHarness-Android"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "dsh auf Android",
+    "zeilen": [
+     "> Liste die 5 größten Dateien im Download-Ordner",
+     "✓ Dateien durchsucht",
+     "● Ergebnis: 5 Dateien aufgelistet",
+     "⚠ Bedienungshilfe nötig für Bildschirmaktionen"
+    ]
+   },
+   "tag": "Community-Projekt",
+   "macher": "jackwener (Community-Projekt, nicht DeepSeek)",
+   "branche": "Mobile Agenten / Android-Automatisierung",
+   "jahr": "",
+   "tools": [
+    "DeepSeek Harness (dsh)",
+    "Node.js 24",
+    "Shizuku",
+    "Kotlin",
+    "Jetpack Compose"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "133"
+    },
+    {
+     "label": "Mindestversion",
+     "wert": "Android 10, arm64-v8a"
+    },
+    {
+     "label": "Installationsgröße (Herstellerangabe)",
+     "wert": "ca. 110 MB"
+    },
+    {
+     "label": "Kaltstart (Herstellerangabe)",
+     "wert": "ca. 5 Sekunden"
+    }
+   ],
+   "link": "https://github.com/jackwener/DeepseekHarness-Android",
+   "linkLabel": "Zum Repository auf GitHub",
+   "id": "dsh-android-deepseek-harness-als-einzelne-apk-fur-android",
+   "hinzugefuegt": "2026-10-29T15:59:49Z"
+  },
+  {
    "titel": "AgentFlux: Selbst gehostete Plattform für visuelle KI-Workflows und Agenten",
    "kurz": "AgentFlux ist eine agentische KI-Plattform, mit der sich Dokumente, Datenquellen und Sprachmodelle in visuellen Workflows verbinden lassen. Sie läuft per Docker auf dem eigenen Rechner oder Server und ist laut Projektseite auf Einzelnutzung ausgelegt.",
    "artikel": [
@@ -9596,7 +9725,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-29T08:56:50Z",
+  "letzterScan": "2026-10-29T15:59:49Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-10-29T02:43:57Z"
  }
