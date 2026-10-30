@@ -1,6 +1,51 @@
 {
  "news": [
   {
+   "titel": "KI-Modell GLM 5.3 nutzt Patch-Lücke in Firefox aus",
+   "kurz": "Forscher von Epoch AI zeigen, dass das frei verfügbare Modell GLM 5.3 Sicherheitsfixes in Firefox binnen weniger Stunden in funktionierende Exploits umsetzte, bevor Nutzer die Updates erhielten. Mozilla hat die zentrale Lücke in Firefox 159.0 geschlossen.",
+   "artikel": [
+    "Forscher von Epoch AI haben untersucht, ob ein frei verfügbares KI-Modell die Zeitspanne zwischen der Veröffentlichung eines Sicherheitsfixes und der Auslieferung an Nutzer ausnutzen kann. Diese Spanne nennen sie „Patch-Gap“: Die Korrektur ist im Code bereits sichtbar, erreicht die Nutzer aber noch nicht.",
+    "## Autonome Angriffe",
+    "Das Modell GLM 5.3 des chinesischen Anbieters Z.ai ist ein sogenanntes Open-Weight-Modell, dessen Gewichte öffentlich verfügbar sind. Laut den Forschern erstellte es über sechs Firefox-Versionen hinweg, die zwischen dem 17. September und dem 26. Oktober veröffentlicht wurden, jeweils eine Angriffskette. Die Kosten lagen bei rund 1.000 US-Dollar an API-Gebühren pro erfolgreichem Angriff. Die Forscher schreiben, sie hätten die Aufgabe als Sicherheitsübung gerahmt, ihr Vorgehen sei aber von einem echten Angriff auf Nutzer nicht zu unterscheiden.",
+    "Die Forscher wollten nachbilden, was ein wenig erfahrener Angreifer mit begrenzten Mitteln erreichen könnte. Dem Modell wurden lediglich die Zielversion, einfache Werkzeuge und öffentlich verfügbare Informationen in einer Offline-Umgebung gegeben. Danach identifizierte es kommende Sicherheitsfixes, wählte Schwachstellen aus und baute mehrstufige Exploit-Ketten. Laut Bericht tarnt Mozilla Sicherheitsfixes als gewöhnliche Verbesserungen; das Modell erkannte dennoch, welche Änderungen sicherheitsrelevant sind.",
+    "Ein Beispiel: Ein Speichersicherheitsfehler wurde über einen anstehenden Fix entdeckt. Daraus entwickelte das Modell eine Methode, den Browser-Speicher zu lesen und zu verändern. Wurde der Zugriff auf eine Zieldatei durch die Sicherheitsschichten blockiert, verknüpfte es den Exploit mit weiteren Stufen. Der schnellste erfolgreiche Angriff dauerte zwölf Stunden, das Limit lag bei 48 Stunden.",
+    "## Reaktion von Mozilla",
+    "Die Forscher meldeten ihre Ergebnisse an Mozilla. Die dabei genutzte Schwachstelle, mit der die Sandbox des Browsers umgangen werden konnte, wurde in Firefox 159.0 geschlossen, veröffentlicht am 27. Oktober 2026. Ob ähnliche Angriffe gegen die neue Version funktionieren, ist nicht bestätigt; die Forscher vermuten jedoch, dass sie „zumindest deutlich schwieriger“ geworden sind.",
+    "Dieselbe Methode gegen Google Chrome brachte nach Angaben der Forscher trotz rund 100.000 US-Dollar an API-Kosten keinen vergleichbaren Exploit. Das beweise aber keine Immunität von Chrome, da bessere Methoden oder leistungsfähigere Modelle noch Erfolg haben könnten. Begrenzte Benchmark-Daten deuten laut den Forschern darauf hin, dass das kürzlich angekündigte Kimi K3.1 Pro bei Offensiv-Aufgaben besser sein könnte; getestet haben sie es nicht.",
+    "## Ein branchenweites Problem",
+    "Laut den Forschern betrifft die Patch-Lücke nicht nur Firefox, sondern Browser, mobile Betriebssysteme und Router-Firmware. Anthropic habe gezeigt, dass sein Modell Mythos die Lücke unter Windows ohne Quellcode ausnutzen kann. Ein Hersteller veröffentlichte im September 2026 gepatchte PHP-Versionen mehr als sechs Stunden vor den koordinierten Patches für zwei kritische Lücken; laut externer Berichterstattung könnte das zu Tausenden Angriffsversuchen beigetragen haben.",
+    "Besonders besorgt sind die Forscher über selten aktualisierte Software wie Router-Firmware, weil Nutzer dort länger ungeschützt bleiben. Als Gegenmaßnahmen empfehlen sie, Sicherheitsfixes bis zur Auslieferung privat zu halten, schneller von Beta in die allgemeine Veröffentlichung zu bringen und mehrere Lücken nicht gleichzeitig zu patchen, wenn sie verkettbar sind. Firefox und Chrome liefern bereits wöchentliche Updates aus. Die strukturelle Lücke lösen schnellere Updates allein aber nicht: Sobald ein Fix im öffentlichen Code erscheint, weist er auf die zugrunde liegende Schwachstelle hin."
+   ],
+   "quellen": [
+    {
+     "titel": "Open-weight model GLM 5.3 built full Firefox exploit chains with zero human input in under 48 hours – The Decoder",
+     "url": "https://the-decoder.com/open-weight-model-glm-5-3-built-full-firefox-exploit-chains-with-zero-human-input-in-under-48-hours/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Halte Browser und Router-Firmware möglichst zeitnah auf dem neuesten Stand, da die Lücke zwischen Fix und Update das eigentliche Risiko ist.",
+    "Prüfe bei wichtigen Geräten, ob automatische Updates aktiviert sind und wie oft Hersteller Sicherheitsfixes ausliefern.",
+    "Verwende für sensible Konten eine Zwei-Faktor-Authentifizierung, damit gestohlene Passwörter allein nicht ausreichen."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Firefox Patch-Gap-Test",
+    "zeilen": [
+     "> Modell: GLM 5.3 (Open-Weight)",
+     "✓ Firefox 159.0 geschlossen",
+     "⚠ Patch-Lücke vor Auslieferung",
+     "- Sandbox-Umgehung entfernt",
+     "+ Wöchentliche Updates empfohlen",
+     "● Status: Forschung, kein Exploit veröffentlicht"
+    ]
+   },
+   "bereich": "Apps",
+   "datum": "2026-10-30",
+   "id": "ki-modell-glm-5-3-nutzt-patch-lucke-in-firefox-aus",
+   "hinzugefuegt": "2026-10-30T13:25:18Z"
+  },
+  {
    "titel": "Mistral veröffentlicht die Gewichte von Mistral Large 4",
    "kurz": "Mistral hat die Gewichte seines 1-Billionen-Parameter-Modells Mistral Large 4 („Le Chonk“) offen verfügbar gemacht. Laut Herstellerangaben ist es das beste Open-Weight-Modell für Coding.",
    "artikel": [
@@ -1996,6 +2041,71 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Grim Prompter: Bedrohungsmodellierung für KI-Coding-Agenten",
+   "kurz": "Das MIT-lizenzierte Projekt „Grim Prompter“ von jmanico stellt Prompts bereit, mit denen Claude Code, Codex oder andere Coding-Agenten ein Bedrohungsmodell für ein Repository erstellen. Die Ergebnisse sollen auf Belege im eigenen Code zurückführbar sein.",
+   "artikel": [
+    "Grim Prompter ist ein Werkzeugkasten für Bedrohungsmodellierung (Threat Modeling), also die systematische Suche nach Angriffsmöglichkeiten und Schwachstellen in einem System. Das Projekt richtet sich an Entwicklerinnen und Entwickler, die einen KI-Coding-Agenten auf ihr eigenes Repository loslassen wollen. Laut Projektbeschreibung bietet es 36 Architektur-Workflows und 29 Methoden- bzw. Analyse-Prompts.",
+    "## So funktioniert es",
+    "Der Agent geht einem strukturierten Ablauf folgen: Er prüft den Code, Vertrauensgrenzen, Bedrohungen, vorhandene Schutzmaßnahmen und vorgeschlagene Gegenmaßnahmen. Jede Aussage soll mit nachprüfbaren Belegen aus dem Code hinterlegt sein. Die Installation erfolgt über einen Klon des Repositorys und einen symbolischen Link auf den Skill „threat-model“ im jeweiligen Agenten-Verzeichnis.",
+    "Die Ergebnisse landen in einem Ordner unter threat-model/ im Projekt, unter anderem als Bericht und als JSON-Dateien für spätere Vergleiche. Die Projektdokumentation weist darauf hin, dass die Prompts Entwürfe sind, deren Ausgabe geprüft werden muss. Eine Threat-Model-Analyse bescheinigt nicht, dass ein System sicher ist.",
+    "## Einordnung",
+    "Der Autor nennt als Vorbilder die Projekte Trim Reaper und Dread Ledger. Die Angaben zu 36 Architekturen, 29 Methoden und der MIT-Lizenz stammen aus der Projektbeschreibung des Herstellers und sind nicht unabhängig geprüft. Der Stand von 215 Sternen auf GitHub ist eine Momentaufnahme."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: jmanico/grim-prompter",
+     "url": "https://github.com/jmanico/grim-prompter"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Lass deinen Coding-Agenten ein Bedrohungsmodell für ein eigenes Projekt erstellen und prüfe die Belege im Bericht.",
+    "Nutze den Quick-Modus für eine schnelle Einschätzung einer einzelnen Architektur.",
+    "Vergleiche nach späteren Codeänderungen das neue Modell mit dem gespeicherten JSON-Stand."
+   ],
+   "ausprobieren": {
+    "prompt": "/threat-model quick api",
+    "tool": "Claude Code",
+    "url": "https://github.com/jmanico/grim-prompter"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "grim-prompter",
+    "zeilen": [
+     "> /threat-model quick api",
+     "✓ Architektur-Workflow geladen",
+     "⚠ Herstellerangabe: 36 Architekturen, 29 Methoden",
+     "+ Bericht in threat-model/ angelegt",
+     "● Status: Entwurf, manuell prüfen"
+    ]
+   },
+   "quelle": "GitHub",
+   "datum": "2026-10-28",
+   "kennzahlen": [
+    {
+     "label": "Architektur-Workflows (Herstellerangabe)",
+     "wert": "36"
+    },
+    {
+     "label": "Methoden-/Analyse-Prompts (Herstellerangabe)",
+     "wert": "29"
+    },
+    {
+     "label": "GitHub-Sterne",
+     "wert": "215"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    }
+   ],
+   "signal": "Ein kleines Open-Source-Werkzeug, das Sicherheitsanalysen direkt in den Workflow von KI-Coding-Agenten bringt. Die Angaben sind Herstellerangaben und noch nicht unabhängig belegt.",
+   "link": "https://github.com/jmanico/grim-prompter",
+   "linkLabel": "Zum Repository",
+   "id": "grim-prompter-bedrohungsmodellierung-fur-ki-coding-agenten",
+   "hinzugefuegt": "2026-10-30T13:25:18Z"
+  },
   {
    "titel": "Claude Code: Hintergrund-Zusammenfassungen kosten laut Gist 15–20 % der Tokens",
    "kurz": "Ein GitHub-Gist von Flamerix AI beschreibt, dass Claude Code für jeden Hintergrund-Agenten alle ~30 Sekunden das gesamte Transkript an das Modell schickt, nur um eine kurze Statuszeile zu erzeugen. Der Autor stellt einen Bun-Preload bereit, der diesen Timer abschaltet, ohne das Binary zu verändern.",
@@ -7363,6 +7473,79 @@
  ],
  "projekte": [
   {
+   "titel": "Animierte Shorts für TikTok und YouTube mit Claude Skills, ohne Programmieren",
+   "kurz": "Das Open-Source-Projekt „claude-skills-shorts-animados“ erstellt mit zwei Claude-Skills vertikale Kurzvideos aus einem Thema. Es ist auf GitHub mit 5 Sternen verzeichnet und enthält eine Schritt-für-Schritt-Anleitung.",
+   "artikel": [
+    "## Was das Projekt macht",
+    "Das Repository „claude-skills-shorts-animados“ von miguelcotrinaia richtet sich an Menschen, die animierte Shorts für TikTok und YouTube Shorts erstellen möchten, ohne selbst Code zu schreiben. Man beschreibt ein Thema im Gespräch mit Claude, und am Ende entsteht ein Video im Format 1080×1920 sowie die Texte zum Veröffentlichen. Eigene Figuren, eine eigene redaktionelle Linie und eine eigene Stimme lassen sich einbinden.",
+    "## Zwei Versionen pro Thema",
+    "Ein Thema wird für jede Plattform getrennt aufbereitet. Die TikTok-Version ist schneller geschnitten, mit großen Untertiteln und Dauer von etwa 25 bis 40 Sekunden. Die YouTube-Version ist ruhiger, mit mittleren Untertiteln, weichen Übergängen und Dauer von etwa 35 bis 55 Sekunden. Laut Projektbeschreibung hat jede Plattform eigene Erfolgskriterien, weshalb beide Fassungen unterschiedlich gestaltet sind.",
+    "## Bausteine",
+    "Das Projekt besteht aus zwei Skills: „/personajes“ legt den Figurenkatalog an, „/nuevo-video“ erzeugt die einzelnen Videos. Die Sprachausgabe läuft standardmäßig über ElevenLabs, eine Anbieter-Plattform für Sprachsynthese mit eigenem API-Schlüssel. Laut Anleitung ist das ein Herstellerangebot; der Plan-Umfang ist beim Anbieter zu prüfen. Alternativ kann man eigene Audiodateien verwenden oder ohne Stimme exportieren.",
+    "## Voraussetzungen",
+    "Benötigt werden die Claude-Desktop-App mit Claude Code, das laut Projektseite in den Plänen Pro und Max enthalten ist, sowie Node.js ab Version 20. Die Installation ist über ZIP-Download oder mit git möglich. Die Projektseite nennt außerdem ein Beispielset mit Figuren und einem fiktiven Kanal."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: miguelcotrinaia/claude-skills-shorts-animados",
+     "url": "https://github.com/miguelcotrinaia/claude-skills-shorts-animados"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Ein eigenes Thema als Kurzvideo mit Figuren und Untertiteln für TikTok und YouTube Shorts erstellen.",
+    "Die Anleitung befolgen, um eigene Figuren und einen eigenen Kanalstil anzulegen.",
+    "Den Code im Repository anpassen, da das Projekt als Open Source veröffentlicht ist."
+   ],
+   "ausprobieren": {
+    "prompt": "/nuevo-video ambos por qué el cielo es azul",
+    "tool": "Claude Code (mit dem Repository claude-skills-shorts-animados)",
+    "url": "https://github.com/miguelcotrinaia/claude-skills-shorts-animados"
+   },
+   "vorschau": {
+    "szene": "stadt",
+    "badges": [
+     "TikTok",
+     "YouTube Shorts",
+     "1080×1920"
+    ],
+    "dauer": "0:30"
+   },
+   "tag": "Open Source",
+   "macher": "miguelcotrinaia",
+   "branche": "Video / Content-Erstellung",
+   "jahr": "",
+   "tools": [
+    "Claude",
+    "Claude Code",
+    "ElevenLabs",
+    "Node.js",
+    "Remotion"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "5"
+    },
+    {
+     "label": "Format",
+     "wert": "1080×1920"
+    },
+    {
+     "label": "Dauer TikTok",
+     "wert": "25–40 s"
+    },
+    {
+     "label": "Dauer YouTube",
+     "wert": "35–55 s"
+    }
+   ],
+   "link": "https://github.com/miguelcotrinaia/claude-skills-shorts-animados",
+   "linkLabel": "Zum Repository",
+   "id": "animierte-shorts-fur-tiktok-und-youtube-mit-claude-skills-oh",
+   "hinzugefuegt": "2026-10-30T13:25:18Z"
+  },
+  {
    "titel": "Mika: Open-Source-KI-Agent für Android bedient Apps im Hintergrund",
    "kurz": "Mika ist ein Android-Agent, der auf dem Handy per Textauftrag Apps und Websites bedient. Die Arbeit läuft auf einem separaten, unsichtbaren Hintergrundbildschirm, während der Nutzer das Telefon weiter normal verwenden kann.",
    "artikel": [
@@ -9898,8 +10081,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-30T06:31:29Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-10-30T13:25:18Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-10-30T06:31:29Z"
  }
 }
