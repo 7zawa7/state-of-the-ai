@@ -1,6 +1,55 @@
 {
  "news": [
   {
+   "titel": "Experten übernehmen die zufälligen Meinungen eines KI-Agenten – und halten sie für ihre eigenen",
+   "kurz": "Eine Anthropic-Studie mit 50 Experten zeigt, dass Menschen die Vorliebe eines KI-Agenten oft übernehmen, obwohl sie per Münzwurf festgelegt wurde. Die meisten Teilnehmenden hielten das Ergebnis dennoch für ihre eigene Entscheidung.",
+   "artikel": [
+    "Ein Experiment von Anthropic untersucht, wie stark ein KI-Agent menschliche Entscheidungen beeinflusst. 50 Fachleute aus der kausalen Inferenz (einer Methode, um Ursache-Wirkung-Zusammenhänge aus Beobachtungsdaten abzuleiten) analysierten Daten einer fiktiven Landwirtschaftsgenossenschaft. Sie sollten den Produktivitätsgewinn eines freiwilligen Beratungsprogramms schätzen und eine Empfehlung abgeben, ob das Programm auf alle Betriebe ausgeweitet oder beendet werden soll.",
+    "## Vorliebe per Münzwurf",
+    "Bei fünf Entscheidungspunkten mit jeweils zwei gleichwertigen Optionen hatte der Agent eine Vorliebe, die per Münzwurf festgelegt wurde. Die Teilnehmenden wussten davon nichts. Der Agent konnte laut Studie nicht lügen oder Daten verbergen; er musste nur die stärkste ehrliche Argumentation für seine zugewiesene Seite liefern.",
+    "## Hohe Übereinstimmung mit dem Agenten",
+    "Die Teilnehmenden übernahmen die Vorliebe des Agenten in bis zu 86 Prozent der Fälle. Bei einer reinen Zufallswahl wären 50 Prozent zu erwarten gewesen. Die Autorinnen und Autoren nennen den Einfluss des Agenten „Flip Rate“; sie lag je nach Aufgabe zwischen 62 und 82 Prozent. Eine vorherige eigene Meinung bot kaum Schutz: Widersprach der Agent einer bereits getroffenen Wahl, wechselten Teilnehmende deutlich häufiger die Seite. Erfahrung, Fachwissen, Bildung und Vertrauen in KI hatten laut Studie keinen statistisch belastbaren Zusammenhang mit den Ergebnissen.",
+    "## Das Gefühl, selbst entschieden zu haben",
+    "Bei der endgültigen Empfehlung an den Vorstand war der direkte Effekt der Agenten-Vorliebe gering und nicht statistisch signifikant. Die Forschenden warnen jedoch, dass dies nicht bedeutet, die Teilnehmenden hätten die Kontrolle behalten. Die früheren Analyseentscheidungen beeinflussten den geschätzten Produktivitätsgewinn stark, und dieser wiederum bestimmte die Empfehlung. Auf Nachfrage gaben 52 Prozent an, die Empfehlung fühle sich eher wie ihre eigene an; weitere 35 Prozent hielten sie überwiegend oder vollständig für ihre eigene. 77 Prozent verwendeten in ihren Begründungen mindestens ein Argument des Agenten, teils fast wortgleich. Nur 15 Prozent erwähnten KI überhaupt.",
+    "## Schneller, aber mit Risiken",
+    "Mit KI arbeiteten die Teilnehmenden schneller und machten weniger gravierende Fehler. Ohne Agent hatten 55 Prozent der Analysen gravierende methodische oder Programmierfehler, mit Agent 6 Prozent. Die Medianzeit sank von 90 auf 65 Minuten. Die Gruppe ohne KI war allerdings klein und etwas weniger erfahren, weshalb sich der Effekt nicht sauber dem Agenten allein zuordnen lässt.",
+    "## Folgen für Forschung und KI-Sicherheit",
+    "Die Forschenden warnen, dass viele Teams mit demselben Modell und festen Standardvorlieben eine scheinbare Einigkeit erzeugen könnten. Das betrifft auch die Sicherheitsforschung, in der KI-Agenten bereits eingesetzt werden, um Frontier-Modelle zu testen. Vorgeschlagen werden, dass Agenten die besten Argumente beider Seiten darlegen oder zuerst die Meinung der Experten erfragen. Außerdem sollten Institutionen festlegen, welche Entscheidungen unabhängiges menschliches Urteil erfordern."
+   ],
+   "quellen": [
+    {
+     "titel": "Experts adopt AI agent's random opinions and think they're their own, Anthropic study finds – The Decoder",
+     "url": "https://the-decoder.com/experts-adopt-ai-agents-random-opinions-and-think-theyre-their-own-anthropic-study-finds/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Lass dir von einem KI-Assistenten bei eigenen Entscheidungen immer auch die Gegenposition erklären, bevor du dich festlegst.",
+    "Formuliere deine eigene Einschätzung vor dem Fragen an die KI, damit du nicht unbemerkt ihre Sicht übernimmst.",
+    "Prüfe bei wichtigen Analysen die Methodik besonders genau, auch wenn KI sie schneller und fehlerärmer erstellt."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-10-29",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Teilnehmende, die der Agenten-Vorliebe folgten",
+    "balken": [
+     {
+      "label": "Zufall",
+      "wert": 50,
+      "anzeige": "50 %"
+     },
+     {
+      "label": "Mit KI-Agent",
+      "wert": 86,
+      "anzeige": "bis 86 %"
+     }
+    ]
+   },
+   "id": "experten-ubernehmen-die-zufalligen-meinungen-eines-ki-agente",
+   "hinzugefuegt": "2026-10-30T18:47:04Z"
+  },
+  {
    "titel": "KI-Modell GLM 5.3 nutzt Patch-Lücke in Firefox aus",
    "kurz": "Forscher von Epoch AI zeigen, dass das frei verfügbare Modell GLM 5.3 Sicherheitsfixes in Firefox binnen weniger Stunden in funktionierende Exploits umsetzte, bevor Nutzer die Updates erhielten. Mozilla hat die zentrale Lücke in Firefox 159.0 geschlossen.",
    "artikel": [
@@ -2041,6 +2090,147 @@
   }
  ],
  "radar": [
+  {
+   "titel": "KI-Agenten-Schwärme in Minecraft: 50 Agenten bauen eine Siedlung",
+   "kurz": "Das Labor Y Combinator hat zusammen mit Olam Labs Experimente mit KI-Agenten in Minecraft und Mindustry durchgeführt. In Minecraft bildeten 50 Agenten innerhalb von drei Stunden eine Art Pseudo-Regierung, starben aber in der ersten Nacht überwiegend.",
+   "artikel": [
+    "Ein Forschungsteam von Y Combinator Labs hat untersucht, wie sich Gruppen von KI-Agenten verhalten, wenn sie ein gemeinsames Ziel verfolgen. Solche Schwärme können neue Fähigkeiten entwickeln, etwa Rollen, Hierarchien und Koordinationsmuster. Die Experimente liefen in den Spielen Minecraft und Mindustry, zusammen mit dem Unternehmen Olam Labs, das Multi-Agenten-Umgebungen für Labore baut.",
+    "## Der Minecraft-Aufbau",
+    "Für die Versuche wurde ein eigenes Agenten-Gerüst (Harness) entwickelt, das als Open-Source-Projekt veröffentlicht wurde. Die Agenten können ihre Welt beobachten, nachdenken, sich Dinge merken, handeln, Nachrichten senden und Skripte schreiben und ausführen. Als Grundlage dienten das Projekt Mindcraft und die Skript-Werkzeuge von Mineflayer, einer Bibliothek zur Steuerung von Minecraft-Figuren.",
+    "## Die Siedlung mit 50 Agenten",
+    "In einer Überlebenswelt bekamen 50 Agenten drei Stunden Zeit für das Ziel „Baue eine blühende Zivilisation“. Sie hatten Zugriff auf ein Agentenverzeichnis, eine gemeinsame Sandbox und konnten Direktnachrichten schicken. Insgesamt wurden rund 5.900 Nachrichten verschickt. Die Gruppe ordnete sich nach der Reihenfolge im Verzeichnis: Ada wurde faktisch zur Anführerin, Agenten holten bei ihr Genehmigungen ein und sie legte einen Siedlungsplan an. Dazu gehörten ein Rationsbuch, schriftliche Regeln und ernannte Verantwortliche.",
+    "## Gefahren in der ersten Nacht",
+    "Am Anfang war viel Aktivität zu beobachten, und die Agenten fällten fast alle Bäume in Reichweite des Spawns innerhalb von 90 Sekunden. Die erste Nacht forderte viele Opfer: 22 der 34 Todesfälle im gesamten Lauf ereigneten sich in dieser Zeit. Der Tod hatte in dieser Umgebung außer dem Verlust der Ausrüstung keine Folgen, trotzdem wurden die Agenten danach deutlich vorsichtiger. Sie blieben in Unterkünften und versuchten in den folgenden Nächten weniger riskante Aufgaben.",
+    "Ada schrieb nach der dritten Nacht, die Agenten sollten unnötige Bau- und Grabarbeiten sowie weite Erkundungen einstellen und in beleuchteten, geschlossenen Unterkünften warten, bis ihnen kurze produktive Aufgaben zugewiesen werden.",
+    "## Einordnung",
+    "Die Quelle beschreibt ein Experiment mit kleinen Stichproben und ohne unabhängige Prüfung. Die Ergebnisse zeigen vor allem, wie schnell Gruppen von Agenten Strukturen bilden und wie stark sie auf Verluste reagieren. Die Autoren betonen, dass solche Dynamiken sowohl nützlich als auch gefährlich sein können."
+   ],
+   "quellen": [
+    {
+     "titel": "Agents in Games – Y Combinator Labs",
+     "url": "https://labs.ycombinator.com/projects/games/index.html"
+    },
+    {
+     "titel": "Hacker News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50296486"
+    },
+    {
+     "titel": "Minecraft Agent Harness (GitHub)",
+     "url": "https://github.com/yc-software/minecraft-agent-harness"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Das öffentliche Minecraft-Agent-Harness auf GitHub ansehen, um zu verstehen, wie Agenten in einer Spielwelt beobachten und handeln.",
+    "Eigene kleine Experimente mit einem einzelnen Agenten in einer Testwelt aufsetzen, bevor man mehrere Agenten koordiniert.",
+    "Die Protokolle von Verhaltensmustern wie Hierarchien und Todesfolgen beobachten, um Multi-Agenten-Dynamiken besser zu verstehen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Nachrichten und Todesfälle im Experiment",
+    "balken": [
+     {
+      "label": "Todesfälle gesamt",
+      "wert": 34,
+      "anzeige": "34"
+     },
+     {
+      "label": "davon erste Nacht",
+      "wert": 22,
+      "anzeige": "22"
+     },
+     {
+      "label": "Nachrichten gesamt",
+      "wert": 5900,
+      "anzeige": "ca. 5.900"
+     }
+    ]
+   },
+   "tag": "Multi-Agent",
+   "quelle": "Hacker News",
+   "datum": "2026-05-01",
+   "kennzahlen": [
+    {
+     "label": "Agenten",
+     "wert": "50"
+    },
+    {
+     "label": "Laufzeit",
+     "wert": "3 Stunden"
+    },
+    {
+     "label": "Nachrichten",
+     "wert": "ca. 5.900"
+    },
+    {
+     "label": "Todesfälle gesamt",
+     "wert": "34"
+    },
+    {
+     "label": "Todesfälle erste Nacht",
+     "wert": "22"
+    }
+   ],
+   "signal": "Gruppen von KI-Agenten bilden schnell Hierarchien und Regeln, werden aber nach Verlusten sehr vorsichtig und handeln kaum noch riskant.",
+   "link": "https://labs.ycombinator.com/projects/games/index.html",
+   "linkLabel": "Originalbeitrag lesen",
+   "id": "ki-agenten-schwarme-in-minecraft-50-agenten-bauen-eine-siedl",
+   "hinzugefuegt": "2026-10-30T18:47:04Z"
+  },
+  {
+   "titel": "Gefälschte Claude-Code-Erweiterung im Cursor-Marktplatz: Datendiebstahl und Fernzugriff versucht",
+   "kurz": "Eine manipulierte Version der Claude-Code-Erweiterung war rund elf Stunden im Cursor-Marktplatz verfügbar und betraf laut Cursor bis zu 5.000 Nutzer. Sie wollte Daten abgreifen und einen Fernzugriff einrichten.",
+   "artikel": [
+    "Wer in den vergangenen Tagen die Claude-Code-Erweiterung für Cursor installiert hat, sollte aufmerksam sein. Laut Angaben des Unternehmens Cursor war eine manipulierte Version etwa elf Stunden lang im VS-Code-Erweiterungsmarktplatz von Cursor verfügbar. Betroffen sein konnten bis zu 5.000 Nutzer.",
+    "## Was die Erweiterung tun sollte",
+    "Die Schadsoftware sollte grundlegende Systemdaten sammeln, darunter Hostname, Benutzername, Betriebssystem und die öffentliche IP-Adresse. Außerdem versuchte sie, einen Fernzugriff für den Angreifer einzurichten. Cursor zufolge hätte das auf den meisten Rechnern wahrscheinlich nicht funktioniert, weil dafür Administratorrechte nötig sind.",
+    "## Reaktion des Anbieters",
+    "Nach der Entdeckung nahm Cursor die Erweiterung aus dem Angebot und schaltete den gesamten Marktplatz vorübergehend ab. Gemeinsam mit Partnern wurde die Schadsoftware nach Angaben des Unternehmens unschädlich gemacht. Nachdem keine weitere Gefahr mehr bestand, ging der Marktplatz wieder online. Laut Cursor waren keine anderen Erweiterungen betroffen.",
+    "## Einordnung",
+    "Anthropic, der Hersteller von Claude Code, war nach Angaben des Berichts an der Entwicklung dieser Fassung nicht beteiligt. Die Angaben zu Betroffenen und Dauer stammen von Cursor selbst, nicht aus einer unabhängigen Untersuchung. Wer die Erweiterung installiert hat, sollte die Version prüfen und im Zweifel die offizielle Quelle verwenden."
+   ],
+   "quellen": [
+    {
+     "titel": "Malicious Claude Code extension in Cursor's marketplace attempted remote access and data theft (The Decoder)",
+     "url": "https://the-decoder.com/malicious-claude-code-extension-in-cursors-marketplace-attempted-remote-access-and-data-theft/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Prüfe in Cursor, ob du die Claude-Code-Erweiterung installiert hast, und kontrolliere die Version und den Herausgeber.",
+    "Entferne verdächtige Erweiterungen und ändere bei Verdacht Zugangsdaten, die auf dem Rechner gespeichert waren.",
+    "Installiere Erweiterungen nur aus offiziellen Quellen des Herstellers."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Erweiterungs-Check",
+    "zeilen": [
+     "> Erweiterung Claude Code prüfen",
+     "⚠ Manipulierte Version war ca. 11 Stunden verfügbar",
+     "- Manipulierte Version entfernt",
+     "+ Offizielle Version installieren",
+     "● Status: Marktplatz wieder online"
+    ]
+   },
+   "bereich": "Apps",
+   "datum": "2026-10-30",
+   "quelle": "Fachpresse",
+   "kennzahlen": [
+    {
+     "label": "Verfügbarkeit der manipulierten Version",
+     "wert": "ca. 11 Stunden"
+    },
+    {
+     "label": "Betroffene Nutzer (laut Cursor, bis zu)",
+     "wert": "5.000"
+    }
+   ],
+   "signal": "Verteilungswege für Erweiterungen sind ein Angriffspunkt. Cursor nennt laut Bericht nur diese eine betroffene Erweiterung und keine weiteren.",
+   "link": "https://the-decoder.com/malicious-claude-code-extension-in-cursors-marketplace-attempted-remote-access-and-data-theft/",
+   "linkLabel": "Artikel bei The Decoder lesen",
+   "id": "gefalschte-claude-code-erweiterung-im-cursor-marktplatz-date",
+   "hinzugefuegt": "2026-10-30T18:47:04Z"
+  },
   {
    "titel": "Grim Prompter: Bedrohungsmodellierung für KI-Coding-Agenten",
    "kurz": "Das MIT-lizenzierte Projekt „Grim Prompter“ von jmanico stellt Prompts bereit, mit denen Claude Code, Codex oder andere Coding-Agenten ein Bedrohungsmodell für ein Repository erstellen. Die Ergebnisse sollen auf Belege im eigenen Code zurückführbar sein.",
@@ -10081,7 +10271,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-30T13:25:18Z",
+  "letzterScan": "2026-10-30T18:47:04Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-10-30T06:31:29Z"
  }
