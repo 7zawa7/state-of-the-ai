@@ -7363,6 +7363,73 @@
  ],
  "projekte": [
   {
+   "titel": "Mika: Open-Source-KI-Agent für Android bedient Apps im Hintergrund",
+   "kurz": "Mika ist ein Android-Agent, der auf dem Handy per Textauftrag Apps und Websites bedient. Die Arbeit läuft auf einem separaten, unsichtbaren Hintergrundbildschirm, während der Nutzer das Telefon weiter normal verwenden kann.",
+   "artikel": [
+    "Mika ist eine Android-App, die einen einzelnen Satz als Auftrag entgegennimmt und ihn selbstständig auf dem Telefon ausführt. Laut Projektbeschreibung arbeitet sie in einem privaten Hintergrundbildschirm, sodass der Nutzer in der Zwischenzeit weiter am Gerät arbeiten kann. Das Projekt steht auf GitHub unter der Lizenz Apache-2.0 und hat dort 205 Sterne.",
+    "## Was Mika kann",
+    "Mika öffnet Apps, liest den Bildschirm, klickt, tippt und scrollt. Laut Readme funktioniert das auch bei Apps ohne vorherige Anpassung, weil die Software den Bildschirm wie ein Mensch betrachtet. Lange Listen und Chatverläufe kann sie Seite für Seite lesen, etwa um eine Gruppe zusammenzufassen. Zusätzlich gibt es einen eingebauten Browser und eine lokale Linux-Sandbox für Skripte, die standardmäßig keine Netzverbindung hat.",
+    "## Sicherheit und Kontrolle",
+    "Im Modus „Fragen“ (Standard) fragt Mika vor Zahlungen nach, andere Aktionen wie Nachrichten oder Löschen führt sie direkt aus. Login, Verifizierungscodes und Zahlungen übergibt sie an den Nutzer. Laut Projektseite gibt es keinen eigenen Mika-Server; Anfragen gehen nur an den vom Nutzer konfigurierten Modellanbieter.",
+    "## Einordnung",
+    "Das Projekt befindet sich laut eigener Angabe in einer frühen öffentlichen Beta, die bisher vor allem auf einem Android-14-Gerät getestet wurde. Die Software setzt Android 11 oder neuer voraus, für Aufgaben ist Android 13 nötig, Android 14 wird empfohlen. Die Linux-Sandbox läuft nur auf arm64-Geräten. Der Hersteller weist außerdem darauf hin, dass die Automatisierung von Drittanbieter-Apps gegen deren Nutzungsbedingungen verstoßen kann und Risiken wie Kontosperrungen bestehen."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: wangzan101/Mika",
+     "url": "https://github.com/wangzan101/Mika"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Du kannst Mika einen Alltagsauftrag wie das Zusammenfassen eines Gruppenchats geben und das Ergebnis im Ablauf nachvollziehen.",
+    "Du kannst Termine oder Erinnerungen per Satz anlegen, etwa einen wiederkehrenden Wetter-Check.",
+    "Du kannst als Entwickler Wissensdateien für weitere Apps oder Websites beitragen, da das Projekt dazu ausdrücklich einlädt."
+   ],
+   "ausprobieren": {
+    "prompt": "Frag Mika: „Hilf mir, die heutigen Nachrichten einer Gruppe zusammenzufassen.“",
+    "tool": "Mika",
+    "url": "https://github.com/wangzan101/Mika"
+   },
+   "vorschau": {
+    "szene": "agent",
+    "titel": "Mika auf Android",
+    "zeilen": [
+     "> Auftrag: Gruppenchat zusammenfassen",
+     "✓ Hintergrundbildschirm geöffnet",
+     "● Chatverlauf wird Seite für Seite gelesen",
+     "⚠ Zahlung wird vor Ausführung abgefragt"
+    ]
+   },
+   "tag": "Open Source",
+   "macher": "wangzan101 (GitHub-Nutzer)",
+   "branche": "Android-Software / KI-Agenten",
+   "jahr": "",
+   "tools": [
+    "Android",
+    "Linux-Sandbox (Python, Node, Shell)",
+    "Modelle per API-Key (z. B. DeepSeek, OpenAI-kompatibel, Anthropic, Gemini)"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "205"
+    },
+    {
+     "label": "Mindest-Android (Installation)",
+     "wert": "Android 11"
+    },
+    {
+     "label": "Mindest-Android (Aufgaben)",
+     "wert": "Android 13"
+    }
+   ],
+   "link": "https://github.com/wangzan101/Mika",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "mika-open-source-ki-agent-fur-android-bedient-apps-im-hinter",
+   "hinzugefuegt": "2026-10-30T06:31:29Z"
+  },
+  {
    "titel": "Pink Peach: ComfyUI-Node-Paket für Krea 2 Turbo",
    "kurz": "Pink Peach ist ein Node-Paket für ComfyUI, das auf das Modell Krea 2 Turbo zugeschnitten ist. Es bündelt die Generierung von Modell-Laden bis Bildspeichern und soll typische Turbo-Eigenheiten wie fehlende Wirkung negativer Prompts bei CFG 1 abfangen.",
    "artikel": [
@@ -9831,8 +9898,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-30T00:45:45Z",
-  "neueFunde": 0,
-  "standAktualisiert": "2026-10-29T02:43:57Z"
+  "letzterScan": "2026-10-30T06:31:29Z",
+  "neueFunde": 1,
+  "standAktualisiert": "2026-10-30T06:31:29Z"
  }
 }
