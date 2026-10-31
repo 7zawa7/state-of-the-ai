@@ -2178,6 +2178,201 @@
  ],
  "radar": [
   {
+   "titel": "LLM-Voice: Warum Martin Fowler vom Schreiben mit KI abrät",
+   "kurz": "Martin Fowler beschreibt ein Unbehagen beim Lesen von KI-generierten Texten, das er \"LLM-Voice\" nennt. Er rät Autorinnen und Autoren, Texte selbst zu schreiben und KI höchstens als Suchwerkzeug zu nutzen.",
+   "artikel": [
+    "Martin Fowler beschreibt auf seinem Blog ein Gefühl, das ihn beim Lesen mancher Texte beschleicht: Er habe den Eindruck, eine KI-Ausgabe zu lesen. Den Effekt nennt er \"LLM-Voice\". Typische Merkmale wie Gedankenstriche seien dabei nicht das Entscheidende, sondern ein glatter, seelenloser Stil, der beim Lesen Abneigung erzeugen kann.",
+    "## Warum Erkennungswerkzeuge nicht helfen",
+    "Fowler hält wenig von Werkzeugen, die behaupten, KI-Texte zuverlässig zu erkennen. Er bezweifelt deren Genauigkeit. Vor allem aber verfehle ein solches Werkzeug den Punkt: Die Reaktion des Lesers sei menschlich und entstehe im \"Uncanny Valley\" der Prosa, also in einem Bereich, in dem sich Text fast menschlich, aber doch fremd anfühlt. Bis man ein Werkzeug hole, sei es bereits zu spät.",
+    "## Die Empfehlung an Autorinnen und Autoren",
+    "Fowler rät eindringlich davon ab, ein LLM den ersten Entwurf schreiben zu lassen. Selbst wenn ein Mensch den Text danach überarbeite, lasse sich die LLM-Voice nur schwer entfernen. Auch das Übernehmen von Formulierungsvorschlägen sei riskant. Eine KI für eine Gliederung zu verwenden, halte er allenfalls für vertretbar. Wer KI beim Schreiben nutzt, solle dies laut seiner Richtlinie offenlegen, meist in den Danksagungen. Er selbst setze KI nach eigenen Angaben nur als Suchwerkzeug ein und prüfe Informationen an der Quelle.",
+    "## Schreiben als Denkwerkzeug",
+    "Fowler betont, dass Schreiben eine Fertigkeit sei, die Übung braucht, und dass sie auch beim Denken hilft. Oft verstehe er ein Thema erst, während er es in Worte fasse. Wer das Schreiben an LLMs abgebe, delegiere damit auch Denken und Verstehen.",
+    "## Ausnahmen",
+    "Es gebe Fälle, in denen er den Einsatz für vertretbar hält. Ein Kollege, für den Englisch eine Fremdsprache ist, profitiere etwa von LLM-Übersetzungen. Auch bei Formularschreiben oder Berichten, die vermutlich niemand liest, sei das in Ordnung. Ein Kommentator ergänzt in einer Fußnote, dass dann oft ein Prozess statt eines Menschen angesprochen sei. Fowler bleibt bei seinem Grundsatz: Wer mit Menschen kommunizieren wolle, müsse die eigene Menschlichkeit im Text erkennbar machen."
+   ],
+   "quellen": [
+    {
+     "titel": "LLM Voice (Martin Fowler, Bliki)",
+     "url": "https://martinfowler.com/bliki/LLM-Voice.html"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50290177"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Eigene Texte zuerst selbst schreiben und KI höchstens für die Recherche nutzen, wie Fowler es beschreibt.",
+    "KI-Nutzung beim Schreiben in den Danksagungen offenlegen, wenn man sie eingesetzt hat.",
+    "Vor dem Veröffentlichen eigene Formulierungen laut sprechen und danach überarbeiten."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "LLM-Voice Check",
+    "zeilen": [
+     "> Eingabe: eigener Entwurf",
+     "✓ Gedanken selbst formuliert",
+     "⚠ Glatte, seelenlose Formulierungen",
+     "- KI-Entwurf entfernt",
+     "+ Eigene Überarbeitung",
+     "● Status: menschlich geschrieben"
+    ]
+   },
+   "datum": "2026-10-29",
+   "quelle": "Hacker News",
+   "kennzahlen": [
+    {
+     "label": "HN-Punkte",
+     "wert": "594"
+    }
+   ],
+   "signal": "Ein in der Entwicklerszene stark diskutierter Blogbeitrag über KI-Texte. Er zeigt, dass der Umgang mit KI beim Schreiben, Transparenz und Eigenständigkeit zunehmend zum Thema werden.",
+   "link": "https://martinfowler.com/bliki/LLM-Voice.html",
+   "linkLabel": "Zum Originalbeitrag",
+   "id": "llm-voice-warum-martin-fowler-vom-schreiben-mit-ki-abrat",
+   "hinzugefuegt": "2026-10-31T07:34:35Z"
+  },
+  {
+   "titel": "TokenEconomizer: Microsoft-Plugin senkt Kosten von Coding-Agenten um bis zu 30,9 %",
+   "kurz": "Microsoft Research und UC Berkeley haben TokenEconomizer veröffentlicht, ein Open-Source-Plugin, das Token-Kosten von Coding-Agenten auf SWE-Bench um 18,4 % bis 30,9 % senkt. Der Agent selbst bleibt dabei unverändert.",
+   "artikel": [
+    "## Was ist TokenEconomizer?",
+    "Ein Forschungsteam von Microsoft Research und UC Berkeley hat TokenEconomizer vorgestellt, einen Open-Source-Kostenregler für Coding-Agenten. Das Plugin lernt aus früheren Sitzungen in einem Repository und vermeidet so Verschwendung in späteren Sitzungen. Es funktioniert mit Claude Code, Codex, GitHub Copilot CLI und Pi. Modellgewichte und Agent-Code werden nicht verändert.",
+    "## Wo entsteht die Verschwendung?",
+    "Jeder Schritt eines Agenten berechnet den Systemprompt, alle geladenen Tool-Beschreibungen und den gesamten Verlauf erneut. Die Forscher analysierten 60 SWE-Bench-Aufgaben in 6 Repositories mit Claude Code und Opus 4.8. Dabei fanden sie drei wiederkehrende Quellen: wiederholte Aktionen, ungenutzte Tools und Fehlerschleifen. Laut den Autoren wiederholten sich nach fünf Aufgaben 30 % der Tool-Aufrufe. Von 23 Tool-Beschreibungen wurden 16 nie aufgerufen. Zehn fehlgeschlagene Läufe machten 17 % der Aufgaben, aber 32 % der Gesamtkosten aus.",
+    "## Wie arbeitet das System?",
+    "TokenEconomizer behandelt den Agenten als Blackbox und pflegt pro Repository einen Zustand aus abgeschlossenen Protokollen. Er setzt drei Mechanismen ein: Mikro-Skills (kurze Fakten über das Repository, etwa den Testbefehl, die nur nach mehreren Bestätigungen in den Prompt aufgenommen werden), Tool-Pruning (selten genutzte Werkzeuge werden ausgeblendet, alle fünf Aufgaben erneut geprüft) und eine Schleifenbremse (ein Turn-Budget und ein LLM-Richter, der festgefahrene Agenten umlenkt oder stoppt).",
+    "## Ergebnisse",
+    "Auf SWE-Bench sanken die Kosten je nach Einstellung zwischen 18,4 % und 30,9 %. Die Bestwerte lagen bei Claude Code mit Opus 4.8 (-30,9 %) und Copilot CLI mit Sonnet 5 (-18,4 %). Die Pass@1-Quote stieg in vier von fünf Einstellungen. Allein eingesetzt sparte Tool-Pruning 13,2 % bis 17,7 %. Die schwächsten Ergebnisse gab es bei ReposVul mit nur 6,4 % bis 9,3 %. Die Autoren geben an, dass sich die Einsparungen über die Zeit aufbauen. Vergleichswerte wie RTK und Aider RepoMap waren laut Paper nicht in allen Repositories günstiger.",
+    "## Einordnung",
+    "Die Zahlen stammen aus einem Paper (arXiv 2610.22732) und sind Forschungsergebnisse. Das Plugin läuft mit Python 3.10 oder neuer, benötigt keine GPU und keinen eigenen API-Schlüssel. Gelernte Daten bleiben lokal in ~/.tokeneconomizer. Die Lizenz ist Apache 2.0."
+   ],
+   "quellen": [
+    {
+     "titel": "Meet TokenEconomizer: Microsoft's Plugin That Cuts Coding Agent Costs by Up to 30.9% (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/"
+    },
+    {
+     "titel": "arXiv 2610.22732",
+     "url": "https://arxiv.org/abs/2610.22732"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer mit Claude Code, Codex, Copilot CLI oder Pi an Repositories arbeitet, kann das Plugin installieren und die Kosten über mehrere Aufgaben beobachten.",
+    "Entwickler können die Tool-Pruning-Funktion testen, um zu sehen, wie viele Prompt-Tokens bei der ersten Anfrage wegfallen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Prompt-Tokens bei der ersten Anfrage auf Task 2 (Django, Claude Code)",
+    "balken": [
+     {
+      "label": "Vorher",
+      "wert": 43351,
+      "anzeige": "43.351 Tokens"
+     },
+     {
+      "label": "Mit Tool-Pruning",
+      "wert": 16295,
+      "anzeige": "16.295 Tokens"
+     }
+    ]
+   },
+   "radar": true,
+   "quelle": "Fachpresse",
+   "datum": "2026-10-30",
+   "kennzahlen": [
+    {
+     "label": "Kostenreduktion SWE-Bench (Paper, 5 Einstellungen)",
+     "wert": "18,4 % bis 30,9 %"
+    },
+    {
+     "label": "Getestete Aufgaben",
+     "wert": "277 SWE-Bench-Aufgaben"
+    },
+    {
+     "label": "Python-Version",
+     "wert": "3.10 oder neuer"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    }
+   ],
+   "signal": "Ein Open-Source-Plugin senkt Agenten-Kosten ohne Eingriff in den Agenten; die Zahlen stammen aus dem Paper der Autoren und sind nicht unabhängig geprüft.",
+   "link": "https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/",
+   "linkLabel": "Zum Artikel auf MarkTechPost",
+   "id": "tokeneconomizer-microsoft-plugin-senkt-kosten-von-coding-age",
+   "hinzugefuegt": "2026-10-31T07:34:35Z"
+  },
+  {
+   "titel": "KI macht SREs nicht überflüssig, sondern verlernen lässt sie ihr Handwerk",
+   "kurz": "Ein Newsletter von SigNoz argumentiert, dass KI-gestützte Incident-Response Site Reliability Engineers langfristig die Fähigkeiten nimmt, die sie für neuartige Ausfälle brauchen. Die Argumentation stützt sich auf eine Analogie zur Industrieautomatisierung und auf Berichte aus Medizin und Luftfahrt.",
+   "artikel": [
+    "Im Netz kursieren zwei gegensätzliche Thesen: Die eine sagt, SRE werde zur Kernkompetenz, weil Menschen die von KI geschriebenen Systeme am Laufen halten. Die andere sagt, KI werde auch SRE-Jobs ersetzen. Der Beitrag von SigNoz fragt stattdessen, ob KI Ingenieure schleichend weniger leistungsfähig macht, wenn sie 95 Prozent der Incident-Arbeit übernimmt.",
+    "## Die Ironien der Automatisierung",
+    "Als Grundlage dient ein Aufsatz der Kognitionspsychologin Lisanne Bainbridge aus dem Jahr 1983 mit dem Titel „Ironies of Automation“. Ihre Kernaussage: Je stärker ein Prozess automatisiert wird, desto wichtiger wird der Mensch in den seltenen Momenten, in denen die Automatik versagt, und desto weniger Übung hat er für genau diese Eingriffe. Der Mensch bleibt dann mit langen Phasen passiven Überwachens und seltenen, hochriskanten Krisen zurück.",
+    "Der Autor parallelisiert dies mit KI: Sie übernimmt Routineaufgaben wie Mustererkennung, Triage und die Behebung bekannter Probleme. Übrig bleiben seltene, komplexe und mehrdeutige Fälle, die tiefes Expertenwissen verlangen. Genau dieses Wissen verkümmert, wenn man es nicht mehr übt.",
+    "## Stand der KI im SRE-Alltag",
+    "Bereits weitgehend automatisiert sind laut dem Beitrag das Reduzieren von Alarmrauschen, die Ausführung von Runbooks bei bekannten Problemen, die Erkennung von Log-Mustern sowie einfache Ursachenvorschläge und automatische Gegenmaßnahmen wie das Neustarten eines abgestürzten Pods. In Arbeit sind laut dem Text unter anderem die Korrelation von Metriken, Logs und Traces sowie autonome Ursachenanalyse. PagerDuty beschreibt ein Stufenmodell: Bekannte Probleme werden voll automatisiert, teilweise verstandene mit KI-Empfehlungen und menschlicher Prüfung, neuartige komplexe Ausfälle bleiben bei Menschen. Das Problem: Wer nur noch Stufe-3-Vorfälle bearbeitet, sammelt kaum Erfahrung für genau diese Fälle.",
+    "## Beispiele aus anderen Feldern",
+    "Der Beitrag nennt eine Studie aus der Medizin: Endoskopiker, die bei der Polypenerkennung KI-Unterstützung nutzten, erreichten ohne Assistenz danach schlechtere Trefferquoten (von 28 auf 22 Prozent). In der Luftfahrt zeigen Untersuchungen, dass Langstreckenpiloten mit viel Autopilot-Nutzung an Lagebewusstsein und manueller Flugfähigkeit verlieren; die FAA schreibt deshalb mehr manuelle Flugzeit vor. Die Quelle beschreibt zudem, dass KI-Werkzeuge Aufgaben leichter wirken lassen, sodass Nutzer ihre eigenen Fähigkeiten oft falsch einschätzen.",
+    "## Was das für SREs heißt",
+    "Der Autor beobachtet bei sich selbst, dass er Logs nicht mehr liest, weil die KI sie zusammenfasst, und keine eigenen Hypothesen mehr bildet, weil die KI Ursachen vorschlägt. Das Fazit lautet sinngemäß: Die Frage ist weniger, ob KI SREs ersetzt, sondern ob sie sie unbemerkt weniger leistungsfähig macht, bevor der nächste neuartige Ausfall eintritt.",
+    "Hinweis: Der Text ist ein Meinungsbeitrag, die genannten Zahlen stammen aus dem Beitrag und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "AI Isn't Replacing SREs. It's Deskilling Them. (SigNoz Newsletter)",
+     "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling"
+    },
+    {
+     "titel": "Hacker News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50305693"
+    }
+   ],
+   "demo": "bild",
+   "machen": [
+    "Teams können Incident-Übungen ohne KI-Vorschläge einplanen, um Diagnosefähigkeiten zu erhalten.",
+    "SREs können gelegentlich Logs manuell durchsehen und eigene Ursachenhypothesen notieren, bevor sie KI-Vorschläge lesen.",
+    "Engineering-Leitungen können prüfen, welche Routineaufgaben sie bewusst bei Menschen belassen."
+   ],
+   "datum": "2026-02-28",
+   "quelle": "Hacker News",
+   "kennzahlen": [
+    {
+     "label": "HN-Punkte",
+     "wert": "569"
+    },
+    {
+     "label": "Studie Endoskopie: Erkennungsrate ohne KI",
+     "wert": "28% → 22%"
+    }
+   ],
+   "signal": "Debatte über Kompetenzverlust durch KI-gestützte Incident-Response; Beitrag mit 569 Punkten auf Hacker News.",
+   "link": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+   "linkLabel": "Zum Artikel",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erkennungsrate Polypen (laut Beitrag)",
+    "balken": [
+     {
+      "label": "Mit KI-Gewöhnung, ohne Assistenz",
+      "wert": 22,
+      "anzeige": "22 %"
+     },
+     {
+      "label": "Vor KI-Nutzung",
+      "wert": 28,
+      "anzeige": "28 %"
+     }
+    ]
+   },
+   "id": "ki-macht-sres-nicht-uberflussig-sondern-verlernen-lasst-sie-",
+   "hinzugefuegt": "2026-10-31T07:34:35Z"
+  },
+  {
    "titel": "Youtu-Parsing-Omni: Ein Modell liest Dokumente, Bilder, Audio und Video",
    "kurz": "Youtu-Parsing-Omni ist ein kompaktes Modell mit 5 Milliarden Parametern, das Dokumente, Bilder, Audio und Video in ein einheitliches, strukturiertes JSON-Format überführt. Laut Hugging-Face-Seite erreicht es bei mehreren Benchmarks Spitzenwerte für seine Größe.",
    "artikel": [
@@ -7887,6 +8082,80 @@
  ],
  "projekte": [
   {
+   "titel": "Capri: Cyberpunk-KI-Agent steuert den Windows-PC per Alltagssprache",
+   "kurz": "Capri ist ein Open-Source-Desktopprogramm für Windows, das als Fan-Projekt einen KI-Agenten mit Cyberpunk-Optik auf den eigenen PC bringt. Es arbeitet mit bestehenden KI-Assistenten wie Claude Code, Codex oder Antigravity zusammen.",
+   "artikel": [
+    "Capri ist ein Projekt auf GitHub von boardshogunfluctuate, das einen KI-Agenten für Windows-Rechner bereitstellt. Der Agent versteht Anweisungen in normaler Sprache, plant die Schritte selbst und nutzt Werkzeuge auf dem Rechner, um sie umzusetzen. Laut Projektseite ist kein Terminal nötig, die Installation erfolgt über einen Windows-Installer (.exe) ab Windows 10.",
+    "## Wie es funktioniert",
+    "Capri ist laut Beschreibung eine Desktop-Oberfläche und eine Agentenschicht über bereits genutzten KI-Assistenten. Als Motoren, in der Projektsprache „Engines“, nennt das Projekt Claude Code, Codex und Antigravity sowie eigene Adapter für andere Assistenten. Der Nutzer wählt also das „Gehirn“, Capri stellt die Werkzeuge bereit. Ein sogenannter Engine-Router leitet Anfragen an den gewählten Motor weiter.",
+    "Die Werkzeugschicht umfasst laut Seite Dateien, Shell und Web. Vor sensiblen Aktionen steht eine Freigabe-Stufe: Der Nutzer prüft, was Capri vorhat, und bestätigt oder verweigert es. Die Konfiguration erlaubt außerdem, den Zugriff auf bestimmte Ordner zu begrenzen und den Modus auf „ask“, „auto“ oder „read-only“ zu stellen.",
+    "## Einordnung",
+    "Capri ist laut Projekt ein inoffizielles Fan-Projekt, das vom Cyberpunk-Universum und der Serie Cyberpunk: Edgerunners inspiriert ist. Das Projekt steht nicht mit CD PROJEKT RED, Netflix, Studio Trigger, Anthropic, OpenAI oder Google in Verbindung. Die Lizenz ist MIT. Die Nutzung der KI-Dienste wird laut FAQ über das eigene Konto oder den eigenen API-Schlüssel abgerechnet.",
+    "Die Roadmap nennt macOS- und Linux-Versionen, ein Plugin-System, Sprachsteuerung und einen Task-Scheduler als geplant. Laut Seite ist derzeit nur die Windows-Version verfügbar. Zum Stand der Zahl der Sterne auf GitHub liegt nur die Angabe von 286 vor.",
+    "## Sicherheit",
+    "Die Projektseite weist darauf hin, dass ein Agent auf dem Desktop mächtig ist. Empfohlen werden Prüfung vor jeder Freigabe, Zugriff nur auf nötige Ordner, Backups vor großen automatisierten Aufgaben und der Schutz eigener API-Schlüssel."
+   ],
+   "quellen": [
+    {
+     "titel": "Capri-AI auf GitHub",
+     "url": "https://github.com/boardshogunfluctuate/Capri-AI"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Unordner wie den Downloads-Ordner per Textbefehl sortieren lassen, wobei jede Verschiebung vorher freigegeben wird.",
+    "Eine vorhandene Projektdatei oder einen Code-Fehler vom Agenten prüfen und reparieren lassen.",
+    "Mehrere PDFs eines Ordners in ein gemeinsames Zusammenfassungsdokument zusammenführen lassen."
+   ],
+   "ausprobieren": {
+    "prompt": "Clean up my Downloads folder and group everything by type.",
+    "tool": "Capri",
+    "url": "https://github.com/boardshogunfluctuate/Capri-AI"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Capri",
+    "zeilen": [
+     "> Clean up my Downloads folder and group everything by type.",
+     "✓ Ordner gescannt",
+     "⚠ Verschiebung wartet auf Freigabe",
+     "- Downloads/unsortiert",
+     "+ Downloads/Dokumente",
+     "● Status: bereit"
+    ]
+   },
+   "macher": "boardshogunfluctuate (GitHub-Nutzer)",
+   "branche": "KI-Agenten / Desktop-Software",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "Claude Code",
+    "Codex",
+    "Antigravity"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "286 ★"
+    },
+    {
+     "label": "Plattform",
+     "wert": "Windows 10 oder neuer"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    },
+    {
+     "label": "Format",
+     "wert": "Installer (.exe)"
+    }
+   ],
+   "link": "https://github.com/boardshogunfluctuate/Capri-AI",
+   "linkLabel": "Projekt auf GitHub",
+   "id": "capri-cyberpunk-ki-agent-steuert-den-windows-pc-per-alltagss",
+   "hinzugefuegt": "2026-10-31T07:34:35Z"
+  },
+  {
    "titel": "sapper-v2: Autonomer Pentest-Schwarm gewinnt Tencent-Wettbewerb",
    "kurz": "sapper-v2 ist ein Open-Source-Projekt, bei dem ein KI-Kommandant mehrere KI-Agenten für Penetrationstests koordiniert. Laut Projektangaben wurde damit der dritte Platz bei einer Tencent-Challenge mit 634 Teams gewonnen, mit deutlich weniger Tokens als der Zweitplatzierte.",
    "artikel": [
@@ -10567,8 +10836,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-31T01:52:08Z",
-  "neueFunde": 2,
-  "standAktualisiert": "2026-10-30T06:31:29Z"
+  "letzterScan": "2026-10-31T07:34:35Z",
+  "neueFunde": 4,
+  "standAktualisiert": "2026-10-31T07:34:35Z"
  }
 }
