@@ -1,6 +1,58 @@
 {
  "news": [
   {
+   "titel": "Gemini 4 Carbon setzt Bestwert im Artificial Analysis Intelligence Index v5",
+   "kurz": "Googles Modell Gemini 4 Carbon liegt laut Artificial Analysis auf Platz 1 des Intelligence Index v5 und ist bei Coding-Agenten knapp hinter Claude Opus 5.5. Es ist noch nicht öffentlich verfügbar, sondern wird ausgewählten Nutzern ausgerollt.",
+   "artikel": [
+    "Artificial Analysis hat am 28. Oktober 2026 berichtet, dass Googles Gemini 4 Carbon den ersten Platz im Intelligence Index v5 belegt. Das Modell erreicht dort 59 Punkte. Der Index bündelt mehrere Tests zu Schlussfolgerungen, Wissen und wissenschaftlichen Aufgaben. Die Angaben stammen von Artificial Analysis, nicht von Google selbst.",
+    "## Stärken bei Reasoning und Wissen",
+    "Gemini 4 Carbon hat in 4 der 9 Einzeltests den besten Wert, darunter HLE-Diamond, Terminal-Bench-Science, AA-Omniscience und AutomationBench-AA. In Programmieraufgaben und Wissensarbeit liegt es dagegen nicht vorne.",
+    "## Coding-Agenten",
+    "Im Coding Agent Index erreicht Gemini 4 Carbon mit dem Antigravity CLI 59 Punkte. Claude Code mit Claude Opus 5.5 kommt auf 62 Punkte. Bei Terminal-Bench 4.0 und FrontierCode v1.1 liegt Carbon jeweils auf Platz zwei.",
+    "## Kosten und Halluzinationen",
+    "Laut den Messungen kostet ein Durchlauf des Intelligence Index mit Standardpreisen 7,76 US-Dollar und damit etwa 23 Prozent weniger als Claude Opus 5.5. Bei AA-Omniscience v1.1 erreicht das Modell 54 Punkte. Die Halluzinationsrate steigt gegenüber dem Vorgänger Gemini 4 Argon von 4 auf 11 Prozent, bleibt aber nach Argon die zweitniedrigste aller getesteten Modelle.",
+    "## Verfügbarkeit",
+    "Gemini 4 Carbon wird derzeit nur ausgewählten Nutzern bereitgestellt. Google bietet laut Artikel einen Launch-Rabatt von 50 Prozent ohne bestätigtes Enddatum an. Das Kontextfenster umfasst 1 Million Tokens, der Standardpreis liegt bei 4 US-Dollar pro Million Eingabe-Tokens und 20 US-Dollar pro Million Ausgabe-Tokens. Die Preisangaben sind Herstellerangaben von Google."
+   ],
+   "quellen": [
+    {
+     "titel": "Gemini 4 Carbon is the new #1 on the Artificial Analysis Intelligence Index v5",
+     "url": "https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50288019"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer Zugang erhält, kann Gemini 4 Carbon für Recherche, Textarbeit und Programmieraufgaben testen.",
+    "Wer nur verfolgen möchte, kann die Vergleichswerte im Intelligence Index und Coding Agent Index mit anderen Modellen abgleichen.",
+    "Privatpersonen sollten beachten, dass das Modell derzeit nicht frei verfügbar ist."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Intelligence Index v5",
+    "balken": [
+     {
+      "label": "Claude Opus 5.5",
+      "wert": 58,
+      "anzeige": "Platz 2"
+     },
+     {
+      "label": "Gemini 4 Carbon",
+      "wert": 59,
+      "anzeige": "59 · Platz 1"
+     }
+    ]
+   },
+   "tag": "Modell",
+   "bereich": "Text",
+   "datum": "2026-10-28",
+   "id": "gemini-4-carbon-setzt-bestwert-im-artificial-analysis-intell",
+   "hinzugefuegt": "2026-10-31T13:49:49Z"
+  },
+  {
    "titel": "KI-Agent wählt Gentherapie aus und operiert Mausgehirn ohne menschliche Entscheidung",
    "kurz": "Ein KI-Agent auf Basis von Claude Sonnet 5 wählte Medikament, Hirnregion und Injektionskoordinaten selbst und führte die Injektion bei einer epileptischen Maus durch. Mitten in der Operation verweigerte er das Weiterarbeiten, weil ein Kalibrierungsfehler vorlag.",
    "artikel": [
@@ -2177,6 +2229,86 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Factory Droid 1.0: Coding-Agent-Harness setzt auf programmatisches Tool-Calling",
+   "kurz": "Factory hat Droid 1.0 veröffentlicht, eine modellunabhängige Umgebung für Coding-Agenten, in der das Ausführen von Tools per Programm (Script-Modus) Standard ist. Laut Factory selbst erreicht Droid auf Terminal-Bench 4 mit Claude Opus 5.5 eine Lösungsquote von 65,2 Prozent.",
+   "artikel": [
+    "Factory hat Droid 1.0 vorgestellt, das bislang größte Update seiner Agenten-Umgebung. Der wichtigste Neuerung ist das programmatische Tool-Calling, das nun standardmäßig aktiv ist. Dabei schreibt das Modell ein kleines Programm, das seine Werkzeuge ausführt. Eine einzige Modellanfrage kann so hunderte Tool-Aufrufe steuern.",
+    "## Was ist eine „Harness“?",
+    "Factory bezeichnet mit Harness alles, was um das Modell herum liegt: Prompts, Werkzeuge, die Rückgabe der Tool-Ergebnisse und die Schleife, in der der Agent arbeitet. Nutzer wählen ein Modell selbst oder überlassen Factory Router die Auswahl eines kostengünstigen Mixes.",
+    "## Wie funktioniert das Script-Tool?",
+    "Bei klassischen Schleifen landet jede Tool-Ausgabe im Kontext des Modells. Beim programmatischen Tool-Calling (PTC) schreibt das Modell stattdessen ein Programm. Droid setzt das als Script-Tool um, und zwar in JavaScript, das in einer Sandbox läuft. Rohdaten wie Dateien, Suchergebnisse oder Logs bleiben im Programm; nur die ausgegebene Information kehrt zum Modell zurück. Unabhängige Aufrufe laufen parallel. Die Idee baut auf CodeAct (Wang et al., 2024) auf.",
+    "Factory berichtet aus eigenen Sitzungen: Bei einer Unit-Test-Korrektur brauchte man 5 statt 10 Modellaufrufe, die Aufgabe dauerte 41,6 s statt 56,8 s. Bei einer Linear-Bereinigung wurden 151 Issues in 312 Tool-Aufrufen verarbeitet; das Script benötigte 2 Anfragen und etwa 61.000 Tokens, der direkte Weg 36 Anfragen und etwa 3,1 Mio. Tokens. Diese Zahlen sind Herstellerangaben.",
+    "## Leistung auf Terminal-Bench 4",
+    "Laut Factory lief jede Harness mit demselben Modell, jeweils drei Durchläufe pro Aufgabe, vom 23. bis 28. Oktober 2026. Mit Claude Opus 5.5 erreicht Droid 65,2 Prozent, Cursor und OpenCode 62,1 Prozent, Devin 59,6 Prozent und Claude Code 57,6 Prozent. Mit GPT-6.1 Sol kommt Droid auf 57,6 Prozent, Codex auf 54,0 Prozent. Beim Tempo ist Codex mit GPT-6.1 Sol laut denselben Angaben schneller. Alle diese Werte sind Herstellerangaben von Factory.",
+    "## Einordnung",
+    "Der Basis-Prompt schrumpfte laut Factory um 37 Prozent auf 13.055 Input-Tokens, und zu Beginn werden nur noch 2 statt 11 Tool-Definitionen geladen. Droid läuft als Desktop-App für macOS und Windows, als Terminal-Oberfläche und über das Node-SDK. Bezahlpläne beginnen laut Factory bei 20 Dollar im Monat."
+   ],
+   "quellen": [
+    {
+     "titel": "Meet Factory Droid 1.0: A Model-Independent Coding Agent Harness Built on Script Mode (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Entwickler können Droid als Desktop-App oder Terminal-Oberfläche testen, sofern sie einen Bezahlplan nutzen.",
+    "Wer eigene Agenten baut, kann das Node-SDK @factory/droid-sdk ausprobieren, um dieselbe Harness aus Node heraus zu steuern.",
+    "Interessierte können Factorys Vergleichswerte mit eigenen Projekten prüfen, bevor sie sich festlegen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Terminal-Bench 4, Claude Opus 5.5 (Erfolgsquote, Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Claude Code",
+      "wert": 57.6,
+      "anzeige": "57,6 %"
+     },
+     {
+      "label": "Devin",
+      "wert": 59.6,
+      "anzeige": "59,6 %"
+     },
+     {
+      "label": "Cursor / OpenCode",
+      "wert": 62.1,
+      "anzeige": "62,1 %"
+     },
+     {
+      "label": "Droid 1.0",
+      "wert": 65.2,
+      "anzeige": "65,2 %"
+     }
+    ]
+   },
+   "tag": "Coding-Agent",
+   "quelle": "Fachpresse",
+   "datum": "2026-10-31",
+   "kennzahlen": [
+    {
+     "label": "Terminal-Bench 4 (Opus 5.5, Herstellerangabe)",
+     "wert": "65,2 %"
+    },
+    {
+     "label": "Kosten pro bestandener Aufgabe (Opus 5.5, Herstellerangabe)",
+     "wert": "4,73 $"
+    },
+    {
+     "label": "Basis-Prompt",
+     "wert": "13.055 Tokens (−37 %)"
+    },
+    {
+     "label": "Tool-Definitionen zu Beginn",
+     "wert": "2 (vorher 11)"
+    }
+   ],
+   "signal": "Factory setzt auf programmatisches Tool-Calling als Standard; die Leistungsangaben stammen laut Artikel überwiegend vom Hersteller selbst.",
+   "link": "https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/",
+   "linkLabel": "Artikel bei MarkTechPost lesen",
+   "id": "factory-droid-1-0-coding-agent-harness-setzt-auf-programmati",
+   "hinzugefuegt": "2026-10-31T13:49:49Z"
+  },
   {
    "titel": "LLM-Voice: Warum Martin Fowler vom Schreiben mit KI abrät",
    "kurz": "Martin Fowler beschreibt ein Unbehagen beim Lesen von KI-generierten Texten, das er \"LLM-Voice\" nennt. Er rät Autorinnen und Autoren, Texte selbst zu schreiben und KI höchstens als Suchwerkzeug zu nutzen.",
@@ -8082,6 +8214,82 @@
  ],
  "projekte": [
   {
+   "titel": "Winzige Welt-KI erzeugt und spielt Spiele auf einem Raspberry Pi Pico 2 W",
+   "kurz": "Das Open-Source-Projekt tinyworldformer lässt zwei kleine neuronale Netze auf einem Mikrocontroller gleichzeitig ein Spiel erzeugen und spielen. Der Entwickler zeigt, dass ein Weltmodell mit wiederholt angewendetem Transformer-Block auf dem Pico 2 W läuft.",
+   "artikel": [
+    "Das Projekt »tinyworldformer« von SheepSeb auf GitHub zeigt, dass ein sogenanntes Weltmodell auf einem Raspberry Pi Pico 2 W laufen kann. Ein Weltmodell ist ein neuronales Netz, das vorhersagt, wie das nächste Bild eines Spiels aussieht, wenn eine Aktion ausgeführt wird. Ein zweites, kleines Netz – der Akteur – wählt anhand des erzeugten Bildes die nächste Aktion. Beide Netze laufen auf dem Chip, ohne dass das echte Spiel benötigt wird.",
+    "## Gewichte mehrfach nutzen",
+    "Der Entwickler setzt auf sogenannte Looped Transformer: Ein Transformer-Block wird mehrfach mit denselben Gewichten durchlaufen, statt viele verschiedene Schichten zu stapeln. Das spart Speicher und machte es möglich, das Modell klein genug für einen Mikrocontroller zu halten. Auf dem Pico läuft das Weltmodell mit zwei Durchläufen. Das Weltmodell hat je nach Spiel 26.000 bis 131.000 Parameter, der Akteur 9.000 bis 16.000.",
+    "## Spiele und Genauigkeit",
+    "Im Projekt gibt es mehrere kleine Spiele wie Breakout, Pong, Flappy Bird, eine Doom-ähnliche Ansicht und Pac-Man-Light, die in wenigen hundert Zeilen Numpy umgesetzt sind. Als Maß dient der Anteil der Testübergänge, bei denen jede Zelle des vorhergesagten Bildes stimmt. Dieser liegt bei Breakout bei 99,99 Prozent, bei Pong bei 99,45 Prozent und bei Pac-Man-Light bei 86,4 Prozent. Die Doom-ähnliche Version erreicht 83,6 Prozent, was laut Entwickler besser spielt, als die Zahl vermuten lässt.",
+    "## Auf dem Chip",
+    "Beide Netze laufen auf dem zweiten Kern des RP2350, während der erste Kern USB und das Display übernimmt. Der Akteur kann durch einen Agenten ersetzt werden, der auf dem Board selbst lernt. Ein Tastendruck übergibt die Kontrolle an den Nutzer, der den Traum selbst spielen kann. Die Angaben zur Geschwindigkeit und Hardware stammen aus der Projektbeschreibung des Entwicklers und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "tinyworldformer auf GitHub",
+     "url": "https://github.com/SheepSeb/tinyworldformer"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50295450"
+    }
+   ],
+   "demo": "game",
+   "machen": [
+    "Mit dem Repository die Spiele im Terminal ausprobieren, etwa per uv run python -m tinyworldformer.games.play --game pong.",
+    "Die kleinen Spiele als Vorlage nutzen, um eigene Mini-Umgebungen für Experimente mit Weltmodellen zu bauen.",
+    "Den Pico-2-W-Aufbau nachbauen, um zu sehen, wie weit Modelle auf Mikrocontrollern kommen."
+   ],
+   "tag": "Mikrocontroller",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "tinyworldformer",
+    "zeilen": [
+     "> uv run python -m tinyworldformer.games.play --game pong",
+     "✓ Weltmodell erzeugt Bilder",
+     "✓ Akteur wählt Aktionen",
+     "⚠ Ergebnisse laut Entwickler nicht unabhängig geprüft",
+     "● Status: Laufend auf Pico 2 W"
+    ]
+   },
+   "macher": "SheepSeb",
+   "branche": "Open Source / Machine Learning",
+   "jahr": 2026,
+   "tools": [
+    "Python",
+    "Numpy",
+    "uv",
+    "Raspberry Pi Pico 2 W (RP2350)"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Parameter Weltmodell",
+     "wert": "26k–131k"
+    },
+    {
+     "label": "Parameter Akteur",
+     "wert": "9k–16k"
+    },
+    {
+     "label": "Exakte Bilder Breakout",
+     "wert": "99,99 %"
+    },
+    {
+     "label": "Exakte Bilder Pac-Man-Light",
+     "wert": "86,4 %"
+    },
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "270"
+    }
+   ],
+   "link": "https://github.com/SheepSeb/tinyworldformer",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "winzige-welt-ki-erzeugt-und-spielt-spiele-auf-einem-raspberr",
+   "hinzugefuegt": "2026-10-31T13:49:49Z"
+  },
+  {
    "titel": "Capri: Cyberpunk-KI-Agent steuert den Windows-PC per Alltagssprache",
    "kurz": "Capri ist ein Open-Source-Desktopprogramm für Windows, das als Fan-Projekt einen KI-Agenten mit Cyberpunk-Optik auf den eigenen PC bringt. Es arbeitet mit bestehenden KI-Assistenten wie Claude Code, Codex oder Antigravity zusammen.",
    "artikel": [
@@ -10836,8 +11044,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-31T07:34:35Z",
-  "neueFunde": 4,
+  "letzterScan": "2026-10-31T13:49:49Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-10-31T07:34:35Z"
  }
 }
