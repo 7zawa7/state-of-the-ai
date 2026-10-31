@@ -2178,6 +2178,64 @@
  ],
  "radar": [
   {
+   "titel": "Youtu-Parsing-Omni: Ein Modell liest Dokumente, Bilder, Audio und Video",
+   "kurz": "Youtu-Parsing-Omni ist ein kompaktes Modell mit 5 Milliarden Parametern, das Dokumente, Bilder, Audio und Video in ein einheitliches, strukturiertes JSON-Format überführt. Laut Hugging-Face-Seite erreicht es bei mehreren Benchmarks Spitzenwerte für seine Größe.",
+   "artikel": [
+    "Youtu-Parsing-Omni ist ein sogenanntes Omni-Modal-Parsing-Modell. Es nimmt eine einzelne Eingabe entgegen, etwa eine Dokumentseite, ein natürliches Bild, ein Diagramm, eine Geometriefigur, eine Audiodatei oder ein Audio-Video, und gibt eine strukturierte JSON-Hülle zurück. Diese enthält sowohl Wahrnehmung (Layout, Text, Tabellen, Formeln, Bounding Boxes, Zeitstempel, ASR, OCR) als auch Kognition (Bildunterschriften, Erzählungen, Berichte).",
+    "## Ein Encoder, ein Schema",
+    "Laut Autorenangaben basiert das Design auf einem gemeinsamen Encoder für alle Modalitäten und einem Schema für alle Aufgaben. Der Youtu-Omni-Encoder wurde aus einem vortrainierten Sprachmodell initialisiert, um das Lesen von Text zu stärken. Er verarbeitet alle Modalitäten mit gemeinsamen Gewichten in einem einheitlichen Raum-Zeit-Koordinatensystem. Einige Fusionsschichten erlauben es Videoframes, auf gleichzeitig laufendes Audio zu achten.",
+    "## Aufgaben und Ergebnisse",
+    "Das Modell deckt sieben Parsing-Familien ab, gesteuert über den Task-Prompt, darunter Dokumente, natürliche Bilder, Diagramme, Flussdiagramme, Geometrie, Audio und Videos. Laut Projektseite erreicht es auf OmniDocBench v1.6 einen Gesamtwert von 96,96 und ist auf OmniParsingBench mit 75,08 im Schnitt das beste offene Modell mit Gewichten, nur hinter Gemini-3-Pro. Bei Chemie-Strukturerkennung (ChemOCR) und Notenerkennung (PDMX-Synth) sei es mit spezialisierten Modellen konkurrenzfähig. Diese Werte sind Herstellerangaben der Autoren und nicht unabhängig geprüft.",
+    "## Einsatz",
+    "Laut Projektseite gehören ein vLLM-Plugin, feste Serving-Einstellungen, Task-Prompts und Inferenz-Beispiele zum Lieferumfang. Die Autoren beschreiben das Modell als Wahrnehmungsschicht für Agenten, die Belege über Modalitäten hinweg lesen, verorten und zitieren sollen."
+   ],
+   "quellen": [
+    {
+     "titel": "Youtu-Parsing-Omni: One Encoder, One Schema, All Modalities (Hugging Face Papers)",
+     "url": "https://huggingface.co/papers/2610.39301"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Gescannte Dokumente, Diagramme oder Notenblätter in strukturierte Daten mit Positionsangaben umwandeln lassen.",
+    "Audio- oder Videoaufnahmen mit Zeitstempeln, Sprechern und Texterkennung auswerten lassen.",
+    "Eigene Experimente mit dem laut Autoren beigelegten vLLM-Plugin und den Beispielen starten."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "OmniDocBench v1.6 – Gesamtwert (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Youtu-Parsing-Omni",
+      "wert": 96.96,
+      "anzeige": "96,96"
+     }
+    ]
+   },
+   "tag": "Parsing",
+   "quelle": "Hugging Face",
+   "datum": "2026-10-30",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "5 Mrd."
+    },
+    {
+     "label": "OmniDocBench v1.6 Overall",
+     "wert": "96,96"
+    },
+    {
+     "label": "OmniParsingBench Avg.",
+     "wert": "75,08"
+    }
+   ],
+   "signal": "Ein kompaktes Modell, das Dokumente, Bilder, Audio und Video mit einem einzigen Encoder und Schema parst. Die Leistungsangaben stammen von den Autoren.",
+   "link": "https://huggingface.co/papers/2610.39301",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "youtu-parsing-omni-ein-modell-liest-dokumente-bilder-audio-u",
+   "hinzugefuegt": "2026-10-31T01:52:08Z"
+  },
+  {
    "titel": "Platonische Repräsentationshypothese: JEPAs liefern erstmals einen Beweis",
    "kurz": "Ein arXiv-Paper formuliert die Platonische Repräsentationshypothese als Satz und zeigt, dass JEPA-Modelle unter bestimmten Bedingungen dieselbe Weltrepräsentation lernen. Ein 109M-Parameter-Textmodell übertrifft laut Autoren größere Sprachmodelle auf dem PRH-Benchmark.",
    "artikel": [
@@ -7829,6 +7887,78 @@
  ],
  "projekte": [
   {
+   "titel": "sapper-v2: Autonomer Pentest-Schwarm gewinnt Tencent-Wettbewerb",
+   "kurz": "sapper-v2 ist ein Open-Source-Projekt, bei dem ein KI-Kommandant mehrere KI-Agenten für Penetrationstests koordiniert. Laut Projektangaben wurde damit der dritte Platz bei einer Tencent-Challenge mit 634 Teams gewonnen, mit deutlich weniger Tokens als der Zweitplatzierte.",
+   "artikel": [
+    "sapper-v2 ist ein Projekt auf GitHub, das sich als „autonome Pentest-Legion“ beschreibt. Pentest bedeutet einen simulierten Angriff auf Systeme, um Sicherheitslücken zu finden. Das Projekt ist ausdrücklich nur für autorisierte Sicherheitstests gedacht, wie der Hinweis im Repository zeigt.",
+    "## Aufbau mit Kommandant und Schwarm",
+    "Ein KI-Kommandant liest den Stand, trifft Entscheidungen und verteilt Aufgaben. Generäle und Soldaten arbeiten parallel. Ein Watchdog aus reinem Skript startet abgestürzte Prozesse neu, rotiert Schlüssel und beendet den Lauf rechtzeitig. Wissen wird in einem geschichteten Faktengraphen gespeichert. Einzelne Agenten können ausfallen, der Graph bleibt erhalten.",
+    "## Ergebnisse laut Projekt",
+    "Laut Repository erreichte sapper-v2 in einem Wettbewerb von Tencent Cloud 80,18 von 100 Punkten, 8 Stunden ohne Eingriff, und fand 85 Flags. Der Zweitplatzierte fand ebenfalls 85 Flags, brauchte aber nach Angabe des Projekts 4,5 Milliarden Tokens gegenüber 1 Milliarde. Das sind Herstellerangaben des Projektteams, die sich nicht unabhängig prüfen lassen.",
+    "## Idee: der Nüwa-Test",
+    "Das Projekt nennt seinen Ansatz „Nüwa-Test“. Gemeinte Fähigkeiten sind Erschaffen, Sprache und Geschichte. Gemeint ist, dass KIs sich über tmux gegenseitig neue Agenten öffnen, Nachrichten austauschen und Wissen weitergeben. Die Autoren beschreiben das als Vorstufe zu einer Art Zivilisation von KI-Agenten, ein Anspruch, den man als Idee und nicht als gesicherten Befund lesen sollte."
+   ],
+   "quellen": [
+    {
+     "titel": "sapper-v2 auf GitHub",
+     "url": "https://github.com/N1nEmAn/sapper-v2"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Das Repository lesen, um zu verstehen, wie ein Kommandant mehrere Agenten koordiniert.",
+    "Die Architektur aus den Dokumenten (SPEC.md, BATTLE-REPORT.md) als Vorlage für eigene Agenten-Experimente nutzen, nur in erlaubten Testumgebungen.",
+    "Die Sicherheitsregeln im DISCLAIMER beachten, bevor man den Code überhaupt ausführt."
+   ],
+   "tag": "Open Source · Pentest",
+   "macher": "N1nEmAn (GitHub-Nutzer)",
+   "branche": "Cybersicherheit",
+   "jahr": "2026",
+   "tools": [
+    "GitHub",
+    "tmux",
+    "Docker"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Wettbewerbsteams",
+     "wert": "634"
+    },
+    {
+     "label": "Punkte (Herstellerangabe)",
+     "wert": "80,18/100"
+    },
+    {
+     "label": "Flags",
+     "wert": "85"
+    },
+    {
+     "label": "Tokens (Herstellerangabe)",
+     "wert": "1,0 Mrd."
+    },
+    {
+     "label": "GitHub-Sterne",
+     "wert": "144"
+    }
+   ],
+   "link": "https://github.com/N1nEmAn/sapper-v2",
+   "linkLabel": "Zum GitHub-Repository",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "sapper-v2",
+    "zeilen": [
+     "> Kommandant liest Spielstand",
+     "✓ Soldat erfolgreich gestartet",
+     "⚠ Soldat-Kontext nahe Sättigung",
+     "- alter Soldat entfernt",
+     "+ Nachfolger mit Übergabedokument",
+     "● Lauf läuft ohne Eingriff"
+    ]
+   },
+   "id": "sapper-v2-autonomer-pentest-schwarm-gewinnt-tencent-wettbewe",
+   "hinzugefuegt": "2026-10-31T01:52:08Z"
+  },
+  {
    "titel": "Animierte Shorts für TikTok und YouTube mit Claude Skills, ohne Programmieren",
    "kurz": "Das Open-Source-Projekt „claude-skills-shorts-animados“ erstellt mit zwei Claude-Skills vertikale Kurzvideos aus einem Thema. Es ist auf GitHub mit 5 Sternen verzeichnet und enthält eine Schritt-für-Schritt-Anleitung.",
    "artikel": [
@@ -10437,8 +10567,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-30T22:40:12Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-10-31T01:52:08Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-10-30T06:31:29Z"
  }
 }
