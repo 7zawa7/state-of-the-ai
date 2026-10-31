@@ -1,6 +1,48 @@
 {
  "news": [
   {
+   "titel": "OpenAI will gemeinsames robots.txt-Signal für KI-Trainingspräferenzen respektieren",
+   "kurz": "OpenAI kündigt an, ein gemeinsames Signal in der robots.txt-Datei zu beachten, mit dem Websites ihre Wünsche zur KI-Nutzung ihrer Inhalte an mehrere Anbieter gleichzeitig übermitteln können. Die Umsetzung soll in den kommenden Monaten erfolgen.",
+   "artikel": [
+    "OpenAI hat angekündigt, ein gemeinsames Signal in der robots.txt zu respektieren. Die robots.txt ist eine Textdatei auf einer Website, über die Betreiber Suchmaschinen und anderen Crawlern mitteilen können, welche Seiten sie abrufen dürfen. Das neue Signal dient dazu, Präferenzen zur Nutzung von Inhalten für das Training generativer KI-Modelle auszudrücken.",
+    "## Warum ein gemeinsames Signal?",
+    "Bisher mussten Website-Betreiber einzelne Crawler identifizieren und für jeden Anbieter eigene Regeln pflegen. Ein gemeinsames Signal, das mehrere Anbieter beachten, soll diesen Aufwand verringern. Die Teilnahme ist laut OpenAI freiwillig.",
+    "## Bestehende Kontrollen bleiben",
+    "OpenAI betont, dass das neue Signal die bereits vorhandenen Steuerungsmöglichkeiten über robots.txt nicht ersetzt. Die bestehenden Crawler-Regeln sollen weiterhin gelten und beachtet werden.",
+    "## Einordnung und Standardisierung",
+    "Die Ankündigung baut auf der Arbeit der Internet Engineering Task Force (IETF) auf, konkret der Arbeitsgruppe AI Preferences. OpenAI schließt sich nach eigenen Angaben anderen Teilnehmern der Arbeitsgruppe an. Das Unternehmen will seine Praxis weiter anpassen, während sich die Gespräche und das Umfeld entwickeln.",
+    "OpenAI wirbt außerdem dafür, dass andere KI-Anbieter das Signal ebenfalls beachten. Laut Ankündigung will OpenAI die Umsetzung in den kommenden Monaten einführen und später mit Details berichten. Die Angaben stammen von OpenAI selbst als Herstellerangabe."
+   ],
+   "quellen": [
+    {
+     "titel": "Making it easier for websites to express AI training preferences (OpenAI)",
+     "url": "https://openai.com/index/helping-websites-express-ai-training-preferences"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Als Website-Betreiber kannst du prüfen, ob sich deine robots.txt künftig mit einem gemeinsamen Signal für mehrere KI-Anbieter pflegen lässt.",
+    "Als Publisher kannst du deine bestehenden Crawler-Regeln weiter nutzen, da sie laut OpenAI parallel gültig bleiben.",
+    "Als Privatperson kannst du beobachten, wie die IETF-Arbeitsgruppe AI Preferences den Standard weiterentwickelt."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "robots.txt",
+    "zeilen": [
+     "> Eingabe: Crawler-Regeln prüfen",
+     "✓ Bestehende Crawler-Regeln bleiben gültig",
+     "⚠ Gemeinsames Signal: Umsetzung in den kommenden Monaten geplant",
+     "- Einzelregeln pro Anbieter (bisher nötig)",
+     "+ Ein gemeinsames Signal für mehrere Anbieter",
+     "● Status: Ankündigung (Herstellerangabe)"
+    ]
+   },
+   "bereich": "Recht",
+   "datum": "2026-10-30",
+   "id": "openai-will-gemeinsames-robots-txt-signal-fur-ki-trainingspr",
+   "hinzugefuegt": "2026-10-31T17:58:09Z"
+  },
+  {
    "titel": "Gemini 4 Carbon setzt Bestwert im Artificial Analysis Intelligence Index v5",
    "kurz": "Googles Modell Gemini 4 Carbon liegt laut Artificial Analysis auf Platz 1 des Intelligence Index v5 und ist bei Coding-Agenten knapp hinter Claude Opus 5.5. Es ist noch nicht öffentlich verfügbar, sondern wird ausgewählten Nutzern ausgerollt.",
    "artikel": [
@@ -11044,8 +11086,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-31T13:49:49Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-10-31T17:58:09Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-10-31T07:34:35Z"
  }
 }
