@@ -2302,6 +2302,70 @@
  ],
  "radar": [
   {
+   "titel": "Google testet Video-KI, die nur dann eingreift, wenn Hilfe gebraucht wird",
+   "kurz": "Ein Google-geführtes Forschungsteam hat StreamVibe vorgestellt, einen Videoassistenten, der beim Kochen oder Möbelaufbau nur dann spricht, wenn es sinnvoll ist. Ein Benchmark zeigt jedoch, dass keines der getesteten Modelle bei längeren Videos zuverlässig den richtigen Moment trifft.",
+   "artikel": [
+    "## Ein Assistent, der zuhört und abwartet",
+    "Ein Forschungsteam unter Führung von Google hat StreamVibe entwickelt, einen sogenannten Video-Agenten. Er soll Menschen beobachten, etwa beim Kochen oder beim Zusammenbau eines Möbelstücks, und nur dann etwas sagen, wenn Unterstützung nötig ist. Auch vage Bitten wie „Hilf mir, wenn ich Schwierigkeiten habe“ soll das System verstehen. Bisherige Videoassistenten sind dagegen auf klare Befehle ausgelegt, erkennen unausgesprochene Absichten selten und verlieren den Überblick darüber, was schon erledigt ist.",
+    "## Drei Bausteine und ein Testdatensatz",
+    "Das Team stellte einen Benchmark mit rund 4.100 Beispielen aus mehr als 183 Stunden Alltags- und Software-Aufnahmen zusammen. Gemini 2.5 Flash schlug vor, wann und was geholfen werden sollte; vier menschliche Prüfer mussten jedes Beispiel einstimmig freigeben. Darauf aufbauend trainierte das Team StreamVibe-VL, das laut Artikel vermutlich auf dem Modell Qwen3.5-9D von Alibaba basiert. Es entscheidet jede Sekunde, ob es schweigt oder spricht. Ein Verstärkungslernen soll es zurückhaltender machen, ein separates Gedächtnissystem merkt sich offene Anfragen und erledigte Schritte.",
+    "## Ergebnisse und Grenzen",
+    "Laut den Forschern verbessert StreamVibe-VL Timing und Qualität der Antworten um 10,7 Prozent gegenüber anderen Modellen, das Gedächtnissystem soll proaktive Hinweise um weitere 12,3 Prozent steigern. Google-eigenes Gemini 3.8 Flash erzielte in mehreren Tests jedoch höhere Werte; diese Angabe stammt aus dem Artikel und ist nicht unabhängig geprüft. Bei langen Videos sinkt die Trefferquote deutlich: Über fünf Minuten finden die Modelle selten den richtigen Moment. Die inhaltliche Qualität der Antworten fiel bei fortlaufender Nutzung um bis zu 61,5 Prozent. Die Forscher räumen selbst ein, dass reale Situationen komplexer sind als ihr Testaufbau."
+   ],
+   "quellen": [
+    {
+     "titel": "Google wants video AI to understand what people need as they work",
+     "url": "https://the-decoder.com/google-wants-video-ai-to-understand-what-people-need-as-they-workgoogle-researchers-are-teaching-a-video-assistant-when-to-offer-help/"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Verfolgen, wie sich Forschung zu proaktiven Videoassistenten entwickelt, etwa bei Anleitungen zum Kochen oder Heimwerken.",
+    "Die Benchmark-Ergebnisse als Maßstab nutzen, bevor man einem Assistenten bei langen Aufgaben vertraut."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Verbesserung bei Timing und Qualität",
+    "balken": [
+     {
+      "label": "Basis",
+      "wert": 100,
+      "anzeige": "Basis"
+     },
+     {
+      "label": "StreamVibe-VL",
+      "wert": 110.7,
+      "anzeige": "+10,7 %"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-11-01",
+   "kennzahlen": [
+    {
+     "label": "Benchmark-Beispiele",
+     "wert": "rund 4.100"
+    },
+    {
+     "label": "Videomaterial",
+     "wert": "mehr als 183 Stunden"
+    },
+    {
+     "label": "Verbesserung Timing und Qualität (laut Paper)",
+     "wert": "10,7 %"
+    },
+    {
+     "label": "Zusätzliche Steigerung durch Gedächtnissystem (laut Paper)",
+     "wert": "12,3 %"
+    }
+   ],
+   "signal": "Proaktive Videoassistenten sind noch weit davon entfernt, zuverlässig zum richtigen Zeitpunkt zu helfen, besonders bei langen Aufgaben.",
+   "link": "https://the-decoder.com/google-wants-video-ai-to-understand-what-people-need-as-they-workgoogle-researchers-are-teaching-a-video-assistant-when-to-offer-help/",
+   "linkLabel": "Artikel bei The Decoder lesen",
+   "id": "google-testet-video-ki-die-nur-dann-eingreift-wenn-hilfe-geb",
+   "hinzugefuegt": "2026-11-01T13:31:18Z"
+  },
+  {
    "titel": "KI-Sicherheitsagenten im Vergleich: Claude Security, Codex Security, Mantis und Cloudflare",
    "kurz": "Anthropic, OpenAI, Cloudflare und Google haben jeweils einen KI-Agenten veröffentlicht, der Sicherheitslücken in Quellcode sucht. Alle vier folgen demselben Ablauf: finden, unabhängig widerlegen, dann patchen.",
    "artikel": [
@@ -8586,6 +8650,88 @@
  ],
  "projekte": [
   {
+   "titel": "Memdoor team-solve: fünf kleine Modelle erreichen Parität mit dem Original-Harness",
+   "kurz": "Memdoor stellt einen Workflow vor, in dem fünf kleine Qwen3.8-27B-Modelle gemeinsam Programmieraufgaben lösen. Laut Herstellerangabe liegt die Trefferquote auf den ersten zehn LiveCodeBench-Hard-Problemen im Bereich der Original-Methode, ist aber kein Nachweis einer Verbesserung.",
+   "artikel": [
+    "## Worum es geht",
+    "Das Projekt »team-solve« von Memdoor ist ein Workflow, in dem fünf kleine Modelle gemeinsam ein Programmierproblem lösen. Jedes Modell startet mit frischem Kontext und tauscht sich ausschließlich über Dateien auf der Festplatte aus. Ob eine Lösung gilt, entscheidet ein Skript, das die Beispiele ausführt, nicht ein Modell. Die Methode stammt laut Projektbeschreibung von GVS5H (Lee, 2026) und ist hier als Memdoor-Workflow aus acht YAML-Dateien umgesetzt, ohne eigenen Code.",
+    "## Ablauf",
+    "Ein Planer schreibt eine Aufgabenbeschreibung, zwei Ideengeber schlagen je einen Lösungsansatz vor, einer davon aus einer anderen Algorithmenfamilie. Ein Löser entscheidet sich und schreibt das Programm. Danach läuft ein Test, ein Prüfer wertet die Ausgabe aus, ein Reparatur-Schritt korrigiert gegebenenfalls, und eine abschließende Prüfung bricht den Lauf ab, wenn ein Beispiel fehlschlägt. Ein »Fachbegriff« wie DAG bedeutet hier nur, dass Schritte in einer festen Abhängigkeitsreihenfolge laufen.",
+    "## Ergebnisse laut Hersteller",
+    "Die Autoren messen auf den ersten zehn Problemen ihrer LiveCodeBench-Hard-Liste mit je fünf Durchläufen und prüfen gegen alle versteckten Tests. Herstellerangabe: Der Memdoor-Workflow erreicht im Mittel 9,8 von 10, der Harness der Autoren 9,6 und ein Vergleichslauf mit Fable 5 (ein Aufruf pro Problem) 8,0. Die Autoren betonen selbst, dass bei dieser kleinen Stichprobe 9,8 und 9,6 als gleich gelten. Gemessen wurde also Parität, nicht ein Vorsprung.",
+    "## Einschränkungen",
+    "Die Aufgaben stammen aus dem Frühjahr 2025; eine Verunreinigung durch Trainingsdaten lässt sich laut Quelle für alle Spalten nicht ausschließen. Der Fable-5-Wert wurde nicht in diesem Harness gelaufen. Das Modell lief über OpenRouter, nicht auf einem lokalen Rechner. Ein verlorenes Problem entstand, weil der Prüfer ein falsches Gegenbeispiel erfand und das Team ein korrektes Programm umschrieb. Laut Projektangabe kostete ein Durchlauf im Median 40 Minuten und 0,39 Dollar, die 50 Läufe zusammen 35,79 Dollar."
+   ],
+   "quellen": [
+    {
+     "titel": "memdoor team-solve auf GitHub",
+     "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve"
+    },
+    {
+     "titel": "Hacker-News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50320995"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Eigene Programmieraufgabe in task.md beschreiben und mit Beispielen in tests/ prüfen lassen.",
+    "Die YAML-Schritte in steps/ anpassen, etwa die Rolle des Prüfers ändern.",
+    "Mit einem lokalen Modell wie Ollama testen, sofern es ein Kontextfenster von 32K unterstützt."
+   ],
+   "ausprobieren": {
+    "prompt": "mkdir my-problem && cd my-problem && cp -r ../memdoor/examples/workflows/team-solve/sample/* . && memdoor workflow run team-solve --wait",
+    "tool": "Memdoor",
+    "url": "https://memdoor.ai"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "memdoor workflow run team-solve",
+    "zeilen": [
+     "> memdoor workflow run team-solve --wait",
+     "● plan, ideate-a, ideate-b laufen",
+     "✓ solve, test, review abgeschlossen",
+     "⚠ Ein Beispiel fehlgeschlagen: Reparatur",
+     "✓ verify: alle Beispiele bestanden"
+    ]
+   },
+   "tag": "Projekt",
+   "macher": "Guregodevo (Memdoor), Methode GVS5H (Lee, 2026)",
+   "branche": "Software-Entwicklung / KI-Agenten",
+   "jahr": 2026,
+   "tools": [
+    "Memdoor",
+    "Qwen3.8-27B",
+    "OpenRouter",
+    "Ollama"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Mittlere Punktzahl Memdoor (Herstellerangabe)",
+     "wert": "9,8 / 10"
+    },
+    {
+     "label": "Mittlere Punktzahl Harness der Autoren",
+     "wert": "9,6 / 10"
+    },
+    {
+     "label": "Mittlere Punktzahl Fable 5, ein Aufruf",
+     "wert": "8,0 / 10"
+    },
+    {
+     "label": "Median pro Lauf",
+     "wert": "40 Minuten, 0,39 $"
+    },
+    {
+     "label": "Gesamtkosten 50 Läufe",
+     "wert": "35,79 $"
+    }
+   ],
+   "link": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+   "linkLabel": "Quellcode auf GitHub",
+   "id": "memdoor-team-solve-funf-kleine-modelle-erreichen-paritat-mit",
+   "hinzugefuegt": "2026-11-01T13:31:18Z"
+  },
+  {
    "titel": "Winzige Welt-KI erzeugt und spielt Spiele auf einem Raspberry Pi Pico 2 W",
    "kurz": "Das Open-Source-Projekt tinyworldformer lässt zwei kleine neuronale Netze auf einem Mikrocontroller gleichzeitig ein Spiel erzeugen und spielen. Der Entwickler zeigt, dass ein Weltmodell mit wiederholt angewendetem Transformer-Block auf dem Pico 2 W läuft.",
    "artikel": [
@@ -11416,8 +11562,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-01T06:14:50Z",
-  "neueFunde": 1,
-  "standAktualisiert": "2026-10-31T07:34:35Z"
+  "letzterScan": "2026-11-01T13:31:18Z",
+  "neueFunde": 2,
+  "standAktualisiert": "2026-11-01T13:31:18Z"
  }
 }
