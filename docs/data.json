@@ -1,6 +1,47 @@
 {
  "news": [
   {
+   "titel": "Anthropic sperrt Nutzer nach Vorwurf des Modelltrainings – Entwickler beklagt Sperren",
+   "kurz": "Der X-Nutzer Jiahao Shao wirft Anthropic vor, ihn wegen angeblicher Destillation von Claude gesperrt zu haben, obwohl er nach eigenen Angaben nur ein Open-Source-Modell genutzt habe. Die Diskussion auf Hacker News erreichte 446 Punkte.",
+   "artikel": [
+    "Ein Beitrag des X-Nutzers Jiahao Shao hat eine Debatte über Sperren bei Anthropic ausgelöst. Shao, der an der HKUST promoviert, schreibt, dass er Claude nicht destilliert habe. Die Trainingsdaten (sogenannte Rollouts) seien von einem starken Open-Source-Modell stammen; Claude habe lediglich beim Absenden von Jobs und bei der Analyse geholfen.",
+    "## Vorwurf und Folgen",
+    "Nach Shaos Darstellung wurde er trotzdem als Nutzer markiert, der einen Konkurrenten trainiere. Seitdem seien Aufgaben mit RFT, SFT oder dem Training größerer Modelle blockiert worden. Außerdem sei ein Opus-5.5-Zugang auf Opus 5 herabgestuft worden, und Sitzungen seien teilweise abgebrochen worden. Diese Angaben stammen allein von Shao und sind nicht unabhängig geprüft.",
+    "Zur Einordnung: RFT (Reinforcement Fine-Tuning) und SFT (Supervised Fine-Tuning) sind Verfahren, mit denen bestehende Modelle gezielt nachtrainiert werden. Destillation bezeichnet das Training eines kleineren Modells auf den Ausgaben eines größeren Modells.",
+    "## Kritik am Datenschutz-Standard",
+    "Shao kritisiert, Anthropic habe seine Modelle auf großen Mengen öffentlicher Web-Daten trainiert, verbiete anderen aber, aus den Ausgaben des Modells im größeren Umfang zu lernen. Er spricht von einem doppelten Standard. Ein weiterer Beitrag von ihm verweist darauf, dass Anthropic sich als unabhängige Alternative verstehe, Forschende mit Vertragskunden aber streng einschränke.",
+    "## Reaktionen",
+    "In einer Antwort auf X wird Anthropic vorgeworfen, zuerst im offenen Web gelernt zu haben und danach dem Nutzer das Lernen aus den Ausgaben zu untersagen. Der Beitrag wurde auf X vielfach geteilt und kommentiert. Eine Stellungnahme von Anthropic liegt im vorliegenden Material nicht vor.",
+    "Die Diskussion auf Hacker News hat 446 Punkte erreicht. Dort lässt sich nachlesen, wie andere Nutzer die Sperrregeln bewerten. Der Vorfall zeigt, wie schwer es für Forschende ist, automatisierte Forschungsarbeiten mit kommerziellen KI-Diensten zu betreiben, wenn Richtlinien gegen Modellkonkurrenz greifen."
+   ],
+   "quellen": [
+    {
+     "titel": "Jiahao Shao auf X (Original-Post)",
+     "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50319358"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer KI-Dienste für Forschung oder Automatisierung nutzt, sollte die Nutzungsbedingungen zu Modelltraining und Destillation vorab genau lesen.",
+    "Vor dem Einsatz automatisierter Trainingsjobs lohnt sich ein Test mit Zugangsdaten, damit keine Sitzung unerwartet abbricht.",
+    "Betroffene können ihre Nutzung dokumentieren, um im Streitfall nachweisen zu können, welche Modelle tatsächlich beteiligt waren."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-10-31",
+   "vorschau": {
+    "szene": "moe",
+    "titel": "1 von 1 Vorwürfen belegt",
+    "gesamt": 1,
+    "aktiv": 0
+   },
+   "id": "anthropic-sperrt-nutzer-nach-vorwurf-des-modelltrainings-ent",
+   "hinzugefuegt": "2026-11-01T22:16:46Z"
+  },
+  {
    "titel": "Anthropic-Wasserzeichen: Lücke bei zwei älteren Claude-Modellen",
    "kurz": "Anthropic weitet sein Text-Wasserzeichen auf vier weitere Claude-Modelle aus, um die EU-KI-Verordnung zu erfüllen. Bei Claude Opus 4.6 und Sonnet 4.6 lässt sich das Wasserzeichen über einen einzelnen Sampling-Parameter umgehen.",
    "artikel": [
@@ -2301,6 +2342,87 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Nace AI veröffentlicht Drex Max v1: 27B-Entscheidungsmodell läuft lokal auf Apple Silicon",
+   "kurz": "Nace AI hat das Entscheidungsmodell Drex Max v1 als offene Gewichte veröffentlicht. Das 27-Milliarden-Parameter-Modell lässt sich laut Anbieter auf eigener Hardware betreiben, auch auf Macs mit Apple Silicon.",
+   "artikel": [
+    "Nace AI hat Drex Max v1 als offene Gewichte veröffentlicht. Drex Max ist laut Anbieter das leistungsstärkste Entscheidungsmodell des Unternehmens. Ein Entscheidungsmodell beantwortet vorgegebene Fragen zu einem Kontext, etwa Auswahl aus benannten Optionen, Ja/Nein oder eine Bewertungsskala. Es liefert pro Option eine Wahrscheinlichkeit, ohne Text zu erzeugen.",
+    "## Technik",
+    "Das Modell ist ein dichtes Netz mit 27 Milliarden Parametern und einem Kontextfenster von 262.144 Token; standardmäßig sind 16.384 eingestellt. Pro Frage sind bis zu 255 Optionen möglich. Bilder werden über einen integrierten Vision-Teil verarbeitet. Die Gewichte stehen unter der Lizenz Nace.AI Open RAIL-M.",
+    "## Lokaler Betrieb",
+    "Laut Anbieter gibt es fünf Laufzeitumgebungen, die alle dieselbe API nutzen. Für Apple Silicon wird eine 4-Bit-Variante genannt, die ab 24 GB Arbeitsspeicher laufen soll; die 8-Bit-Variante (Q8_0 GGUF) benötigt 48 GB. Nach Angaben des Anbieters sind lokal bisher nur Textanfragen möglich.",
+    "## Leistung laut Anbieter",
+    "Alle Benchmark-Werte sind Herstellerangaben. Im öffentlichen Decision Index 0.4 erreicht Drex Max 67,52 Punkte und liegt damit 6,27 Punkte vor Drex v2.0. Im Artificial Analysis Decision Index gibt Nace einen Wert von 64 und Rang 4 von 18 an. Laut Anbieter matchte die Q8_0-Variante auf einem 48-GB-Apple-M5-Pro die H100-bf16-Version innerhalb von 0,02 pro Wahrscheinlichkeit.",
+    "## Einordnung",
+    "Der Artikel ist als gesponserter Beitrag von Nace AI gekennzeichnet. Unabhängige Überprüfung der Angaben lag nicht vor."
+   ],
+   "quellen": [
+    {
+     "titel": "Nace AI Open-Sources Drex Max v1: A 27B Decision Model That Runs Locally on Apple Silicon",
+     "url": "https://www.marktechpost.com/2026/11/01/nace-ai-open-sources-drex-max-v1-local-inference/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Routing, Klassifikation oder Richtlinienprüfungen lokal auf einem Mac testen, ohne Daten in die Cloud zu senden.",
+    "Mit der 4-Bit-Variante auf einem Mac mit 24 GB Arbeitsspeicher experimentieren.",
+    "Die Modellkarte und Laufzeitumgebungen vergleichen, bevor man selbst eine Umgebung aufsetzt."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Decision Index 0.4 (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Drex v1.5",
+      "wert": 58.08,
+      "anzeige": "58,08"
+     },
+     {
+      "label": "Drex v2.0",
+      "wert": 61.25,
+      "anzeige": "61,25"
+     },
+     {
+      "label": "Drex Max v1",
+      "wert": 67.52,
+      "anzeige": "67,52"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-11-01",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "27B dicht"
+    },
+    {
+     "label": "Kontextfenster",
+     "wert": "262.144 Token (Standard 16.384)"
+    },
+    {
+     "label": "Optionen pro Frage",
+     "wert": "bis 255"
+    },
+    {
+     "label": "Speicherbedarf Apple Silicon (Q4)",
+     "wert": "ab 24 GB RAM"
+    },
+    {
+     "label": "Speicherbedarf Apple Silicon (Q8_0)",
+     "wert": "ab 48 GB RAM"
+    },
+    {
+     "label": "Decision Index 0.4 (Herstellerangabe)",
+     "wert": "67,52"
+    }
+   ],
+   "signal": "Ein großes Entscheidungsmodell mit offenen Gewichten soll nach Herstellerangaben lokal auf Macs laufen. Die Leistungswerte sind nicht unabhängig geprüft.",
+   "link": "https://www.marktechpost.com/2026/11/01/nace-ai-open-sources-drex-max-v1-local-inference/",
+   "linkLabel": "Originalartikel lesen",
+   "id": "nace-ai-veroffentlicht-drex-max-v1-27b-entscheidungsmodell-l",
+   "hinzugefuegt": "2026-11-01T22:16:46Z"
+  },
   {
    "titel": "Adobe testet KI-Agenten, die Bilder wie Photoshop-Profis bearbeiten",
    "kurz": "Adobe Research und die UC San Diego stellen EditAgent vor, ein System, das Bildbearbeitungen in Teilschritte zerlegt und spezialisierte Werkzeuge einsetzt. Ein Standardsprachmodell wählt das beste Ergebnis anhand gemessener Bilddaten aus, benötigt dafür aber etwa das Zehnfache an Rechenleistung.",
@@ -8798,6 +8920,73 @@
  ],
  "projekte": [
   {
+   "titel": "Cisco lässt einen 27-Jährigen Altcode mit unbegrenzten KI-Tokens modernisieren",
+   "kurz": "Ciscos Präsident Jeetu Patel gibt dem 27-jährigen Padmanabhan Krishnamurthy unbegrenzte KI-Tokens, damit er Legacy-Code umschreibt. Ziel ist es, innerhalb von 24 Monaten 98 % des Codes zu refaktorieren.",
+   "artikel": [
+    "Cisco setzt bei der Modernisierung seines Altcodes auf einen jungen Mitarbeiter. Der 27-jährige Padmanabhan Krishnamurthy, genannt „Paddy“, kam 2025 mit der Übernahme des Echtzeit-Übersetzungsstartups EzDubs zu Cisco, das er 2023 mitgegründet hatte. Laut Fortune war er zunächst in der Organisation „buried away“ und tat, so Patel, etwas Unstrategisches.",
+    "## Der Auftrag",
+    "Krishnamurthy schlug vor, den Legacy-Code mit einem Zweier-Team umzuschreiben. Patel gab ihm vier Wochen, um dies zu beweisen. Das Endziel ist, innerhalb von 24 Monaten 98 % des Legacy-Codes zu refaktorieren. Refaktorieren bedeutet, bestehenden Code umzustrukturieren, ohne seine Funktion zu verändern. Patel begründete die unbegrenzten Tokens so: „I've given him unlimited tokens because he's going to refactor code.“ Tokens sind die Texteinheiten, nach denen KI-Dienste in der Regel abrechnen.",
+    "## Junge Talente als Impulsgeber",
+    "Patel argumentiert, dass Berufseinsteiger frische Ideen und Fragen einbringen, die erfahrene Mitarbeitende oft nicht mehr stellen. Er sucht gezielt weitere Leute dieser Art. Auch Spannungen zwischen jungen und erfahrenen Kolleginnen und Kollegen nimmt er in Kauf. Er wolle Reibung an den Ideen, nicht an den Personen.",
+    "## Weitere Beispiele aus dem Artikel",
+    "Patel führt außerdem eine Studentin an, die über Gespräche an Hochschulen gewonnen wurde. Sie schickte ihm monatlich Berichte über ihre KI-Erkenntnisse, bekam ein Praktikum bei Cisco und entwickelte eine Lösung, an der erfahrene Kolleginnen und Kollegen gescheitert waren. Auch Thrive-Capital-Gründer Josh Kushner und der Tastewise-CEO Alon Chen erklären, dass sie gezielt junge Leute mit wenig Berufserfahrung einstellen.",
+    "Hinweis: Die Aussagen über Cisco und die Projektziele stammen von Cisco-Präsident Patel und sind Herstellerangaben aus dem Interview, keine unabhängig überprüften Ergebnisse."
+   ],
+   "quellen": [
+    {
+     "titel": "Fortune: Cisco is letting a 27-year-old refactor 98% of its legacy code with unlimited AI tokens",
+     "url": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50304122"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Ein eigenes altes Skript oder Projekt mit einem KI-Assistenten schrittweise umstrukturieren lassen.",
+    "Bestehenden Code vor einer Änderung von einer KI erklären lassen, um ihn besser zu verstehen.",
+    "Mit kleinen Tests absichern, bevor man KI-generierte Umbauten übernimmt."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "refactor-legacy",
+    "zeilen": [
+     "> Eingabe: Lege Altcode-Modul um",
+     "- entfernt: alte Funktion mit Duplikaten",
+     "+ hinzugefügt: kleinere, testbare Funktionen",
+     "✓ Erfolg: Tests bestanden",
+     "⚠ Warnung: Ziel laut Hersteller 98 % in 24 Monaten",
+     "● Status: abgeschlossen"
+    ]
+   },
+   "projekte": true,
+   "macher": "Cisco (Jeetu Patel, Padmanabhan Krishnamurthy)",
+   "branche": "IT-Netzwerktechnik / Software",
+   "jahr": 2026,
+   "tools": [
+    "KI-Tokens (Herstellerangabe: unbegrenzt für das Projekt)"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Legacy-Code-Anteil im Ziel",
+     "wert": "98 %"
+    },
+    {
+     "label": "Zeitrahmen",
+     "wert": "24 Monate"
+    },
+    {
+     "label": "Erste Probephase",
+     "wert": "4 Wochen"
+    }
+   ],
+   "link": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/",
+   "linkLabel": "Fortune-Artikel lesen",
+   "id": "cisco-lasst-einen-27-jahrigen-altcode-mit-unbegrenzten-ki-to",
+   "hinzugefuegt": "2026-11-01T22:16:46Z"
+  },
+  {
    "titel": "Frontier UI: ChatGPT-artige Oberflächen für Open WebUI",
    "kurz": "Frontier UI ist ein Werkzeug für Open WebUI, das Antworten als visuelle Karten mit Fotos, Karten, Routen und Tabellen direkt im Chat darstellt. Laut Projektseite funktioniert es ohne API-Schlüssel.",
    "artikel": [
@@ -11775,7 +11964,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-01T18:30:23Z",
+  "letzterScan": "2026-11-01T22:16:46Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-11-01T13:31:18Z"
  }
