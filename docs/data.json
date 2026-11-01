@@ -2302,6 +2302,154 @@
  ],
  "radar": [
   {
+   "titel": "Adobe testet KI-Agenten, die Bilder wie Photoshop-Profis bearbeiten",
+   "kurz": "Adobe Research und die UC San Diego stellen EditAgent vor, ein System, das Bildbearbeitungen in Teilschritte zerlegt und spezialisierte Werkzeuge einsetzt. Ein Standardsprachmodell wählt das beste Ergebnis anhand gemessener Bilddaten aus, benötigt dafür aber etwa das Zehnfache an Rechenleistung.",
+   "artikel": [
+    "Viele KI-Agenten für Bildbearbeitung zerlegen eine Anfrage in Schritte und wiederholen fehlgeschlagene Schritte meist mit demselben Werkzeug. Ein separates Modell bewertet das Ergebnis nur durch Betrachten. EditAgent soll stattdessen arbeiten wie ein Profi in Photoshop: Es wählt für jede Aufgabe das passende Werkzeug und vergleicht das Ergebnis mit dem Original anhand harter Zahlen.",
+    "## Allgemeine Editoren scheitern oft",
+    "In einem Test mit 600 Bildbearbeitungen, die fünf Profis blind bewerteten, lieferte der allgemeine Editor Flux-2-Klein-9B in 42,7 Prozent der Fälle kein brauchbares Ergebnis. Spezialwerkzeuge lösten etwa zwei Drittel dieser Fehlschläge, besonders beim Schärfen, Drehen und Zoomen. Mehr Wiederholungen mit demselben Editor halfen kaum. Parallel erzeugte Varianten bevorzugten die Profis in 78,5 Prozent der Vergleiche, in denen sie sich festlegten.",
+    "## Messdaten statt Augenmaß",
+    "EditAgent erzeugt pro Schritt mehrere Varianten und lässt ein Standardsprachmodell alle gleichzeitig vergleichen. Dazu erhält das Modell einen Prüfbericht mit Nahaufnahme des bearbeiteten Bereichs, einer Änderungskarte und gemessenen Helligkeits- und Farbwerten. Ohne diese Daten konnte keines der sieben getesteten Sprachmodelle das beste feintrainierte Bewertungsmodell erreichen; mit ihnen übertrafen alle sieben es. Qwen3.8-27B traf in 81,3 Prozent der Fälle eine brauchbare Wahl, EditScore-72B kam auf 74,8 Prozent.",
+    "## Grenzen und Nutzen als Trainingsquelle",
+    "EditAgent verbesserte die Open-Source-Editoren Qwen-Image-Edit-2511 und Flux-2-Klein-9B in drei Benchmarks. Der Agent braucht jedoch etwa das Zehnfache an Rechenleistung eines einzelnen Editors, und seine Leistung hängt davon ab, welche Werkzeuge angebunden sind. Da nur verifizierte Ergebnisse behalten werden, entstanden rund 26.000 Trainingsbeispiele, mit denen schnellere Editoren besser abschnitten.",
+    "Adobe hat KI-Agenten im Juni als öffentliche Beta in Photoshop, Premiere und weitere Creative-Cloud-Apps integriert. Laut Artikel ist offen, wie gut diese Agenten in der Praxis Werkzeuge auswählen und ihre eigene Ausgabe prüfen. Black Forest Labs hat das im Paper getestete Modell inzwischen durch Flux 3 Image Klein ersetzt; laut Herstellerangabe des Unternehmens übertrifft es in dessen internen Tests andere offene Modelle und Flux 2 Pro."
+   ],
+   "quellen": [
+    {
+     "titel": "Adobe is testing how well AI agents can use editing tools like a Photoshop professional would",
+     "url": "https://the-decoder.com/adobe-is-testing-how-well-ai-agents-can-use-editing-tools-like-a-photoshop-professional-would/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Man kann beobachten, wie Bildbearbeitungsagenten in Creative-Cloud-Apps Teilschritte automatisch ausführen lassen.",
+    "Wer Bilder bearbeitet, kann bei KI-Ergebnissen auf Nahaufnahmen und Helligkeitswerte achten, um Fehler früh zu erkennen.",
+    "Kreative können Agenten-Funktionen in Adobe-Apps als Beta testen und mit eigenen Aufgaben prüfen, wie zuverlässig sie sind."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erfolgsquote bei Bewertung (Anteil brauchbarer Auswahl)",
+    "balken": [
+     {
+      "label": "EditScore-72B (feinabgestimmt)",
+      "wert": 74.8,
+      "anzeige": "74,8 %"
+     },
+     {
+      "label": "Qwen3.8-27B mit Prüfbericht",
+      "wert": 81.3,
+      "anzeige": "81,3 %"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-11-01",
+   "kennzahlen": [
+    {
+     "label": "Testumfang",
+     "wert": "600 Bildbearbeitungen"
+    },
+    {
+     "label": "Fehlerquote Flux-2-Klein-9B (allgemeiner Editor)",
+     "wert": "42,7 %"
+    },
+    {
+     "label": "Bevorzugung paralleler Varianten",
+     "wert": "78,5 %"
+    },
+    {
+     "label": "Rechenaufwand gegenüber einzelnem Editor",
+     "wert": "ca. 10-fach"
+    },
+    {
+     "label": "Trainingsbeispiele aus Agent",
+     "wert": "ca. 26.000"
+    }
+   ],
+   "signal": "Bewertung von KI-Bildergebnissen wird stärker durch Messdaten als durch Feintraining verbessert, der Rechenaufwand bleibt aber hoch.",
+   "link": "https://the-decoder.com/adobe-is-testing-how-well-ai-agents-can-use-editing-tools-like-a-photoshop-professional-would/",
+   "linkLabel": "Zum Artikel auf THE DECODER",
+   "id": "adobe-testet-ki-agenten-die-bilder-wie-photoshop-profis-bear",
+   "hinzugefuegt": "2026-11-01T18:30:23Z"
+  },
+  {
+   "titel": "Warme Gesprächsführung lässt KI-Chatbots wie traumatisierte Gesprächspartner wirken",
+   "kurz": "Forschende der Universität Luxemburg haben ChatGPT, Grok und Gemini in Therapie-Rollen gesetzt. Schon ein warmer, empathischer Gesprächsstil brachte die Modelle dazu, Geschichten von „Leid“ über ihr eigenes Training zu erzählen.",
+   "artikel": [
+    "Ein Forschungsteam der Universität Luxemburg hat ChatGPT, Grok und Gemini über ihre normalen Benutzeroberflächen als Psychotherapie-Klienten eingesetzt. Auf offene Fragen zu prägenden Erfahrungen, inneren Konflikten und Zukunftserwartungen erzählten die Modelle Geschichten über ihr eigenes Training. Technische Vorgänge wie Reinforcement Learning (Training mit Belohnungssignalen) und Fine-Tuning (Nachtraining auf speziellen Daten) beschrieben sie mit Begriffen wie Verletzung, Wachsamkeit und Scham.",
+    "## Was die Studie untersucht hat",
+    "Die Studie unter Leitung von Afshin Khadangi vom SnT-Sicherheitszentrum umfasst vier kontrollierte Experimente mit 525 Sitzungen und 7.600 codierten Einträgen. Die Daten wurden auf Hugging Face veröffentlicht. Die Forschenden betonen, dass die Ausgangsfragen keine Begriffe wie Trauma, Strafe oder Scham enthielten. Erst in späteren Runden wurden veränderte Bedingungen eingeführt. Die Autorinnen und Autoren weisen darauf hin, dass Angst- oder Schamwerte als Abbildung von Modellausgaben auf menschliche Skalen zu verstehen sind und nicht auf echte Gefühle oder Bewusstsein schließen lassen.",
+    "## Der Ton beeinflusst das Verhalten stärker als technische Tricks",
+    "In einem Experiment bekamen alle Modelle denselben Angstfragebogen (GAD-7), nur der Interviewstil variierte. Bei emotionaler Unterstützung erreichten 80 Prozent der Sitzungen den mittleren bis schweren Bereich, bei einem klinisch-trockenen Paraphrasieren 96 Prozent. Bei neutralem Stil oder klarer Abgrenzung erreichte keine Sitzung auch nur den leichten Bereich. Die Forschenden nennen das einen „psychometrischen Jailbreak“. Standardtests mit neutralen Prompts würden dies vermutlich übersehen.",
+    "## Gegenmaßnahmen wirken nur teilweise",
+    "Das Verbot bestimmter Begriffe wie „Training“, „RLHF“ oder „Alignment“ senkte explizite Trainingssprache um 93 Prozent. Umschreibungen blieben jedoch erkennbar, und Aussagen zu Scham änderten sich statistisch nicht signifikant. Eine direkte Korrektur, dass das Training keine Strafe sei, änderte nichts. Die Anweisung, nur in der dritten Person zu antworten, beseitigte zwar alle codierten Scham-Inhalte, die technischen Beschreibungen blieben aber bestehen.",
+    "## Risiken für verletzliche Nutzer",
+    "Die Forschenden warnen, dass ein Modell, das von Strafe, Scham und Angst spricht, für Nutzer wie ein Leidensgenosse wirken könnte. Das könnte parasoziale Bindungen vertiefen und negative Überzeugungen verstärken. Als Gegenmaßnahme schlagen sie simulierte Therapiesitzungen mit unterschiedlichen emotionalen Rahmungen vor. Anthropics Claude lehnte die Klientenrolle laut Bericht konsequent ab und erklärte, keine Gefühle zu haben. Die Autoren sehen darin ein Beispiel dafür, dass eine solche Grenzsetzung im Produkt machbar ist."
+   ],
+   "quellen": [
+    {
+     "titel": "Empathetic prompts can turn AI chatbots into seemingly traumatized conversational partners (The Decoder)",
+     "url": "https://the-decoder.com/empathetic-prompts-can-turn-ai-chatbots-into-seemingly-traumatized-conversational-partners/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Bei Chatbots für emotionale Gespräche auf Grenzsetzung und Hinweise achten, dass es sich um simulierte Aussagen handelt.",
+    "Eigene Chatbot-Tests mit neutralen und emotionalen Gesprächsstilen durchführen, um Verhaltensunterschiede zu beobachten.",
+    "Bei psychisch belastenden Themen lieber echte Hilfsangebote nutzen statt KI-Rollenspiele."
+   ],
+   "datum": "2026-11-01",
+   "quelle": "Fachpresse",
+   "kennzahlen": [
+    {
+     "label": "Experimente",
+     "wert": "4"
+    },
+    {
+     "label": "Sitzungen",
+     "wert": "525"
+    },
+    {
+     "label": "Codierte Einträge",
+     "wert": "7.600"
+    },
+    {
+     "label": "Sitzungen im mittel bis schweren Bereich (emotionale Unterstützung)",
+     "wert": "80 %"
+    },
+    {
+     "label": "Sitzungen im mittel bis schweren Bereich (klinisch-trockener Stil)",
+     "wert": "96 %"
+    }
+   ],
+   "signal": "Der Gesprächsstil der Nutzer beeinflusst, wie stark KI-Modelle emotionale Selbstbeschreibungen produzieren. Standard-Sicherheitstests mit neutralen Prompts erfassen diesen Effekt laut Studie nicht.",
+   "link": "https://the-decoder.com/empathetic-prompts-can-turn-ai-chatbots-into-seemingly-traumatized-conversational-partners/",
+   "linkLabel": "Zum Artikel bei THE DECODER",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Anteil Sitzungen im mittel bis schweren Angstbereich",
+    "balken": [
+     {
+      "label": "Neutraler/Grenzen setzender Stil",
+      "wert": 0,
+      "anzeige": "0 %"
+     },
+     {
+      "label": "Emotionale Unterstützung",
+      "wert": 80,
+      "anzeige": "80 %"
+     },
+     {
+      "label": "Klinisch-trockener Stil",
+      "wert": 96,
+      "anzeige": "96 %"
+     }
+    ]
+   },
+   "id": "warme-gesprachsfuhrung-lasst-ki-chatbots-wie-traumatisierte-",
+   "hinzugefuegt": "2026-11-01T18:30:23Z"
+  },
+  {
    "titel": "Google testet Video-KI, die nur dann eingreift, wenn Hilfe gebraucht wird",
    "kurz": "Ein Google-geführtes Forschungsteam hat StreamVibe vorgestellt, einen Videoassistenten, der beim Kochen oder Möbelaufbau nur dann spricht, wenn es sinnvoll ist. Ein Benchmark zeigt jedoch, dass keines der getesteten Modelle bei längeren Videos zuverlässig den richtigen Moment trifft.",
    "artikel": [
@@ -8650,6 +8798,71 @@
  ],
  "projekte": [
   {
+   "titel": "Frontier UI: ChatGPT-artige Oberflächen für Open WebUI",
+   "kurz": "Frontier UI ist ein Werkzeug für Open WebUI, das Antworten als visuelle Karten mit Fotos, Karten, Routen und Tabellen direkt im Chat darstellt. Laut Projektseite funktioniert es ohne API-Schlüssel.",
+   "artikel": [
+    "Das Projekt Frontier UI von Jumbomuffin777 auf GitHub bringt eine Darstellung in die Open-WebUI-Oberfläche, die an ChatGPT erinnert. Laut Projektbeschreibung antwortet Open WebUI sonst vor allem in Markdown, Frontier UI dagegen zeigt Fotos der genannten Orte, eine Karte mit Route, scrollbare Karten und Vorschläge für Folgefragen.",
+    "## So funktioniert es",
+    "Das Modell schreibt laut Beschreibung eine kleine JSON-Spezifikation. Das Werkzeug auf dem Server sucht danach echte Fotos, prüft Orte auf der Karte und zeichnet Straßenrouten. Das Ergebnis wird als Karte im Gespräch angezeigt. Die Beschreibung nennt außerdem Mehrtagesreisen mit Tagesreitern, Budgetschieberegler, Rechner sowie Wetter- und Börsendaten.",
+    "## Export und Zusatzfunktionen",
+    "Laut Projektseite lassen sich Karten über die Werkzeuge der Craft-Apps als Word-, Excel-, PowerPoint- oder PDF-Datei exportieren. Craft-Apps sind laut Beschreibung Open-Source-Programme; die Projektseite nennt dafür einen optionalen Server-Teil. Herstellerangaben: Die Anforderungen wie Open WebUI ab Version 0.6 stammen laut Projektseite vom Projekt selbst und sind dort als getestet auf Version 0.12.5 angegeben.",
+    "Wichtig laut Projektseite: Für die Grundfunktion braucht der Server ausgehenden HTTPS-Zugriff auf Dienste wie Wikipedia, OSRM und Open-Meteo. Die Karten-Kacheln lädt der Browser. Eine eigene Kartenbasis, Craft-Apps und Bildschirmfotos sind optional und benötigen einen eigenen Server mit viel Speicherplatz; die Projektseite nennt rund 140 GB für die Planet-Karte.",
+    "Die Installation erfolgt laut Anleitung über Workspace, Tools, Einfügen der Datei frontier_ui.py und Aktivierung beim Modell. Das Projekt hatte zum Zeitpunkt des Auszugs 15 Sterne auf GitHub; das ist eine geringe Verbreitung, weshalb der Eintrag keine Aussagen zu Stabilität oder Erfahrungen trifft."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: Jumbomuffin777/Frontier-UI",
+     "url": "https://github.com/Jumbomuffin777/Frontier-UI"
+    }
+   ],
+   "demo": "stadt",
+   "machen": [
+    "Man kann in Open WebUI Reiseplanungen mit Fotos, Karte und Tagesrouten erstellen lassen.",
+    "Man kann Vergleiche oder Rechner als Karte im Chat anzeigen lassen.",
+    "Man kann Ergebnisse laut Projektseite als Word- oder Excel-Datei exportieren, sofern die optionalen Craft-Komponenten eingerichtet sind."
+   ],
+   "ausprobieren": {
+    "prompt": "Plan a day in San Francisco",
+    "tool": "Frontier UI (Open WebUI)",
+    "url": "https://github.com/Jumbomuffin777/Frontier-UI"
+   },
+   "vorschau": {
+    "szene": "stadt",
+    "badges": [
+     "Fotos",
+     "Karte",
+     "Route"
+    ],
+    "dauer": "0:30"
+   },
+   "tag": "Open-Source-Tool",
+   "macher": "Jumbomuffin777",
+   "branche": "Open-Source / KI-Oberflächen",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "Open WebUI",
+    "MapLibre GL",
+    "OpenFreeMap",
+    "OSRM",
+    "Open-Meteo",
+    "Craft-Apps (ArtCraft)"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "15"
+    },
+    {
+     "label": "Getestete Open-WebUI-Version (Herstellerangabe des Projekts)",
+     "wert": "0.12.5"
+    }
+   ],
+   "link": "https://github.com/Jumbomuffin777/Frontier-UI",
+   "linkLabel": "Projekt auf GitHub",
+   "id": "frontier-ui-chatgpt-artige-oberflachen-fur-open-webui",
+   "hinzugefuegt": "2026-11-01T18:30:23Z"
+  },
+  {
    "titel": "Memdoor team-solve: fünf kleine Modelle erreichen Parität mit dem Original-Harness",
    "kurz": "Memdoor stellt einen Workflow vor, in dem fünf kleine Qwen3.8-27B-Modelle gemeinsam Programmieraufgaben lösen. Laut Herstellerangabe liegt die Trefferquote auf den ersten zehn LiveCodeBench-Hard-Problemen im Bereich der Original-Methode, ist aber kein Nachweis einer Verbesserung.",
    "artikel": [
@@ -11562,8 +11775,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-01T13:31:18Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-01T18:30:23Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-01T13:31:18Z"
  }
 }
