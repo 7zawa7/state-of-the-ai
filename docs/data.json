@@ -2302,6 +2302,72 @@
  ],
  "radar": [
   {
+   "titel": "KI-Sicherheitsagenten im Vergleich: Claude Security, Codex Security, Mantis und Cloudflare",
+   "kurz": "Anthropic, OpenAI, Cloudflare und Google haben jeweils einen KI-Agenten veröffentlicht, der Sicherheitslücken in Quellcode sucht. Alle vier folgen demselben Ablauf: finden, unabhängig widerlegen, dann patchen.",
+   "artikel": [
+    "Anthropic, OpenAI, Cloudflare und Google bringen jeweils einen KI-Agenten heraus, der Sicherheitslücken im Quellcode aufspürt. Laut dem Fachbeitrag von MarkTechPost folgen alle vier Werkzeuge demselben Grundmuster: Ein Agent findet einen möglichen Fehler, ein zweiter Agent versucht, ihn zu widerlegen, und nur übrig gebliebene Befunde bekommen einen Patch. Unterschiede gibt es beim Einsatzort, beim Zugang und bei den Nachweisen, die verlangt werden.",
+    "## Warum alle dasselbe Muster nutzen",
+    "Das Grundproblem ist Rauschen. Laut Google führen schlecht umgesetzte KI-Scans zu erfundenen Fehlern, die Trefferquote echter Lücken liegt unter 7 Prozent. Die Lösung heißt Trennung der Aufgaben: Der Agent, der einen Fund meldet, darf ihn nicht selbst bestätigen. Cloudflare formuliert das in seiner README so, dass der Prüfer nie der Agent sein darf, der den Fehler gefunden hat.",
+    "Ein zweiter Treiber ist die Offensive. Anthropic erklärt laut The Hacker News, der eigene Scanner sei unter anderem deshalb entstanden, weil Angreifer bereits KI-Modelle nutzen, um ausnutzbare Schwachstellen zu finden.",
+    "## Die vier Werkzeuge",
+    "Claude Security läuft als Plugin innerhalb einer Claude-Code-Sitzung und ist die lokale Variante des gehosteten Produkts von Anthropic. Es erzeugt einen Markdown-Bericht und eine SARIF-Datei für die GitHub-Codeprüfung. Patches landen als Dateien in einer Arbeitskopie; committet oder per Pull Request eingereicht wird nichts automatisch. Es braucht laut Anthropic keinen eigenen API-Schlüssel, Scans zählen aber auf das Nutzungslimit des Claude-Tarifs.",
+    "Codex Security von OpenAI ist eine CLI mit TypeScript-SDK. Der Client steht unter Apache-2.0, der dahinterliegende Scanner nicht. Laut DevOps.com bleiben CLI und SDK in einer eingeschränkten Beta für freigegebene Kunden. Die README nennt OpenAI, Amazon Bedrock, OpenRouter und Fireworks AI als Anbieter.",
+    "Das Security Audit Skill von Cloudflare ist unter MIT lizenziert und macht jeden fähigen Coding-Agenten zu einem Sicherheitsprüfer. Es arbeitet in sechs Phasen: Aufklärung der Architektur, gezielte Suche, Prüfung der Kandidaten durch einen frischen Verifier, strukturierte Ausgabe, unabhängige Nachprüfung der Quellenangaben und einen daraus abgeleiteten Bericht. Ohne Sandbox ohne externes Netz bleiben Hinweise im Status „needs_validation“ und werden nicht ausgeführt. Laut Cloudflare nutzt eine interne Harness-Installation das Skill und scannt 128 Repositories.",
+    "## Zahlen aus Cloudflares Betrieb",
+    "Cloudflare nennt für die gesamte Laufzeit 20.799 Rohkandidaten aus der Suche, von denen rund 12.057 die Prüfung überstanden. 7.245 umsetzbare Befunde wurden an Engineering-Teams weitergegeben. Das sind Herstellerangaben aus dem eigenen Betrieb und nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "AI Security Agents Compared: Claude, Codex, Mantis, Cloudflare",
+     "url": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wer ein eigenes Projekt hat, kann Cloudflares Skill über npx skills add installieren und einen Audit-Lauf starten.",
+    "Entwickler können prüfen, ob ein Scan-Werkzeug nur im Plugin-Betrieb oder über einen eigenen API-Zugang nutzbar ist, bevor sie es einsetzen.",
+    "Vor dem Einsatz lohnt ein Blick auf die Lizenz: Der Client von Codex Security ist Apache-2.0, der Scanner nicht."
+   ],
+   "ausprobieren": {
+    "prompt": "security audit this codebase.",
+    "tool": "Cloudflare Security Audit Skill",
+    "url": "https://github.com/cloudflare/security-audit-skill"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "security-audit",
+    "zeilen": [
+     "> npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit",
+     "✓ Skill installiert",
+     "> security audit this codebase.",
+     "● Phase 1: Aufklärung (architecture.md)",
+     "⚠ Hinweis ohne Sandbox: Befunde bleiben needs_validation",
+     "+ findings.json, REPORT.md erzeugt"
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-10-30",
+   "kennzahlen": [
+    {
+     "label": "Rohkandidaten (Cloudflare, Laufzeit)",
+     "wert": "20.799"
+    },
+    {
+     "label": "Umsetzbare Befunde (Cloudflare)",
+     "wert": "7.245"
+    },
+    {
+     "label": "Gescannte Repositories (Cloudflare intern)",
+     "wert": "128"
+    }
+   ],
+   "signal": "Vier große Anbieter setzen auf dasselbe Prinzip der Trennung zwischen Finden und Bestätigen. Die Unterschiede liegen bei Zugang, Lizenz und Einsatzort, nicht beim Grundprinzip.",
+   "link": "https://www.marktechpost.com/2026/10/30/ai-security-agents-claude-codex-mantis-cloudflare/",
+   "linkLabel": "Zum Artikel bei MarkTechPost",
+   "id": "ki-sicherheitsagenten-im-vergleich-claude-security-codex-sec",
+   "hinzugefuegt": "2026-11-01T06:14:50Z"
+  },
+  {
    "titel": "Ein geteilter ChatGPT-Link reichte für Kontoübernahme",
    "kurz": "Forscher von Parameter beschreiben, wie sie über einen öffentlichen ChatGPT-Share Code in der angemeldeten Sitzung eines Opfers ausführen konnten. OpenAI hat die Lücke am 26. Oktober geschlossen und als P1 eingestuft.",
    "artikel": [
@@ -11350,8 +11416,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-01T00:13:17Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-11-01T06:14:50Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-10-31T07:34:35Z"
  }
 }
