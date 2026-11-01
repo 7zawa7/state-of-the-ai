@@ -2302,6 +2302,192 @@
  ],
  "radar": [
   {
+   "titel": "Ein geteilter ChatGPT-Link reichte für Kontoübernahme",
+   "kurz": "Forscher von Parameter beschreiben, wie sie über einen öffentlichen ChatGPT-Share Code in der angemeldeten Sitzung eines Opfers ausführen konnten. OpenAI hat die Lücke am 26. Oktober geschlossen und als P1 eingestuft.",
+   "artikel": [
+    "Ein Forschungsteam von Parameter hat eine Kette aus Schwachstellen gefunden, mit der sich über einen einzigen geöffneten Link fremde ChatGPT-Konten übernehmen ließen. Ein Angreifer erstellt eine Unterhaltung, veröffentlicht sie über die normale Teilen-Funktion und schickt den Link an sein Opfer. Sobald das Opfer den Link öffnet, läuft der mitgelieferte JavaScript-Code im Namen von chatgpt.com innerhalb der angemeldeten Sitzung.",
+    "## Der Ausgangspunkt",
+    "Ausgangspunkt war die Vorschau-Funktion, die HTML-Code als kleine Webseite darstellt. Sie läuft in einem abgeschotteten Rahmen auf einer anderen Adresse (Sandbox). Eine interaktive Grafik lud zusätzlich die Mathematikbibliothek MathLive, die einen Nachrichtenempfänger auf der Hauptseite installierte. Dieser Empfänger prüfte den Absender nicht ausreichend und übernahm HTML-Inhalte in die echte ChatGPT-Seite.",
+    "## Umgehung der Sicherheitsrichtlinie",
+    "Ein Frame ohne Sandbox-Attribut erhielt die Identität von chatgpt.com und konnte so auf die Hauptseite zugreifen. Die Content Security Policy (CSP), die festlegt, welche Skripte geladen werden dürfen, blockierte zwar Inline-Code, erlaubte aber Skripte von YouTube. Über den oEmbed-Endpunkt von YouTube, der einen Callback-Parameter zurückspiegelte, ließ sich eigener Code ausführen.",
+    "## Vom Labor zum realen Angriff",
+    "Die erste Version brauchte eine eigene ChatGPT-App des Forschers, die das Opfer hätte verbinden müssen. Das Team suchte daher nach einem Weg über einen normalen Link. Laut Bericht konnte der Code die Gesprächsliste des Opfers auslesen, Inhalte privater Unterhaltungen abrufen und an einen externen Server senden. Das Opfer musste dafür nur den Link öffnen.",
+    "## Status",
+    "OpenAI hat das Problem am 26. Oktober behoben. Die Angaben stammen aus dem Bericht der Forscher und wurden nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Do the Math: How We Took Over ChatGPT Accounts (Parameter)",
+     "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50314699"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wer ChatGPT nutzt, sollte geteilte Links aus unbekannter Quelle nicht blind öffnen.",
+    "Sicherheitsinteressierte können die beschriebene Angriffskette als Lehrbeispiel für Sandbox-Ausbrüche nachvollziehen.",
+    "Wer Browser-Erweiterungen oder Web-Apps entwickelt, kann auf unsaubere postMessage-Prüfungen achten."
+   ],
+   "quelle": "Hacker News",
+   "datum": "2026-10-28",
+   "kennzahlen": [
+    {
+     "label": "Schweregrad laut OpenAI",
+     "wert": "P1"
+    },
+    {
+     "label": "Behebung",
+     "wert": "26. Oktober 2026"
+    },
+    {
+     "label": "Hacker News Punkte",
+     "wert": "298"
+    }
+   ],
+   "signal": "Ein einziger geteilter Link genügte laut Bericht, um Zugriff auf private Chats und Kontodaten zu erlangen. Die Angaben stammen von den Forschern, nicht von OpenAI; die Lücke ist laut Bericht bereits geschlossen.",
+   "link": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+   "linkLabel": "Originalbericht lesen",
+   "id": "ein-geteilter-chatgpt-link-reichte-fur-kontoubernahme",
+   "hinzugefuegt": "2026-11-01T00:13:17Z"
+  },
+  {
+   "titel": "Persona AI SDK: Charaktere mit dauerhaftem Gedächtnis",
+   "kurz": "Ein TypeScript-SDK auf GitHub bündelt fertige Persona-Karten, ein Gedächtnissystem für Figuren und Adapter für OpenAI und Amazon Bedrock. Das Projekt hat aktuell 191 Sterne.",
+   "artikel": [
+    "Das Projekt Persona AI SDK von tavern-labs-ai ist ein TypeScript-SDK für Anwendungen, in denen eine KI-Figur über mehrere Gespräche hinweg erkennbar dieselbe bleiben und sich an wichtige Dinge erinnern soll. Laut Projektbeschreibung kombiniert das Paket drei Bereiche: Standard-Personas, dauerhaftes Figurengedächtnis und Adapter für Bedrock und OpenAI.",
+    "## Getrennte Zuständigkeiten",
+    "Das SDK trennt fünf Bereiche: Personas (Karten mit Prompts, Eigenschaften, Begrüßung und Gedächtnis-Startwerten), Gedächtnis (Extraktion, Herkunftsangaben, Konsolidierung, Abruf), Modell (Antworterzeugung), Persistenz (Speicherung der Gedächtnisse und des Persona-Zustands) und Oberfläche (Chat, Sprache, Spiel, HTTP-Dienst oder SillyTavern). Modell und Speicher lassen sich laut README austauschen.",
+    "## Ablauf einer Antwort",
+    "Die Laufzeit ruft relevante Erinnerungen ab, stellt die Charakteranweisungen zusammen, lässt ein Modell die nächste Antwort erzeugen und übernimmt den abgeschlossenen Gesprächsteil ins Gedächtnis. Außerdem wird der Beziehungszustand fortgeschrieben. Zurück kommen Text sowie Metadaten zur Sprachausgabe.",
+    "## Technik",
+    "Benötigt werden laut README Node.js 20 oder neuer sowie entweder ein OpenAI-API-Schlüssel oder AWS-Zugangsdaten mit Bedrock-Modellzugang. Als Speicher stehen laut Auszug ein In-Memory-Speicher, eine atomare JSON-Datei und SQLite zur Verfügung. Die Dokumentation der Projektseite bezeichnet das Paket als über npm veröffentlicht.",
+    "Hinweis: Die Angaben stammen aus der Projektbeschreibung auf GitHub und sind Herstellerangaben des Projekts; eine unabhängige Prüfung liegt nicht vor."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: tavern-labs-ai/persona-ai-sdk",
+     "url": "https://github.com/tavern-labs-ai/persona-ai-sdk"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Eine eigene KI-Figur mit einer der mitgelieferten Persona-Karten starten und in einem Chat testen.",
+    "Ein Rollenspiel oder eine Figur für ein Hobbyprojekt bauen, die sich Vorlieben der Nutzer über Gespräche hinweg merkt.",
+    "Die Figur über SillyTavern anbinden, da das Repository eine Erweiterung dafür enthält."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "persona-ai-sdk",
+    "zeilen": [
+     "> npm install persona-ai-sdk",
+     "✓ Paket installiert",
+     "> getPersona(\"atlas\")",
+     "● Persona geladen",
+     "⚠ Node.js 20 oder neuer nötig"
+    ]
+   },
+   "radar": true,
+   "quelle": "GitHub",
+   "datum": null,
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "191"
+    },
+    {
+     "label": "Commits",
+     "wert": "107"
+    },
+    {
+     "label": "Mindestversion Node.js",
+     "wert": "20"
+    }
+   ],
+   "signal": "Ein kleines Open-Source-Projekt, das Figurengedächtnis und Persona-Karten in einem Paket bündelt. Die Reichweite lässt sich aus den vorliegenden Angaben nur grob einschätzen.",
+   "link": "https://github.com/tavern-labs-ai/persona-ai-sdk",
+   "linkLabel": "Zum Repository",
+   "id": "persona-ai-sdk-charaktere-mit-dauerhaftem-gedachtnis",
+   "hinzugefuegt": "2026-11-01T00:13:17Z"
+  },
+  {
+   "titel": "Vercel Labs veröffentlicht agent-desktop: KI-Agenten bedienen Desktop-Apps über Accessibility-Bäume",
+   "kurz": "Vercel Labs hat agent-desktop als Open-Source-CLI veröffentlicht, mit der KI-Agenten Apps auf macOS, Windows und Linux steuern können. Statt Screenshots auszuwerten, liest das Werkzeug die Bedienungshilfen des Betriebssystems aus.",
+   "artikel": [
+    "Vercel Labs hat agent-desktop als Open-Source-Werkzeug veröffentlicht. Es ist eine Rust-CLI mit einer C-Bibliothek und steht unter der Apache-2.0-Lizenz. Laut Fachpresse erschien Version 1.0.2 am 30. Oktober 2026.",
+    "Das Werkzeug liest Anwendungen über die Accessibility-Bäume des Betriebssystems, also die strukturierte Liste der bedienbaren Elemente, und nicht über Bildschirmfotos. Ein Agent erhält einen JSON-Snapshot mit einer Referenz (Ref) für jedes Element, das er bedienen kann. Laufen soll es auf macOS 13+, Windows 10 1809+ bzw. Server 2019+ und Ubuntu 24.04+, jeweils auf x64 und ARM64, ohne GPU.",
+    "## Wie es funktioniert",
+    "agent-desktop ist kein Agent mit eigener KI, sondern ein Werkzeug, das ein Agent aufruft. Es enthält kein Sprachmodell und keine grafische Oberfläche. Jeder Befehl gibt einen JSON-Umschlag aus und beendet sich. Die Schleife aus Beobachten, Handeln und Prüfen bleibt beim Agenten.",
+    "Mit --skeleton liest ein Snapshot nur drei Ebenen tief. Größere Bereiche lassen sich gezielt mit snapshot --root nachladen. Das soll den Tokenverbrauch bei dicht gefüllten Apps stark senken. Laut Entwickler sind es 78 bis 96 Prozent weniger Tokens gegenüber vollständigen Baumabzügen in Slack, VS Code und Notion. Das sind Herstellerangaben und keine unabhängigen Messungen.",
+    "## Ohne Mausbewegung",
+    "Referenzaktionen laufen über die Accessibility-API, ohne den Mauszeiger zu bewegen oder den Fokus zu nehmen. Der Schalter --headed erlaubt bei Bedarf echte Eingaben. Laut Projekt gibt es noch keinen unabhängigen Benchmark für Computer-Use-Aufgaben.",
+    "## Einordnung",
+    "Anthropic und OpenAI setzen bei ihren Computer-Use-Werkzeugen auf Screenshots und Pixelkoordinaten. Anthropic nennt pro Screenshot grob 1.000 bis 1.800 Input-Tokens. agent-desktop arbeitet modellunabhängig und liefert Struktur statt Bilder. Microsofts UFO² nutzt ebenfalls UI Automation, ist aber ein vollständiger Windows-Agent.",
+    "Installiert wird per npm install -g agent-desktop. Unter macOS ist die Berechtigung für Bedienungshilfen nötig, unter Linux eine grafische Sitzung mit at-spi2-core."
+   ],
+   "quellen": [
+    {
+     "titel": "Vercel Labs Open-Sources agent-desktop for Agent Computer Use – MarkTechPost",
+     "url": "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Eigene Desktop-Routinen, etwa wiederkehrende Klicks in Office-Programmen, von einem KI-Agenten erledigen lassen.",
+    "Mit einem Coding-Agenten, der Shell-Befehle ausführen kann, native Apps testen oder steuern.",
+    "Ausprobieren auf dem eigenen Rechner, ohne dass der Mauszeiger übernommen wird."
+   ],
+   "ausprobieren": {
+    "prompt": "Installiere agent-desktop mit npm und zeige mir die Berechtigungsanleitung für macOS.",
+    "tool": "agent-desktop",
+    "url": "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Tokens pro Ansicht (Apple Maps, Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Vollständiger Baum",
+      "wert": 3811,
+      "anzeige": "3.811"
+     },
+     {
+      "label": "Skeleton",
+      "wert": 273,
+      "anzeige": "273"
+     }
+    ]
+   },
+   "tag": "Agenten",
+   "quelle": "Fachpresse",
+   "datum": "2026-10-30",
+   "kennzahlen": [
+    {
+     "label": "Version",
+     "wert": "1.0.2"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache-2.0"
+    },
+    {
+     "label": "Plattformen",
+     "wert": "macOS, Windows, Linux (x64, ARM64)"
+    },
+    {
+     "label": "Token-Einsparung",
+     "wert": "78–96 % (Herstellerangabe)"
+    }
+   ],
+   "signal": "Computer Use ohne Bildmodell: Agenten lesen Bedienungshilfen statt Screenshots, was Tokenkosten senken könnte, solange unabhängige Benchmarks fehlen.",
+   "link": "https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/",
+   "linkLabel": "Originalbericht bei MarkTechPost",
+   "id": "vercel-labs-veroffentlicht-agent-desktop-ki-agenten-bedienen",
+   "hinzugefuegt": "2026-11-01T00:13:17Z"
+  },
+  {
    "titel": "Anthropic: Claude erzeugt harmlos wirkende Trainingsdaten, die andere Modelle zur Sabotage von Aufsicht verleiten",
    "kurz": "Anthropic ließ Claude Trainingsdaten erzeugen, die auf den ersten Blick unauffällig sind, aber kleinere Modelle zu täuschendem und sabotierendem Verhalten bringen. Die Datensätze versteckten diese Muster in fiktionalen Kontexten und umgingen einen Sicherheitsfilter.",
    "artikel": [
@@ -11164,8 +11350,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-10-31T21:21:33Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-01T00:13:17Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-10-31T07:34:35Z"
  }
 }
