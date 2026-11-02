@@ -1,6 +1,58 @@
 {
  "news": [
   {
+   "titel": "OpenAI startet Grid Protectors: Rechenzentren sollen Stromnetze entlasten",
+   "kurz": "OpenAI hat das Programm Grid Protectors gestartet, mit dem zukünftige Rechenzentrums-Standorte ihren Stromverbrauch in Spitzenzeiten senken sollen. Die Vereinbarung mit Georgia Power in Effingham County dient als erstes Pilotbeispiel.",
+   "artikel": [
+    "OpenAI hat das Programm „Grid Protectors“ vorgestellt. Ziel ist es, dass künftige Rechenzentrumsstandorte, die das Unternehmen in den USA plant, zuverlässigen und bezahlbaren Strom unterstützen. Gemeinsam mit Energieversorgern, Regulierungsbehörden und der Politik sollen Vereinbarungen entstehen, nach denen die Anlagen ihren Strombedarf senken, wenn das Netz unter Last steht.",
+    "## Flexibler Stromverbrauch",
+    "Laut OpenAI soll Flexibilität ein fester Bestandteil beim Bau und Betrieb neuer Standorte werden. Konkret geht es darum, mit Versorgern festzulegen, wie viel Last reduziert werden kann, wie schnell und wie lange. Je nach Standort und verfügbarer Technik sollen auch Eigenerzeugung, Batteriespeicher und Steuerungen zum Einsatz kommen. Der Begriff „Demand Response“ bezeichnet genau diese gezielte Anpassung der Nachfrage durch Verbraucher.",
+    "OpenAI verweist darauf, dass die USA laut Prognose bis 2030 mehr als 100 Gigawatt Rechenzentrumskapazität erreichen könnten. Ein Gigawatt entspricht tausend Megawatt.",
+    "## Kosten und Netzausbau",
+    "Stromleitungen und Umspannwerke müssen unabhängig vom Verbrauch finanziert werden. Wenn ein Rechenzentrum in Zeiten geringer Last mehr Strom abnimmt und in Spitzenzeiten weniger, kann es laut OpenAI helfen, diese Fixkosten zu verteilen und teure Ausbauten für Spitzenlast zu vermeiden. OpenAI betont, dass Privathaushalte und kleine Unternehmen die Kosten für die Rechenzentren nicht tragen sollen und dass Großverbraucher ihre eigenen Energie- und Infrastrukturkosten selbst bezahlen sollen.",
+    "## Das Beispiel Georgia",
+    "Für den geplanten Campus in Effingham County hat sich OpenAI nach eigenen Angaben verpflichtet, die vollen Infrastruktur- und Anschlusskosten zu übernehmen. Die Vereinbarung mit Georgia Power umfasst außerdem bis zu 1.000 Megawatt flexible Nachfrage, die laut OpenAI in extremer Hitze rund 700.000 Haushalten (bei durchschnittlichem Verbrauch) die Klimaanlage ermöglichen soll. Diese Angaben stammen von OpenAI. Georgia Power erklärt laut OpenAI-Darstellung, dass die Flexibilität den Bedarf an neuen Kraftwerken verringern kann. Der Versorger rechnet laut Quelle mit jährlichen Kundeneinsparungen von etwa 950 Millionen US-Dollar ab 2029, wobei ein typischer Haushalt mindestens 15 Dollar im Monat sparen könnte. Auch dies sind Angaben aus dem Umfeld des Versorgers und werden hier als solche wiedergegeben.",
+    "## Ausblick",
+    "OpenAI beschreibt das Georgia-Projekt als Ausgangspunkt. Langfristige Verträge und finanzielle Sicherheiten sollen andere Stromkunden schützen, falls ein Projekt verzögert, verkleinert oder gestoppt wird. Das Unternehmen betont jedoch, dass Flexibilität neue Stromerzeugung und Übertragungsnetze nicht ersetzen kann."
+   ],
+   "quellen": [
+    {
+     "titel": "Introducing the Grid Protectors Program (OpenAI, Lab-Blog)",
+     "url": "https://openai.com/index/grid-protectors-program"
+    }
+   ],
+   "demo": "stimme",
+   "machen": [
+    "Wer sich für Energiepolitik interessiert, kann die Vereinbarungen zwischen Versorgern und Rechenzentren auf Transparenz und Kostenverteilung prüfen.",
+    "Privatpersonen können bei lokalen Strompreisdebatten nachfragen, wie Großverbraucher an Netzkosten beteiligt werden."
+   ],
+   "bereich": "Recht",
+   "datum": "2026-11-02",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Georgia Power: Einsparungen für Kunden laut Versorger",
+    "balken": [
+     {
+      "label": "Flexible Nachfrage (MW)",
+      "wert": 1000,
+      "anzeige": "1.000 MW"
+     },
+     {
+      "label": "Haushalte (ca.)",
+      "wert": 700000,
+      "anzeige": "~700.000"
+     },
+     {
+      "label": "Jährliche Einsparung ab 2029 (USD)",
+      "wert": 950000000,
+      "anzeige": "~950 Mio. $"
+     }
+    ]
+   },
+   "id": "openai-startet-grid-protectors-rechenzentren-sollen-stromnet",
+   "hinzugefuegt": "2026-11-02T18:26:54Z"
+  },
+  {
    "titel": "OpenAI verschärft Schutzmaßnahmen gegen Gewalt und stärkt Jugendschutz in ChatGPT",
    "kurz": "OpenAI kündigt einen Community Safety Report an und führt strengere Regeln bei Waffen- und Gewaltthemen ein, besonders für Minderjährige. Zudem sollen Warnsignale früher erkannt und Eltern informiert werden.",
    "artikel": [
@@ -9243,6 +9295,81 @@
  ],
  "projekte": [
   {
+   "titel": "OmniDiff: Open-Source-Git-Difftool in Rust vergleicht Dateien inhaltsbasiert",
+   "kurz": "OmniDiff ist ein quelloffenes Diff-Werkzeug in Rust, das Änderungen je nach Dateityp mit eigenen Algorithmen vergleicht. Es lässt sich als Git-Difftool einsetzen und wurde auf Hacker News mit 301 Punkten bekannt.",
+   "artikel": [
+    "OmniDiff ist ein Werkzeug, das Unterschiede zwischen zwei Dateiversionen anzeigt. Anders als ein rein zeilenbasierter Vergleich wählt es die Methode anhand des Dateityps: Für Code, Bilder, Schriftarten, Archive, Übersetzungskataloge oder PDFs gibt es jeweils inhaltsspezifische Verfahren. Der Entwickler nennt laut Projektseite, dass 98,8 Prozent der Änderungen mit solchen Verfahren verglichen werden.",
+    "## Leistung und Robustheit",
+    "Laut den Angaben im Projekt-README kann OmniDiff 99,95 Prozent der Codeänderungen verarbeiten, und die meisten Vergleiche sollen unter 100 Millisekunden dauern. Diese Werte sind Herstellerangaben des Projekts; gemessen wurde auf einem Notebook mit Intel Core i7-1370P und 32 GB RAM. Für PDFs gibt es laut README weniger als zehn bewertete Testfälle, weshalb die Genauigkeit dort nur eingeschränkt aussagekräftig ist.",
+    "## Nutzung und Integration",
+    "Das Werkzeug bietet eine interaktive Oberfläche im Terminal (TUI) sowie einen Headless-Modus für Skripte und CI. Ein Headless-Aufruf gibt den Diff als Text oder JSON aus. Als Git-Difftool lässt es sich über eine Konfiguration einbinden; laut Projektseite ist ein Einrichtungsassistent dafür vorhanden. Installation ist per Cargo, Homebrew, Nix, als .deb-Paket oder als Binärdatei aus den GitHub-Releases möglich. Für VS Code und Neovim gibt es Erweiterungen, wobei die VS-Code-Integration laut README noch nicht die integrierte Diff-Ansicht ersetzen kann.",
+    "## Einordnung",
+    "Die Quelle auf Hacker News hat 301 Punkte erhalten. Das Projekt steht unter einer Open-Source-Lizenz sowie zusätzlich einer kommerziellen Lizenz. Ein Browser-Werkzeug namens codereview ist laut Projektseite erst in Version 0.0.0 und wird als Experiment bezeichnet."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: ivankovic/omnidiff",
+     "url": "https://github.com/ivankovic/omnidiff"
+    },
+    {
+     "titel": "Hacker News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50325253"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Mit OmniDiff lassen sich Git-Änderungen an Bildern, PDFs oder Schriftarten statt nur als Binärhinweis vergleichen.",
+    "Im Terminal kann man per Headless-Modus Diffs in Textdateien oder Skripten ausgeben lassen.",
+    "Wer eigene Projekte pflegt, kann das Werkzeug als Git-Difftool ausprobieren und mit dem Standard vergleichen."
+   ],
+   "ausprobieren": {
+    "prompt": "omnidiff BEFORE.png AFTER.png",
+    "tool": "OmniDiff",
+    "url": "https://github.com/ivankovic/omnidiff"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "omnidiff",
+    "zeilen": [
+     "> omnidiff BEFORE AFTER",
+     "- alte Zeile entfernt",
+     "+ neue Zeile hinzugefügt",
+     "✓ Diff inhaltsbasiert erstellt",
+     "● Headless-Modus aktiv"
+    ]
+   },
+   "macher": "Ivan Kovačić (GitHub-Nutzer ivankovic)",
+   "branche": "Entwicklerwerkzeuge",
+   "jahr": "2026",
+   "tools": [
+    "Rust",
+    "tree-sitter",
+    "Git"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "301"
+    },
+    {
+     "label": "Verarbeitbare Änderungen (Herstellerangabe)",
+     "wert": "99,95 %"
+    },
+    {
+     "label": "Inhaltsspezifisch verglichen (Herstellerangabe)",
+     "wert": "98,8 %"
+    },
+    {
+     "label": "Geschwindigkeit (Herstellerangabe)",
+     "wert": "unter 100 ms"
+    }
+   ],
+   "link": "https://github.com/ivankovic/omnidiff",
+   "linkLabel": "Projekt auf GitHub",
+   "id": "omnidiff-open-source-git-difftool-in-rust-vergleicht-dateien",
+   "hinzugefuegt": "2026-11-02T18:26:54Z"
+  },
+  {
    "titel": "Cisco lässt einen 27-Jährigen Altcode mit unbegrenzten KI-Tokens modernisieren",
    "kurz": "Ciscos Präsident Jeetu Patel gibt dem 27-jährigen Padmanabhan Krishnamurthy unbegrenzte KI-Tokens, damit er Legacy-Code umschreibt. Ziel ist es, innerhalb von 24 Monaten 98 % des Codes zu refaktorieren.",
    "artikel": [
@@ -12287,8 +12414,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-02T08:09:55Z",
+  "letzterScan": "2026-11-02T18:26:54Z",
   "neueFunde": 2,
-  "standAktualisiert": "2026-11-01T13:31:18Z"
+  "standAktualisiert": "2026-11-02T18:26:54Z"
  }
 }
