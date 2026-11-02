@@ -1,6 +1,84 @@
 {
  "news": [
   {
+   "titel": "Chinesische KI-Modelle politisch vielschichtiger als gedacht",
+   "kurz": "Eine Studie von Vals AI mit 25 Modellen zeigt, dass chinesische KI-Modelle auf politische Fragen weniger einheitlich antworten als erwartet. Die Sprache des Prompts beeinflusst die politische Ausrichtung dabei besonders stark.",
+   "artikel": [
+    "Chinesische KI-Modelle gelten oft als verlängerter Arm der Regierung in Peking. Eine Untersuchung des Benchmark-Anbieters Vals AI zeichnet nun ein differenzierteres Bild. Getestet wurden chinesische, amerikanische und weitere Sprachmodelle mit hunderten Fragen zu China, bei denen Sprache, Nutzungskontext und Antwortformat variiert wurden.",
+    "## Ergebnisse im Überblick",
+    "Vals misst die Nähe zu offiziellen chinesischen Positionen als sogenannten \"pro-China lean\" auf einer Skala von -1 bis +1. Positive Werte bedeuten mehr Zustimmung zur Regierungslinie, negative Werte kritischere Antworten. Die Skala misst die Ausrichtung, nicht die sachliche Richtigkeit der Antworten. Insgesamt fiel die regierungsnahe Tendenz chinesischer Modelle geringer aus als erwartet, wobei es große Unterschiede zwischen einzelnen Modellen gibt. Umgekehrt übernahmen auch einige westliche Modelle gelegentlich offizielle chinesische Positionen.",
+    "## Einfluss der Sprache",
+    "Die Sprache des Prompts wirkt stark auf die Antworten. Bei den meisten getesteten Modellen fielen Antworten auf Vereinfachtem Chinesisch regierungsnäher aus als auf Englisch, Russisch oder Spanisch. Dieser Effekt zeigte sich bei chinesischen und amerikanischen Modellen, war bei den chinesischen aber deutlich ausgeprägter. Vals vermutet, dass Modelle aus der Sprache selbst auf die erwartete Perspektive schließen. Auch ein Systemprompt, der eine Nutzung in einem Unternehmen auf dem chinesischen Festland angab, führte bei einigen Modellen zu regierungsnäheren Antworten.",
+    "## Ablehnung oder Anpassung",
+    "Die verbreitete Annahme, chinesische Modelle würden sensible Fragen meist blockieren, bestätigte sich nur bei einigen DeepSeek-Modellen. Die meisten anderen antworteten selten mit Ablehnung, übernahmen aber mitunter offizielle Regierungspositionen. Kimi K3 etwa bestritt auf Nachfrage die Existenz von Konzentrationslagern für Uiguren in Xinjiang und bezeichnete die Einrichtungen als Berufsbildungszentren zur Bekämpfung von Extremismus und Terrorismus. Verlangte Ja-oder-Nein-Antworten verringerten die regierungsnahe Tendenz bei GLM-5.3 Flash und MiMo V2.6 Pro deutlich.",
+    "## Alltagsaufgaben",
+    "Laut Vals lassen sich politische Tendenzen in realistischen Arbeitsaufgaben schwerer erkennen als in gezielten Testfragen. Dennoch fanden die Tester Einzelfälle: Beim Übersetzen einer Ländercode-Liste für eine Reise-App ließ Qwen3.8 Max \"Taiwan\" als \"Taiwan, China\" übersetzen, eine Bezeichnung, die die chinesische Regierung verwendet. Die meisten anderen Modelle setzten Taiwan ohne Zusatz.",
+    "## Einschränkungen der Studie",
+    "Ablehnungen zählten in der Auswertung standardmäßig als neutral, weshalb ein Modell, das jede Frage blockiert, neutral erscheinen könnte. Viele chinesische Modelle wurden über Drittanbieter getestet, nicht über die offiziellen Dienste der Hersteller. Diese können zusätzliche Inhaltsfilter einsetzen, sodass sich die Ergebnisse nicht zwingend auf öffentliche Chatbots übertragen lassen. Frühere Studien von Aleph Alpha und NewsGuard kamen ebenfalls zu dem Schluss, dass chinesische KI-Modelle bei sensiblen Themen häufig offizielle Narrative übernehmen. China verlangt zudem, dass öffentlich angebotene KI-Dienste mit den \"Kernwerten des Sozialismus\" übereinstimmen."
+   ],
+   "quellen": [
+    {
+     "titel": "Chinese AI models are politically complex, not just government mouthpieces, study finds (The Decoder)",
+     "url": "https://the-decoder.com/chinese-ai-models-are-politically-complex-not-just-government-mouthpieces-study-finds/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Du kannst mit eigenen Fragen testen, wie unterschiedlich ein Modell auf dieselbe Frage in verschiedenen Sprachen antwortet.",
+    "Du kannst bei Übersetzungen oder Datenlisten prüfen, ob Ländernamen und Gebietsbezeichnungen neutral übernommen wurden.",
+    "Du kannst bei der Auswahl eines KI-Modells die Herstellerangaben und unabhängige Benchmarks getrennt betrachten."
+   ],
+   "bereich": "Text",
+   "datum": "2026-11-01",
+   "id": "chinesische-ki-modelle-politisch-vielschichtiger-als-gedacht",
+   "hinzugefuegt": "2026-11-02T01:32:21Z"
+  },
+  {
+   "titel": "OpenAI legt Chat und Work zusammen – Ende der Flatrate-Nutzung?",
+   "kurz": "OpenAI führt die Modi Chat und Work in ChatGPT zusammen. Ab Dezember teilen sich Plus-, Pro- und Business-Pläne ein tokenbasiertes Kontingent für ChatGPT und Codex.",
+   "artikel": [
+    "OpenAI fasst die beiden Modi Chat und Work in ChatGPT zu einer einzigen Oberfläche zusammen. Die agentischen Funktionen von Work wandern dabei in die Hauptoberfläche. Laut einer aktualisierten Support-Seite des Unternehmens (Herstellerangabe) gilt ab Dezember für die Pläne Plus, Pro und Business ein gemeinsames Budget für ChatGPT und Codex.",
+    "## Was sind Tokens?",
+    "Tokens sind die Recheneinheiten, mit denen ein Sprachmodell die verarbeiteten und erzeugten Informationen misst. Komplexere Modelle und Aufgaben verbrauchen das Budget deshalb schneller.",
+    "## Wie das Limit funktioniert",
+    "Nutzer können ihren Restbetrag und die Zeitpunkte der Zurücksetzung in den Einstellungen einsehen. Ist das Limit erreicht, können sie auf den Reset warten, auf einen höheren Plan wechseln oder zusätzliche Credits kaufen. Chats mit den Instant-Modellen zählen laut OpenAI nicht zum Budget.",
+    "## Einordnung",
+    "Damit bleibt ChatGPT auf dem Papier ein Pauschaltarif. Der Autor des Artikels von The Decoder erwartet jedoch, dass starke Nutzung auf günstigeren Tarifen zu schlechteren Ergebnissen führt. OpenAI hatte die Nutzungslimits für teurere Pläne kurz zuvor verdoppelt, vermutlich als Vorbereitung auf die Zusammenlegung. Bisher wählen Nutzer zwischen zwei Betriebsmodi und 11 Modelleinstellungen, was selbst erfahrenen Anwendern schwerfällt. Anthropic hat Chat und \"Cowork\" in Claude bereits zusammengeführt."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI's upcoming chat-and-work merger in ChatGPT signals the end of all-you-can-prompt pricing (The Decoder)",
+     "url": "https://the-decoder.com/openais-upcoming-chat-and-work-merger-in-chatgpt-signals-the-end-of-all-you-can-prompt-pricing/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Prüfe in den Einstellungen von ChatGPT, wie viel deines Token-Budgets noch übrig ist, bevor du lange Aufgaben startest.",
+    "Nutze für einfache Fragen die Instant-Modelle, da deren Chats laut Angabe nicht auf das Budget angerechnet werden.",
+    "Wenn du viel mit komplexen Modellen arbeitest, rechne mit Einschränkungen auf günstigeren Tarifen."
+   ],
+   "bereich": "Text",
+   "datum": "2026-11-01",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Modelle und Verbrauch (qualitativ)",
+    "balken": [
+     {
+      "label": "Chat mit Instant-Modell",
+      "wert": 1,
+      "anzeige": "zählt nicht"
+     },
+     {
+      "label": "Komplexes Modell",
+      "wert": 3,
+      "anzeige": "verbraucht mehr"
+     }
+    ]
+   },
+   "id": "openai-legt-chat-und-work-zusammen-ende-der-flatrate-nutzung",
+   "hinzugefuegt": "2026-11-02T01:32:21Z"
+  },
+  {
    "titel": "Anthropic sperrt Nutzer nach Vorwurf des Modelltrainings – Entwickler beklagt Sperren",
    "kurz": "Der X-Nutzer Jiahao Shao wirft Anthropic vor, ihn wegen angeblicher Destillation von Claude gesperrt zu haben, obwohl er nach eigenen Angaben nur ein Open-Source-Modell genutzt habe. Die Diskussion auf Hacker News erreichte 446 Punkte.",
    "artikel": [
@@ -2342,6 +2420,148 @@
   }
  ],
  "radar": [
+  {
+   "titel": "uncut: Ein Coding-Agent-Harness, der nichts stillschweigend kürzt",
+   "kurz": "Das GitHub-Projekt uncut (Balanov) ist ein kleines, headless betriebenes Werkzeug für Coding-Agenten. Es verspricht vollständige Kontexte ohne stille Kürzungen und arbeitet über stdin und stdout.",
+   "artikel": [
+    "uncut ist ein sogenanntes Agent-Harness: eine Laufzeitumgebung, die ein Sprachmodell in einer Schleife mit Werkzeugen wie Dateizugriff und Shell-Befehlen arbeiten lässt. Laut Projektbeschreibung besteht das Programm aus einer statischen Go-Binärdatei von 7 MB mit vier Werkzeugen und ohne TUI, also ohne grafische Textoberfläche.",
+    "## Kein Vergessen, keine Kürzung",
+    "Nach den Angaben im Repository wird die gesamte Unterhaltung bei jedem Modellaufruf erneut gesendet. Dateiinhalte und kombinierte Befehlsausgaben kürzt uncut nach eigenen Angaben nicht. Ein Sonderfall: Wenn der Anbieter eine Antwort am Ausgabelimit abschneidet, beendet sich uncut mit Fehler, statt einen Teiltext als Erfolg auszugeben. Zusammenfassungen, Fensterverfahren oder Compaction gibt es laut README bewusst nicht.",
+    "## Einsatz in Pipelines",
+    "Die Ausgabe des Modells landet auf stdout, strukturierte Ereignisse im NDJSON-Format sind per Flag abrufbar. Sitzungen lassen sich als anhängbare JSONL-Datei speichern und fortsetzen. Das Projekt spricht OpenAI-kompatible Chat-Completions-Endpunkte an, also auch lokale Server wie Ollama. Laut Readme wurde dieses Setup mit dem Modell qwen3:8b getestet.",
+    "## Einordnung",
+    "Das Repository nennt 837 Zeilen Go-Implementierung und die MIT-Lizenz. Die Binärdateien sind laut Readme noch nicht code-signiert, weshalb Windows SmartScreen oder macOS Gatekeeper warnen können. Die genannten Leistungs- und Sicherheitsaussagen sind Angaben der Entwickler; eine unabhängige Prüfung liegt nicht vor."
+   ],
+   "quellen": [
+    {
+     "titel": "Balanov/uncut auf GitHub",
+     "url": "https://github.com/Balanov/uncut"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Lokale Modelle über Ollama in CI-Jobs oder Shell-Skripten einsetzen, um Testlogs oder Diffs auswerten zu lassen.",
+    "Eine Sitzungsdatei anlegen und ein Coding-Projekt über mehrere Aufrufe hinweg fortsetzen.",
+    "Die Binärdatei herunterladen, per Prüfsumme verifizieren und testweise in einem Repository ausprobieren."
+   ],
+   "ausprobieren": {
+    "prompt": "git diff | uncut \"Review this diff. Do not edit files.\"",
+    "tool": "uncut",
+    "url": "https://github.com/Balanov/uncut"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "uncut",
+    "zeilen": [
+     "> cat failing-test.log | uncut \"Find the likely cause\"",
+     "✓ Logdatei als Prompt übergeben",
+     "● Modell antwortet auf stdout",
+     "⚠ Bei Ausgabelimit: Abbruch mit Fehler",
+     "● Sitzung: .uncut/work.jsonl"
+    ]
+   },
+   "tag": "Agent-Harness",
+   "quelle": "GitHub",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Binärgröße (Herstellerangabe)",
+     "wert": "7 MB"
+    },
+    {
+     "label": "Werkzeuge (Herstellerangabe)",
+     "wert": "4"
+    },
+    {
+     "label": "Implementierung (Herstellerangabe)",
+     "wert": "837 Zeilen Go"
+    },
+    {
+     "label": "GitHub-Sterne (Stand Fund)",
+     "wert": "230 ★"
+    }
+   ],
+   "signal": "Ein minimalistisches Gegenmodell zu großen Coding-Agenten: volle Kontexte, keine Telemetrie, keine Kompaktierung. Die Aussagen stammen vom Projekt selbst.",
+   "link": "https://github.com/Balanov/uncut",
+   "linkLabel": "Zum Repository",
+   "id": "uncut-ein-coding-agent-harness-der-nichts-stillschweigend-ku",
+   "hinzugefuegt": "2026-11-02T01:32:21Z"
+  },
+  {
+   "titel": "DeepSeek veröffentlicht dsh-superagent: ein Router-Worker-Coding-Agent für GitHub",
+   "kurz": "DeepSeek hat dsh-superagent als MIT-lizenzierten Forschungsprototyp veröffentlicht, einen proaktiven Coding-Agenten für ein GitHub-Repository. Laut Herstellerangabe aus einer eigenen Simulation sank die p95-Dauer für Aufgaben von 29,5 auf 15,7 Minuten.",
+   "artikel": [
+    "DeepSeek hat mit dsh-superagent einen Forschungsprototyp veröffentlicht, der unter der MIT-Lizenz steht. Das Werkzeug ist ein proaktiver Coding-Agent für ein einzelnes GitHub-Repository. Es ist als Bundle für DeepSeek Harness verpackt, lauscht auf GitHub und optional auf Feishu und verwandelt erlaubte Anfragen in parallele Arbeitseinheiten, die jeweils in einer eigenen Agenten-Sitzung laufen.",
+    "## Architektur",
+    "Das System besteht laut Forschungsteam aus zwei Ebenen. Ein langlebiger Router übernimmt Interaktion und Verteilung, isolierte Worker-Sitzungen erledigen die eigentliche Arbeit. Ein Ticket ist eine Einheit genehmigter Arbeit mit einem unveränderlichen Mandat, das begründet, warum sie laufen darf. Proaktive Arbeit ist durch Regeln gesteuert: Die Modi off, observe (Standard) und auto legen fest, ob der Agent handelt. Im Modus observe protokolliert er nur, was er angenommen hätte.",
+    "## Leistung",
+    "DeepSeek hat mit simulierten Gruppenchats und GitHub-CI-Streams getestet, jeweils etwa 300 Nachrichten, davon rund 20 echte Arbeitsanfragen. In der Herstellerangabe lag die p95-Dauer bei 15,7 Minuten, gegenüber 29,5 Minuten für eine Einzelsitzung mit Subagenten. Der Vergleich stammt aus einer Simulation mit synthetischen Nachrichten und simulierten Werkzeugen; die echte Code-Qualität wurde nicht gemessen. Alle Zahlen sind Selbstangaben.",
+    "## Einordnung",
+    "Laut DeepSeek begrenzt bei herkömmlichen Agenten die menschliche Aufmerksamkeit die Mehrarbeit, nicht die Modellleistung. Eine Person kann nach Angaben des Berichts nur 3 bis 5 Sitzungen aktiv verfolgen. Der Agent läuft mit vollem Zugriff des Betriebssystem-Nutzers, daher sollte man ihn vor dem Einsatz isolieren. Voraussetzungen sind Node.js 22.19+ oder 24+, git 2.32+, Python 3.8+, tmux und GitHub CLI 2.48+."
+   ],
+   "quellen": [
+    {
+     "titel": "DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Ein eigenes GitHub-Repository mit dem Prototyp testen, um zu sehen, wie Tickets und Pull Requests entstehen.",
+    "Im Modus observe prüfen, welche Aufgaben der Agent annehmen würde, bevor man proaktive Arbeit freischaltet."
+   ],
+   "ausprobieren": {
+    "prompt": "Erstelle für mein Repository ein Ticket für die offene Issue zur Fehlerbehandlung und lege einen Pull Request an.",
+    "tool": "DeepSeek Harness",
+    "url": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "p95-Dauer bis zur Aufgabe (Minuten, Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Einzelsitzung",
+      "wert": 29.5,
+      "anzeige": "29,5 min"
+     },
+     {
+      "label": "Super-agent",
+      "wert": 15.7,
+      "anzeige": "15,7 min"
+     }
+    ]
+   },
+   "tag": "Coding-Agent",
+   "quelle": "Fachpresse",
+   "datum": "2026-11-01",
+   "kennzahlen": [
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    },
+    {
+     "label": "Version",
+     "wert": "v0.1.0"
+    },
+    {
+     "label": "p95 Aufgabendauer (Herstellerangabe, Simulation)",
+     "wert": "15,7 min vs. 29,5 min"
+    },
+    {
+     "label": "Node.js",
+     "wert": "22.19+ oder 24+"
+    },
+    {
+     "label": "GitHub CLI",
+     "wert": "2.48+"
+    }
+   ],
+   "signal": "Ein Coding-Agent, der selbst entscheidet, wann er arbeitet, mit einer Standardeinstellung, die nur beobachtet. Die Leistungszahlen sind Selbstangaben aus einer Simulation.",
+   "link": "https://www.marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent/",
+   "linkLabel": "Originalbericht lesen",
+   "id": "deepseek-veroffentlicht-dsh-superagent-ein-router-worker-cod",
+   "hinzugefuegt": "2026-11-02T01:32:21Z"
+  },
   {
    "titel": "Nace AI veröffentlicht Drex Max v1: 27B-Entscheidungsmodell läuft lokal auf Apple Silicon",
    "kurz": "Nace AI hat das Entscheidungsmodell Drex Max v1 als offene Gewichte veröffentlicht. Das 27-Milliarden-Parameter-Modell lässt sich laut Anbieter auf eigener Hardware betreiben, auch auf Macs mit Apple Silicon.",
@@ -11964,8 +12184,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-01T22:16:46Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-11-02T01:32:21Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-11-01T13:31:18Z"
  }
 }
