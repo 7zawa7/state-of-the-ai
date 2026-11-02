@@ -1,6 +1,38 @@
 {
  "news": [
   {
+   "titel": "OpenAI verschärft Schutzmaßnahmen gegen Gewalt und stärkt Jugendschutz in ChatGPT",
+   "kurz": "OpenAI kündigt einen Community Safety Report an und führt strengere Regeln bei Waffen- und Gewaltthemen ein, besonders für Minderjährige. Zudem sollen Warnsignale früher erkannt und Eltern informiert werden.",
+   "artikel": [
+    "OpenAI hat neue Maßnahmen angekündigt, um Gewalt im Umfeld von ChatGPT vorzubeugen. Das Unternehmen nennt dabei zwei Schwerpunkte: einen neuen Bericht zur Gemeinschaftssicherheit und strengere Einschränkungen bei Waffeninhalten für Minderjährige.",
+    "## Bericht zur Gemeinschaftssicherheit",
+    "OpenAI will einen sogenannten Community Safety Report veröffentlichen. Darin soll erklärt werden, wie die Systeme gefährliches Verhalten erkennen und darauf reagieren, und wie wirksam die Schutzmaßnahmen sind. Geplant sind anonymisierte Beispiele, neue Gegenmaßnahmen und Daten. Der erste Bericht soll Anfang 2027 erscheinen und das zweite Halbjahr 2026 abdecken; danach sind Updates alle sechs Monate vorgesehen.",
+    "Im dritten Quartal 2026 hat OpenAI nach eigenen Angaben über 200 Hinweise an Strafverfolgungsbehörden weitergegeben, wenn es um unmittelbar drohende Gewalt ging.",
+    "## Strengere Grenzen für alle Nutzer",
+    "Das Modell soll keine Anleitungen geben, die bei der Planung oder Durchführung von Gewalt helfen. Zusätzlich sollen Fragen zu früheren Massenangriffen nur noch weniger detailliert beantwortet werden. Ausgeschlossen werden etwa Rekonstruktionen mit Angaben zu Waffen und deren Beschaffung sowie Vergleiche des Schadensausmaßes, die die Aufmerksamkeit für Täter verstärken könnten. Diese Grenzen gelten unabhängig von Alter und Begründung der Nutzer.",
+    "## Reaktion auf Warnsignale",
+    "Wenn aktuelle Chats Warnsignale für mögliche Gewalt zeigen, soll ChatGPT vorsichtiger antworten. Die strengeren Grenzen sollen auch greifen, wenn das System vermutet, dass jemand unter 18 Jahre alt ist. Wenn ein Gespräch Gewaltfixierung zeigt, kann ChatGPT die Unterhaltung automatisch beenden. Bei wiederholtem Abbrechen kann das Konto vorübergehend pausiert werden. Laut OpenAI handelt es sich um einen laufenden Prozess.",
+    "## Mehr Schutz für Jugendliche",
+    "Für Nutzer unter 18 Jahren gelten zusätzliche Einschränkungen bei waffenbezogenen Informationen, auch wenn eine Frage harmlos wirkt. Praktische Angaben zu Waffen und Sicherheitssystemen sollen ausgeschlossen sein. Eltern können über Elternkontrollen Konten verknüpfen. Laut OpenAI sollen Eltern künftig auch benachrichtigt werden, wenn das Konto ihres Kindes wegen wiederholter Gewaltthemen pausiert wird. Eine Altersvorhersage soll das Verhalten analysieren; wer fälschlich als minderjährig eingestuft wird, kann sich laut Herstellerangabe über den Partner Persona als Erwachsener bestätigen."
+   ],
+   "quellen": [
+    {
+     "titel": "Community safety report and new protections for teens (OpenAI)",
+     "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Eltern können in ChatGPT Elternkontrollen einrichten, um Sicherheitseinstellungen für ihre Teenager zu verwalten.",
+    "Wer ChatGPT mit sensiblen Themen nutzt, sollte wissen, dass Antworten zu Waffen und früheren Anschlägen künftig eingeschränkter ausfallen."
+   ],
+   "bereich": "Recht",
+   "datum": "2026-10-30",
+   "tag": "Sicherheit",
+   "id": "openai-verscharft-schutzmasnahmen-gegen-gewalt-und-starkt-ju",
+   "hinzugefuegt": "2026-11-02T08:09:55Z"
+  },
+  {
    "titel": "Chinesische KI-Modelle politisch vielschichtiger als gedacht",
    "kurz": "Eine Studie von Vals AI mit 25 Modellen zeigt, dass chinesische KI-Modelle auf politische Fragen weniger einheitlich antworten als erwartet. Die Sprache des Prompts beeinflusst die politische Ausrichtung dabei besonders stark.",
    "artikel": [
@@ -2420,6 +2452,77 @@
   }
  ],
  "radar": [
+  {
+   "titel": "ReLift: Dichtes 3D-Tracking durch Reparatur geliftete Trajektorien",
+   "kurz": "ReLift ist ein Forschungsansatz für dichtes 3D-Tracking aus monokularen Videos. Er kombiniert vortrainierte 2D-Tracker und 3D-Geometriemodelle mit einem kleinen Korrekturmodul, das Fehler repariert und verdeckte Bewegungen ergänzt.",
+   "artikel": [
+    "Dichtes 3D-Tracking bedeutet, aus einem Video mit nur einer Kamera über die Zeit Punkte zu verfolgen, ihre Tiefe zu schätzen und auch dann ihre Bahn zu erschließen, wenn sie verdeckt sind. Bisherige Methoden lernen diese Aufgaben meist gemeinsam, was wegen der knappen 4D-Trainingsdaten schwierig ist.",
+    "## Der Ansatz",
+    "Die Autoren zeigen, dass starke, vortrainierte 2D-Tracker und 3D-Geometriemodelle eine gute Grundlage bilden. Sogenannte geliftete Trajektorien entstehen, wenn man die 2D-Bahnen mit der geschätzten Tiefe in den Raum überträgt und verdeckte Abschnitte einfach interpoliert. Laut Paper erreichen diese bereits ähnliche Ergebnisse wie eigens entwickelte 3D-Tracker, die dieselbe Geometrie nutzen.",
+    "Geliftete Trajektorien erben aber Fehler bei der Zuordnung und bei der Tiefe. Bei Verdeckung stammt die Tiefe außerdem oft vom verdeckenden Objekt statt vom verfolgten Punkt.",
+    "## Das Korrekturmodul",
+    "ReLift setzt hier an: Ein Trajektorien-Korrektor wechselt zwischen Aufmerksamkeit entlang einzelner Bahnen und über mehrere Bahnen hinweg. So bleiben verlässliche Beobachtungen erhalten, fehlerhafte Positionen werden repariert und fehlende Bewegungen ergänzt. Trainiert wird nur auf geometrischen Daten mit simulierten Liftfehlern, nicht auf Bildern und nicht auf einen bestimmten Tracker oder ein bestimmtes Geometriemodell.",
+    "Laut Paper verbessert das einmal trainierte Modell alle getesteten Kombinationen aus Tracker und Geometrieanbieter, ohne neu trainiert zu werden.",
+    "## Ergebnisse",
+    "Auf dem Benchmark WorldTrack erreicht ReLift laut den Autoren die höchste mittlere Genauigkeit. Gegenüber den stärksten Vergleichsmethoden verbessert es sich um 2,1 APD bei allen Punkten und um 3,0 APD bei dynamischen Punkten. Schnellere Konfigurationen bleiben konkurrenzfähig mit führenden 3D-Trackern und laufen laut Angabe schneller als 4RC. Die Zahlen stammen aus den Angaben der Autoren und sind noch nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "ReLift: Dense 3D Tracking as Lifted Trajectory Repair (Hugging Face Papers)",
+     "url": "https://huggingface.co/papers/2610.42136"
+    },
+    {
+     "titel": "Projektseite ReLift",
+     "url": "https://relift3d.github.io/"
+    },
+    {
+     "titel": "GitHub ReLift",
+     "url": "https://github.com/ReLift3D/ReLift"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Forschende können den Code auf GitHub prüfen und mit eigenen Videos testen.",
+    "Entwickler aus der 3D- oder Videoanalyse können das Korrekturmodul als Nachbearbeitungsschritt für bestehende Tracker erproben."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "WorldTrack: Verbesserung gegenüber stärksten Baselines (Angabe der Autoren)",
+    "balken": [
+     {
+      "label": "Baseline",
+      "wert": 0,
+      "anzeige": "0,0 APD"
+     },
+     {
+      "label": "ReLift (dynamische Punkte)",
+      "wert": 3.0,
+      "anzeige": "+3,0 APD"
+     }
+    ]
+   },
+   "quelle": "arXiv",
+   "datum": "2026-10-30",
+   "kennzahlen": [
+    {
+     "label": "Veröffentlicht",
+     "wert": "30.10.2026"
+    },
+    {
+     "label": "Verbesserung alle Punkte",
+     "wert": "+2,1 APD (Angabe der Autoren)"
+    },
+    {
+     "label": "Verbesserung dynamische Punkte",
+     "wert": "+3,0 APD (Angabe der Autoren)"
+    }
+   ],
+   "signal": "Trainiert auf geometrischen 3D-Trajektorien statt auf Bildern: Ein Korrekturmodul soll mit verschiedenen Trackern und Geometriemodellen ohne Neutraining funktionieren.",
+   "link": "https://huggingface.co/papers/2610.42136",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "relift-dichtes-3d-tracking-durch-reparatur-geliftete-trajekt",
+   "hinzugefuegt": "2026-11-02T08:09:55Z"
+  },
   {
    "titel": "uncut: Ein Coding-Agent-Harness, der nichts stillschweigend kürzt",
    "kurz": "Das GitHub-Projekt uncut (Balanov) ist ein kleines, headless betriebenes Werkzeug für Coding-Agenten. Es verspricht vollständige Kontexte ohne stille Kürzungen und arbeitet über stdin und stdout.",
@@ -12184,8 +12287,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-02T01:32:21Z",
-  "neueFunde": 4,
+  "letzterScan": "2026-11-02T08:09:55Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-01T13:31:18Z"
  }
 }
