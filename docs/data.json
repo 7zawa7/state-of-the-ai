@@ -1,6 +1,47 @@
 {
  "news": [
   {
+   "titel": "OpenAI plant nächsten Sicherheits-Sprint mit Partner Cathedral",
+   "kurz": "OpenAI bereitet einen weiteren internen Sicherheits-Sprint vor, bei dem eigene Teams, Forscher externer Sicherheitsfirmen und eigene KI-Modelle die Abwehr testen sollen. Zudem wurden die Prämien des Bug-Bounty-Programms deutlich erhöht.",
+   "artikel": [
+    "OpenAI plant seinen nächsten internen Sicherheits-Sprint. Dabei sollen neue Forscher und Sicherheitspartner zusammen mit den eigenen Teams die hauseigenen Modelle nutzen, um die Systeme zu testen und zu stärken. Mit dabei ist das Unternehmen Cathedral, dessen Forscher die Abwehrmechanismen von OpenAI herausfordern sollen.",
+    "## Der letzte Sprint als Grundlage",
+    "Beim vorherigen Sprint widmete OpenAI 25 Prozent seiner Produktentwickler der Suche nach Schwachstellen und deren Behebung. Die Ingenieure nutzten dafür Codex, untersuchten Befunde, reproduzierten Sicherheitslücken in isolierten Umgebungen und bereiteten Patches zur Prüfung vor. Laut OpenAI zeigte dieser Ansatz, was möglich ist.",
+    "## Bug-Bounty und Ausblick",
+    "Das Security Bug Bounty Programm wurde verbessert, unter anderem wurden die Belohnungen für kritische Funde mehr als vervierfacht. Laut OpenAI reichen klassische Cyberabwehr-Maßnahmen allein nicht mehr aus, weil Bedrohungen sich schnell entwickeln.",
+    "OpenAI nennt außerdem Zusagen: Die leistungsstärksten Modelle sollen Kunden des Angebots Daybreak zur Verfügung stehen. Für Verteidiger kritischer Dienste und digitaler Infrastruktur sind laut Unternehmen über sechs Monate 1 Milliarde US-Dollar an subventioniertem Zugang vorgesehen. Architektur und Erkenntnisse aus dem letzten Sprint werden geteilt, ebenso ein Entwurf für Cyber-Verteidiger in Industrie und Regierung.",
+    "Die Angaben zu Zahlen und Zusagen stammen von OpenAI selbst als Herstellerangaben und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Preparing our next security sprint to harden OpenAI",
+     "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wer Software entwickelt oder betreut, kann eigene Projekte über Sicherheitsprogramme wie Bug-Bounties auf Schwachstellen prüfen lassen.",
+    "Sicherheitsforscher können prüfen, ob sie an Bug-Bounty-Programmen teilnehmen, die laut Hersteller höhere Prämien bieten.",
+    "Privatpersonen können ihre eigenen Konten und Geräte mit aktuellen Updates und starken Zugangsdaten absichern."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-11-02",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Security-Sprint",
+    "zeilen": [
+     "> Sprint: 25% der Produktentwickler",
+     "✓ Schwachstellen reproduziert",
+     "⚠ Patches zur Prüfung vorbereitet",
+     "- Klassische Abwehr allein reicht nicht",
+     "+ Bug-Bounty-Prämien mehr als vervierfacht",
+     "● Status: laufend"
+    ]
+   },
+   "id": "openai-plant-nachsten-sicherheits-sprint-mit-partner-cathedr",
+   "hinzugefuegt": "2026-11-03T07:57:52Z"
+  },
+  {
    "titel": "OpenAI startet Grid Protectors: Rechenzentren sollen Stromnetze entlasten",
    "kurz": "OpenAI hat das Programm Grid Protectors gestartet, mit dem zukünftige Rechenzentrums-Standorte ihren Stromverbrauch in Spitzenzeiten senken sollen. Die Vereinbarung mit Georgia Power in Effingham County dient als erstes Pilotbeispiel.",
    "artikel": [
@@ -2504,6 +2545,141 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Skein: Swarm-Orchestrator mit Epoch-Fence und Ablehnung später Ergebnisse",
+   "kurz": "Skein ist ein Open-Source-Werkzeug (GitHub, 256 Sterne) zur Steuerung lokaler Agenten-Schwärme. Ein Not-Stopp verwirft wartende Aufgaben und lehnt verspätete Ergebnisse aus der alten Epoche ab.",
+   "artikel": [
+    "Skein ist ein Orchestrierungswerkzeug für lokale Agenten-Schwärme, das laut Projektseite nach dem Prinzip „fail-closed“ arbeitet: Im Zweifel wird gestoppt statt weiterzulaufen. Explizite Aufgabengraphen werden mit begrenzter Parallelität ausgeführt. Das Projekt beschreibt sich selbst als Ausführungs-Kontrollebene, nicht als Agenten-Framework oder Modell-Laufzeit.",
+    "## Der Not-Stopp",
+    "Der Kernmechanismus ist eine persistente „Epoch-Fence“: Ein Stopp erhöht die Epoche, wartende Arbeit aus der alten Epoche wird ungültig und Ergebnisse, die danach eintreffen, werden abgelehnt. Eine Aufgabe wird also nicht nur als abgebrochen markiert, sondern tatsächlich nicht mehr übernommen. Laut Dokumentation werden außerdem verfolgte lokale Prozessbäume auf Linux, macOS und Windows beendet.",
+    "## Messwerte des Herstellers",
+    "Die Angaben stammen vom Hersteller und wurden auf einem Windows-11-System mit Ryzen 9 5950X gemessen. Bei einem 1.000-Knoten-Graphen nennt Skein etwa 1,58 ms gegenüber 3,53 ms für Python asyncio und 876,9 ms für LangGraph. Beim Stopp-Test wurden laut Herstellerangabe 160 von 160 Prozessbäume beendet, der Median lag bei 141,663 ms. Der Hersteller betont selbst, dass Skein nicht überall vorne liegt: Bei 100 unabhängigen Aufgaben war asyncio im Median schneller.",
+    "## Grenzen",
+    "Nicht abgedeckt sind laut Projekt unter anderem Sandboxing beliebiger Befehle, Authentifizierung oder signierte Leases, die Prüfung der Agentenausgaben sowie exakt einmalige externe Nebenwirkungen. Ein Lease sei ein Fencing-Token, kein Zugangsschlüssel. Die Version 0.2.0 wird als frühe Veröffentlichung beschrieben, deren Stopp-Nachweis man vor dem produktiven Einsatz an eigenen Workloads prüfen sollte."
+   ],
+   "quellen": [
+    {
+     "titel": "Balanov/skein auf GitHub",
+     "url": "https://github.com/Balanov/skein"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Den Stopp-Mechanismus mit eigenen, lokalen Aufgabengraphen testen, bevor man ihn im Alltag nutzt.",
+    "Die Beispiel-Manifeste im Repository als Vorlage für eigene Aufgabenketten verwenden.",
+    "Die Messmethodik in BENCHMARKS.md nachlesen, um Herstellerzahlen einzuordnen."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "skein",
+    "zeilen": [
+     "> skein stop --state .skein --reason \"manual emergency stop\"",
+     "✓ Run gestoppt, Epoche erhöht",
+     "⚠ Späte Ergebnisse aus alter Epoche werden abgelehnt",
+     "● {\"stopped\":true,\"epoch\":2}"
+    ]
+   },
+   "tag": "Agenten-Orchestrierung",
+   "quelle": "GitHub",
+   "datum": "2026-01-01",
+   "kennzahlen": [
+    {
+     "label": "Version",
+     "wert": "0.2.0"
+    },
+    {
+     "label": "GitHub-Sterne",
+     "wert": "256"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    },
+    {
+     "label": "Stopp-Test (Hersteller): Prozessbäume beendet",
+     "wert": "160 / 160"
+    },
+    {
+     "label": "Stopp-Test (Hersteller): Median",
+     "wert": "141,663 ms"
+    }
+   ],
+   "signal": "Ein kleiner, früher Open-Source-Orchestrator setzt auf harten Stopp und Fencing statt auf bloßes Markieren abgebrochener Aufgaben. Die Leistungsangaben stammen vom Hersteller selbst.",
+   "link": "https://github.com/Balanov/skein",
+   "linkLabel": "Zum Repository",
+   "id": "skein-swarm-orchestrator-mit-epoch-fence-und-ablehnung-spate",
+   "hinzugefuegt": "2026-11-03T07:57:52Z"
+  },
+  {
+   "titel": "CUA-Master: Computer-Use-Agenten lernen in rekursiven Schleifen",
+   "kurz": "Ein Forschungspapier stellt CUA-Master vor, ein Rahmenwerk, das Agenten für die Computerbedienung mit offenen Daten und rekursiven Verbesserungsschleifen trainiert. Das 27B-Modell erreicht laut Autorenangaben 80,2 Punkte auf OSWorld Verified.",
+   "artikel": [
+    "Computer-Use-Agenten (CUAs) sind KI-Systeme, die eine Benutzeroberfläche bedienen, etwa per Klick und Tastatureingabe. Ihre Entwicklung scheitert bisher oft an Interaktionsdaten, die wenig vielfältig, schwer steuerbar und nicht immer verlässlich sind.",
+    "## Zwei ineinander liegende Schleifen",
+    "CUA-Master setzt dem ein doppeltes Verbesserungssystem entgegen. Die äußere Schleife bindet kontinuierlich offene Textsammlungen ein und nutzt bekannte Schwächen des Modells, um die nächste Datenerzeugung und Optimierung zu steuern. Die innere Schleife startet mit echten Arbeitsabläufen, die aus Anleitungsvideos gewonnen werden. Diese Abläufe werden in wiederverwendbare Bausteine zerlegt, aus denen sich vielfältige und prüfbare Aufgaben erzeugen lassen.",
+    "## Datensammlung mit Rücksetzen",
+    "Für die Aufnahme der Trajektorien, also der aufgezeichneten Schrittfolgen, beschreiben die Autoren einen Wiederholungsmechanismus mit Snapshots. Bei einem Fehlschlag wird der Zustand zurückgesetzt und die Aufgabe mit Rückmeldung erneut versucht.",
+    "## Ergebnisse laut Autoren",
+    "Die Angaben stammen aus dem Paper und sind Herstellerangaben der Autoren, nicht unabhängig geprüft. Genannt werden 80,2 Punkte auf OSWorld Verified, 36,9 auf OSWorld 2.0, 43,9 auf WeaveBench und 25,0 auf Agents' Last Exam. Laut Abstract verbessert das Verfahren außerdem Qualität und Effizienz der Datensynthese und zeigt Fortschritte über mehrere Iterationen hinweg.",
+    "Das Paper wurde auf arXiv veröffentlicht und auf Hugging Face mit 22 Upvotes geteilt. Der Code liegt laut Eintrag auf GitHub, die Projektseite ist ebenfalls verlinkt."
+   ],
+   "quellen": [
+    {
+     "titel": "Paper page - CUA-Master (Hugging Face)",
+     "url": "https://huggingface.co/papers/2611.03126"
+    },
+    {
+     "titel": "Projektseite CUA-Master",
+     "url": "https://xlyu0106.github.io/CUA-Master/"
+    },
+    {
+     "titel": "GitHub-Repository CUA-Master",
+     "url": "https://github.com/xlyu0106/CUA-Master"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer Agenten-Forschung verfolgt, kann die Benchmark-Ergebnisse mit anderen Modellen vergleichen.",
+    "Entwickler können den veröffentlichten Code im Repository auf eigene Bedienaufgaben übertragen.",
+    "Privatpersonen können das Paper lesen, um zu verstehen, wie Agenten aus Fehlern lernen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "OSWorld Verified (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "CUA-Master-27B",
+      "wert": 80.2,
+      "anzeige": "80,2"
+     }
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-11-03",
+   "kennzahlen": [
+    {
+     "label": "OSWorld Verified",
+     "wert": "80,2"
+    },
+    {
+     "label": "OSWorld 2.0",
+     "wert": "36,9"
+    },
+    {
+     "label": "WeaveBench",
+     "wert": "43,9"
+    },
+    {
+     "label": "Agents' Last Exam",
+     "wert": "25,0"
+    }
+   ],
+   "signal": "Ein Forschungsrahmen, der Agenten über mehrere Trainingsrunden hinweg verbessern will, mit eigenen Angaben zu Benchmarks. Die Werte sind nicht unabhängig geprüft.",
+   "link": "https://huggingface.co/papers/2611.03126",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "cua-master-computer-use-agenten-lernen-in-rekursiven-schleif",
+   "hinzugefuegt": "2026-11-03T07:57:52Z"
+  },
   {
    "titel": "Postgres 19 verzögert sich: Mehr Bugs dank LLMs",
    "kurz": "Die PostgreSQL-Version 19 kommt voraussichtlich erst im November statt im Herbst üblichen Zeitraum. Laut Robert Haas liegt das daran, dass LLMs deutlich mehr Fehler im Code finden, deren Behebung und Prüfung viel Zeit kostet.",
@@ -12529,8 +12705,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-03T01:11:11Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-03T07:57:52Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-02T18:26:54Z"
  }
 }
