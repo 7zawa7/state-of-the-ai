@@ -2546,6 +2546,57 @@
  ],
  "radar": [
   {
+   "titel": "Agentische Computergrafik: LLM-Agenten schreiben und verfeinern Grafikcode",
+   "kurz": "Ein arXiv-Report (Hugging Face: 76 Upvotes) beschreibt, wie LLM-Agenten Grafikcode erzeugen und iterativ verbessern. Die Autoren schlagen eine einheitliche Taxonomie und ein Literatursystem für dieses Feld vor.",
+   "artikel": [
+    "Computergrafik basiert auf Code. Große Sprachmodelle (LLMs) können inzwischen Grafikcode erzeugen und ihn anhand verschiedener Rückmeldungen schrittweise verbessern. Solche Agenten sind autonome Systeme, die mehrere Schritte planen und ausführen.",
+    "## Was der Report beitragt",
+    "Die Autoren stellen zwei Beiträge vor. Erstens eine einheitliche Taxonomie, mit der sich agentische Systeme über verschiedene Grafikaufgaben hinweg beschreiben lassen. Zweitens ein Literatursystem, das Forschende dabei unterstützen soll, bestehende und neue Paper in großem Umfang auszuwerten.",
+    "## Offene Fragen",
+    "Als Trends und Herausforderungen nennt der Report unter anderem die Koordination von Agenten und Werkzeugen, die Gestaltung von Oberflächen für die Zusammenarbeit zwischen Mensch und Agent, langfristige Planung und Verfeinerung sowie eine verlässliche Bewertung interaktiver Grafiksysteme.",
+    "Der Report ist eine wissenschaftliche Übersicht und kein fertiges Produkt. Konkrete Werkzeuge für Privatpersonen werden darin nicht vorgestellt."
+   ],
+   "quellen": [
+    {
+     "titel": "Advances in Agentic Computer Graphics (Hugging Face Paper-Seite)",
+     "url": "https://huggingface.co/papers/2611.01860"
+    },
+    {
+     "titel": "arXiv 2611.01860",
+     "url": "https://arxiv.org/abs/2611.01860"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Den Report lesen, um zu verstehen, wie LLM-Agenten Grafikcode erzeugen und verbessern.",
+    "Die vorgeschlagene Taxonomie nutzen, um eigene Grafik-Agenten-Projekte einzuordnen.",
+    "Die offenen Herausforderungen als Ideenquelle für eigene Experimente verwenden."
+   ],
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "LLM-Agent",
+     "Grafikcode",
+     "Feedback",
+     "Verfeinerung"
+    ]
+   },
+   "tag": "Forschung",
+   "quelle": "arXiv",
+   "datum": "2026-11-01",
+   "kennzahlen": [
+    {
+     "label": "Upvotes auf Hugging Face",
+     "wert": "76"
+    }
+   ],
+   "signal": "Ein Forschungsreport ordnet das schnell wachsende Feld der agentischen Computergrafik und benennt offene Probleme.",
+   "link": "https://huggingface.co/papers/2611.01860",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "agentische-computergrafik-llm-agenten-schreiben-und-verfeine",
+   "hinzugefuegt": "2026-11-03T16:03:29Z"
+  },
+  {
    "titel": "Skein: Swarm-Orchestrator mit Epoch-Fence und Ablehnung später Ergebnisse",
    "kurz": "Skein ist ein Open-Source-Werkzeug (GitHub, 256 Sterne) zur Steuerung lokaler Agenten-Schwärme. Ein Not-Stopp verwirft wartende Aufgaben und lehnt verspätete Ergebnisse aus der alten Epoche ab.",
    "artikel": [
@@ -9586,6 +9637,79 @@
  ],
  "projekte": [
   {
+   "titel": "Subvocal: Smart-Brille soll lautloses Sprechen in Text umwandeln",
+   "kurz": "Das Startup The Subvocal Company aus dem Y-Combinator-Programm (F26) entwickelt Smart-Glasses, die stumm artikulierte Wörter per Funk erfassen und in Text übersetzen. Die Gründer stellen den Prototyp auf Hacker News vor und haben Vorbestellungen für 500 Geräte eröffnet.",
+   "artikel": [
+    "Die Brille soll es ermöglichen, mit dem Computer zu sprechen, ohne laut zu werden. Man formt die Wörter lautlos mit dem Mund, und die Brille wandelt sie in Text um. Laut den Gründern geschieht das so schnell wie gesprochene Sprache. Das Projekt stammt von Aarush und Arnav, die zuvor Informatik an der Georgia Tech studierten.",
+    "## Vom Muskelsignal zum Funk",
+    "Die ersten Prototypen arbeiteten mit EMG, also der Messung elektrischer Muskelsignale über Elektroden im Gesicht. Dieser Ansatz scheiterte unter anderem an Schweiß, elektrischen Störungen, wechselnder Platzierung der Elektroden und an der Tatsache, dass niemand Elektroden ins Gesicht kleben möchte. Deshalb wechselte das Team zu HF-Sensorik (Funk, ähnlich Bluetooth). Die Wellen durchdringen Zunge, Lippen und Gaumensegel, und stille Artikulation verändert sie messbar.",
+    "## Training und Antennen",
+    "Die Gründer trainieren Foundation-Modelle, also große KI-Modelle für breite Aufgaben, mit diesen Funkdaten. Die Antennen sind inzwischen in die Brillenfassung eingebaut, zuvor hatte das Team sie mit Klebeband und einem eigenen Kopfgestell befestigt. Da Gesichter unterschiedlich sind, war die Generalisierung zwischen Personen die größte Hürde. Laut Beschreibung half nur mehr Trainingsdaten: Das Team ließ Menschen in Kabinen Texte lesen, und die Fehlerquote sank mit wachsender Datenmenge. Für den试-Nutzer im Video genügte eine Kalibrierung mit 20 Sätzen.",
+    "## Ausblick",
+    "Die Entwicklung läuft laut Ankündigung weiter, Auslieferung ist für Q1 2027 geplant. Die Dekodierung erfolgt laut Herstellerangabe über eine Begleit-App auf Laptop oder Telefon in der Cloud, die Latenz liegt meist unter 500 Millisekunden. Statt eines Aufwachworts ist eine Taste geplant, etwa Alt, ähnlich wie bei Wispr Flow. Vorbestellungen für die erste Charge von 500 Geräten mit 200 Dollar Rabatt auf den Endpreis laufen, die Zuteilung ist laut Gründern knapp."
+   ],
+   "quellen": [
+    {
+     "titel": "Show HN: Subvocal – Talk to your computer without making noise",
+     "url": "https://news.ycombinator.com/item?id=50340088"
+    },
+    {
+     "titel": "Subvocal Company",
+     "url": "https://subvocal.company/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Man kann die Vorbestellung prüfen, sofern man Interesse an einer lautlosen Diktierbrille hat.",
+    "Man kann die Entwicklung verfolgen, etwa die geplanten Auslieferung im Q1 2027.",
+    "Man kann in öffentlichen Räumen oder Bibliotheken Texte diktieren, ohne andere zu stören, sobald das Produkt verfügbar ist."
+   ],
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Brille",
+     "Funk-Sensorik",
+     "Cloud-Decoder",
+     "Laptop/Handy"
+    ]
+   },
+   "tag": "Smart-Glasses",
+   "tools": [
+    "Subvocal-Brille",
+    "Funk-Sensorik (HF)",
+    "Foundation-Modelle"
+   ],
+   "macher": "Aarush und Arnav (The Subvocal Company)",
+   "branche": "Wearables / Silent Speech",
+   "jahr": 2026,
+   "kennzahlen": [
+    {
+     "label": "Vorbestellungen (erste Charge)",
+     "wert": "500 Geräte"
+    },
+    {
+     "label": "Rabatt bei Vorbestellung",
+     "wert": "200 Dollar"
+    },
+    {
+     "label": "Latenz laut Hersteller",
+     "wert": "meist unter 500 ms"
+    },
+    {
+     "label": "Kalibrierung",
+     "wert": "20 Sätze"
+    },
+    {
+     "label": "Auslieferung (geplant)",
+     "wert": "Q1 2027"
+    }
+   ],
+   "link": "https://subvocal.company/",
+   "linkLabel": "Zur Herstellerseite",
+   "id": "subvocal-smart-brille-soll-lautloses-sprechen-in-text-umwand",
+   "hinzugefuegt": "2026-11-03T16:03:29Z"
+  },
+  {
    "titel": "OmniDiff: Open-Source-Git-Difftool in Rust vergleicht Dateien inhaltsbasiert",
    "kurz": "OmniDiff ist ein quelloffenes Diff-Werkzeug in Rust, das Änderungen je nach Dateityp mit eigenen Algorithmen vergleicht. Es lässt sich als Git-Difftool einsetzen und wurde auf Hacker News mit 301 Punkten bekannt.",
    "artikel": [
@@ -12705,8 +12829,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-03T07:57:52Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-11-03T16:03:29Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-02T18:26:54Z"
  }
 }
