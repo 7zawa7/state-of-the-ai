@@ -2505,6 +2505,121 @@
  ],
  "radar": [
   {
+   "titel": "Postgres 19 verzögert sich: Mehr Bugs dank LLMs",
+   "kurz": "Die PostgreSQL-Version 19 kommt voraussichtlich erst im November statt im Herbst üblichen Zeitraum. Laut Robert Haas liegt das daran, dass LLMs deutlich mehr Fehler im Code finden, deren Behebung und Prüfung viel Zeit kostet.",
+   "artikel": [
+    "Die Veröffentlichung von PostgreSQL 19 verzögert sich nach Angaben des Entwicklers Robert Haas. Üblicherweise erscheinen Hauptversionen zwischen Mitte September und Mitte Oktober. Laut seinem Blogbeitrag vom 30. Oktober 2026 dürfte Version 19 erst im November erscheinen, eine weitere Verschiebung sei nicht ausgeschlossen.",
+    "## Späte Feature-Rücknahmen",
+    "Mehrere größere Funktionen wurden spät in der Beta-Phase zurückgezogen: „UPDATE/DELETE FOR PORTION OF“, SQL Property Graph Queries (SQL/PGQ) sowie ALTER TABLE … MERGE PARTITION bzw. SPLIT PARTITION. Die Rücknahmen fielen zwischen dem 27. August und dem 15. September. Einzelne Rücknahmen nach dem Feature-Freeze sind üblich, mehrere große in so kurzer Zeit gelten aber als ungewöhnlich.",
+    "## Mehr Fehler, mehr Korrekturen",
+    "Haas nennt LLMs als Hauptgrund. Der Code von PostgreSQL ist groß und alt, die Git-Historie reicht über 30 Jahre zurück. Neu ist, dass Fehler deutlich leichter zu finden sind. Die Korrektur fällt dagegen nicht im gleichen Maß leichter. Zwischen dem 8. April und dem 25. September 2026 gab es im Master-Branch 1443 Commits, im Vorjahreszeitraum 1037. Die nachträglich in ältere Zweige übernommenen Commits (Backpatches) stiegen laut Haas um mehr als 60 Prozent. Für REL_17_STABLE und REL_18_STABLE stieg die Zahl der Backpatches im Jahresvergleich um mehr als 74 Prozent.",
+    "## Zwei Gründe für die Verzögerung",
+    "Erstens brauchen die vielen Korrekturen mehr Zeit. LLMs können Vorschläge für Fixes schreiben, diese sind aber nicht immer korrekt oder entsprechen nicht den Projektstandards, daher müssen Menschen sie prüfen und committen. Zweitens floss Prüfzeit für das Release in Sicherheitslücken und Fehler in den älteren Zweigen. Dadurch dauerte es länger, zu entscheiden, was vor dem Release zurückgezogen werden muss.",
+    "## Ausblick",
+    "Haas hält die Verzögerung selbst nicht für gravierend, sie spiegle den Anspruch an Qualität wider. Offen sei dagegen, wie das Projekt die jahrzehntealten, bisher unentdeckten Fehler aufholen und zugleich Neues entwickeln kann. Seine Einschätzung: Künftig werde jede neue Funktion durch KI geprüft, das sei Herausforderung und Chance zugleich.",
+    "Hinweis: Die Angaben stammen aus dem Blog des Autors und aus der Hacker-News-Diskussion mit 805 Punkten; es handelt sich um die Einschätzung eines Entwicklers, nicht um eine offizielle Ankündigung des PostgreSQL-Projekts. LLM steht für Large Language Model, Backpatch bezeichnet eine nachträgliche Übernahme einer Korrektur in ältere Versionszweige."
+   ],
+   "quellen": [
+    {
+     "titel": "Robert Haas: Postgres 19 is late, and it's AI's fault",
+     "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html"
+    },
+    {
+     "titel": "Hacker News: Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50312408"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer eigene PostgreSQL-Installationen betreibt, sollte Release-Termine und Backpatch-Hinweise im Blick behalten.",
+    "Entwickler können Bugs mit LLM-Hilfe suchen, müssen Vorschläge aber vor dem Einsatz prüfen.",
+    "Anwender können auf eine stabilere Version 19 warten, wenn neue Funktionen für sie nicht dringend sind."
+   ],
+   "quelle": "Hacker News",
+   "datum": "2026-10-30",
+   "kennzahlen": [
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "805"
+    },
+    {
+     "label": "Commits Master (8. Apr. bis 25. Sep. 2026)",
+     "wert": "1443 (Vorjahr: 1037)"
+    },
+    {
+     "label": "Backpatch-Commits REL_18_STABLE (2026)",
+     "wert": "433 (Vorjahr REL_17_STABLE: 248)"
+    }
+   ],
+   "signal": "Späte Feature-Rücknahmen und eine Verschiebung von PostgreSQL 19 werden mit der stark gestiegenen Zahl von LLM-gefundenen Bugs erklärt.",
+   "link": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html",
+   "linkLabel": "Originalbeitrag lesen",
+   "id": "postgres-19-verzogert-sich-mehr-bugs-dank-llms",
+   "hinzugefuegt": "2026-11-03T01:11:11Z"
+  },
+  {
+   "titel": "OpenAI baut Git-Backend Pando für Codex-Tempo",
+   "kurz": "OpenAI hat mit Pando ein neues Backend für Git-Repositories entwickelt, das die Parallelität aus Codex bewältigen soll. Laut Unternehmen wurde die Push-Latenz im Median fast verfünffacht und täglich fast ein Petabyte Git-Daten ausgeliefert.",
+   "artikel": [
+    "## Warum ein neues Backend",
+    "Durch Codex arbeiten Ingenieure bei OpenAI deutlich mehr Aufgaben parallel. Dadurch entstehen mehr Branches, Pushes, Merges sowie Fetches und Clones aus Entwicklungsumgebungen, Forschungsjobs und CI. Laut OpenAI kamen die Systeme für das Monorepo ab etwa Ende des Vorjahres kaum noch hinterher, mit langsamen Fetches und Pushes sowie fehlgeschlagenen Merges. Die Zuverlässigkeit sank zeitweise unter 90 Prozent.",
+    "Statt Git zu ersetzen, behielt das Team die Kompatibilität mit dem Git-Protokoll und dem Git-Client bei. Engineering-Teams und Agenten können so ihre bestehenden Arbeitsabläufe beibehalten. Pando wurde laut Unternehmen eingeführt, ohne die Arbeit des Teams zu unterbrechen.",
+    "## Zwei Ziele",
+    "Pando soll Schreibvorgänge horizontal skalieren, besonders wenn viele Branches gleichzeitig gepusht werden. Gleichzeitig soll der Lesedurchsatz so hoch sein, dass Clients ihre verfügbare Netzwerkbandbreite voll ausnutzen können. Dafür werden Updates für jeden Branch getrennt koordiniert. Ein Nachteil: Ein Leser, der mehrere Branches betrachtet, kann diese zu unterschiedlichen Zeitpunkten sehen.",
+    "Zudem wiederverwendet Pando Packfiles über mehrere Fetches hinweg. Ein Packfile ist Gits Format, das mehrere Objekte zusammen komprimiert. Der Server kann dieselben Bytes so an viele Clients ausliefern, mit wenig Rechenaufwand.",
+    "## Hintergrund: Git-Objekte",
+    "Git speichert Blobs (Dateiinhalte), Trees (Verzeichnisse), Commits und Tags als Objekte, die über ihre Hashes identifiziert werden. Branches sind Referenzen (Refs), die auf Commits zeigen. Beim Fetch sendet der Server die Objekte, die dem Client fehlen, als Packfile.",
+    "## Einordnung",
+    "Laut OpenAI ist Pando im Produktivbetrieb und bedient die gesamte Entwicklung im Monorepo. Die Kennzahlen stammen aus der Eigenangabe des Unternehmens und sind nicht unabhängig geprüft. Der Blogbeitrag kündigt an, dass OpenAI weiter zu Git beitragen will, um agentenskalierte Arbeit zu unterstützen."
+   ],
+   "quellen": [
+    {
+     "titel": "Scaling Git at OpenAI (OpenAI Blog)",
+     "url": "https://openai.com/index/scaling-git-at-openai"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer große Repositories betreibt, kann prüfen, ob Git-Hosting mit parallelen Pushes zum Engpass wird.",
+    "Entwickler, die Git-Grundlagen lernen möchten, finden im Beitrag eine kompakte Erklärung von Objekten, Refs und Packfiles."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Push-Latenz (Median, Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Vorher",
+      "wert": 5,
+      "anzeige": "Ausgangswert"
+     },
+     {
+      "label": "Pando",
+      "wert": 1,
+      "anzeige": "fast 5x schneller (Herstellerangabe)"
+     }
+    ]
+   },
+   "tag": "Infrastruktur",
+   "bereich": "Agenten",
+   "datum": "2026-11-02",
+   "quelle": "Lab-Blog",
+   "kennzahlen": [
+    {
+     "label": "Median-Push-Latenz",
+     "wert": "fast 5x besser (laut OpenAI)"
+    },
+    {
+     "label": "Tägliches Datenvolumen",
+     "wert": "nahezu 1 Petabyte Git-Daten (laut OpenAI)"
+    }
+   ],
+   "signal": "OpenAI investiert in die Skalierung von Git für agentische Entwicklungsworkflows und will Verbesserungen upstream beisteuern.",
+   "link": "https://openai.com/index/scaling-git-at-openai",
+   "linkLabel": "Originalbeitrag lesen",
+   "id": "openai-baut-git-backend-pando-fur-codex-tempo",
+   "hinzugefuegt": "2026-11-03T01:11:11Z"
+  },
+  {
    "titel": "ReLift: Dichtes 3D-Tracking durch Reparatur geliftete Trajektorien",
    "kurz": "ReLift ist ein Forschungsansatz für dichtes 3D-Tracking aus monokularen Videos. Er kombiniert vortrainierte 2D-Tracker und 3D-Geometriemodelle mit einem kleinen Korrekturmodul, das Fehler repariert und verdeckte Bewegungen ergänzt.",
    "artikel": [
@@ -12414,7 +12529,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-02T18:26:54Z",
+  "letzterScan": "2026-11-03T01:11:11Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-11-02T18:26:54Z"
  }
