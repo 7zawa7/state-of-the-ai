@@ -1,6 +1,53 @@
 {
  "news": [
   {
+   "titel": "OpenAI: GPT-6 Astra soll Hardware-Gerät in unter einer Woche entworfen haben",
+   "kurz": "Laut OpenAI hat das Modell GPT-6 Astra ein Gerät für den Codex-Coding-Agenten fast komplett allein entworfen. Mehrere Überarbeitungsrunden waren trotzdem nötig.",
+   "artikel": [
+    "OpenAIs Hardware-Team hat laut Unternehmensangaben das Modell GPT-6 Astra genutzt, um ein Gerät zu entwerfen, über das Nutzer mit dem Codex-Coding-Agenten sprechen können. Die Arbeit lief als Nebenprojekt und war in unter einer Woche abgeschlossen.",
+    "## Was das Modell übernahm",
+    "Laut OpenAI übernahm Astra praktisch alle Schritte: vom Gehäuse über das Platinenlayout, inklusive Bauteilauswahl und Leiterbahnführung, bis hin zur Firmware und der Benutzeroberfläche. Ein Auftragsfertiger stellte danach eine kleine Serie Prototypen in weniger als einem Monat her.",
+    "## Probleme bei der Umsetzung",
+    "Vor der Produktion waren mehrere Überarbeitungsrunden nötig. Astra berücksichtigte laut Bericht nicht immer Fertigungsgrenzen, Toleranzen und Montagedetails. Eine Platine (PCB, gedruckte Leiterplatte) muss etwa so gefertigt werden, dass Bauteile und Leiterbahnen tatsächlich zusammenpassen.",
+    "## Benchmark-Angaben",
+    "OpenAI verweist zudem auf einen großen Leistungssprung. Im Benchmark BenchCAD 2.0 erreicht ein neueres, internes Modell laut Herstellerangabe 0,875 Punkte. GPT-6 Astra kommt auf höchster Denkstufe auf 0,594 Punkte. Der Test prüft, ob Modelle 3D-Teile und Baugruppen rekonstruieren und Verbindungen auf Leiterplatten erkennen können. Details zu dem internen Modell nannte OpenAI nicht.",
+    "## Einsatz im Hardware-Team",
+    "Laut OpenAI nutzen die Hardware-Teams Codex und ChatGPT für CAD-Modelle (computergestützte Konstruktion), Fertigungszeichnungen und Simulationen, etwa in den Bereichen Robotik und Rechenzentrums-Infrastruktur. Die Token-Nutzung sei seit Februar um das 23-Fache gestiegen. Token sind die Textbausteine, nach denen KI-Dienste abrechnen. OpenAI entwickelt zudem eigene Hardware, die laut Bericht zwischen KI-Lautsprecher und Smartphone liegen soll."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI says GPT-6 Astra designed a hardware device from scratch in under a week (The Decoder)",
+     "url": "https://the-decoder.com/openai-says-gpt-6-astra-designed-a-hardware-device-from-scratch-in-under-a-week/"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Eigene Gehäuse- oder Halterungsideen als CAD-Modell mit KI-Unterstützung skizzieren lassen.",
+    "Den Ablauf von Idee bis Prototyp verfolgen, um zu sehen, wo Modelle Fertigungsgrenzen übersehen.",
+    "Bei Hobbyprojekten mit Platinen die KI-Vorschläge vor dem Bestellen auf Toleranzen prüfen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "BenchCAD 2.0: Punktzahl (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "GPT-6 Astra (höchste Stufe)",
+      "wert": 0.594,
+      "anzeige": "0,594"
+     },
+     {
+      "label": "Internes OpenAI-Modell",
+      "wert": 0.875,
+      "anzeige": "0,875"
+     }
+    ]
+   },
+   "bereich": "3D",
+   "datum": "2026-11-03",
+   "id": "openai-gpt-6-astra-soll-hardware-gerat-in-unter-einer-woche-",
+   "hinzugefuegt": "2026-11-03T21:40:36Z"
+  },
+  {
    "titel": "OpenAI plant nächsten Sicherheits-Sprint mit Partner Cathedral",
    "kurz": "OpenAI bereitet einen weiteren internen Sicherheits-Sprint vor, bei dem eigene Teams, Forscher externer Sicherheitsfirmen und eigene KI-Modelle die Abwehr testen sollen. Zudem wurden die Prämien des Bug-Bounty-Programms deutlich erhöht.",
    "artikel": [
@@ -12829,8 +12876,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-03T16:03:29Z",
-  "neueFunde": 2,
-  "standAktualisiert": "2026-11-02T18:26:54Z"
+  "letzterScan": "2026-11-03T21:40:36Z",
+  "neueFunde": 1,
+  "standAktualisiert": "2026-11-03T21:40:36Z"
  }
 }
