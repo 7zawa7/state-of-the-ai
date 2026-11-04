@@ -2632,6 +2632,183 @@
  ],
  "radar": [
   {
+   "titel": "Ein 200-MHz-Pentium-Pro schlägt 1996 Kasparov? Moderne Schach-Software auf alter Hardware",
+   "kurz": "Der Blogger Nicholas Carlini lässt eine angepasste Version von Stockfish auf einem Pentium Pro von 1995 laufen und schätzt deren Spielstärke auf rund 3300 Elo. Sein Hauptbefund: Ein großer Teil des Fortschritts im Schach-Computing stammt aus besserer Software, nicht aus schnellerer Hardware.",
+   "artikel": [
+    "Am 10. Februar 1996 besiegte IBMs Deep Blue den damaligen Schachweltmeister Garry Kasparov erstmals in einer Partie. Ein Jahr später gewann Deep Blue das Revanche-Match mit 3,5 zu 2,5. Dafür hatte IBM mehrere Millionen Dollar in einen Spezialrechner gesteckt, der mit 30 P2SC-Prozessoren und 480 eigens entwickelten Schach-Coprozessoren arbeitete.",
+    "Nicholas Carlini stellt die Frage, ob dafür überhaupt Spezialhardware nötig war. Seine Antwort: Ein handelsüblicher Desktop von 1996 mit einer besseren Schach-Engine hätte wohl ebenfalls gewonnen. Als Beleg nutzt er einen 200-MHz-Pentium-Pro mit 64 MB RAM, auf dem eine angepasste Version von Stockfish läuft. Laut Carlini liegt deren geschätzte Spielstärke bei 3300 ± 87 Elo, Kasparov kam auf knapp 2800.",
+    "## Software statt Hardware",
+    "Elo ist eine Maßzahl für die Spielstärke. Ein Unterschied von 200 Elo bedeutet laut Artikel, dass der stärkere Spieler etwa drei von vier Partien gewinnt. Die besten Engines, die 1996 auf üblicher Hardware liefen, lagen bei rund 2300 Elo, Deep Blue bei 2700, modernes Stockfish bei etwa 3700.",
+    "Von den rund 1335 Elo, die seither gewonnen wurden, führt Carlini 720 auf bessere Programmierung zurück. Für einen Test nahm er die Engine Crafty aus dem Jahr 1996. Auf dem Pentium Pro erreichte sie 2383 Elo bei zehn Sekunden pro Zug. Nach Ergänzung moderner Verfahren wie Fail-Soft, LMR, Correction History und neuronalen Netzen (NNUE) stieg der Wert auf 2974 Elo bei gleicher Bedenkzeit.",
+    "## Stockfish auf Pentium Pro",
+    "Im zweiten Experiment portierte Carlini Stockfish auf die 32-Bit-Architektur des Pentium Pro und begrenzte den Speicherbedarf auf 64 MB. Diese Rohfassung erreichte bei zehn Sekunden pro Zug etwa 2940 Elo. Nach Anpassungen an den Prozessor stieg der Wert auf 3109 Elo bei zehn Sekunden und 3180 Elo bei 30 Sekunden pro Zug.",
+    "Ein Match über 100 Partien zeigte den Abstand: Die Stockfish-Version auf dem Pentium Pro gewann 78 Partien, remis endeten 17, verloren wurden 5 gegen Crafty auf moderner Hardware. Der Pentium Pro selbst war laut Artikel ein 1995 für 1.325 Dollar verkauftes Gerät; mit Speicher und Zubehör hätte ein solcher Rechner damals wohl vier- bis fünftausend Dollar gekostet.",
+    "Carlini betont, dass Spielstärke-Werte aus eigenen Tests stammen und keine offiziellen Herstellerangaben sind. Einen Online-Gegner bietet er ebenfalls an: Die Maschine ist über eine serielle Verbindung ans Internet angebunden und kann direkt im Browser gespielt werden."
+   ],
+   "quellen": [
+    {
+     "titel": "Could a modern chess engine on a Pentium have defeated Kasparov in 1996? (Nicholas Carlini)",
+     "url": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50349276"
+    }
+   ],
+   "demo": "game",
+   "machen": [
+    "Eigene alte Schach-Engines wie Crafty aus dem Quellcode kompilieren und gegen moderne Versionen antreten lassen.",
+    "Alte Hardware als Experiment für Software-Optimierung nutzen, etwa 32-Bit-Ports ausprobieren.",
+    "Die Partien im Browser gegen den Pentium Pro spielen, sofern der Dienst verfügbar ist."
+   ],
+   "quelle": "Hacker News",
+   "datum": "2026-11-01",
+   "kennzahlen": [
+    {
+     "label": "Pentium Pro Takt",
+     "wert": "200 MHz"
+    },
+    {
+     "label": "RAM",
+     "wert": "64 MB"
+    },
+    {
+     "label": "Stockfish auf Pentium Pro (geschätzt)",
+     "wert": "3300 ± 87 Elo"
+    },
+    {
+     "label": "Kasparov",
+     "wert": "knapp 2800 Elo"
+    },
+    {
+     "label": "Deep Blue",
+     "wert": "2700 Elo"
+    },
+    {
+     "label": "Modernes Stockfish (Artikel)",
+     "wert": "etwa 3700 Elo"
+    },
+    {
+     "label": "Match Stockfish vs. Crafty",
+     "wert": "78 Siege, 17 Remis, 5 Niederlagen"
+    }
+   ],
+   "signal": "Ein großer Teil der Schach-Fortschritte seit 1996 stammt laut Carlini aus besserer Software: 720 von 1335 Elo-Punkten, bei Tests mit Crafty und Stockfish auf identischer Hardware.",
+   "link": "https://nicholas.carlini.com/writing/2026/algorithmic-improvements-chess.html",
+   "linkLabel": "Originalartikel lesen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Elo-Werte laut Artikel",
+    "balken": [
+     {
+      "label": "Crafty 1996, Pentium Pro, 10 s",
+      "wert": 2383,
+      "anzeige": "2383 Elo"
+     },
+     {
+      "label": "Crafty mit modernem Wissen, Pentium Pro, 10 s",
+      "wert": 2974,
+      "anzeige": "2974 Elo"
+     },
+     {
+      "label": "Stockfish (Rohport), Pentium Pro, 10 s",
+      "wert": 2940,
+      "anzeige": "2940 Elo"
+     },
+     {
+      "label": "Stockfish (angepasst), Pentium Pro, 30 s",
+      "wert": 3180,
+      "anzeige": "3180 Elo"
+     }
+    ]
+   },
+   "id": "ein-200-mhz-pentium-pro-schlagt-1996-kasparov-moderne-schach",
+   "hinzugefuegt": "2026-11-04T08:04:45Z"
+  },
+  {
+   "titel": "Route Anything: KI-System wählt pro Aufgabe das passende Modell",
+   "kurz": "Ein arXiv-Paper stellt Route Anything vor, ein Framework, das pro Eingabe das passende Modell oder die passende Policy auswählt. Laut Autoren steigert das die Effizienz im Schnitt um den Faktor 8,82 gegenüber einem Referenzmodell.",
+   "artikel": [
+    "Die Autorinnen und Autoren um Pengfei Zhou beschreiben einen Ansatz, der statt eines einzigen großen Modells viele spezialisierte Modelle, Werkzeuge und Policies koordiniert. Ein Router entscheidet dabei für jede Aufgabe, welcher Kandidat eingesetzt wird.",
+    "## Das Problem",
+    "Die zentrale Frage lautet, wie ein System den jeweils leistungsfähigsten Kandidaten auswählt und dabei Leistung und Rechenkosten abwägt. Die Arbeit entwickelt dafür einen theoretischen Rahmen, der beschreibt, wie ein Router unter diesem Zielkonflikt optimal entscheidet.",
+    "## Die Datenbasis",
+    "Für die Untersuchung wurde eine sogenannte omni-modale Trajektorien-Matrix aufgebaut. Sie umfasst 25 Benchmarks aus Sprache, Bild, Video, Sprachausgabe, Code, Büro-Agenten und Robotik sowie 374.401 bewertete Läufe von 452 Kandidatenkonfigurationen.",
+    "## Ergebnisse",
+    "Laut Paper übertrifft ein Orakel-Router, der für jede Eingabe die beste Option kennt, das beste feste Modell um 5,4 Punkte. Gelernte Router liegen über 16 Benchmarks um 0,3 Punkte vorne, bei Videogenerierung um 2,1 Punkte und bei Robotermanipulation um 1,1 Punkte, bei 24 Prozent weniger Policy-Zeit.",
+    "Die Autorinnen und Autoren nennen zudem im Schnitt einen Effizienzgewinn von 8,82-fach gegenüber dem Referenzmodell. Das sind Angaben aus dem Paper selbst und nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems (Hugging Face)",
+     "url": "https://huggingface.co/papers/2611.05275"
+    },
+    {
+     "titel": "arXiv 2611.05275",
+     "url": "https://arxiv.org/abs/2611.05275"
+    },
+    {
+     "titel": "Projektseite",
+     "url": "https://mikeeeeeeeeeeeeee.github.io/RouteAnything"
+    },
+    {
+     "titel": "GitHub-Repository",
+     "url": "https://github.com/InfRec-Cardinal/route-anything"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Verfolge, wie Routing-Systeme aus mehreren KI-Modellen die Kosten pro Aufgabe senken können.",
+    "Lies das Paper und den Code, um zu prüfen, welche Benchmarks und Kennzahlen genutzt wurden.",
+    "Nutze die Idee, mehrere kleine Modelle je nach Aufgabe einzusetzen, statt immer das größte Modell zu verwenden."
+   ],
+   "quelle": "arXiv",
+   "datum": "2026-11-03",
+   "kennzahlen": [
+    {
+     "label": "Benchmarks",
+     "wert": "25"
+    },
+    {
+     "label": "Bewertete Läufe",
+     "wert": "374.401"
+    },
+    {
+     "label": "Kandidatenkonfigurationen",
+     "wert": "452"
+    },
+    {
+     "label": "Effizienzgewinn im Schnitt (laut Autoren)",
+     "wert": "8,82×"
+    },
+    {
+     "label": "Orakel-Router vs. bestes festes Modell",
+     "wert": "+5,4 Punkte"
+    }
+   ],
+   "signal": "Routing mehrerer spezialisierter Modelle statt eines Allzweckmodells wird als möglicher Weg Richtung AGI diskutiert. Die Werte stammen aus dem Paper der Autoren und sind Selbstangaben.",
+   "link": "https://huggingface.co/papers/2611.05275",
+   "linkLabel": "Paper auf Hugging Face ansehen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Effizienzgewinn gegenüber Referenzmodell (laut Autoren)",
+    "balken": [
+     {
+      "label": "Referenzmodell",
+      "wert": 1,
+      "anzeige": "1×"
+     },
+     {
+      "label": "Route Anything (Durchschnitt)",
+      "wert": 8.82,
+      "anzeige": "8,82×"
+     }
+    ]
+   },
+   "id": "route-anything-ki-system-wahlt-pro-aufgabe-das-passende-mode",
+   "hinzugefuegt": "2026-11-04T08:04:45Z"
+  },
+  {
    "titel": "Qwen 3.8 27B auf dem Laptop liest Modellgewichte",
    "kurz": "Ein Experiment von Simon Willison zeigt, dass das lokale Modell Qwen 3.8 27B aus rohen Gewichten erkennen kann, welches Spiel ein Netz gelernt hat. Bei drei von vier Spielen lag es richtig, beim Freeway-Beispiel scheiterte es.",
    "artikel": [
@@ -13139,8 +13316,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-04T01:42:20Z",
-  "neueFunde": 4,
+  "letzterScan": "2026-11-04T08:04:45Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-03T21:40:36Z"
  }
 }
