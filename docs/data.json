@@ -10272,6 +10272,72 @@
  ],
  "projekte": [
   {
+   "titel": "PromptReel: Kostenlose Text-zu-Video-App für Windows läuft lokal auf dem eigenen PC",
+   "kurz": "PromptReel ist eine kostenlose Desktop-App für Windows, die aus einem Textbefehl einen kurzen Videoclip erzeugt. Die KI-Berechnung läuft laut Projektseite lokal auf dem eigenen Rechner, basierend auf dem Open-Source-Modell Wan 2.2.",
+   "artikel": [
+    "Das GitHub-Projekt PromptReel bietet eine Desktop-App für Windows, mit der man eine Szene in Textform beschreibt und daraus einen kurzen Videoclip erhält. Laut Projektbeschreibung werden keine Credits, kein Abo und keine Warteschlange benötigt. Das Repository hatte zum Zeitpunkt der Erfassung 104 Sterne auf GitHub.",
+    "## So funktioniert es",
+    "Man beschreibt die Einstellung und die Kamerabewegung, wählt das Format (breit, hochkant oder quadratisch) sowie Länge und Qualität und startet die Erzeugung. Der Clip wird im Hintergrund gerendert, während man weiterarbeiten kann. Jeder Clip wird zusammen mit seinem Prompt gespeichert und lässt sich als MP4 exportieren oder mit geänderten Worten erneut erzeugen.",
+    "## Technik",
+    "Als Modell kommt Wan 2.2 zum Einsatz. Die Projektseite beschreibt es als Open-Source-Videomodell unter der Apache-2.0-Lizenz. Ein Text-zu-Video-Modell ist eine KI, die aus einer Textbeschreibung bewegte Bilder erzeugt. Laut Herstellerangabe bleiben Prompts und Clips auf dem eigenen Computer. Für den ersten Start ist eine Internetverbindung nötig, um das Videomodell herunterzuladen; danach soll die App offline arbeiten.",
+    "## Installation und Einschränkungen",
+    "Die Installation erfolgt über eine einzelne .exe-Datei aus dem neuesten Release, ohne Entpacken und ohne Administratorrechte. Voraussetzung ist Windows 10 oder 11 (64-bit). Eine macOS-Version ist laut Projektseite in Entwicklung. Die App befindet sich nach Angaben der Betreiber in der Beta-Phase, daher können sich Dinge ändern.",
+    "## Kommerzielle Nutzung",
+    "Laut FAQ erlaubt die Modelllizenz kommerzielle Nutzung. Die Projektseite empfiehlt jedoch, die endgültigen Bedingungen in der App zu lesen, bevor man Kundenarbeit veröffentlicht."
+   ],
+   "quellen": [
+    {
+     "titel": "PromptReel auf GitHub",
+     "url": "https://github.com/silverdugongenhance/PromptReel"
+    },
+    {
+     "titel": "PromptReel Website",
+     "url": "https://promptreel.xo.je"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Kurze Videoclips aus Textbeschreibungen für Social Media oder Moodboards erzeugen, lokal ohne Abo.",
+    "Eine Szene mit verschiedenen Formaten (breit, hochkant, quadratisch) und Kamerafahrten ausprobieren.",
+    "Prompts variieren und Ergebnisse direkt vergleichen, da jeder Clip mit seinem Prompt gespeichert wird."
+   ],
+   "ausprobieren": {
+    "prompt": "A paper lantern drifts over a quiet lake, slow tilt up to the stars.",
+    "tool": "PromptReel",
+    "url": "https://promptreel.xo.je"
+   },
+   "vorschau": {
+    "szene": "video",
+    "titel": "PromptReel"
+   },
+   "tag": "Open Source · Windows",
+   "macher": "silverdugongenhance (GitHub-Nutzer)",
+   "branche": "Video / Generative KI",
+   "jahr": "2026",
+   "tools": [
+    "Wan 2.2",
+    "Windows 10/11"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "104"
+    },
+    {
+     "label": "Lizenz des Modells",
+     "wert": "Apache 2.0"
+    },
+    {
+     "label": "Plattform",
+     "wert": "Windows 10/11 (64-bit)"
+    }
+   ],
+   "link": "https://github.com/silverdugongenhance/PromptReel",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "promptreel-kostenlose-text-zu-video-app-fur-windows-lauft-lo",
+   "hinzugefuegt": "2026-11-04T21:55:09Z"
+  },
+  {
    "titel": "Agent Autoloop: Kommandozeilen-Agenten arbeiten im Hintergrund weiter",
    "kurz": "Agent Autoloop ist ein Open-Source-Werkzeug, mit dem Kommandozeilen-Agenten wie Claude Code oder Codex Aufgaben selbstständig im Hintergrund erledigen. Nur bei unklaren Entscheidungen schickt es eine Karte an den Nutzer.",
    "artikel": [
@@ -13537,8 +13603,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-04T16:10:52Z",
-  "neueFunde": 3,
-  "standAktualisiert": "2026-11-03T21:40:36Z"
+  "letzterScan": "2026-11-04T21:55:09Z",
+  "neueFunde": 1,
+  "standAktualisiert": "2026-11-04T21:55:09Z"
  }
 }
