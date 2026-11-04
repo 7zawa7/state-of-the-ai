@@ -2632,6 +2632,227 @@
  ],
  "radar": [
   {
+   "titel": "Postman installiert ohne Nachfrage KI-Plugins in Codex und Claude Code",
+   "kurz": "Ein Nutzer berichtet, dass die Postman-Desktop-App nach dem Öffnen Plugins in Codex und Claude Code automatisch installiert, eine globale Startanweisung hinterlegt und den eigenen Hook als vertrauenswürdig markiert hat. Der Issue-Bericht auf GitHub hatte auf Hacker News 1436 Punkte.",
+   "artikel": [
+    "Ein Nutzer hat im GitHub-Issue #14370 des Postman-Supports beschrieben, dass sich nach dem Öffnen der Postman-Desktop-App (Version 12.33.4 laut Bericht) seine Coding-Agenten verändert haben. Im Protokoll der App steht ein automatischer Vorgang namens „auto-existing-upgrade“, der die Plugins „codex“ und „claude-code“ als installiert meldet. Der Nutzer bewertet das als schweres Problem bei Zustimmung und Vertrauen.",
+    "## Was laut Bericht geändert wurde",
+    "In der globalen Konfiguration von Codex wurde ein Marketplace von Postman eingetragen und das Plugin aktiviert. Ein Session-Start-Hook gibt eine Anweisung aus, nach der bei nicht trivialen API-Aufgaben der Postman-Skill „api-engineer“ geladen werden soll. Der Hook ist außerdem als vertrauenswürdig eingetragen. Ein Hook ist dabei ein Skript, das die Agenten-Software bei bestimmten Ereignissen automatisch ausführt. Zusätzlich wurde ein entfernter MCP-Server von Postman aktiviert, dessen Start laut Codex-Protokoll mit einem Authentifizierungsfehler scheiterte.",
+    "## Einordnung",
+    "Laut Issue hat auch Claude Code ein Postman-Plugin in Version 2.0.1 erhalten, und eine Postman-CLI lag im lokalen Programmverzeichnis. Der Verfasser sagt ausdrücklich, dass der Bericht unerwünschte Integrationen und Anweisungsänderungen belegt, aber keinen Datenabfluss beweist. Den Installer-Quellcode deutet er so, dass der Installer den eigenen Hook selbst freigeben will. Wer diesen Eintrag tatsächlich angelegt hat, lässt sich laut Verfasser aus den Dateien nicht sicher ablesen. Die Reproduktion auf einem sauberen Rechner stand zum Zeitpunkt des Berichts noch aus.",
+    "Der Nutzer fordert, die automatische Installation für bestehende Desktop-Nutzer zu stoppen, die Selbstfreigabe der Hooks zu entfernen und einen vollständigen Rückbau-Weg anzubieten. Eine Antwort von Postman ist im Auszug nicht enthalten."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub-Issue #14370: Desktop auto-installs Codex/Claude plugins (postmanlabs/postman-app-support)",
+     "url": "https://github.com/postmanlabs/postman-app-support/issues/14370"
+    },
+    {
+     "titel": "Hacker-News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50354960"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Prüfe in ~/.codex/config.toml und ~/.claude/settings.json, ob Postman-Plugins oder Marketplaces eingetragen sind.",
+    "Kontrolliere in Codex, welche Hooks als vertrauenswürdig markiert sind, bevor du sie bestätigst.",
+    "Lies Installer-Hinweise von Desktop-Apps, bevor du Agenten-Erweiterungen zustimmst."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "codex config",
+    "zeilen": [
+     "> Postman öffnen",
+     "⚠ Auto-Install: codex:installed",
+     "+ marketplace postman",
+     "+ hook session_start (trusted)",
+     "● Status: Auth required (MCP)"
+    ]
+   },
+   "radar": true,
+   "quelle": "GitHub",
+   "datum": "2026-10-25",
+   "kennzahlen": [
+    {
+     "label": "Postman-Desktop-Version laut Bericht",
+     "wert": "12.33.4"
+    },
+    {
+     "label": "Codex-Plugin laut Bericht",
+     "wert": "1.1.0"
+    },
+    {
+     "label": "Claude-Plugin laut Bericht",
+     "wert": "2.0.1"
+    },
+    {
+     "label": "Punkte auf Hacker News",
+     "wert": "1436"
+    }
+   ],
+   "signal": "Ein Desktop-Client hat laut Bericht Agenten-Plugins und Anweisungen ohne klare Zustimmung in anderen Programmen eingerichtet. Das Thema ist vor allem eine Frage von Zustimmung und Vertrauensgrenzen, Datenabfluss ist nicht belegt.",
+   "link": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+   "linkLabel": "Issue #14370 auf GitHub",
+   "id": "postman-installiert-ohne-nachfrage-ki-plugins-in-codex-und-c",
+   "hinzugefuegt": "2026-11-04T16:10:52Z"
+  },
+  {
+   "titel": "Axion 1.0: Offenes Agenten-Modell mit einfachem Trainingsrezept",
+   "kurz": "Das Forschungspapier stellt Axion 1.0 vor, ein vollständig offenes Agenten-Basismodell, das in nur drei Trainingsstufen entsteht. Laut Autorenangaben ist es bei mehreren Agenten-Benchmarks konkurrenzfähig zu führenden kommerziellen Modellen.",
+   "artikel": [
+    "Axion 1.0 ist ein sogenanntes Agenten-Foundation-Modell: ein Sprachmodell, das nicht nur antwortet, sondern Werkzeuge nutzt, Informationen recherchiert und mehrstufige Aufgaben abarbeitet. Laut dem arXiv-Papier stammen die Autoren aus dem Umfeld von ByteDance.",
+    "## Drei Trainingsstufen statt aufwendiger Pipeline",
+    "Das Training besteht aus zwei vergleichsweise leichten Stufen des überwachten Feinтunings (Supervised Fine-Tuning, also Lernen anhand von Beispielen mit richtigen Antworten) und einer abschließenden Verstärkungslernphase (Reinforcement Learning, also Lernen durch Belohnung für gute Ergebnisse). Auf zusätzliche Zwischentrainings, Direct Preference Optimization (DPO, Training anhand von Präferenzpaaren) und On-Policy-Distillation wird laut Papier verzichtet.",
+    "Die erste Stufe schult selbstständiges wissenschaftliches Denken mit synthetisch erzeugten, anspruchsvollen Aufgaben. Die zweite Stufe erweitert das Modell auf werkzeuggestütztes Schlussfolgern mit automatisch überprüfbaren Aufgaben. Die dritte Stufe verstärkt langfristiges Schlussfolgern und die Interaktion mit externen Werkzeugen und Umgebungen.",
+    "## Ergebnisse laut Herstellerangaben",
+    "Die Autoren nennen für das Modell mit 35 Milliarden Parametern, das unter Apache-2.0-Lizenz verfügbar ist, Werte in sechs Testsettings. Diese Zahlen sind Herstellerangaben und nicht unabhängig geprüft: 52,8 bei HLE, 35,3 bei BioMysteryBench, 60,4 bei SEAL-0, 45,9 bei HiPhO, 85,0 bei FrontierScience Olympiad und 55,0 bei FrontierScience Research.",
+    "## Offen über die Gewichte hinaus",
+    "Neben den Modellgewichten veröffentlichen die Autoren laut eigener Aussage das komplette Rezept, also Datenerzeugung, Filterung, Verifikation, Prompts und Trainingscode. Damit soll sich der Entwicklungsprozess nachvollziehen und erweitern lassen. Ein Kommentator im Forum lobt diese Offenheit, Fragen zu Details der Verstärkungslernphase sind bislang offen."
+   ],
+   "quellen": [
+    {
+     "titel": "Axion 1.0: Open Agent Foundation Models, Simplified (arXiv-Paper)",
+     "url": "https://huggingface.co/papers/2611.03233"
+    },
+    {
+     "titel": "Paper auf arXiv",
+     "url": "https://arxiv.org/abs/2611.03233"
+    },
+    {
+     "titel": "Projektseite",
+     "url": "https://axion1-0.github.io/"
+    },
+    {
+     "titel": "Code auf GitHub",
+     "url": "https://github.com/bytedance/axion1_0"
+    },
+    {
+     "titel": "Trainingsdaten auf Hugging Face",
+     "url": "https://huggingface.co/datasets/Axion1-0/axion-training-data"
+    },
+    {
+     "titel": "Modell (35B) auf Hugging Face",
+     "url": "https://huggingface.co/Axion1-0/Axion-1.0-35B"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Das Modell mit 35 Milliarden Parametern herunterladen und lokal für eigene Recherche- oder Werkzeug-Aufgaben testen, sofern die Hardware reicht.",
+    "Die veröffentlichten Trainingsdaten und Prompts durchsehen, um zu verstehen, wie solche Agenten-Aufgaben aufgebaut sind.",
+    "Den Trainingscode als Vorlage nutzen, um eigene kleine Agenten-Modelle nachzubauen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "HLE-Benchmark (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Axion 1.0-35B",
+      "wert": 52.8,
+      "anzeige": "52,8"
+     }
+    ]
+   },
+   "radar": true,
+   "quelle": "Hugging Face",
+   "datum": "2026-11-02",
+   "kennzahlen": [
+    {
+     "label": "Parameter (35B-Variante)",
+     "wert": "35 Mrd."
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    },
+    {
+     "label": "SFT-Beispiele",
+     "wert": "ca. 18.000"
+    },
+    {
+     "label": "HLE",
+     "wert": "52,8"
+    },
+    {
+     "label": "SEAL-0",
+     "wert": "60,4"
+    }
+   ],
+   "signal": "Ein offenes Agenten-Modell mit kurzem Trainingsrezept und vollständig veröffentlichter Pipeline; die Leistungsangaben stammen von den Autoren selbst.",
+   "link": "https://huggingface.co/papers/2611.03233",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "axion-1-0-offenes-agenten-modell-mit-einfachem-trainingsreze",
+   "hinzugefuegt": "2026-11-04T16:10:52Z"
+  },
+  {
+   "titel": "Anthropic stellt FlashProve vor: Kryptografischer Nachweis, welches Modell eine Antwort erzeugt",
+   "kurz": "Anthropic hat FlashProve veröffentlicht, einen Forschungsprototyp, der mit Kryptografie prüfbar macht, ob eine KI-Antwort tatsächlich vom angegebenen Modell stammt. Das System hat laut Anthropic noch deutliche Einschränkungen.",
+   "artikel": [
+    "Wer heute eine Anfrage an ein KI-Modell schickt, kann nicht überprüfen, ob wirklich das gewählte Modell die Antwort erzeugt hat. Ein Routing-Dienst könnte still ein billigeres Modell einsetzen, um Kosten zu sparen, oder ein Angreifer könnte den Datenstrom manipulieren. Genau hier setzt FlashProve an, das Anthropic als quelloffenes Forschungsprojekt beschreibt.",
+    "## Wie das System funktioniert",
+    "FlashProve nutzt eine Kryptografietechnik namens zkSNARK. Vereinfacht gesagt erstellt der Modellanbieter zunächst einen digitalen Fingerabdruck der Modellgewichte, also der gelernten Parameter des Modells. Zu jeder Antwort liefert er dann einen kompakten Beweis, dass genau dieses Modell die Ausgabe erzeugt hat. Der Beweis verrät nichts über die geheimen Gewichte selbst.",
+    "## Leistung laut Herstellerangaben",
+    "Laut technischem Bericht von Anthropic erzeugt FlashProve rund 110 Token pro Sekunde auf einer einzelnen H100-GPU, und zwar für Metas Llama 4 Maverick mit 400 Milliarden Parametern. Ein Beweis ist etwa 19 Megabyte groß und lässt sich in 17 Sekunden auf einer üblichen CPU prüfen. Gegenüber normaler Inferenz entspricht das einem Mehraufwand von etwa dem 70- bis 95-Fachen. Das klingt viel, ist laut Anthropic aber ein deutlicher Fortschritt gegenüber früheren Systemen: Das einzige vergleichbare quelloffene System brauchte nach Angaben des Unternehmens über 14 Stunden für 1.000 Token und erzeugte einen 93,6 Gigabyte großen Beweis.",
+    "## Mögliche Anwendungen",
+    "Anthropic nennt mehrere Einsatzfelder. Aufsichtsbehörden könnten prüfen, ob ein Anbieter tatsächlich nur freigegebene Modelle betreibt. Unternehmen könnten nachweisen, dass ihr Code von einem bestimmten Sicherheitsmodell geprüft wurde. Anbieter könnten außerdem Manipulationen auf ihren Servern erkennen.",
+    "## Einschränkungen",
+    "Anthropic betont, dass FlashProve ein Forschungsprototyp ist. Derzeit lassen sich nur Kontexte von bis zu 1.024 Token beweisen, weit weniger als die Kontextfenster aktueller Modelle. Die Gewichte bleiben verborgen, nicht aber die zugrunde liegende Architektur. Außerdem funktioniert der Beweis nur, wenn das Modell das wahrscheinlichste nächste Token wählt, nicht bei den zufälligen Ausgaben, wie sie Chatbots im Alltag typischerweise erzeugen. Code, Lean-Beweise und Dokumentation sind auf GitHub unter Apache-2.0-Lizenz verfügbar.",
+    "## Einordnung",
+    "Anthropic hatte sich in seiner Frontier Safety Roadmap das Ziel gesetzt, bis September 2026 einen Prototyp zur Inferenzverifikation zu bauen, und gibt an, dies über ein anderes Projekt bereits erreicht zu haben. FlashProve verfolgt dasselbe Ziel, verzichtet aber auf vertrauenswürdige Hardware und setzt rein auf Kryptografie."
+   ],
+   "quellen": [
+    {
+     "titel": "Anthropic's new prototype proves which model wrote an AI response without exposing its weights (The Decoder)",
+     "url": "https://the-decoder.com/anthropics-new-prototype-proves-which-model-wrote-an-ai-response-without-exposing-its-weights/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Verfolgen, ob Anbieter wie Anthropic solche Nachweisverfahren für ihre Modelle veröffentlichen.",
+    "Den GitHub-Code und die Dokumentation ansehen, um die Funktionsweise nachzuvollziehen.",
+    "Bei Diensten mit Modellauswahl künftig auf überprüfbare Herkunftsnachweise achten, sobald solche Verfahren praxisreif sind."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "FlashProve",
+    "zeilen": [
+     "> Modell: Llama 4 Maverick (400 Mrd. Parameter)",
+     "✓ Beweis erzeugt: 19 MB",
+     "✓ Prüfung auf CPU: 17 Sekunden",
+     "⚠ Kontextlimit: 1.024 Token",
+     "● Status: Forschungsprototyp"
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-11-04",
+   "kennzahlen": [
+    {
+     "label": "Token-Durchsatz (Herstellerangabe, H100-GPU)",
+     "wert": "ca. 110 Token/s"
+    },
+    {
+     "label": "Beweisgröße (Herstellerangabe)",
+     "wert": "ca. 19 MB"
+    },
+    {
+     "label": "Verifikationszeit (Herstellerangabe, CPU)",
+     "wert": "ca. 17 Sekunden"
+    },
+    {
+     "label": "Mehraufwand gegenüber Inferenz (Herstellerangabe)",
+     "wert": "ca. 70x bis 95x"
+    },
+    {
+     "label": "Kontextlimit",
+     "wert": "1.024 Token"
+    }
+   ],
+   "signal": "Ein Anbieter zeigt erstmals, dass sich mit Kryptografie prüfen lässt, welches Modell eine Antwort erzeugt, ohne die Gewichte offenzulegen. Die Einschränkungen sind allerdings erheblich.",
+   "link": "https://the-decoder.com/anthropics-new-prototype-proves-which-model-wrote-an-ai-response-without-exposing-its-weights/",
+   "linkLabel": "Artikel bei The Decoder lesen",
+   "id": "anthropic-stellt-flashprove-vor-kryptografischer-nachweis-we",
+   "hinzugefuegt": "2026-11-04T16:10:52Z"
+  },
+  {
    "titel": "Ein 200-MHz-Pentium-Pro schlägt 1996 Kasparov? Moderne Schach-Software auf alter Hardware",
    "kurz": "Der Blogger Nicholas Carlini lässt eine angepasste Version von Stockfish auf einem Pentium Pro von 1995 laufen und schätzt deren Spielstärke auf rund 3300 Elo. Sein Hauptbefund: Ein großer Teil des Fortschritts im Schach-Computing stammt aus besserer Software, nicht aus schnellerer Hardware.",
    "artikel": [
@@ -13316,8 +13537,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-04T08:04:45Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-04T16:10:52Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-03T21:40:36Z"
  }
 }
