@@ -1,6 +1,45 @@
 {
  "news": [
   {
+   "titel": "KI-Agenten steuern Teleskop der SETI-Suche",
+   "kurz": "Am Allen Telescope Array des SETI Institute steuern KI-Agenten das Teleskop und werten Funksignale aus. Laut Team dauern Aufgaben nun Stunden statt Wochen.",
+   "artikel": [
+    "Die Suche nach außerirdischer Intelligenz bekommt Unterstützung von KI. Am Allen Telescope Array in Nordkalifornien können KI-Agenten das Teleskop steuern und eingehende Radiosignale direkt während der Beobachtung analysieren. Vorerst geben Forschende ihre Befehle noch selbst ein.",
+    "## Technik",
+    "Grundlage ist die Holoscan-Plattform von Nvidia, mit der das SETI Institute und Breakthrough Listen Teleskopdaten in Echtzeit verarbeiten. Laut Nvidia schafft die Hardware bis zu 2,4 Terabit pro Sekunde. Dabei handelt es sich um eine Herstellerangabe. Ein Agent ist ein KI-System, das eigenständig Aufgaben ausführt.",
+    "## Erste Ergebnisse",
+    "Nach Angaben des Teams dauerten Arbeiten früher Wochen, nun seien sie in wenigen Stunden erledigt. Als erstes Ergebnis habe man mithilfe von KI einen Pulsar im Krebsnebel in Echtzeit erkannt, was es so zuvor nicht gegeben habe. Pulsare sind schnell rotierende Überreste von Sternen, die regelmäßige Signale aussenden. Deshalb eignen sie sich gut als Testfälle für die Signalerkennung.",
+    "## Ausblick",
+    "Als Nächstes will das Team quelloffene Software testen, die lokal direkt an den Sensoren laufen kann. Im Blick sind künftige Sensoren auf der erdabgewandten Seite des Mondes.",
+    "Ob die KI-Agenten tatsächlich etwas finden, ist offen. Die Suche nach Signalen außerirdischer Intelligenz läuft seit dem ersten SETI-Experiment im Jahr 1960. Bisher hat niemand solche Signale gefunden."
+   ],
+   "quellen": [
+    {
+     "titel": "AI agents take over at SETI's Allen Telescope Array, scanning for extraterrestrial intelligence",
+     "url": "https://the-decoder.com/ai-agents-take-over-at-setis-allen-telescope-array-scanning-for-extraterrestrial-intelligence/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Verfolgen, wie KI-Agenten wissenschaftliche Messgeräte steuern und Daten auswerten.",
+    "Die Idee übertragen, wiederkehrende Auswertungsaufgaben in eigenen Projekten von einem Agenten erledigen zu lassen.",
+    "Die Entwicklung quelloffener Werkzeuge für lokale Edge-Geräte im Blick behalten."
+   ],
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Teleskop",
+     "Radiosignal",
+     "KI-Agent",
+     "Auswertung"
+    ]
+   },
+   "bereich": "Agenten",
+   "datum": "2026-11-03",
+   "id": "ki-agenten-steuern-teleskop-der-seti-suche",
+   "hinzugefuegt": "2026-11-04T01:42:20Z"
+  },
+  {
    "titel": "OpenAI: GPT-6 Astra soll Hardware-Gerät in unter einer Woche entworfen haben",
    "kurz": "Laut OpenAI hat das Modell GPT-6 Astra ein Gerät für den Codex-Coding-Agenten fast komplett allein entworfen. Mehrere Überarbeitungsrunden waren trotzdem nötig.",
    "artikel": [
@@ -2592,6 +2631,157 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Qwen 3.8 27B auf dem Laptop liest Modellgewichte",
+   "kurz": "Ein Experiment von Simon Willison zeigt, dass das lokale Modell Qwen 3.8 27B aus rohen Gewichten erkennen kann, welches Spiel ein Netz gelernt hat. Bei drei von vier Spielen lag es richtig, beim Freeway-Beispiel scheiterte es.",
+   "artikel": [
+    "Ein Paper mit dem Titel „Sparks of Weight-Space Programming“ untersucht, ob Sprachmodelle die rohen Gewichte eines neuronalen Netzes lesen und verändern können. Gewichte sind die Zahlenwerte, die ein Modell intern speichert. Die Autoren schreiben, dass das Modell GPT-6 Astra dazu in der Lage sei; diese Angabe stammt aus dem Paper und ist eine Herstellerangabe der Autoren beziehungsweise des Labors.",
+    "## Der Test mit Spielen",
+    "Vier kleine Netze wurden auf vereinfachten 10x10-Versionen von Breakout, Pong, Pac-Man und Freeway trainiert. Anschließend bekam ein Sprachmodell nur die Zahlenwerte und sollte ohne Werkzeuge erkennen, für welches Spiel das Netz trainiert wurde. Willison hat dafür die Prompts aus dem GitHub-Repository der Autoren verwendet.",
+    "## Ergebnisse mit Qwen",
+    "Qwen 3.8 27B lief lokal über LM Studio und brauchte für die Pac-Man-Aufgabe rund 46 Minuten. Auch Pong und Breakout erkannte das Modell, jeweils mit einer genannten Sicherheit von 75 beziehungsweise 88 Prozent. Beim Freeway-Prompt lag es daneben und hielt das Spiel für ein Pac-Man-ähnliches Gitterspiel.",
+    "## Einordnung",
+    "Willison hebt hervor, dass das Modell mit 17 GB auf einem Laptop läuft. Die Denkprozesse seien sehr lang und schwer nachzuvollziehen. Der spaCy-Autor Matthew Honnibal kritisierte das Paper als irreführend, weil es zwei Fragen vermische: das Lesen von Gewichten ohne Werkzeuge und das Verändern von Modellen mit Code."
+   ],
+   "quellen": [
+    {
+     "titel": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+     "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50355251"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Mit einem lokalen Modell wie Qwen 3.8 27B kann man ähnliche Experimente selbst nachstellen, sofern genug Speicher und Geduld vorhanden sind.",
+    "Die Prompts aus dem GitHub-Repository der Autoren lassen sich ohne eigenes Training direkt ausprobieren."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erkennungsergebnis bei den Spielen (Qwen, nach Willisons Test)",
+    "balken": [
+     {
+      "label": "Pac-Man",
+      "wert": 1,
+      "anzeige": "richtig erkannt"
+     },
+     {
+      "label": "Pong",
+      "wert": 1,
+      "anzeige": "richtig erkannt"
+     },
+     {
+      "label": "Breakout",
+      "wert": 1,
+      "anzeige": "richtig erkannt"
+     },
+     {
+      "label": "Freeway",
+      "wert": 0,
+      "anzeige": "nicht erkannt"
+     }
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "2026-11-03",
+   "kennzahlen": [
+    {
+     "label": "Modellgröße (Qwen 3.8 27B, lokal)",
+     "wert": "17 GB"
+    },
+    {
+     "label": "Laufzeit Pac-Man (lokal)",
+     "wert": "46 min 12 s"
+    },
+    {
+     "label": "Reasoning-Tokens Pac-Man",
+     "wert": "43.506"
+    },
+    {
+     "label": "HN-Punkte",
+     "wert": "488"
+    }
+   ],
+   "signal": "Lokale Modelle können bei diesem Test teils richtige Antworten liefern, sind aber langsam und nicht durchgehend zuverlässig.",
+   "link": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+   "linkLabel": "Originalbeitrag lesen",
+   "id": "qwen-3-8-27b-auf-dem-laptop-liest-modellgewichte",
+   "hinzugefuegt": "2026-11-04T01:42:20Z"
+  },
+  {
+   "titel": "See Now: Bildschirm-Plugin für DSH schickt nur Frames mit Änderungen an die KI",
+   "kurz": "Ein Open-Source-Plugin für DSH lässt eine KI den Bildschirm live sehen und sendet nur Bilder, deren Inhalt sich verändert hat. Mehrere ausgewählte Frames werden in ein Bild zusammengefügt, was Token spart.",
+   "artikel": [
+    "Das Projekt „See Now“ von SAOS-3624 auf GitHub ist ein Plugin für DSH, das einem KI-Modell erlaubt, den Bildschirm zu sehen, statt nur eine Beschreibung davon zu bekommen. Laut Projektbeschreibung nimmt es den Bildschirm, eine Kamera oder eine Videodatei als Quelle und wählt daraus einzelne Frames aus.",
+    "## Frames nach Veränderung auswählen",
+    "Jeder Frame bekommt einen Änderungswert von 0 bis 255, berechnet als gewichtete Differenz der HSV-Kanäle auf einem groben 64×36-Raster. Laut Repository dauert das etwa 0,2 Millisekunden. Behalten werden Frames bei einem plötzlichen Bildwechsel oder bei anhaltender Bewegung, bis genug Veränderung zusammengekommen ist. Ein statischer Bildschirm erzeugt dadurch fast keine Bilder; alle 20 Sekunden kommt ein Rückfallbild, damit sichtbar bleibt, dass sich nichts geändert hat.",
+    "## Mehrere Frames in einem Bild",
+    "Die ausgewählten Frames werden zu einem einzigen Bild zusammengesetzt. Die Projektangaben nennen für 800×450 Pixel etwa 233 Token, berechnet nach dem Patch-Raster des Host-Modells DeepSeek-V4 (Herstellerangabe des Projekts). Da ein Bild mit vier oder acht Frames denselben Preis hat, ist ein zusätzlicher Frame nach dieser Rechnung nahezu kostenlos. Im Repository wird ein alter Kommentar mit 218 Token ausdrücklich als zu niedrig bezeichnet.",
+    "## Einsatz und Grenzen",
+    "Laut Readme funktioniert die Bildschirmaufnahme unter Windows, auf macOS nach Freigabe der Bildschirmaufnahme und unter Linux noch nicht. Optional kann das System Systemton über WASAPI-Loopback aufnehmen und per Spracherkennung als Untertitel einfügen; dafür sind Python-Pakete und ein Transkriptionsdienst nötig. Die Transkription ist eine maschinelle Erkennung und kann Fehler enthalten. Das Projekt steht unter Apache License 2.0.",
+    "Der Eintrag beruht auf der Projektbeschreibung auf GitHub mit 260 Sternen; unabhängige Tests lagen nicht vor."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: SAOS-3624/dsh-see-now",
+     "url": "https://github.com/SAOS-3624/dsh-see-now"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Eine KI bei Tutorials, Präsentationen oder Bildschirmarbeit begleiten lassen, ohne jede Sekunde als Bild zu senden.",
+    "Mit dem Plugin in DSH testen, wie eine KI Bildschirmwechsel erkennt und kommentiert.",
+    "Den Quellcode als Node-Bibliothek für eigene Frame-Auswahl oder Bildstapel nutzen."
+   ],
+   "ausprobieren": {
+    "prompt": "Installiere das Plugin mit „dsh plugin --profile web add dsh-see-now“, starte DSH neu und bitte die KI: „Schau dir meinen Bildschirm an und sag mir, was sich gerade geändert hat.“",
+    "tool": "DSH (Plugin dsh-see-now)",
+    "url": "https://github.com/SAOS-3624/dsh-see-now"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Token-Kosten pro 800×450-Bild (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Alte Schätzung",
+      "wert": 218,
+      "anzeige": "218 Token"
+     },
+     {
+      "label": "Aktuelle Angabe",
+      "wert": 233,
+      "anzeige": "233 Token"
+     }
+    ]
+   },
+   "quelle": "GitHub",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "260"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache License 2.0"
+    },
+    {
+     "label": "Bildgröße",
+     "wert": "800×450 Pixel"
+    },
+    {
+     "label": "Token pro Bild (Herstellerangabe)",
+     "wert": "233"
+    }
+   ],
+   "signal": "Frame-Auswahl nach Veränderung statt Dauer-Screenshots, um KI-Bildschirmanalyse günstiger zu machen.",
+   "link": "https://github.com/SAOS-3624/dsh-see-now",
+   "linkLabel": "Zum Repository",
+   "id": "see-now-bildschirm-plugin-fur-dsh-schickt-nur-frames-mit-and",
+   "hinzugefuegt": "2026-11-04T01:42:20Z"
+  },
   {
    "titel": "Agentische Computergrafik: LLM-Agenten schreiben und verfeinern Grafikcode",
    "kurz": "Ein arXiv-Report (Hugging Face: 76 Upvotes) beschreibt, wie LLM-Agenten Grafikcode erzeugen und iterativ verbessern. Die Autoren schlagen eine einheitliche Taxonomie und ein Literatursystem für dieses Feld vor.",
@@ -9684,6 +9874,79 @@
  ],
  "projekte": [
   {
+   "titel": "Agent Autoloop: Kommandozeilen-Agenten arbeiten im Hintergrund weiter",
+   "kurz": "Agent Autoloop ist ein Open-Source-Werkzeug, mit dem Kommandozeilen-Agenten wie Claude Code oder Codex Aufgaben selbstständig im Hintergrund erledigen. Nur bei unklaren Entscheidungen schickt es eine Karte an den Nutzer.",
+   "artikel": [
+    "Das GitHub-Projekt »agent-autoloop« von KKKKhazix hat zum Zeitpunkt des Materials 405 Sterne. Es richtet sich an Leute, die命令行-Agenten wie Claude Code oder Codex nutzen. Bisher muss man dabei meist im Terminal danebenstehen und warten, bis der Agent nachfragt. Schließt man das Fenster, bricht die Arbeit ab.",
+    "## Zentrale Idee",
+    "Agent Autoloop ist laut Beschreibung eine schlanke Automatisierungsschicht. Ein Kern (»Kernel«) verteilt Aufgaben. Ereignisquellen, Agenten und Benachrichtigungskanäle sind als austauschbare Plugins angelegt. Das Werkzeug läuft auf dem eigenen Mac oder Linux-Rechner, ohne Cloud-Server und ohne offene Ports.",
+    "## Ablauf",
+    "Ereignisse wie ein Zeitplan, ein neues GitHub-Issue oder ein Fehlermeldung werden als Event an den Kern übergeben. Dieser startet den passenden Agenten im festgelegten Verzeichnis. Der Agent arbeitet eine Runde ab und beendet sich. Braucht er eine Entscheidung, sendet das System eine Karte an Feishu, DingTalk, Slack, Discord oder als Desktop-Benachrichtigung. Während auf die Antwort gewartet wird, läuft kein Agenten-Prozess und es fallen keine Token an.",
+    "## Konfiguration",
+    "Regeln stehen in einer Datei rules.json. Dort legt man fest, wann ein Ereignis auftritt, welcher Agent es übernimmt und in welchem Ordner er arbeitet. Laut Projektseite genügt eine Zeile, um einen neuen Agenten anzubinden, sofern er Prompts entgegennimmt und die letzte Antwort ausgibt.",
+    "## Einordnung",
+    "Die Angaben zu Tests und Leistung stammen vom Projekt selbst. Gemessen wurde dort unter anderem auf einem Apple M5 Pro mit 24 GB. Die Entwickler weisen darauf hin, dass für häufige automatisierte Abläufe API-Schlüssel gegenüber Abonnements empfohlen werden. Die Projektseite betont außerdem, dass das Werkzeug unabhängig von Anthropic und OpenAI ist."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: KKKKhazix/agent-autoloop",
+     "url": "https://github.com/KKKKhazix/agent-autoloop"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Einen täglichen Notizen-Rückblick per Zeitplan automatisch vom Agenten schreiben lassen.",
+    "Bei neuen GitHub-Issues den Agenten im Projektordner Code vorbereiten lassen, bevor man sich selbst darum kümmert.",
+    "Nur bei Rückfragen per Karte auf dem Handy entscheiden, statt das Terminal offen zu halten."
+   ],
+   "ausprobieren": {
+    "prompt": "Schreibe eine Regel in rules.json: Jeden Morgen um 9 Uhr soll codex aus dem Ordner ~/notes ein Tagesbriefing aus den Notizen von gestern erstellen.",
+    "tool": "agent-autoloop",
+    "url": "https://github.com/KKKKhazix/agent-autoloop"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "agent-autoloop try",
+    "zeilen": [
+     "> Agent wird gestartet",
+     "● Agent beendet die Runde",
+     "【等你决定】 Frage: Farbe wählen",
+     "✓ Antwort 2 empfangen, Agent arbeitet weiter",
+     "✓ Test abgeschlossen"
+    ]
+   },
+   "tag": "Open Source",
+   "macher": "KKKKhazix",
+   "branche": "Entwicklertools / Agenten-Automatisierung",
+   "jahr": "2025",
+   "tools": [
+    "Claude Code",
+    "Codex",
+    "Feishu",
+    "DingTalk",
+    "Slack",
+    "Discord"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "405"
+    },
+    {
+     "label": "Kernel-Umfang (Herstellerangabe)",
+     "wert": "ca. 1650 Zeilen"
+    },
+    {
+     "label": "Laufzeit-Abhängigkeiten (Herstellerangabe)",
+     "wert": "0"
+    }
+   ],
+   "link": "https://github.com/KKKKhazix/agent-autoloop",
+   "linkLabel": "Zum Repository",
+   "id": "agent-autoloop-kommandozeilen-agenten-arbeiten-im-hintergrun",
+   "hinzugefuegt": "2026-11-04T01:42:20Z"
+  },
+  {
    "titel": "Subvocal: Smart-Brille soll lautloses Sprechen in Text umwandeln",
    "kurz": "Das Startup The Subvocal Company aus dem Y-Combinator-Programm (F26) entwickelt Smart-Glasses, die stumm artikulierte Wörter per Funk erfassen und in Text übersetzen. Die Gründer stellen den Prototyp auf Hacker News vor und haben Vorbestellungen für 500 Geräte eröffnet.",
    "artikel": [
@@ -12876,8 +13139,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-03T21:40:36Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-11-04T01:42:20Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-11-03T21:40:36Z"
  }
 }
