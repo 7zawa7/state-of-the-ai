@@ -2787,6 +2787,122 @@
  ],
  "radar": [
   {
+   "titel": "FrontierPhysics: Benchmark testet KI-Agenten bei echter Physikforschung",
+   "kurz": "Ein neuer Benchmark mit 56 Aufgaben von 42 Physikern prüft, ob KI-Agenten vollständige Forschungsarbeit leisten können. Kein Konfiguration schafft mehr als 46 von 168 Durchläufen.",
+   "artikel": [
+    "Bisherige Tests für KI in der Physik prüfen meist feste Fragen, einzelne Teilaufgaben oder das Nachrechnen bekannter Paper mit vorgegebenen Lösungen. Die Qualität der Forschung selbst wird dabei selten bewertet. FrontierPhysics setzt hier an und verlangt von den Agenten den kompletten Forschungsweg.",
+    "## Aufbau des Benchmarks",
+    "Die 56 Aufgaben stammen von 42 Physikern aus ihrer eigenen Forschung und decken neun Bereiche der theoretischen, computergestützten und experimentellen Physik ab. Ein Agent soll Literatur sichten, einen Forschungsplan entwickeln, Experimente bzw. Rechnungen durchführen und strukturierte Ergebnisse sowie ein wissenschaftliches Manuskript erstellen. Bewertet wird mit deterministischen Prüfverfahren (Verifiern), die Ergebnisse automatisch kontrollieren, und mit von Experten verfassten Bewertungsrastern (Rubriken).",
+    "## Ergebnisse",
+    "Getestet wurden 22 Modelle in 26 Konfigurationen. Keine Konfiguration erreichte mehr als 46 der 168 Durchläufen. Eine manuelle Durchsicht der Agentenprotokolle zeigt laut den Autoren, dass die Schwächen der besten Agenten vor allem in unzureichend strenger Argumentation und begrenztem Expertengespür liegen. Fehlendes Physikwissen oder reine Ausführungsfehler seien dagegen nicht das Hauptproblem.",
+    "## Einordnung",
+    "Die Angaben stammen aus dem Paper auf arXiv und der Hugging-Face-Seite. Wie sich der Benchmark über die genannten Ergebnisse hinaus in der Praxis bewährt, ist laut Material noch offen."
+   ],
+   "quellen": [
+    {
+     "titel": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research (Hugging Face Papers)",
+     "url": "https://huggingface.co/papers/2611.06910"
+    },
+    {
+     "titel": "arXiv:2611.06910",
+     "url": "https://arxiv.org/abs/2611.06910"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer in der Forschung arbeitet, kann die Aufgabenbeschreibungen als Vorlage nutzen, um eigene KI-Agenten an Forschungsfragen zu testen.",
+    "Interessierte können das Paper lesen, um zu verstehen, wo KI-Agenten in der Physik heute noch scheitern."
+   ],
+   "radar": true,
+   "quelle": "arXiv",
+   "datum": "2025-11-04",
+   "kennzahlen": [
+    {
+     "label": "Aufgaben",
+     "wert": "56"
+    },
+    {
+     "label": "Physiker-Autoren der Aufgaben",
+     "wert": "42"
+    },
+    {
+     "label": "Modelle / Konfigurationen",
+     "wert": "22 Modelle in 26 Konfigurationen"
+    },
+    {
+     "label": "Max. bestandene Durchläufe",
+     "wert": "46 von 168"
+    }
+   ],
+   "signal": "Der Benchmark zeigt, dass KI-Agenten bei vollständiger Forschungsarbeit in der Physik deutlich hinter den Anforderungen zurückbleiben.",
+   "link": "https://huggingface.co/papers/2611.06910",
+   "linkLabel": "Paper auf Hugging Face ansehen",
+   "id": "frontierphysics-benchmark-testet-ki-agenten-bei-echter-physi",
+   "hinzugefuegt": "2026-11-05T22:49:07Z"
+  },
+  {
+   "titel": "PyRUA-REAL: Coding-Agenten lernen Roboterfähigkeiten aus echter Interaktion",
+   "kurz": "Ein arXiv-Paper stellt PyRUA-REAL vor, ein Framework, in dem Coding-Agenten Erfahrungen aus realen Roboter-Explorationen als dauerhaften Speicher und wiederverwendbare Skripte sichern. Die Autoren berichten von 91,1 % Erfolgsquote bei acht realen Aufgaben und 84,4 % bei 42 Aufgaben des RoboDojo-Benchmarks.",
+   "artikel": [
+    "Das Paper untersucht, wie Coding-Agenten Roboter durch physische Interaktion dauerhaft verbessern können. Der Begriff „embodied recursive self-improvement“ (RSI) beschreibt dabei einen Kreislauf aus Erkunden, Code verbessern und Einsetzen, bei dem ein System seine eigenen Fähigkeiten schrittweise erweitert. Verkörpert heißt hier: Das System arbeitet mit einem physischen Roboter statt nur in einer Simulation.",
+    "## Aufbau des Frameworks",
+    "PyRUA-REAL speichert die Erfahrungen der Agenten als persistenten Speicher. Zusätzlich entstehen wiederverwendbare, ausführbare Fähigkeiten, die spätere Erkundungen und Verbesserungen anleiten. Die Autoren untersuchen, wie mehrere Agenten zusammenarbeiten, welche Rückmeldungen aus der Ausführung die Code-Verbesserung am besten unterstützen und wie Aufgabenbeschreibungen sowie bereits erworbene Fähigkeiten Robustheit und Übertragbarkeit auf andere Aufgaben beeinflussen.",
+    "## Ergebnisse",
+    "Laut Paper erreicht das System über acht reale Aufgaben eine durchschnittliche Erfolgsquote von 91,1 %. Auf 42 Aufgaben des RoboDojo-Benchmarks liegt der Schnitt bei 84,4 %. Die fertigen Programme können laut Angabe der Autoren ohne einen Agenten laufen, der während des Einsatzes Entscheidungen trifft. Damit sollen sie auch effizient und robust eingesetzt werden können.",
+    "## Einordnung",
+    "Die Zahlen stammen aus den Angaben der Autoren und sind nicht unabhängig geprüft. Das Material nennt zudem Modelle wie „GPT-6-Astra“ als Grundlage der Coding-Agenten; diese Angabe stammt vom Paper selbst. Für Privatpersonen ist das Projekt eher ein Forschungsbeitrag als ein fertiges Werkzeug."
+   ],
+   "quellen": [
+    {
+     "titel": "PyRUA-REAL auf Hugging Face Papers",
+     "url": "https://huggingface.co/papers/2611.06768"
+    },
+    {
+     "titel": "Projektseite PyRUA-REAL",
+     "url": "https://dagroup-pku.github.io/PyRUA-Lean/real/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Die Forschungsidee lesen, um zu verstehen, wie Roboter aus eigener Erfahrung Fähigkeiten sammeln.",
+    "Die Projektseite auf Demos und Code prüfen, falls dort Material veröffentlicht ist.",
+    "Den Ansatz auf eigene Projekte übertragen, etwa Erfahrungsspeicher für kleine Agenten-Skripte."
+   ],
+   "quelle": "arXiv",
+   "datum": "2026-11-04",
+   "kennzahlen": [
+    {
+     "label": "Erfolgsquote, 8 reale Aufgaben",
+     "wert": "91,1 %"
+    },
+    {
+     "label": "Erfolgsquote, 42 RoboDojo-Aufgaben",
+     "wert": "84,4 %"
+    }
+   ],
+   "signal": "Coding-Agenten sollen aus physischer Erkundung wiederverwendbare Roboterfähigkeiten machen, die ohne laufenden Agenten ausgeführt werden können.",
+   "link": "https://huggingface.co/papers/2611.06768",
+   "linkLabel": "Paper auf Hugging Face ansehen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erfolgsquote laut Paper",
+    "balken": [
+     {
+      "label": "RoboDojo (42 Aufgaben)",
+      "wert": 84.4,
+      "anzeige": "84,4 %"
+     },
+     {
+      "label": "Reale Aufgaben (8)",
+      "wert": 91.1,
+      "anzeige": "91,1 %"
+     }
+    ]
+   },
+   "id": "pyrua-real-coding-agenten-lernen-roboterfahigkeiten-aus-echt",
+   "hinzugefuegt": "2026-11-05T22:49:07Z"
+  },
+  {
    "titel": "Kein KI-Agent übertrifft 12 Prozent im neuen GDPx-Benchmark von SemiAnalysis",
    "kurz": "SemiAnalysis testet KI-Agenten mit simulierter Wissensarbeit im Benchmark GDPx. Das beste Modell, Claude Opus 5.5, erreicht nur 12 Prozent, und Kritiker bemängeln die geringe Zahl an Aufgaben und ungleiche Testbedingungen.",
    "artikel": [
@@ -10815,6 +10931,85 @@
  ],
  "projekte": [
   {
+   "titel": "Poki: KI-Agenten steuern ein echtes iPhone",
+   "kurz": "Poki ist ein Open-Source-Projekt, mit dem KI-Agenten ein echtes iPhone bedienen können. Laut Repository braucht es dafür keinen Jailbreak und keine zusätzliche Hardware, sondern einen lokalen MCP-Server und einen Agenten.",
+   "artikel": [
+    "Poki ist ein Open-Source-Projekt auf GitHub, das KI-Agenten erlaubt, ein echtes iPhone zu bedienen. Laut der Projektbeschreibung läuft es als lokaler MCP-Server und Agent, ohne Jailbreak und ohne zusätzliche Hardware.",
+    "## Was MCP bedeutet",
+    "MCP steht für Model Context Protocol. Es ist ein Standard, über den KI-Anwendungen Werkzeuge ansprechen können. Im Projekt stellt der MCP-Server die Steuerung des iPhones als solche Werkzeuge bereit, etwa für Claude Code oder Codex.",
+    "## Voraussetzungen",
+    "Laut Readme wird macOS 15 oder neuer, das vollständige Xcode, Rust, Node.js 24 oder neuer sowie ffmpeg benötigt. Eine vorgefertigte Version für macOS auf Apple Silicon steht ebenfalls bereit. Für ein physisches iPhone muss es zuerst per USB mit dem Mac gekoppelt werden.",
+    "## Einschränkungen",
+    "Das Readme nennt mehrere Grenzen. Die Unterstützung für physische iPhones wurde nach Angaben des Projekts nur mit iPhones mit chinesischer Oberfläche getestet. Physische Geräte unterstützen nur das Hochformat. Der Export von App-Containern und direkte Links in Einstellungs-Unterseiten sind nicht verfügbar.",
+    "## Sicherheit und Verantwortung",
+    "Die Projektseite warnt, dass Poki echte Nachrichten senden oder Zahlungen ausführen kann, wenn der Agent dazu aufgefordert wird. Bildschirminhalte werden an den konfigurierten Modelldienst geschickt. Das Projekt betont außerdem, dass die Automatisierung von Apps und Websites gegen deren Nutzungsbedingungen verstoßen kann.",
+    "## Stand des Projekts",
+    "Zum Zeitpunkt der Quelle hatte das Repository 167 Sterne und 36 Forks. Das Projekt steht unter der Lizenz AGPL-3.0-only. Im Readme ist ein Hinweis enthalten, dass es unabhängig ist und nicht von Apple oder OpenAI unterstützt wird."
+   ],
+   "quellen": [
+    {
+     "titel": "JosssphZhou/poki auf GitHub",
+     "url": "https://github.com/JosssphZhou/poki"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Ein Entwickler kann einen KI-Agenten lokal mit dem eigenen iPhone verbinden, um Testabläufe automatisch durchlaufen zu lassen.",
+    "Eine Privatperson kann dem Agenten einfache Aufgaben auf dem Gerät geben, etwa eine Suche in Chrome, wie das Readme als Beispiel nennt.",
+    "Interessierte können den Quellcode prüfen oder an dem Projekt mitarbeiten, da es unter AGPL-3.0 steht."
+   ],
+   "ausprobieren": {
+    "prompt": "Search esp32 in Chrome and summarize the top result",
+    "tool": "Poki",
+    "url": "https://github.com/JosssphZhou/poki"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "poki",
+    "zeilen": [
+     "> Search esp32 in Chrome and summarize the top result",
+     "● Agent verbindet sich mit dem iPhone",
+     "✓ Suche in Chrome ausgeführt",
+     "⚠ Nachrichten und Zahlungen werden real ausgeführt",
+     "● Status: bereit"
+    ]
+   },
+   "macher": "Joseph Zhou und Mitwirkende",
+   "branche": "Entwicklerwerkzeuge / KI-Agenten",
+   "jahr": 2026,
+   "tools": [
+    "MCP (Model Context Protocol)",
+    "Node.js",
+    "Rust",
+    "Xcode",
+    "ffmpeg",
+    "Claude Code",
+    "Codex"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "167"
+    },
+    {
+     "label": "Forks",
+     "wert": "36"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "AGPL-3.0-only"
+    },
+    {
+     "label": "Voraussetzung",
+     "wert": "macOS 15 oder neuer"
+    }
+   ],
+   "link": "https://github.com/JosssphZhou/poki",
+   "linkLabel": "Zum Repository auf GitHub",
+   "id": "poki-ki-agenten-steuern-ein-echtes-iphone",
+   "hinzugefuegt": "2026-11-05T22:49:07Z"
+  },
+  {
    "titel": "PromptReel: Kostenlose Text-zu-Video-App für Windows läuft lokal auf dem eigenen PC",
    "kurz": "PromptReel ist eine kostenlose Desktop-App für Windows, die aus einem Textbefehl einen kurzen Videoclip erzeugt. Die KI-Berechnung läuft laut Projektseite lokal auf dem eigenen Rechner, basierend auf dem Open-Source-Modell Wan 2.2.",
    "artikel": [
@@ -14146,8 +14341,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-05T17:36:31Z",
+  "letzterScan": "2026-11-05T22:49:07Z",
   "neueFunde": 3,
-  "standAktualisiert": "2026-11-04T21:55:09Z"
+  "standAktualisiert": "2026-11-05T22:49:07Z"
  }
 }
