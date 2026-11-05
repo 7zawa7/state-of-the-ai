@@ -1,6 +1,67 @@
 {
  "news": [
   {
+   "titel": "Kimi K3.1 Pro: Open-Weight-Modell mit 1-Million-Token-Kontext auf Hugging Face",
+   "kurz": "Moonshot AI hat mit Kimi K3.1 Pro ein offenes, multimodales Agenten-Modell mit 2,8 Billionen Gesamtparametern veröffentlicht. Die Modellkarte nennt Stärken bei Coding, 3D-Erstellung und Finanzrecherche; die Benchmark-Werte stammen laut Seite vom Hersteller.",
+   "artikel": [
+    "Moonshot AI stellt auf Hugging Face das Modell moonshotai/Kimi-K3.1-Pro bereit. Laut Modellkarte handelt es sich um ein offenes Modell mit Gewichten (Open-Weight), das Text und Bilder verarbeitet und für agentische Aufgaben gedacht ist. Es ist das erste Modell der K3.1-Reihe und wurde aus Kimi K3 durch großangelegtes gemeinsames Reinforcement Learning über hunderte Fachbereiche weiterentwickelt.",
+    "Das Modell hat ein Kontextfenster von einer Million Token. Ein Token ist dabei ein Textabschnitt, meist ein Wortteil. Der Hersteller nennt deutliche Verbesserungen bei Programmierung, 3D-Erstellung, Finanzrecherche, sachlicher Genauigkeit und anderen agentischen Fähigkeiten.",
+    "## Architektur",
+    "Die Seite beschreibt eine Mixture-of-Experts-Architektur (MoE): Insgesamt hat das Modell 2,8 Billionen Parameter, pro Token aktiv sind laut Angabe 104 Milliarden. Dafür werden 16 von 896 Experten pro Token ausgewählt, dazu kommen zwei geteilte Experten. Gegenüber Kimi K3 wurden die klassischen Full-Attention-Schichten durch Gated DeepSeek Sparse Attention ersetzt, was laut Hersteller die Verarbeitung langer Kontexte effizienter macht. Eine Quantisierung mit MXFP4-Gewichten und MXFP8-Aktivierungen ist ebenfalls angegeben. Ein Vision Encoder mit 401 Millionen Parametern (MoonViT-V2) übernimmt die Bildverarbeitung.",
+    "## Benchmarks laut Hersteller",
+    "Die Tabelle des Herstellers vergleicht Kimi K3.1 Pro mit Claude Fable 5.1, GPT-6 Astra, Claude Opus 5.5, DeepSeek-V4.1-Flash-1017 und GLM-5.3. Bei Terminal-Bench 4.0 erreicht Kimi K3.1 Pro 65,7 Punkte, Claude Opus 5.5 kommt auf 66,4. Bei BrowseComp nennt der Hersteller 92,1 Punkte und liegt damit vor den genannten Vergleichsmodellen mit Werten. Bei GPQA-Diamond stehen 94,2 Punkte zu Buche. Auf HLE-Diamond erreicht das Modell 39,4 Punkte und liegt damit hinter GPT-6 Astra mit 65,8. Die Angaben sind Herstellerangaben und wurden nicht unabhängig geprüft; teils nutzte der Hersteller eigene interne Benchmarks.",
+    "Laut Modellkarte wurden die Ergebnisse mit maximalem Reasoning-Aufwand, Temperatur 1,0 und Top-p 0,95 ermittelt. Einige Werte stammen aus internen Tests des Herstellers."
+   ],
+   "quellen": [
+    {
+     "titel": "moonshotai/Kimi-K3.1-Pro – Hugging Face",
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    }
+   ],
+   "demo": "modell",
+   "bereich": "Text",
+   "datum": "",
+   "machen": [
+    "Das Modell über Hugging Face herunterladen oder über die verlinkte API testen, sofern man die nötige Hardware oder einen Zugang hat.",
+    "Lange Dokumente mit bis zu einer Million Token auf einmal analysieren, etwa Berichte oder Codebasen.",
+    "Die Herstellerangaben zu Coding und Finanzrecherche mit eigenen Aufgaben gegenprüfen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Terminal-Bench 4.0 (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "DeepSeek-V4.1-Flash",
+      "wert": 42.3,
+      "anzeige": "42,3"
+     },
+     {
+      "label": "GLM-5.3",
+      "wert": 41.8,
+      "anzeige": "41,8"
+     },
+     {
+      "label": "Claude Fable 5.1",
+      "wert": 57.9,
+      "anzeige": "57,9"
+     },
+     {
+      "label": "GPT-6 Astra",
+      "wert": 58.2,
+      "anzeige": "58,2"
+     },
+     {
+      "label": "Kimi K3.1 Pro",
+      "wert": 65.7,
+      "anzeige": "65,7"
+     }
+    ]
+   },
+   "tag": "Open Weights",
+   "id": "kimi-k3-1-pro-open-weight-modell-mit-1-million-token-kontext",
+   "hinzugefuegt": "2026-11-05T02:10:49Z"
+  },
+  {
    "titel": "KI-Agenten steuern Teleskop der SETI-Suche",
    "kurz": "Am Allen Telescope Array des SETI Institute steuern KI-Agenten das Teleskop und werten Funksignale aus. Laut Team dauern Aufgaben nun Stunden statt Wochen.",
    "artikel": [
@@ -2631,6 +2692,144 @@
   }
  ],
  "radar": [
+  {
+   "titel": "OpenAI-Pipeline findet 948 Linux-Rechteausweitungen für 1,2 Mio. Dollar",
+   "kurz": "OpenAI berichtet von einer autonomen Pipeline, die Sicherheitslücken im Linux-Kernel findet, überprüft und Patches dafür erzeugt. In einem Lauf im Oktober 2026 entstanden 948 lokale Rechteausweitungs-Exploits zu Kosten von rund 1,2 Millionen Dollar API-Guthaben.",
+   "artikel": [
+    "OpenAI hat eigenen Angaben zufolge eine Pipeline entwickelt, die Sicherheitslücken automatisch aufspürt, ausnutzbar macht und Korrekturen (Patches) erzeugt. Die Pipeline lief in einer kontrollierten Forschungsumgebung auf dem Linux-Kernel, dem Kernstück des Betriebssystems.",
+    "## Ablauf der Pipeline",
+    "Zuerst sucht das System sicherheitsrelevante Teile des Kernels und durchsucht sie statisch nach Kandidaten. Diese Funde werden dann dynamisch in einer isolierten Umgebung nachgestellt. Anschließend entsteht ein Proof of Concept (PoC), also ein Nachweis, dass sich die Lücke tatsächlich ausnutzen lässt. Zuletzt werden Patches erzeugt, und ein menschlicher Sicherheitsforscher prüft die Ergebnisse.",
+    "## Ergebnisse",
+    "Von 2.308 Kandidaten reproduzierte das Team 1.724 Verwundbarkeiten. Daraus entstanden PoCs für 291 Informationslecks und 948 funktionierende Exploits für lokale Rechteausweitung (LPE). Diese erlauben einem unprivilegierten lokalen Benutzer, Root-Rechte zu erlangen. Der Lauf kostete laut Angabe 1.213.430 Dollar an API-Guthaben, also etwa 1.279 Dollar pro Exploit.",
+    "Die Testmaschinen liefen mit einem gewöhnlichen Desktop-Betriebssystem und nicht mit einem geschwächten Ziel. Laut OpenAI ergäbe eine Bewertung mit den historischen Kopfgeldern von Pwn2Own und TyphoonPWN einen hypothetischen Wert von 18,9 bis 66,3 Millionen Dollar. Das wäre etwa das 16- bis 55-Fache der Pipeline-Kosten. Dies ist eine Hochrechnung des Herstellers, kein tatsächlich gezahltes Kopfgeld.",
+    "## Einordnung",
+    "In einer angepassten kernelCTF-Umgebung mit reduzierter Angriffsfläche fand die Pipeline 25 Informationslecks und 21 Exploits. Laut OpenAI kostete dieser Lauf rund 32.936 Dollar. Nach Herstellerangaben hätten die 21 Lücken bei Annahme etwa 1,5 Millionen Dollar Kopfgeld ergeben.",
+    "OpenAI schreibt außerdem, binnen zehn Tage nach Laufbeginn seien über 100 der Lücken bereits gepatcht oder mit Patches anderer Beitragender versehen worden. Weitere rund 300 wurden öffentlich diskutiert. Das Unternehmen sieht automatisierte Patch-Erstellung als nötig an, um mit der Geschwindigkeit moderner Modelle Schritt zu halten, und betont die Bedeutung von Sandboxes wie Firecracker und gVisor zur Begrenzung von Schäden."
+   ],
+   "quellen": [
+    {
+     "titel": "A thousand fewer paths to root (OpenAI)",
+     "url": "https://openai.com/index/a-thousand-fewer-paths-to-root"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Sicherheitsupdates für Linux-Systeme zeitnah einspielen, da laut OpenAI viele Lücken bereits existieren.",
+    "Eigene Systeme hinter Sandboxes oder Isolationsschichten betreiben, um Schäden durch ausgenutzte Lücken zu begrenzen."
+   ],
+   "quelle": "Lab-Blog",
+   "datum": "2026-11-04",
+   "kennzahlen": [
+    {
+     "label": "Kandidaten",
+     "wert": "2.308"
+    },
+    {
+     "label": "Reproduzierte Verwundbarkeiten",
+     "wert": "1.724"
+    },
+    {
+     "label": "LPE-Exploits",
+     "wert": "948"
+    },
+    {
+     "label": "Kosten (API-Guthaben)",
+     "wert": "1.213.430 $"
+    }
+   ],
+   "signal": "Laut OpenAI sinkt der Aufwand für Schwachstellensuche stark, Priorisierung und Validierung bleiben die Engpässe.",
+   "link": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+   "linkLabel": "Originalbeitrag lesen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Kosten pro LPE-Exploit (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Pipeline-Lauf",
+      "wert": 1279,
+      "anzeige": "1.279 $"
+     },
+     {
+      "label": "Pwn2Own-Kopfgeld (historisch)",
+      "wert": 20000,
+      "anzeige": "20.000 $"
+     },
+     {
+      "label": "TyphoonPWN-Kopfgeld (historisch)",
+      "wert": 70000,
+      "anzeige": "70.000 $"
+     }
+    ]
+   },
+   "id": "openai-pipeline-findet-948-linux-rechteausweitungen-fur-1-2-",
+   "hinzugefuegt": "2026-11-05T02:10:49Z"
+  },
+  {
+   "titel": "CloudOpsBench: Schlussfolgern ist der größte Engpass für KI in Cloud-Operations",
+   "kurz": "Ein neuer Open-Source-Benchmark prüft, wie gut KI-Agenten typische DevOps-Aufgaben in der Cloud lösen. Auch die besten Modelle scheitern an vielen Aufgaben, und die Hauptursache liegt laut Studie eher im logischen Schlussfolgern als im Fachwissen.",
+   "artikel": [
+    "CloudOpsBench ist ein neuer, frei verfügbarer Benchmark. Er misst, wie gut KI-Agenten gängige DevOps-Aufgaben in der Cloud bewältigen. Dazu gehören das Reparieren von Diensten, das Entfernen von Ressourcen, das Einschränken von Zugriffsrechten, das Ausrollen von Updates und das Abschalten von Projekten. Ein Benchmark ist dabei ein standardisierter Test, mit dem sich verschiedene Systeme vergleichen lassen.",
+    "## Ergebnisse",
+    "Version 1.0 umfasst 45 Aufgaben auf AWS und wurde von erfahrenen DevOps-Ingenieuren erstellt. Selbst die besten Modelle scheitern an vielen Aufgaben. Laut Fachpresse löste Claude Fable 5.1 60 Prozent der Aufgaben, GPT-6 Astra 53 Prozent. Dabei handelt es sich um die dort genannten Werte; eine unabhängige Prüfung ist im Material nicht beschrieben.",
+    "## Ursachen der Fehler",
+    "Das Team um Ang Chen von der University of Michigan sieht das Hauptproblem nicht im fehlenden Wissen, sondern im Schlussfolgern. Rund 80 Prozent der Fehler entstehen, weil Agenten den Umfang einer Aufgabe falsch einschätzen, nicht alle relevanten Dienste prüfen oder zu früh aufhören. Etwa 20 Prozent der Fehler sind falsche Aktionen, teils mit nicht rückgängig zu machenden Folgen für die Infrastruktur. Kein Modell erledigt alle Aufgaben vollständig.",
+    "## Testumgebung",
+    "Alle Aufgaben laufen identisch in einer echten AWS-Cloud und in einer Emulator-Umgebung. Erweiterungen für GCP, Azure und OCI sind laut Artikel geplant. Das Projekt auf GitHub steht unter der Apache-2.0-Lizenz, eine detaillierte Fehleranalyse ist ebenfalls verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "New open-source benchmark reveals reasoning as the biggest bottleneck for AI in cloud operations – The Decoder",
+     "url": "https://the-decoder.com/new-open-source-benchmark-reveals-reasoning-as-the-biggest-bottleneck-for-ai-in-cloud-operations/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer KI-Agenten für Cloud-Administration einsetzen will, kann die Aufgabenliste des Benchmarks als Checkliste für eigene Tests nutzen.",
+    "Teams können prüfen, ob ein Agent bei Änderungen an Zugriffsrechten oder beim Abschalten von Ressourcen Schritte auslässt, bevor sie ihm produktiv Rechte geben.",
+    "Interessierte können die Fehleranalyse lesen, um typische Fehlerquellen von Agenten zu verstehen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Gelöste Aufgaben (laut Fachpresse)",
+    "balken": [
+     {
+      "label": "GPT-6 Astra",
+      "wert": 53,
+      "anzeige": "53 %"
+     },
+     {
+      "label": "Claude Fable 5.1",
+      "wert": 60,
+      "anzeige": "60 %"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-11-04",
+   "kennzahlen": [
+    {
+     "label": "Aufgaben in Version 1.0",
+     "wert": "45 (AWS)"
+    },
+    {
+     "label": "Lösungsquote Claude Fable 5.1 (Herstellerangabe laut Fachpresse)",
+     "wert": "60 %"
+    },
+    {
+     "label": "Lösungsquote GPT-6 Astra",
+     "wert": "53 %"
+    },
+    {
+     "label": "Anteil Fehler durch Schlussfolgern",
+     "wert": "ca. 80 %"
+    }
+   ],
+   "signal": "Der Engpass liegt laut Studie weniger im Wissen als im logischen Schlussfolgern. Für den produktiven Einsatz von KI-Agenten in der Cloud bleibt daher viel Kontrolle nötig.",
+   "link": "https://the-decoder.com/new-open-source-benchmark-reveals-reasoning-as-the-biggest-bottleneck-for-ai-in-cloud-operations/",
+   "linkLabel": "Artikel bei The Decoder lesen",
+   "id": "cloudopsbench-schlussfolgern-ist-der-groste-engpass-fur-ki-i",
+   "hinzugefuegt": "2026-11-05T02:10:49Z"
+  },
   {
    "titel": "Postman installiert ohne Nachfrage KI-Plugins in Codex und Claude Code",
    "kurz": "Ein Nutzer berichtet, dass die Postman-Desktop-App nach dem Öffnen Plugins in Codex und Claude Code automatisch installiert, eine globale Startanweisung hinterlegt und den eigenen Hook als vertrauenswürdig markiert hat. Der Issue-Bericht auf GitHub hatte auf Hacker News 1436 Punkte.",
@@ -13603,8 +13802,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-04T21:55:09Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-11-05T02:10:49Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-04T21:55:09Z"
  }
 }
