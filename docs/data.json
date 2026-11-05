@@ -1,6 +1,47 @@
 {
  "news": [
   {
+   "titel": "OpenAI kauft Pierre Computer Company für bessere Git-Werkzeuge",
+   "kurz": "OpenAI übernimmt das Startup Pierre Computer Company, dessen Bibliotheken bereits den Coding-Agenten Codex antreiben. Ziel ist es, Git-Workflows an die parallele Arbeit von Entwicklern und KI-Agenten anzupassen.",
+   "artikel": [
+    "OpenAI kauft die Pierre Computer Company, Inc., das Startup hinter Code Storage und mehreren Open-Source-Werkzeugen. Pierres Bibliotheken werden nach Angaben von OpenAI bereits im Coding-Agenten Codex eingesetzt.",
+    "## Was Pierres Werkzeuge leisten",
+    "Laut Artikel gehören drei Bausteine zum Portfolio: „Trees“ dient der schnellen Navigation durch Projektdateien, „Diffs“ zeigt Codeänderungen an und erlaubt es, Fehler direkt in der Diff-Ansicht zu korrigieren, und „Highlights“ ist ein Syntax-Highlighter in Echtzeit, der beim Tippen oder bei der Codeerzeugung durch einen KI-Agenten arbeitet. Code Storage speichert Code und verfolgt dessen Historie über Git. (Syntax-Highlighter: Werkzeug, das Code farblich nach Programmiersprache gliedert.)",
+    "## Warum die Übernahme wichtig ist",
+    "OpenAI begründet den Kauf damit, dass Git-Workflows besser funktionieren sollen, wenn Entwickler und KI-Agenten gleichzeitig Code schreiben. Mit mehr Aufgaben, die Agenten parallel erledigen, muss das Umfeld rund um Git mithalten. (Git: verbreitetes System zur Versionsverwaltung von Software.)",
+    "OpenAI betreibt bereits Pando, ein eigenes Versionskontroll-Backend, das sowohl für Entwickler als auch für Agenten gedacht ist. Laut Artikel bleiben Pierres Open-Source-Projekte weiterhin quelloffen. Die Übernahme braucht noch eine behördliche Genehmigung.",
+    "Hinweis: Die Angaben zur Übernahme stammen von OpenAI selbst und sind Herstellerangaben."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI acquires Pierre Computer Company to make Git keep up with AI coding agents – The Decoder",
+     "url": "https://the-decoder.com/openai-acquires-pierre-computer-company-to-make-git-keep-up-with-ai-coding-agents/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer mit Codex oder ähnlichen Agenten programmiert, kann verfolgen, wie sich Git-Werkzeuge an KI-gestützte Arbeit anpassen.",
+    "Entwickler, die Open-Source-Projekte nutzen, können prüfen, ob Pierres Bibliotheken nach der Übernahme quelloffen bleiben.",
+    "Wer Codeänderungen überprüft, kann auf Diff-Ansichten mit direkter Fehlerkorrektur achten."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-11-04",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "git diff",
+    "zeilen": [
+     "> git diff main",
+     "- alte Zeile entfernt",
+     "+ neue Zeile hinzugefügt",
+     "✓ Änderungen angezeigt",
+     "⚠ Genehmigung ausstehend",
+     "● Status: Übernahme läuft"
+    ]
+   },
+   "id": "openai-kauft-pierre-computer-company-fur-bessere-git-werkzeu",
+   "hinzugefuegt": "2026-11-05T09:33:41Z"
+  },
+  {
    "titel": "Kimi K3.1 Pro: Open-Weight-Modell mit 1-Million-Token-Kontext auf Hugging Face",
    "kurz": "Moonshot AI hat mit Kimi K3.1 Pro ein offenes, multimodales Agenten-Modell mit 2,8 Billionen Gesamtparametern veröffentlicht. Die Modellkarte nennt Stärken bei Coding, 3D-Erstellung und Finanzrecherche; die Benchmark-Werte stammen laut Seite vom Hersteller.",
    "artikel": [
@@ -2692,6 +2733,124 @@
   }
  ],
  "radar": [
+  {
+   "titel": "TurnWise: Streaming-Video-RL mit Credit pro Entscheidung",
+   "kurz": "Forschende schlagen TurnWise vor, ein GRPO-Verfahren, das beim Lernen für Streaming-Video jede einzelne Antwort-oder-Warten-Entscheidung separat bewertet. Laut Paper übertrifft die Methode frühere RL-Ansätze für Streaming-Videoverständnis.",
+   "artikel": [
+    "Streaming-Videoverständnis bedeutet, dass ein Modell während eines laufenden Videos immer wieder entscheiden muss, ob es jetzt antwortet oder weiter zuschaut. Für dieses Training wurde zuletzt Group Relative Policy Optimization (GRPO) eingesetzt, ein Verstärkungslernverfahren, das Antworten innerhalb einer Gruppe von Versuchen miteinander vergleicht. Bisherige Ansätze konzentrierten sich vor allem auf das Design der Belohnung.",
+    "Das Problem laut Paper: Bisher erhält eine ganze Trajektorie nur einen gemeinsamen Vorteilswert über alle Entscheidungen hinweg. Dadurch können frühere Erfolge redundante Antworten verstärken, während sinnvolle Nachfolgeaktionen nach früheren Fehlschlägen entmutigt werden.",
+    "## Der Ansatz TurnWise",
+    "TurnWise ist ein GRPO-Framework auf Turn-Ebene. Die Zuordnung des Credits erfolgt über sogenanntes Silence-completed Prefix Scoring: Für jede Entscheidung werden Gruppen-relative Vorteile aus dem verbleibenden Ertrag berechnet, sodass das Lernsignal von früheren Belohnungen getrennt wird. Zusätzlich mittelt Turn-mean Policy Optimization die Token-Verluste zuerst innerhalb jedes Turns und danach über alle Turns. Antwort- und Warte-Entscheidungen zählen so gleich viel, unabhängig von der Länge der Ausgabe.",
+    "Die Autorinnen und Autoren betonen, dass die Verfahren ohne gelernten Critic und ohne zusätzliche Rollouts auskommen. Laut Paper verbessern beide Bausteine gemeinsam das Lernen der Streaming-Policy. Die Aussage, dass die Methode bisherige RL-Ansätze übertrifft, stammt aus den Experimenten der Autorinnen und Autoren; Zahlen sind im bereitgestellten Auszug nicht enthalten.",
+    "Der Code ist laut Seite auf GitHub verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "Turns Matter: Advancing Streaming Video RL via Turn-Level Credit (Hugging Face Paper Page)",
+     "url": "https://huggingface.co/papers/2611.06728"
+    },
+    {
+     "titel": "GitHub-Repository turn-wise-rl",
+     "url": "https://github.com/XD111ds/turn-wise-rl"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer Streaming-Video-Modelle trainiert, kann den Ansatz mit dem veröffentlichten Code auf eigene Daten übertragen.",
+    "Forschende können prüfen, ob turn-level Credit gegenüber trajektorienweiser Belohnung in ihrem Setting bessere Ergebnisse liefert.",
+    "Privatpersonen haben vorerst keinen direkten Nutzen, da es sich um ein Forschungsverfahren handelt."
+   ],
+   "quelle": "arXiv",
+   "datum": "2026-11-04",
+   "kennzahlen": [
+    {
+     "label": "Upvotes auf Hugging Face",
+     "wert": "54"
+    },
+    {
+     "label": "GitHub-Sterne (Stand Quelle)",
+     "wert": "53"
+    }
+   ],
+   "signal": "Ein Forschungspaper, das die Kreditvergabe im RL für Streaming-Video auf einzelne Entscheidungen herunterbricht. Die Leistungsbehauptung stammt von den Autorinnen und Autoren selbst.",
+   "link": "https://huggingface.co/papers/2611.06728",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "turnwise-streaming-video-rl-mit-credit-pro-entscheidung",
+   "hinzugefuegt": "2026-11-05T09:33:41Z"
+  },
+  {
+   "titel": "Fujifilm verfünffacht Bandproduktion wegen KI-Archivierung",
+   "kurz": "Fujifilm investiert rund 10 Milliarden Yen (etwa 63 Millionen US-Dollar), um die Produktion von Magnetband um das Fünffache zu steigern. Begründet wird das mit dem durch generative KI wachsenden Bedarf an Datenarchivierung.",
+   "artikel": [
+    "Fujifilm will seine Produktionskapazität für Magnetband, also Datenband, auf das Fünffache erhöhen. Das Unternehmen investiert dafür etwa 10 Milliarden Yen, umgerechnet rund 63 Millionen US-Dollar. Laut Ankündigung ist es die bisher größte Investition des Konzerns in Anlagen für LTO-Bänder.",
+    "## Warum gerade Magnetband?",
+    "Fujifilm führt den steigenden Archivierungsbedarf auf generative KI zurück, die weltweit ein \"exponentielles Wachstum\" der Datenmengen auslöse. LTO ist ein Standard für Magnetbänder im Unternehmensumfeld. Große Cloud-Anbieter nutzen Bänder laut Fujifilm, weil sie große Datenmengen vergleichsweise günstig speichern können.",
+    "## Schutz vor Ransomware",
+    "Bänder lassen sich vom Netz trennen und extern lagern, was man als Air-Gap bezeichnet. Fujifilm sieht darin einen letzten Schutz für Nutzerdaten, gerade angesichts von Ransomware-Angriffen.",
+    "## Produktion und Zeitplan",
+    "Der Ausbau läuft von Fiskaljahr 2026 bis 2028 am Standort Odawara im Kanagawa-Werk. Finanziert werden damit Fertigungserweiterung und zusätzliches Personal. Hauptsächlich soll das neueste Modell \"FUJIFILM LTO Ultrium10\" gefertigt werden. Dieses Band nutzt laut Fujifilm sogenannte feine Hybrid-Magnetpartikel aus Barium- und Strontiumferrit. Die Angaben zur Kapazität stammen vom Hersteller; die Kapazitäten künftiger Generationen sind Prognosen des LTO-Konsortiums."
+   ],
+   "quellen": [
+    {
+     "titel": "Fujifilm to boost tape production 5x as AI fuels archiving demand (Ars Technica)",
+     "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50336918"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wer Daten sichern will, kann eine Offline-Kopie auf Band oder externe Festplatte anlegen, die nach dem Backup vom Netz getrennt wird.",
+    "Privatpersonen mit großen Foto- oder Videoarchiven können prüfen, ob eine getrennte Langzeitsicherung für sie sinnvoll ist."
+   ],
+   "quelle": "Hacker News",
+   "datum": "2026-10",
+   "kennzahlen": [
+    {
+     "label": "Investition",
+     "wert": "ca. 10 Mrd. Yen (rund 63 Mio. US-Dollar)"
+    },
+    {
+     "label": "Kapazitätssteigerung",
+     "wert": "5x gegenüber Fiskaljahr 2025"
+    },
+    {
+     "label": "Zeitraum",
+     "wert": "Fiskaljahr 2026–2028"
+    },
+    {
+     "label": "Standort",
+     "wert": "Kanagawa-Werk, Odawara"
+    },
+    {
+     "label": "Neuestes Modell",
+     "wert": "FUJIFILM LTO Ultrium10"
+    }
+   ],
+   "signal": "Herstellerangaben von Fujifilm: Die Nachfrage nach Langzeitarchivierung auf Magnetband steigt laut Konzern durch generative KI deutlich.",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Kapazität Bandproduktion (Fujifilm, Angabe Faktor)",
+    "balken": [
+     {
+      "label": "FY 2025",
+      "wert": 1,
+      "anzeige": "1x"
+     },
+     {
+      "label": "Ziel",
+      "wert": 5,
+      "anzeige": "5x"
+     }
+    ]
+   },
+   "link": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
+   "linkLabel": "Ars Technica lesen",
+   "id": "fujifilm-verfunffacht-bandproduktion-wegen-ki-archivierung",
+   "hinzugefuegt": "2026-11-05T09:33:41Z"
+  },
   {
    "titel": "OpenAI-Pipeline findet 948 Linux-Rechteausweitungen für 1,2 Mio. Dollar",
    "kurz": "OpenAI berichtet von einer autonomen Pipeline, die Sicherheitslücken im Linux-Kernel findet, überprüft und Patches dafür erzeugt. In einem Lauf im Oktober 2026 entstanden 948 lokale Rechteausweitungs-Exploits zu Kosten von rund 1,2 Millionen Dollar API-Guthaben.",
@@ -13802,7 +13961,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-05T02:10:49Z",
+  "letzterScan": "2026-11-05T09:33:41Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-11-04T21:55:09Z"
  }
