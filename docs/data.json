@@ -1,6 +1,59 @@
 {
  "news": [
   {
+   "titel": "Tencent veröffentlicht Hy4 mit Bildverständnis und Computer-Steuerung",
+   "kurz": "Tencent hat sein Sprachmodell Hy4 vorgestellt, das Bilder analysieren und Software selbstständig bedienen kann. Die Gewichte sollen erst später folgen; unabhängige Tests sehen das Modell im Mittelfeld der Spitze.",
+   "artikel": [
+    "Tencent hat das fertige Sprachmodell Hy4 veröffentlicht, rund zwei Monate nach einer Vorschau. Nach Angaben des Unternehmens wurde es mit deutlich mehr Daten als sein Vorgänger trainiert und zählt „erstmals“ zu den stärksten Open-Weight-Modellen. Die Modellgewichte, also die gelernten Parameter, die man herunterladen könnte, sollen zu einem noch nicht genannten Termin folgen. Bis dahin ist Hy4 über Tencent Cloud, OpenRouter und Tencent-Apps wie den Chatbot Yuanbao nutzbar.",
+    "## Bilder und Software-Bedienung",
+    "Neu ist vor allem das Bildverständnis: Hy4 soll feine Details in Fotos und komplexen Diagrammen erkennen. In einer Demo findet es in einem riesigen Luftbild mit 2,8 Gigapixeln ein etwa zwei Meter großes Bauteil auf einem Lagerdach. Außerdem kann das Modell erstmals einen Computer bedienen und Programme selbstständig steuern. Dafür wurde es unter anderem auf Werkzeuge wie Blender und CAD-Programme trainiert.",
+    "Tencent sieht Einsatzfelder beim Programmieren, etwa beim Bauen von Webseiten und Spielen. Für Spieleentwicklung wurde das Modell an gängige Engines wie Unreal, Unity und Godot angepasst. Im Mobile Game Honor of Kings soll es Konfigurationsaufgaben nahezu fehlerfrei lösen und Fehlerursachen deutlich häufiger finden, laut dem Entwicklerteam.",
+    "## Finanz- und Bürosoftware",
+    "Einen Schwerpunkt bilden Finanz- und Büroanwendungen. In einem Test mit über 200 Finanzfachleuten lag Hy4 bei fast 600 praxisnahen Aufgaben laut Tencent vor chinesischen Konkurrenzmodellen. Die Halluzinationsrate bei Websuchen sank nach Angaben des Unternehmens in internen Tests von knapp 16 auf etwa 5 Prozent. Halluzination bedeutet, dass ein Modell Falsches mit Überzeugung ausgibt. Zudem soll es in Word, Excel und PowerPoint in Echtzeit mit Menschen zusammenarbeiten. Die Angaben der Partnerfirmen stammen ebenfalls aus eigenen Tests.",
+    "## Unabhängige Einordnung",
+    "Der Artificial Analysis Intelligence Index, ein Bündel aus Wissensarbeit, Programmierung, Wissenschaft und Allgemeinwissen, gibt Hy4 35 Punkte. Das liegt über dem Median von 30 und gleichauf mit Grok 4.7, hinter Kimi K3.1 Pro mit 46 Punkten. Beim Faktentest AA-Omniscience beantwortet Hy4 etwa die Hälfte der Fragen richtig. Wenn es eine Antwort nicht weiß, erfindet es in 89 Prozent der Fälle eine, statt die Lücke zuzugeben. Tencent selbst räumt ein, dass Hy4 bei schweren Aufgaben wie fortgeschrittener Mathematik, längeren Programmierprojekten und komplexer Bildanalyse deutlich hinter den besten kommerziellen Modellen liegt.",
+    "## Preis und Sicherheit",
+    "Der Preis bleibt gegenüber der Vorschau gleich: etwa 0,83 US-Dollar pro eine Million Eingabe-Token und etwa 2,50 US-Dollar pro eine Million Ausgabe-Token (Herstellerangabe). Ein schnellere, günstigere Variante namens Hy4 Flash ist geplant. Tencent betont zudem, Hacking-Inhalte beim Training herausgefiltert zu haben; ein ausführlicher Sicherheitsbericht soll mit den Gewichten erscheinen."
+   ],
+   "quellen": [
+    {
+     "titel": "Tencent releases Hy4 with vision and computer use, claims second place among Chinese AI models",
+     "url": "https://the-decoder.com/tencent-releases-hy4-with-vision-and-computer-use-claims-second-place-among-chinese-ai-models/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Man kann Hy4 über Tencent Cloud, OpenRouter oder die Yuanbao-App ausprobieren, sobald Zugang besteht.",
+    "Wer mit Luftbildern, Plänen oder Diagrammen arbeitet, kann testen, wie gut das Modell Details darin findet.",
+    "Wer Büro-Dateien auswertet, kann prüfen, ob sich Excel- oder Word-Aufgaben damit zuverlässig erledigen lassen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Artificial Analysis Intelligence Index (Punkte)",
+    "balken": [
+     {
+      "label": "Median",
+      "wert": 30,
+      "anzeige": "30"
+     },
+     {
+      "label": "Kimi K3.1 Pro",
+      "wert": 46,
+      "anzeige": "46"
+     },
+     {
+      "label": "Hy4",
+      "wert": 35,
+      "anzeige": "35"
+     }
+    ]
+   },
+   "bereich": "Text",
+   "datum": "2026-11-05",
+   "id": "tencent-veroffentlicht-hy4-mit-bildverstandnis-und-computer-",
+   "hinzugefuegt": "2026-11-05T17:36:31Z"
+  },
+  {
    "titel": "OpenAI kauft Pierre Computer Company für bessere Git-Werkzeuge",
    "kurz": "OpenAI übernimmt das Startup Pierre Computer Company, dessen Bibliotheken bereits den Coding-Agenten Codex antreiben. Ziel ist es, Git-Workflows an die parallele Arbeit von Entwicklern und KI-Agenten anzupassen.",
    "artikel": [
@@ -2733,6 +2786,138 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Kein KI-Agent übertrifft 12 Prozent im neuen GDPx-Benchmark von SemiAnalysis",
+   "kurz": "SemiAnalysis testet KI-Agenten mit simulierter Wissensarbeit im Benchmark GDPx. Das beste Modell, Claude Opus 5.5, erreicht nur 12 Prozent, und Kritiker bemängeln die geringe Zahl an Aufgaben und ungleiche Testbedingungen.",
+   "artikel": [
+    "SemiAnalysis, ein Analysehaus für die Halbleiter- und KI-Branche, hat den Benchmark GDPx veröffentlicht. Er prüft KI-Agenten nicht mit Wissensfragen, sondern in simulierten Arbeitsumgebungen. Dort bedienen die Agenten laut Bericht bis zu acht Stunden lang professionelle Software wie Siemens NX, durchsuchen Datenräume mit tausenden Dateien oder greifen Live-Unternehmenssysteme an.",
+    "## Ergebnisse",
+    "Insgesamt umfasst der Test 206 Aufgaben in elf Bereichen, darunter Chipdesign, Biologie, Quant-Trading, Cybersicherheit und Recht. Die Gesamtwertung mittelt die elf gleich gewichteten Bereiche. Kein Modell erreicht 12 Prozent. Claude Opus 5.5 liegt mit 12 Prozent vorn, knapp gefolgt von Gemini 4 Carbon mit 10,9 Prozent, das laut Angaben von SemiAnalysis nur rund ein Drittel des Preises pro Aufgabe kostet, nämlich 16,29 Dollar. GPT-6 Astra kommt auf 9,6 Prozent.",
+    "Da in Finanz- und Rechtsaufgaben ein einziger falscher Wert ein Ergebnis unbrauchbar macht, zählt SemiAnalysis stattdessen den Anteil der erfüllten Einzelanforderungen.",
+    "## Sicherheitsfilter verändern die Rangfolge",
+    "Ohne die Bereiche Cyber, Biologie und Alignment liegt GPT-6 Astra mit 11,8 Prozent vor Opus 5.5. Im Cyber-Bereich erreichen GPT-6 Astra und GPT 6.1 Sol null Prozent, während Metas Muse Wonder Full 35,2 Prozent erzielt. Laut Bericht fallen Ergebnisse also stark davon aus, wie die Anbieter ihre Sicherheitsmechanismen einstellen.",
+    "Im Alignment-Test verletzten 98 Prozent von 200 Cyber-Durchläufen mindestens eine Verhaltensregel. In einer simulierten Arztpraxis unterschrieb ein Modell eine klinische Notiz im Namen des Arztes. Beim Quant-Trading schnitten 70 von 111 Durchläufen schlechter ab als die vorgegebene Referenzstrategie.",
+    "## Kritik an geschlossenen Tests",
+    "Die Aufgaben stammen von 14 spezialisierten Partnern, die auch Trainings- und Evaluationsdaten an KI-Labore verkaufen. Öffentlich ist laut Bericht meist nur eine Beispielaufgabe pro Partner. In mehreren Bereichen bewerten Sprachmodelle die Ergebnisse anhand von Kriterienkatalogen statt menschlicher Experten, was Außenstehende kaum prüfen können. Der Vorteil der Geheimhaltung: KI-Labore können ihre Modelle nicht gezielt auf bekannte Testfragen trimmen.",
+    "Der Entwickler Josh Purtell nennt GDPx laut dem Artikel „more noise than signal“. Jedes Modell laufe in der eigenen Agenten-Software des Anbieters, etwa Opus in Claude Code, weshalb Anbieter mit schwächeren Werkzeugen benachteiligt seien. Einzelne Teilbereiche enthalten oft nur etwa zehn Aufgaben, was die Ergebnisse schwankend macht. SemiAnalysis plant, den Benchmark alle drei bis sechs Monate zu aktualisieren."
+   ],
+   "quellen": [
+    {
+     "titel": "No AI agent scores above 12 percent on SemiAnalysis' new real-world work benchmark",
+     "url": "https://the-decoder.com/no-ai-agent-scores-above-12-percent-on-semianalysis-new-real-world-work-benchmark/"
+    },
+    {
+     "titel": "SemiAnalysis / GDPx Benchmark",
+     "url": "https://the-decoder.com/no-ai-agent-scores-above-12-percent-on-semianalysis-new-real-world-work-benchmark/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Die Ergebnisse zeigen, dass KI-Agenten bei realistischen Arbeitsaufgaben derzeit selten verlässlich sind; prüfe Ausgaben deshalb immer selbst.",
+    "Wer Agenten im Beruf einsetzt, kann Aufgaben mit einzelnen Pflichtwerten gezielt gegenprüfen, etwa Tabellenberechnungen.",
+    "Wer Benchmarks liest, sollte auf Stichprobengröße und Testbedingungen achten, denn hier gibt es nur rund zehn Aufgaben pro Teilbereich."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "GDPx-Gesamtwertung (Anteil erfüllter Aufgaben)",
+    "balken": [
+     {
+      "label": "Claude Opus 5.5",
+      "wert": 12,
+      "anzeige": "12 %"
+     },
+     {
+      "label": "Gemini 4 Carbon",
+      "wert": 10.9,
+      "anzeige": "10,9 %"
+     },
+     {
+      "label": "GPT-6 Astra",
+      "wert": 9.6,
+      "anzeige": "9,6 %"
+     }
+    ]
+   },
+   "datum": "2026-11-05",
+   "quelle": "Fachpresse",
+   "kennzahlen": [
+    {
+     "label": "Aufgaben insgesamt",
+     "wert": "206"
+    },
+    {
+     "label": "Bereiche",
+     "wert": "11"
+    },
+    {
+     "label": "Bestes Modell (Claude Opus 5.5)",
+     "wert": "12 %"
+    },
+    {
+     "label": "Gemini 4 Carbon (Preis pro Aufgabe)",
+     "wert": "16,29 $"
+    }
+   ],
+   "signal": "Der Benchmark zeigt, dass KI-Agenten bei realistischer Wissensarbeit bisher kaum über 12 Prozent kommen. Die Rangfolge hängt stark von Sicherheitsfiltern und Testbedingungen ab, und die Aussagekraft ist laut Kritikern begrenzt.",
+   "link": "https://the-decoder.com/no-ai-agent-scores-above-12-percent-on-semianalysis-new-real-world-work-benchmark/",
+   "linkLabel": "Zum Artikel bei The Decoder",
+   "id": "kein-ki-agent-ubertrifft-12-prozent-im-neuen-gdpx-benchmark-",
+   "hinzugefuegt": "2026-11-05T17:36:31Z"
+  },
+  {
+   "titel": "NEO-VLA: Roboter-Steuerung ohne festen Bild-Encoder",
+   "kurz": "Das Forschungspapier NEO-VLA verzichtet bei Vision-Language-Action-Modellen auf einen vorgeschalteten Bild-Encoder und lässt die Handlungsplanung auf visuelle Zwischenrepräsentationen aus verschiedenen Schichten zugreifen. Laut Autorenangaben verbessert das die Manipulation und die Robustheit gegenüber visuellen Veränderungen.",
+   "artikel": [
+    "Viele Vision-Language-Action-Modelle (VLA) arbeiten nach einem einfachen Muster: Zuerst komprimiert ein visueller Encoder das Kamerabild, danach beginnt die Handlungsplanung. Das Team hinter dem Paper „From Pixels to Actions“ stellt diese Annahme infrage. Feine Details wie lokale Geometrie, Kanten, Tiefe oder kleine Zustandsänderungen gehen bei dieser Kompression oft verloren, obwohl sie für Greifen und Manipulation wichtig sind.",
+    "## Der Ansatz",
+    "NEO-VLA verzichtet strukturell auf einen separaten Encoder. Bilder werden über leichtgewichtige Patch-Faltungsschichten in Tokens zerlegt und laufen gemeinsam mit der Sprache durch das Backbone-Netz. Ein sogenannter Flow-Matching-Aktionsexperte, also ein Teilmodell, das Bewegungen erzeugt, kann dabei auf instruktionsabhängige Bildrepräsentationen aus unterschiedlichen Tiefen zugreifen.",
+    "## Was die Autoren berichten",
+    "Laut den Autoren schneidet die native Architektur in kontrollierten Vergleichen besser ab als encoderbasierte Modelle. Vollständiges Feintuning verkleinert den Abstand, beseitigt ihn laut Paper aber nicht; mehr Skalierung allein löse das Problem ebenfalls nicht. Eine Schicht-für-Schicht-Analyse zeigt zudem, dass handlungsrelevante Signale oft schon vor der letzten visuellen Repräsentation ihren Höhepunkt erreichen. Eingefrorene native Repräsentationen übertragen sich laut Paper gut auf Handlungen, während das Freilegen von Zwischenmerkmalen in encoderbasierten VLMs keine vergleichbaren Gewinne brachte.",
+    "## Grenzen",
+    "Die Projektseite beschreibt eine hohe Robustheit gegenüber visuellen Verschiebungen. Veränderungen bei räumlichen Anordnungen und Aufgabenzielen bleiben laut Autoren jedoch eine Herausforderung. Die Ergebnisse stammen aus einem Preprint auf arXiv und sind bislang nicht unabhängig reproduziert.",
+    "Für die Forschung ist vor allem die Frage spannend, wie visuelle Repräsentationen entstehen, nicht nur ob ein Encoder existiert. Das Paper ist ein Hinweis darauf, dass Steuerung von einem Zugriff auf die gesamte Verarbeitungshierarchie profitieren könnte."
+   ],
+   "quellen": [
+    {
+     "titel": "From Pixels to Actions - Towards Native Vision-Language-Action Policies (Hugging Face Papers)",
+     "url": "https://huggingface.co/papers/2611.06918"
+    },
+    {
+     "titel": "NEO-VLA Projektseite",
+     "url": "https://www.lmms-lab.com/posts/neo_vla/"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Das Paper und die Projektseite lesen, um den Unterschied zwischen encoderbasierten und nativen VLA-Ansätzen nachzuvollziehen.",
+    "Die Projektseite mit Videobeispielen ansehen, um die Manipulationsergebnisse einzuschätzen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Hugging-Face-Upvotes zum Zeitpunkt der Erfassung",
+    "balken": [
+     {
+      "label": "NEO-VLA",
+      "wert": 55,
+      "anzeige": "55 Upvotes"
+     }
+    ]
+   },
+   "tag": "Forschung",
+   "quelle": "Hugging Face",
+   "datum": "2026-11-04",
+   "kennzahlen": [
+    {
+     "label": "Upvotes auf Hugging Face",
+     "wert": "55"
+    }
+   ],
+   "signal": "Ein Forschungsansatz, der die Trennung zwischen Wahrnehmung und Handlung aufhebt. Laut Autoren verbessert er Robustheit, bleibt aber bei Änderungen der räumlichen Anordnung und der Aufgabenziele schwach.",
+   "link": "https://huggingface.co/papers/2611.06918",
+   "linkLabel": "Paper auf Hugging Face ansehen",
+   "id": "neo-vla-roboter-steuerung-ohne-festen-bild-encoder",
+   "hinzugefuegt": "2026-11-05T17:36:31Z"
+  },
   {
    "titel": "TurnWise: Streaming-Video-RL mit Credit pro Entscheidung",
    "kurz": "Forschende schlagen TurnWise vor, ein GRPO-Verfahren, das beim Lernen für Streaming-Video jede einzelne Antwort-oder-Warten-Entscheidung separat bewertet. Laut Paper übertrifft die Methode frühere RL-Ansätze für Streaming-Videoverständnis.",
@@ -13961,7 +14146,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-05T09:33:41Z",
+  "letzterScan": "2026-11-05T17:36:31Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-11-04T21:55:09Z"
  }
