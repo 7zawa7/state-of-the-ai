@@ -3024,6 +3024,68 @@
  ],
  "radar": [
   {
+   "titel": "Ripple-65B Preview: Offenes US-Modell mit starken Coding-Ergebnissen",
+   "kurz": "Das Startup Ricursive Intelligence hat Ripple-65B Preview veröffentlicht, ein offenes Sprachmodell unter Apache-2.0-Lizenz. Laut Herstellerangabe ist es das beste offene US-Modell im TerminalBench 2.1, liegt aber in anderen Tests hinter Inkling 2 Small zurück.",
+   "artikel": [
+    "Ricursive Intelligence, ein Hersteller von KI-Chips, hat ein offenes Sprachmodell namens Ripple-65B Preview vorgestellt. Das Modell hat 65 Milliarden Parameter und wurde laut Hersteller auf 12 Billionen Tokens vorab trainiert. Als offenes Modell bezeichnet man hier eines, dessen Gewichte frei verfügbar sind.",
+    "## Coding-Ergebnis laut Hersteller",
+    "Nach Angaben des Unternehmens erreicht Ripple im TerminalBench 2.1, einem Benchmark für Programmieraufgaben, einen Wert von 80,52. Das sei das beste Ergebnis unter offenen US-Modellen. Als Gerüst (Harness) nutzt das Modell teils Terminus 2 und teils OpenCode. Diese Werte stammen vom Hersteller und sind nicht unabhängig geprüft.",
+    "## Vergleich mit Inkling 2 Small",
+    "In anderen Benchmarks liegt Ripple laut der Quelle nicht auf dem Niveau von Inkling 2 Small, das ebenfalls neu erschienen ist. Bei SWE-Bench Pro v2.0 Hard erreicht Ripple laut Herstellerangabe 79,1 Prozent, Inkling 2 Small 86,3 Prozent. Bei DeepSWE v1.1 sind es 44,3 zu 72,1 Prozent.",
+    "## Architektur und Verfügbarkeit",
+    "Ripple setzt auf eine dichte Transformer-Architektur statt auf Mixture-of-Experts, bei der nur Teile des Netzes pro Anfrage aktiv sind. Das Modell ist laut Quelle für Nvidia-Hardware optimiert und dürfte sich leichter auf eigener Hardware betreiben lassen. Es steht auf Hugging Face unter der Apache-2.0-Lizenz zur Verfügung.",
+    "## Kosten",
+    "Ricursive gibt die gesamten Entwicklungs- und Trainingskosten mit 32 Millionen US-Dollar an, inklusive aller Forschungs- und Entwicklungsausgaben. Auch diese Angabe stammt vom Unternehmen selbst."
+   ],
+   "quellen": [
+    {
+     "titel": "Ripple-65B Preview delivers strong agentic coding results as a fully Apache 2.0 open US model – THE DECODER",
+     "url": "https://the-decoder.com/ripple-65b-preview-delivers-strong-agentic-coding-results-as-a-fully-apache-2-0-open-us-model/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer ein eigenes Modell auf eigener Hardware betreiben möchte, kann die Gewichte von Hugging Face laden und prüfen.",
+    "Entwickler können das Modell für Coding-Aufgaben testen und mit anderen offenen Modellen vergleichen."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-11-06",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "65 Mrd."
+    },
+    {
+     "label": "Pretraining-Tokens",
+     "wert": "12 Billionen"
+    },
+    {
+     "label": "TerminalBench 2.1 (Herstellerangabe)",
+     "wert": "80,52"
+    },
+    {
+     "label": "Gesamtkosten (Herstellerangabe)",
+     "wert": "32 Mio. US-Dollar"
+    }
+   ],
+   "signal": "Offene US-Modelle holen im Coding auf, laut Hersteller zumindest in diesem Benchmark vorne. Die Werte sind Herstellerangaben und unabhängig nicht bestätigt.",
+   "link": "https://the-decoder.com/ripple-65b-preview-delivers-strong-agentic-coding-results-as-a-fully-apache-2-0-open-us-model/",
+   "linkLabel": "Originalartikel lesen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "TerminalBench 2.1 (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Ripple-65B Preview",
+      "wert": 80.52,
+      "anzeige": "80,52"
+     }
+    ]
+   },
+   "id": "ripple-65b-preview-offenes-us-modell-mit-starken-coding-erge",
+   "hinzugefuegt": "2026-11-06T22:25:14Z"
+  },
+  {
    "titel": "METR: Anthropic könnte seine eigene KI-Beschleunigungsschwelle schon im Juli überschritten haben",
    "kurz": "Die Organisation METR hat die internen Forschungsdaten von Anthropic geprüft und kommt zu dem Schluss, dass sich das Tempo der Modellentwicklung etwa verdoppelt hat, zu großen Teilen wegen KI-gestützter Forschung. Anthropic hat die aussagekräftigsten Belege jedoch geschwärzt.",
    "artikel": [
@@ -14955,8 +15017,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-06T17:41:40Z",
-  "neueFunde": 4,
+  "letzterScan": "2026-11-06T22:25:14Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-11-05T22:49:07Z"
  }
 }
