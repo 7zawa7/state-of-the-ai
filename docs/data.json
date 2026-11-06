@@ -1,6 +1,99 @@
 {
  "news": [
   {
+   "titel": "OpenAI stellt GPT-6 Cyber vor: KI findet Sicherheitslücken und schlägt Fixes vor",
+   "kurz": "OpenAI hat ein auf Cybersicherheit spezialisiertes KI-Modell namens GPT-6 Cyber vorgestellt, das Schwachstellen in Software aufspüren, Exploits entwickeln und Patches vorschlagen soll. Alle Leistungsangaben stammen laut Artikel von OpenAI selbst.",
+   "artikel": [
+    "OpenAI hat mit GPT-6 Cyber ein KI-Modell vorgestellt, das gezielt darauf trainiert wurde, Sicherheitslücken in Software zu finden. Laut OpenAI kann es Schwachstellen erkennen, funktionierende Exploits entwickeln – also Programme, die eine Lücke tatsächlich ausnutzen – und Korrekturen (Patches) vorschlagen.",
+    "## Testergebnisse",
+    "Nach Angaben von OpenAI fand das Modell in einer gezielten Kampagne 81 bisher unbekannte schwere Schwachstellen im Browser Firefox. Mozilla hat die Meldungen angenommen und bereits Fixes ausgeliefert. Außerdem zeigte sich, dass 30 bereits bekannte Probleme gravierender waren als gedacht.",
+    "Im Linux-Kernel reproduzierte GPT-6 Cyber laut OpenAI 1.724 Sicherheitslücken und entwickelte für 948 davon funktionierende Exploits. Das Vorgängermodell GPT-5.6 Sol schaffte unter gleichen Bedingungen 166. Der gesamte Lauf kostete laut OpenAI rund 1,2 Millionen US-Dollar an Rechenleistung, also etwa 1.279 Dollar pro Exploit. Zum Vergleich nennt der Artikel Kopfgelder bei Wettbewerben wie Pwn2Own mit historisch 20.000 bis 70.000 Dollar pro vergleichbarem Fund.",
+    "Bei einem Benchmark namens ExploitGym, der prüft, ob ein Modell eine gegebene Lücke in einem entfernten System ausnutzen kann, erreicht GPT-6 Cyber laut OpenAI 48,5 Prozent, der Vorgänger 32,1 Prozent. Die Sicherheitsvorkehrungen hielt das Modell in 99,93 Prozent der Fälle ein, mit aktivierten Sicherheitsanweisungen in 100 Prozent der Tests.",
+    "## Einordnung",
+    "Alle Benchmark-Zahlen stammen von OpenAI selbst. Eine unabhängige Prüfung des Modells ist laut Artikel bisher nicht veröffentlicht. OpenAI behauptet außerdem, die Agenten hätten mindestens zehn neuartige Angriffstechniken genutzt, die auch externen Kernel-Experten unbekannt waren. Wie weit diese Behauptung trägt, ist laut Artikel offen, da Forscher uneins sind, ob KI-Modelle wirklich Neues entdecken oder nur Gelerntes neu kombinieren.",
+    "## Zugang",
+    "GPT-6 Cyber ist zunächst über die API und Codex nur für eine ausgewählte Gruppe von Kunden des Programms „Daybreak Red“ verfügbar. Der Zugang soll schrittweise ausgeweitet werden. OpenAI verweist zudem auf Schutzmaßnahmen wie Zugriffsprüfungen, Überwachung und die Empfehlung, das Modell nur in isolierten Umgebungen mit menschlicher Aufsicht zu betreiben."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAIs GPT-6 Cyber can both break into systems and propose how to fix them (The Decoder)",
+     "url": "https://the-decoder.com/openais-gpt-6-cyber-can-both-break-into-systems-and-propose-how-to-fix-them/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wer Software pflegt, kann Meldungen zu Sicherheitslücken künftig schneller prüfen, sobald Hersteller wie Mozilla Fixes veröffentlichen.",
+    "Privatpersonen haben derzeit keinen allgemeinen Zugang, da das Modell nur ausgewählten Kunden offensteht.",
+    "Interessierte können die Entwicklung verfolgen, insbesondere die angekündigte Erweiterung des Zugangs."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Linux-Kernel: Exploits pro Modell",
+    "balken": [
+     {
+      "label": "GPT-5.6 Sol",
+      "wert": 166,
+      "anzeige": "166"
+     },
+     {
+      "label": "GPT-6 Cyber",
+      "wert": 948,
+      "anzeige": "948"
+     }
+    ]
+   },
+   "tag": "Sicherheit",
+   "bereich": "Agenten",
+   "datum": "2026-11-05",
+   "id": "openai-stellt-gpt-6-cyber-vor-ki-findet-sicherheitslucken-un",
+   "hinzugefuegt": "2026-11-06T10:40:44Z"
+  },
+  {
+   "titel": "Baidu veröffentlicht ERNIE 5.5 Flash Base als offenes Basismodell",
+   "kurz": "Baidu hat das Foundation-Modell ERNIE-5.5-Flash-Base mit 280 Milliarden Parametern veröffentlicht, bewusst ohne Feinabstimmung. Die Gewichte sind laut Quelle auf Hugging Face verfügbar.",
+   "artikel": [
+    "Der chinesische Konzern Baidu hat ERNIE-5.5-Flash-Base veröffentlicht, ein offenes Foundation-Modell. Laut dem Bericht von The Decoder wurde es bewusst ohne Fine-Tuning und ohne Post-Training ausgeliefert. Entwickler sollen selbst entscheiden, wofür sie das Modell einsetzen. Eine nachtrainierte Version soll folgen.",
+    "## Architektur und Training",
+    "Das Modell nutzt eine Mixture-of-Experts-Architektur (MoE), bei der nur ein Teil der Experten pro Eingabe aktiv ist. Insgesamt hat es 280 Milliarden Parameter, von denen laut Baidu 14 Milliarden pro Eingabe aktiv sind. Vortrainiert wurde es mit 33,5 Billionen Tokens und einem Trainingskontext von bis zu 128.000 Tokens. Laut Baidu ist es für einen Kontext von bis zu einer Million Tokens bei Feinabstimmung und Inferenz ausgelegt.",
+    "## Benchmarks",
+    "Baidu vergleicht das Modell mit DeepSeek-V4-Flash-Base, Hy3-preview-Base und MiMo-V2.5-Base, jeweils mit derselben Testumgebung. Die Kategorien reichen von Prüfungswissen über MINT, Reasoning und Code bis zu mehrsprachigen Aufgaben und langen Kontexten. Laut Baidu kann das Modell bei Reasoning-, Code- und Long-Context-Aufgaben mit ähnlich großen offenen Modellen wie DeepSeek V4 Flash oder MiMo V2.5 mithalten. Dabei handelt es sich um Herstellerangaben, die nicht unabhängig geprüft wurden.",
+    "## Verfügbarkeit",
+    "Die Gewichte stehen laut Quelle auf Hugging Face in den Formaten FP8 und BF16 zur Verfügung. Ein Foundation-Modell ist ein Basismodell, das auf breite Sprachaufgaben vortrainiert wurde und sich anschließend anpassen lässt. Eine Feinabstimmung auf bestimmte Aufgaben ist für Entwickler damit vorgesehen, aber nicht von Baidu mitgeliefert."
+   ],
+   "quellen": [
+    {
+     "titel": "Baidu releases ERNIE 5.5 Flash Base with 280 billion parameters as an open-source foundation model",
+     "url": "https://the-decoder.com/baidu-releases-ernie-5-5-flash-base-with-280-billion-parameters-as-an-open-source-foundation-model/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler können die Gewichte von Hugging Face herunterladen und das Modell für eigene Feinabstimmungen nutzen.",
+    "Interessierte können eigene Benchmarks mit dem Basismodell durchführen und mit anderen offenen Modellen vergleichen.",
+    "Wer ein eigenes Sprachmodell für eine spezielle Aufgabe braucht, kann die Basisversion als Ausgangspunkt verwenden."
+   ],
+   "bereich": "Text",
+   "datum": "2026-11-05",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Herstellerangabe: Parameter (Mrd.)",
+    "balken": [
+     {
+      "label": "ERNIE 5.5 Flash Base (aktiv pro Eingabe)",
+      "wert": 14,
+      "anzeige": "14 Mrd. aktiv"
+     },
+     {
+      "label": "ERNIE 5.5 Flash Base (gesamt)",
+      "wert": 280,
+      "anzeige": "280 Mrd. gesamt"
+     }
+    ]
+   },
+   "id": "baidu-veroffentlicht-ernie-5-5-flash-base-als-offenes-basism",
+   "hinzugefuegt": "2026-11-06T10:40:44Z"
+  },
+  {
    "titel": "Google Gemini Omni 1.2 Flash: Videos bis 15 Sekunden und 30 Prozent günstiger",
    "kurz": "Google DeepMind hat das Videomodell Gemini Omni 1.2 Flash allgemein verfügbar gemacht. Es erzeugt Clips bis 15 Sekunden Länge und kostet laut Hersteller 30 Prozent weniger als der Vorgänger.",
    "artikel": [
@@ -2831,6 +2924,76 @@
   }
  ],
  "radar": [
+  {
+   "titel": "VFlash: Visuelle Planung für Robotik in einem Durchgang",
+   "kurz": "VFlash ist eine Methode, mit der KI-Modelle für Robotik und autonomes Fahren visuelle Pläne (Punkte, Boxen, Trajektorien) schneller erzeugen können. Die Koordinaten werden gemeinsam in einem Durchgang vorhergesagt, statt Token für Token.",
+   "artikel": [
+    "## Worum es geht",
+    "Modelle für physische KI, etwa in der Robotik oder beim autonomen Fahren, müssen nicht nur in Sprache denken. Sie können mit visuellen Plänen arbeiten: Punkte, Bounding Boxes (umschließende Rechtecke um Objekte) und Trajektorien (Bewegungsbahnen) beschreiben räumliche Ziele und zeigen, wohin sich etwas bewegen könnte.",
+    "## Das Problem",
+    "Autoregressive Vision-Language-Modelle erzeugen solche Pläne bisher eine Koordinate nach der anderen. Je reichhaltiger die Vorhersage sein soll, desto teurer wird das. Autoregressiv bedeutet, dass jedes Element auf den vorherigen aufbaut.",
+    "## Der Ansatz",
+    "VFlash nutzt die bekannte Struktur visueller Primitive aus und sagt deren Koordinaten gemeinsam voraus. Ein leichtgewichtiger Drafter erzeugt ein komplettes Primitiv in einem einzigen Durchlauf. Das Layout passt sich an Typ, Dimensionalität und Länge an und unterstützt kompakte Boxen ebenso wie lange Trajektorien mit variabler Länge.",
+    "Wichtig ist, dass die räumliche Genauigkeit nicht davon abhängt, die exakte Token-Folge eines autoregressiven Modells nachzubilden. Das Training erfolgt auf annotierten Primitiven, und strukturell gültige Vorhersagen werden ohne Übereinstimmung mit einer Zieltoken-Folge akzeptiert.",
+    "## Ergebnisse laut Quelle",
+    "Über die getesteten 2D- und 3D-Roboter-Trajektorieaufgaben hinweg senkt VFlash laut den Autoren die Vorhersagefehler im Vergleich zur autoregressiven Dekodierung. Vorläufige Einzelmessungen geben für die 3D-Bewegungsprognose eine etwa 25-fache Beschleunigung der Erzeugung an. Ein Weltaktionsmodell, das auf VFlash-Pläne konditioniert ist, erreicht über vier MolmoSpaces-Aufgabensammlungen im Schnitt 70,2 % Erfolg, der Vergleichswert der Baseline liegt bei 62,6 %.",
+    "Hinweis: Diese Zahlen stammen aus dem Paper der Autoren und sind nicht unabhängig geprüft. Die 25-fache Beschleunigung basiert laut Quelle auf vorläufigen Messungen mit einem einzelnen Durchlauf."
+   ],
+   "quellen": [
+    {
+     "titel": "Paper page - VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding (Hugging Face)",
+     "url": "https://huggingface.co/papers/2611.08449"
+    },
+    {
+     "titel": "arXiv:2611.08449",
+     "url": "https://arxiv.org/abs/2611.08449"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Die Methode lässt sich vorerst nur als Forschungsarbeit lesen, ein fertiges Werkzeug für Privatpersonen wird im Material nicht genannt.",
+    "Wer mit Robotik-Simulationen arbeitet, kann prüfen, ob strukturierte Vorhersagen wie Boxen oder Trajektorien schneller erzeugt werden können.",
+    "Für Einsteiger eignet sich die Paper-Seite als Einstieg, um Begriffe wie Bounding Box und Trajektorie in einem konkreten Kontext zu sehen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Vorhersage-Zeit (relativ, 3D-Bewegungsprognose)",
+    "balken": [
+     {
+      "label": "Autoregressiv",
+      "wert": 1,
+      "anzeige": "1x"
+     },
+     {
+      "label": "VFlash",
+      "wert": 25,
+      "anzeige": "ca. 25x schneller (vorläufig, laut Autoren)"
+     }
+    ]
+   },
+   "tag": "Forschung",
+   "quelle": "arXiv",
+   "datum": "2025-11-05",
+   "kennzahlen": [
+    {
+     "label": "Beschleunigung 3D-Bewegungsprognose",
+     "wert": "ca. 25x (vorläufig, laut Autoren)"
+    },
+    {
+     "label": "Erfolgsrate MolmoSpaces (Ø, vier Aufgabensammlungen)",
+     "wert": "70,2 % vs. 62,6 % Baseline"
+    },
+    {
+     "label": "Hugging-Face-Upvotes",
+     "wert": "58"
+    }
+   ],
+   "signal": "Ein Forschungsbeitrag von NVIDIA-nahen Autoren, der die Geschwindigkeit visueller Planung für Robotik adressiert. Er ist als Paper der Woche auf Hugging Face markiert, aber nicht als Produkt verfügbar.",
+   "link": "https://huggingface.co/papers/2611.08449",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "vflash-visuelle-planung-fur-robotik-in-einem-durchgang",
+   "hinzugefuegt": "2026-11-06T10:40:44Z"
+  },
   {
    "titel": "sand3d: 3D-Modelle in Python, für LLMs geschrieben",
    "kurz": "sand3d ist eine Python-Bibliothek, mit der 3D-Objekte als kurze, lesbare Programme beschrieben werden, die auf Blender (bpy) aufsetzen. Das Projekt auf GitHub hat laut Seite 321 Sterne.",
@@ -14541,7 +14704,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-06T02:52:24Z",
+  "letzterScan": "2026-11-06T10:40:44Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-11-05T22:49:07Z"
  }
