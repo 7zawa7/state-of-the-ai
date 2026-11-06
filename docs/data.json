@@ -1,6 +1,51 @@
 {
  "news": [
   {
+   "titel": "Google Gemini Omni 1.2 Flash: Videos bis 15 Sekunden und 30 Prozent günstiger",
+   "kurz": "Google DeepMind hat das Videomodell Gemini Omni 1.2 Flash allgemein verfügbar gemacht. Es erzeugt Clips bis 15 Sekunden Länge und kostet laut Hersteller 30 Prozent weniger als der Vorgänger.",
+   "artikel": [
+    "Google DeepMind stellt sein Videogenerierungsmodell Gemini Omni 1.2 Flash allgemein zur Verfügung. Laut Google können damit nun Clips zwischen drei und 15 Sekunden erstellt werden. Bisher lag die Obergrenze bei zehn Sekunden.",
+    "Der Preis sinkt laut Herstellerangabe um 30 Prozent auf 0,07 US-Dollar pro Sekunde für 720p-Video. Das Modell ist über die Gemini API, Google AI Studio, die Google Cloud Console, Flow, Google Vids, die Gemini-App für Google-AI-Ultra-Abonnenten sowie Google Ads verfügbar.",
+    "## Konversationelles Bearbeiten",
+    "Neu ist das sogenannte Conversational Editing. Dabei lässt sich ein erzeugter Clip Schritt für Schritt über einen fortlaufenden Dialog anpassen, etwa Hintergrund, Beleuchtung oder Seitenverhältnis, ohne den gesamten Clip neu zu generieren. Laut Google funktioniert das über die volle Länge von 15 Sekunden.",
+    "Um Kosten zu sparen, empfiehlt Google einen gestuften Workflow: Entwürfe entstehen zunächst in 360p oder 720p, Details werden mit einer Folgebearbeitung korrigiert, und erst das Endergebnis wird auf 1080p oder 4K hochskaliert.",
+    "## Konsistenz und Referenzen",
+    "Laut Google soll das Modell Referenzbilder von Figuren, Produktfotos, kurze Bewegungsclips von bis zu drei Sekunden und Audiohinweise als Eingaben akzeptieren. Gesichter, Kleidung und Markenfarben sollen über verschiedene Kameraperspektiven hinweg gleich bleiben. Als Beispiel zeigt Google eine virtuelle Anprobe.",
+    "Außerdem verspricht Google weniger visuelles Driften oder Verformen bei Bewegungen und Kameraübergängen. Dialoge sollen flüssiger klingen, mit präziserer Lippensynchronisation und der Unterscheidung mehrerer Sprecher. Bei komplexen Kamerabewegungen wie FPV-Drohnenflügen soll es zudig deutlich weniger ungewollte Schnitte geben.",
+    "Hinweis: Alle genannten Leistungsangaben stammen von Google und sind nicht unabhängig geprüft. Jedes generierte Video trägt ein nicht wahrnehmbares SynthID-Wasserzeichen zur Kennzeichnung seiner Herkunft."
+   ],
+   "quellen": [
+    {
+     "titel": "Google's Gemini Omni 1.2 Flash stretches AI video clips to 15 seconds and cuts pricing by 30 percent (The Decoder)",
+     "url": "https://the-decoder.com/googles-gemini-omni-1-2-flash-stretches-ai-video-clips-to-15-seconds-and-cuts-pricing-by-30-percent/"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Mit Referenzbildern einer Figur oder eines Produkts kurze Clips mit gleichbleibendem Aussehen erstellen.",
+    "Fertige Clips per Dialog anpassen, etwa Hintergrund oder Licht ändern, ohne alles neu zu generieren.",
+    "Entwürfe in niedriger Auflösung testen und nur das Endergebnis hochskalieren, um Kosten zu sparen."
+   ],
+   "ausprobieren": {
+    "prompt": "Eine Drohne fliegt in 15 Sekunden durch eine Waldschlucht, Kamera-FPV, Morgenlicht; danach: Hintergrund auf Abend ändern.",
+    "tool": "Google AI Studio",
+    "url": "https://aistudio.google.com/"
+   },
+   "vorschau": {
+    "szene": "dose",
+    "badges": [
+     "3–15 s",
+     "720p",
+     "0,07 $/s"
+    ],
+    "dauer": "0:15"
+   },
+   "bereich": "Video",
+   "datum": "2026-11-05",
+   "id": "google-gemini-omni-1-2-flash-videos-bis-15-sekunden-und-30-p",
+   "hinzugefuegt": "2026-11-06T02:52:24Z"
+  },
+  {
    "titel": "Tencent veröffentlicht Hy4 mit Bildverständnis und Computer-Steuerung",
    "kurz": "Tencent hat sein Sprachmodell Hy4 vorgestellt, das Bilder analysieren und Software selbstständig bedienen kann. Die Gewichte sollen erst später folgen; unabhängige Tests sehen das Modell im Mittelfeld der Spitze.",
    "artikel": [
@@ -2786,6 +2831,161 @@
   }
  ],
  "radar": [
+  {
+   "titel": "sand3d: 3D-Modelle in Python, für LLMs geschrieben",
+   "kurz": "sand3d ist eine Python-Bibliothek, mit der 3D-Objekte als kurze, lesbare Programme beschrieben werden, die auf Blender (bpy) aufsetzen. Das Projekt auf GitHub hat laut Seite 321 Sterne.",
+   "artikel": [
+    "sand3d ist eine Python-Bibliothek, die 3D-Objekte nicht als Klickfolge, sondern als kurze Programme beschreibt. Die Bibliothek setzt auf Blenders Python-Modul bpy auf. Laut Projektbeschreibung soll ein Modell ein Objekt in wenigen hundert Token schreiben können, und ein Mensch soll den Code trotzdem lesen können.",
+    "## Was das Projekt ausmacht",
+    "Teile werden benannt statt über handgerechnete Koordinaten angesprochen. Ein Programm erzeugt laut Beschreibung bei gleicher Eingabe exakt dasselbe Netz. Die Bibliothek bietet eine flache Schnittstelle mit Verben wie extrude, hole, fillet oder joint. Laut Herstellerangabe braucht ein Teil zwei- bis sechsmal weniger Token als dasselbe Teil in Blender-Python, CadQuery oder FeatureScript. Diese Messung stammt vom Projekt selbst und ist nicht unabhängig geprüft.",
+    "## Export und Datensätze",
+    "Ein Objekt lässt sich mit einem Aufruf als GLB, URDF, USDA, OBJ oder STL exportieren. Das Projekt nennt außerdem fünf Datensätze auf Hugging Face unter CC-BY-4.0-Lizenz, darunter Varianten aus Objaverse, CAD-Modellen und NVIDIA SimReady. Die Bibliothek steht unter Apache-2.0-Lizenz. Die Angaben zu Version 1.6.2 und zur Installation stammen aus dem Repository-Text.",
+    "## Einordnung",
+    "Die Seite nennt nur wenige harte Zahlen: 321 Sterne, 36 Forks und 17 Commits im sichtbaren Ausschnitt. Ob sich das Vorgehen gegenüber anderen Werkzeugen bewährt, zeigen die Angaben nicht."
+   ],
+   "quellen": [
+    {
+     "titel": "sand3d auf GitHub",
+     "url": "https://github.com/Sandflow-ai/sand3d"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Ein einfaches Bauteil wie eine Halterung als kurzes Python-Programm beschreiben und als GLB exportieren.",
+    "Die Beispiele aus docs/examples im Repository ausprobieren und anpassen.",
+    "Ein Objekt in URDF oder USDA exportieren, um es in einer Simulation zu testen."
+   ],
+   "ausprobieren": {
+    "prompt": "import sand3d as s3d\n\ndef bracket(w=80, d=40, t=6):\n    plate = s3d.extrude(\"plate\", s3d.rect(w, d, r=4), t)\n    return plate\n\ns3d.export(bracket(), \"bracket.glb\")",
+    "tool": "sand3d",
+    "url": "https://sandflow.ai/sand3d/"
+   },
+   "radar": true,
+   "quelle": "GitHub",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "321"
+    },
+    {
+     "label": "Forks",
+     "wert": "36"
+    },
+    {
+     "label": "Version (laut Zitierangabe)",
+     "wert": "1.6.2"
+    },
+    {
+     "label": "Token-Ersparnis gegenüber Blender-Python (Herstellerangabe)",
+     "wert": "2 bis 6×"
+    },
+    {
+     "label": "Umfang der API (Herstellerangabe)",
+     "wert": "ca. 3.600 Token"
+    }
+   ],
+   "signal": "Ein Python-Werkzeug, das 3D-Modelle für Sprachmodelle als kurze, reproduzierbare Programme schreibt.",
+   "link": "https://github.com/Sandflow-ai/sand3d",
+   "linkLabel": "Zum Repository auf GitHub",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "sand3d",
+    "zeilen": [
+     "> s3d.export(bracket(), \"bracket.glb\")",
+     "✓ Export als GLB",
+     "● Stern-Zahl: 321",
+     "+ Halterung hinzugefügt"
+    ]
+   },
+   "id": "sand3d-3d-modelle-in-python-fur-llms-geschrieben",
+   "hinzugefuegt": "2026-11-06T02:52:24Z"
+  },
+  {
+   "titel": "Ripple-65B Preview: Dichtes 65B-Modell mit 1M Kontext",
+   "kurz": "Ricursive Intelligence stellt das Preview-Modell Ripple-65B vor, ein dichtes Transformer-Modell mit 65 Milliarden Parametern. Laut Hersteller erreicht es im Agenten-Coding 80,52 Punkte auf TerminalBench 2.1.",
+   "artikel": [
+    "Das Startup Ricursive Intelligence hat auf Hugging Face das Preview-Modell Ripple-65B veröffentlicht. Es handelt sich um ein sogenanntes dichtes Transformer-Modell mit 65 Milliarden Parametern, das laut Herstellerangabe auf 12 Billionen Tokens vortrainiert wurde und einen Kontext von bis zu 1 Million Tokens unterstützt. Als Kontextlänge bezeichnet man die Textmenge, die das Modell in einer Anfrage gleichzeitig berücksichtigen kann.",
+    "## Ergebnisse laut Hersteller",
+    "Der Hersteller gibt für agentisches Coding einen Wert von 80,52 auf TerminalBench 2.1 an. Zum Vergleich nennt er größere offene Modelle aus den USA, etwa Reflection Beam 501B (80,1), Meta Muse Spark Open 816B (76,4), Thinking Machines Inkling 975B (63,8) und NVIDIA Nemotron 3 Ultra 550B (56,4). Dies sind Herstellerangaben, die sich nicht unabhängig prüfen lassen.",
+    "## Architektur und Training",
+    "Ausgangspunkt war das Olmo-3-Basismodell, dessen Trainingsrezept die Entwickler nach eigenen Angaben schrittweise verbessert haben. Für Ripple-65B wählten sie bewusst ein dichtes Modell statt eines Mixture-of-Experts-Ansatzes, um die Infrastruktur einfacher zu halten. Die Architektur hat ein schmales d_model von 5120 und 80 Schichten; laut Herstellerangabe liegt die Auslastung beim Training bei rund 40 % MFU, also dem Anteil der theoretisch verfügbaren Rechenleistung, der tatsächlich genutzt wird.",
+    "## Lokale Nutzung",
+    "Das Modell ist mit 65 Milliarden Parametern so dimensioniert, dass es laut Hersteller auf Consumer-Hardware wie dem NVIDIA DGX Spark laufen kann. Eine NVFP4-Variante, also eine stark komprimierte Zahlenformat-Version, wird ebenfalls bereitgestellt. Laut Angabe erreicht das Modell auf 2x B200 bei Batch-Größe 8 rund 250 Tokens pro Sekunde, bevor es quantisiert wird."
+   ],
+   "quellen": [
+    {
+     "titel": "ricursiveAI/Ripple-65B-Preview auf Hugging Face",
+     "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Das Modell auf Hugging Face herunterladen und lokal ausprobieren, sofern passende Hardware vorhanden ist.",
+    "Die bereitgestellte NVFP4-Variante und das Colab-Notebook als Einstieg für eigene Tests nutzen.",
+    "Die Herstellerangaben zum Agenten-Coding mit eigenen Programmieraufgaben gegenprüfen."
+   ],
+   "quelle": "Hugging Face",
+   "datum": "2026-11-04",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "65B (dicht)"
+    },
+    {
+     "label": "Pretraining-Tokens",
+     "wert": "12 Billionen"
+    },
+    {
+     "label": "Kontextlänge",
+     "wert": "bis 1M"
+    },
+    {
+     "label": "TerminalBench 2.1 (Herstellerangabe)",
+     "wert": "80,52"
+    },
+    {
+     "label": "Layers / d_model",
+     "wert": "80 / 5120"
+    }
+   ],
+   "signal": "Ein 65B-Modell, das laut Hersteller größere offene Modelle beim Agenten-Coding übertrifft; Angaben sind bislang unabhängig nicht geprüft.",
+   "link": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview",
+   "linkLabel": "Modellseite auf Hugging Face",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "TerminalBench 2.1 (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Reflection Beam 501B",
+      "wert": 80.1,
+      "anzeige": "80,1"
+     },
+     {
+      "label": "Meta Muse Spark Open 816B",
+      "wert": 76.4,
+      "anzeige": "76,4"
+     },
+     {
+      "label": "Thinking Machines Inkling 975B",
+      "wert": 63.8,
+      "anzeige": "63,8"
+     },
+     {
+      "label": "NVIDIA Nemotron 3 Ultra 550B",
+      "wert": 56.4,
+      "anzeige": "56,4"
+     },
+     {
+      "label": "Ripple-65B (neu)",
+      "wert": 80.52,
+      "anzeige": "80,52"
+     }
+    ]
+   },
+   "id": "ripple-65b-preview-dichtes-65b-modell-mit-1m-kontext",
+   "hinzugefuegt": "2026-11-06T02:52:24Z"
+  },
   {
    "titel": "FrontierPhysics: Benchmark testet KI-Agenten bei echter Physikforschung",
    "kurz": "Ein neuer Benchmark mit 56 Aufgaben von 42 Physikern prüft, ob KI-Agenten vollständige Forschungsarbeit leisten können. Kein Konfiguration schafft mehr als 46 von 168 Durchläufen.",
@@ -14341,7 +14541,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-05T22:49:07Z",
+  "letzterScan": "2026-11-06T02:52:24Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-11-05T22:49:07Z"
  }
