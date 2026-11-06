@@ -1,6 +1,105 @@
 {
  "news": [
   {
+   "titel": "Thinking Machines stellt Inkling 2 Small vor – laut Herstellerangabe stärkstes westliches Open-Weight-Modell",
+   "kurz": "Das Startup von Ex-OpenAI-CTO Mira Murati veröffentlicht Inkling 2 Small, ein Mixture-of-Experts-Modell mit 594 Milliarden Parametern. Laut Herstellerangabe ist es das stärkste westliche Open-Weight-Modell, verursacht aber deutlich höhere Kosten pro Aufgabe.",
+   "artikel": [
+    "Thinking Machines, das Startup von Mira Murati, hat mit Inkling 2 Small die zweite Modellgeneration vorgestellt. Nach Angaben des Unternehmens ist es das stärkste westliche Open-Weight-Modell. Die Modelle sind als Basismodelle für Feinabstimmung (Fine-Tuning) gedacht, was sie für spezialisierte Anwendungen interessant machen könnte.",
+    "Das Modell nutzt eine Mixture-of-Experts-Architektur (MoE): Insgesamt hat es 594 Milliarden Parameter, von denen jeweils 17 Milliarden aktiv sind. Es verarbeitet Text und Bilder als Eingabe und bietet eine einstellbare Denktiefe, mit der Nutzer zwischen Geschwindigkeit und Gründlichkeit wählen können.",
+    "## Leistung laut Herstellerangabe",
+    "Auf dem Artificial Analysis Intelligence Index erreicht Inkling 2 Small laut Thinking Machines 31 Punkte. Der Vorgänger Inkling Small kam auf 13 Punkte. Damit liegt das Modell etwa auf Augenhöhe mit Gemini 3.8 Flash. Die größten Sprünge zeigen sich bei agentischen Aufgaben, also bei mehrstufigen Arbeitsabläufen, die das Modell selbstständig ausführt. Bei AutomationBench-AA steigt der Wert von 5 auf 46 Prozent.",
+    "## Kosten steigen",
+    "Die besseren Ergebnisse haben einen Preis: Das Modell erzeugt laut Artificial Analysis rund viermal so viele Ausgabe-Token pro Aufgabe wie der Vorgänger. Ein Durchlauf kostet 1,18 US-Dollar, fast das Sechsfache. Das ist weiterhin deutlich günstiger als Gemini 3.8 Flash mit 7,77 Dollar oder Claude Sonnet 5.5 mit 10,02 Dollar.",
+    "## Einschränkungen",
+    "Thinking Machines räumt ein, dass das Modell mitunter ineffizient kommuniziert und bei großen Codebasen nicht immer die besten Werkzeuge wählt. Audio wird nicht unterstützt, Chat ist weniger optimiert. Bei gesundheitsbezogenen Themen kann es übertreiben.",
+    "## Verfügbarkeit",
+    "Zunächst ist das Modell nur als proprietäres Angebot über die Plattform Tinker erhältlich. Die Gewichte sollen unter der Apache-2.0-Lizenz folgen, sobald externe Sicherheitstests abgeschlossen sind. Diese Lizenz gilt als sehr freizügig. Außerdem plant das Unternehmen weitere Varianten in unterschiedlichen Größen."
+   ],
+   "quellen": [
+    {
+     "titel": "The Decoder: Thinking Machines' Inkling 2 Small claims top spot among western open-weight models",
+     "url": "https://the-decoder.com/thinking-machines-inkling-2-small-claims-top-spot-among-western-open-weight-models/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler können das Modell über die Plattform Tinker testen, sobald der Zugang verfügbar ist.",
+    "Wer eigene Spezialmodelle bauen möchte, kann nach der Veröffentlichung der Gewichte auf dem Basismodell feinabstimmen.",
+    "Die Herstellerangaben lassen sich mit eigenen Aufgaben vergleichen, bevor man sich auf das Modell festlegt."
+   ],
+   "bereich": "Text",
+   "datum": "2026-11-06",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Intelligence Index (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Inkling Small",
+      "wert": 13,
+      "anzeige": "13"
+     },
+     {
+      "label": "Inkling 2 Small",
+      "wert": 31,
+      "anzeige": "31"
+     }
+    ]
+   },
+   "id": "thinking-machines-stellt-inkling-2-small-vor-laut-hersteller",
+   "hinzugefuegt": "2026-11-06T17:41:40Z"
+  },
+  {
+   "titel": "Perplexity startet Teammates: rund um die Uhr laufende KI-Agenten",
+   "kurz": "Perplexity bietet mit „Teammates“ KI-Agenten an, die dauerhaft laufen und eigenständig an laufenden Projekten arbeiten. Der Zugang erfordert den Max-Tarif für 200 US-Dollar pro Monat.",
+   "artikel": [
+    "Perplexity hat einen eigenen KI-Agenten vorgestellt, der rund um die Uhr läuft und Arbeitsaufgaben selbstständig erledigt. Während Perplexity Computer einmalige Aufträge ausführt, bleiben die neuen Teammates aktiv und arbeiten eigenständig an fortlaufenden Projekten weiter.",
+    "## Eigene virtuelle Maschinen",
+    "Jeder Teammate läuft auf einer eigenen virtuellen Maschine mit Desktop und Browser. Nutzer verfolgen den Fortschritt in eigenen Verlaufsfäden in der Perplexity-App und können mit den Agenten auch über Slack interagieren.",
+    "## Konkurrenz und Preise",
+    "Perplexity reiht sich damit in eine wachsende Gruppe ein: SpaceX, Meta, OpenAI und Anthropic bieten laut Bericht ebenfalls ähnliche Agenten an, etwa unter den Namen Grok Bots, Muse, Dots und Duet. Teammates kosten im Max-Tarif 200 US-Dollar pro Monat. Dots beginnen bei 100 US-Dollar, Duet ist ab 20 US-Dollar erhältlich.",
+    "Der Autor vermutet, dass die günstigeren Angebote ihre Nutzungslimits schnell erreichen dürften. Kurz zuvor hatte SpaceX wegen des hohen Agentenverbrauchs strengere Nutzungsgrenzen für Grok Bots eingeführt.",
+    "## Wirtschaftliche Eckdaten",
+    "Perplexity gibt an, dass der annualisierte Umsatz im August mehr als 750 Millionen US-Dollar betrug. Diese Angabe stammt vom Unternehmen beziehungsweise wird im Artikel so wiedergegeben und ist nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Perplexity now has its own always-on AI agent – The Decoder",
+     "url": "https://the-decoder.com/perplexity-now-has-its-own-always-on-ai-agent/"
+    },
+    {
+     "titel": "Perplexity Teammates – The Verge",
+     "url": "https://the-decoder.com/perplexity-now-has-its-own-always-on-ai-agent/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Ein Teammate kann laufende Projekte im Hintergrund weiterbearbeiten, während man selbst anderes erledigt.",
+    "Der Fortschritt lässt sich über Verlaufsfäden in der Perplexity-App verfolgen.",
+    "Wer bereits Slack nutzt, kann Teammates dort direkt ansprechen."
+   ],
+   "ausprobieren": {
+    "prompt": "Arbeite an meinem laufenden Rechercheprojekt weiter und fasse den Fortschritt jeden Morgen in einem Thread zusammen.",
+    "tool": "Perplexity",
+    "url": "https://www.perplexity.ai"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Perplexity Teammates",
+    "zeilen": [
+     "> Projekt: Marktrecherche laufen lassen",
+     "✓ Eigene virtuelle Maschine gestartet",
+     "● Status: läuft dauerhaft im Hintergrund",
+     "- Vorheriger Stand: Entwurf 1",
+     "+ Neuer Stand: Bericht aktualisiert",
+     "⚠ Hinweis: Max-Tarif mit 200 US-Dollar/Monat erforderlich"
+    ]
+   },
+   "bereich": "Agenten",
+   "datum": "2026-11-06",
+   "id": "perplexity-startet-teammates-rund-um-die-uhr-laufende-ki-age",
+   "hinzugefuegt": "2026-11-06T17:41:40Z"
+  },
+  {
    "titel": "OpenAI stellt GPT-6 Cyber vor: KI findet Sicherheitslücken und schlägt Fixes vor",
    "kurz": "OpenAI hat ein auf Cybersicherheit spezialisiertes KI-Modell namens GPT-6 Cyber vorgestellt, das Schwachstellen in Software aufspüren, Exploits entwickeln und Patches vorschlagen soll. Alle Leistungsangaben stammen laut Artikel von OpenAI selbst.",
    "artikel": [
@@ -2924,6 +3023,158 @@
   }
  ],
  "radar": [
+  {
+   "titel": "METR: Anthropic könnte seine eigene KI-Beschleunigungsschwelle schon im Juli überschritten haben",
+   "kurz": "Die Organisation METR hat die internen Forschungsdaten von Anthropic geprüft und kommt zu dem Schluss, dass sich das Tempo der Modellentwicklung etwa verdoppelt hat, zu großen Teilen wegen KI-gestützter Forschung. Anthropic hat die aussagekräftigsten Belege jedoch geschwärzt.",
+   "artikel": [
+    "METR, eine gemeinnützige Organisation, hatte elf Wochen lang Zugang zu den internen Forschungsdaten von Anthropic. Das Ergebnis: Die Verbesserung der Modelle hat sich ungefähr verdoppelt. Rund 80 Prozent dieser Beschleunigung gehen laut METR darauf zurück, dass KI in der eigenen Forschung des Unternehmens eingesetzt wird.",
+    "## Warum das relevant ist",
+    "Ob KI die Entwicklung besserer KI beschleunigt, gilt in der Sicherheitsdebatte als wichtiges Frühwarnsignal. Befürchtet wird eine Rückkopplungsschleife, in der Modelle ihre Nachfolger immer schneller verbessern. Anthropic nennt eine solche Beschleunigung in seiner Responsible Scaling Policy als Risikoindikator. Wenn sich das Tempo durch automatisierte KI-Forschung verdoppelt, soll eine Warnstufe ausgelöst werden.",
+    "## Die Messung",
+    "Seit Oktober 2025 steigen die Testergebnisse von Anthropic-Modellen laut METR etwa 1,9-mal so schnell wie zwischen März 2024 und Oktober 2025. Gemessen wird mit dem AECI, einem zusammengesetzten Wert, der viele Benchmarks bündelt. Vor Oktober 2025 gewannen die Modelle etwa 15 AECI-Punkte pro Jahr, seitdem sind es 29.",
+    "METR sieht die Beschleunigung nicht durch schnelleres Training an Rechenleistung getrieben. Mitarbeitende berichteten in Interviews, dass Experimente, die früher ein bis zwei Tage Vorbereitung brauchten, nun praktisch kostenlos sind. Ihre Selbsteinschätzungen, etwa zwölffache Produktivität beim neuesten internen Modell, bezeichnet METR als sehr lose Evidenz, die die tatsächlichen Gewinne wahrscheinlich überschätzt. Das sind Herstellerangaben aus internen Umfragen des Unternehmens.",
+    "## Unsicherheit und abweichende Meinungen",
+    "METR betont, dass die Ergebnisse ungenau sind: Der tatsächliche Beschleunigungsfaktor könnte zwischen 1,3 und 3 liegen. Bezieht man Modelle von OpenAI, Google und xAI ein, sinkt der Branchenwert auf 1,4. Ein Forscher bei Anthropic schätzt den Anteil der KI am Produktivitätsgewinn nur auf 15 bis 20 Prozent.",
+    "## Geschwärzte Belege",
+    "Anthropic hatte das Recht, nicht-öffentliche Informationen einseitig zu schwärzen, und machte davon stark Gebrauch. Laut METR fiel ein Großteil der als am aussagekräftigsten bewerteten Belege weg, darunter Prognosen für künftige Modelle und die Engpassanalyse. Anthropic begründet das damit, andere KI-Entwickler nicht zu beschleunigen.",
+    "## Risikobewertung",
+    "In einem begleitenden Bericht schreibt METR, Anthropic habe die Beschleunigung im öffentlichen Risikobericht vom August 2026 als \"weniger als Faktor 2\" angegeben. Die interne Fassung nennt 1,97. Anthropic selbst hält es für \"plausibel\", dass die Schwelle überschritten wurde. METR hält es für möglich, dass die Warnstufe bereits am 15. Juli erreicht war. Die akute katastrophale Gefahr bewertet METR weiterhin als niedrig, schließt aber eine weitere starke Beschleunigung in den nächsten sechs Monaten nicht aus.",
+    "Die Prüfung der Rechenzuteilung zwischen Fähigkeits- und Sicherheitsforschung hat Anthropic mitten im Projekt gestrichen. Daniel Kokotajlo, Autor des Szenarios \"AI 2027\", kritisierte das scharf."
+   ],
+   "quellen": [
+    {
+     "titel": "METR finds Anthropic may have crossed its own AI acceleration warning threshold back in July",
+     "url": "https://the-decoder.com/metr-finds-anthropic-may-have-crossed-its-own-ai-acceleration-warning-threshold-back-in-july/"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Lies den Bericht, um zu verstehen, wie Unternehmen KI-Beschleunigung als Risikoindikator messen.",
+    "Achte bei KI-Produktangaben darauf, welche Aussagen unabhängig geprüft und welche Herstellerangaben sind.",
+    "Verfolge, ob Unternehmen ihre Sicherheitsberichte mit unabhängigen Prüfungen abgleichen."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-11-06",
+   "kennzahlen": [
+    {
+     "label": "Verdopplung des Entwicklungstempos",
+     "wert": "ca. 2x"
+    },
+    {
+     "label": "Anteil KI-gestützter Forschung an Beschleunigung",
+     "wert": "ca. 80 %"
+    },
+    {
+     "label": "Beschleunigung seit Okt. 2025 vs. vorher",
+     "wert": "1,9x"
+    },
+    {
+     "label": "AECI-Punkte pro Jahr (vorher / seitdem)",
+     "wert": "15 / 29"
+    },
+    {
+     "label": "Interne Schätzung Beschleunigungsfaktor",
+     "wert": "1,97"
+    },
+    {
+     "label": "Öffentliche Angabe im August-Bericht",
+     "wert": "weniger als 2"
+    }
+   ],
+   "signal": "Anthropic könnte die von ihm selbst definierte Warnschwelle für KI-Beschleunigung bereits überschritten haben, die öffentliche Fassung ist laut METR zu niedrig angesetzt und stark geschwärzt.",
+   "link": "https://the-decoder.com/metr-finds-anthropic-may-have-crossed-its-own-ai-acceleration-warning-threshold-back-in-july/",
+   "linkLabel": "Zum Artikel bei THE DECODER",
+   "bereich": "Recht",
+   "tag": "Sicherheit",
+   "id": "metr-anthropic-konnte-seine-eigene-ki-beschleunigungsschwell",
+   "hinzugefuegt": "2026-11-06T17:41:40Z"
+  },
+  {
+   "titel": "Nvidia RTX Spark: Linux läuft auf dem Laptop, aber die GPU bremst beim Netzbetrieb stark aus",
+   "kurz": "Linux lässt sich auf RTX-Spark-Laptops installieren und nutzt die GPU, doch am Stromnetz sinkt der GPU-Takt auf etwa 780 MHz. Dadurch fällt die KI-Leistung unter Linux deutlich hinter Windows und WSL zurück.",
+   "artikel": [
+    "Ein Erfahrungsbericht auf MindStudio beschreibt, dass Linux auf dem Nvidia-RTX-Spark-Laptop (etwa MSI Prestige N16 Flip AI Plus) läuft, inklusive GPU-Beschleunigung über Nvidias offenen Kerneltreiber. Das Problem ist der Takt: Hängt das Gerät am Netz, bleibt die GPU unter Linux bei rund 780 MHz, unter Windows dagegen bei etwa 2,2 GHz.",
+    "## Leistungsunterschied",
+    "Laut den Benchmarks des Autors mit GPT-OSS-120B erreicht Windows 65,4 Tokens pro Sekunde, WSL 65,1 und der Nvidia DGX Spark 61. Natives Linux auf dem Laptop kommt nur auf 13,9 Tokens pro Sekunde. Als Tokens bezeichnet man die Textbausteine, in denen ein Sprachmodell rechnet; mehr Tokens pro Sekunde bedeuten schnellere Antworten.",
+    "Der Autor führt die Bremse auf die Nvidia Platform Controllers and Framework zurück, eine nur unter Windows vorhandene Komponente, die die Stromverteilung zwischen CPU und GPU steuert. Die Power-Tabelle der Firmware ist verschlüsselt, und laut Bericht kann nur der Windows-Treiber sie lesen. Die Temperaturen blieben zwischen 40 und 47 °C, eine thermische Drosselung schließt der Autor deshalb aus.",
+    "## Weitere Hürden",
+    "Der Arbeitsspeicher ist ebenfalls ein Problem: Standardmäßig reserviert die Firmware 96 GB des vereinheitlichten Speichers für die GPU, und diese Aufteilung lässt sich nur unter Windows ändern. Erst nach einer Anpassung auf 4 GB sah Linux den größten Teil des RAM. Die Installation scheiterte zudem zunächst an Wi-Fi, Tastatur und Touchpad, bis passende Treiber und Workarounds eingerichtet waren.",
+    "## Einordnung",
+    "WSL gilt im Bericht als praktischer Mittelweg, da es über den Windows-Treiber läuft und den GPU-Boost sowohl am Netz als auch im Akkubetrieb behält. Eine echte Lösung hängt laut Autor von Nvidia ab, das die Energieverwaltungslogik in den Linux-Treiber portieren müsste."
+   ],
+   "quellen": [
+    {
+     "titel": "Linux on the Nvidia RTX Spark Laptop: What Actually Works (MindStudio)",
+     "url": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50362905"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer einen RTX-Spark-Laptop besitzt, sollte vor dem Wechsel zu Linux die Speicheraufteilung unter Windows prüfen.",
+    "Für lokale KI-Tests lohnt sich bei diesen Geräten derzeit WSL, da dort die Leistung nahe an Windows liegt.",
+    "Wer Linux nativ nutzen will, sollte mit Leistungseinbußen am Netzteil rechnen und den Hersteller-Support im Blick behalten."
+   ],
+   "radar": true,
+   "quelle": "Hacker News",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "GPT-OSS-120B, Windows",
+     "wert": "65,4 Tokens/s (Herstellerangabe: nicht, Benchmark des Autors)"
+    },
+    {
+     "label": "GPT-OSS-120B, natives Linux am Netz",
+     "wert": "13,9 Tokens/s"
+    },
+    {
+     "label": "GPU-Takt Linux am Netz",
+     "wert": "ca. 780 MHz"
+    },
+    {
+     "label": "GPU-Takt Windows",
+     "wert": "ca. 2,2 GHz"
+    },
+    {
+     "label": "Reservierter GPU-Speicher (Standard)",
+     "wert": "96 GB"
+    }
+   ],
+   "signal": "Die Leistungslücke zwischen Linux und Windows auf RTX-Spark-Laptops hängt an verschlossener Firmware-Logik und ist laut Bericht nur durch Nvidia lösbar.",
+   "link": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop",
+   "linkLabel": "Originalbericht lesen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "GPT-OSS-120B, Tokens pro Sekunde",
+    "balken": [
+     {
+      "label": "Windows",
+      "wert": 65.4,
+      "anzeige": "65,4"
+     },
+     {
+      "label": "WSL",
+      "wert": 65.1,
+      "anzeige": "65,1"
+     },
+     {
+      "label": "DGX Spark",
+      "wert": 61,
+      "anzeige": "61"
+     },
+     {
+      "label": "Natives Linux (Laptop)",
+      "wert": 13.9,
+      "anzeige": "13,9"
+     }
+    ]
+   },
+   "id": "nvidia-rtx-spark-linux-lauft-auf-dem-laptop-aber-die-gpu-bre",
+   "hinzugefuegt": "2026-11-06T17:41:40Z"
+  },
   {
    "titel": "VFlash: Visuelle Planung für Robotik in einem Durchgang",
    "kurz": "VFlash ist eine Methode, mit der KI-Modelle für Robotik und autonomes Fahren visuelle Pläne (Punkte, Boxen, Trajektorien) schneller erzeugen können. Die Koordinaten werden gemeinsam in einem Durchgang vorhergesagt, statt Token für Token.",
@@ -14704,8 +14955,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-06T10:40:44Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-11-06T17:41:40Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-11-05T22:49:07Z"
  }
 }
