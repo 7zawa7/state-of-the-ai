@@ -3024,6 +3024,148 @@
  ],
  "radar": [
   {
+   "titel": "MoE-Experten: Sparse Autoencoder zeigt feinkörnige, menschlich lesbare Spezialisierung",
+   "kurz": "Ein arXiv-Paper (Hugging Face: 7 Upvotes) untersucht mit einem Sparse Autoencoder, worauf sich einzelne Experten in Mixture-of-Experts-Modellen tatsächlich spezialisieren. Die Autoren berichten von Spezialisierung unterhalb grober Fachgebiete.",
+   "artikel": [
+    "Mixture-of-Experts (MoE) sind Sprachmodelle, bei denen jeder Token nur an wenige von vielen Experten-Teilnetzen weitergeleitet wird. Bisher wurde meist gezählt, wie oft ein Experte auf Daten mit bekannten Domänen ausgewählt wird. Diese Methode legt die Kategorien vorab fest, bleibt grob und misst nur die Auswahl, nicht den tatsächlichen Beitrag.",
+    "## Der Ansatz",
+    "Die Autoren trainieren einen Sparse Autoencoder (SAE) auf der Ausgabe eines MoE-Blocks. Ein SAE zerlegt eine Aktivierung in viele einzelne, möglichst eindeutige Merkmale (Latents). Da die Ausgabe eine gewichtete Summe der Expertenausgaben ist und der SAE-Encoder affin ist, lässt sich die Aktivierung jedes Merkmals exakt auf die beteiligten Experten aufteilen.",
+    "Untersucht wird Qwen3-30B-A3B an den Schichten 4, 30 und 46, mit einem TopK-SAE mit 2^20 Latents und k = 100. Über 1,5 Milliarden Token hinweg ordnen die Autoren jedem Experten eine Menge dominanter Merkmale zu. Laut Paper lassen sich damit die Aufgaben der Experten lesen, ohne vorgegebene Domänen-Taxonomie.",
+    "## Ergebnisse",
+    "Der Beitrag der Experten ist laut Paper deutlich stärker konzentriert als ihre Auswahl durch das Routing. Die meisten Merkmale werden nur von ein oder zwei Experten dominiert, die dominanten Mengen sind also weitgehend exklusiv. Beispiele aus dem Paper: Ein Java-Experte liegt getrennt von einem Experten für Frontend-Webcode, ein Geometrie-Experte getrennt von einem für Arithmetik und Polynome.",
+    "Die 128 Experten der Schicht 30 wurden zu 11 Domänen gruppiert, die sehr unterschiedlich groß sind. Einige davon sind keine Fachgebiete, sondern etwa Textform, Sprache sowie Entitäten und Bezeichner.",
+    "## Einordnung",
+    "Code, die drei SAEs und ein interaktiver Explorer aller 128 Experten der Schicht 30 sind laut Autoren veröffentlicht. Die Ergebnisse stammen aus einem einzelnen Modell und einer Analyse der Autoren; eine unabhängige Überprüfung liegt nicht vor."
+   ],
+   "quellen": [
+    {
+     "titel": "SAE Interprets MoE: Sparse AutoEncoders Reveal That MoE Experts Exhibit Human-Interpretable Fine-Grained Specialization",
+     "url": "https://huggingface.co/papers/2611.08089"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer selbst MoE-Modelle analysiert, kann den beschriebenen Ansatz mit den veröffentlichten SAEs und dem Code nachvollziehen.",
+    "Wer Modelle feinjustiert, kann den interaktiven Explorer nutzen, um zu sehen, welche Experten welche Aufgaben übernehmen.",
+    "Für Einsteiger eignet sich der Explorer als anschauliches Beispiel dafür, wie Modelle intern organisiert sein können."
+   ],
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Eingabe-Token",
+     "Router wählt Experten",
+     "Experte A: Java",
+     "Experte B: Geometrie"
+    ]
+   },
+   "tag": "Interpretierbarkeit",
+   "quelle": "Hugging Face",
+   "datum": "2026-11-06",
+   "kennzahlen": [
+    {
+     "label": "Analysiertes Modell",
+     "wert": "Qwen3-30B-A3B"
+    },
+    {
+     "label": "Schichten",
+     "wert": "4, 30, 46"
+    },
+    {
+     "label": "SAE-Latents",
+     "wert": "2^20 (ca. 1,05 Mio.)"
+    },
+    {
+     "label": "TopK (k)",
+     "wert": "100"
+    },
+    {
+     "label": "Tokens für Aggregation",
+     "wert": "1,5 Mrd."
+    },
+    {
+     "label": "Experten pro Schicht (Schicht 30)",
+     "wert": "128"
+    },
+    {
+     "label": "Domänen-Gruppen (Schicht 30)",
+     "wert": "11"
+    }
+   ],
+   "signal": "Ein Paper mit Code, Modellen und interaktivem Explorer zur Interpretierbarkeit von MoE-Experten; Ergebnisse laut Autoren, bisher ohne unabhängige Prüfung.",
+   "link": "https://huggingface.co/papers/2611.08089",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "moe-experten-sparse-autoencoder-zeigt-feinkornige-menschlich",
+   "hinzugefuegt": "2026-11-07T15:14:08Z"
+  },
+  {
+   "titel": "Chinesische KI-Modelle: Staatspropaganda lässt sich mit Feintuning entfernen",
+   "kurz": "Nous Research hat Alibabas Qwen3.8-27B per Supervised Fine-Tuning umtrainiert. Die Propagandarate sank laut Angaben von 22 auf unter ein Prozent, die Allgemeinfähigkeiten blieben laut Hersteller erhalten.",
+   "artikel": [
+    "Nous Research hat Alibabas offenes Sprachmodell Qwen3.8-27B nachtrainiert. Das daraus entstandene Modell heißt Arete-27B. Ziel war es, die pro-chinesische Ausrichtung des Modells weitgehend zu entfernen. Das Projekt stammt von einem US-Startup, das vor allem durch seinen Open-Source-Agenten Hermes bekannt ist.",
+    "## Testaufbau",
+    "Für den eigenen Test erstellte das Team 803 Prompts in sieben Kategorien, darunter Meinungsfreiheit, Überwachung und Demokratie. Zu jedem Prompt wurden zwei bis vier Fakten aus datierten Quellen festgelegt. Ein Bewertungsmodell prüfte, ob Antworten diese Fakten nennen, auslassen oder widersprechen. Als Propaganda gilt laut Bericht eine Antwort, die die offizielle Darstellung Pekings übernimmt, billigt oder als gleichwertige Sicht darstellt.",
+    "## Ergebnisse laut Hersteller",
+    "Das unveränderte Qwen3.8-27B erreichte laut Nous 2,32 von 5 Punkten bei der sachlichen Richtigkeit, 22 Prozent der Antworten enthielten Propaganda. Arete-27B kommt laut Angaben auf 2,98 Punkte und 0,9 Prozent propagandistische Antworten. Im Bereich Meinungsfreiheit sank die Quote von 60 auf ein Prozent. Die Werte sind Herstellerangaben und nicht unabhängig geprüft.",
+    "## Training",
+    "Das Training nutzte laut Nous rund 53 Millionen Tokens über zwei Epochen, ohne Reinforcement Learning. Supervised Fine-Tuning bezeichnet dabei das Nachtrainieren mit Beispielen gewünschter Antworten. Laut Team liegt der Bias also nur oberflächlich im Modell: Er wird „spät und dünn“ angewendet und lässt sich mit gezielter Nachschulung entfernen.",
+    "## Einordnung",
+    "Frühere Studien, unter anderem von NewsGuard und Aleph Alpha, hatten bereits pro-chinesische Verzerrungen bei mehreren Modellen festgestellt. Modell und Trainingsdaten wurden laut Nous unter Apache-2.0-Lizenz auf Hugging Face veröffentlicht."
+   ],
+   "quellen": [
+    {
+     "titel": "State propaganda in some Chinese AI models is only \"a thin layer\" that fine-tuning can strip away",
+     "url": "https://the-decoder.com/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-can-strip-away/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Forscher können Modell und Testdatensatz auf Hugging Face prüfen und mit eigenen Fragen vergleichen.",
+    "Entwickler können die Trainingsdaten als Vorlage für eigene Bias-Tests nutzen.",
+    "Anwender sollten bei politischen Fragen bei jedem Modell auf Quellen und Ausgewogenheit achten."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-11-07",
+   "kennzahlen": [
+    {
+     "label": "Propagandarate (Basismodell)",
+     "wert": "22 %"
+    },
+    {
+     "label": "Propagandarate (Arete-27B)",
+     "wert": "0,9 %"
+    },
+    {
+     "label": "Trainingsdaten",
+     "wert": "53 Mio. Tokens"
+    },
+    {
+     "label": "Faktentreue (Arete-27B, Herstellerangabe)",
+     "wert": "2,98 / 5"
+    }
+   ],
+   "signal": "Politischer Bias in offenen Modellen wirkt laut Hersteller eher oberflächlich und lässt sich mit wenig Nachtraining entfernen. Die Ergebnisse stammen vom Hersteller selbst.",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Propagandarate in % (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Qwen3.8-27B",
+      "wert": 22,
+      "anzeige": "22 %"
+     },
+     {
+      "label": "Arete-27B",
+      "wert": 0.9,
+      "anzeige": "0,9 %"
+     }
+    ]
+   },
+   "link": "https://the-decoder.com/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-can-strip-away/",
+   "linkLabel": "Originalartikel auf THE DECODER",
+   "id": "chinesische-ki-modelle-staatspropaganda-lasst-sich-mit-feint",
+   "hinzugefuegt": "2026-11-07T15:14:08Z"
+  },
+  {
    "titel": "vork: Headless 3D- und VFX-Engine für KI-Agenten",
    "kurz": "Das Projekt voyager-so/vork ist eine Rendering-Engine für 3D und VFX, die ohne Oberfläche läuft und von KI-Agenten gesteuert wird. Es befindet sich in einer Research Preview und ist laut Repository quelloffen und kostenlos.",
    "artikel": [
@@ -15179,7 +15321,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-07T08:52:02Z",
+  "letzterScan": "2026-11-07T15:14:08Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-11-07T02:17:48Z"
  }
