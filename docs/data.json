@@ -3024,6 +3024,77 @@
  ],
  "radar": [
   {
+   "titel": "Hightouch: Kleineres KI-Modell prüft Identitäten fast so genau wie Opus bei 4-fach geringeren Kosten",
+   "kurz": "Hightouch testet, ob schnelle, günstige Entscheidungsmodelle (Jev und GPT-6 Luna) Identity Resolution bewerten können. Die Kombination Jev + Claude Opus erreicht laut Hightouch nahezu Opus-Genauigkeit bei über 4-fach niedrigeren Kosten.",
+   "artikel": [
+    "Identity Resolution bedeutet, Datensätze den richtigen realen Personen zuzuordnen. Ein häufiges Problem ist das sogenannte Over-Merging: Ein Profil enthält Daten mehrerer Personen. Um das zu finden, muss man bisher Profile per Hand stichprobenartig prüfen, was langsam ist (laut Artikel etwa 50 Identitäten pro Stunde).",
+    "## Test mit Sprachmodellen",
+    "Hightouch prüfte, ob LLMs diese Prüfung übernehmen können. Getestet wurden Jev und GPT-6 Luna, sogenannte Entscheidungsmodelle: Sie geben einen Konfidenzwert zwischen 0 und 1 aus, dass eine bestimmte Bedingung zutrifft. Als Benchmark diente ein synthetischer Datensatz aus pseudopeople, einem Werkzeug des Institute for Health Metrics and Evaluation der University of Washington, mit 1.000 Identitäten, zur Hälfte mit Over-Merges.",
+    "Laut Hightouch lagen beide Modelle ohne Zusatztraining bei 88,8 bis 97,3 Prozent Genauigkeit. Luna war out of the box besser als Jev, der Vorsprung verschwand bei schwierigen Fällen. Jevs Konfidenz war dagegen besser kalibriert: Die meisten seiner Fehler kamen mit niedriger Sicherheit, bei Luna mit hoher.",
+    "## Hybrid-Modell",
+    "Die Hybridlösung lässt Jev zunächst entscheiden und zieht bei Bedarf Claude Opus hinzu. Laut Hightouch erreicht diese Kombination nahezu Opus-Genauigkeit bei mehr als 4-fach niedrigeren Kosten.",
+    "## Einordnung",
+    "Frontier-Modelle bleiben genauer. Die Entscheidungsmodelle seien laut Hightouch bis zu 90-mal günstiger und mehr als 10-mal schneller, lagen bei schwierigeren Benchmarks aber rund 6 Prozentpunkte hinter Opus. Die Kosten-Angabe von 0,05 bis 0,10 US-Dollar pro 1.000 Identitäten und die Antwortzeit von etwa 0,15 Sekunden stammen laut Artikel aus Herstellerangaben von Hightouch."
+   ],
+   "quellen": [
+    {
+     "titel": "LLM Judges for Identity Resolution at 4x Lower Cost (Hightouch)",
+     "url": "https://hightouch.com/blog/llm-judges-identity-resolution"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50397429"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer Kundendaten zusammenführt, kann prüfen, ob die Idee einer günstigen Zweitprüfung durch ein Modell für eigene Daten taugt.",
+    "Wer Stichprobenprüfungen von Datensätzen macht, kann Konfidenzwerte als Filter für Fälle nutzen, die von Hand geprüft werden sollten.",
+    "Privatpersonen haben selten Bedarf an Identity Resolution; der Artikel richtet sich vor allem an Datenteams."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Genauigkeit im Benchmark (Hightouch-Angaben)",
+    "balken": [
+     {
+      "label": "Jev + Opus (Hybrid)",
+      "wert": 1,
+      "anzeige": "nahe Opus"
+     },
+     {
+      "label": "Opus allein",
+      "wert": 1,
+      "anzeige": "Referenz"
+     }
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "2026-11-04",
+   "kennzahlen": [
+    {
+     "label": "Genauigkeit ohne Zusatz (Jev/Luna)",
+     "wert": "88,8–97,3 %"
+    },
+    {
+     "label": "Kosten Entscheidungsmodelle",
+     "wert": "0,05–0,10 $ / 1.000 Identitäten"
+    },
+    {
+     "label": "Antwortzeit",
+     "wert": "ca. 0,15 s"
+    },
+    {
+     "label": "Rückstand zu Opus bei schweren Benchmarks",
+     "wert": "ca. 6 Prozentpunkte"
+    }
+   ],
+   "signal": "Hybride Modelle aus günstigem Entscheidungsmodell und teurem Frontier-Modell könnten Prüfaufgaben in großen Mengen bezahlbar machen. Alle Zahlen sind Herstellerangaben von Hightouch.",
+   "link": "https://hightouch.com/blog/llm-judges-identity-resolution",
+   "linkLabel": "Originalartikel lesen",
+   "id": "hightouch-kleineres-ki-modell-pruft-identitaten-fast-so-gena",
+   "hinzugefuegt": "2026-11-07T22:55:52Z"
+  },
+  {
    "titel": "TB-MathModel: Benchmark für echte Mathematische Modellierung mit Agenten",
    "kurz": "Ein neuer Benchmark prüft KI-Agenten an vollständigen, offenen Modellierungsaufgaben aus CUMCM- und MCM-Wettbewerben. Bewertet werden die Zahlen und die physikalische Machbarkeit, nicht der Bericht.",
    "artikel": [
@@ -15467,8 +15538,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-07T19:27:45Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-07T22:55:52Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-11-07T02:17:48Z"
  }
 }
