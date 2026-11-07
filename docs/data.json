@@ -3024,6 +3024,72 @@
  ],
  "radar": [
   {
+   "titel": "vork: Headless 3D- und VFX-Engine für KI-Agenten",
+   "kurz": "Das Projekt voyager-so/vork ist eine Rendering-Engine für 3D und VFX, die ohne Oberfläche läuft und von KI-Agenten gesteuert wird. Es befindet sich in einer Research Preview und ist laut Repository quelloffen und kostenlos.",
+   "artikel": [
+    "vork, die „Voyager rendering kernel“, ist eine Engine für 3D und visuelle Effekte, die ohne grafische Oberfläche auskommt. Sie ist für KI-Agenten gebaut: Der Agent schreibt eine Szene als Code, rendert sie, betrachtet das Bild und überarbeitet den Code. Eine Bedienoberfläche zum Klicken gibt es nicht.",
+    "## Szenen als Code",
+    "Laut Beschreibung entstehen Szenen als Code und werden auf der GPU gerendert, ohne dass ein Videomodell nötig ist. Als Beispiele nennt das Repository eine Million simulierter Vögel, ein Schwarzes Loch, das Licht krümmt, und Realaufnahmen, in die gerenderte 3D-Objekte eingefügt werden. Die Engine ist in Rust und Slang geschrieben und nutzt Vulkan und Metal für die GPU-Berechnung. Slang ist eine Shadersprache, Shader sind kleine Programme, die auf der Grafikkarte laufen.",
+    "## Programmierbare Hooks",
+    "Ein Agent kann laut Projektseite während einer Aufnahme einen eigenen Shader schreiben. Standardaufnahmen brauchen nur Szenendaten, die Programmierschnittstellen sind für ungewöhnliche Fälle gedacht. Die Engine stellt Geometrie, Strahlabfragen (Ray Queries) und GPU-Ausführung bereit.",
+    "## Einordnung",
+    "Das Repository enthält Beispiele mit Credits, Vorbereitungsbefehle und Hinweise auf Lizenzen der verwendeten Assets. Die Angaben zum Speicherbedarf für Dokumentation und Token-Zahlen stammen laut Projekt aus Version 0.1.0 und sind Herstellerangaben. Der Stand ist eine frühe Vorschau, daher sind Umfang und Stabilität noch offen."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: voyager-so/vork",
+     "url": "https://github.com/voyager-so/vork"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Wer Szenen lieber per Text beschreibt, kann einen KI-Agenten bitten, mit vork eine kleine 3D-Szene zu bauen und das Vorschaubild prüfen zu lassen.",
+    "Interessierte können die mitgelieferten Beispiele wie den Schwarzen-Loch-Effekt oder die Vogelschwarm-Simulation nachbauen und an eigene Ideen anpassen."
+   ],
+   "ausprobieren": {
+    "prompt": "Read vork help. Make a small scene, render a preview and inspect the image.",
+    "tool": "vork",
+    "url": "https://github.com/voyager-so/vork"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "vork help",
+    "zeilen": [
+     "> vork help",
+     "✓ Szene aus Code erstellt",
+     "⚠ Vorschau vor finalem Rendering prüfen",
+     "- Bedienoberfläche entfällt",
+     "+ GPU-Rendering über Vulkan und Metal",
+     "● Status: Research Preview"
+    ]
+   },
+   "quelle": "GitHub",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "541"
+    },
+    {
+     "label": "Version (Herstellerangabe)",
+     "wert": "0.1.0"
+    },
+    {
+     "label": "Sprachen",
+     "wert": "Rust, Slang"
+    },
+    {
+     "label": "GPU-Backends",
+     "wert": "Vulkan, Metal"
+    }
+   ],
+   "signal": "Ein Rendering-Werkzeug, das Agenten statt Menschen bedienen, ist eine ungewöhnliche Richtung. Die Einordnung als Research Preview ist wichtig, weil die Angaben zur Reife nur vom Projekt selbst stammen.",
+   "link": "https://github.com/voyager-so/vork",
+   "linkLabel": "Zum Repository",
+   "id": "vork-headless-3d-und-vfx-engine-fur-ki-agenten",
+   "hinzugefuegt": "2026-11-07T08:52:02Z"
+  },
+  {
    "titel": "Ripple-65B Preview: Offenes US-Modell mit starken Coding-Ergebnissen",
    "kurz": "Das Startup Ricursive Intelligence hat Ripple-65B Preview veröffentlicht, ein offenes Sprachmodell unter Apache-2.0-Lizenz. Laut Herstellerangabe ist es das beste offene US-Modell im TerminalBench 2.1, liegt aber in anderen Tests hinter Inkling 2 Small zurück.",
    "artikel": [
@@ -11607,6 +11673,52 @@
  ],
  "projekte": [
   {
+   "titel": "Turkish Anti-AI Skill: Werkzeug gegen Übersetzungsdeutsch… pardon, Übersetzungstürkisch",
+   "kurz": "Ein Open-Source-Agent-Skill für Türkisch, der typische KI-Muster in Texten erkennt und die Satzarchitektur wieder natürlich gestaltet. Ein Python-CLI-Dedektor misst zusätzlich Klischees, TDK-Fehler und Satzlängen-Variation.",
+   "artikel": [
+    "Große Sprachmodelle werden überwiegend mit englischen Daten trainiert. Deshalb entsteht beim Schreiben auf Türkisch oft ein Text, dessen Wörter zwar türkisch sind, dessen Satzbau aber englisch wirkt. Das Projekt „turkish-anti-ai-skill“ setzt genau hier an.",
+    "Anders als einfache englische Humanizer-Werkzeuge, die vor allem Wörter austauschen, soll das Skill die zugrunde liegende türkische Satzstruktur neu aufbauen. Genannte Problemfelder sind unter anderem Nebensätze, die falsch hinter das Bezugswort gesetzt werden, mechanisch eingesetzte Bindewörter bei Ulaç-Formen (Partizipial- bzw. Konverbformen auf -Ip, -IncA, -dIkçA) sowie Sätze, die fast immer auf -DIr oder -mAktAdIr enden. Außerdem wird die Satzlänge bei KI-Texten oft sehr gleichförmig, was der Autor als Problem der fehlenden „Burstiness“ (Variation im Satzrhythmus) beschreibt.",
+    "Das Projekt bietet drei Modi: rewrite zum Überarbeiten vorhandener Texte, write zum Schreiben neuer Texte und audit zum bloßen Prüfen ohne Änderung. Ein sogenanntes Anti-Fabrication-Lock soll verhindern, dass beim Umschreiben neue Zahlen, Daten oder Behauptungen hinzukommen. Zudem gibt es fünf Register (etwa Blog, Technik, Akademik) und ein Wörterbuch mit über 60 Mustern in drei Stufen. Laut Projektseite berücksichtigt es die Regeln des TDK-Yazım-Kılavuzu und behandelt Fremdwörter wie „cache“ oder „JSON“ nach ihrer türkischen Aussprache beim Anhängen von Endungen.",
+    "Die Projektseite nennt Installationswege für Claude Code, Cursor, Codex, Gemini CLI, Windsurf und OpenCode. Der Dedektor arbeitet laut Beschreibung ohne externe Bibliotheken und erkennt vor allem oberflächliche Muster per Regex und einfacher Statistik. Syntaktische Entscheidungen wie Satzstellung oder Registerpassung kann er nicht messen; das bleibt dem Sprachmodell überlassen."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: yucezerey/turkish-anti-ai-skill",
+     "url": "https://github.com/yucezerey/turkish-anti-ai-skill"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Lass einen Türkisch-Text mit dem Modus audit auf typische KI-Muster prüfen, ohne ihn zu verändern.",
+    "Überarbeite einen eigenen Blogbeitrag oder Entwurf im Modus rewrite und behalte dabei die Fakten bei.",
+    "Installiere das Skill in einem unterstützten Agenten wie Claude Code oder Cursor, um es im Alltag zu nutzen."
+   ],
+   "projekte": true,
+   "macher": "yucezerey (GitHub-Nutzer)",
+   "branche": "Sprache / Textbearbeitung",
+   "jahr": null,
+   "tools": [
+    "Agent Skill (SKILL.md)",
+    "Python-CLI-Dedektor (scripts/detect_tr_ai.py)",
+    "Claude Code",
+    "Cursor",
+    "OpenAI Codex",
+    "Gemini CLI",
+    "Windsurf",
+    "OpenCode"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "242 ★"
+    }
+   ],
+   "link": "https://github.com/yucezerey/turkish-anti-ai-skill",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "turkish-anti-ai-skill-werkzeug-gegen-ubersetzungsdeutsch-par",
+   "hinzugefuegt": "2026-11-07T08:52:02Z"
+  },
+  {
    "titel": "Ork: Quelloffener KI-Assistent mit dauerhaften Bots",
    "kurz": "Ork ist ein quelloffener (source-available) KI-Assistent, dessen Bots dauerhaft laufen, Gespräche teilen und auf isolierten Computern arbeiten. Das Projekt lässt sich selbst hosten und bietet Web-, Desktop- und Mobile-Apps.",
    "artikel": [
@@ -15067,8 +15179,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-07T02:17:48Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-11-07T08:52:02Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-07T02:17:48Z"
  }
 }
