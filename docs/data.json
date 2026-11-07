@@ -3024,6 +3024,81 @@
  ],
  "radar": [
   {
+   "titel": "TB-MathModel: Benchmark für echte Mathematische Modellierung mit Agenten",
+   "kurz": "Ein neuer Benchmark prüft KI-Agenten an vollständigen, offenen Modellierungsaufgaben aus CUMCM- und MCM-Wettbewerben. Bewertet werden die Zahlen und die physikalische Machbarkeit, nicht der Bericht.",
+   "artikel": [
+    "Mathematische Modellierung heißt, ein offenes Alltagsproblem in Annahmen, ein Modell, eine Lösung und eine begründete Empfehlung zu übersetzen. Genau diese Schicht messen bisherige Benchmarks laut den Autoren kaum: Sie bewerten entweder Teilschritte des Lösens oder lassen einen LLM-Richter Berichte benoten, ohne die Zahlen zu prüfen.",
+    "## Was TB-MathModel anders macht",
+    "TB-MathModel (Terminal-style Mathematical Modeling Bench) nutzt 18 reale Aufgaben aus CUMCM und MCM der Jahre 2023 bis 2025. Die Agenten arbeiten in containerisierten Terminals: Sie lesen die Aufgabenstellung, öffnen Tabellen, betrachten Abbildungen, schreiben Code, führen einen Solver aus und geben ein strukturiertes JSON aus.",
+    "Drei Entwurfsentscheidungen stehen im Vordergrund. Erstens wird nicht der Bericht bewertet, sondern der numerische Kern der Schlussfrage, wobei eine Abweichung nur in eine Richtung bestraft wird. Wer besser als die menschliche Arbeit abschneidet, verliert also keine Punkte. Zweitens gibt es nicht eine Referenzlösung, sondern 94; jede Outstanding-prämierte Arbeit liefert eine Stimme. Drittens prüft ein programmatisches Gate die Machbarkeit unabhängig: sechs entscheidbare Invariantenformen und 624 mit dem Lean-4-Kernel geprüfte Beweisverpflichtungen, ohne Mathlib und ohne sorry.",
+    "## Ergebnisse",
+    "Laut Paper erreicht der beste Eintrag, GPT-6 Astra, 64,6 Prozent. Fable 5.1 kommt auf 63,1 Prozent. Ein offenes Modell mit 2,54 Dollar Kosten erreicht 59,8 Prozent, bei etwa einem Hundertstel der Kosten. Die Autoren betonen selbst, dass Agenten für echte Probleme noch weit entfernt sind.",
+    "Hinweis zu Herstellerangaben: GPT-6 Astra und Fable 5.1 sind Modellbezeichnungen aus dem Paper; die Prozentwerte stammen aus den Angaben der Autoren und sind nicht unabhängig nachgeprüft.",
+    "Laut Autoren braucht der Weg zu solchen Agenten eine einheitliche Umgebung, eine überprüfbare Belohnung und einen wachsenden Korpus an Agenten-Trajektorien. Code und Daten sind auf GitHub verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "Terminal-style Mathematical Modeling Bench (Hugging Face Paper Page)",
+     "url": "https://huggingface.co/papers/2611.08237"
+    },
+    {
+     "titel": "Code und Daten (GitHub)",
+     "url": "https://github.com/wxj630/terminal-bench-math-modeling"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Den Benchmark-Code auf GitHub ansehen, um zu verstehen, wie Modellierungsaufgaben in Terminals geprüft werden.",
+    "Eigene Modellierungsaufgaben mit einer festen Referenzlösung und einer Machbarkeitsprüfung aufbauen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Bestwerte laut Paper (Anteil korrekt)",
+    "balken": [
+     {
+      "label": "Offenes Modell (2,54 $)",
+      "wert": 59.8,
+      "anzeige": "59,8 %"
+     },
+     {
+      "label": "Fable 5.1",
+      "wert": 63.1,
+      "anzeige": "63,1 %"
+     },
+     {
+      "label": "GPT-6 Astra",
+      "wert": 64.6,
+      "anzeige": "64,6 %"
+     }
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-11-06",
+   "kennzahlen": [
+    {
+     "label": "Aufgaben",
+     "wert": "18 (CUMCM/MCM 2023–2025)"
+    },
+    {
+     "label": "Referenzlösungen",
+     "wert": "94"
+    },
+    {
+     "label": "Lean-4-Obligationen",
+     "wert": "624"
+    },
+    {
+     "label": "Beste Ergebnis (GPT-6 Astra)",
+     "wert": "64,6 %"
+    }
+   ],
+   "signal": "Ein Benchmark, der Agenten nicht am Bericht, sondern an Zahlen und Machbarkeit misst. Laut Paper liegen selbst die besten Modelle erst bei rund 65 Prozent.",
+   "link": "https://huggingface.co/papers/2611.08237",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "tb-mathmodel-benchmark-fur-echte-mathematische-modellierung-",
+   "hinzugefuegt": "2026-11-07T19:27:45Z"
+  },
+  {
    "titel": "MoE-Experten: Sparse Autoencoder zeigt feinkörnige, menschlich lesbare Spezialisierung",
    "kurz": "Ein arXiv-Paper (Hugging Face: 7 Upvotes) untersucht mit einem Sparse Autoencoder, worauf sich einzelne Experten in Mixture-of-Experts-Modellen tatsächlich spezialisieren. Die Autoren berichten von Spezialisierung unterhalb grober Fachgebiete.",
    "artikel": [
@@ -11815,6 +11890,77 @@
  ],
  "projekte": [
   {
+   "titel": "sandbox-mcp: Frische Wegwerf-Windows-PCs für Tests von Apps",
+   "kurz": "sandbox-mcp ist ein Open-Source-Projekt (GitHub, 225 Sterne), das eine MCP-Schnittstelle und eine CLI bereitstellt, um Windows Sandbox automatisiert zu steuern. Damit lassen sich Apps auf einem frischen, wegwerfbaren Windows-11-Rechner testen.",
+   "artikel": [
+    "sandbox-mcp richtet sich an alle, die Windows-Anwendungen auf einem sauberen Rechner prüfen wollen. Das Projekt nutzt die Windows Sandbox, also eine kurzlebige Windows-Umgebung, die beim Schließen gelöscht wird. Laut Projektbeschreibung handelt es sich um eine echte Windows-11-Maschine und nicht um einen Container.",
+    "## Was das Werkzeug macht",
+    "Eine App wird in die Sandbox übertragen, gestartet und über UI Automation gesteuert. UI Automation ist eine Windows-Schnittstelle, mit der sich Bedienelemente wie Schaltflächen auslesen und bedienen lassen. Außerdem werden Screenshots, Aufnahmen und ein HTML-Bericht gesichert, bevor die Umgebung entsorgt wird. Die CLI funktioniert eigenständig; der MCP-Adapter ist optional für KI-Agenten.",
+    "## Abhängigkeiten als Problem",
+    "Das Projekt betont, dass Entwicklerrechner oft Laufzeiten wie Visual C++ enthalten, Kunden-PCs aber nicht. Die Dokumentation nennt ein Beispiel, bei dem ein Test auf einem frischen Gast mit dem Fehler „Missing dependency: VC++ redistributable“ scheiterte. Erst nach einer ausdrücklich angeforderten Installation lief derselbe Test durch. sandbox-mcp installiert Voraussetzungen laut Beschreibung nur auf ausdrückliche Anforderung.",
+    "## Einordnung",
+    "Die Projektseite vergleicht das Werkzeug mit Hyper-V-VMs, Windows-Containern und Cloud-Entwicklungsumgebungen. Laut dieser Gegenüberstellung entfallen bei der Windows Sandbox Basis-Images, und der Start dauert etwa 15 Sekunden. Diese Angaben stammen vom Projekt selbst und sind Herstellerangaben. Die Autoren betonen außerdem, dass nicht jede Windows-App oder hardwareabhängige Anwendung in der Sandbox funktioniert.",
+    "## Einschränkungen",
+    "Die Projektseite weist ausdrücklich darauf hin, dass es sich um kein Versprechen für jede Windows-App handelt. Die gemessene Kompatibilität ist in einer eigenen Matrix dokumentiert. Die Windows Sandbox muss auf dem Rechner verfügbar sein; laut Projekt ist sie kostenlos mit Windows Pro oder Enterprise."
+   ],
+   "quellen": [
+    {
+     "titel": "sandbox-mcp auf GitHub",
+     "url": "https://github.com/shanselman/sandbox-mcp"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Eine eigene Windows-App auf einem sauberen Rechner testen, bevor man sie weitergibt.",
+    "Mit UI Automation Bedienschritte automatisiert durchspielen und Screenshots sichern lassen.",
+    "Abhängigkeitsprobleme wie fehlende Laufzeitbibliotheken früh erkennen."
+   ],
+   "ausprobieren": {
+    "prompt": "Führe die sbx-CLI aus, um meine App app.exe in einer frischen Windows Sandbox zu starten und die Abhängigkeiten zu prüfen.",
+    "tool": "sandbox-mcp",
+    "url": "https://github.com/shanselman/sandbox-mcp"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "sbx deps app.exe",
+    "zeilen": [
+     "> sbx deps app.exe",
+     "✓ Frischer Gast gestartet",
+     "⚠ Fehlende Abhängigkeit: VC++ redistributable",
+     "● Status: Test fehlgeschlagen",
+     "+ Bericht gespeichert"
+    ]
+   },
+   "tag": "Windows-Testwerkzeug",
+   "macher": "Scott Hanselman (shanselman)",
+   "branche": "Softwareentwicklung / Windows-Tests",
+   "jahr": null,
+   "tools": [
+    "Windows Sandbox",
+    "MCP",
+    "UI Automation",
+    "PowerShell"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "225"
+    },
+    {
+     "label": "Version (Download)",
+     "wert": "v1.2.0"
+    },
+    {
+     "label": "Gemessene GUI-Testdauer",
+     "wert": "ca. 40–50 Sekunden (Herstellerangabe)"
+    }
+   ],
+   "link": "https://github.com/shanselman/sandbox-mcp",
+   "linkLabel": "Projekt auf GitHub",
+   "id": "sandbox-mcp-frische-wegwerf-windows-pcs-fur-tests-von-apps",
+   "hinzugefuegt": "2026-11-07T19:27:45Z"
+  },
+  {
    "titel": "Turkish Anti-AI Skill: Werkzeug gegen Übersetzungsdeutsch… pardon, Übersetzungstürkisch",
    "kurz": "Ein Open-Source-Agent-Skill für Türkisch, der typische KI-Muster in Texten erkennt und die Satzarchitektur wieder natürlich gestaltet. Ein Python-CLI-Dedektor misst zusätzlich Klischees, TDK-Fehler und Satzlängen-Variation.",
    "artikel": [
@@ -15321,7 +15467,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-07T15:14:08Z",
+  "letzterScan": "2026-11-07T19:27:45Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-11-07T02:17:48Z"
  }
