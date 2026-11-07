@@ -11607,6 +11607,56 @@
  ],
  "projekte": [
   {
+   "titel": "Ork: Quelloffener KI-Assistent mit dauerhaften Bots",
+   "kurz": "Ork ist ein quelloffener (source-available) KI-Assistent, dessen Bots dauerhaft laufen, Gespräche teilen und auf isolierten Computern arbeiten. Das Projekt lässt sich selbst hosten und bietet Web-, Desktop- und Mobile-Apps.",
+   "artikel": [
+    "Ork ist ein KI-Assistent, dessen Bots dauerhaft bestehen bleiben. Mehrere Bots können Gespräche teilen und arbeiten auf voneinander getrennten Computern. Der Quellcode ist öffentlich einsehbar, die Nutzung unterliegt jedoch einer eigenen Lizenz. Das Projekt steht auf GitHub mit 123 Sternen.",
+    "## Aufbau",
+    "Die Anwendung läuft als Desktop-App mit Tauri und als Mobile-App mit Expo. Tauri ist ein Framework, mit dem sich Desktop-Programme aus Web-Technik bauen lassen; Expo ist ein Werkzeug für mobile Apps mit React Native. Eine API und ein Worker bilden das Backend. Die Web-Oberfläche läuft innerhalb von Tauri. Laut Readme lautet die öffentliche Domain ork.run.",
+    "## Lokal ausprobieren",
+    "Für die lokale Entwicklung werden Node.js, Docker und pnpm benötigt. Ein Setup-Befehl erzeugt eine .env-Datei mit zufälligen Datenbank-Passwörtern und getrennten Schlüsseln. Die PostgreSQL-Datenbank läuft in Docker und ist nur über die Adresse 127.0.0.1 erreichbar. Vor dem Start der API muss eine OIDC-Client-ID für die Anmeldung über Ork Accounts hinterlegt werden. Laut Readme ist für das Öffnen der App kein Modellschlüssel nötig.",
+    "## Lizenz",
+    "Neue Teile des Projekts stehen unter der PolyForm Noncommercial 1.0.0. Für gewerbliche interne Nutzung ist laut Readme eine kommerzielle Lizenz nötig. Die kommerziellen Vereinbarungen sind laut Readme noch Entwürfe, und Abos sind derzeit nicht erhältlich. Der Preis pro Nutzer ist noch nicht festgelegt. Selbst hosten ist für die von PolyForm erlaubten Zwecke kostenlos."
+   ],
+   "quellen": [
+    {
+     "titel": "orkbot-run/ork auf GitHub",
+     "url": "https://github.com/orkbot-run/ork"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Einen eigenen Ork-Server auf dem eigenen Rechner aufsetzen und lokal ausprobieren.",
+    "Den Quellcode lesen, um zu verstehen, wie persistente Bots und isolierte Computer umgesetzt sind.",
+    "Prüfen, ob die PolyForm-Noncommercial-Lizenz für den eigenen Zweck passt, bevor man das Projekt nutzt."
+   ],
+   "macher": "Ork-Mitwirkende (Copyright 2026 Ork contributors)",
+   "branche": "KI-Assistenten / Entwicklertools",
+   "jahr": "2026",
+   "tools": [
+    "Tauri",
+    "Expo",
+    "PostgreSQL",
+    "Docker",
+    "Node.js",
+    "pnpm"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "123"
+    },
+    {
+     "label": "Commits",
+     "wert": "2.911"
+    }
+   ],
+   "link": "https://github.com/orkbot-run/ork",
+   "linkLabel": "Zum Repository auf GitHub",
+   "id": "ork-quelloffener-ki-assistent-mit-dauerhaften-bots",
+   "hinzugefuegt": "2026-11-07T02:17:48Z"
+  },
+  {
    "titel": "Poki: KI-Agenten steuern ein echtes iPhone",
    "kurz": "Poki ist ein Open-Source-Projekt, mit dem KI-Agenten ein echtes iPhone bedienen können. Laut Repository braucht es dafür keinen Jailbreak und keine zusätzliche Hardware, sondern einen lokalen MCP-Server und einen Agenten.",
    "artikel": [
@@ -15001,24 +15051,24 @@
    "id": "text"
   },
   {
-   "maximum": "Bis zu 30 Sekunden pro Clip mit Ton und Lippensynchronität. Längere Filme entstehen im Schnitt.",
+   "maximum": "Bis zu 15 Sekunden pro Clip mit Ton und Lippensynchronität, laut Google jetzt bis 15 Sekunden. Längere Filme entstehen im Schnitt.",
    "name": "Video",
    "reihenfolge": 1,
    "status": "mid",
    "statusText": "Kurz: ja",
    "tools": [
+    "Gemini Omni 1.2 Flash",
     "Kling 4.0",
     "Veo 3.1",
     "Seedance 2.x",
-    "Wan 3.0",
     "Runway Gen-4.5"
    ],
    "id": "video"
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-06T22:25:14Z",
+  "letzterScan": "2026-11-07T02:17:48Z",
   "neueFunde": 1,
-  "standAktualisiert": "2026-11-05T22:49:07Z"
+  "standAktualisiert": "2026-11-07T02:17:48Z"
  }
 }
