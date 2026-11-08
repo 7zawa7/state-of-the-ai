@@ -11961,6 +11961,64 @@
  ],
  "projekte": [
   {
+   "titel": "Videoschnitt-Werkzeug: Teleprompter trifft KI-Editing-Agenten",
+   "kurz": "Ein Open-Source-Projekt auf GitHub (151 Sterne) beschreibt ein Workflow-System für YouTube-Videos: Ein Teleprompter folgt der Stimme beim Aufnehmen, KI-Agenten schlagen Schnitte vor, und Animationen laufen über JSON-Zeitleisten.",
+   "artikel": [
+    "Das Projekt »youtube-ai-video-editing-system« von dhruvthakur11 versteht ein Video als Zusammenspiel von Skript und Bildschirm. Ein sogenannter Eyeline-Teleprompter zeigt den Text an und scrollt im Takt der Stimme mit. Die Aufnahmen landen anschließend bei KI-Editing-Agenten, die Schnitte als lesbare Markdown- und JSON-Dateien vorschlagen. Diese lassen sich prüfen, kommentieren und von Hand ändern.",
+    "## Ablauf in fünf Stationen",
+    "Der Ablauf ist in fünf Stufen gegliedert: Aufnahme, Schnitt, Gestaltung, Animation und Übergabe an den Schnittplatz. Jeder Schritt hinterlässt Textdateien, sodass man jederzeit eingreifen oder einen anderen KI-Agenten übernehmen lassen kann. Der Vorschlag für den Schnitt liegt in einer eigenen Datei, sodass die bereits freigegebene Fassung unberührt bleibt.",
+    "## Animation und Grafiken",
+    "Animationen werden über JSON-Zeitleisten gesteuert, damit Einblendungen, Masken und Übergänge zum Sprecherkommentar passen. Jede Vorlage hat eine ansteuerbare Zeitleiste, sodass Vorschau und Export denselben Frame für eine bestimmte Sekunde zeigen. Die Vorlagen sind als Ausgangspunkt gedacht und sollen mit eigenen Farben, Schriften und Formen angepasst werden.",
+    "## Einschränkungen",
+    "Das Projekt richtet sich laut Beschreibung an Windows 10 und 11 mit PowerShell 5.1 oder neuer. Die Beschreibung ist eine Herstellerangabe des Projekts selbst; eigene Tests der Werkzeuge sind darin nicht dokumentiert. Die Vorlagen für eigene Stimme, Tempo und Designregeln sind bewusst nicht vorkonfiguriert."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: dhruvthakur11/youtube-ai-video-editing-system",
+     "url": "https://github.com/dhruvthakur11/youtube-ai-video-editing-system"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Ein Skript im Teleprompter einlesen und Takes mit Mikrofon aufnehmen, während der Text mitläuft.",
+    "KI-Vorschläge für Schnitte als JSON-Datei erzeugen lassen und selbst entscheiden, was übernommen wird.",
+    "Animationen für Einblendungen über eine JSON-Zeitleiste an den Sprechertext koppeln."
+   ],
+   "macher": "dhruvthakur11 (GitHub-Nutzer)",
+   "branche": "Video / Content-Produktion",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "Eyeline-Teleprompter",
+    "KI-Editing-Agenten",
+    "JSON-Zeitleisten",
+    "Markdown",
+    "PowerShell"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "151"
+    },
+    {
+     "label": "Commits",
+     "wert": "39"
+    },
+    {
+     "label": "Systemvoraussetzung",
+     "wert": "Windows 10/11 (x64), PowerShell 5.1+"
+    }
+   ],
+   "link": "https://github.com/dhruvthakur11/youtube-ai-video-editing-system",
+   "linkLabel": "Zum Repository auf GitHub",
+   "vorschau": {
+    "szene": "schnitt",
+    "titel": "Teleprompter → Schnitt → Animation"
+   },
+   "tag": "Open Source",
+   "id": "videoschnitt-werkzeug-teleprompter-trifft-ki-editing-agenten",
+   "hinzugefuegt": "2026-11-08T02:16:11Z"
+  },
+  {
    "titel": "sandbox-mcp: Frische Wegwerf-Windows-PCs für Tests von Apps",
    "kurz": "sandbox-mcp ist ein Open-Source-Projekt (GitHub, 225 Sterne), das eine MCP-Schnittstelle und eine CLI bereitstellt, um Windows Sandbox automatisiert zu steuern. Damit lassen sich Apps auf einem frischen, wegwerfbaren Windows-11-Rechner testen.",
    "artikel": [
@@ -15538,7 +15596,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-07T22:55:52Z",
+  "letzterScan": "2026-11-08T02:16:11Z",
   "neueFunde": 1,
   "standAktualisiert": "2026-11-07T02:17:48Z"
  }
