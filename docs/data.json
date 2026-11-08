@@ -3069,6 +3069,58 @@
  ],
  "radar": [
   {
+   "titel": "AI-Coding-Agenten brauchen bei fast drei von vier Aufgaben noch Nacharbeit",
+   "kurz": "Ein neuer Alibaba-Benchmark namens Co-Design Bench testet Coding-Agenten mit echten Nutzeranfragen. Selbst das beste Modell löst nur 26,4 Prozent der Aufgaben vollständig.",
+   "artikel": [
+    "Forscher von Alibaba und mehreren asiatischen Universitäten haben einen neuen Benchmark für Coding-Agenten entwickelt. Ein Benchmark ist ein standardisierter Test, mit dem sich Modelle vergleichen lassen. Die Aufgaben stammen aus echten Änderungswünschen von Nutzern, bei denen KI-Agenten zuvor gescheitert waren.",
+    "## Ergebnisse",
+    "Die Agenten sollen bestehende Web-Apps auf Basis von Nutzerwünschen umbauen, teils mit Bildern, Audioaufnahmen, Videos oder Dokumenten als Eingabe. Das beste der zehn getesteten Modelle, GPT-6 Astra, erfüllt im Schnitt rund 70 Prozent der Anforderungen einer Aufgabe. Vollständig korrekt sind jedoch nur 26,4 Prozent der Aufgaben. Meist erledigt der Agent den Großteil der Arbeit, lässt aber mindestens ein Detail offen.",
+    "## Ältere Tests sind zu leicht geworden",
+    "Auf älteren Benchmarks erreichen die Modelle laut den Autoren Werte über 99 Prozent. Unterschiede zwischen Modellen lassen sich damit kaum noch messen. Auf WebCompass-edit liegen die Agenten nahe am Maximum, während Co-Design Bench eine Lücke von mehr als 35 Prozentpunkten offenlässt.",
+    "Die Aufgaben reichen von kleinen Änderungen, etwa einem Betrag aus einem Kassenbon, der alle abhängigen Summen aktualisieren soll, bis zu großen Projektumbauten. Die Bewertung ist streng: Ein KI-Richter testet die fertige App im Browser, ein zweiter prüft jede positive Bewertung auf Attrappen oder fest einprogrammierte Ergebnisse.",
+    "## Mehrere Änderungen gleichzeitig",
+    "Mit jeder zusätzlichen Änderungsart, etwa Layout, Design, Interaktion oder Inhalt, sinkt die Leistung aller Modelle. Bei drei oder vier Änderungsarten schneidet jedes der zehn Modelle schlechter ab. GLM-5.2 verbraucht bei kleineren Änderungen fast sechsmal so viele Token wie GPT-6 Astra, erreicht aber deutlich schlechtere Ergebnisse.",
+    "## Umgebung zählt mit",
+    "Die Forscher testeten dieselben Modelle auch in unterschiedlichen Harnesses. Ein Harness ist das Programm, über das ein Agent Code liest, schreibt und ausführt. Qwen3.8-27B erreichte bei größeren Umbauten je nach Umgebung 75 oder nur 56 Prozent. Welches Modell vorne lag, hing ebenfalls von der Umgebung ab. Die Autoren empfehlen, Modell und Arbeitsumgebung immer gemeinsam anzugeben.",
+    "## Grenzen",
+    "Der Test bewertet jeweils eine feste Anfrage. Nachfragen oder Korrekturen während einer Aufgabe sind nicht enthalten, und auch die KI-Richter können Fehler machen. Eine Studie der Organisation METR zeigte bereits, dass Benchmark-Ergebnisse und praktische Nutzbarkeit stark auseinanderlaufen können."
+   ],
+   "quellen": [
+    {
+     "titel": "AI coding agents still need human cleanup on nearly three out of four tasks in a real-world test",
+     "url": "https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Teste einen KI-Coding-Agenten vor dem Einsatz an einer eigenen, realen Änderungsanfrage, bevor du ihm Projekte anvertraust.",
+    "Rechne damit, dass fertige Ergebnisse fast immer manuell nachgeprüft werden müssen.",
+    "Achte bei Vergleichen darauf, dass Modell und Arbeitsumgebung zusammen betrachtet werden."
+   ],
+   "radar": true,
+   "quelle": "Fachpresse",
+   "datum": "2026-11-08",
+   "kennzahlen": [
+    {
+     "label": "Vollständig gelöste Aufgaben (GPT-6 Astra, Co-Design Bench)",
+     "wert": "26,4 %"
+    },
+    {
+     "label": "Durchschnittlich erfüllte Anforderungen (GPT-6 Astra)",
+     "wert": "ca. 70 %"
+    },
+    {
+     "label": "Lücke zu älteren Benchmarks (WebCompass-edit)",
+     "wert": "mehr als 35 Prozentpunkte"
+    }
+   ],
+   "signal": "Benchmarks mit Scores über 99 Prozent sagen wenig über den Praxiseinsatz aus. Die Ergebnisse zeigen, dass Coding-Agenten bei komplexen, kombinierten Änderungen noch deutlich Nacharbeit brauchen.",
+   "link": "https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/",
+   "linkLabel": "Artikel bei THE DECODER lesen",
+   "id": "ai-coding-agenten-brauchen-bei-fast-drei-von-vier-aufgaben-n",
+   "hinzugefuegt": "2026-11-08T15:54:35Z"
+  },
+  {
    "titel": "KI-Prüfer finden die meisten Fehlverhalten, überfluten aber Prüfer mit Fehlalarmen",
    "kurz": "Eine Pilotstudie von Andy Hall zeigt, dass KI-Modelle problematisches Verhalten anderer KI-Agenten in Logs oft erkennen. Je mehr sie aber jeden Fall fangen wollen, desto mehr harmlose Aktionen werden fälschlich markiert, sodass sie eher zur Schätzung als für verlässliche Sicherheitschecks taugen.",
    "artikel": [
@@ -12075,6 +12127,81 @@
  ],
  "projekte": [
   {
+   "titel": "Karpathy baut Videoplattform aus 20 Jahren Hacker News",
+   "kurz": "OpenAI-Mitgründer Andrej Karpathy hat laut eigener Aussage an einem Wochenende mit Claude eine kuratierte Videoplattform namens HackerTube gebaut. Kurz danach folgte TristanTube.",
+   "artikel": [
+    "Andrej Karpathy, Mitgründer von OpenAI und laut Quelle aktuell KI-Forscher bei Anthropic, hat mit Claude eine kuratierte Videoplattform gebaut. Das Projekt heißt HackerTube und basiert auf 20 Jahren Kommentaren der Nachrichtenseite Hacker News.",
+    "## Wie das Projekt funktioniert",
+    "Laut Bericht nutzte Karpathy das Modell Opus 5.5 von Claude. Die KI filterte 43 Millionen Kommentare und verdichtete sie zu 6.454 Videos, die auf Hacker News immer wieder empfohlen werden. Karpathy beschreibt das Ergebnis auf X als deutlich besseres Seherlebnis als die Empfehlungen von YouTube.",
+    "Die Seite braucht keine Anmeldung. Statt optimierter Vorschaubilder zeigt sie ein einzelnes Standbild aus der Mitte des Videos. Der Zustand wird lokal im Browser gespeichert.",
+    "## Schnelle Folgeprojekte",
+    "Danach baute Karpathy nach eigenen Angaben TristanTube mit Claude Code in drei Minuten im ersten Anlauf. Grundlage sind 47.000 Videos aus einer YouTube-Kanalliste von Tristan Hume.",
+    "## Arbeitsaufteilung",
+    "Karpathy sagt, Claude Code habe fast die gesamte Arbeit übernommen, von der Datenanalyse bis zum Serveraufbau. Seine eigenen Schritte seien lediglich ein Google-Cloud-API-Schlüssel, ein gemieteter Server und der Kauf der Domain gewesen. Projekte, für die früher Wochen nötig waren, seien nun in wenigen Stunden machbar.",
+    "Claude Code ist ein Werkzeug von Anthropic, mit dem KI-Modelle Programmieraufgaben direkt im Projekt übernehmen. Die genannten Angaben zu Modell, Dauer und Ergebnis stammen von Karpathy selbst und sind Herstellerangaben beziehungsweise Selbstaussagen, die nicht unabhängig geprüft sind."
+   ],
+   "quellen": [
+    {
+     "titel": "Andrej Karpathy built a curated video platform in a weekend using Claude and 20 years of Hacker News – The Decoder",
+     "url": "https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Eigene Video- oder Kanalliste nehmen und daraus mit einem KI-Coding-Werkzeug eine kleine Empfehlungsseite bauen.",
+    "Bestehende Community-Empfehlungen als Datenbasis nutzen, um Inhalte nach eigenem Geschmack zu filtern.",
+    "Prüfen, ob sich der Aufbau eines einfachen Projekts mit KI-Hilfe in kurzer Zeit umsetzen lässt."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Videos aus den Kommentaren gefiltert",
+    "balken": [
+     {
+      "label": "Kommentare (Mio.)",
+      "wert": 43,
+      "anzeige": "43 Mio."
+     },
+     {
+      "label": "Kuratierte Videos",
+      "wert": 6454,
+      "anzeige": "6.454"
+     },
+     {
+      "label": "TristanTube Videos",
+      "wert": 47000,
+      "anzeige": "47.000"
+     }
+    ]
+   },
+   "tag": "Videoplattform",
+   "macher": "Andrej Karpathy",
+   "branche": "Video / Empfehlungen",
+   "jahr": 2026,
+   "tools": [
+    "Claude (Opus 5.5)",
+    "Claude Code",
+    "Google Cloud API"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Kommentare",
+     "wert": "43 Mio."
+    },
+    {
+     "label": "Kuratierte Videos (HackerTube)",
+     "wert": "6.454"
+    },
+    {
+     "label": "Videos (TristanTube)",
+     "wert": "47.000"
+    }
+   ],
+   "link": "https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/",
+   "linkLabel": "Originalartikel bei The Decoder",
+   "id": "karpathy-baut-videoplattform-aus-20-jahren-hacker-news",
+   "hinzugefuegt": "2026-11-08T15:54:35Z"
+  },
+  {
    "titel": "Solo-to-Team: Skill-Paket für einen Menschen, der ein KI-Team führt",
    "kurz": "Das Open-Source-Projekt „solo-to-team-skills“ bietet Skills für Menschen, die mehrere KI-Agenten koordinieren. Es geht um Aufgaben delegieren, Ergebnisse prüfen, Schritte verständlich erklären und Erfahrungen wiederverwenden.",
    "artikel": [
@@ -15773,8 +15900,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-08T09:03:56Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-11-08T15:54:35Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-08T09:03:56Z"
  }
 }
