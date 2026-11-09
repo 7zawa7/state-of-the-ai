@@ -1,6 +1,62 @@
 {
  "news": [
   {
+   "titel": "Anthropic stellt Claude Fable 5.2 und Mythos 5.2 vor",
+   "kurz": "Anthropic bringt zwei neue Spitzenmodelle heraus, Fable 5.2 für alle Nutzer und Mythos 5.2 für verifizierte Organisationen. Laut Herstellerangaben setzen sie bei mehreren Benchmarks neue Bestwerte, kurz vor dem geplanten Börsengang des Unternehmens.",
+   "artikel": [
+    "Anthropic hat mit Claude Fable 5.2 und Claude Mythos 5.2 zwei neue Flaggschiff-Modelle vorgestellt. Beide basieren laut Anthropic auf derselben Modellgrundlage, unterscheiden sich aber beim Zugang. Fable ist für alle Nutzer verfügbar und enthält Schutzmechanismen, die riskante Aufgaben in Cybersicherheit und Biologie blockieren. Mythos hebt einige dieser Einschränkungen auf und steht nur Organisationen offen, die sich über die Verification Programs for Cybersecurity oder Life Sciences bewerben.",
+    "## Benchmark-Ergebnisse",
+    "Laut dem unabhängigen Vergleich Artificial Analysis erreicht Fable 5.2 im Intelligence Index v5 bei der höchsten Rechenstufe 65 Punkte. Das liegt fünf Punkte vor Gemini 4 Carbon, das Google nach Angaben der Quelle noch nicht veröffentlicht hat, und 15 Punkte vor dem Vorgänger Fable 5.1. Bei den einzelnen Tests liegt Fable 5.2 in fünf von neun Disziplinen vorn, etwa mit 80 Prozent im HLE-Diamond-Test für Expertenfragen. In agentenbasierter Wissensarbeit und Terminal-Programmierung liegt es dagegen hinter einigen Konkurrenten.",
+    "Der Preis für Spitzenleistung ist hoch: Pro Aufgabe kostet die höchste Stufe im Schnitt 26,50 Dollar, etwa das 2,6-Fache von Opus 5.5. Auf niedrigeren Stufen erreicht Fable 5.2 laut Artificial Analysis dennoch 62 Punkte und verbraucht deutlich weniger Tokens.",
+    "## Cybersicherheit",
+    "Anthropic zufolge findet Mythos 5.2 mehr Sicherheitslücken als seine Vorgänger. Im internen Test CVE Rediscovery, bei dem Modelle bekannte Schwachstellen aus der CVE-Datenbank selbstständig finden sollen, schneidet es laut Anthropic besser ab als Opus 5.5 und Mythos 5.1. Fable blockiert dagegen die meisten sicherheitsbezogenen Aufgaben, etwa Penetrationstests. CVE steht dabei für ein System zur Erfassung bekannter Softwarefehler.",
+    "## Preise und Geschwindigkeit",
+    "Laut Herstellerangaben kostet die Nutzung 8 Dollar pro Million Eingabe-Tokens und 40 Dollar pro Million Ausgabe-Tokens, rund 20 Prozent weniger als bei den Vorgängern mit 10 und 50 Dollar. Die tatsächlichen Kosten hängen jedoch vom Tokenverbrauch ab. Die Modelle sollen laut Anthropic bis zu 30 Prozent schneller Ausgaben liefern. Ein optionaler Schnellmodus für ausgewählte Organisationen ist doppelt so teuer."
+   ],
+   "quellen": [
+    {
+     "titel": "Claude Fable 5.2 and Mythos 5.2 cement Anthropic's AI lead just before its IPO (The Decoder)",
+     "url": "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler können Fable 5.2 für anspruchsvolle technische Aufgaben nutzen, sofern sie die Preise pro Token im Blick behalten.",
+    "Sicherheitsforscher können sich laut Anthropic für Mythos über die Verification Programs bewerben.",
+    "Alle Nutzer können Fable 5.2 für Aufgaben mit höheren Anforderungen testen, ohne Mythos-Zugang zu haben."
+   ],
+   "bereich": "Text",
+   "datum": "2026-11-09",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Artificial Analysis Intelligence Index v5 (Herstellerangabe bzw. Drittvergleich, höchste Stufe)",
+    "balken": [
+     {
+      "label": "Fable 5.1",
+      "wert": 50,
+      "anzeige": "50"
+     },
+     {
+      "label": "Opus 5.5",
+      "wert": 59,
+      "anzeige": "59"
+     },
+     {
+      "label": "Gemini 4 Carbon",
+      "wert": 60,
+      "anzeige": "60"
+     },
+     {
+      "label": "Fable 5.2",
+      "wert": 65,
+      "anzeige": "65"
+     }
+    ]
+   },
+   "id": "anthropic-stellt-claude-fable-5-2-und-mythos-5-2-vor",
+   "hinzugefuegt": "2026-11-09T21:28:07Z"
+  },
+  {
    "titel": "Microsoft Research beendet AI-Frontiers-Gruppe nach Reorganisation",
    "kurz": "Der Forscher John Langford schreibt, dass die Forschungsgruppe AI Frontiers bei Microsoft Research aufgelöst wird. Nach einer Umstrukturierung in Microsoft AI sieht er die Forschungsarbeit dort durch eine stark auf Skalierung ausgerichtete Philosophie bedroht.",
    "artikel": [
@@ -3147,6 +3203,71 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Google erweitert TPU-8-Familie um zwei Varianten",
+   "kurz": "Google hat mit TPU 8tx und TPU 8i Max zwei neue Systeme seiner achten Chipgeneration vorgestellt und will eigene KI-Chips stärker als Alternative zu Nvidia-GPUs für externe Kunden positionieren.",
+   "artikel": [
+    "Google hat seine achte Generation an KI-Beschleunigern um zwei Systeme erweitert: die TPU 8tx für vertrauliche Berechnungen und die TPU 8i Max für speicherintensive Anwendungen. Nach Angaben des Unternehmens sind damit innerhalb eines Jahres erstmals vier TPU-Systeme ausgeliefert worden.",
+    "## Neue Konfigurationen statt neuer Chipgeneration",
+    "Beide Varianten basieren auf bestehenden Chips. Google nennt es eine neue Systemkonfiguration mit anderer Verpackung, anderer Vernetzung und anderem Speicheraufbau. Das Unternehmen beschreibt diesen modularen Ansatz als bewusste Entscheidung, um neue Hardware in Monaten statt Jahren bereitzustellen.",
+    "## TPU 8tx: Daten bleiben auch während der Verarbeitung verschlüsselt",
+    "Die TPU 8tx richtet sich an Unternehmen und Behörden, die mit vertraulichen Daten arbeiten. Üblicherweise sind Daten bei Speicherung und Übertragung verschlüsselt, müssen aber im Arbeitsspeicher entschlüsselt werden, sobald ein Prozessor sie verarbeitet. Laut Google bleiben Daten und Modellgewichte auch dann geschützt und isoliert. Ein sogenanntes Confidential Computing, also die geschützte Verarbeitung, bietet laut Artikel auch Nvidia für seine GPUs an. Die TPU 8tx nutzt das Boardfly-Netzwerk, das Google für Echtzeit-Inferenz entwickelt hat, und soll laut Herstellerangabe bis zu doppelt so hohe Latenzreduktion wie die TPU 8t bieten.",
+    "## TPU 8i Max: doppelte Leistung im gleichen Rack",
+    "Die TPU 8i Max adressiert den Speicherengpass. Dafür werden zwei TPU-8i-Chips auf einem Package kombiniert. Laut Google ergeben sich daraus doppelte Rechenleistung, doppelter Speicher und doppelte Speicherbandbreite im gleichen Rack-Format.",
+    "## Software soll den Einstieg erleichtern",
+    "Google hat TorchTPU als Open Source veröffentlicht, sodass PyTorch-Code laut Unternehmen mit wenigen Änderungen auf TPUs laufen soll. Auch vLLM und SGLang, zwei Inferenz-Frameworks, werden unterstützt.",
+    "## Hintergrund: Der Markt verschiebt sich zur Inferenz",
+    "Google nennt nahezu 100 externe TPU-Kunden. Der Fokus der KI-Branche verlagert sich vom aufwendigen Training hin zur Inferenz, also dem täglichen Betrieb von Modellen. Auch Amazon, Microsoft und OpenAI entwickeln eigene Beschleuniger. Nvidia reagiert unter anderem mit einer Lizenz- und Übernahmevereinbarung mit Groq."
+   ],
+   "quellen": [
+    {
+     "titel": "Google ships four TPU variants in one year as it ramps up competition with Nvidia",
+     "url": "https://the-decoder.com/google-ships-four-tpu-variants-in-one-year-as-it-ramps-up-competition-with-nvidia/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer mit PyTorch arbeitet, kann laut Artikel prüfen, ob TorchTPU den eigenen Code mit wenigen Änderungen auf TPUs laufen lässt.",
+    "Entwickelnde mit Inferenz-Workloads können vLLM oder SGLang als unterstützte Frameworks ausprobieren."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-11-09",
+   "kennzahlen": [
+    {
+     "label": "TPU-Systeme innerhalb eines Jahres",
+     "wert": "4"
+    },
+    {
+     "label": "Externe TPU-Kunden",
+     "wert": "nahezu 100"
+    },
+    {
+     "label": "TPU 8i Max: Rechenleistung, Speicher, Speicherbandbreite",
+     "wert": "je doppelt (Herstellerangabe)"
+    }
+   ],
+   "signal": "Google positioniert seine eigenen KI-Chips zunehmend als Plattform für externe Kunden und damit als Alternative zu Nvidia-GPUs.",
+   "link": "https://the-decoder.com/google-ships-four-tpu-variants-in-one-year-as-it-ramps-up-competition-with-nvidia/",
+   "linkLabel": "Artikel bei THE DECODER lesen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "TPU-Systeme innerhalb eines Jahres",
+    "balken": [
+     {
+      "label": "Vorher",
+      "wert": 3,
+      "anzeige": "3"
+     },
+     {
+      "label": "TPU 8tx / 8i Max",
+      "wert": 4,
+      "anzeige": "4"
+     }
+    ]
+   },
+   "id": "google-erweitert-tpu-8-familie-um-zwei-varianten",
+   "hinzugefuegt": "2026-11-09T21:28:07Z"
+  },
   {
    "titel": "Reason Machines veröffentlicht Aspen als Open-Source-Git-Server für KI-Agenten",
    "kurz": "Reason Machines hat Aspen als Open-Source-Git-Server für Agenten-Verkehr veröffentlicht. Die Software ist noch Pre-Alpha und ihre Leistungszahlen stammen laut Hersteller aus eigenen Tests.",
@@ -12668,6 +12789,70 @@
  ],
  "projekte": [
   {
+   "titel": "Kuken Industries findet Kühlturm-Zeichnungen aus 70 Jahren in Minuten",
+   "kurz": "Der Industriebetrieb Kuken Industries nutzt die OpenAI API, um in 70 Jahren gesammelte Kühlturm-Zeichnungen zu durchsuchen. Laut Hersteller-Angabe findet das Team die Zeichnung für eine Reparatur nun in 4,5 Minuten statt in fast einer Stunde.",
+   "artikel": [
+    "Kuken Industries hat einen großen Bestand an technischen Zeichnungen von Kühltürmen, der rund 70 Jahre zurückreicht. Wer eine Reparatur plant, musste bisher lange suchen, um die passende Zeichnung zu finden.",
+    "## Suche mit der OpenAI API",
+    "Das Unternehmen setzt die OpenAI API ein, also eine Schnittstelle, über die Entwickler Sprachmodelle in eigene Programme einbinden können. Damit lassen sich die alten Zeichnungen gezielt durchsuchen.",
+    "## Zeitersparnis laut Angaben",
+    "Nach Angaben von OpenAI in dem Lab-Blog-Beitrag benötigen Ingenieure für das Auffinden einer Reparaturzeichnung nun 4,5 Minuten. Zuvor dauerte dieser Vorgang nahezu eine Stunde. Es handelt sich dabei um Herstellerangaben, die nicht unabhängig geprüft wurden.",
+    "Der Fall zeigt, wie ältere Dokumentenbestände mit KI-Suche schneller nutzbar werden können. Für Privatpersonen ist das Beispiel vor allem ein Hinweis darauf, wie Archive ohne großen Aufwand durchsuchbar werden."
+   ],
+   "quellen": [
+    {
+     "titel": "Kuken Industries searches 70 years of drawings in minutes (OpenAI Lab-Blog)",
+     "url": "https://openai.com/index/kuken"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Eigene alte Dokumente oder Scans sammeln und mit einer KI-Suche durchsuchbar machen.",
+    "Prüfen, ob sich ein Archiv im Freundeskreis oder Verein mit einer ähnlichen Lösung erschließen lässt.",
+    "Die Herstellerangaben zur Zeitersparnis mit eigenen Tests gegenprüfen, bevor man sie übernimmt."
+   ],
+   "macher": "Kuken Industries",
+   "branche": "Industrie (Kühltürme)",
+   "jahr": null,
+   "tools": [
+    "OpenAI API"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Suchzeit mit KI (Herstellerangabe)",
+     "wert": "4,5 Minuten"
+    },
+    {
+     "label": "Suchzeit zuvor",
+     "wert": "nahezu eine Stunde"
+    },
+    {
+     "label": "Alter der Zeichnungen",
+     "wert": "ca. 70 Jahre"
+    }
+   ],
+   "link": "https://openai.com/index/kuken",
+   "linkLabel": "Lab-Blog lesen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Suchzeit für eine Reparaturzeichnung (Minuten)",
+    "balken": [
+     {
+      "label": "Vorher",
+      "wert": 60,
+      "anzeige": "nahezu 1 Std."
+     },
+     {
+      "label": "Mit OpenAI API",
+      "wert": 4.5,
+      "anzeige": "4,5 Min."
+     }
+    ]
+   },
+   "id": "kuken-industries-findet-kuhlturm-zeichnungen-aus-70-jahren-i",
+   "hinzugefuegt": "2026-11-09T21:28:07Z"
+  },
+  {
    "titel": "Karpathy baut Videoplattform aus 20 Jahren Hacker News",
    "kurz": "OpenAI-Mitgründer Andrej Karpathy hat laut eigener Aussage an einem Wochenende mit Claude eine kuratierte Videoplattform namens HackerTube gebaut. Kurz danach folgte TristanTube.",
    "artikel": [
@@ -16441,8 +16626,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-09T11:16:41Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-09T21:28:07Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-09T11:16:41Z"
  }
 }
