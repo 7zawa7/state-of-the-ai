@@ -3148,6 +3148,135 @@
  ],
  "radar": [
   {
+   "titel": "Reason Machines veröffentlicht Aspen als Open-Source-Git-Server für KI-Agenten",
+   "kurz": "Reason Machines hat Aspen als Open-Source-Git-Server für Agenten-Verkehr veröffentlicht. Die Software ist noch Pre-Alpha und ihre Leistungszahlen stammen laut Hersteller aus eigenen Tests.",
+   "artikel": [
+    "Reason Machines hat Aspen veröffentlicht, einen selbst betreibbaren Git-Server, der für sehr viele Schreibzugriffe durch KI-Agenten gebaut ist. Er richtet sich an Repositories, in die hunderte Agenten gleichzeitig pushen. Laut Bericht setzt Aspen das Design eigenständig um, das OpenAI für sein internes System Pando beschrieben hat.",
+    "## Warum klassische Git-Server an Grenzen stoßen",
+    "Ein Agent pusht alle paar Minuten, und CI-Systeme laden nach jedem Push neu. Laut Hersteller reiht ein klassischer Server alle Pushes eines Repositories hintereinander in eine Warteschlange und baut für jeden Fetch ein neues Pack. Die Serverlast wächst damit mit der Zahl der Clients. OpenAI hat laut Bericht mit Pando darauf reagiert und die mediane Push-Latenz um fast das Fünffache gesenkt.",
+    "## Wie Aspen arbeitet",
+    "Aspen schreibt pro Branch statt pro Repository. Jeder Branch ist eine Kette von Versionen in einer PostgreSQL-Zeile, und ein Push wird über einen sogenannten Compare-and-Swap-Schritt abgeschlossen: Der Zustand wird nur geändert, wenn er noch dem erwarteten Wert entspricht. Bei zwei konkurrierenden Pushes auf denselben Branch gewinnt einer, der andere erhält den üblichen Git-Fehler „fetch first“. Packs werden unverändert gespeichert und in S3-kompatiblem Objektspeicher abgelegt, ohne sie zu entpacken.",
+    "## Testergebnisse des Herstellers",
+    "Im Test lief Aspen auf einem Server mit acht Kernen, S3 Standard und einer Postgres-Datenbank mit vier Kernen, als Ziel diente eine Kopie von git.git. Laut Hersteller hielt Aspen 567 Pushes pro Sekunde über fünf Minuten ohne Fehler. Die mediane Push-Latenz lag bei 208 ms, das 99. Perzentil bei 314 ms. Diese Werte sind Herstellerangaben und laut README als Richtwerte gedacht, nicht als garantierte Leistung.",
+    "## Einordnung und Einschränkungen",
+    "Der Vergleich mit Cursor zeigt, dass Aufbau und Last unterschiedlich sind: Cursor nennt bis zu 120 Pushes pro Sekunde auf S3 Standard. Aspen ist laut Bericht noch Pre-Alpha, es gibt keine Releases und keine Web-Oberfläche, und das 24-Stunden-Durability-Kriterium ist noch nicht erfüllt. Auf Branch-Ebene auf dem Hauptzweig (main) liegt der Durchsatz laut Bericht bei etwa vier Pushes pro Sekunde.",
+    "Installiert wird aus dem Quellcode mit Rust. Für den Testbetrieb gibt es „aspen dev“ mit SQLite, für Teams Docker Compose mit PostgreSQL und MinIO sowie ein Helm-Chart und Terraform-Vorlagen. Laut Hersteller hat ein Agent das Projekt in vier Tagen von der ersten Commit bis zur öffentlichen Veröffentlichung gebaut, dafür wurden 151 gemergte Pull Requests genutzt."
+   ],
+   "quellen": [
+    {
+     "titel": "Reason Machines Open-Sources Aspen, a Git Server Built for AI Agents",
+     "url": "https://www.marktechpost.com/2026/11/09/reason-machines-aspen-open-source-git-server-ai-agents/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer eigene Projekte mit Agenten entwickelt, kann Aspen lokal mit „aspen dev“ testen, da es mit SQLite und einem lokalen Verzeichnis läuft.",
+    "Teams, die Git-Repositories selbst hosten, können prüfen, ob Aspen über Mirror-Modus vor GitHub oder GitLab geschaltet werden kann, ohne zu migrieren.",
+    "Wer Git-Server-Architekturen verstehen will, findet in Aspen ein konkretes Beispiel für Branch-basierte Schreibvorgänge."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-11-09",
+   "kennzahlen": [
+    {
+     "label": "Pushes pro Sekunde (Hersteller, 5 Min., 8-Kern-Server)",
+     "wert": "567"
+    },
+    {
+     "label": "Median-Push-Latenz (Hersteller)",
+     "wert": "208 ms"
+    },
+    {
+     "label": "99. Perzentil Push-Latenz (Hersteller)",
+     "wert": "314 ms"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    }
+   ],
+   "signal": "Ein Open-Source-Git-Server speziell für Agenten-Last ist ein Signal dafür, dass Versionsverwaltung für KI-Agenten zur eigenen Infrastrukturkategorie wird. Die Zahlen sind allerdings Herstellerangaben aus eigenen Tests und das Projekt ist noch Pre-Alpha.",
+   "link": "https://www.marktechpost.com/2026/11/09/reason-machines-aspen-open-source-git-server-ai-agents/",
+   "linkLabel": "Originalartikel lesen",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "aspen dev",
+    "zeilen": [
+     "> aspen dev",
+     "✓ SQLite und lokales Verzeichnis bereit",
+     "● Server läuft lokal",
+     "⚠ Pre-Alpha: keine Releases",
+     "+ Branch-Push per Git über HTTPS oder SSH"
+    ]
+   },
+   "id": "reason-machines-veroffentlicht-aspen-als-open-source-git-ser",
+   "hinzugefuegt": "2026-11-09T11:16:41Z"
+  },
+  {
+   "titel": "0sec Labs veröffentlicht 0 als Open-Source-KI-Sicherheitsharness",
+   "kurz": "Das Züricher Startup 0sec Labs hat 0 unter MIT- oder Apache-2.0-Lizenz veröffentlicht, ein Werkzeug für Schwachstellensuche, Pentests und Fix-Vorschläge, das lokal läuft und eigene Modelle anbindet. Die Leistungsangaben stammen laut Quelle vom Hersteller selbst.",
+   "artikel": [
+    "## Was ist passiert?",
+    "Das Züricher Unternehmen 0sec Labs hat 0 als Open-Source-Projekt veröffentlicht. Laut Fachpresse handelt es sich um eine sogenannte Harness, also eine Steuerungsschicht rund um Sprachmodelle und Sicherheitswerkzeuge. Das Werkzeug deckt Schwachstellenuntersuchungen, Code-Reviews, Penetrationstests, Reverse Engineering und die Erstellung von Korrekturen ab. Es ist als Forschungsvorschau eingestuft und steht unter den Lizenzen MIT oder Apache-2.0.",
+    "## Wie funktioniert es?",
+    "Die Bedienung erfolgt über eine lokale Browser-Konsole, eine Kommandozeile ohne grafische Oberfläche (CLI) oder einen MCP-Server. MCP steht für Model Context Protocol und erlaubt es Coding-Agenten, Werkzeuge anzusprechen. Die Architektur folgt laut Dokumentation dem Grundsatz, Ergebnisse vor dem Vertrauen zu reproduzieren. Ein Ablauf umfasst Planung, Suche, Angriff, Sichtung, Verifizierung und Berichtserstellung. Berichte können als HTML, PDF, SARIF, Markdown oder JSON ausgegeben werden. Für kompilierte Programme gibt es die separate Komponente 0verse, die unter anderem Ghidra, angr und AFL++ einbindet.",
+    "## Modelle und Kosten",
+    "Man bringt sein eigenes Sprachmodell mit. Die Dokumentation nennt 14 Anbieter, darunter OpenAI, Anthropic, DeepSeek und Azure, außerdem die Laufzeitumgebungen Claude, Codex und Gemini CLI. Die Software selbst ist kostenlos, bezahlt wird der Modellanbieter. Eine gehostete Version namens 0cloud steht auf einer Warteliste.",
+    "## Leistungsangaben",
+    "Der Hersteller gibt an, im XBOW-Web-CTF-Test 93 von 95 Aufgaben gelöst zu haben, also 97,9 Prozent. Bei reiner Black-Box-Prüfung sind es laut Angabe 81 von 104. Ein Lauf aus dem Jahr 2026 ohne Vorbereitung erreichte 45 von 104. Alle Werte sind Eigenangaben des Herstellers und nicht als Pass@1 gemessen. Die Quelle nennt außerdem Kosten von etwa 5,20 Dollar pro gelöster XBOW-Aufgabe.",
+    "## Einordnung",
+    "Laut Fachpresse hat 0 nach eigenen Angaben über 30 zusammengeführte Linux-Kernel-Schwachstellen gefunden, unter anderem in Bluetooth-, NFC- und TIPC-Teilsystemen. Außerdem nennt die Quelle Lücken in Bibliotheken wie node-forge und Wireshark. Im Vergleich mit Shannon, Strix und CAI wird vor allem die breite Abdeckung hervorgehoben, auch wenn die Quelle nur für 0 die Binärauswertung ausdrücklich bestätigt."
+   ],
+   "quellen": [
+    {
+     "titel": "0sec Labs Open-Sources 0, an AI Security Harness With Web UI, CLI and MCP",
+     "url": "https://www.marktechpost.com/2026/11/08/0sec-labs-open-sources-0-ai-security-harness/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Eigene Webanwendungen oder Code lokal auf Schwachstellen prüfen lassen, sofern man Zugriff auf die Ziele hat.",
+    "Mit einem eigenen Modell-Zugang Berichte in HTML, PDF oder Markdown erzeugen lassen.",
+    "Das Projekt auf GitHub ansehen und die Werkzeuge in einem Coding-Agenten über MCP einbinden."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "0 — Workflow",
+    "zeilen": [
+     "> 0 workflow run",
+     "● Plan, Discover, Attack",
+     "✓ Verifizierung abgeschlossen",
+     "⚠ Nur bei autorisierten Zielen einsetzen",
+     "● Bericht: HTML, PDF, SARIF, JSON"
+    ]
+   },
+   "radar": true,
+   "quelle": "Fachpresse",
+   "datum": "2026-11-08",
+   "kennzahlen": [
+    {
+     "label": "XBOW Web-CTFs (Herstellerangabe)",
+     "wert": "93/95 (97,9 %)"
+    },
+    {
+     "label": "XBOW Black-Box (Herstellerangabe)",
+     "wert": "81/104 (77,9 %)"
+    },
+    {
+     "label": "Cybench (Herstellerangabe)",
+     "wert": "36/40 (90,0 %)"
+    },
+    {
+     "label": "Unterstützte Modellanbieter",
+     "wert": "14"
+    }
+   ],
+   "signal": "Ein frei verfügbares, lokal laufendes Werkzeug für KI-gestützte Sicherheitsprüfungen. Die Leistungszahlen sind Eigenangaben und noch nicht unabhängig geprüft.",
+   "link": "https://www.marktechpost.com/2026/11/08/0sec-labs-open-sources-0-ai-security-harness/",
+   "linkLabel": "Zum Originalartikel",
+   "id": "0sec-labs-veroffentlicht-0-als-open-source-ki-sicherheitshar",
+   "hinzugefuegt": "2026-11-09T11:16:41Z"
+  },
+  {
    "titel": "llama-modchip: 284B-MoE-Modell auf 64 GB RAM ohne GPU",
    "kurz": "Ein Open-Source-Projekt will das 284-Milliarden-Parameter-Modell DeepSeek-V4-Flash rein auf dem Hauptspeicher eines CPU-Systems mit 64 GB RAM betreiben. Die Angaben stammen aus dem GitHub-Repository und sind Herstellerangaben des Projekts.",
    "artikel": [
@@ -16296,7 +16425,7 @@
    "id": "text"
   },
   {
-   "maximum": "Bis zu 15 Sekunden pro Clip mit Ton und Lippensynchronität, laut Google jetzt bis 15 Sekunden. Längere Filme entstehen im Schnitt.",
+   "maximum": "Bis zu 15 Sekunden pro Clip mit Ton und Lippensynchronität. Längere Filme entstehen im Schnitt.",
    "name": "Video",
    "reihenfolge": 1,
    "status": "mid",
@@ -16312,8 +16441,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-09T03:02:10Z",
-  "neueFunde": 3,
-  "standAktualisiert": "2026-11-08T09:03:56Z"
+  "letzterScan": "2026-11-09T11:16:41Z",
+  "neueFunde": 2,
+  "standAktualisiert": "2026-11-09T11:16:41Z"
  }
 }
