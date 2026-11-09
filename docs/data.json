@@ -3148,6 +3148,203 @@
  ],
  "radar": [
   {
+   "titel": "llama-modchip: 284B-MoE-Modell auf 64 GB RAM ohne GPU",
+   "kurz": "Ein Open-Source-Projekt will das 284-Milliarden-Parameter-Modell DeepSeek-V4-Flash rein auf dem Hauptspeicher eines CPU-Systems mit 64 GB RAM betreiben. Die Angaben stammen aus dem GitHub-Repository und sind Herstellerangaben des Projekts.",
+   "artikel": [
+    "Das Projekt llama-modchip setzt auf Patches für ggml/llama.cpp, Quantisierungs-Werkzeuge und Laufzeit-Tools, um dünn besetzte Mixture-of-Experts-Modelle (MoE) vollständig im Arbeitsspeicher auszuführen. Bei MoE-Modellen ist pro Schritt nur ein Teil der Experten aktiv, was den Rechenaufwand senkt.",
+    "## Speicherbedarf",
+    "Laut Repository belegt die Standardfassung von DeepSeek-V4-Flash rund 76,87 GiB und passt damit nicht in die ca. 62,5 GiB nutzbaren RAM eines 64-GB-Linux-Systems. Das Projekt komprimiert das Modell auf 56,56 GiB (1,71 bpw, also etwa 1,71 Bit pro Gewicht). Laut Angabe bleibt der Peak bei 256K Kontext bei rund 57,6 GiB, ohne Swap auf der SSD.",
+    "## Geschwindigkeit",
+    "Die Projektangaben nennen 44,36 Token/s bei der Verarbeitung des Prompts (Prefill) und 9,1 bis 14,7 Token/s bei der Textgenerierung auf einer 16-Kern-Zen-5-CPU. Diese Werte sind Herstellerangaben und nicht unabhängig geprüft.",
+    "## Einordnung",
+    "Kleinere Varianten wie ein 30B-Nemotron-Modell sollen laut Repository schon auf 16 bis 32 GB RAM laufen. Standardmäßig werden alle sechs gerouteten Experten pro Schicht ausgewertet; ein Umschalten auf weniger Experten ist optional und soll Geschwindigkeit gegen einen kleinen Qualitätsverlust tauschen. Die Hacker-News-Diskussion mit 376 Punkten zeigt Interesse an dem Ansatz."
+   ],
+   "quellen": [
+    {
+     "titel": "llama-modchip auf GitHub",
+     "url": "https://github.com/synchopate/llama-modchip"
+    },
+    {
+     "titel": "Hacker News: Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50411961"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Ein kleineres 30B-Modell ausprobieren, das laut Projekt schon mit 16 bis 32 GB RAM läuft.",
+    "Die Installationsanleitung im Repository nutzen, um lokal einen Chat mit einem großen Modell zu starten.",
+    "Die Benchmarks mit eigenen Hardwaredaten vergleichen, bevor man sich auf die Herstellerzahlen verlässt."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Speicherbedarf DeepSeek-V4-Flash (GiB, Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Standard UD-IQ1_S",
+      "wert": 76.87,
+      "anzeige": "76,87 GiB"
+     },
+     {
+      "label": "llama-modchip",
+      "wert": 56.56,
+      "anzeige": "56,56 GiB"
+     }
+    ]
+   },
+   "radar": true,
+   "quelle": "Hacker News",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Modell",
+     "wert": "284,33 Mrd. Parameter (13,17 Mrd. aktiv)"
+    },
+    {
+     "label": "Speicher (Datei)",
+     "wert": "56,56 GiB, 1,71 bpw"
+    },
+    {
+     "label": "Peak VmRSS @ 256K Kontext",
+     "wert": "57,61 GiB"
+    },
+    {
+     "label": "Prefill (16C Zen 5)",
+     "wert": "44,36 Tok/s"
+    },
+    {
+     "label": "Decode",
+     "wert": "9,1–14,7 Tok/s"
+    }
+   ],
+   "signal": "Herstellerangaben zufolge lässt sich ein sehr großes MoE-Modell ohne GPU auf 64-GB-RAM-Systemen betreiben. Die Zahlen stammen vom Projekt selbst und sind bisher nicht unabhängig überprüft.",
+   "link": "https://github.com/synchopate/llama-modchip",
+   "linkLabel": "Zum Repository",
+   "id": "llama-modchip-284b-moe-modell-auf-64-gb-ram-ohne-gpu",
+   "hinzugefuegt": "2026-11-09T03:02:10Z"
+  },
+  {
+   "titel": "MoE-Modelle im Vergleich: Wie zehn offene Modelle Tokens verteilen",
+   "kurz": "Ein Vergleich von zehn offenen Mixture-of-Experts-Modellen zeigt, wie stark sich ihr Routing in Expertenanzahl, Top-k, Shared Experts, Scoring-Funktion und Lastverteilung unterscheidet. Die Konfigurationsdateien machen das Routing nachvollziehbar, bei manchen Modellen fehlen aber Angaben.",
+   "artikel": [
+    "Mixture-of-Experts-Modelle (MoE) lassen pro Token nur einen Teil ihrer Gewichte rechnen. Ein Router entscheidet, welche Experten ein Token erhält. Laut einem Vergleich der Fachpresse wählen alle zehn untersuchten offenen Modelle diesen Ansatz mit Token-Choice-Routing: Jedes Token wählt selbst seine Experten.",
+    "## Fünf Stellschrauben",
+    "Die Modelle unterscheiden sich in fünf Punkten: Anzahl der Experten, Experten pro Token (Top-k), gemeinsam genutzte Experten (Shared Experts), die Scoring-Funktion und die Methode zur Lastverteilung. Die Expertenanzahl reicht von 8 (Mixtral) bis 384 (Kimi K2 und DeepSeek-V4-Pro). Top-k liegt zwischen 1 (Llama 4 Maverick) und 8. Sieben von zehn Modellen nutzen einen Shared Expert, Mixtral, gpt-oss und Qwen3 nicht.",
+    "## Lücken in der Dokumentation",
+    "Llama 4 Maverick und gpt-oss veröffentlichen laut dem Vergleich ihre Gating- oder Balancing-Methode nicht in der config.json. Der Autor warnt deshalb, dass Bezeichnungen wie „17B active“ sehr unterschiedliche Router verbergen können.",
+    "## Bedeutung für den Betrieb",
+    "Mehr Experten bedeuten mehr Gewichte im Speicher und mehr Kommunikation zwischen GPUs. Ein niedrigeres Top-k, wie bei DeepSeek-V4, senkt dagegen Rechenaufwand und Kommunikation pro Token. Die Angaben stammen aus den Konfigurationsdateien, Modellkarten und technischen Berichten der jeweiligen Hersteller, laut Quelle geprüft am 7. November 2026."
+   ],
+   "quellen": [
+    {
+     "titel": "Which Routing Does Each MoE Model Use? DeepSeek, Qwen, Mixtral, Llama 4, gpt-oss Compared – MarkTechPost",
+     "url": "https://www.marktechpost.com/2026/11/08/moe-model-routing-comparison/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Vor dem Kauf oder Einsatz eines MoE-Modells die Konfigurationsdatei auf Expertenanzahl und Top-k prüfen.",
+    "Bei der Auswahl von Hardware auf Speicherbedarf und GPU-Kommunikation achten, da Expertenanzahl und Top-k sie stark beeinflussen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Expertenanzahl je Modell (Auswahl)",
+    "balken": [
+     {
+      "label": "Mixtral 8x7B",
+      "wert": 8,
+      "anzeige": "8 Experten"
+     },
+     {
+      "label": "Qwen3-235B-A22B",
+      "wert": 128,
+      "anzeige": "128 Experten"
+     },
+     {
+      "label": "DeepSeek-V3",
+      "wert": 256,
+      "anzeige": "256 Experten"
+     },
+     {
+      "label": "Kimi K2",
+      "wert": 384,
+      "anzeige": "384 Experten"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-11-08",
+   "kennzahlen": [
+    {
+     "label": "Expertenanzahl (Spanne)",
+     "wert": "8 bis 384"
+    },
+    {
+     "label": "Top-k (Spanne)",
+     "wert": "1 bis 8"
+    },
+    {
+     "label": "Modelle mit Shared Expert",
+     "wert": "7 von 10"
+    }
+   ],
+   "signal": "Die Expertenanzahl wächst, Top-k sinkt in neueren Modellen; Lastverteilung und Gating sind bei einigen Modellen nicht offengelegt.",
+   "link": "https://www.marktechpost.com/2026/11/08/moe-model-routing-comparison/",
+   "linkLabel": "Originalartikel auf MarkTechPost lesen",
+   "id": "moe-modelle-im-vergleich-wie-zehn-offene-modelle-tokens-vert",
+   "hinzugefuegt": "2026-11-09T03:02:10Z"
+  },
+  {
+   "titel": "ToyBlocks: Ai2 stellt kontrollierbare Simulationsumgebung für Robotik-Forschung vor",
+   "kurz": "Das Ai2-Team hat mit ToyBlocks die erste „FoundationWorld“ vorgestellt, eine offene Simulation mit Roboterarm und Bauklötzen. Forschende können Trainingsdaten gezielt verändern und Fehlerursachen nachvollziehen.",
+   "artikel": [
+    "Roboter lernen zwar zunehmend Aufgaben wie Wäschefalten oder Sortieren, doch die dafür genutzten Demonstrationen sind oft eng gefasst. Oft lässt sich dabei kaum nachvollziehen, was ein Roboter gelernt hat und warum er scheitert. Das Ai2-Team setzt deshalb auf kleine, kontrollierbare Umgebungen, ähnlich einer Petrischale in der Biologie, in denen sich Bedingungen gezielt verändern lassen.",
+    "## Was ist ToyBlocks?",
+    "ToyBlocks ist die erste sogenannte FoundationWorld: eine offene Simulation mit einem Roboterarm und Blöcken auf einer Tischplatte. Die Umgebung ist bewusst einfach gehalten, der Roboter muss aber dennoch überlegen, wie sich die Blöcke gegenseitig beeinflussen, und sie schieben, kippen und stapeln. Die Blöcke tragen Bilder und Buchstaben, sodass auch Such-, Sortier- und Anordnungsaufgaben möglich sind.",
+    "## Automatische Demonstrationen",
+    "Demonstrationen sind Aufzeichnungen, in denen ein Roboter eine Aufgabe in der Simulation löst. Sie entstehen automatisch, ohne aufwendige Teleoperation, bei der eine Person den Roboter fernsteuert. Laut Ankündigung werden dafür Hunderte Pläne parallel auf einer einzigen GPU ausgeführt, mit bis zu dem 24-Fachen der Echtzeit. Fertigkeiten, also kurze Verhaltensweisen, entstehen per Reinforcement Learning, einem Lernverfahren durch Versuch und Irrtum, sowie über Bewegungsplanung.",
+    "## Warum das für die Forschung zählt",
+    "Forschende können etwa mehr Schiebe- oder Kippdemonstrationen erzeugen und anschließend prüfen, wie gut Modelle bei unbekannten Aufgaben abschneiden. Auch die Frage, wie viel Daten ein Modell braucht, lässt sich so untersuchen. Neben Erfolgsquoten liefert die Auswertung Angaben zu Ausführungsgeschwindigkeit, Kräften auf Objekte und Aufgabenfortschritt. Eine Weboberfläche erlaubt zudem, über natürliche Sprache ein Frontier-Modell wie Claude den Roboter steuern zu lassen.",
+    "Hinweis: Die Angaben zur Geschwindigkeit stammen aus den Herstellerangaben des Ai2-Teams und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "ToyBlocks: A controlled world for robot learning and evaluation",
+     "url": "https://huggingface.co/blog/allenai/toyblocks"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Forschende können eigene Trainingsmischungen aus Demonstrationen zusammenstellen, etwa mit mehr Kipp-Aufgaben.",
+    "Interessierte können die offenen Daten und Modelle laut Lab-Blog direkt verwenden, um Roboterlernen nachzuvollziehen."
+   ],
+   "ausprobieren": {
+    "prompt": "Verbinde die Weboberfläche mit Claude und instruiere den Roboter: „Drehe den roten Block und stapele ihn auf den blauen.“",
+    "tool": "ToyBlocks",
+    "url": "https://huggingface.co/blog/allenai/toyblocks"
+   },
+   "vorschau": {
+    "szene": "sandbox",
+    "titel": "ToyBlocks"
+   },
+   "quelle": "Lab-Blog",
+   "datum": "2026-11-06",
+   "kennzahlen": [
+    {
+     "label": "Parallele Pläne auf einer GPU",
+     "wert": "Hunderte"
+    },
+    {
+     "label": "Geschwindigkeit (Herstellerangabe)",
+     "wert": "bis 24× Echtzeit"
+    }
+   ],
+   "signal": "Simulation mit kontrollierbaren Variablen soll Ursachen von Roboterfehlern sichtbar machen und Datenerzeugung ohne Teleoperation ermöglichen.",
+   "link": "https://huggingface.co/blog/allenai/toyblocks",
+   "linkLabel": "Zum Lab-Blog-Beitrag",
+   "id": "toyblocks-ai2-stellt-kontrollierbare-simulationsumgebung-fur",
+   "hinzugefuegt": "2026-11-09T03:02:10Z"
+  },
+  {
    "titel": "MaxxBench: Benchmark-Ergebnisse brechen ein, wenn sich Anforderungen ändern",
    "kurz": "Ein neuer Benchmark verändert 89 Aufgaben aus DeepSWE leicht, etwa durch geänderte Anforderungen. Viele Modelle fallen dabei deutlich zurück, was auf Auswendiglernen bekannter Tests hindeutet.",
    "artikel": [
@@ -16115,8 +16312,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-08T23:49:04Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-09T03:02:10Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-08T09:03:56Z"
  }
 }
