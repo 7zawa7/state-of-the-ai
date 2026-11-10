@@ -1,6 +1,43 @@
 {
  "news": [
   {
+   "titel": "Forscher: Heutige KI ist nicht bewusst, und Rechenleistung allein reicht dafür nicht",
+   "kurz": "Die Bewusstseinsforscher Anil Seth, Ned Block und Giulio Tononi halten die Annahme, Bewusstsein entstehe allein durch die richtigen Berechnungen, für fehlerhaft. Sie halten heutige KI-Systeme nicht für bewusst und warnen davor, ihnen Rechte zuzusprechen.",
+   "artikel": [
+    "Drei führende Bewusstseinsforscher – Anil Seth, Ned Block und Giulio Tononi – argumentieren in einem Kommentar für das Fachjournal Nature, dass heutige KI-Systeme nicht bewusst sind und auf Siliziumhardware wahrscheinlich auch nicht werden können. Sie wenden sich gegen die Vorstellung, dass das Ausführen der richtigen Berechnungen für Bewusstsein genügt.",
+    "Ihr Kommentar richtet sich unter anderem gegen Aussagen von Biologe Richard Dawkins und KI-Pionier Geoffrey Hinton, die KI-Systeme für möglicherweise bereits bewusst halten. Die Autoren verweisen außerdem auf eine Studie von Anthropic, in der das Unternehmen interne Verarbeitungsmuster in Claude beschrieb, die an bewusst zugängliche Informationsverarbeitung erinnern. Anthropic sieht darin laut Bericht keinen Beleg für subjektives Erleben.",
+    "## Der Butlin-Bericht",
+    "Ein Bericht mit dem Titel „Consciousness in Artificial Intelligence“, verfasst von Patrick Butlin, Robert Long, weiteren 17 Experten und unter anderem KI-Forscher Yoshua Bengio, leitete aus neurowissenschaftlichen Theorien eine Liste mit 14 Indikatoren ab. Je mehr davon ein System erfüllt, desto stärker spricht das laut Bericht für mögliches Bewusstsein. Keines der untersuchten Systeme, darunter große Sprachmodelle wie GPT-4, gilt demnach als starker Kandidat. Für künftige Systeme sehen die Autoren keine offensichtlichen technischen Hürden, Bewusstsein bleibt aber offen.",
+    "Der Bericht setzt außerdem voraus, dass Bewusstsein nur von der Art der Informationsverarbeitung abhängt, nicht davon, ob sie in Nervenzellen oder Computerchips stattfindet. Fachleute nennen das „computationalen Funktionalismus“. Die Autoren räumen ein, dass ihre Indikatoren nicht mehr verlässlich wären, wenn Bewusstsein an Eigenschaften lebender Organismen gebunden ist.",
+    "## Intelligenz ist nicht gleich Bewusstsein",
+    "Laut Kommentar verschwindet Bewusstsein im traumlosen Schlaf oder unter Narkose und kehrt beim Aufwachen zurück. Intelligenz bedeute dagegen das Ausführen von Funktionen; das eine folge nicht aus dem anderen. Als Beleg nennen die Autoren das Kleinhirn, das fast vier Fünftel aller Neuronen des Gehirns enthält, Bewegungen präzise plant und lernen kann, ohne dass dies bewusst geschieht.",
+    "Die Verwechslung führen die Autoren auf menschliche Denkgewohnheiten zurück: Wir schreiben Dingen menschliche Eigenschaften zu. Sprachmodelle werden mit großen Mengen menschlicher Texte trainiert, die oft von Gedanken und Gefühlen handeln. Die Autoren formulieren es so: „LLMs are mirrors that reflect an image of our collective digitized past.“ Die Informatikerin Alison Gopnik argumentierte ähnlich.",
+    "## Das Gehirn ist kein Computer aus Fleisch",
+    "Der zweite Einwand richtet sich direkt gegen den computationalen Funktionalismus, den die Autoren für „fatally flawed“ halten. Die Idee reicht bis 1936 zurück, als Alan Turing zeigte, dass jede Berechnung im Prinzip von jedem ausreichend leistungsfähigen Rechner ausgeführt werden kann. 1943 entwickelten Warren McCulloch und Walter Pitts ein erstes mathematisches Modell eines künstlichen Neurons. Diese Ideen bilden eine Grundlage moderner KI, verleiten aber auch dazu, das Gehirn als reines Informationsverarbeitungsgerät zu sehen. Die Autoren nennen diese Übertragung der Computer-Metapher auf das Gehirn „deeply problematic“.",
+    "## Fazit",
+    "Die Autoren werten jeden Hinweis, dass das Material des Gehirns für seine Funktion wichtig ist, als Argument gegen den computationalen Funktionalismus und damit gegen Bewusstsein heutiger KI. Der Kommentar stellt damit eine zentrale Annahme der Debatte infrage."
+   ],
+   "quellen": [
+    {
+     "titel": "The brain-as-computer metaphor shaped modern AI but may be misleading the consciousness debate (The Decoder)",
+     "url": "https://the-decoder.com/the-brain-as-computer-metaphor-shaped-modern-ai-but-may-be-misleading-the-consciousness-debate/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Lies die Argumente der Forscher, um eigene Aussagen über KI und Bewusstsein kritisch zu prüfen.",
+    "Achte bei KI-Chatbots darauf, dass menschenähnliche Antworten nicht automatisch Bewusstsein bedeuten."
+   ],
+   "vorschau": {
+    "szene": "schnitt",
+    "titel": "Bewusstsein vs. Rechenleistung"
+   },
+   "bereich": "Text",
+   "datum": "2026-11-08",
+   "id": "forscher-heutige-ki-ist-nicht-bewusst-und-rechenleistung-all",
+   "hinzugefuegt": "2026-11-10T03:45:15Z"
+  },
+  {
    "titel": "Anthropic stellt Claude Fable 5.2 und Mythos 5.2 vor",
    "kurz": "Anthropic bringt zwei neue Spitzenmodelle heraus, Fable 5.2 für alle Nutzer und Mythos 5.2 für verifizierte Organisationen. Laut Herstellerangaben setzen sie bei mehreren Benchmarks neue Bestwerte, kurz vor dem geplanten Börsengang des Unternehmens.",
    "artikel": [
@@ -3203,6 +3240,84 @@
   }
  ],
  "radar": [
+  {
+   "titel": "WorldFoundry: Open-Source-Infrastruktur für generative Weltmodelle",
+   "kurz": "Ein arXiv-Paper stellt WorldFoundry vor, eine Open-Source-Infrastruktur, mit der sich generative Weltmodelle über Video, 3D/4D, verkörperte Aktionen und interaktive Systeme hinweg reproduzierbar ausführen und bewerten lassen. Der Katalog umfasst laut Paper 270 Modelle, 74 Benchmarks und 62 Metriken.",
+   "artikel": [
+    "Visuelle Plausibilität allein reicht nach Ansicht der Autoren nicht aus, um ein Weltmodell zu sein. Ein überzeugendes Bild kann fehlenden persistenten Zustand, fehlende physikalische Dynamik oder kausal inkonsistente Reaktionen auf Eingriffe haben.",
+    "## Die Definition",
+    "Die Autoren definieren ein generatives Weltmodell als prädiktives dynamisches System. Es hält eine persistente, von der Historie abhängige Repräsentation einer Umgebung vor, aktualisiert diese bei Aktionen oder Eingriffen und erzeugt zeitlich kohärente Verläufe. Diese sollen die Folgen beobachteter wie auch kontrafaktischer Eingriffe abbilden.",
+    "## Das Framework",
+    "Aus dieser Definition leiten die Autoren ein Rahmenwerk mit fünf Stufen ab: perzeptuelle Verankerung, Modellierung des persistenten Zustands, steuerbare Transformation, dynamikbewusste Vorhersage und geschlossene Interaktionsschleifen.",
+    "## Was WorldFoundry bietet",
+    "WorldFoundry bündelt laut Paper die Suche nach Modellen und Benchmarks, die Vorbereitung von Laufzeitumgebung und Assets, die Ausführung, die Verwaltung von Artefakten und eine interaktive Visualisierung. Modulare Adapter lassen die jeweiligen Eingaben und Auswertungsprotokolle der einzelnen Modalitäten unverändert. Manifeste und Scorecards trennen, ob ein Eintrag lauffähig ist, von inhaltlichen Aussagen über seine Leistung. Jede Aussage soll sich so auf ihre Belege zurückführen lassen.",
+    "## Einordnung",
+    "Das Paper ist ein Infrastrukturvorschlag mit eigener Katalogbeschreibung; die Angaben zum Katalog stammen von den Autoren und sind noch nicht unabhängig geprüft. Ziel ist ein Vergleich persistenter, steuerbarer Dynamiken über unterschiedliche Systeme hinweg. Das Projekt ist als Open Source auf GitHub verfügbar, laut Hugging Face-Seite mit 3 Upvotes."
+   ],
+   "quellen": [
+    {
+     "titel": "WorldFoundry auf Hugging Face (Paper-Seite)",
+     "url": "https://huggingface.co/papers/2611.10771"
+    },
+    {
+     "titel": "WorldFoundry GitHub-Repository",
+     "url": "https://github.com/OpenEnvision/WorldFoundry"
+    },
+    {
+     "titel": "WorldFoundry Projektseite",
+     "url": "https://openenvision.org/WorldFoundry/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Forschende können Weltmodelle verschiedener Modalitäten mit demselben Werkzeug ausführen und vergleichen.",
+    "Entwickelnde können Modelle und Benchmarks im Repository finden und lokal auf eigenen Daten testen.",
+    "Interessierte können die Ergebnisse über die Artefakte und Scorecards nachvollziehen."
+   ],
+   "radar": true,
+   "quelle": "Hugging Face",
+   "datum": "2026-11-10",
+   "kennzahlen": [
+    {
+     "label": "Modelleinträge im Katalog",
+     "wert": "270"
+    },
+    {
+     "label": "Benchmarks",
+     "wert": "74"
+    },
+    {
+     "label": "Registrierte Metriken",
+     "wert": "62"
+    }
+   ],
+   "signal": "Ein Infrastrukturprojekt will generative Weltmodelle von reiner Bildqualität hin zu messbarer Dynamik und Steuerbarkeit bringen.",
+   "link": "https://huggingface.co/papers/2611.10771",
+   "linkLabel": "Paper auf Hugging Face",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Katalog von WorldFoundry (Einträge)",
+    "balken": [
+     {
+      "label": "Modelle",
+      "wert": 270,
+      "anzeige": "270"
+     },
+     {
+      "label": "Benchmarks",
+      "wert": 74,
+      "anzeige": "74"
+     },
+     {
+      "label": "Metriken",
+      "wert": 62,
+      "anzeige": "62"
+     }
+    ]
+   },
+   "id": "worldfoundry-open-source-infrastruktur-fur-generative-weltmo",
+   "hinzugefuegt": "2026-11-10T03:45:15Z"
+  },
   {
    "titel": "Google erweitert TPU-8-Familie um zwei Varianten",
    "kurz": "Google hat mit TPU 8tx und TPU 8i Max zwei neue Systeme seiner achten Chipgeneration vorgestellt und will eigene KI-Chips stärker als Alternative zu Nvidia-GPUs für externe Kunden positionieren.",
@@ -12789,6 +12904,146 @@
  ],
  "projekte": [
   {
+   "titel": "STE80 Humanizer: KI-Texte lesbarer machen mit kontrolliertem Englisch",
+   "kurz": "Der STE80 Humanizer ist eine Agenten-Skill, die typische KI-Floskeln entfernt und Sätze an ASD-STE100 angelehnt umschreibt. Die Methode kombiniert zwei Ansätze, deren Grundidee Andrej Karpathy teilte.",
+   "artikel": [
+    "Der STE80 Humanizer ist ein Projekt auf GitHub, das KI-geschriebene Texte lesbarer machen soll, ohne ihren Inhalt zu verändern. Das Repository hat laut Seite 138 Sterne. Er wird als Agenten-Skill beschrieben, also als Zusatzfunktion für KI-Agenten.",
+    "## Zwei Durchgänge",
+    "Der erste Durchgang entfernt die 26 Muster aus Wikipedias Liste „Signs of AI writing“, die im Katalog von blader/humanizer gesammelt sind. Typische Beispiele sind Floskeln wie „Great question!“ oder Wörter wie „seamless“. Der zweite Durchgang baut die Sätze um. Er orientiert sich an ASD-STE100, einem kontrollierten Englisch für Flugzeugwartungshandbücher. Laut dem Projekt bleiben dabei lange Sätze mit mehreren Ideen sonst erhalten.",
+    "## Was ASD-STE100 ist",
+    "ASD-STE100, kurz STE, ist eine kontrollierte Sprache aus der Luftfahrtindustrie der 1980er Jahre. Sie wurde für Mechaniker entwickelt, deren Muttersprache nicht Englisch ist. Die Regeln lauten unter anderem: höchstens 20 Wörter pro Anweisung, eine Idee pro Satz, Aktiv und einfache Zeiten. Das Projekt nutzt 80 Prozent dieser Regeln, damit der Text natürlich klingt.",
+    "## Die Methode von Karpathy",
+    "Laut der Projektseite schlug Andrej Karpathy am 2. Oktober 2026 vor, ein LLM etwas in ASD-STE100 erklären zu lassen. Er fand solche Texte oft besser lesbar. Er sprach dabei von „80% of the way to ASD-STE100“, weil die volle Spezifikation sehr streng ist. Das Projekt betont, dass es um Lesbarkeit geht und nicht darum, KI-Detektoren zu umgehen.",
+    "## Hinweis",
+    "Laut Projektseite fand eine spätere Prüfung Fehler im Wörterbuch der Spezifikation. Das Projekt folgt deshalb Ausgabe 9 von ASD-STE100."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: Dodaios/ste80-humanizer",
+     "url": "https://github.com/Dodaios/ste80-humanizer"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Lass eigene Texte über den Skill umschreiben, die nach KI klingen.",
+    "Nutze die Regeln als Schreibhilfe für kurze, klare Anleitungen.",
+    "Installiere den Skill über skills.sh oder als Claude-Code-Plugin, wie in der Projektbeschreibung angegeben."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "ste80-humanizer",
+    "zeilen": [
+     "> /ste80-humanizer <Text einfügen>",
+     "✓ §1, §8 entfernt",
+     "+ Kürzere Sätze, aktive Stimme",
+     "● Status: Umschreibung fertig"
+    ]
+   },
+   "macher": "Dodaios (GitHub-Nutzer)",
+   "branche": "KI-Schreibwerkzeuge / Open Source",
+   "jahr": "2026",
+   "tools": [
+    "GitHub",
+    "skills.sh",
+    "Claude Code",
+    "Codex",
+    "Cursor"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "138 ★"
+    },
+    {
+     "label": "Regeln Pass 1 (Herstellerangabe des Projekts: Muster aus Wikipedia-Liste)",
+     "wert": "26"
+    },
+    {
+     "label": "Regeln Pass 2 (STE80-Strukturregeln)",
+     "wert": "S1 bis S15"
+    }
+   ],
+   "link": "https://github.com/Dodaios/ste80-humanizer",
+   "linkLabel": "Zum Repository auf GitHub",
+   "id": "ste80-humanizer-ki-texte-lesbarer-machen-mit-kontrolliertem-",
+   "hinzugefuegt": "2026-11-10T03:45:15Z"
+  },
+  {
+   "titel": "Studsmith: Open-Source-KI-Agent für Roblox Studio",
+   "kurz": "Studsmith ist eine kostenlose Windows-App, die als KI-Agent in Roblox Studio arbeitet. Das Projekt steht auf GitHub und hat dort 95 Sterne.",
+   "artikel": [
+    "Studsmith ist ein kostenloser KI-Agent für Roblox Studio, die Entwicklungsumgebung für Roblox-Spiele. Man beschreibt in normaler Sprache, was entstehen soll. Der Agent plant die Umsetzung, schreibt die Skripte in Luau (der Skriptsprache von Roblox) und richtet die Objekte im Spiel ein. Danach erklärt er, was er geändert hat.",
+    "## Änderungen vor dem Übernehmen",
+    "Jede Änderung wird als Diff angezeigt, also als Gegenüberstellung von alt und neu. Erst nach dieser Prüfung wird sie auf die Place-Datei angewendet. Mit Wiederherstellungspunkten lässt sich eine einzelne Änderung oder ein ganzer Auftrag rückgängig machen.",
+    "## Playtest-Schleife",
+    "Der Agent kann das Spiel selbst testen lassen. Versuche, Fehler und Korrekturen erscheinen auf einer gemeinsamen Zeitleiste. Laut Projektseite liest der Agent die Fehler und versucht, sie zu beheben.",
+    "## Installation und Modelle",
+    "Die App wird als ZIP-Datei für Windows 10 oder 11 (64-Bit) bereitgestellt. Da sie neu und nicht code-signiert ist, kann Windows eine SmartScreen-Warnung zeigen. Laut Projektseite lässt sich der SHA-256-Hash jeder Version in den Release-Notizen prüfen. Man kann ein lokales Modell oder einen eigenen API-Schlüssel nutzen. Laut Herstellerangabe ist das Projekt unabhängig und nicht mit Roblox Corporation verbunden.",
+    "## Einordnung",
+    "Die Angaben stammen aus dem README des Projekts und sind Herstellerangaben, nicht unabhängig geprüft. Zum Stand der Abfrage gibt es 95 Sterne, 15 Beobachter und 60 Forks. Ein Commit ist in der Historie zu sehen."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: RapidSailorFreeze/studsmith",
+     "url": "https://github.com/RapidSailorFreeze/studsmith"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Man kann eine Spielfunktion in Alltagssprache beschreiben und sich Luau-Code dafür erzeugen lassen.",
+    "Man kann vor dem Anwenden jede Änderung als Diff prüfen und bei Bedarf zurücknehmen.",
+    "Man kann Fehler im eigenen Skript per Playtest finden lassen und sich die Erklärungen dazu durchlesen."
+   ],
+   "ausprobieren": {
+    "prompt": "Erstelle eine einfache Tür, die sich beim Berühren mit einem Skript öffnet und nach fünf Sekunden wieder schließt.",
+    "tool": "Studsmith",
+    "url": "https://github.com/RapidSailorFreeze/studsmith"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Studsmith",
+    "zeilen": [
+     "> Tür mit Öffnen beim Berühren erstellen",
+     "✓ Plan erstellt",
+     "+ Luau-Skript für Tür hinzugefügt",
+     "⚠ Playtest: Fehler in Zeile 4 gefunden",
+     "- Fehlerhafte Zeile entfernt",
+     "● Status: Änderung wartet auf Freigabe"
+    ]
+   },
+   "tag": "Windows-App · Luau",
+   "macher": "RapidSailorFreeze (GitHub-Nutzer)",
+   "branche": "Gamedev / Roblox",
+   "jahr": null,
+   "tools": [
+    "Roblox Studio",
+    "Luau",
+    "Ollama"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "95"
+    },
+    {
+     "label": "Forks",
+     "wert": "60"
+    },
+    {
+     "label": "Watchers",
+     "wert": "15"
+    },
+    {
+     "label": "Commits in der Historie",
+     "wert": "1"
+    }
+   ],
+   "link": "https://github.com/RapidSailorFreeze/studsmith",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "studsmith-open-source-ki-agent-fur-roblox-studio",
+   "hinzugefuegt": "2026-11-10T03:45:15Z"
+  },
+  {
    "titel": "Kuken Industries findet Kühlturm-Zeichnungen aus 70 Jahren in Minuten",
    "kurz": "Der Industriebetrieb Kuken Industries nutzt die OpenAI API, um in 70 Jahren gesammelte Kühlturm-Zeichnungen zu durchsuchen. Laut Hersteller-Angabe findet das Team die Zeichnung für eine Reparatur nun in 4,5 Minuten statt in fast einer Stunde.",
    "artikel": [
@@ -16626,8 +16881,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-09T21:28:07Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-11-10T03:45:15Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-11-09T11:16:41Z"
  }
 }
