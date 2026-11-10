@@ -1,6 +1,50 @@
 {
  "news": [
   {
+   "titel": "Google DeepMind: Gemini Robotics 2.5 sortiert Metallteile in Mercedes-Pilotversuch mit 96 Prozent Erfolgsquote",
+   "kurz": "Google DeepMind hat ein neues KI-Modell zur Robotersteuerung vorgestellt und in Mercedes-Benz-Produktionslinien getestet. Laut Herstellerangabe erreichte der humanoide Roboter Apollo 2 dabei eine Erfolgsquote von 96 Prozent.",
+   "artikel": [
+    "Google DeepMind hat Gemini Robotics 2.5 vorgestellt, ein sogenanntes Vision-Language-Action-Modell (VLA). Dieses Modell verarbeitet Bildinformationen, versteht Sprachbefehle und übersetzt sie in Roboterbewegungen. Laut Google DeepMind erzielt es gegenüber den eigenen früheren Versionen je nach Aufgabenart 30 bis 100 Prozent höhere Erfolgsquoten und arbeitet 20 bis 30 Prozent schneller. Getestet wurde laut Hersteller an über 200 Aufgaben, etwa dem Servieren von Essen mit einer Zange oder dem Pipettieren von Flüssigkeiten.",
+    "## Pilotversuch bei Mercedes-Benz",
+    "Gemeinsam mit dem Robotikunternehmen Apptronik und Mercedes-Benz testete Google DeepMind das Modell auf aktiven Produktionslinien in Kecskemét (Ungarn) und Sindelfingen (Deutschland). Der humanoide Roboter Apollo 2 übernahm dabei sogenanntes Kitting: Er entnahm Metallteile aus Schüttgutbehältern und legte sie in Tabletts, und zwar in der Reihenfolge, in der sie für das jeweilige Fahrzeug an der Montagelinie benötigt wurden. Die Erfolgsquote von 96 Prozent ist eine Herstellerangabe. Zwei KI-Modelle arbeiteten zusammen: Gemini Robotics ER überwachte den Ablauf, Gemini Robotics 2.5 steuerte Hände und Arme. Apptronik-CEO Jeff Cardenas sagte, die Modelle hätten sich innerhalb weniger Wochen Nachtraining deutlich verbessert.",
+    "## Sicherheit und Testumgebung",
+    "Laut Google DeepMind vermeidet das Modell durch Echtzeitsteuerung physische Gefahren während der Aufgabe. In eigenen Auswertungen verbesserte sich die sichere Aufgabenerledigung nahe Hindernissen um 33 Prozent und in der Nähe von Menschen um 43 Prozent. Zusätzlich veröffentlichte das Unternehmen den Open-Source-Benchmark ASIMOV-Jailbreak auf Hugging Face. Er enthält Hunderte Prompts, die unsichere Anfragen in verschiedenen Szenen verschleiern, und soll prüfen, ob sich Robotermodelle zu gefährlichen Handlungen verleiten lassen. Laut Hersteller erreicht das eigene Modell Gemini 4 Argon dabei eine Jailbreak-Resistenz von 99,5 Prozent, der Vorgänger Gemini Robotics ER 2 kommt auf 82 Prozent.",
+    "## Simulation als Trainingshilfe",
+    "Für die Entwicklung nutzte Google DeepMind das Sprachmodell Gemini 4 Argon als Simulationsmotor. Aus einer realen Kameraszene kann es laut Hersteller tausende simulierte Trainingsdurchläufe erzeugen und einen sogenannten digitalen Zwilling, also eine virtuelle Nachbildung der Umgebung, anlegen. Zusammen mit echten Trainingsdemonstrationen soll das Roboter helfen, sich schneller auf neue Szenen und Objekte einzustellen. Gemini Robotics 2.5 wird laut Google DeepMind an die Partner Agile, Apptronik und Mercedes-Benz ausgeliefert."
+   ],
+   "quellen": [
+    {
+     "titel": "Google DeepMind's Gemini Robotics 2.5 scores 96 percent sorting metal parts in a Mercedes-Benz assembly pilot (The Decoder)",
+     "url": "https://the-decoder.com/google-deepminds-gemini-robotics-2-5-scores-96-percent-sorting-metal-parts-in-a-mercedes-benz-assembly-pilot/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Verfolgen, wie Robotik-Modelle aus Sprachbefehlen konkrete Handlungen ableiten, etwa über Berichte von Pilotprojekten.",
+    "Den Open-Source-Benchmark ASIMOV-Jailbreak auf Hugging Face ansehen, um zu verstehen, wie Robotik-Sicherheit getestet wird."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-11-10",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erfolgsquote Sicherheit (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Gemini Robotics ER 2",
+      "wert": 82,
+      "anzeige": "82 %"
+     },
+     {
+      "label": "Gemini 4 Argon",
+      "wert": 99.5,
+      "anzeige": "99,5 %"
+     }
+    ]
+   },
+   "id": "google-deepmind-gemini-robotics-2-5-sortiert-metallteile-in-",
+   "hinzugefuegt": "2026-11-10T23:58:34Z"
+  },
+  {
    "titel": "Nvidia GR00T 2: Roboter lernen aus Videos von Menschen",
    "kurz": "Nvidias neues Modell GR00T 2 soll Robotern neue Aufgaben beibringen, indem menschliche Handbewegungen aus Videos übertragen werden, statt sie aufwendig fernzusteuern. Die Erfolgsquoten schwanken je nach Aufgabe stark.",
    "artikel": [
@@ -17127,8 +17171,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-10T18:54:18Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-10T23:58:34Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-11-10T11:50:21Z"
  }
 }
