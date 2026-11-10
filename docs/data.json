@@ -1,6 +1,57 @@
 {
  "news": [
   {
+   "titel": "Meta stellt Muse Ember vor: kleines, effizientes Modell für Agenten",
+   "kurz": "Meta hat mit Muse Ember ein besonders kleines und sparsames KI-Modell vorgestellt, das vor allem für wiederkehrende Agenten-Aufgaben gedacht ist. Laut Hersteller liefert es mehr Intelligenz pro Dollar als Claude Haiku 5.5 und GPT-6 Luna.",
+   "artikel": [
+    "Meta hat mit Muse Ember sein bislang kleinstes und effizientestes Modell veröffentlicht. Laut Herstellerangabe ist es für anspruchsvolles Schlussfolgern sowie für die Arbeitsschritte gedacht, die KI-Agenten immer wieder ausführen: Werkzeugaufrufe, Teilaufgaben beim Programmieren, Weiterleitung von Anfragen, Datenextraktion und das Auslesen langer Dokumente.",
+    "## Kosten und Leistung",
+    "Nach Angaben von Meta bietet Muse Ember bei jeder Einstellung für Denkaufwand mehr Intelligenz pro Dollar als Claude Haiku 5.5 oder GPT-6 Luna. Gegenüber Haiku erreiche es dessen beste Punktzahl bei etwa einem Drittel der Kosten. Im Diagramm von Artificial Analysis, das Meta zitiert, liegt Muse Ember laut Herstellerangabe auf der Effizienzgrenze: Kein anderes Modell erziele pro Aufgabe mehr Punkte bei geringeren Kosten. Der Intelligence Index ist ein zusammengesetzter Benchmark-Wert, mit dem Modelle verglichen werden.",
+    "## Ausgewählte Ergebnisse laut Meta",
+    "Im Benchmark AutomationBench-AA, der End-to-End-Geschäftsabläufe prüft, erreicht Muse Ember laut Meta 37,8 Prozent, GPT-6 Luna 20,2 Prozent und Claude Haiku 5.5 13,9 Prozent. Bei Agents' Last Exam liegt Muse Ember mit 61,6 Prozent knapp vor GPT-6 Luna (57,1 Prozent) und Claude Haiku 5.5 (57,0 Prozent). Dies sind Herstellerangaben, die von Meta selbst veröffentlicht wurden.",
+    "## Verfügbarkeit und Preis",
+    "Muse Ember ist laut Meta ab sofort über die Meta Model API verfügbar. Der Preis wird mit 0,10 US-Dollar pro einer Million Input-Tokens und 0,50 US-Dollar pro einer Million Output-Tokens angegeben. Das Modell bietet ein Kontextfenster von 1 Million Tokens und bis zu 512.000 Output-Tokens. Ein Token ist dabei eine kleine Texteinheit, nach der Anbieter abrechnen.",
+    "## Stimmen von Partnern",
+    "Partner wie Box, Cline, Oracle, Cloudflare und You.com haben das Modell nach Metas Angaben in frühen Tests genutzt. Cloudflare berichtet von einer bis zu 30 Prozent höheren Geschwindigkeit am oberen Latenzende im Vergleich zu einem vergleichbaren Modell. Diese Aussagen stammen von den Partnern und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Introducing Muse Ember (Meta Research Blog)",
+     "url": "https://research.meta.ai/blog/muse-ember"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50429024"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler können Muse Ember über die Meta Model API für Agenten-Workflows wie Werkzeugaufrufe oder Dokumentenextraktion testen.",
+    "Wer Dokumente oder Codebasen verarbeiten möchte, kann prüfen, ob das große Kontextfenster für eigene Projekte ausreicht.",
+    "Private Nutzer können die Preise pro Million Tokens mit anderen Modellen vergleichen, bevor sie sich für einen Dienst entscheiden."
+   ],
+   "ausprobieren": {
+    "prompt": "Extrahiere aus dem folgenden Vertragstext alle Kündigungsfristen und gib sie als Liste mit Seitenzahl aus.",
+    "tool": "Meta Model API",
+    "url": "https://research.meta.ai/blog/muse-ember"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Preis pro 1 Mio. Input-Tokens (USD, Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Muse Ember",
+      "wert": 0.1,
+      "anzeige": "0,10 $"
+     }
+    ]
+   },
+   "bereich": "Agenten",
+   "datum": "2026-11-09",
+   "id": "meta-stellt-muse-ember-vor-kleines-effizientes-modell-fur-ag",
+   "hinzugefuegt": "2026-11-10T11:50:21Z"
+  },
+  {
    "titel": "Forscher: Heutige KI ist nicht bewusst, und Rechenleistung allein reicht dafür nicht",
    "kurz": "Die Bewusstseinsforscher Anil Seth, Ned Block und Giulio Tononi halten die Annahme, Bewusstsein entstehe allein durch die richtigen Berechnungen, für fehlerhaft. Sie halten heutige KI-Systeme nicht für bewusst und warnen davor, ihnen Rechte zuzusprechen.",
    "artikel": [
@@ -3240,6 +3291,86 @@
   }
  ],
  "radar": [
+  {
+   "titel": "DSpine: Draft-Modell für schnelleres Decoding von Qwen3.8-27B",
+   "kurz": "Tencent hat auf Hugging Face ein Draft-Modell für Qwen3.8-27B veröffentlicht, das Tokens parallel vorschlägt und die Ausgabe laut Herstellerangaben deutlich beschleunigt. Der Checkpoint steht unter Apache 2.0 und hat 154 Likes sowie 2.627 Downloads im letzten Monat.",
+   "artikel": [
+    "Das Modell trägt den Namen DSpine und ist laut Hugging-Face-Seite ein Draft-Modell mit fünf Schichten für Qwen3.8-27B. Ein Draft-Modell schlägt vorab mehrere Tokens vor, die das große Hauptmodell anschließend prüft. Die Blockgröße liegt bei 16, das Sliding Window bei 8.192 Tokens.",
+    "## Idee der Architektur",
+    "Laut Beschreibung erzeugt DSpine Draft-Tokens parallel. Jede Schicht gibt vorhergesagte Merkmale des Vorgängers an die benachbarte Position weiter, sodass kausale Abhängigkeiten über die Tiefe des Netzes erhalten bleiben. Der zugehörige arXiv-Preprint trägt den Titel „Draft in Parallel, Condition Through Depth“.",
+    "## Herstellerangaben zur Geschwindigkeit",
+    "Tencent gibt in einer Tabelle die Akzeptanzlänge an, also wie viele Tokens im Schnitt pro Schritt akzeptiert werden. Bei GSM8K mit greedy Sampling nennt der Hersteller 7,20 für DSpine gegenüber 5,69 für das Vergleichsmodell DFlash2. Bei den Agenten-Benchmarks WorkBuddy Web und Office liegen die Werte bei 4,91 bzw. 5,63 mit niedrigem Reasoning-Aufwand. Diese Zahlen stammen vom Hersteller und wurden hier nicht unabhängig geprüft.",
+    "Bei der End-to-End-Durchsatzmessung mit acht gleichzeitigen Anfragen nennt Tencent für WorkBuddy Office mit niedrigem Reasoning einen Speedup von 3,84 gegenüber autoregressivem Decoding. Die Messungen basieren auf SGLang 0.5.22, BF16 und FlashAttention 3.",
+    "## Nutzung",
+    "Die Installation erfolgt über das GitHub-Repository von Tencent, die Ausführung über sglang serve mit dem Parameter für den Speculative-Algorithmus DSPINE. Das Modell ist als Draft-Modell gedacht und ersetzt nicht das Hauptmodell Qwen3.8-27B, das weiterhin benötigt wird."
+   ],
+   "quellen": [
+    {
+     "titel": "tencent/Qwen3.8-27B-DSpine-b16 auf Hugging Face",
+     "url": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16"
+    },
+    {
+     "titel": "arXiv:2609.36173 (Preprint)",
+     "url": "https://arxiv.org/abs/2609.36173"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer Qwen3.8-27B lokal oder auf einem eigenen Server betreibt, kann mit diesem Draft-Modell testen, ob die Antwortzeit spürbar sinkt.",
+    "Entwickler können die Installationsanleitung aus dem Repository nutzen, um die Beschleunigung mit eigenen Prompts zu messen.",
+    "Wer nur gelegentlich mit dem Modell arbeitet, braucht das Draft-Modell in der Regel nicht, da der Nutzen vor allem bei Serverbetrieb zum Tragen kommt."
+   ],
+   "radar": true,
+   "quelle": "Hugging Face",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Modellgröße",
+     "wert": "2B Parameter (BF16)"
+    },
+    {
+     "label": "Blockgröße",
+     "wert": "16"
+    },
+    {
+     "label": "Sliding Window",
+     "wert": "8.192 Tokens"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    },
+    {
+     "label": "Likes",
+     "wert": "154"
+    },
+    {
+     "label": "Downloads (letzter Monat)",
+     "wert": "2.627"
+    }
+   ],
+   "signal": "Herstellerangaben zufolge höhere Akzeptanzlängen und bis zu 3,84-facher Durchsatz gegenüber autoregressivem Decoding im WorkBuddy-Office-Test.",
+   "link": "https://huggingface.co/tencent/Qwen3.8-27B-DSpine-b16",
+   "linkLabel": "Modell auf Hugging Face ansehen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Akzeptanzlänge GSM8K (greedy, Herstellerangabe)",
+    "balken": [
+     {
+      "label": "DFlash2",
+      "wert": 5.69,
+      "anzeige": "5,69"
+     },
+     {
+      "label": "DSpine",
+      "wert": 7.2,
+      "anzeige": "7,20"
+     }
+    ]
+   },
+   "id": "dspine-draft-modell-fur-schnelleres-decoding-von-qwen3-8-27b",
+   "hinzugefuegt": "2026-11-10T11:50:21Z"
+  },
   {
    "titel": "WorldFoundry: Open-Source-Infrastruktur für generative Weltmodelle",
    "kurz": "Ein arXiv-Paper stellt WorldFoundry vor, eine Open-Source-Infrastruktur, mit der sich generative Weltmodelle über Video, 3D/4D, verkörperte Aktionen und interaktive Systeme hinweg reproduzierbar ausführen und bewerten lassen. Der Katalog umfasst laut Paper 270 Modelle, 74 Benchmarks und 62 Metriken.",
@@ -16856,10 +16987,10 @@
    "status": "ok",
    "statusText": "Profi-Niveau",
    "tools": [
+    "Claude Fable 5.2",
+    "Claude Mythos 5.2",
     "Gemini 4 Argon",
-    "Gemini 4 Carbon",
     "Claude Opus 5.5",
-    "ChatGPT",
     "GPT-6.1 Sol"
    ],
    "id": "text"
@@ -16881,8 +17012,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-10T03:45:15Z",
-  "neueFunde": 4,
-  "standAktualisiert": "2026-11-09T11:16:41Z"
+  "letzterScan": "2026-11-10T11:50:21Z",
+  "neueFunde": 2,
+  "standAktualisiert": "2026-11-10T11:50:21Z"
  }
 }
