@@ -1,6 +1,54 @@
 {
  "news": [
   {
+   "titel": "Nvidia GR00T 2: Roboter lernen aus Videos von Menschen",
+   "kurz": "Nvidias neues Modell GR00T 2 soll Robotern neue Aufgaben beibringen, indem menschliche Handbewegungen aus Videos übertragen werden, statt sie aufwendig fernzusteuern. Die Erfolgsquoten schwanken je nach Aufgabe stark.",
+   "artikel": [
+    "Um Robotern neue Aufgaben beizubringen, müssen Ingenieure bisher meist stundenlang per Teleoperation steuern. Dieses Verfahren ist teuer, langsam und braucht eigene Daten für jedes Robotermodell. Nvidia will diesen Aufwand mit GR00T 2 verringern.",
+    "## Ein \"Weltaktions-Modell\"",
+    "Laut Nvidia arbeitet die Software als sogenanntes Weltaktions-Modell (World-Action-Model, WAM). Das bedeutet: Das System berechnet gleichzeitig die nächste Bewegung und ein kurzes Video der unmittelbaren Zukunft. Dafür wird die Methode der Diffusion genutzt, also ein Verfahren, das Bilder schrittweise aus Rauschen erzeugt. Anders als der Vorgänger GR00T 1 wandelt das Modell Kamerabilder und Sprachbefehle nicht direkt in Motorbewegungen um.",
+    "## Training mit Menschenvideos",
+    "Nvidia trainierte das System nach eigenen Angaben auf einem Cluster mit mehr als tausend GB300-Chips, unter anderem mit rund 400.000 Stunden Videomaterial. Dort sind Menschen zu sehen, die verschiedene Aufgaben mit am Kopf befestigten Kameras ausführen. Zum Lernen einer neuen Aufgabe soll es laut Forschern genügen, dass ein Mensch die Schritte mit Datenhandschuhen, Greifern oder einem Fingerexoskelett vormacht. Das Modell ersetzt dann im Video den menschlichen Arm durch den Roboterarm und leitet daraus passende Steuerbefehle ab.",
+    "In Labortests konnte ein Roboter mit fünf Fingern auf diese Weise ein Streichholz anzünden, eine Banane zerschneiden oder Pakete auf ein Förderband werfen, ohne für diese Aufgaben ferngesteuert worden zu sein. Die Erfolgsquoten lagen je nach Aufgabe zwischen 10 und 80 Prozent. Bei 50 ausgewählten Aufgaben stieg die Erfolgsquote laut Bericht nach weniger als drei Minuten konventionellem Training von 40 auf 95 Prozent.",
+    "## Sprachmodell als Korrektur",
+    "Für längere Montagearbeiten koppelt Nvidia das System mit einem übergeordneten Sprachmodell, im Bericht wird OpenAIs GPT-6 Astra genannt. Dieses zerlegt die Aufgabe in Einzelschritte, markiert Greifpunkte im Kamerabild farbig und startet Hilfsroutinen, wenn ein Teil herunterfällt. Beim Zusammenbau ungeordnet ausgelegter Bauteile gelang das kombinierte System in mindestens 97 Prozent der Versuche. Ohne das Sprachmodell und zusätzliches Feintuning gelang die Montage eines Spielzeugautos nur in 23 von 100 Versuchen.",
+    "## Grenzen",
+    "Für Zweibeiner-Roboter entwickelte Nvidia die abgespeckte Variante GR00T 2 Turbo, die weniger Bilddetails verarbeitet und direkt auf dem Bordcomputer Jetson Thor läuft. Damit konnte ein Humanoider Popcorn schaufeln, Tische abräumen und Flüssigkeiten mit einem unter den Fuß geklemmten Handtuch aufwischen. Das Aufwischen gelang jedoch nur in knapp der Hälfte der Versuche.",
+    "Die Forscher nennen deutliche Hürden für den verlässlichen Einsatz in der Praxis. Das Modell verarbeitet noch keine direkten Sensordaten für Berührung und übersieht manchmal feine Fehler, etwa einen halb eingedrehten Schraube. Zudem bremst das übergeordnete Sprachmodell das System deutlich: Beim Müllsortieren stand der Roboter etwa ein Drittel der Gesamtzeit still, weil er im Schnitt über sieben Sekunden auf die nächste Berechnung warten musste."
+   ],
+   "quellen": [
+    {
+     "titel": "Nvidia's model GR00T 2 watches humans on video, then imagines itself as the robot (The Decoder)",
+     "url": "https://the-decoder.com/nvidias-model-gr00t-2-watches-humans-on-video-then-imagines-itself-as-the-robot/"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Wer sich für Robotik interessiert, kann die Idee verfolgen, Bewegungen aus Videos statt aus Fernsteuerung zu lernen.",
+    "Entwickler können prüfen, ob sich solche Ansätze für eigene Roboterprojekte eignen, sobald Nvidia Werkzeuge veröffentlicht."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erfolgsquote bei 50 Aufgaben",
+    "balken": [
+     {
+      "label": "Vorher",
+      "wert": 40,
+      "anzeige": "40 %"
+     },
+     {
+      "label": "Nachher",
+      "wert": 95,
+      "anzeige": "95 %"
+     }
+    ]
+   },
+   "bereich": "Agenten",
+   "datum": "2026-11-10",
+   "id": "nvidia-gr00t-2-roboter-lernen-aus-videos-von-menschen",
+   "hinzugefuegt": "2026-11-10T18:54:18Z"
+  },
+  {
    "titel": "Meta stellt Muse Ember vor: kleines, effizientes Modell für Agenten",
    "kurz": "Meta hat mit Muse Ember ein besonders kleines und sparsames KI-Modell vorgestellt, das vor allem für wiederkehrende Agenten-Aufgaben gedacht ist. Laut Hersteller liefert es mehr Intelligenz pro Dollar als Claude Haiku 5.5 und GPT-6 Luna.",
    "artikel": [
@@ -3291,6 +3339,73 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Reframe: Visuelle Agenten lernen, Tool-Beobachtungen wirklich zu nutzen",
+   "kurz": "Das Paper Reframe beschreibt ein zweistufiges Nachtraining für visuelle Agenten, das den Beobachtungszustand nach Tool-Aufrufen gezielt ausrichtet. Laut Autorenangaben übertrifft es Mix-RL und vanilla MOPD über 14 Bild- und Videobenchmarks.",
+   "artikel": [
+    "Visuelle KI-Agenten nutzen Werkzeuge, etwa zum Zuschneiden oder Auswerten von Bildausschnitten. Ein Problem dabei: Das Modell übersieht manchmal, was das Werkzeug zurückgibt, und schlecht gesetzte Tool-Aktionen liefern dann wenig brauchbare Belege. Das Paper Reframe setzt genau hier an und behandelt den Beobachtungszustand als Ziel der Ausrichtung, nicht nur die Ausgabeverteilung.",
+    "## Zwei Stufen",
+    "Die erste Stufe heißt Ground-Drop-GRPO (GD-GRPO). Dabei werden räumliche und zeitliche Spezialisten mit belegbezogenen Belohnungen trainiert. Zusätzlich wird die originale visuelle Eingabe zufällig entfernt, sodass das Modell aus dem arbeiten muss, was das Werkzeug geliefert hat. GRPO ist ein Verstärkungslernverfahren, das Antworten innerhalb einer Gruppe vergleicht.",
+    "Die zweite Stufe, Observation-Gated-MOPD (OG-MOPD), ersetzt während eines laufenden Durchlaufs fehlerhafte Tool-Aktionen durch kanonische Aktionen und setzt die Destillation danach fort. MOPD steht für Multi-Teacher On-Policy Distillation, also das Lernen von mehreren Lehrermodellen auf Basis der eigenen Ausgaben des Schülers.",
+    "## Ergebnisse laut Paper",
+    "Die Autoren berichten, dass Reframe bei 14 Bild- und Videobenchmarks sowohl Mix-RL als auch vanilla MOPD übertrifft. Ablationen zeigen laut Paper, dass GD-GRPO im Vergleich zu rein ergebnisbasiertem GRPO die Abhängigkeit von Beobachtungen und den Tool-Gewinn erhöht. Ein Vorab-Training mit SFT (überwachtes Feintuning als Kaltstart) ist nicht nötig. Das Basismodell ist Qwen3.5-9B.",
+    "Der Code liegt laut Seite auf GitHub; die Angaben stammen von den Autoren und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Paper-Seite auf Hugging Face",
+     "url": "https://huggingface.co/papers/2611.12886"
+    },
+    {
+     "titel": "Code-Repository (GitHub)",
+     "url": "https://github.com/EliYuan30/Reframe"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer eigene Agenten mit Bildwerkzeugen baut, findet im Paper einen Ansatz, Beobachtungen aus Tools besser einzubinden.",
+    "Forschende können die Ablationen als Vergleich zu rein ergebnisbasiertem Training nutzen.",
+    "Der Code auf GitHub erlaubt, die beschriebenen Trainingsstufen nachzuvollziehen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Laut Paper: Abhängigkeit von Beobachtungen (relative Angabe nicht verfügbar)",
+    "balken": [
+     {
+      "label": "Vanilla MOPD",
+      "wert": 1,
+      "anzeige": "Basis"
+     },
+     {
+      "label": "Reframe",
+      "wert": 1,
+      "anzeige": "übertrifft laut Paper"
+     }
+    ]
+   },
+   "tag": "Forschung",
+   "quelle": "Hugging Face",
+   "datum": "2026-11-10",
+   "kennzahlen": [
+    {
+     "label": "Basismodell",
+     "wert": "Qwen3.5-9B"
+    },
+    {
+     "label": "Benchmarks",
+     "wert": "14 Bild- und Videobenchmarks"
+    },
+    {
+     "label": "Upvotes (Hugging Face)",
+     "wert": "37"
+    }
+   ],
+   "signal": "Der Ansatz richtet das Training nicht nur auf die Ausgabe, sondern auf die Nutzung von Tool-Beobachtungen aus. Die Ergebnisse stammen laut Paper von den Autoren.",
+   "link": "https://huggingface.co/papers/2611.12886",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "reframe-visuelle-agenten-lernen-tool-beobachtungen-wirklich-",
+   "hinzugefuegt": "2026-11-10T18:54:18Z"
+  },
   {
    "titel": "DSpine: Draft-Modell für schnelleres Decoding von Qwen3.8-27B",
    "kurz": "Tencent hat auf Hugging Face ein Draft-Modell für Qwen3.8-27B veröffentlicht, das Tokens parallel vorschlägt und die Ausgabe laut Herstellerangaben deutlich beschleunigt. Der Checkpoint steht unter Apache 2.0 und hat 154 Likes sowie 2.627 Downloads im letzten Monat.",
@@ -17012,7 +17127,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-10T11:50:21Z",
+  "letzterScan": "2026-11-10T18:54:18Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-11-10T11:50:21Z"
  }
