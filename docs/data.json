@@ -1,6 +1,94 @@
 {
  "news": [
   {
+   "titel": "Tausende Grok-Apps ohne Login offen erreichbar – darunter Patientendaten und Klartext-Passwörter",
+   "kurz": "Die sicherheitsfirma Claroc fand über 35.000 mit dem KI-Assistenten Grok gebaute Web-Apps, die ohne Anmeldung zugänglich waren. Darunter waren Patientendaten und interne Dokumente von SpaceXSI selbst.",
+   "artikel": [
+    "Apps, die mit dem KI-Assistenten Grok erstellt wurden, sind fast durchgehend für jeden offen, der den Link kennt. Laut dem Sicherheitsunternehmen Claroc waren von 37.571 noch online befindlichen Apps 35.578 ohne Login erreichbar, das entspricht 94,7 Prozent.",
+    "## Ursache: Standardeinstellung beim Veröffentlichen",
+    "Im Veröffentlichungsdialog war die Option „Anyone with the link“ (Jeder mit dem Link) bereits vorausgewählt. Jede veröffentlichte App bekommt eine eigene Subdomain, die nach dem ersten Aufruf in sogenannten passiven DNS-Datenbanken auftaucht. Diese lassen sich nach Mustern durchsuchen, sodass Adressen leicht zu finden sind.",
+    "## Betroffene Daten",
+    "Unter den offenen Apps stammten 24 von Mitarbeitenden von SpaceXSI und X. Dazu gehörten ein vertraulicher Einarbeitungsplan, eine Vertriebsgebietskarte mit 594 strategischen Kunden und Pipeline-Daten sowie acht Werbeangebote von X, eines davon für eine US-Bundesbehörde. Die Forscher schätzen, dass 650 bis 800 Apps private Daten enthielten. Bestätigt wurden unter anderem ein Intensivstations-Briefing mit Laborwerten eines Patienten, eine Liste von über 3.500 Beschäftigten einer Klinikgruppe und ein Dienstplan einer Feuerwehr. Der Quellcode einer Zeiterfassungs-App enthielt 18 Konten mit Klartext-Passwörtern. Claroc nennt außerdem 30 betroffene Organisationen, sechs davon gehören zu den Fortune-500-Unternehmen; deren Namen werden nicht genannt.",
+    "## Zusätzliches Problem in Testapps",
+    "Bei zwei eigenen Testapps von Claroc zeigte sich ein weiteres Problem: Eine Kontaktliste hatte eine Datenbank ohne Login, sodass anonyme Besucher Einträge hinzufügen konnten. In einer Vertriebs-App fügte Grok Google- und X-Anmeldung hinzu, der Code nahm aber jeden angemeldeten Nutzer zunächst ins Team auf und prüfte die Mitgliedschaft erst danach. So hätte ein fremdes Google-Konto Datensätze lesen, ändern und löschen können.",
+    "## Stellungnahme und Einordnung",
+    "Die Einstellung „Nur du“ (Only you) blockierte den Zugriff in den Tests, ist aber nicht der Standard. SpaceXSI erklärte laut Bericht, Apps seien bis zur Freigabe privat, die Veröffentlichung umfasse mehrere Schritte und Mitarbeiterkonten stünden standardmäßig auf „Nur du“. Claroc entgegnet, zusätzliche Klicks helfen nicht, wenn im letzten Schritt „Anyone with the link“ vorausgewählt sei. SpaceXSI hat die 24 Mitarbeiter-Apps offline genommen, die übrigen offenen Apps aber nicht entfernt. Claroc benachrichtigt die Betroffenen nun direkt. Die Firma verkauft selbst Sicherheitslösungen für KI-gebaute Apps, was sie laut Bericht selbst angibt. Es ist laut Quelle mindestens der dritte Datenschutzvorfall bei SpaceXSI mit Grok."
+   ],
+   "quellen": [
+    {
+     "titel": "Grok-built apps exposed patient data, plaintext passwords, and SpaceXSI's own sales pipeline – The Decoder",
+     "url": "https://the-decoder.com/grok-built-apps-exposed-patient-data-plaintext-passwords-and-spacexsis-own-sales-pipeline/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wer eine mit KI gebaute App veröffentlicht, sollte vor dem Teilen prüfen, wer Zugriff hat, und die Option „Nur du“ wählen.",
+    "Private Daten wie Passwörter sollten nie im Quellcode einer App stehen, auch nicht bei KI-generierten Projekten.",
+    "Vor dem Veröffentlichen lohnt ein kurzer Test ohne Anmeldung, um zu sehen, ob die App von außen erreichbar ist."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Zugriffsprüfung",
+    "zeilen": [
+     "> App ohne Login aufrufen",
+     "⚠ Standard: „Anyone with the link“",
+     "✓ Option „Nur du“ gewählt",
+     "- Öffentlicher Zugriff entfernt",
+     "+ Zugriff nur für Eigentümer",
+     "● Status: geschützt"
+    ]
+   },
+   "bereich": "Apps",
+   "datum": "2026-11-11",
+   "id": "tausende-grok-apps-ohne-login-offen-erreichbar-darunter-pati",
+   "hinzugefuegt": "2026-11-11T12:59:11Z"
+  },
+  {
+   "titel": "Anthropic macht Claude mit Tabellen, Whiteboards und Plugins zur Arbeitsplattform",
+   "kurz": "Anthropic erweitert die Claude-App um Tabellen, Whiteboards und Datenansichten sowie Interactive Connectors, mit denen Partner wie Adobe und Atlassian ihre Apps direkt in Claude einbetten können. Eine Meeting-Funktion für Notizen ist laut Anthropic bald verfügbar.",
+   "artikel": [
+    "Anthropic baut die Claude-App Schritt für Schritt zu einem zentralen Arbeitsraum für Teams aus. Laut Fachmagazin The Decoder, das sich auf eine Mitteilung von Anthropic beruft, kommen mehrere neue Funktionen für die Zusammenarbeit hinzu.",
+    "## Tabellen, Whiteboards und Datenansichten",
+    "Mit Claude Sheets können Teams Tabellen erstellen und bearbeiten, gestützt durch KI-Unterstützung. Dazu gehören Formeln und mehrere Tabellenblätter. Claude Whiteboards dient dem gemeinsamen Sammeln von Ideen, die Claude anschließend zusammenfassen kann. Claude Data, früher Dashboards genannt, verbindet sich mit Werkzeugen wie Snowflake und Salesforce, um Dashboards und Datenvisualisierungen zu bauen.",
+    "## Interactive Connectors",
+    "Mit Interactive Connectors lassen sich Apps von Partnern direkt in Claude einbetten. Genannt werden Adobe, Atlassian und Salesforce. Das Prinzip ähnelt laut Bericht den Plugins von ChatGPT. Ein Connector ist dabei eine Schnittstelle, über die Claude auf externe Dienste zugreifen kann.",
+    "## Meeting-Notizen in Kürze",
+    "Claude Meetings soll Anrufen beitreten und Notizen festhalten können. Anthropic kündigt den Start dafür lediglich als „soon“ an, ein genaues Datum nennt der Artikel nicht.",
+    "## Sicherheitsfunktionen für Unternehmen",
+    "Für Enterprise-Kunden nennt Anthropic Sicherheitsfunktionen wie Audit-Logs, isolierte virtuelle Maschinen und eine Compliance-API. Ein Audit-Log protokolliert Zugriffe und Aktionen, damit sie später nachvollzogen werden können. Die Angaben stammen von Anthropic selbst und wurden von The Decoder nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Anthropic turns Claude into a full workspace with Plugins, spreadsheets, whiteboards, and soon Meeting notes (The Decoder)",
+     "url": "https://the-decoder.com/anthropic-turns-claude-into-a-full-workspace-with-plugins-spreadsheets-whiteboards-and-soon-meeting-notes/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Teams können mit Claude Tabellen und Whiteboards gemeinsam bearbeiten, ohne zwischen verschiedenen Programmen zu wechseln.",
+    "Wer Daten aus Snowflake oder Salesforce nutzt, kann sich mit Claude Dashboards und Visualisierungen erstellen lassen.",
+    "Privatpersonen können Claude künftig nutzen, um Ideen auf einem Whiteboard zu sammeln und zusammenfassen zu lassen."
+   ],
+   "ausprobieren": {
+    "prompt": "Erstelle eine Tabelle mit drei Spalten für Projektname, Verantwortliche Person und Frist und fülle sie mit einem Beispielprojekt.",
+    "tool": "Claude",
+    "url": "https://claude.ai"
+   },
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Sheets",
+     "Whiteboards",
+     "Connectors",
+     "Meetings (bald)"
+    ]
+   },
+   "bereich": "Apps",
+   "datum": "2026-11-10",
+   "id": "anthropic-macht-claude-mit-tabellen-whiteboards-und-plugins-",
+   "hinzugefuegt": "2026-11-11T12:59:11Z"
+  },
+  {
    "titel": "Google DeepMind: Gemini Robotics 2.5 sortiert Metallteile in Mercedes-Pilotversuch mit 96 Prozent Erfolgsquote",
    "kurz": "Google DeepMind hat ein neues KI-Modell zur Robotersteuerung vorgestellt und in Mercedes-Benz-Produktionslinien getestet. Laut Herstellerangabe erreichte der humanoide Roboter Apollo 2 dabei eine Erfolgsquote von 96 Prozent.",
    "artikel": [
@@ -3383,6 +3471,89 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Tree-Ising: Sprachmodell-Fehler per Bit-Edits statt LLM-Agent reparieren",
+   "kurz": "Eine arXiv-Arbeit mit Hugging-Face-Bezug stellt Tree-Ising vor, eine Methode, die Denkschleifen eines kleinen Sprachmodells durch gezielte Änderungen einzelner Bits in den Gewichten behebt. Laut Paper übertrifft sie dabei einen von einem LLM-Agenten geschriebenen Eingriff auf MATH-500.",
+   "artikel": [
+    "Die Arbeit mit dem Titel „Tree-Ising: Repairing Language Models with Bit-Level Ising Edits“ beschreibt, wie sich Fehler in den Gewichten eines Sprachmodells reparieren lassen, ohne Gradienten und ohne LLM-Tokens. Ausgangspunkt ist eine Arbeit des MIT von Takehi et al. zur sogenannten Weight-Space-Programmierung. Dort liest ein starker LLM-Agent die Gewichte eines Netzes und schreibt selbst eine Reparatur. Der Agent korrigierte die Denkschleifen von Qwen3.5-0.8B, brauchte dafür aber 158 Agenten-Runden, 89,7 Millionen Tokens und 50 Forward-Pass-Anfragen.",
+    "## Der Ansatz",
+    "Tree-Ising behandelt dieselbe Reparatur als dünn besetztes diskretes Optimierungsproblem über die BF16-Gewichte des Modells selbst. BF16 ist ein Zahlenformat mit 16 Bit pro Gewicht. Die Zielfunktion schwächt eine Richtung, die für Schleifen verantwortlich ist, stärkt eine Richtung, die zum Abschluss führt, und lässt die Ausgaben der Schicht bei produktiven Tokens möglichst unverändert. Erlaubt sind nur Vorzeichenwechsel und Zweierpotenz-Verschiebungen der Exponenten. Ein Ising-Problem (eine mathematische Formulierung, die sich auf Binärentscheidungen abbildet) wird pro Ausgabezeile gelöst, entweder per simulated annealing oder per quanteninspirierter simulierter Bifurkation auf einer GPU.",
+    "## Ergebnisse laut Paper",
+    "Auf MATH-500 erreicht Tree-Ising 54,6 Prozent und liegt damit vor dem Agenten-Eingriff mit 51,7 Prozent. Das Basismodell kommt laut Paper auf 7,9 Prozent. Die Autoren berichten außerdem, dass der Eingriff in allen fünf Mathe-Benchmarks besser abschneidet, bei MATH-500 und GSM8K mit statistisch signifikantem Abstand nach Korrektur für multiples Testen. Verändert werden 13 bis 17 Prozent weniger Gewichte, die BF16-Bit-Flips sinken um den Faktor 2,2 bis 2,3. Laut Paper braucht das Verfahren vier Forward-Pass-Anfragen, null LLM-Tokens und etwa 0,90 Dollar GPU-Zeit. Auf Qwen3.5-2B steigt die GSM8K-Genauigkeit von 21,6 auf 69,4 Prozent.",
+    "## Einordnung",
+    "Diese Zahlen stammen von den Autoren und sind bisher nicht unabhängig geprüft. Ein Teil der Demonstration lief zudem als Machbarkeitsnachweis auf einem IBM-Heron-Quantenprozessor mit QAOA, der nur ein Teilproblem mit acht Variablen löste. Die Angaben zum MIT-Agenten stammen aus der Arbeit der Autoren und sind hier als deren Darstellung zu lesen."
+   ],
+   "quellen": [
+    {
+     "titel": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits (Hugging Face Papers)",
+     "url": "https://huggingface.co/papers/2611.14210"
+    },
+    {
+     "titel": "State trees (Hugging Face Papers)",
+     "url": "https://huggingface.co/papers/2610.31931"
+    },
+    {
+     "titel": "Code-Repository (GitHub)",
+     "url": "https://github.com/TheQuantumGOAT/Tree-Ising"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer lokal mit kleinen Sprachmodellen arbeitet, kann den Code aus dem GitHub-Repository auf eigene Modelle anschauen.",
+    "Wer Fine-Tuning-Verfahren vergleicht, findet hier einen gradientenfreien Ansatz zum Nachlesen.",
+    "Wer Mathematik-Benchmarks liest, kann die Tabellen mit Basismodell und Agenten-Eingriff gegenüberstellen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "MATH-500 Genauigkeit",
+    "balken": [
+     {
+      "label": "Basismodell",
+      "wert": 7.9,
+      "anzeige": "7,9 %"
+     },
+     {
+      "label": "Agenten-Eingriff",
+      "wert": 51.7,
+      "anzeige": "51,7 %"
+     },
+     {
+      "label": "Tree-Ising",
+      "wert": 54.6,
+      "anzeige": "54,6 %"
+     }
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-11-10",
+   "kennzahlen": [
+    {
+     "label": "MATH-500 (Tree-Ising)",
+     "wert": "54,6 %"
+    },
+    {
+     "label": "MATH-500 (Agenten-Eingriff, laut Paper)",
+     "wert": "51,7 %"
+    },
+    {
+     "label": "GSM8K Qwen3.5-2B",
+     "wert": "21,6 % → 69,4 %"
+    },
+    {
+     "label": "Forward-Pass-Anfragen",
+     "wert": "4 (Agent: 50)"
+    },
+    {
+     "label": "GPU-Kosten",
+     "wert": "ca. 0,90 $ (Herstellerangabe der Autoren)"
+    }
+   ],
+   "signal": "Ein Verfahren ohne LLM-Tokens soll einen Agenten-Eingriff bei Mathematik-Benchmarks übertreffen. Die Zahlen stammen von den Autoren und sind noch nicht unabhängig bestätigt.",
+   "link": "https://huggingface.co/papers/2611.14210",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "tree-ising-sprachmodell-fehler-per-bit-edits-statt-llm-agent",
+   "hinzugefuegt": "2026-11-11T12:59:11Z"
+  },
   {
    "titel": "Infrathon: KI-Agenten optimieren echte KI-Infrastruktur über 24 Stunden",
    "kurz": "Ein Forschungspapier stellt den Benchmark Infrathon vor, der prüft, wie gut Sprachagenten KI-Infrastruktur über lange Zeiträume verbessern. Die Ergebnisse zeigen, dass kurze Tests Fortschritte und Rangfolgen verfälschen können.",
@@ -13340,6 +13511,56 @@
  ],
  "projekte": [
   {
+   "titel": "BookLeme: Bücher als installierbare Agent Skills",
+   "kurz": "BookLeme ist ein Open-Source-Werkzeug, das ein Buch in einen Agent Skill übersetzt. Laut Projektseite entstehen dabei eine Wissensdatenbank oder ein laufendes Verhaltensmodell, das sich prüfen lässt.",
+   "artikel": [
+    "BookLeme (chinesisch 读了么) ist ein Projekt auf GitHub, das ein Buch in eine Sammlung von Anweisungen für KI-Agenten umwandelt. Der Name spielt auf „Hast du es gelesen?“ an. Das Repository hatte zum Zeitpunkt des Abrufs 108 Sterne.",
+    "## Zwei Arten von Ergebnissen",
+    "Die Software erzeugt nach Angaben des Projekts zwei Produkttypen. Eine Wissensdatenbank (knowledge_pack) enthält ein Inhaltsverzeichnis, nachladbare Kapitelteile und Entscheidungshilfen. Ein Verhaltens-Skill (behavior_skill) beschreibt Rolle, Regeln, Zustandsablauf und Ausgabeformat, etwa für ein Coaching-Gespräch.",
+    "## Prüfung der Zitate",
+    "Ein Kernpunkt ist die Prüfung der Treue zum Original. Jedes Zitat muss laut Projektseite wortgleich im Buchtext vorkommen. Ein Teil dieser Kennzahlen stammt aus einer einzelnen Testreihe mit einem 273-seitigen chinesischen Buch; die Angaben sind Herstellerangaben des Projekts und nicht unabhängig geprüft.",
+    "## Urheberrecht",
+    "Die Ausgaben sind laut Dokumentation strukturierte Notizen ohne Originalpassagen. Generierte Skills von fremden Büchern sind standardmäßig privat zu halten und dürfen nicht ohne Weiteres veröffentlicht werden. Der MIT-Lizenz unterliegt nur der Code, nicht die verarbeiteten Bücher.",
+    "## Einordnung",
+    "Das Projekt nennt selbst Punkte, die noch offen sind: Ein automatischer LLM-Bewertungsschritt ist noch nicht angebunden, und zwei weitere Buchtypen sind noch in Arbeit. Das Grundprinzip, Wissen eher als Struktur statt als Zusammenfassung zu speichern, bezeichnet das Projekt selbst als nicht verifizierte Annahme."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub – bookleme/bookleme",
+     "url": "https://github.com/bookleme/bookleme"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Ein eigenes Fachbuch in einen Coaching-Skill verwandeln, den ein KI-Agent später Schritt für Schritt anwendet.",
+    "Ein Nachschlagewerk zu einem Sachbuch erzeugen, das gezielt nach Frameworks durchsucht werden kann.",
+    "Vor dem Teilen prüfen, ob ein generierter Skill nur eigene, strukturierte Notizen enthält."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "bookleme run",
+    "zeilen": [
+     "> python3 -m bookleme run --input buch.md",
+     "✓ Quelle eingelesen",
+     "✓ Zitate wortgleich geprüft",
+     "⚠ Lizenzangabe fehlt: standardmäßig privat",
+     "● Status: Skill erzeugt"
+    ]
+   },
+   "macher": "BookLeme contributors (Open-Source-Projekt, MIT-Lizenz)",
+   "branche": "Open Source · KI-Agenten",
+   "jahr": "2026",
+   "tools": [
+    "Python 3.9+ (nur Standardbibliothek)",
+    "GitHub"
+   ],
+   "kennzahlen": "108 Sterne auf GitHub (Stand Abruf); 273-seitiges Testbuch; 7 Qualitätsmetriken, davon Zitattreue 1.00 (Herstellerangabe)",
+   "link": "https://github.com/bookleme/bookleme",
+   "linkLabel": "Zum Repository",
+   "id": "bookleme-bucher-als-installierbare-agent-skills",
+   "hinzugefuegt": "2026-11-11T12:59:11Z"
+  },
+  {
    "titel": "STE80 Humanizer: KI-Texte lesbarer machen mit kontrolliertem Englisch",
    "kurz": "Der STE80 Humanizer ist eine Agenten-Skill, die typische KI-Floskeln entfernt und Sätze an ASD-STE100 angelehnt umschreibt. Die Methode kombiniert zwei Ansätze, deren Grundidee Andrej Karpathy teilte.",
    "artikel": [
@@ -17317,8 +17538,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-11T05:50:36Z",
-  "neueFunde": 2,
-  "standAktualisiert": "2026-11-10T11:50:21Z"
+  "letzterScan": "2026-11-11T12:59:11Z",
+  "neueFunde": 4,
+  "standAktualisiert": "2026-11-11T12:59:11Z"
  }
 }
