@@ -3384,6 +3384,152 @@
  ],
  "radar": [
   {
+   "titel": "Infrathon: KI-Agenten optimieren echte KI-Infrastruktur über 24 Stunden",
+   "kurz": "Ein Forschungspapier stellt den Benchmark Infrathon vor, der prüft, wie gut Sprachagenten KI-Infrastruktur über lange Zeiträume verbessern. Die Ergebnisse zeigen, dass kurze Tests Fortschritte und Rangfolgen verfälschen können.",
+   "artikel": [
+    "Ein neues arXiv-Papier untersucht, ob moderne Agenten auf Basis großer Sprachmodelle echte KI-Infrastruktur über lange Zeithorizonte kontinuierlich verbessern können. Dafür wurde der Benchmark Infrathon entwickelt, der verschiedene Optimierungsaufgaben auf mehreren Stufen umfasst.",
+    "## Versuchsaufbau",
+    "Sechs Modelle wurden in insgesamt 150 Läufen mit jeweils 24 Stunden Rechenbudget getestet. Zusammen ergibt das laut Papier mehr als 10.000 GPU-Stunden.",
+    "## Zentrale Ergebnisse",
+    "Die Rangfolge der Modelle hängt von der Länge des Testzeitraums ab. Außerdem verbesserten sich 135 der 150 Läufe in der zweiten Hälfte ihres Budgets noch weiter. Kurze Auswertungen können dadurch sowohl Optimierungsgewinne als auch Verschiebungen bei der relativen Modellleistung übersehen.",
+    "Die Autoren berichten, dass Agenten Lösungen finden können, die von Menschen entworfene Ausgangslösungen übertreffen. Konkret steigt laut Papier das mittlere KV-Cache-Kompressionsverhältnis von 6,82 Prozent mit dem von Menschen entworfenen Codec Quant-VideoGen auf 19,86 Prozent. Der KV-Cache ist der Zwischenspeicher, den Sprachmodelle beim Generieren nutzen; Kompression spart Speicher. Das Modell Claude Opus 5.5 wird im Papier als Agent genannt; diese Angabe stammt aus dem Papier und ist nicht unabhängig geprüft.",
+    "## Hürden",
+    "Die Analyse der Agenten-Trajektorien nennt Aufgabenverletzungen, unzuverlässige Tests und vorzeitiges Beenden als Hindernisse für dauerhafte Verbesserungen.",
+    "Das Projekt stellt außerdem Ressourcen bereit, um lange Aufgaben zu erstellen, Agenten zu bewerten und Infrastrukturlösungen zu finden."
+   ],
+   "quellen": [
+    {
+     "titel": "Infrathon: Benchmarking Language Agents for Real-World, Long-Horizon AI Infra Optimization (Hugging Face Paper Page)",
+     "url": "https://huggingface.co/papers/2611.11995"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer KI-Infrastruktur betreibt, kann prüfen, ob Agenten eigene Optimierungsaufgaben über längere Zeit sinnvoll bearbeiten.",
+    "Forschende können die im Papier beschriebenen Ressourcen nutzen, um eigene Langzeit-Benchmarks aufzubauen.",
+    "Teams können bei Agenten-Tests auf Auswertungen über längere Zeiträume achten, da kurze Läufe Ergebnisse verfälschen können."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "KV-Cache-Kompressionsverhältnis (mittlerer Wert, laut Papier)",
+    "balken": [
+     {
+      "label": "Quant-VideoGen (human-designed)",
+      "wert": 6.82,
+      "anzeige": "6,82 %"
+     },
+     {
+      "label": "Claude Opus 5.5 (Agent)",
+      "wert": 19.86,
+      "anzeige": "19,86 %"
+     }
+    ]
+   },
+   "radar": true,
+   "quelle": "arXiv",
+   "datum": "2026-11-10",
+   "kennzahlen": [
+    {
+     "label": "Modelle",
+     "wert": "6"
+    },
+    {
+     "label": "Läufe",
+     "wert": "150"
+    },
+    {
+     "label": "Budget pro Lauf",
+     "wert": "24 Stunden"
+    },
+    {
+     "label": "GPU-Stunden",
+     "wert": "über 10.000"
+    },
+    {
+     "label": "Läufe mit Verbesserung in der zweiten Hälfte",
+     "wert": "135 von 150"
+    }
+   ],
+   "signal": "Benchmarks über lange Horizonte könnten Modellrankings anders zeigen als kurze Tests; Agenten finden laut Papier teils bessere Lösungen als menschliche Baselines.",
+   "link": "https://huggingface.co/papers/2611.11995",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "infrathon-ki-agenten-optimieren-echte-ki-infrastruktur-uber-",
+   "hinzugefuegt": "2026-11-11T05:50:36Z"
+  },
+  {
+   "titel": "Roboter lernt Aufgaben im Kontext statt in den Gewichten",
+   "kurz": "Ein eingefrorenes Modell lernt aus einer einzigen Vorführung, indem es die Aufgabe in einer Simulation übt und das Feedback in seinen Kontext schreibt. Auf allen 50 Aufgaben des Benchmarks RoboTwin 2.0 erreicht das System laut Paper 83,4 % Erfolg.",
+   "artikel": [
+    "Trainierte Aktionsmodelle speichern Manipulationsfähigkeiten in den Netzwerkgewichten. Dadurch hängt das Gelernte an der Verteilung der Daten, mit denen trainiert wurde. Kontextbasiertes Lernen (In-Context Learning, ICL) umgeht diese Kopplung, hat bisher aber nicht die Leistung trainierter Policies erreicht.",
+    "## Der Ansatz: World In-Context Learning",
+    "Die Autoren schlagen World In-Context Learning (WICL) vor. Ein eingefrorenes Modell startet mit einer Vorführung, übt die Aufgabe in einer Welt wie einem Simulator und schreibt das Feedback in seinen Kontext statt in die Gewichte. Die Begründung: Was ein Agent im Kontext lernt, ist eher semantisch, etwa Aufgabenschritte und Objektrollen, und weniger visuelles Aussehen. Erfahrung aus einer Welt lässt sich daher auf eine andere übertragen.",
+    "## Das System RoboScript",
+    "Auf dieser Basis entstand RoboScript, eine modulare Infrastruktur. Aus einer einzelnen Vorführung lernt es jede Aufgabe durch Üben in der Simulation und friert das Wissen als sogenanntes Task Memory ein. Dieses eingefrorene Gedächtnis wird auf neuen Szenen eingesetzt. Laut Paper ist dabei sichergestellt, dass alle Eingaben für den Einsatz auch auf einem echten Roboter verfügbar sind.",
+    "## Ergebnisse laut Paper",
+    "Im Mittel erreicht RoboScript 83,4 % Erfolg über saubere und randomisierte Umgebungen, ohne Gradientenupdates. Das übertrifft nach Angaben der Autoren die stärkste trainierte Policy um mehr als 20 Punkte. Außerdem soll das Verfahren über visuelle Verteilungen hinweg generalisieren, sich durch Reflexion verbessern und mit dem Foundation Model skalieren. Ein Transfer auf einen physischen Zweiarm-Roboter gelang über eine Anpassung des Memorys an eine andere Bauform (Cross-Embodiment). Die Autoren schreiben, der Code sei öffentlich verfügbar.",
+    "## Einordnung",
+    "Die Ergebnisse stammen aus dem Paper der Autoren und sind bisher nicht unabhängig geprüft. Der Eintrag beschreibt ausschließlich die dort genannten Angaben."
+   ],
+   "quellen": [
+    {
+     "titel": "World In-Context Learning for Agentic Robot Manipulation (Hugging Face Paper Page)",
+     "url": "https://huggingface.co/papers/2611.12885"
+    },
+    {
+     "titel": "Projektseite RoboScript",
+     "url": "https://archeone-ai.github.io/RoboScript/"
+    },
+    {
+     "titel": "GitHub-Repository RoboScript",
+     "url": "https://github.com/ArcheOne-AI/RoboScript"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer sich für Roboterlernen interessiert, kann den veröffentlichten Code auf der GitHub-Seite ansehen und ausprobieren.",
+    "Entwickler können prüfen, ob sich der Ansatz mit eigenen Simulationsaufgaben nachbauen lässt.",
+    "Interessierte können die Projektseite lesen, um das Konzept der Task Memory zu verstehen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "RoboTwin 2.0, Mittelwert über 50 Aufgaben (Angaben laut Paper)",
+    "balken": [
+     {
+      "label": "Stärkste trainierte Policy",
+      "wert": 63,
+      "anzeige": "über 20 Punkte weniger"
+     },
+     {
+      "label": "RoboScript (WICL)",
+      "wert": 83.4,
+      "anzeige": "83,4 %"
+     }
+    ]
+   },
+   "radar": true,
+   "quelle": "arXiv",
+   "datum": "2026-11-09",
+   "kennzahlen": [
+    {
+     "label": "Erfolgsquote (Mittel, 50 Aufgaben RoboTwin 2.0)",
+     "wert": "83,4 %"
+    },
+    {
+     "label": "Demonstrationen pro Aufgabe",
+     "wert": "1"
+    },
+    {
+     "label": "Gradientenupdates",
+     "wert": "keine"
+    }
+   ],
+   "signal": "Ein Paper legt nahe, dass Roboter Manipulationsaufgaben im Kontext statt über Trainings lernen können. Die Zahlen stammen von den Autoren selbst und sind nicht unabhängig überprüft.",
+   "link": "https://huggingface.co/papers/2611.12885",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "roboter-lernt-aufgaben-im-kontext-statt-in-den-gewichten",
+   "hinzugefuegt": "2026-11-11T05:50:36Z"
+  },
+  {
    "titel": "Reframe: Visuelle Agenten lernen, Tool-Beobachtungen wirklich zu nutzen",
    "kurz": "Das Paper Reframe beschreibt ein zweistufiges Nachtraining für visuelle Agenten, das den Beobachtungszustand nach Tool-Aufrufen gezielt ausrichtet. Laut Autorenangaben übertrifft es Mix-RL und vanilla MOPD über 14 Bild- und Videobenchmarks.",
    "artikel": [
@@ -17171,8 +17317,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-10T23:58:34Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-11-11T05:50:36Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-10T11:50:21Z"
  }
 }
