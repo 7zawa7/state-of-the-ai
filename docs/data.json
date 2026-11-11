@@ -3472,6 +3472,70 @@
  ],
  "radar": [
   {
+   "titel": "Apple testet „Harbor“: Mac-Cluster als privater KI-Server",
+   "kurz": "Laut einem Leaker arbeitet Apple an einer Mac-App namens Harbor, mit der sich lokale KI-Modelle einfach betreiben lassen. Die App ist derzeit in einer privaten Vorschau.",
+   "artikel": [
+    "Der Leaker Aaron Perris hat laut 9to5Mac Hinweise auf eine neue Mac-App von Apple namens Harbor gefunden. Sie soll einen Mac in einen privaten KI-Inferenzserver verwandeln, also einen Rechner, auf dem trainierte KI-Modelle Anfragen beantworten.",
+    "## Was die App laut Angaben können soll",
+    "Nach dem Beitrag von Perris lassen sich offene Modelle (sogenannte Open-Weight-Modelle, deren Gewichte frei verfügbar sind) direkt auf Apple-Silicon-Chips ausführen. Die Daten sollen dabei den eigenen Rechner nicht verlassen und nicht in die Cloud gelangen. Dies sind Herstellerangaben aus dem geleakten Material, nicht geprüfte Fakten.",
+    "Harbor soll Geräte über Thunderbolt 5 automatisch erkennen und zu einem Cluster verbinden. Dabei werden die Speicher (Unified Memory) mehrerer Macs zusammengelegt, sodass größere Modelle laufen oder mehr Anfragen gleichzeitig bearbeitet werden können als auf einem einzelnen Gerät.",
+    "Außerdem soll die App Modelle innerhalb der Oberfläche herunterladen und laden, ohne Kommandozeile. Die Einrichtung soll laut Angabe nur Minuten dauern.",
+    "## Einordnung",
+    "Harbor ist laut 9to5Mac derzeit in einer privaten Vorschau unter Apples Marke Claris. Der Artikel hält es für wahrscheinlich, dass die App in den kommenden Wochen und Monaten öffentlich erscheint. Eine offizielle Bestätigung von Apple gibt es in dem Material nicht.",
+    "Der Artikel verweist darauf, dass Macs in diesem Jahr vor allem wegen günstiger Modelle und als Rechner für lokale KI-Modelle an Beliebtheit gewonnen haben, etwa Mac Studio und Mac mini."
+   ],
+   "quellen": [
+    {
+     "titel": "Apple has new Mac app coming to make running local AI models easy – 9to5Mac",
+     "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50446520"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer einen oder mehrere Macs mit Apple-Chip besitzt, könnte später Open-Weight-Modelle lokal testen, sobald Harbor öffentlich verfügbar ist.",
+    "Entwickler könnten prüfen, ob sich die Speicher mehrerer Macs per Thunderbolt 5 für größere Modelle nutzen lassen.",
+    "Wer sensible Daten verarbeitet, könnte den Ansatz eines lokalen Servers gegenüber Cloud-Diensten abwägen."
+   ],
+   "radar": null,
+   "quelle": "Fachpresse",
+   "datum": "2026-11-10",
+   "kennzahlen": [
+    {
+     "label": "Verbindung",
+     "wert": "Thunderbolt 5"
+    },
+    {
+     "label": "Status",
+     "wert": "Private Preview (Claris-Marke)"
+    },
+    {
+     "label": "Quelle Hinweis",
+     "wert": "Hacker News, 488 Punkte"
+    }
+   ],
+   "signal": "Apple scheint lokale KI-Inferenz auf Macs stärker in den Fokus zu rücken. Die Info stammt von einem Leaker und ist noch nicht offiziell bestätigt.",
+   "link": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+   "linkLabel": "Zum Artikel auf 9to5Mac",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Harbor",
+    "zeilen": [
+     "> Mac-Cluster per Thunderbolt 5 verbinden",
+     "✓ Geräte automatisch erkannt",
+     "⚠ Status: private Vorschau",
+     "- Kommandozeile nicht nötig",
+     "+ Speicher mehrerer Macs gepoolt",
+     "● Open-Weight-Modell lokal geladen"
+    ]
+   },
+   "id": "apple-testet-harbor-mac-cluster-als-privater-ki-server",
+   "hinzugefuegt": "2026-11-11T20:06:57Z"
+  },
+  {
    "titel": "Tree-Ising: Sprachmodell-Fehler per Bit-Edits statt LLM-Agent reparieren",
    "kurz": "Eine arXiv-Arbeit mit Hugging-Face-Bezug stellt Tree-Ising vor, eine Methode, die Denkschleifen eines kleinen Sprachmodells durch gezielte Änderungen einzelner Bits in den Gewichten behebt. Laut Paper übertrifft sie dabei einen von einem LLM-Agenten geschriebenen Eingriff auf MATH-500.",
    "artikel": [
@@ -13511,6 +13575,72 @@
  ],
  "projekte": [
   {
+   "titel": "lot-map: Live-Karte zeigt, was Claude Code gerade tut",
+   "kurz": "lot-map ist eine Erweiterung (Mod) für Claude Code, die neben dem Chat eine Live-Karte einblendet. Werkzeugaufrufe, Modellschritte, Hooks, Skills und Subagents leuchten dort auf, sobald sie passieren.",
+   "artikel": [
+    "lot-map ist ein Projekt von alexeyw auf GitHub, das mit 333 Sternen verzeichnet ist. Es handelt sich um eine Erweiterung (im Projekt „Mod“ genannt) für Claude Code, das Programmier-Werkzeug von Anthropic. Statt einer reinen Liste von Befehlen zeigt ein Bereich neben dem Chat eine Karte der Arbeit.",
+    "## Wie die Karte funktioniert",
+    "Jeder Werkzeugaufruf, jeder Modellschritt, jeder Hook und jeder Skill sendet einen Impuls aus der Mitte zu seiner Station. Stationen gibt es etwa für Speicher, Dateien, Shell, Netzwerk, Browser, Agents, Skills und Hooks. Ein Hook ist eine vom Nutzer eingerichtete Regel, die Aufrufe etwa ablehnen oder um Erlaubnis bitten kann. Wer häufig genutzte Stationen hat, sieht eine dickere Verbindungslinie, sodass am Ende einer Sitzung erkennbar ist, wohin die Arbeit ging.",
+    "## Installation und Optionen",
+    "Die Installation erfolgt laut Projektseite über den Befehl /plugin install lot-map --marketplace alexeyw/lot-map in einer Terminal-Sitzung oder über claude plugin install in der Shell. Die Karte benötigt im Terminal mindestens 144 Spalten. Das Projekt läuft in fünf Sprachen (Englisch, Russisch, Spanisch, Französisch, Deutsch) und arbeitet laut Beschreibung lokal. Laut Projektangabe wurde es auf Claude Code 2.1.321 unter macOS gebaut und getestet; Nutzer berichten zudem von Funktion unter Windows. Diese Angaben stammen vom Projekt selbst.",
+    "## Einordnung",
+    "Die Erweiterung richtet sich an Menschen, die während einer Sitzung nachvollziehen wollen, was der Agent gerade macht, statt Befehle nachzulesen. Die Angaben beruhen auf der Projektseite auf GitHub; unabhängige Tests sind dem Material nicht zu entnehmen."
+   ],
+   "quellen": [
+    {
+     "titel": "alexeyw/lot-map auf GitHub",
+     "url": "https://github.com/alexeyw/lot-map"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer mit Claude Code arbeitet, kann die Karte installieren und sehen, welche Werkzeuge und Hooks bei einer Aufgabe tatsächlich laufen.",
+    "Wer Hooks eingerichtet hat, kann in der Karte prüfen, wann diese Anfragen ablehnen oder Kontext hinzufügen.",
+    "Wer Sitzungen nachträglich verstehen möchte, kann anhand der dicker werdenden Verbindungen erkennen, wo die Arbeit schwerpunktmäßig lag."
+   ],
+   "ausprobieren": {
+    "prompt": "/plugin install lot-map --marketplace alexeyw/lot-map",
+    "tool": "Claude Code",
+    "url": "https://github.com/alexeyw/lot-map"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "lot-map",
+    "zeilen": [
+     "> /plugin install lot-map --marketplace alexeyw/lot-map",
+     "✓ Marketplace hinzugefügt",
+     "● Karte: Dateien aktiv",
+     "· Shell beendet",
+     "✕ Hook hat Aufruf abgelehnt"
+    ]
+   },
+   "tag": "Claude Code Erweiterung",
+   "macher": "alexeyw",
+   "branche": "Software-Entwicklung",
+   "jahr": 2026,
+   "tools": [
+    "Claude Code"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "333"
+    },
+    {
+     "label": "Sprachen",
+     "wert": "5"
+    },
+    {
+     "label": "getestet mit",
+     "wert": "Claude Code 2.1.321 (macOS, laut Hersteller-/Projektangabe)"
+    }
+   ],
+   "link": "https://github.com/alexeyw/lot-map",
+   "linkLabel": "Projekt auf GitHub",
+   "id": "lot-map-live-karte-zeigt-was-claude-code-gerade-tut",
+   "hinzugefuegt": "2026-11-11T20:06:57Z"
+  },
+  {
    "titel": "BookLeme: Bücher als installierbare Agent Skills",
    "kurz": "BookLeme ist ein Open-Source-Werkzeug, das ein Buch in einen Agent Skill übersetzt. Laut Projektseite entstehen dabei eine Wissensdatenbank oder ein laufendes Verhaltensmodell, das sich prüfen lässt.",
    "artikel": [
@@ -17538,8 +17668,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-11T12:59:11Z",
-  "neueFunde": 4,
+  "letzterScan": "2026-11-11T20:06:57Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-11T12:59:11Z"
  }
 }
