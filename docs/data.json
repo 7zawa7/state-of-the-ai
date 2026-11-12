@@ -1,6 +1,59 @@
 {
  "news": [
   {
+   "titel": "Google bringt Gemini Decision 1: 1.000 Fragen in einem Durchlauf bewerten",
+   "kurz": "Google Deepmind hat die Gemini Decisions API vorgestellt, die viele geschlossene Fragen gleichzeitig beantwortet. Laut Google ist das Modell schnell und deutlich günstiger als Gemini 3.5 Flash-Lite.",
+   "artikel": [
+    "Google Deepmind hat die Gemini Decisions API vorgestellt. Sie ist für schnelle Entscheidungen mit geschlossenen Antworten gedacht, also etwa Ja/Nein-Fragen, Multiple-Choice-Aufgaben und Bewertungen auf einer Skala. Das zugrunde liegende Modell heißt Gemini Decision 1.",
+    "## Was das Modell kann",
+    "Gemini Decision 1 verarbeitet bis zu 1.000 unabhängige Fragen in einem einzigen Durchlauf. Dabei werden Text, Bilder, Audio, Video und PDFs unterstützt. Die Antworten kommen laut Angaben zwischen 150 und 250 Millisekunden und enthalten Wahrscheinlichkeiten sowie Konfidenzwerte.",
+    "Als Beispiel zeigt Google ein Foto einer Küchenarbeitsplatte. Das Modell beantwortete dort gleichzeitig drei Fragentypen: ob ein Fleck vorhanden ist (Konfidenz 0,95), welche Reinigungsmaßnahme passt (98 Prozent) und wie schwer der Schaden auf einer Skala ist (1,19 von 2). Diese Beispielwerte stammen von Google.",
+    "## Kosten und Verfügbarkeit",
+    "Laut Google kostet die API 0,10 US-Dollar pro einer Million Input-Token, ohne Gebühr für Output-Token. Das sei etwa fünfmal günstiger als Gemini 3.5 Flash-Lite. Diese Preis- und Kostenangabe ist eine Herstellerangabe. Die API ist aktuell über Google AI Studio verfügbar, Integrationen für OpenRouter, LangChain, Vercel und weitere Plattformen werden ausgerollt.",
+    "## Benchmarks",
+    "Google gibt an, dass Gemini Decision 1 in mehreren Kategorien der eigenen Benchmark-Suite vorne liegt, etwa bei Agenten-Routing, logischem Schlussfolgern und multimodalem Verständnis. Außerdem erreiche es den niedrigsten Kalibrierungsfehler (Top-1 ECE). Auch diese Ergebnisse sind Herstellerangaben und nicht unabhängig geprüft.",
+    "## Einordnung",
+    "Google nennt eigene interne Einsätze der API: dynamisches Model-Routing in Gemini Notebook, Design-Prototyping in Stitch und Sicherheitsprüfungen in der Google-Suche. Ähnliche Modelle gab es laut The Decoder in den letzten Wochen bereits von dem Startup Jev, sowie von OpenAI, Cloudflare und Microsoft.",
+    "Ein Fachbegriff kurz erklärt: Ein Token ist ein Textabschnitt, nach dem Modelle abgerechnet werden. Input-Token sind Eingaben, Output-Token die generierten Antworten."
+   ],
+   "quellen": [
+    {
+     "titel": "Google joins the decision-model wave with Gemini Decision 1, scoring 1,000 questions in a single pass – The Decoder",
+     "url": "https://the-decoder.com/google-joins-the-decision-model-wave-with-gemini-decision-1-scoring-1000-questions-in-a-single-pass/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Man kann kostenlos oder günstig über Google AI Studio testen, wie das Modell Fragen zu eigenen Bildern oder Texten beantwortet.",
+    "Man kann eigene Ja/Nein- oder Bewertungsfragen als Liste formulieren und die Antworten mit Konfidenzwerten vergleichen lassen."
+   ],
+   "ausprobieren": {
+    "prompt": "Beantworte für dieses Foto jeweils mit Ja/Nein und Konfidenz: Ist ein Fleck sichtbar? Welche Reinigungsmaßnahme ist passend? Wie stark ist der Schaden auf einer Skala von 0 bis 2?",
+    "tool": "Google AI Studio",
+    "url": "https://aistudio.google.com/"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Herstellerangabe: Kosten pro 1 Mio. Input-Token",
+    "balken": [
+     {
+      "label": "Gemini 3.5 Flash-Lite (ca. 5x teurer, laut Google)",
+      "wert": 5,
+      "anzeige": "ca. 5x"
+     },
+     {
+      "label": "Gemini Decisions API",
+      "wert": 1,
+      "anzeige": "0,10 $"
+     }
+    ]
+   },
+   "bereich": "Text",
+   "datum": "2026-11-11",
+   "id": "google-bringt-gemini-decision-1-1-000-fragen-in-einem-durchl",
+   "hinzugefuegt": "2026-11-12T01:52:46Z"
+  },
+  {
    "titel": "Tausende Grok-Apps ohne Login offen erreichbar – darunter Patientendaten und Klartext-Passwörter",
    "kurz": "Die sicherheitsfirma Claroc fand über 35.000 mit dem KI-Assistenten Grok gebaute Web-Apps, die ohne Anmeldung zugänglich waren. Darunter waren Patientendaten und interne Dokumente von SpaceXSI selbst.",
    "artikel": [
@@ -13575,6 +13628,145 @@
  ],
  "projekte": [
   {
+   "titel": "KI-Agenten finden Maya-Siedlung in Lidar-Daten – die Stätte war bereits kartiert",
+   "kurz": "Ein Hobby-Experimentator ließ KI-Agenten öffentliche NASA-Lidar-Daten aus Mexiko auswerten; sie fanden eine Siedlung, die nicht im Register des INAH stand. Später stellte sich heraus, dass Archäologen die Stätte bereits 2025 kartiert hatten.",
+   "artikel": [
+    "Der Autor ist nach eigenen Angaben kein Archäologe. Er ließ während einer Reise durch Peru mehrere KI-Systeme (Gemini, ChatGPT, Claude und Grok) überlegen, wie man verborgene Ruinen im Dschungel finden kann. Satellitenbilder helfen dabei wenig, weil Baumkronen die Bauwerke verdecken. Lidar, also Laserscanning aus der Luft, kann dagegen durch Lücken im Blätterdach bis zum Boden messen.",
+    "## Vorgehen",
+    "Die Agenten wandelten rund 1.200 km² öffentlich verfügbarer Lidar-Streifen in Bilder um. Laut Beitrag suchten 48 Agenten diese Bilder nach Pyramiden, Plattformen und Plätzen ab und filterten natürliche Hügel, Dolinen und Straßen heraus. Ein spezielles Modell oder einen Klassifikator gab es dem Autor zufolge nicht; die Agenten betrachteten die Bilder und folgten einer Anleitung.",
+    "## Fund und Meldung",
+    "Ein Agent meldete eine größere Siedlung auf einem Hügel, die offenbar nicht registriert war. Laut Beschreibung gab es dort einen ebenen Platz, eine ovale Pyramide von mindestens 8 bis 12 Metern Höhe, einen erhöhten Hof und eine flache Mulde, die ein Wasserreservoir gewesen sein könnte. Die Agenten prüften auch die Rohdaten der Punktwolke, um sicherzustellen, dass die Formen nicht von Bäumen stammten. Der Autor schickte einen Bericht auf Spanisch an das INAH, das Nationale Institut für Anthropologie und Geschichte Mexikos.",
+    "Das INAH antwortete am 21. Oktober, dass unter der angegebenen Lage kein registrierter archäologischer Fundplatz verzeichnet sei.",
+    "## Korrektur",
+    "Am 11. November stellte der Autor klar, dass die Stätte bereits in einer Studie von Estrada-Belli et al. (2025) kartiert worden war. Die Agenten hatten sie bei der Literaturrecherche übersehen; sie war lediglich nicht im Register des INAH eingetragen. Der Autor spricht daher von einer Wiederentdeckung statt einer Entdeckung.",
+    "## Einordnung",
+    "Die Deutung der Siedlung als kleines Zentrum aus der Klassik (etwa 250 bis 900 n. Chr.) bezeichnet der Autor selbst als Spekulation. Laut Beitrag wurde die Stätte nun an das INAH und die Archäologen übergeben, die sie zuerst kartiert hatten. Der Beitrag selbst bleibt eine Erfahrungsbericht-Erzählung eines Laien und ist keine wissenschaftliche Publikation."
+   ],
+   "quellen": [
+    {
+     "titel": "My AI Agents (Re)discovered a Maya Site in 72 Hours",
+     "url": "https://pietromiotti.com/latest/maya-site"
+    },
+    {
+     "titel": "Hacker News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50452455"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Öffentlich verfügbare Lidar-Daten, etwa von NASA-Missionen, lassen sich für eigene Auswertungen nutzen, sofern die Lizenzen es erlauben.",
+    "Funde sollten vor einer Veröffentlichung mit Fachstellen wie dem INAH abgeglichen werden, da die Fundstelle hier bereits bekannt war.",
+    "Bei KI-gestützter Bildanalyse lohnt es sich, Ergebnisse mit Literatur und Registern gegenzuprüfen, bevor man sie als Neuigkeit präsentiert."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Agenten-Auswertung",
+    "zeilen": [
+     "> 1.200 km² Lidar-Streifen als Bilder",
+     "✓ 48 Agenten suchen Pyramiden und Plätze",
+     "⚠ Natürliche Hügel und Dolinen gefiltert",
+     "✓ Verdächtige Stätte gemeldet",
+     "● INAH-Antwort: kein registrierter Fundplatz",
+     "● Nachtrag: bereits 2025 kartiert"
+    ]
+   },
+   "macher": "Pietro Miotti (Autor des Blogbeitrags)",
+   "branche": "Archäologie / KI-Anwendung",
+   "jahr": 2025,
+   "tools": [
+    "Gemini",
+    "ChatGPT",
+    "Claude",
+    "Grok"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Analysierte Lidar-Fläche",
+     "wert": "ca. 1.200 km²"
+    },
+    {
+     "label": "Eingesetzte Agenten",
+     "wert": "48"
+    },
+    {
+     "label": "Pyramidenhöhe (geschätzt)",
+     "wert": "mind. 8–12 m"
+    }
+   ],
+   "link": "https://pietromiotti.com/latest/maya-site",
+   "linkLabel": "Original-Beitrag lesen",
+   "id": "ki-agenten-finden-maya-siedlung-in-lidar-daten-die-statte-wa",
+   "hinzugefuegt": "2026-11-12T01:52:46Z"
+  },
+  {
+   "titel": "mcp-for-blender-pro: KI-Assistent für Blender mit MCP-Server",
+   "kurz": "Ein Blender-Addon, das einen KI-Assistenten mit Chat-Oberfläche und einen MCP-Server (Model Context Protocol) in Blender bringt. Der Assistent kann Szenen prüfen, Objekte bauen, Materialien ändern und mehrstufige Abläufe ausführen.",
+   "artikel": [
+    "Das Projekt »mcp-for-blender-pro« von SsKanDon ist ein Addon für Blender, das einen KI-Assistenten direkt in die 3D-Software bringt. Laut Projektseite kann der Assistent die aktuelle Szene untersuchen, bevor er handelt, Objekte erstellen, Materialien zuweisen, Assets suchen und Exporte vorbereiten. Die Ergebnisse lassen sich im Chatfenster verfolgen und im Viewport ansehen.",
+    "## Chat, Szene und Modellwahl",
+    "Neben dem Chat gibt es ein eigenes Studio-Fenster mit Chat, Szenenobjekten, Viewport-Schnappschüssen, Freigaben und einer Aufgabenliste. Verbunden werden können laut Angaben unter anderem OpenAI, Anthropic Claude, Google Gemini, OpenRouter und Ollama für lokale Modelle sowie eigene Schnittstellen. Modelle sollten Tool-Calling unterstützen, also das Aufrufen von Werkzeugen durch das Modell.",
+    "## Teams aus mehreren Agenten",
+    "Für größere Aufgaben lässt sich eine Team-Kette mit Managern, Workern und Reviewern einrichten. Der Manager zerlegt die Anfrage, Worker führen die Szenenoperationen aus, Reviewer prüfen das Ergebnis. Die Aufgaben laufen nacheinander, damit Änderungen in fester Reihenfolge bleiben. Laut Projektseite erhält eine blockierte Aufgabe einen Korrekturversuch; scheitert auch die zweite Prüfung, stoppt der Ablauf.",
+    "## MCP-Server und Werkzeuge",
+    "Der eingebaute MCP-Server ist ein Standard, über den externe Programme wie OpenCode Werkzeuge ansprechen können. Die Projektseite nennt 21 Szenenwerkzeuge, etwa zum Anlegen von Würfeln, Kameras und Lichtern, zum Verschieben, Duplizieren und Zuweisen von Materialien sowie für Python-Skripte über bpy, die Python-Schnittstelle von Blender. Asset-Quellen sind laut Angaben Poly Haven, Sketchfab und Poly Pizza.",
+    "## Kontrolle und Einschränkungen",
+    "Operationen können genehmigt und nach dem aktuellen Schritt abgebrochen werden; Änderungen lassen sich als benannte Schritte rückgängig machen. Die Projektseite betont, dass die Prüfung von Python-Code keine Sicherheitsumgebung ist. Die Zugangsdaten werden in den Benutzereinstellungen gespeichert, der Chatverlauf gilt nur für die aktuelle Sitzung.",
+    "## Installation",
+    "Laut Anleitung wird das ZIP-Paket über Blender-Einstellungen unter »Install from Disk« installiert und das Panel über die N-Leiste im 3D-Viewport geöffnet. Das Paket richtet sich nach Angaben an Windows x64 mit Blender 4.2 oder neuer. Das Projekt steht unter der MIT-Lizenz und ist laut Seite unabhängig, also nicht mit der Blender Foundation oder den KI-Anbietern verbunden."
+   ],
+   "quellen": [
+    {
+     "titel": "SsKanDon/blender-ai-mcp-addon auf GitHub",
+     "url": "https://github.com/SsKanDon/blender-ai-mcp-addon"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Einfache Produktszenen mit Sockel, Kamera und Licht per Textanweisung im Chat aufbauen lassen.",
+    "Wiederkehrende Blender-Arbeiten wie Duplizieren oder Materialzuweisung automatisieren.",
+    "Vor Änderungen die Szene vom Assistenten beschreiben lassen, um die Struktur zu verstehen."
+   ],
+   "ausprobieren": {
+    "prompt": "Inspect this scene and explain its object structure before making any changes.",
+    "tool": "mcp-for-blender-pro",
+    "url": "https://github.com/SsKanDon/blender-ai-mcp-addon"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "mcp-for-blender-pro",
+    "zeilen": [
+     "> Inspect this scene and explain its object structure",
+     "✓ Szene analysiert",
+     "⚠ Keine Änderungen ohne Freigabe",
+     "- Alte Materialzuweisung entfernt",
+     "+ Matte blaue Materialzuweisung hinzugefügt",
+     "● Status: bereit"
+    ]
+   },
+   "tag": "Blender-Addon",
+   "macher": "SsKanDon",
+   "branche": "3D / Kreativsoftware",
+   "jahr": "",
+   "tools": [
+    "Blender",
+    "MCP (Model Context Protocol)",
+    "OpenCode",
+    "Poly Haven",
+    "Sketchfab",
+    "Poly Pizza"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "100 ★"
+    }
+   ],
+   "link": "https://github.com/SsKanDon/blender-ai-mcp-addon",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "mcp-for-blender-pro-ki-assistent-fur-blender-mit-mcp-server",
+   "hinzugefuegt": "2026-11-12T01:52:46Z"
+  },
+  {
    "titel": "lot-map: Live-Karte zeigt, was Claude Code gerade tut",
    "kurz": "lot-map ist eine Erweiterung (Mod) für Claude Code, die neben dem Chat eine Live-Karte einblendet. Werkzeugaufrufe, Modellschritte, Hooks, Skills und Subagents leuchten dort auf, sobald sie passieren.",
    "artikel": [
@@ -17668,8 +17860,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-11T20:06:57Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-12T01:52:46Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-11T12:59:11Z"
  }
 }
