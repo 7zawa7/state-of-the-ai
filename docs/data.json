@@ -1,6 +1,52 @@
 {
  "news": [
   {
+   "titel": "Anthropic portiert Claude mit KI-Hilfe in drei Tagen auf AMD-Chips",
+   "kurz": "Anthropic behauptet laut einer Investorenpräsentation, mit seinem eigenen Modell Mythos Claude in drei Tagen auf AMD-GPUs gebracht zu haben, fast ohne menschliches Zutun. Die Angaben stammen vom Unternehmen und sind nicht unabhängig geprüft.",
+   "artikel": [
+    "Anthropic sagt, es habe seine Abhängigkeit von Nvidia mit einer Multi-Chip-Strategie verringert. Laut Mitgründer Tom Brown trainiert und betreibt das Unternehmen Claude inzwischen auf allen vier großen Chip-Familien und behandelt diese als einen austauschbaren Rechenpool.",
+    "## Test mit AMD-GPUs",
+    "Der konkreteste Test war der Wechsel auf AMD-Grafikprozessoren (GPUs). Bisher beschäftigte die Einrichtung einer neuen Chipplattform oft dutzende Ingenieure über Monate. Laut Anthropic lief Claude auf AMD-Hardware nach nur drei Tagen, und das Modell Mythos schrieb oder portierte nahezu 100 Prozent der Kernels selbst. Kernels sind die Rechenroutinen, die direkt auf dem Chip laufen.",
+    "Die Angabe bezieht sich laut Anthropic auf die Prompt-Verarbeitung eines Anthropic-Modells auf AMD MI355X-GPUs. Als Vergleich nennt das Unternehmen sechs bis zwölf Monate für übliche Engineering-Ansätze.",
+    "## Bedeutung für Nvidia",
+    "Nvidias größter Vorteil liegt laut Bericht in der Kombination aus Hardware und Software, vor allem CUDA. CUDA ist das Software-Ökosystem, das Entwickler an Nvidia-Chips bindet. Wenn der Aufwand für Portierungen tatsächlich so stark sinkt, könnten Firmen leichter zwischen Anbietern wechseln und den besten Preis-Leistungs-Wert wählen. Nvidia genießt laut Artikel wegen seiner Marktdominanz eine Marge von über 70 Prozent.",
+    "## Weitere Pläne",
+    "Anthropic verteilt Rechenkapazität laut eigener Darstellung aus einem Pool auf AWS Trainium, Google TPUs, Nvidia-GPUs und AMD-GPUs. Zusätzlich baut das Unternehmen über das Programm „Anthropic Direct“ eigene Rechenzentren auf, in denen es Chips least und selbst betreibt, um die Gesamtkosten zu senken.",
+    "Beide großen GPU-Hersteller sind finanziell eng mit Anthropic verbunden. Nvidia hat laut Bericht bis zu 10 Milliarden Dollar zugesagt, AMD eine strategische Investition von bis zu 5 Milliarden Dollar angekündigt. Im Gegenzug plant Anthropic den Einsatz von bis zu zwei Gigawatt AMD-Instinct-MI455X-GPUs."
+   ],
+   "quellen": [
+    {
+     "titel": "Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days – The Decoder",
+     "url": "https://the-decoder.com/anthropic-says-ai-is-eroding-nvidias-cuda-lead-cutting-an-amd-chip-switch-from-months-to-three-days/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer Software für KI-Modelle entwickelt, kann verfolgen, wie sich der Aufwand für Portierungen zwischen Chipherstellern entwickelt.",
+    "Wer Cloud-Dienste nutzt, sollte beobachten, ob mehr Anbieter für KI-Rechenleistung verfügbar werden und Preise sinken."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-11-11",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Zeit für die Portierung auf neue Chips",
+    "balken": [
+     {
+      "label": "Übliche Methode (Monate)",
+      "wert": 6,
+      "anzeige": "6–12 Monate"
+     },
+     {
+      "label": "Mit Mythos (Anthropic-Angabe)",
+      "wert": 0.1,
+      "anzeige": "3 Tage"
+     }
+    ]
+   },
+   "id": "anthropic-portiert-claude-mit-ki-hilfe-in-drei-tagen-auf-amd",
+   "hinzugefuegt": "2026-11-12T09:39:38Z"
+  },
+  {
    "titel": "Google bringt Gemini Decision 1: 1.000 Fragen in einem Durchlauf bewerten",
    "kurz": "Google Deepmind hat die Gemini Decisions API vorgestellt, die viele geschlossene Fragen gleichzeitig beantwortet. Laut Google ist das Modell schnell und deutlich günstiger als Gemini 3.5 Flash-Lite.",
    "artikel": [
@@ -3524,6 +3570,208 @@
   }
  ],
  "radar": [
+  {
+   "titel": "MACaQ: Quantisierung für GGUF, lokale Inferenz und mehr",
+   "kurz": "Das Open-Source-Projekt MACaQ von Huawei quantisiert Text-, Bild-, Video- und Audiomodelle und lässt sie unter anderem mit llama.cpp, vLLM, Diffusers und PyTorch laufen. Laut Herstellerangaben braucht es weniger Speicher und Zeit als vergleichbare Verfahren.",
+   "artikel": [
+    "MACaQ ist ein Repository auf GitHub, das sich um Quantisierung dreht. Quantisierung bedeutet, die Gewichte eines KI-Modells mit weniger Bits zu speichern, damit es auf schwächerer Hardware läuft. Das Projekt beschreibt sich selbst als modellunabhängig, also nicht auf eine bestimmte Modellfamilie beschränkt.",
+    "## Was das Projekt abdeckt",
+    "Die Anleitungen gliedern sich nach Backend. Für Diffusers gibt es Bild-, Video- und Audiogenerierung mit W4A4, also 4 Bit für Gewichte und Aktivierungen. Für llama.cpp werden Textmodelle in GGUF-Dateien mit 2, 3 oder 4 Bit umgewandelt. vLLM dient der Textgenerierung und dem Serving, PyTorch der Sprachsynthese. Für jedes Backend wird eine eigene Python-3.12-Umgebung empfohlen.",
+    "## Herstellerangaben",
+    "Der Hersteller gibt an, dass ein Modell mit 122 Milliarden Parametern in 64 Minuten mit 32,5 GB Gerätespeicher quantisiert werden kann. Außerdem soll die Perplexität niedriger liegen als bei MR-GPTQ und DuQuant++ oder deren bester Llama-3-8B-Wert mit einem Elftel der Quantisierungszeit erreicht werden. Diese Werte stammen aus den Angaben des Projekts und sind nicht unabhängig geprüft.",
+    "## MACaQ-R",
+    "MACaQ-R verfeinert die Gewichtscodes einer bereits quantisierten GGUF-Datei, ohne deren Format zu verändern. Die Ergebnisse lassen sich deshalb mit einer normalen llama.cpp-Installation ausführen. Im Projekt wird ein KL-Divergenz-Vergleich zu FP16 gezeigt: Bei Qwen3.6-35B-A3B liegt MACaQ-R Q4_K_XL bei 0,013367, die Unsloth-Variante bei 0,015731, wobei niedriger besser ist. Beide Dateien haben laut Tabelle dieselbe Größe von 22,36 GB.",
+    "## Einordnung",
+    "Die Angaben im Repository beziehen sich auf die Hersteller-Benchmarks der Entwickler von Huawei. Für vLLM nennt das Projekt bei Qwen3.8-27B eine Perplexität von 2,8994 gegenüber 2,8463 bei BF16 sowie einen Prefill-Faktor von 2,33 und einen Decode-Faktor von 2,58. Die Unterstützung für Ascend-Hardware ist laut Readme nur über CANN-Pull-Requests verfügbar, eine vollständige Ausführung braucht eine Integration in eine Ascend-Laufzeit."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: huawei-csl/MACaQ",
+     "url": "https://github.com/huawei-csl/MACaQ"
+    },
+    {
+     "titel": "Paper: MACaQ (arXiv 2611.10649)",
+     "url": "https://arxiv.org/abs/2611.10649"
+    },
+    {
+     "titel": "MACaQ Blog (Huawei)",
+     "url": "https://huawei-csl.com/blog/macaq/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Ein eigenes Textmodell mit llama.cpp in eine kleinere GGUF-Datei umwandeln und lokal auf dem eigenen Rechner testen.",
+    "Bild- oder Videomodelle über Diffusers mit 4-Bit-Gewichten ausprobieren, falls die eigene Grafikkarte knapp an Speicher ist.",
+    "Eine bereits vorhandene GGUF-Datei mit MACaQ-R nachverfeinern und mit dem Standard-llama.cpp vergleichen."
+   ],
+   "quelle": "GitHub",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "152"
+    },
+    {
+     "label": "Quantisierungszeit (122B-Modell, Herstellerangabe)",
+     "wert": "64 Minuten"
+    },
+    {
+     "label": "Speicherbedarf (122B-Modell, Herstellerangabe)",
+     "wert": "32,5 GB"
+    },
+    {
+     "label": "KL-Divergenz MACaQ-R Q4_K_XL (Qwen3.6-35B-A3B)",
+     "wert": "0,013367"
+    }
+   ],
+   "signal": "Ein Huawei-Projekt mit vielen Backends und Modellen; die Leistungsangaben stammen vom Hersteller und sind nicht unabhängig geprüft.",
+   "link": "https://github.com/huawei-csl/MACaQ",
+   "linkLabel": "Zum Repository auf GitHub",
+   "id": "macaq-quantisierung-fur-gguf-lokale-inferenz-und-mehr",
+   "hinzugefuegt": "2026-11-12T09:39:38Z"
+  },
+  {
+   "titel": "AlphaProof Code verifiziert Signal-Kryptokern in vier Wochen",
+   "kurz": "Google Deepmind hat mit AlphaProof Code den Kryptokern des Messengers Signal mathematisch verifiziert, eine Arbeit, die sonst typischerweise Jahre dauert. KI-Agenten schrieben dafür über sechs Millionen Zeilen Beweiscode, von denen nur etwa ein Prozent von Menschen geprüft werden musste.",
+   "artikel": [
+    "Google Deepmind hat AlphaProof Code vorgestellt, ein KI-System, das mathematisch belegt, dass Software ihre Sicherheitsvorgaben ohne Fehler erfüllt. Als Demonstration diente das Verschlüsselungsprotokoll von Signal. Die Forscher benötigten dafür vier Wochen, eine Aufgabe, die typischerweise Jahre in Anspruch nimmt.",
+    "## Vom Entwurf zum tatsächlichen Code",
+    "Frühere Verifikationsversuche blieben laut einem Blogbeitrag der Deepmind-Forscher Pushmeet Kohli und Swarat Chaudhuri auf der Ebene des theoretischen Designs stehen. AlphaProof Code prüfte dagegen den echten Kryptokern, der auf den Geräten der Nutzer läuft.",
+    "## Die Arbeitsteilung",
+    "Zuerst definierten Experten formale Sicherheitsanforderungen. Danach schrieben KI-Agenten, die auf Gemini Carbon basieren, über sechs Millionen Zeilen in der Beweissprache Lean. Rund ein Prozent der Codebasis markierte das System für eine menschliche Prüfung. Zur Kontrolle wurden zwei absichtlich eingebaute Fehler sofort gefunden.",
+    "Erklärung: Lean ist eine Beweisassistenz-Sprache, in der sich mathematische Aussagen über Programme formal beweisen lassen. Formale Verifikation bedeutet, dass ein Programm nicht nur getestet, sondern mathematisch auf die Einhaltung seiner Spezifikation geprüft wird.",
+    "## Ausblick",
+    "Signal-CTO Ehren Kret sieht in dem Ansatz eine Stärkung des Vertrauens in den Datenschutz, da KI-gestützte Bedrohungen zunehmen. Deepmind plant laut Bericht, die Methode auf kritische Infrastruktur wie Stromnetze und Medizingeräte auszuweiten, unter anderem über das System CodeMender. Diese Pläne sind Ankündigungen des Herstellers und noch nicht belegt."
+   ],
+   "quellen": [
+    {
+     "titel": "Google Deepmind's AlphaProof Code verified Signal's cryptographic core in four weeks instead of years",
+     "url": "https://the-decoder.com/google-deepminds-alphaproof-code-verified-signals-cryptographic-core-in-four-weeks-instead-of-years/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer Software entwickelt, kann verstehen, wie formale Verifikation mit Beweisassistenten wie Lean funktioniert.",
+    "Wer sich für Datenschutz interessiert, kann prüfen, welche Sicherheitsaussagen von Messengern formal belegt sind."
+   ],
+   "radar": true,
+   "quelle": "Fachpresse",
+   "datum": "2026-11-11",
+   "kennzahlen": [
+    {
+     "label": "Dauer der Verifikation (laut Hersteller)",
+     "wert": "4 Wochen"
+    },
+    {
+     "label": "Generierte Beweiszeilen (laut Hersteller)",
+     "wert": "über 6 Mio. Zeilen Lean"
+    },
+    {
+     "label": "Zur menschlichen Prüfung markiert (laut Hersteller)",
+     "wert": "ca. 1 %"
+    }
+   ],
+   "signal": "Formale Verifikation eines echten Kryptokerns durch KI-Agenten, laut Herstellerangaben in vier Wochen statt Jahren.",
+   "link": "https://the-decoder.com/google-deepminds-alphaproof-code-verified-signals-cryptographic-core-in-four-weeks-instead-of-years/",
+   "linkLabel": "Zum Artikel bei The Decoder",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Verifikationsdauer (laut Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Typischerweise",
+      "wert": 104,
+      "anzeige": "Jahre (nicht beziffert)"
+     },
+     {
+      "label": "AlphaProof Code",
+      "wert": 4,
+      "anzeige": "4 Wochen"
+     }
+    ]
+   },
+   "id": "alphaproof-code-verifiziert-signal-kryptokern-in-vier-wochen",
+   "hinzugefuegt": "2026-11-12T09:39:38Z"
+  },
+  {
+   "titel": "SteerDistill: Quantisierte LLM-Agenten durch Lehrer-Steuerung nachtrainieren",
+   "kurz": "Ein Forschungspaper beschreibt SteerDistill, ein Verfahren, das Low-Bit-quantisierte LLM-Agenten mithilfe eines vollpräzisen Lehrermodells korrigiert. Laut Paper bleibt der Agent bei W4A16 innerhalb eines Punktes der BF16-Werte.",
+   "artikel": [
+    "Quantisierung verkleinert große Sprachmodelle, damit sie günstiger laufen. Bei Agenten, also Modellen, die Aufgaben in Umgebungen Schritt für Schritt ausführen, kann das aber die Aufgabenerfolgsquote drücken. Laut dem Paper übersehen quantisierte Agenten häufig Aufgabenanforderungen oder Umgebungsbedingungen.",
+    "## Die Idee",
+    "SteerDistill setzt auf eine Lehrer-Schüler-Konstellation. Ein eingefrorenes BF16-Modell (Lehrer) gibt dem quantisierten Schüler bei Wiederholungen Hinweise, und zwar in einer geschlossenen Schleife: Der Lehrer verfeinert seine Hinweise anhand von Rückmeldungen aus der Ausführung. So entstehen lokal geprüfte Korrekturen. Anschließend wird der Schüler ohne Lehrer und ohne Steuerungs-Prompts trainiert, sodass er allein arbeiten kann. Beide starten vom selben BF16-Checkpoint.",
+    "## Ergebnisse laut Paper",
+    "Die Autoren berichten über fünf agentische Benchmarks und drei Modelle. Bei W4A16 soll SteerDistill den stärksten quantisierten Vergleichsansatz um 1,67 bis 2,18 Punkte im Durchschnitt übertreffen. Bei W2A16 erreicht es auf Qwen3-8B den höchsten Durchschnittswert unter den getesteten quantisierten Baselines. Auf τ²-Bench liegt die Erfolgsquote laut Paper 1,84 Prozentpunkte über QeRL, bei 67 % weniger GPU-Stunden für das Training.",
+    "## Einordnung",
+    "Die Angaben stammen aus dem Paper und der Hugging-Face-Seite der Autoren, sind also noch nicht unabhängig geprüft. Code und Projektseite sind laut Eintrag öffentlich verfügbar. Ein Kommentar auf der Seite fragt nach dem Anteil fehlgeschlagener Rollouts ohne erfolgreiche Lehrerreferenz; eine Antwort dazu fehlt im vorliegenden Material."
+   ],
+   "quellen": [
+    {
+     "titel": "Hugging Face Paper-Seite: SteerDistill",
+     "url": "https://huggingface.co/papers/2611.13410"
+    },
+    {
+     "titel": "arXiv: SteerDistill (2611.13410)",
+     "url": "https://arxiv.org/abs/2611.13410"
+    },
+    {
+     "titel": "Projektseite und Fallbeispiele",
+     "url": "https://air-embodied-brain.github.io/SteerDistill/"
+    },
+    {
+     "titel": "Code auf GitHub",
+     "url": "https://github.com/air-embodied-brain/SteerDistill"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer quantisierte Modelle lokal betreibt, kann den veröffentlichten Code auf eigene Agentenaufgaben testen.",
+    "Entwickler können die Ergebnisse für W4A16 und W2A16 mit ihren eigenen Benchmarks vergleichen.",
+    "Interessierte können die Projektseite mit Fallbeispielen durchsehen, um die Methode zu verstehen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Durchschnittswert-Vorsprung bei W4A16 (laut Paper)",
+    "balken": [
+     {
+      "label": "Bester quantisierter Baseline",
+      "wert": 1.67,
+      "anzeige": "+1,67 Punkte"
+     },
+     {
+      "label": "SteerDistill",
+      "wert": 2.18,
+      "anzeige": "+2,18 Punkte"
+     }
+    ]
+   },
+   "radar": true,
+   "quelle": "Hugging Face",
+   "datum": "2026-11-10",
+   "kennzahlen": [
+    {
+     "label": "Vorsprung vs. stärkste quantisierte Baseline (W4A16)",
+     "wert": "1,67–2,18 Punkte"
+    },
+    {
+     "label": "Abstand zu BF16 (W4A16)",
+     "wert": "innerhalb 1 Punkt"
+    },
+    {
+     "label": "Vorsprung vs. QeRL auf τ²-Bench",
+     "wert": "1,84 Prozentpunkte Erfolgsquote"
+    },
+    {
+     "label": "Trainingsaufwand gegenüber QeRL (laut Paper)",
+     "wert": "67 % weniger GPU-Stunden"
+    }
+   ],
+   "signal": "Ein Ansatz, der Quantisierungsverluste als Verhaltensabweichung statt als allgemeine Genauigkeitslücke behandelt. Die Zahlen sind Angaben der Autoren und noch nicht unabhängig überprüft.",
+   "link": "https://huggingface.co/papers/2611.13410",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "steerdistill-quantisierte-llm-agenten-durch-lehrer-steuerung",
+   "hinzugefuegt": "2026-11-12T09:39:38Z"
+  },
   {
    "titel": "Apple testet „Harbor“: Mac-Cluster als privater KI-Server",
    "kurz": "Laut einem Leaker arbeitet Apple an einer Mac-App namens Harbor, mit der sich lokale KI-Modelle einfach betreiben lassen. Die App ist derzeit in einer privaten Vorschau.",
@@ -17860,8 +18108,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-12T01:52:46Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-11-12T09:39:38Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-11-11T12:59:11Z"
  }
 }
