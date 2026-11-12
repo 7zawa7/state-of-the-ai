@@ -1,6 +1,52 @@
 {
  "news": [
   {
+   "titel": "United Airlines verbietet KI-Agenten das Buchen von Flügen",
+   "kurz": "United Airlines untersagt es unautorisierten KI-Agenten, im Auftrag von Reisenden Flüge zu buchen. Als Gründe nennt die Airline Sicherheitsrisiken und mögliche Verstöße gegen Bundesregeln.",
+   "bereich": "Agenten",
+   "datum": "2026-05-20",
+   "artikel": [
+    "United Airlines hat am Mittwoch angekündigt, dass KI-Agenten keine Flugreservierungen mehr im Auftrag von Reisenden vornehmen dürfen. Die Airline begründet den Schritt mit Sicherheitsrisiken und der Möglichkeit, dass solche Aktionen gegen bundesrechtliche Vorschriften verstoßen.",
+    "KI-Agenten sind Programme, die selbstständig Aufgaben erledigen, etwa Produkte recherchieren, Angebote suchen oder Käufe abschließen. Um eine Flugbuchung durchzuführen, bräuchte ein solcher Agent Zugriff auf persönliche Daten und Zugangsdaten, zum Beispiel Zahlungsinformationen.",
+    "## Warum United die Reißleine zieht",
+    "United warnt, dass die Weitergabe von Kontozugangsdaten an private KI-Assistenten sensible Informationen gefährden könne. Zudem könnten Aktionen dieser Werkzeuge zu ungewollten Käufen, Kontoänderungen oder zur Nutzung von MileagePlus-Meilen führen.",
+    "Auch das Einchecken per KI-Agent könnte laut United gegen Vorschriften verstoßen. Reisende müssen etwa persönlich bestätigen, dass ihr Gepäck keine verbotenen Substanzen enthält.",
+    "## Was die Regel bedeutet",
+    "United will den Zugang über eigene digitale Kanäle sowie über Reisebüros und Aggregatoren einschränken. Die Airline passt ihre Buchungs- und Ticketingrichtlinien entsprechend an.",
+    "Der Luftfahrtanalytiker Henry Harteveldt von Atmosphere Research Group sieht darin den Versuch, die Kontrolle über den Buchungsprozess zu behalten. Flugsuchen kosteten Airlines Geld, und United wolle die Ausgaben durch den Ansturm von KI-Bot-Suchen vermeiden.",
+    "Andere Airlines gehen laut dem Bericht anders vor: Southwest macht sein Flugangebot für ChatGPT-Nutzer sichtbar. United-Tarife bleiben laut Harteveldt weiterhin über Portale wie Kayak, Hopper und Google Flights buchbar."
+   ],
+   "quellen": [
+    {
+     "titel": "United Airlines bans AI agents from booking flights on behalf of travelers (CBS News)",
+     "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News (658 Punkte)",
+     "url": "https://news.ycombinator.com/item?id=50458900"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Prüfen, ob Buchungen bei Airlines oder Portalen künftig noch über den eigenen Account möglich sind, bevor man einen KI-Assistenten damit beauftragt.",
+    "Bei KI-Agenten genau prüfen, welche Zugangsdaten und Zahlungsinformationen sie erhalten sollen.",
+    "Flugangebote weiterhin über Aggregatoren wie Kayak, Hopper oder Google Flights vergleichen, da United dort laut Analyst buchbar bleibt."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "united-policy",
+    "zeilen": [
+     "> KI-Agent: Flug buchen",
+     "⚠ Zugangsdaten an Dritt-KI nicht erlaubt",
+     "- Direktbuchung durch KI-Agent",
+     "+ Buchung über Kayak, Hopper, Google Flights",
+     "● Status: Neue Richtlinie aktiv"
+    ]
+   },
+   "id": "united-airlines-verbietet-ki-agenten-das-buchen-von-flugen",
+   "hinzugefuegt": "2026-11-12T22:52:46Z"
+  },
+  {
    "titel": "Anthropic portiert Claude mit KI-Hilfe in drei Tagen auf AMD-Chips",
    "kurz": "Anthropic behauptet laut einer Investorenpräsentation, mit seinem eigenen Modell Mythos Claude in drei Tagen auf AMD-GPUs gebracht zu haben, fast ohne menschliches Zutun. Die Angaben stammen vom Unternehmen und sind nicht unabhängig geprüft.",
    "artikel": [
@@ -3570,6 +3616,82 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Google startet Gemini Decisions API für schnelle Ja/Nein- und Auswahl-Entscheidungen",
+   "kurz": "Google hat die Gemini Decisions API vorgestellt, die mit dem Modell Gemini Decision 1 viele geschlossene Fragen in einem Durchlauf bewertet. Laut Herstellerangabe liegt die Latenz bei 150 bis 250 ms.",
+   "artikel": [
+    "Google hat die Gemini Decisions API eingeführt. Sie basiert auf dem neuen Modell Gemini Decision 1 (gemini-decision-1) und ist über die Gemini API in Google AI Studio verfügbar. Die Schnittstelle ist für geschlossene Entscheidungen gedacht, etwa Werkzeugauswahl, Richtlinienprüfungen, Modell-Routing oder die Bewertung von Inhalten.",
+    "## So funktioniert es",
+    "Statt Antworttext Token für Token zu erzeugen, bewertet das Modell die vorgegebenen Optionen in einem einzigen Durchlauf (Forward Pass). Pro Frage kommt eine Wahrscheinlichkeit beziehungsweise ein Konfidenzwert zwischen 0 und 1 zurück. So kann der eigene Code unsichere Fälle an einen Fallback oder einen menschlichen Prüfer weiterleiten. Eine Anfrage kann bis zu 1.000 unabhängige Fragen enthalten, die sich auf denselben Eingabe-Inhalt beziehen. Der Eingabe-Inhalt kann Text, Bilder, Audio, Video und PDFs umfassen, bis zu 256K Token.",
+    "Es gibt drei Fragetypen: noul für Ja/Nein-Fragen, choice für Auswahl aus 2 bis 255 Optionen und score für eine Bewertung auf einer geordneten Skala (Rubrik), die ein gewichtetes Ergebnis liefert.",
+    "## Herstellerangaben",
+    "Google gibt eine Latenz von 50 bis 100 ms für die Modellrechnung an, 150 bis 250 ms Ende-zu-Ende. Der Preis liegt laut Google bei 0,10 US-Dollar pro 1 Mio. Eingabe-Token, Ausgabe-Token werden nicht berechnet. Laut Google ist das Modell über die gemeinsame Benchmark-Suite fast fünfmal günstiger als Gemini 3.5 Flash-Lite mit der Interactions API und hat den geringsten Kalibrierungsfehler. Diese Werte stammen von Google und sind nicht unabhängig geprüft.",
+    "## Praxisbeispiele laut Google",
+    "Google nennt eigene Anwendungen: In Gemini Notebook leitet die API Anfragen an die passende Modellstufe weiter, laut Google mit bis zu 40 Prozent geringerer Latenz bei einfachen Anfragen. CC von Google Labs wählt damit eine Emoji-Reaktion aus mehr als 200 Optionen. Auch eine Sicherheitsschicht für MCP-Werkzeuge in der Suche wird genannt. Ein Hacker-News-Thread mit über 500 Punkten zeigt Interesse aus der Entwicklergemeinde, Details dazu liefert der Artikel jedoch nicht."
+   ],
+   "quellen": [
+    {
+     "titel": "Gemini Decisions API (Google Blog)",
+     "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+    },
+    {
+     "titel": "Hacker-News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50456791"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Du kannst eigene Eingaben wie Fotos mit Textnotizen gegen mehrere Ja/Nein- oder Auswahlfragen prüfen lassen.",
+    "Du kannst ein kleines Routing oder eine Inhaltsprüfung in einem eigenen Projekt testen, ohne eigene Klassifikatoren zu trainieren.",
+    "Du kannst dir über Google AI Studio einen API-Schlüssel holen und die Dokumentation für Python, JavaScript oder REST ausprobieren."
+   ],
+   "ausprobieren": {
+    "prompt": "Prüfe dieses Foto einer Küchenablage: Ist eine ungereinigte Flüssigkeit verschüttet? Welche Aktion passt: Abwischen, Reinigungsdienst oder bereit?",
+    "tool": "Google AI Studio",
+    "url": "https://aistudio.google.com"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "decisions.create",
+    "zeilen": [
+     "> Modell: gemini-decision-1",
+     "✓ has_spill: Wahrscheinlichkeit angegeben",
+     "✓ next_action: Auswahl mit Konfidenz",
+     "⚠ Konfidenz niedrig: an Mensch weiterleiten",
+     "● Latenz laut Google: 150–250 ms"
+    ]
+   },
+   "tag": "Radar",
+   "quelle": "Lab-Blog",
+   "datum": "2026-11-11",
+   "kennzahlen": [
+    {
+     "label": "Latenz Ende-zu-Ende (Herstellerangabe)",
+     "wert": "150–250 ms"
+    },
+    {
+     "label": "Preis Eingabe (Herstellerangabe)",
+     "wert": "0,10 $ pro 1 Mio. Token"
+    },
+    {
+     "label": "Ausgabe-Token",
+     "wert": "0 $ berechnet"
+    },
+    {
+     "label": "Max. Fragen pro Anfrage",
+     "wert": "1.000"
+    },
+    {
+     "label": "Max. Eingabe",
+     "wert": "256K Token"
+    }
+   ],
+   "signal": "Google bietet mit der Decisions API einen Weg, Klassifikation und Bewertung als einzelnen schnellen Aufruf statt als Textgenerierung anzubieten. Die Zahlen zu Preis und Geschwindigkeit sind Herstellerangaben.",
+   "link": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+   "linkLabel": "Google-Blog lesen",
+   "id": "google-startet-gemini-decisions-api-fur-schnelle-ja-nein-und",
+   "hinzugefuegt": "2026-11-12T22:52:46Z"
+  },
   {
    "titel": "Präzision on demand: Gewichte nur bei unsicheren Schritten in höherer Genauigkeit berechnen",
    "kurz": "Eine Studie zu einem kleinen lokalen Sprachmodell (Qwen3-0.6B) schlägt vor, Gewichte mit 8 Bit zu speichern, meist nur mit den oberen 4 Bit zu rechnen und nur bei unsicheren Schritten neu mit 8 Bit zu berechnen. Die Live-Daten trennen dieses Verfahren aber nicht eindeutig von den festen Varianten.",
@@ -18188,8 +18310,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-12T17:45:29Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-11-12T22:52:46Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-12T17:45:29Z"
  }
 }
