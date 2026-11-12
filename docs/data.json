@@ -3571,6 +3571,86 @@
  ],
  "radar": [
   {
+   "titel": "Präzision on demand: Gewichte nur bei unsicheren Schritten in höherer Genauigkeit berechnen",
+   "kurz": "Eine Studie zu einem kleinen lokalen Sprachmodell (Qwen3-0.6B) schlägt vor, Gewichte mit 8 Bit zu speichern, meist nur mit den oberen 4 Bit zu rechnen und nur bei unsicheren Schritten neu mit 8 Bit zu berechnen. Die Live-Daten trennen dieses Verfahren aber nicht eindeutig von den festen Varianten.",
+   "artikel": [
+    "Lokale Sprachmodelle lesen beim Erzeugen jedes Tokens die Gewichte aus dem Speicher. Üblich ist, für die gesamte Generierung eine feste Genauigkeit zu wählen. Die Autoren um Mohammed Nayeem Khan, Logesh L und Aliyas Ahmad Misri testen eine andere Verteilung: Die Gewichte liegen mit 8 Bit vor, der Schritt wird zunächst nur mit den oberen 4 Bit gerechnet (\"Quantisierung\" heißt hier die Reduktion der Zahlendarstellung).",
+    "## Gate über Unsicherheit",
+    "Ein Schritt wird nur dann mit 8 Bit wiederholt, wenn die Verteilung der Niedrigpräzisions-Ausgabe unsicher wirkt. Als Kriterium dienen die \"Entropie\" (ein Maß für die Streuung der Wahrscheinlichkeiten) über einer Schwelle oder ein kleiner Abstand zwischen den beiden wahrscheinlichsten Tokens. Die Kosten werden in gelesenen Gewichts-Bytes pro Token gezählt. Die Quantisierung ist simuliert, nicht in echter Hardware gemessen.",
+    "## Ergebnisse",
+    "Auf 36.724 wiederholten Schritten trennt die Entropie des Niedrigpräzisions-Durchlaufs Schritte, bei denen sich das häufigste Token ändert, mit einer AUC von 0,93. Bei einem Eskalationsbudget von 15 Prozent fängt das Entropie-Gate 78 Prozent dieser Wechsel, das Margin-Gate 94 Prozent. Ein Zufallsgate gleicher Rate würde laut den Autoren rechnerisch etwa 15 Prozent erwarten; das ist eine Berechnung, kein Lauf.",
+    "In 150 Live-Aufgaben aus GSM8K erreicht die reine 8-Bit-Variante 64,0 Prozent, die reine 4-Bit-Variante 55,3 Prozent (McNemar p = 0,053). Das Entropie-Gate mit 16 Prozent Eskalationsrate kommt auf 62,7 Prozent bei 0,87 der Gewichts-Bytes der 8-Bit-Variante. Der Unterschied liegt bei -1,3 Punkten gegenüber 8 Bit (Spanne -8,0 bis +5,3) und bei +7,3 Punkten gegenüber 4 Bit (Spanne +0,0 bis +14,7, p = 0,080). Die Live-Daten erlauben damit keine klare Aussage, ob das Gate besser ist als eines der beiden Enden.",
+    "## Einordnung",
+    "Laut Paper erreicht die verifizierte Spekulation bei ähnlichen Bytes null KL-Divergenz im selben Kostenmodell. Nicht getestet wurden eine Live-Zufallskontrolle, eine Denkmodus-Regel, ein zweites Modell und die Live-KL. Die Arbeit ist ein Preprint auf arXiv und wurde auf Hugging Face gelistet; Auswertungen ohne Live-Lauf sind ausdrücklich als Berechnung gekennzeichnet."
+   ],
+   "quellen": [
+    {
+     "titel": "Paper: Precision on Demand (Hugging Face)",
+     "url": "https://huggingface.co/papers/2611.14418"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer lokal mit kleinen Modellen arbeitet, kann prüfen, ob sich Genauigkeit bei unsicheren Schritten sparen lässt, bevor er ein festes Quantisierungsschema übernimmt.",
+    "Für Experimente mit Gewichtspräzision lohnt der Blick auf das Kostenmodell in gelesenen Bytes pro Token.",
+    "Vor einer Nutzung im Alltag sollten die Ergebnisse mit eigenen Aufgaben gegen feste 4- und 8-Bit-Varianten geprüft werden."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "GSM8K-Genauigkeit (150 Live-Aufgaben)",
+    "balken": [
+     {
+      "label": "4 Bit fest",
+      "wert": 55.3,
+      "anzeige": "55,3 %"
+     },
+     {
+      "label": "Entropie-Gate (16 % Eskalation)",
+      "wert": 62.7,
+      "anzeige": "62,7 %"
+     },
+     {
+      "label": "8 Bit fest",
+      "wert": 64.0,
+      "anzeige": "64,0 %"
+     }
+    ]
+   },
+   "quelle": "arXiv",
+   "datum": "2026-11-10",
+   "kennzahlen": [
+    {
+     "label": "Basismodell",
+     "wert": "Qwen3-0.6B"
+    },
+    {
+     "label": "Benchmark",
+     "wert": "GSM8K"
+    },
+    {
+     "label": "Replay-Schritte",
+     "wert": "36.724"
+    },
+    {
+     "label": "AUC Entropie (Flips)",
+     "wert": "0,93"
+    },
+    {
+     "label": "Live-Aufgaben",
+     "wert": "150"
+    },
+    {
+     "label": "Gewichts-Bytes Gate vs. 8 Bit",
+     "wert": "0,87"
+    }
+   ],
+   "signal": "Adaptive Gewichtspräzision pro Token ist eine interessante Forschungsrichtung, die Live-Belege sind aber noch zu dünn, um Nutzen gegenüber festen Varianten zu belegen.",
+   "link": "https://huggingface.co/papers/2611.14418",
+   "linkLabel": "Zum Paper",
+   "id": "prazision-on-demand-gewichte-nur-bei-unsicheren-schritten-in",
+   "hinzugefuegt": "2026-11-12T17:45:29Z"
+  },
+  {
    "titel": "MACaQ: Quantisierung für GGUF, lokale Inferenz und mehr",
    "kurz": "Das Open-Source-Projekt MACaQ von Huawei quantisiert Text-, Bild-, Video- und Audiomodelle und lässt sie unter anderem mit llama.cpp, vLLM, Diffusers und PyTorch laufen. Laut Herstellerangaben braucht es weniger Speicher und Zeit als vergleichbare Verfahren.",
    "artikel": [
@@ -18108,8 +18188,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-12T09:39:38Z",
-  "neueFunde": 4,
-  "standAktualisiert": "2026-11-11T12:59:11Z"
+  "letzterScan": "2026-11-12T17:45:29Z",
+  "neueFunde": 1,
+  "standAktualisiert": "2026-11-12T17:45:29Z"
  }
 }
