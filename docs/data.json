@@ -1,6 +1,92 @@
 {
  "news": [
   {
+   "titel": "Google stellt Gemini 4 Hydrogen vor – schnelles Modell für Coding und Agenten",
+   "kurz": "Google hat das Modell Gemini 4 Hydrogen vorgestellt, das auf Tempo und Effizienz für Alltagsaufgaben wie Programmieren und agentische Workflows ausgelegt ist. Laut Google-Angaben übertrifft es das stärkere Schwestermodell Argon im Artificial Analysis Intelligence Index knapp.",
+   "artikel": [
+    "Google hat am 12. November 2026 das Modell Gemini 4 Hydrogen vorgestellt. Es ist für schnelle Ausführung in agentischen Workflows gedacht, also in Abläufen, in denen ein KI-System selbstständig mehrere Schritte plant und ausführt. Die Frontier-Modelle Gemini 4 Carbon und Gemini 4 Argon sind dagegen für tiefes, langes Nachdenken bei schwierigen Aufgaben gedacht.",
+    "## Mehrere Modelle im Zusammenspiel",
+    "Mit Orchestrator in Google Antigravity können Entwickler laut Google innerhalb einer Sitzung zwischen Modellen wie Carbon und Hydrogen wechseln. Herstellerangaben zufolge erreichte Orchestrator auf dem Terminal-Bench 4.0 nahezu die Erfolgsquote von Carbon, verbrauchte dabei im Schnitt 24 Prozent weniger Kontingent und war 19 Prozent schneller.",
+    "## Leistung laut Hersteller",
+    "Google nennt im Vergleich zu Gemini 3.8 Flash deutlich höhere Werte: Auf dem Terminal-Bench 4.1 liegt Hydrogen bei 57 Prozent statt 18,2 Prozent. Außerdem seien erfundene Behauptungen mehr als fünfmal seltener. Im Artificial Analysis Intelligence Index erreicht Hydrogen bei der Standardstufe 51 Punkte gegenüber 50 bei Argon. Diese Zahlen stammen von Google beziehungsweise aus Herstellerangaben und sind nicht unabhängig geprüft.",
+    "## Preis und Verfügbarkeit",
+    "Der Preis liegt laut Google bei 1,50 US-Dollar pro Million Eingabe-Token und 7,50 US-Dollar pro Million Ausgabe-Token, und zwar über das gesamte Kontextfenster von einer Million Token. Das Modell soll in Google AI Studio, der Gemini API, Gemini für Unternehmen, der Gemini-App und in der Google Suche verfügbar sein. Bezahlte Abonnenten von Google AI Pro und Ultra können es zudem in Google Antigravity nutzen."
+   ],
+   "quellen": [
+    {
+     "titel": "Introducing Gemini 4 Hydrogen (Google Blog)",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50471431"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler können Hydrogen in Google AI Studio oder über die Gemini API für Programmier- und Testaufgaben ausprobieren.",
+    "Wer mit Dokumenten oder Tabellen arbeitet, kann das Modell in Google Sheets für Finanzmodelle nutzen, sofern der Zugang verfügbar ist.",
+    "Interessierte können die Hacker-News-Diskussion lesen, um unabhängige Einschätzungen zu den Herstellerangaben zu finden."
+   ],
+   "ausprobieren": {
+    "prompt": "Schreibe eine Python-Funktion, die eine CSV-Datei einliest, fehlende Werte auffüllt und das Ergebnis als neue Datei speichert. Erkläre danach kurz jeden Schritt.",
+    "tool": "Google AI Studio",
+    "url": "https://aistudio.google.com/"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Terminal-Bench 4.1 (laut Google)",
+    "balken": [
+     {
+      "label": "Gemini 3.8 Flash",
+      "wert": 18.2,
+      "anzeige": "18,2 %"
+     },
+     {
+      "label": "Gemini 4 Hydrogen",
+      "wert": 57,
+      "anzeige": "57 %"
+     }
+    ]
+   },
+   "bereich": "Text",
+   "datum": "2026-11-12",
+   "id": "google-stellt-gemini-4-hydrogen-vor-schnelles-modell-fur-cod",
+   "hinzugefuegt": "2026-11-13T11:14:51Z"
+  },
+  {
+   "titel": "Claude Meetings: Anthropics KI nimmt an Videocalls teil",
+   "kurz": "Anthropic hat Claude Meetings gestartet, eine Funktion, die Claude als sichtbaren Teilnehmer in Videocalls holt. Sie ist derzeit als Beta für Team- und Enterprise-Pläne verfügbar und unterstützt bisher nur Google Meet.",
+   "artikel": [
+    "Anthropic hat eine neue Funktion namens Claude Meetings vorgestellt. Claude tritt dabei in Videocalls als sichtbarer Teilnehmer auf. Während eines Gesprächs kann Claude Fragen beantworten, Dokumente und Whiteboards erstellen sowie Notizen und Aufgaben festhalten.",
+    "## Antworten und Werkzeuge",
+    "Standardmäßig antwortet Claude in Textform. Auf Tools, die verbunden sind, greift es nur zu, wenn es dafür eine Erlaubnis erhält.",
+    "## Nach dem Meeting",
+    "Alle Notizen, Transkripte und Dokumente, die Claude erstellt hat, stehen nach Ende des Calls auf einer eigenen Seite in claude.ai bereit.",
+    "## Datenschutz und Einschränkungen",
+    "Datenschutz-Einstellungen verhindern standardmäßig, dass Claude an Calls mit externen Teilnehmern teilnimmt. Organisationen mit HIPAA- oder kundenverwalteten Verschlüsselungskonfigurationen können Meetings derzeit nicht nutzen.",
+    "## Einordnung",
+    "Laut Bericht erweitert Claude Meetings frühere Neuerungen wie Whiteboards und Datendashboards. Diese verwandeln die Claude-App nach und nach in ein Werkzeug für alle Büroaufgaben. Anthropic kündigt an, dass weitere Plattformen folgen sollen."
+   ],
+   "quellen": [
+    {
+     "titel": "Claude Meetings lets Anthropic's AI join your video calls (The Decoder)",
+     "url": "https://the-decoder.com/claude-meetings-lets-anthropics-ai-join-your-video-calls/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Teams mit Business- oder Enterprise-Plan können Claude in Google-Meet-Calls einbinden, um Notizen und Aufgaben automatisch festhalten zu lassen.",
+    "Wer Meetings moderiert, kann Claude Whiteboards oder Dokumente während des Gesprächs erstellen lassen.",
+    "Nach dem Termin lassen sich Transkripte und Dokumente auf der Claude-Seite in claude.ai abrufen."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-11-12",
+   "tag": "Beta",
+   "id": "claude-meetings-anthropics-ki-nimmt-an-videocalls-teil",
+   "hinzugefuegt": "2026-11-13T11:14:51Z"
+  },
+  {
    "titel": "United Airlines verbietet KI-Agenten das Buchen von Flügen",
    "kurz": "United Airlines untersagt es unautorisierten KI-Agenten, im Auftrag von Reisenden Flüge zu buchen. Als Gründe nennt die Airline Sicherheitsrisiken und mögliche Verstöße gegen Bundesregeln.",
    "bereich": "Agenten",
@@ -14141,6 +14227,80 @@
  ],
  "projekte": [
   {
+   "titel": "Modern Web Guidance: Skills sollen Coding-Agenten vom veralteten JavaScript wegführen",
+   "kurz": "Google Chrome hat zusammen mit Microsoft Edge, Mozilla Firefox und dem MDN-Team ein Projekt gestartet, das Coding-Agenten mit aktuellem Web-Wissen versorgt. Die Skills sollen Modelle von alten Mustern hin zu nativen Browser-APIs lenken.",
+   "artikel": [
+    "Das Projekt „Modern Web Guidance“ liefert sogenannte Skills, also Wissenspakete für Coding-Agenten. Sie enthalten Web-Plattform-Expertise, Best Practices und Daten zur Browser-Kompatibilität. Ziel ist, dass KI-Assistenten beim Programmieren seltener auf veraltete Muster zurückgreifen.",
+    "## Warum das nötig ist",
+    "Laut Projektbeschreibung greifen Coding-Agenten oft zu älteren Mustern, weil ihre Trainingsdaten viel Legacy-Code enthalten. Dadurch entsteht mitunter aufgeblähtes JavaScript für Aufgaben, die der Browser heute nativ lösen kann. Selbst wenn ein Modell eine API kennt, fehlt ihm oft die Praxis, sie produktionsreif einzusetzen.",
+    "## Was enthalten ist",
+    "Die Leitfäden decken laut Projekt rund 250 moderne Web-Funktionen ab, unter anderem aus den Bereichen CSS und Layout, HTML und DOM sowie Animationen. Als Beispiele werden View Transitions, Container Queries, Popover API und Anchor Positioning genannt. Die Inhalte seien bewusst knapp gehalten, weil Evaluierungen zeigen sollen, welches Grundwissen Modelle ohnehin schon haben.",
+    "## Installation und Werkzeuge",
+    "Über den Befehl npx modern-web-guidance@latest install startet ein interaktiver Assistent. Die CLI kann außerdem Leitfäden suchen, abrufen und eine Codebasis auf Legacy-Muster scannen. Laut Projekt sollen damit Fallbacks bevorzugt werden, die leichtgewichtig sind, statt schwerer Polyfills.",
+    "## Einordnung",
+    "Die Angaben stammen aus der Projektdokumentation auf GitHub. Der Eintrag erreichte auf Hacker News 439 Punkte; die Diskussion dort habe ich nicht ausgewertet. Ob die Skills in der Praxis die Qualität des Codes verbessern, ist aus dem vorliegenden Material nicht belegt."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: GoogleChrome/modern-web-guidance",
+     "url": "https://github.com/GoogleChrome/modern-web-guidance"
+    },
+    {
+     "titel": "Hacker News: HN-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50443812"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Einen Coding-Agenten installieren, der bei Web-Projekten moderne Browser-APIs statt schwerer Bibliotheken vorschlägt.",
+    "Eigene Website mit dem CLI-Befehl auf veraltete Muster scannen lassen.",
+    "Über die Suchfunktion gezielt nach Leitfäden zu einer konkreten Funktion wie Dialogen suchen."
+   ],
+   "ausprobieren": {
+    "prompt": "npx modern-web-guidance@latest search \"animate a dialog modal backdrop\"",
+    "tool": "Modern Web Guidance CLI",
+    "url": "https://github.com/GoogleChrome/modern-web-guidance"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "modern-web-guidance",
+    "zeilen": [
+     "> npx modern-web-guidance@latest search \"animate a dialog modal backdrop\"",
+     "✓ Leitfäden gefunden",
+     "- ~2019-Muster aus dem Code entfernt",
+     "+ Native Browser-API hinzugefügt",
+     "● Status: Skill aktiv"
+    ]
+   },
+   "tag": "Projekt",
+   "macher": "Google Chrome, Microsoft Edge, Mozilla Firefox und MDN (Herstellerangabe laut Projektseite)",
+   "branche": "Webentwicklung / KI-Coding-Tools",
+   "jahr": "2026",
+   "tools": [
+    "Coding-Agenten",
+    "npm-CLI modern-web-guidance",
+    "Browser-APIs (z. B. Popover API, View Transitions)"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Web-Funktionen im Projekt",
+     "wert": "250"
+    },
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "439"
+    },
+    {
+     "label": "Commits",
+     "wert": "216"
+    }
+   ],
+   "link": "https://github.com/GoogleChrome/modern-web-guidance",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "modern-web-guidance-skills-sollen-coding-agenten-vom-veralte",
+   "hinzugefuegt": "2026-11-13T11:14:51Z"
+  },
+  {
    "titel": "Gratis-Skill für Claude Code und Codex: KI baut ein spielbares 3D-Actionspiel im Browser",
    "kurz": "Das GitHub-Projekt „guizang-game-skill“ von 歸藏 ist ein Agent-Skill für KI-Programmierassistenten, der ein im Browser spielbares 3D-Actionspiel mit KI-generierten Assets erstellen soll. Als Demo gibt es das Spiel „Nebelsperre am Bergtor“ (《雾锁山门》).",
    "artikel": [
@@ -18437,8 +18597,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-13T03:21:16Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-13T11:14:51Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-12T17:45:29Z"
  }
 }
