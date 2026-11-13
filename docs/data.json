@@ -1,6 +1,44 @@
 {
  "news": [
   {
+   "titel": "Anthropic bringt Claude for Manufacturing in die Fabrik-Software",
+   "kurz": "Anthropic hat ein Plugin namens Claude for Manufacturing veröffentlicht, das KI direkt mit Industriesoftware wie Autodesk Fusion, Oracle NetSuite und Infor verbindet. Die Abläufe laufen nur nach menschlicher Freigabe, physische Maschinen steuert das Plugin bislang nicht.",
+   "artikel": [
+    "Anthropic hat Claude for Manufacturing vorgestellt, ein Plugin, das einer KI direkten Zugriff auf industrielle Software gibt, um Fabrikabläufe zu automatisieren. Laut Anthropic-Angaben (Herstellerangabe) lässt sich das Plugin über vier universelle Schnittstellen mit Autodesk Fusion, Oracle NetSuite, Microsoft 365 und Infor verbinden. Weitere Systeme können über Dateiexporte nach Microsoft 365 eingebunden werden.",
+    "## Siebzehn Spezialfähigkeiten",
+    "Die 17 hinterlegten Fähigkeiten, in der Quelle als „Skills“ bezeichnet, erlauben es der KI, Angebote auf Basis des tatsächlichen Lagerbestands zu entwerfen, Lieferanten zu vergleichen und Qualitätsberichte sowie Konstruktionsvarianten zu erstellen. Während Maschinenstillständen kann sie zudem Sensordaten und Handbücher auswerten.",
+    "## Ersatzlieferanten und Produktionsplanung",
+    "Über ein zusätzliches Infor-Plugin kann Claude laut Quelle bei verspäteten Lieferungen bei Ersatzlieferanten bestellen und die Produktion neu planen. Dies geschieht erst nach menschlicher Freigabe. Alle Ergebnisse sind mit den Originaldokumenten verknüpft, damit Mitarbeitende sie prüfen können, bevor sie Kunden oder Lieferanten erreichen.",
+    "## Verfügbarkeit und Grenzen",
+    "Das Plugin steht Kunden der Tarife Team und Enterprise zur Verfügung. Physische Maschinen steuert es noch nicht. Dafür entwickelt Anthropic separat den sogenannten Model Hardware Standard, der als Research Preview KI-Agenten über standardisierte Treiber mit Geräten wie Roboterarmen und Mikroskopen verbinden soll. Laut Quelle verkürzt dies die Einrichtung von Wochen oder Monaten auf Stunden oder Minuten, menschliche Aufsicht bleibt jedoch nötig, da die KI physische Prozesse nur eingeschränkt versteht."
+   ],
+   "quellen": [
+    {
+     "titel": "Anthropic's Claude for Manufacturing plugs AI directly into factory software to automate industrial workflows",
+     "url": "https://the-decoder.com/anthropics-claude-for-manufacturing-plugs-ai-directly-into-factory-software-to-automate-industrial-workflows/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer in der Fertigung arbeitet, kann prüfen, ob sich Angebotserstellung oder Lieferantenvergleich mit einem solchen Plugin beschleunigen lassen.",
+    "Kleinere Werkstätten mit Autodesk Fusion oder Oracle NetSuite können testen, welche Routineaufgaben sich nach Freigabe automatisieren lassen.",
+    "Für private Bastler ist das Plugin derzeit kaum relevant, da es nur für Team- und Enterprise-Kunden verfügbar ist."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-11-13",
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Autodesk Fusion",
+     "Oracle NetSuite",
+     "Microsoft 365",
+     "Infor"
+    ]
+   },
+   "id": "anthropic-bringt-claude-for-manufacturing-in-die-fabrik-soft",
+   "hinzugefuegt": "2026-11-13T18:33:42Z"
+  },
+  {
    "titel": "Google stellt Gemini 4 Hydrogen vor – schnelles Modell für Coding und Agenten",
    "kurz": "Google hat das Modell Gemini 4 Hydrogen vorgestellt, das auf Tempo und Effizienz für Alltagsaufgaben wie Programmieren und agentische Workflows ausgelegt ist. Laut Google-Angaben übertrifft es das stärkere Schwestermodell Argon im Artificial Analysis Intelligence Index knapp.",
    "artikel": [
@@ -3702,6 +3740,143 @@
   }
  ],
  "radar": [
+  {
+   "titel": "SO-Arena: Benchmark prüft Zuverlässigkeit schneller KI-Modelle",
+   "kurz": "Ein neues Benchmark namens SO-Arena misst bei sogenannten System-One-Modellen nicht nur die Trefferquote, sondern auch, wie stabil ihre Entscheidungen sind. Das Ergebnis: Hohe Gesamtleistung bedeutet nicht automatisch verlässliche Entscheidungen.",
+   "artikel": [
+    "Das Paper stellt SO-Arena vor, ein Benchmark für sogenannte System-One-Modelle. Gemeint sind Modelle, die schnell und ohne langes Erzeugen vieler Zwischen-Tokens eine Entscheidung treffen sollen. Bisherige Tests geben laut den Autoren nur begrenzten Einblick in die Breite der Fähigkeiten und in die Verlässlichkeit dieser Entscheidungen.",
+    "## Was SO-Arena misst",
+    "SO-Arena deckt 11 Domänen und fünf Fähigkeitsfamilien ab. Die Referenzlabels werden laut Paper manuell gegen die für das Modell sichtbaren Eingaben geprüft. Zusätzlich gibt es interaktive Aufgaben, bei denen Modelle Aktionen in Sandboxen schrittweise ausführen. Bei schwierigen, schlussfolgernden Aufgaben vergleichen die Autoren System-One- mit System-Two-Ansätzen. Ein System-Two-Ansatz meint hier langsameres, schrittweises Nachdenken.",
+    "## Zuverlässigkeit statt nur Treffer",
+    "Neben der Genauigkeit prüft das Benchmark zwei Größen. Erstens die Entscheidungsstabilität, wenn die Antwortoptionen gezielt verändert werden. Zweitens die Erkennung fehlender Antworten, also ob ein Modell merkt, dass keine der angebotenen Optionen korrekt ist.",
+    "## Zentrale Befunde",
+    "Getestet wurden 21 Modelle. Der Nutzen von Skalierung und zusätzlichem Schlussfolgern unterscheidet sich laut Paper stark zwischen den Domänen. Das bemerkenswerteste Ergebnis: Das beste System-One-Modell belegt bei der Zuverlässigkeit nur Platz sieben. Die Autoren schließen daraus, dass Fähigkeitsspektrum und Entscheidungszuverlässigkeit als getrennte, sich ergänzende Dimensionen betrachtet werden sollten.",
+    "Das Projekt bietet laut Seite einen Datensatz auf Hugging Face sowie Code auf GitHub an. Das Paper selbst ist eine Forschungsarbeit auf arXiv und war auf Hugging Face Daily Papers mit 71 Upvotes vertreten."
+   ],
+   "quellen": [
+    {
+     "titel": "SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models (Hugging Face)",
+     "url": "https://huggingface.co/papers/2611.15777"
+    },
+    {
+     "titel": "Projektseite SO-Arena",
+     "url": "https://lichenlillc.github.io/SO-Arena"
+    },
+    {
+     "titel": "GitHub-Repository SO-Arena",
+     "url": "https://github.com/holdrain/SO-Arena"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Die Zuverlässigkeitsmetriken lassen sich als Denkanstoß nutzen, wenn man eigene KI-Werkzeuge bewertet.",
+    "Wer Modelle vergleicht, sollte neben der Trefferquote auch prüfen, ob Antworten bei geänderten Optionen stabil bleiben.",
+    "Das veröffentlichte Repository zeigt, wie ein solches Benchmark aufgebaut sein kann."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Platzierung des besten System-One-Modells",
+    "balken": [
+     {
+      "label": "Gesamtleistung",
+      "wert": 1,
+      "anzeige": "Spitze"
+     },
+     {
+      "label": "Zuverlässigkeit",
+      "wert": 7,
+      "anzeige": "Platz 7"
+     }
+    ]
+   },
+   "tag": "Benchmark",
+   "quelle": "Hugging Face",
+   "datum": "2026-11-13",
+   "kennzahlen": [
+    {
+     "label": "Domänen",
+     "wert": "11"
+    },
+    {
+     "label": "Fähigkeitsfamilien",
+     "wert": "5"
+    },
+    {
+     "label": "Getestete Modelle",
+     "wert": "21"
+    }
+   ],
+   "signal": "Hohe Benchmark-Werte garantieren keine verlässlichen Entscheidungen: Das beste System-One-Modell liegt bei der Zuverlässigkeit nur auf Platz sieben.",
+   "link": "https://huggingface.co/papers/2611.15777",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "so-arena-benchmark-pruft-zuverlassigkeit-schneller-ki-modell",
+   "hinzugefuegt": "2026-11-13T18:33:42Z"
+  },
+  {
+   "titel": "Ehemaliger OpenAI-Forscher will Nvidia-Blackwell-Spuren in sechs chinesischen KI-Modellen gefunden haben",
+   "kurz": "Will DePue behauptet, mit einer forensischen Methode erstmals technische Hinweise auf Zugang chinesischer KI-Labore zu Nvidias Blackwell-GPUs trotz US-Exportkontrollen gefunden zu haben. Den Beleg liefert er allein aus den veröffentlichten Modellgewichten.",
+   "artikel": [
+    "Der frühere OpenAI-Forscher Will DePue sagt, er habe eine forensische Analyse durchgeführt, die erstmals technische Belege dafür liefere, dass führende chinesische KI-Labore Zugang zu Nvidias neuester Blackwell-Hardware haben. Genannt werden DeepSeek, Moonshot AI, MiniMax und Ant Group. Laut DePue haben leitende Forscher bei OpenAI und Anthropic die Methode bereits unabhängig geprüft und seine Ergebnisse bestätigt. Diese Angabe stammt von DePue selbst und ist nicht unabhängig belegt.",
+    "## Die Methode",
+    "Die Analyse liest Chip-Signaturen direkt aus den veröffentlichten Modellgewichten aus. Gewichte sind Milliarden numerischer Werte eines KI-Modells. Vor dem Training befüllt PyTorch, ein verbreitetes Software-Framework, diese Werte mit Zufallszahlen, die aus einem Startwert (Seed) erzeugt werden. Weil die GPU die Arbeit auf ihre Rechenkerne verteilt und verschiedene Chipmodelle unterschiedlich viele Kerne haben, entsteht laut Bericht ein charakteristisches Muster. Hopper-Chips wie H100 und H800 nutzen 132 Kerne, Blackwell-Chips 148 oder 152, je nach Modell. Auch nach dem Training bleibt laut DePue ein schwaches statistisches Echo der ursprünglichen Verteilung erhalten.",
+    "## Die Befunde",
+    "Sechs chinesische Modelle, die seit April 2026 veröffentlicht wurden, zeigen laut DePue die Blackwell-Signatur. Ältere Modelle wie DeepSeek-V3 und Kimi K2.5 tragen Spuren der älteren Hopper-Generation. Die Analyse ordnet DeepSeek-V4-Flash und MiniMax-M3 den Chips B200 oder B300 zu. DeepSeek-V4-Pro, Kimi K3 und weitere zeigen das 152-Kern-Muster, das zu den flüssigkeitsgekühlten GB200- oder GB300-Racksystemen passt. Laut DePue sei Zufall statistisch ausgeschlossen. Seine Methode habe zudem alle 24 Kontrollmodelle mit bekannter Hardware korrekt erkannt.",
+    "## Grenzen der Aussage",
+    "Die Methode zeigt nur, welche Hardware die Gewichte initialisiert hat. Dass das Training auf denselben Systemen lief, ist laut Bericht sehr wahrscheinlich, aber nicht direkt belegt. Die Daten verraten weder Standort noch Besitzer der GPUs. Da chinesische Firmen Rechenkapazität in Rechenzentren außerhalb Chinas mieten können, belegt der Befund keinen physischen Schmuggel und keinen Verstoß gegen US-Exportrecht. Die Schätzung der Trainingskosten über eine halbe Milliarde Dollar stammt ebenfalls von DePue und beruht auf einem Stückpreis von etwa 70.000 Dollar pro Chip."
+   ],
+   "quellen": [
+    {
+     "titel": "Former OpenAI researcher says he found Nvidia Blackwell fingerprints hidden inside six Chinese AI models – THE DECODER",
+     "url": "https://the-decoder.com/former-openai-researcher-says-he-found-nvidia-blackwell-fingerprints-hidden-inside-six-chinese-ai-models/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Die Methode ist laut DePue auf GitHub als Verifikationscode veröffentlicht und lässt sich selbst nachvollziehen.",
+    "Wer eigene Modelle trainiert, kann prüfen, welche Hardware Gewichte initialisiert hat, sofern er Zugriff auf die Gewichte hat."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Anzahl Blackwell-GPUs je Trainingslauf (geschätzt)",
+    "balken": [
+     {
+      "label": "Kimi K3",
+      "wert": 4500,
+      "anzeige": "ca. 4.500 Blackwell-Prozessoren"
+     },
+     {
+      "label": "DeepSeek-V4-Pro",
+      "wert": 3000,
+      "anzeige": "ca. 3.000 Prozessoren"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-11-13",
+   "kennzahlen": [
+    {
+     "label": "Kerne Hopper (H100/H800)",
+     "wert": "132"
+    },
+    {
+     "label": "Kerne Blackwell (B200/B300 bzw. GB200/GB300)",
+     "wert": "148 bzw. 152"
+    },
+    {
+     "label": "Geschätzte Blackwell-GPUs gesamt (fünf Trainingsläufe)",
+     "wert": "ca. 12.000"
+    },
+    {
+     "label": "Geschätzte Kosten gesamt (laut DePue)",
+     "wert": "mehr als 500 Mio. US-Dollar"
+    }
+   ],
+   "signal": "Falls die Methode hält, wäre sie ein erster technischer Hinweis auf Blackwell-Zugang chinesischer Labore. Die Aussage stammt bisher von DePue selbst; die Schlussfolgerung zu Exportverstößen ist nicht belegt.",
+   "link": "https://the-decoder.com/former-openai-researcher-says-he-found-nvidia-blackwell-fingerprints-hidden-inside-six-chinese-ai-models/",
+   "linkLabel": "Originalartikel bei THE DECODER",
+   "id": "ehemaliger-openai-forscher-will-nvidia-blackwell-spuren-in-s",
+   "hinzugefuegt": "2026-11-13T18:33:42Z"
+  },
   {
    "titel": "OpenAI: Warum Frontier-Modelle ihre Gedanken immer schwerer überwachbar machen",
    "kurz": "OpenAI-Forscher haben untersucht, welche Trainingsschritte dazu führen, dass die Denkspuren (Chains of Thought) von Modellen wie GPT-6 Astra für Sicherheitsprüfer schwerer einsehbar werden. Laut Analyse ist dieser Transparenzverlust kein Naturgesetz, sondern hängt mit Entscheidungen zu Leistung und Kosten zusammen.",
@@ -18597,8 +18772,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-13T11:14:51Z",
+  "letzterScan": "2026-11-13T18:33:42Z",
   "neueFunde": 3,
-  "standAktualisiert": "2026-11-12T17:45:29Z"
+  "standAktualisiert": "2026-11-13T18:33:42Z"
  }
 }
