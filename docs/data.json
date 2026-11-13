@@ -3741,6 +3741,89 @@
  ],
  "radar": [
   {
+   "titel": "Ropedia Xperience 2: Menschliche Bewegungen und 3D-Szenen als Datenbasis für Physical AI",
+   "kurz": "Ropedia stellt einen Datensatz vor, der echte Umgebungen als 3D-Scans mit Ego-Videos und Körperbewegungen von Menschen verbindet. Daraus entstehen simulationsfähige Szenen und Roboter-Trajektorien, ohne dass ein Roboter vor Ort sein muss.",
+   "artikel": [
+    "Große Basismodelle können Roboter inzwischen direkt aus Bildern steuern, scheitern aber noch oft an langen, kontaktreichen Aufgaben in realen Umgebungen. Für weitere Fortschritte braucht es laut den Autoren zwei Ressourcen: Demonstrationen menschlichen Verhaltens und interaktive Umgebungen, in denen Richtlinien (Policies) im geschlossenen Regelkreis getestet und verbessert werden können.",
+    "## Was der Datensatz enthält",
+    "Ropedia Xperience 2 umfasst 1.589 veröffentlichte 3D-Scans im metrischen Maßstab und 4.230 Ego-Aufnahmen (Perspektive der handelnden Person) zu 74 Aufgaben, insgesamt 131 Stunden. Die Aufnahmen zeigen Hand- und Ganzkörperbewegungen bei alltäglichen Tätigkeiten. Jede Aufnahme ist an ihren Scan angeglichen, sodass Video, Bewegung und 3D-Raum dasselbe Koordinatensystem teilen.",
+    "## Vom Mensch zum Roboter",
+    "Aus diesen Daten werden simulationsfähige Szenen erzeugt, menschliche Bewegungen auf Ganzkörper-Roboterbahnen übertragen (Retargeting) und zusätzliche Verhaltensweisen über virtuelle Teleoperation sowie automatisch erzeugte Langzeit-Trajektorien gewonnen. Die Autoren sehen diese gemeinsame Erfassung von Umgebung und Verhalten als Referenzstandard für die Datensammlung in Physical AI.",
+    "## Einordnung",
+    "Die Autoren nennen als Ziel, eines Tages Skalierungsgesetze für Umgebungen und Verhalten zu finden, ähnlich wie sie bei Sprachmodellen beschrieben sind. Die Arbeit ist ein Datensatz- und Methodenbeitrag. Leistungsergebnisse auf Robotern werden im Auszug nicht beziffert. Die Modellnamen im Einleitungstext (etwa GPT-6 Astra oder Claude Fable 5.1) stammen aus dem Originaltext und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Paper-Seite auf Hugging Face",
+     "url": "https://huggingface.co/papers/2611.17060"
+    },
+    {
+     "titel": "arXiv-Paper: Ropedia Xperience 2",
+     "url": "https://huggingface.co/papers/2611.17060"
+    },
+    {
+     "titel": "Projektseite Ropedia",
+     "url": "https://ropedia.com/xperience/2-research/"
+    },
+    {
+     "titel": "GitHub-Repository Ropedia-Xperience-2",
+     "url": "https://github.com/Ropedia/Ropedia-Xperience-2"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Wer 3D-Simulationen baut, kann die veröffentlichten Scans als Ausgangsmaterial prüfen.",
+    "Wer Robotik-Projekte plant, kann das GitHub-Repository als Datenquelle für Demonstrationen testen.",
+    "Wer Ego-Videos von Alltagshandlungen auswerten möchte, findet im Datensatz 4.230 Aufnahmen zu 74 Aufgaben."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Umfang des Datensatzes (Anzahl)",
+    "balken": [
+     {
+      "label": "Aufnahmen",
+      "wert": 4230,
+      "anzeige": "4.230"
+     },
+     {
+      "label": "3D-Scans",
+      "wert": 1589,
+      "anzeige": "1.589"
+     },
+     {
+      "label": "Aufgaben",
+      "wert": 74,
+      "anzeige": "74"
+     }
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-11-12",
+   "kennzahlen": [
+    {
+     "label": "3D-Scans (veröffentlicht)",
+     "wert": "1.589"
+    },
+    {
+     "label": "Ego-Aufnahmen",
+     "wert": "4.230"
+    },
+    {
+     "label": "Aufgaben",
+     "wert": "74"
+    },
+    {
+     "label": "Gesamtdauer",
+     "wert": "131 Stunden"
+    }
+   ],
+   "signal": "Datensatz mit gekoppelten 3D-Umgebungen und menschlichen Bewegungen als Basis für Robotik-Training; laut Herstellerangabe ein Referenzstandard, dessen Nutzen erst durch unabhängige Tests zu belegen ist.",
+   "link": "https://huggingface.co/papers/2611.17060",
+   "linkLabel": "Zum Paper auf Hugging Face",
+   "id": "ropedia-xperience-2-menschliche-bewegungen-und-3d-szenen-als",
+   "hinzugefuegt": "2026-11-13T23:48:23Z"
+  },
+  {
    "titel": "SO-Arena: Benchmark prüft Zuverlässigkeit schneller KI-Modelle",
    "kurz": "Ein neues Benchmark namens SO-Arena misst bei sogenannten System-One-Modellen nicht nur die Trefferquote, sondern auch, wie stabil ihre Entscheidungen sind. Das Ergebnis: Hohe Gesamtleistung bedeutet nicht automatisch verlässliche Entscheidungen.",
    "artikel": [
@@ -14402,6 +14485,144 @@
  ],
  "projekte": [
   {
+   "titel": "mcp-for-blender-pro: KI-Assistent und MCP-Server für Blender",
+   "kurz": "Ein Blender-Addon, das einen KI-Assistenten mit Chat-Oberfläche und einen MCP-Server für Blender kombiniert. Es kann die Szene prüfen, Objekte bauen, Materialien ändern und mehrstufige Abläufe ausführen.",
+   "artikel": [
+    "Das Projekt mcp-for-blender-pro bringt einen KI-Assistenten direkt in Blender. Laut Projektbeschreibung kann der Assistent die aktuelle Szene untersuchen, Objekte erstellen, Materialien bearbeiten, Assets suchen und mehrstufige Arbeitsabläufe ausführen. Die Bedienung erfolgt über einen visuellen Chat, der in Blender sowie in einem separaten Studio-Fenster läuft.",
+    "## Chat, Szene und Modellwahl",
+    "Der Assistent kann vor jeder Änderung Kontext aus der Szene lesen. Über Verbindungen lassen sich laut Readme unter anderem OpenAI, Anthropic Claude, Google Gemini, OpenRouter, Ollama sowie eigene Schnittstellen nutzen. Für Werkzeugaufrufe müssen die gewählten Modelle Tool-Calling unterstützen. Bildfähige Modelle können zusätzlich Viewport-Screenshots auswerten.",
+    "## Teams aus mehreren Agenten",
+    "Für größere Aufgaben gibt es laut Beschreibung eine Team-Kette mit Managern, Workern und Reviewern. Aufgaben laufen nacheinander ab, damit Szenenänderungen geordnet bleiben. Eine blockierte Aufgabe erhält einen Korrekturversuch, scheitert auch die zweite Prüfung, stoppt der Ablauf.",
+    "## MCP-Server und Werkzeuge",
+    "Ein eingebauter MCP-Server (Model Context Protocol, eine Schnittstelle, über die KI-Programme Werkzeuge ansteuern) lässt externe Clients wie OpenCode über authentifiziertes Streamable HTTP zugreifen. Laut Auflistung stehen 21 Szenenwerkzeuge bereit, etwa zum Erstellen von Objekten, Verschieben, Materialzuweisung, Export sowie Abfragen der Blender-API (bpy, das Python-Interface von Blender).",
+    "## Kontrolle und Einschränkungen",
+    "Operationen können zur Freigabe vorgelegt, nach dem aktuellen Schritt abgebrochen und als benannte Undo-Schritte rückgängig gemacht werden. Die Python-Prüfung soll unzulässige Operationen erkennen, ist laut Readme aber ausdrücklich keine Sicherheits-Sandbox. Der Hersteller nennt als Systemvoraussetzung Windows x64 und Blender 4.2 oder neuer. Das Projekt ist laut Readme unabhängig und nicht mit der Blender Foundation oder den KI-Anbietern verbunden. Lizenz: MIT."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: hitkeeen/blender-ai-mcp-addon",
+     "url": "https://github.com/hitkeeen/blender-ai-mcp-addon"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Eine Szene mit Podest, Kamera und Lichtern per Textanweisung aufbauen lassen.",
+    "Materialien einzelner Objekte per Chat ändern und das Ergebnis im Viewport prüfen.",
+    "Wiederkehrende Blender-Aufgaben über einen Assistenten oder MCP-Client automatisieren lassen."
+   ],
+   "ausprobieren": {
+    "prompt": "Inspect this scene and explain its object structure before making any changes.",
+    "tool": "mcp-for-blender-pro",
+    "url": "https://github.com/hitkeeen/blender-ai-mcp-addon"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "mcp-for-blender-pro",
+    "zeilen": [
+     "> Inspect this scene and explain its object structure",
+     "✓ get_scene_info ausgeführt",
+     "● Szenenstruktur wird erklärt",
+     "⚠ Änderungen erst nach Freigabe",
+     "+ Pedestal hinzugefügt",
+     "● Status: bereit"
+    ]
+   },
+   "tag": "Blender-Addon",
+   "macher": "hitkeeen (GitHub-Nutzer)",
+   "branche": "3D / Kreativsoftware",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "Blender",
+    "MCP (Model Context Protocol)",
+    "OpenAI",
+    "Anthropic Claude",
+    "Google Gemini",
+    "Ollama",
+    "OpenCode"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "160 ★"
+    },
+    {
+     "label": "Szenenwerkzeuge (Herstellerangabe)",
+     "wert": "21"
+    },
+    {
+     "label": "Mindestversion Blender (Herstellerangabe)",
+     "wert": "4.2"
+    }
+   ],
+   "link": "https://github.com/hitkeeen/blender-ai-mcp-addon",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "mcp-for-blender-pro-ki-assistent-und-mcp-server-fur-blender",
+   "hinzugefuegt": "2026-11-13T23:48:23Z"
+  },
+  {
+   "titel": "smolmaxxing: LLMs auf alten Fernsehboxen, Tablets und Handys",
+   "kurz": "Ein Open-Source-Projekt von hyperionaidev zeigt, wie große Sprachmodelle auf sehr kleiner und alter Hardware laufen, etwa auf einer TV-Box, einem iPad Air (2013) und einem Android-Handy. Die Methoden basieren auf llama.cpp und nutzen Flash-Speicher, um Modellteile bei Bedarf nachzuladen.",
+   "artikel": [
+    "Das Projekt smolmaxxing hat das Ziel, das größtmögliche Sprachmodell auf der kleinsten Hardware laufen zu lassen, die man besitzt. Genannt werden TV-Boxen, alte Handys und Tablets, Einplatinencomputer und Router, deren Prozessor, Arbeitsspeicher und Flash-Speicher meist ungenutzt bleiben. Nach Angaben des Repositories wurden alle Messwerte auf dem jeweiligen Gerät selbst gemessen.",
+    "## Drei Testgeräte",
+    "Bisher sind drei Geräte dokumentiert: eine Xiaomi TV Box S (3. Gen) mit Amlogic-S7D-Chip und etwa 1 GB nutzbarem Arbeitsspeicher, ein iPad Air (2013) mit Apple A7 und etwa 700 MB nutzbarem Speicher sowie ein OnePlus Nord CE 2 mit rund 3 GB freiem Speicher. Auf der TV-Box und dem iPad laufen Mixture-of-Experts-Modelle mit 8 bzw. 16 Milliarden Parametern. Auf dem Handy werden laut Repository auch Modelle mit 35 und 80 Milliarden Parametern gezeigt.",
+    "## Wie es funktioniert",
+    "Alle Anpassungen sind Patches für llama.cpp, einer verbreiteten Software zum Ausführen von Sprachmodellen. Drei Ideen werden genannt: Kernel, die auf den jeweiligen Prozessor zugeschnitten sind, etwa für 1-Bit- und 2-Bit-Gewichte (also sehr stark komprimierte Zahlenformate). Zweitens wird Speicher gespart, indem selten genutzte Teile des Vokabulars entfernt werden. Drittens werden bei Mixture-of-Experts-Modellen nur die häufig genutzten Experten im RAM gehalten, die übrigen werden bei Bedarf aus dem Flash-Speicher gelesen.",
+    "## Einordnung",
+    "Die Autoren schreiben, dass die Techniken nicht an ein bestimmtes Gerät gebunden sind. Der 1-Bit-Kernel benötige nur grundlegende NEON-Befehle (SIMD-Erweiterung von ARM-Prozessoren), und das Streaming aus dem Flash-Speicher funktioniere auf jedem Linux- oder Android-Gerät, dessen Modell größer als der Arbeitsspeicher ist. Die Entwickler bitten ausdrücklich um Messwerte von weiteren kleinen Geräten. Die Geschwindigkeiten sind Herstellerangaben des Projekts beziehungsweise Messungen der Entwickler und nicht unabhängig geprüft.",
+    "Im Repository finden sich außerdem Dokumentation, Benchmarks und ein Experimentier-Protokoll mit 165 Versuchen, auch fehlgeschlagenen. Das Projekt steht unter der MIT-Lizenz. Auf Hacker News erreichte der Beitrag 463 Punkte."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: hyperionaidev/smolmaxxing",
+     "url": "https://github.com/hyperionaidev/smolmaxxing/"
+    },
+    {
+     "titel": "Hacker-News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50468888"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Du kannst prüfen, ob ein altes Android-Gerät mit ARMv8.2 oder ein älteres iPad für kleine Modelle taugt, indem du die Anleitung im Repository befolgst.",
+    "Du kannst eigene Messwerte für dein Gerät einreichen, die das Projekt in seine Ergebnisse aufnehmen möchte.",
+    "Du kannst das Repository als Lernmaterial nutzen, um zu sehen, wie Quantisierung und Speicher-Streaming praktisch umgesetzt werden."
+   ],
+   "projekte_hinweis": null,
+   "macher": "hyperionaidev",
+   "branche": "Open Source / Edge-AI",
+   "jahr": null,
+   "tools": [
+    "llama.cpp",
+    "GGUF-Modelle",
+    "Qwen3.5-2B",
+    "Bonsai-1.7B",
+    "Ling-mini-2.0"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "633"
+    },
+    {
+     "label": "Forks",
+     "wert": "21"
+    },
+    {
+     "label": "Experimente im Labor-Protokoll",
+     "wert": "165"
+    },
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "463"
+    }
+   ],
+   "link": "https://github.com/hyperionaidev/smolmaxxing/",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "smolmaxxing-llms-auf-alten-fernsehboxen-tablets-und-handys",
+   "hinzugefuegt": "2026-11-13T23:48:23Z"
+  },
+  {
    "titel": "Modern Web Guidance: Skills sollen Coding-Agenten vom veralteten JavaScript wegführen",
    "kurz": "Google Chrome hat zusammen mit Microsoft Edge, Mozilla Firefox und dem MDN-Team ein Projekt gestartet, das Coding-Agenten mit aktuellem Web-Wissen versorgt. Die Skills sollen Modelle von alten Mustern hin zu nativen Browser-APIs lenken.",
    "artikel": [
@@ -18772,7 +18993,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-13T18:33:42Z",
+  "letzterScan": "2026-11-13T23:48:23Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-11-13T18:33:42Z"
  }
