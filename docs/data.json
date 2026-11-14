@@ -14834,6 +14834,89 @@
  ],
  "projekte": [
   {
+   "titel": "Haru-4B: Sprachmodell, das gleichzeitig zuhört und spricht",
+   "kurz": "Haru-4B ist ein mehrsprachiges Basismodell für Sprach-zu-Sprach-Gespräche, das wie ein Telefonat gleichzeitig hört und antwortet. Es ist laut Herstellerangabe für die Forschung veröffentlicht.",
+   "artikel": [
+    "Haru-4B ist ein Sprachmodell von higurashi-ai, das auf Hugging Face veröffentlicht wurde. Die Plattform zeigt 224 Likes und einen Trend-Status; laut der Seite wurde das Modell 1.262 Mal heruntergeladen. Die Pipeline ist als Audio-zu-Audio eingeordnet.",
+    "## Gleichzeitiges Zuhören und Sprechen",
+    "Laut Herstellerangabe ist Haru-4B ein „full-duplex“-Modell, das also gleichzeitig hört und spricht, ähnlich wie Menschen in einem Telefonat. Alle 133 Millisekunden verarbeitet das Modell einen Frame der Nutzer-Audiodaten und erzeugt einen eigenen Audio- und Textframe. Das entspricht einer Framerate von 7,5 Hz.",
+    "## Technik",
+    "Die Audioausgabe ist ein 64-dimensionales Latent pro Frame, das ein kleiner MLP-Kopf mit MeanFlow-Sampling in einem einzigen Schritt erzeugt. MeanFlow ist ein Verfahren, bei dem die Audioerzeugung mit einem Schritt statt vieler Iterationen läuft. Laut Angabe gibt es keine separate Audio-Transformer-Stufe und keine diskreten Audio-Tokens. Als Sprachmodell dient ein Qwen3.5-4B-Textkern mit 32 Schichten. Das Modell ist mehrsprachig und unterstützt laut Angabe unter anderem Deutsch, Englisch, Spanisch, Chinesisch und Japanisch.",
+    "## Figur und Stimme",
+    "Eine Textkarte legt die Figur fest, ein kurzer Referenzclip bestimmt die Stimme. Haru-4B wird ohne Stimmclips ausgeliefert. Laut Angabe sollte man nur Stimmen verwenden, für die man die Rechte besitzt.",
+    "## Einsatz und Grenzen",
+    "Der Code liegt auf GitHub und umfasst eine PyTorch-Implementierung mit Web-Demo sowie eine MLX-Variante für macOS. Laut Herstellerangabe braucht die PyTorch-Version eine NVIDIA-GPU mit etwa 12 GB Speicher. Der Hersteller schreibt außerdem, dass das Modell ein Basismodell ist, keine verlässliche Faktenquelle und nicht wie ein Assistent Anweisungen befolgt. Die Gewichte stehen unter der Apache-2.0-Lizenz."
+   ],
+   "quellen": [
+    {
+     "titel": "higurashi-ai/Haru-4B auf Hugging Face",
+     "url": "https://huggingface.co/higurashi-ai/Haru-4B"
+    },
+    {
+     "titel": "Code-Repository Haru (GitHub)",
+     "url": "https://github.com/higurashi-ai/Haru"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Man kann die Web-Demo aus dem Code-Repository lokal starten, sofern eine passende NVIDIA-GPU vorhanden ist.",
+    "Man kann mit einer eigenen Figurenkarte und einer Stimme experimentieren, für die man die Rechte besitzt.",
+    "Man kann die MLX-Variante für macOS ausprobieren, laut Herstellerangabe mit nativer App."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Frame-Takt laut Herstellerangabe",
+    "balken": [
+     {
+      "label": "Frame-Dauer",
+      "wert": 133,
+      "anzeige": "133 ms"
+     },
+     {
+      "label": "Framerate",
+      "wert": 7.5,
+      "anzeige": "7,5 Hz"
+     }
+    ]
+   },
+   "tag": "Sprach-KI",
+   "macher": "higurashi-ai",
+   "branche": "Sprach-KI / Audio",
+   "jahr": 2026,
+   "tools": [
+    "PyTorch",
+    "MLX",
+    "vLLM-Omni",
+    "Hugging Face"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Likes",
+     "wert": "224"
+    },
+    {
+     "label": "Downloads",
+     "wert": "1.262"
+    },
+    {
+     "label": "Parameter",
+     "wert": "ca. 5,27 Mrd. (BF16)"
+    },
+    {
+     "label": "GPU-Speicher (Herstellerangabe)",
+     "wert": "ca. 12 GB"
+    },
+    {
+     "label": "Framerate",
+     "wert": "7,5 Hz"
+    }
+   ],
+   "link": "https://huggingface.co/higurashi-ai/Haru-4B",
+   "linkLabel": "Modellseite auf Hugging Face",
+   "id": "haru-4b-sprachmodell-das-gleichzeitig-zuhort-und-spricht",
+   "hinzugefuegt": "2026-11-14T21:16:54Z"
+  },
+  {
    "titel": "AI Manus: Open-Source-Agent für Code und Browser-Steuerung",
    "kurz": "AI Manus ist ein auf GitHub veröffentlichtes Projekt eines allgemeinen KI-Agenten, der Werkzeuge und Aktionen in einer Sandbox-Umgebung ausführen kann. Laut Repository-Beschreibung richtet es sich an kleine Aufgaben im Alltag, Studium und leichte Büroarbeit.",
    "artikel": [
@@ -19524,8 +19607,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-14T16:56:40Z",
-  "neueFunde": 2,
-  "standAktualisiert": "2026-11-13T18:33:42Z"
+  "letzterScan": "2026-11-14T21:16:54Z",
+  "neueFunde": 1,
+  "standAktualisiert": "2026-11-14T21:16:54Z"
  }
 }
