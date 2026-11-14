@@ -3741,6 +3741,170 @@
  ],
  "radar": [
   {
+   "titel": "Chinesische KI-Modelle tragen laut Analyse die Signatur von Blackwell-GPUs",
+   "kurz": "Eine forensische Analyse öffentlich veröffentlichter Modellgewichte deutet darauf hin, dass Modelle von DeepSeek, Moonshot AI, MiniMax und Ant Group auf NVIDIA-Blackwell-Chips initialisiert oder trainiert wurden, die nicht für China exportiert werden dürfen. Die Methode beweist den Zugang zu den Chips nicht, und auch nicht, wo sie standen.",
+   "artikel": [
+    "Eine Analyse von Unemployment Labs (Will DePue) untersucht die veröffentlichten Gewichte chinesischer KI-Modelle. Die Autoren suchen nach numerischen Mustern, die zu bestimmten NVIDIA-Chipgenerationen passen. Der Fund fand auf Hacker News 357 Punkte.",
+    "## Was gefunden wurde",
+    "Sechs Modelle aus vier chinesischen Laboren lesen sich laut Analyse wie auf Blackwell trainiert. Dazu gehören DeepSeek-V4-Flash und DeepSeek-V4-Pro, Kimi K3 und Kimi K3.1-Pro, MiniMax-M3 sowie Ant Groups Ling-3.1-flash. Ältere Modelle derselben Labore passen dagegen zur Vorgängergeneration Hopper.",
+    "Die Autoren nennen die Methode selbst als Fingerabdruck der Gewichte. Sie zeigt, wie die Gewichte entstanden sind, beweist aber nicht, dass Blackwell auch das Training durchführte. Als einzige Alternative nennen sie speziell konfigurierte AMD-Hardware, die ebenfalls exportbeschränkt ist; diese halten sie für sehr unwahrscheinlich.",
+    "## Einordnung und Grenzen",
+    "Die Analyse stützt sich laut Autoren allein auf die veröffentlichten Gewichte, nicht auf Leaks. US-Beamte und Presseberichte hatten zuvor behauptet, DeepSeek und Moonshot AI nutzten Blackwell, ohne technische Belege vorzulegen. Ob Exportkontrollen verletzt wurden, bleibt offen.",
+    "Nicht alle chinesischen Labore wechselten. Neueste Modelle von Alibaba (Qwen), Zhipu (GLM), Tencent, Xiaomi und StepFun lesen sich laut Analyse als auf Hopper trainiert. Meituan gibt für LongCat-2.0 ein Training auf \"AI ASIC superpods\" an; die Analyse fand dort keinen NVIDIA-Fingerabdruck.",
+    "## Größenordnung",
+    "Die Autoren schätzen, dass die beiden größten Läufe, Kimi K3 und DeepSeek-V4-Pro, jeweils Tausende Blackwell-GPUs über zwei bis drei Monate benötigten, grob 4.500 beziehungsweise 3.000. Diese Schätzungen sind nach Angaben der Autoren abgeleitet und keine bestätigten Zahlen."
+   ],
+   "quellen": [
+    {
+     "titel": "Top Chinese Frontier AI Models Carry the Fingerprint of Export-Controlled NVIDIA Blackwell GPUs (Unemployment Labs)",
+     "url": "https://unemploymentlabs.com/checkpoint-forensics"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50474883"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Verfolge, welche Labore auf welche Chipgenerationen setzen, wenn du die Entwicklung chinesischer Modelle beobachten willst.",
+    "Prüfe bei eigenen Projekten, welche Modellgewichte offen verfügbar sind und welche Herkunftsangaben sie haben.",
+    "Lies die Originalanalyse, um die Methode und ihre Grenzen selbst nachzuvollziehen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Geschätzte Blackwell-GPUs je Trainingslauf",
+    "balken": [
+     {
+      "label": "DeepSeek-V4-Flash",
+      "wert": 1500,
+      "anzeige": "1.500"
+     },
+     {
+      "label": "MiniMax-M3",
+      "wert": 1500,
+      "anzeige": "1.500"
+     },
+     {
+      "label": "Ling-3.1-flash",
+      "wert": 1500,
+      "anzeige": "1.500"
+     },
+     {
+      "label": "DeepSeek-V4-Pro",
+      "wert": 3000,
+      "anzeige": "3.000"
+     },
+     {
+      "label": "Kimi K3",
+      "wert": 4500,
+      "anzeige": "4.500"
+     }
+    ]
+   },
+   "tag": "Forschung",
+   "quelle": "Hacker News",
+   "datum": "2026-11-12",
+   "kennzahlen": [
+    {
+     "label": "Analysierte Modelle mit Blackwell-Fingerabdruck",
+     "wert": "6"
+    },
+    {
+     "label": "Geschätzte Blackwell-GPUs (alle fünf Läufe, Schätzung)",
+     "wert": "12.000"
+    },
+    {
+     "label": "Beste Schätzung Kimi K3",
+     "wert": "4.500 Blackwell-GPUs"
+    }
+   ],
+   "signal": "Die Analyse liefert technische Indizien, dass Chinas Spitzenlabore neuere NVIDIA-Blackwell-Chips nutzen. Herkunft und Legalität der Chips sind nicht geklärt.",
+   "link": "https://unemploymentlabs.com/checkpoint-forensics",
+   "linkLabel": "Originalanalyse lesen",
+   "id": "chinesische-ki-modelle-tragen-laut-analyse-die-signatur-von-",
+   "hinzugefuegt": "2026-11-14T03:37:19Z"
+  },
+  {
+   "titel": "Schwache Akteure, starke Lehrer: Entscheidungsmodelle in Agenten",
+   "kurz": "Ein Forschungspapier zeigt, dass ein Modell, das als Akteur schlecht handelt, trotzdem gute Lehrsignale liefern kann. Als Lehrer verbesserte es das Training eines kleinen Sprachmodells mit Verstärkungslernen deutlich.",
+   "artikel": [
+    "Ein Entscheidungsmodell liefert nicht nur Antworten, sondern eine strukturierte Entscheidung, etwa eine Auswahl unter Optionen mit Wahrscheinlichkeiten. Das Papier „Actor, Judge, or Teacher?“ untersucht drei Rollen, in denen ein solches Modell eingesetzt werden kann: als Akteur, der Aktionen auswählt, als Richter, der bereits ausgeführte Aktionen bewertet, und als Lehrer, der jede mögliche Aktion bewertet, um einem Agenten im Verstärkungslernen Schritt-für-Schritt-Belohnungen zu geben.",
+    "## Akteur gegen Richter",
+    "Bisher wurden solche Modelle meist danach beurteilt, wie gut sie handeln. Die Autoren testeten drei Entscheidungsmodelle und drei allgemeine Sprachmodelle auf der Umgebung ALFWorld. Als Akteure wurden alle sechs Modelle zu einem leichteren Teilziel gezogen und ließen dabei ein notwendiges Vorbereitungsziel aus. Wurden dieselben Modelle dagegen als Richter eingesetzt und sahen die gesamte Abfolge, erkannten sie die Schritte, die zu diesem Vorbereitungsziel beitrugen.",
+    "Die Kernaussage lautet: Entscheidend ist, ob ein einzelner Schritt geholfen hat, nicht ob die Aufgabe am Ende gelingt. Ein Richter kann Konsequenzen einer Handlung beurteilen, nachdem sie sichtbar geworden sind, während der Akteur sie nur vorausahnen kann.",
+    "## Lehrer im Training",
+    "Als Lehrer gab das Modell JEV Schritt-für-Schritt-Signale an ein Qwen2.5-1.5B-Modell, das mit GRPO trainiert wurde. Auf ALFWorld stieg die Erfolgsquote laut den Angaben der Autoren von 72,8 auf 82,9 Prozent. Auf WebShop stieg sie von 56,8 auf 71,4 Prozent. Diese Zahlen stammen aus dem Papier und den Angaben der Autoren und wurden von unabhängiger Seite nicht geprüft.",
+    "Verstärkungslernen (Reinforcement Learning) bedeutet, dass ein Modell durch Belohnungen für gute Handlungen lernt. GRPO ist ein Trainingsverfahren dafür, und ALFWorld sowie WebShop sind Testumgebungen für Agenten in simulierten Aufgaben beziehungsweise Online-Shops."
+   ],
+   "quellen": [
+    {
+     "titel": "Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents (Hugging Face Papers)",
+     "url": "https://huggingface.co/papers/2611.17167"
+    },
+    {
+     "titel": "Projektseite",
+     "url": "https://zjureal.com/decision-agents/"
+    },
+    {
+     "titel": "Code (GitHub)",
+     "url": "https://github.com/ZJU-REAL/decision-agents"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wenn du eigene Agenten trainierst, lohnt es sich zu prüfen, ob ein Modell als Richter bessere Schritt-Signale liefert als als Akteur.",
+    "Du kannst den verlinkten Code auf GitHub ansehen, um die Methode nachzuvollziehen.",
+    "Für Experimente eignet sich die Frage, ob Schritt-Bewertungen nach dem Durchlauf nützlicher sind als Vorhersagen vor dem Handeln."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erfolgsquote laut Papier (Angaben der Autoren)",
+    "balken": [
+     {
+      "label": "ALFWorld vorher",
+      "wert": 72.8,
+      "anzeige": "72,8 %"
+     },
+     {
+      "label": "ALFWorld mit JEV",
+      "wert": 82.9,
+      "anzeige": "82,9 %"
+     },
+     {
+      "label": "WebShop vorher",
+      "wert": 56.8,
+      "anzeige": "56,8 %"
+     },
+     {
+      "label": "WebShop mit JEV",
+      "wert": 71.4,
+      "anzeige": "71,4 %"
+     }
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-11-13",
+   "kennzahlen": [
+    {
+     "label": "ALFWorld Erfolg (vorher → mit JEV)",
+     "wert": "72,8 % → 82,9 %"
+    },
+    {
+     "label": "WebShop Erfolg (vorher → mit JEV)",
+     "wert": "56,8 % → 71,4 %"
+    },
+    {
+     "label": "Basismodell",
+     "wert": "Qwen2.5-1.5B, trainiert mit GRPO"
+    }
+   ],
+   "signal": "Hersteller- bzw. Autorenangabe: Ein schwaches Akteursmodell kann als Lehrer Trainingssignale liefern, die die Erfolgsquote eines kleinen Modells deutlich verbessern.",
+   "link": "https://huggingface.co/papers/2611.17167",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "schwache-akteure-starke-lehrer-entscheidungsmodelle-in-agent",
+   "hinzugefuegt": "2026-11-14T03:37:19Z"
+  },
+  {
    "titel": "Ropedia Xperience 2: Menschliche Bewegungen und 3D-Szenen als Datenbasis für Physical AI",
    "kurz": "Ropedia stellt einen Datensatz vor, der echte Umgebungen als 3D-Scans mit Ego-Videos und Körperbewegungen von Menschen verbindet. Daraus entstehen simulationsfähige Szenen und Roboter-Trajektorien, ohne dass ein Roboter vor Ort sein muss.",
    "artikel": [
@@ -14485,6 +14649,60 @@
  ],
  "projekte": [
   {
+   "titel": "Coway-Luftreiniger per Reverse Engineering von der Cloud lösen",
+   "kurz": "Ein Entwickler untersucht, wie sich sein WLAN-Luftreiniger Coway Airmega IconS ohne den Hersteller-Cloud-Dienst steuern lässt. Der Eintrag beschreibt den Aufbau eines Man-in-the-Middle-Setups, um die Kommunikation des Geräts mitzulesen.",
+   "artikel": [
+    "Der Autor Scott beschreibt, wie er einen Coway Airmega IconS-Luftreiniger aus dem Alltag heraus in sein Smart-Home einbinden möchte. Das Gerät ist ein Ventilator mit HEPA-Filter und Luftqualitätssensor. Er ist im Schlafzimmer des Autors im Einsatz, und der Autor möchte ihn über die Taste „Good Night“ in Apple Home mit dem Lichtausschalten koppeln.",
+    "## Die bestehende Anbindung",
+    "Die Coway-App ist nach Angaben des Autors langsam und verlangt häufig eine Passwortänderung. Eine bestehende Integration für Home Assistant imitiert die Smartphone-App: Sie fragt den Status über die Coway-Cloud ab und schickt Befehle über dieselbe Cloud. Home Assistant leitet das dann an Apple Home weiter.",
+    "## Warum die Cloud stört",
+    "Laut Autor ist die Integration in der Vergangenheit mehrfach ausgefallen, etwa durch Sperrungen des Kontos, Umbenennungen der App oder kleine Änderungen am HTML, das ausgelesen wird. Da das Modell inzwischen eingestellt ist, befürchtet der Autor, dass Coway den Dienst künftig kostenpflichtig macht oder abschaltet.",
+    "## Der Ansatz: Man-in-the-Middle",
+    "Der Autor will den Datenverkehr des Geräts umleiten, um zu sehen, wie es mit dem Server spricht. Ein sogenannter Man-in-the-Middle-Aufbau (MitM) bedeutet, dass der Verkehr über einen eigenen Server läuft, der ihn mitschneidet. Dafür sind ein isoliertes WLAN, Routing- und Firewall-Regeln sowie ein Proxy nötig; der Autor nutzt mitmproxy, das verschlüsselten Verkehr entschlüsseln und protokollieren kann.",
+    "Ein Hindernis war die Funkreichweite: Ein Raspberry Pi mit kleiner Platinenantenne erreichte den Lüfter aus dem Router-Raum nicht. Deshalb stellte der Autor den Pi zum Lüfter und verband ihn per Ethernet mit einem Laptop, der das Heimnetz per WLAN bereitstellt.",
+    "## Sicherheitslücke als Hilfe",
+    "Im Oktober 2026 wurde laut Beitrag bekannt, dass die Zertifizierungsstelle eMudhra bei einigen privaten Schlüsseln einen sehr schwachen Parameter verwendet hatte. Dadurch konnte man kurzzeitig gefälschte Zertifikate erstellen. Ob das für dieses Gerät relevant ist, hängt laut Autor davon ab, ob es ungepatcht ist, feste Root-Zertifikate nutzt und das Zertifikat des Cloud-Dienstes nicht festpinnt. Außerdem nennt der Autor KI-Sprachmodelle als Hilfe, um das MitM-Setup schnell aufzubauen.",
+    "Der Eintrag ist ein Erfahrungsbericht; ein fertiges Ergebnis, mit dem das Gerät ohne Cloud läuft, wird im Auszug nicht beschrieben."
+   ],
+   "quellen": [
+    {
+     "titel": "Reverse engineering my Coway air purifier to ditch the cloud",
+     "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50474959"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Prüfen, ob der eigene WLAN-Luftreiniger über eine Hersteller-Cloud läuft und welche Steuerung lokal möglich ist.",
+    "Die Home-Assistant-Integration als Ausgangspunkt nutzen, um Geräte in Apple Home einzubinden.",
+    "Bei eigenen Geräten die Netzwerkkommunikation nur mit Erlaubnis und zu eigenen Zwecken untersuchen."
+   ],
+   "projekte": null,
+   "macher": "Scott (Blog „Scott's Blog“)",
+   "branche": "Smart Home / IoT",
+   "jahr": 2026,
+   "tools": [
+    "Coway Airmega IconS",
+    "Home Assistant",
+    "Apple Home",
+    "Raspberry Pi",
+    "mitmproxy"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "694"
+    }
+   ],
+   "link": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
+   "linkLabel": "Zum Originalbeitrag",
+   "id": "coway-luftreiniger-per-reverse-engineering-von-der-cloud-los",
+   "hinzugefuegt": "2026-11-14T03:37:19Z"
+  },
+  {
    "titel": "mcp-for-blender-pro: KI-Assistent und MCP-Server für Blender",
    "kurz": "Ein Blender-Addon, das einen KI-Assistenten mit Chat-Oberfläche und einen MCP-Server für Blender kombiniert. Es kann die Szene prüfen, Objekte bauen, Materialien ändern und mehrstufige Abläufe ausführen.",
    "artikel": [
@@ -18993,7 +19211,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-13T23:48:23Z",
+  "letzterScan": "2026-11-14T03:37:19Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-11-13T18:33:42Z"
  }
