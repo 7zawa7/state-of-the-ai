@@ -3787,6 +3787,82 @@
  ],
  "radar": [
   {
+   "titel": "Edge0-145B: 145-Milliarden-Parameter-Modell soll lokal auf dem Laptop laufen",
+   "kurz": "Der Anbieter Edge0 hat nach eigenen Angaben das erste Open-Source-On-Device-KI-Modell mit 145 Milliarden Parametern veröffentlicht. Laut Herstellerangaben soll es auf einem kompatiblen Laptop laufen und bei Programmier- und Denkaufgaben mit bestimmten Cloud-Modellen mithalten.",
+   "artikel": [
+    "Edge0 hat die Modelle Edge0-145B und Edge0-120B zusammen mit einem Inferenz-Framework und Deployment-Werkzeugen als Open Source veröffentlicht. Laut Hersteller ist Edge0-145B das erste Open-Source-Modell dieser Größe, das auf dem eigenen Rechner läuft. Der Anbieter wirbt mit Fähigkeiten bei Programmierung, Schlussfolgern und Agenten-Aufgaben, die laut Eigenangabe mit Cloud-Modellen konkurrieren.",
+    "## Warum kleine Modelle bisher begrenzt waren",
+    "Lokale Modelle scheiterten bisher oft am Arbeitsspeicher. Gewichte müssen gespeichert und während der Generierung gelesen werden, was mit Betriebssystem und Apps um Speicher und Bandbreite konkurriert. Laut Herstellerangabe lagen die meisten On-Device-Modelle vor September 2026 unter 10 Milliarden Parametern.",
+    "## Leistungsangaben des Herstellers",
+    "Laut Angaben von Edge0 benötigt das Modell eine Spitzen-Speicherbelegung von 29 GB, verarbeitet Prompts mit über 1.100 Token pro Sekunde (Prefill) und erzeugt mehr als 80 Token pro Sekunde (Decode). Die typische Leistungsaufnahme wird mit etwa 120 W angegeben. Die Werte sind laut Quelle Herstellerangaben und stammen aus internen Tests.",
+    "## Technik im Kern",
+    "Edge0 nennt zwei Ansätze: Große Matrizen werden innerhalb von Experten-Gruppen geteilt, sodass pro Schritt nur rund 10 der 145 Milliarden Parameter rechnen. Zudem werden Gewichte über GPU-Speicher, Systemspeicher und SSD gestaffelt geladen. Spekulatives Decoding prüft mehrere Kandidaten-Token gleichzeitig. Ein Experte bezeichnet dabei ein Teilnetz innerhalb eines Mixture-of-Experts-Modells.",
+    "## Einordnung",
+    "Laut Edge0 entfallen bei lokaler Nutzung Token- oder API-Gebühren der Cloud, Daten können auf dem Gerät bleiben und Kernfunktionen laufen offline. Hardware und Strom kosten aber weiterhin Geld. Ob die Leistungsvergleiche unabhängig überprüft sind, geht aus dem Material nicht hervor."
+   ],
+   "quellen": [
+    {
+     "titel": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+     "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50475713"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler können die Gewichte herunterladen und das Modell auf einem kompatiblen Laptop lokal testen.",
+    "Privatpersonen können Programmier- oder Textaufgaben lokal erledigen lassen, ohne dass Daten die Maschine verlassen.",
+    "Wer eigene Produkte baut, kann das Inferenz-Framework nutzen, um das Modell zu integrieren oder anzupassen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Laut Hersteller: Decode-Geschwindigkeit (Tokens/s)",
+    "balken": [
+     {
+      "label": "Edge0-35B (iPhone 18 Pro Max)",
+      "wert": 37,
+      "anzeige": "37+ Token/s"
+     },
+     {
+      "label": "Edge0-145B (Laptop)",
+      "wert": 80,
+      "anzeige": "80+ Token/s"
+     }
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "2026-09",
+   "kennzahlen": [
+    {
+     "label": "Parameter gesamt",
+     "wert": "145 Mrd."
+    },
+    {
+     "label": "Aktiv pro Schritt (Herstellerangabe)",
+     "wert": "ca. 10 Mrd."
+    },
+    {
+     "label": "Peak-Speicher (Herstellerangabe)",
+     "wert": "29 GB"
+    },
+    {
+     "label": "Decode (Herstellerangabe)",
+     "wert": "80+ Token/s"
+    },
+    {
+     "label": "Typische Leistung (Herstellerangabe)",
+     "wert": "ca. 120 W"
+    }
+   ],
+   "signal": "Ein 145-Milliarden-Parameter-Modell als Open Source auf dem eigenen Laptop ist ein deutlicher Schritt, sofern die Herstellerangaben sich bestätigen.",
+   "link": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+   "linkLabel": "Zum Edge0-Blog",
+   "id": "edge0-145b-145-milliarden-parameter-modell-soll-lokal-auf-de",
+   "hinzugefuegt": "2026-11-14T16:56:40Z"
+  },
+  {
    "titel": "KI hilft bei der Auswertung von Gödels Notizbüchern",
    "kurz": "Mit Hilfe des KI-Modells Claude sollen in Kurt Gödels 1.009 Seiten umfassenden Notizbüchern hunderte bisher unbekannte bewiesene Theoreme stecken. Der Befund stammt laut Quelle von Jan von Plato, der das Projekt an der Universität Helsinki leitet.",
    "artikel": [
@@ -14758,6 +14834,61 @@
  ],
  "projekte": [
   {
+   "titel": "AI Manus: Open-Source-Agent für Code und Browser-Steuerung",
+   "kurz": "AI Manus ist ein auf GitHub veröffentlichtes Projekt eines allgemeinen KI-Agenten, der Werkzeuge und Aktionen in einer Sandbox-Umgebung ausführen kann. Laut Repository-Beschreibung richtet es sich an kleine Aufgaben im Alltag, Studium und leichte Büroarbeit.",
+   "artikel": [
+    "AI Manus ist ein Projekt von WestLightningMove, das auf GitHub mit 303 Sternen geführt wird. Nach eigener Beschreibung handelt es sich um einen allgemeinen KI-Agenten, der verschiedene Werkzeuge und Operationen in einer Sandbox-Umgebung ausführen kann.",
+    "## Was der Agent tun soll",
+    "Laut Herstellerangaben im Repository ist Manus eher ein Helfer als ein Chatbot, der nur Fragen beantwortet. Der Agent soll Skripte schreiben und ausführen, Webseiten öffnen, mit Elementen interagieren und mehrstufige Aufgaben mit wenig Aufsicht erledigen. Diese Fähigkeiten werden im Text als „Code-Automatisierung“ und „Browser-Steuerung“ beschrieben.",
+    "Als Anwendungsfälle nennt die Beschreibung Studium, Recherche, Heimprojekte und leichte Büroarbeit. Genannt werden etwa das Sammeln von Quellen, das Auslesen mehrerer Seiten oder das Testen kleiner Skripte.",
+    "## Einrichtung",
+    "Die Anleitung im Repository beschreibt Voraussetzungen wie einen aktuellen 64-bit-Rechner, mindestens 4 GB Arbeitsspeicher (empfohlen 8 GB) und eine stabile Internetverbindung. Für volle Browser-Steuerung wird laut Herstellerangabe erhöhte Berechtigung empfohlen.",
+    "Ein Testlauf mit einer einfachen Aufgabe, etwa dem Öffnen einer Seite und dem Auslesen eines Wertes, soll zeigen, ob der Agent wie erwartet arbeitet. Die Hinweise beschreiben außerdem, welche Aufgabentypen automatisch laufen und welche eine Bestätigung brauchen sollen.",
+    "## Einordnung",
+    "Das Repository selbst gibt keine unabhängigen Tests, Leistungswerte oder Sicherheitsanalysen an. Die Beschreibung ist überwiegend Werbetext des Projekts; konkrete Zahlen außer den Systemanforderungen und dem Sternenstand fehlen. Wer den Agenten nutzen möchte, sollte die Sandbox- und Berechtigungseinstellungen selbst prüfen."
+   ],
+   "quellen": [
+    {
+     "titel": "WestLightningMove/ai--manus auf GitHub",
+     "url": "https://github.com/WestLightningMove/ai--manus"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Recherchen mit mehreren Webseiten automatisch zusammentragen lassen.",
+    "Kleine wiederkehrende Browser-Aufgaben, etwa das Prüfen einer Seite, delegieren.",
+    "Einfache Skripte in einer abgeschotteten Umgebung ausprobieren."
+   ],
+   "vorschau": {
+    "szene": "sandbox"
+   },
+   "projekte": true,
+   "macher": "WestLightningMove",
+   "branche": "KI-Agenten / Open Source",
+   "jahr": null,
+   "tools": [
+    "GitHub"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "303"
+    },
+    {
+     "label": "Empfohlener RAM (Herstellerangabe)",
+     "wert": "8 GB"
+    },
+    {
+     "label": "Mindest-RAM (Herstellerangabe)",
+     "wert": "4 GB"
+    }
+   ],
+   "link": "https://github.com/WestLightningMove/ai--manus",
+   "linkLabel": "Zum Repository",
+   "id": "ai-manus-open-source-agent-fur-code-und-browser-steuerung",
+   "hinzugefuegt": "2026-11-14T16:56:40Z"
+  },
+  {
    "titel": "gpucanvas: Tausende echte DOM-Bildschirme auf einer unendlichen Fläche",
    "kurz": "gpucanvas ist ein Open-Source-Projekt, das Tausende lebendige DOM-Elemente auf einer unendlichen Arbeitsfläche zeigt, die per WebGPU gezeichnet wird. Ein Editor, Shader-Effekte und ein KI-Agent können diese Elemente lesen und gezielt ansprechen.",
    "artikel": [
@@ -19393,8 +19524,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-14T10:58:58Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-11-14T16:56:40Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-13T18:33:42Z"
  }
 }
