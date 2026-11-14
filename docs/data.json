@@ -1,6 +1,52 @@
 {
  "news": [
   {
+   "titel": "Runway veröffentlicht Praxis-1 als offenes Robotermodell",
+   "kurz": "Runway hat sein Robotikmodell Praxis-1 mit offenen Gewichten und Quellcode unter der Apache-2.0-Lizenz veröffentlicht. Das Modell nutzt Wissen aus Videotraining, um Roboter zu steuern, und führt laut Runway in Nvidias RoboLab-120-Benchmark die Kategorie „World Action Models“ an.",
+   "artikel": [
+    "Runway, bekannt vor allem für generative Videomodelle wie Gen-4.5, bringt seine Videoforschung nun in die Robotik. Praxis-1 ist ein sogenanntes World Action Model: Es sagt voraus, wie sich eine Szene verändert, und leitet daraus passende Roboterbewegungen ab. Die Gewichte und der Quellcode sind unter der Apache-2.0-Lizenz verfügbar, die kommerzielle Nutzung erlaubt.",
+    "Das Modell nimmt Kamerabilder, Textanweisungen und Positionsdaten des Roboters entgegen. Mit jedem neuen Kamerabild passt es seine Steuerung fortlaufend an. Laut Runway lässt sich Praxis-1 durch zusätzliches Training auf neue Robotersysteme anpassen.",
+    "## Leistung laut Herstellerangaben",
+    "Auf Nvidias RoboLab-120-Leaderboard erreicht Praxis-1 nach Runways Angaben 46,2 Prozent Erfolgsquote. Der Test prüft in der Simulation, wie zuverlässig Robotermodelle 120 Aufgaben wie Sortieren, Greifen oder Stapeln lösen. Das Konkurrenzmodell FLUX 3 Action, ebenfalls ein World Action Model, kommt auf 42,9 Prozent. Runway hat alle Tests selbst durchgeführt; unabhängig überprüft sind die Ergebnisse noch nicht.",
+    "Im Test auf einem echten Franka-Roboterarm mussten beide Modelle dieselben zehn Aufgaben lösen, etwa eine Banane auf einen Teller legen oder eine Schublade schließen. Bei zehn Versuchen pro Aufgabe gelang Praxis-1 88-mal, FLUX 3 Action 80-mal.",
+    "## Grenzen",
+    "Praxis-1 verwechselt laut Runways Forschungsbericht gelegentlich ähnlich aussehende Objekte und hat Probleme mit vagen Anweisungen. Bei längeren Aufgaben müssen die einzelnen Schritte vorgegeben werden, weil das Modell komplexe Handlungsabfolgen noch nicht zuverlässig selbst planen kann. Runway sieht es vor allem als System für die schnelle Ausführung von Bewegungen, das künftig mit allgemeinen KI-Modellen zusammenarbeiten könnte, die Aufgaben in Einzelschritte zerlegen.",
+    "Für die Standardversion nennt die Quelle eine GPU mit 80 GB Speicher. Eine komprimierte Version soll laut Runways Schätzung auf eine RTX 5090 mit 32 GB VRAM passen; der tatsächliche Spitzenbedarf sei laut GitHub-Dokumentation noch nicht gemessen."
+   ],
+   "quellen": [
+    {
+     "titel": "The Decoder: Runway's open-source Praxis-1 turns video AI into a robot controller",
+     "url": "https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer sich für Robotik interessiert, kann das offene Modell von Hugging Face herunterladen, sofern man den Zugangsbedingungen zustimmt.",
+    "Entwickler können den Code auf GitHub nutzen, um Praxis-1 auf eigene Robotersysteme anzupassen.",
+    "Interessierte können Runways Forschungsbericht lesen, um Tests und Grenzen des Modells nachzuvollziehen."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-11-14",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erfolgsquote auf RoboLab-120 (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "FLUX 3 Action",
+      "wert": 42.9,
+      "anzeige": "42,9 %"
+     },
+     {
+      "label": "Praxis-1",
+      "wert": 46.2,
+      "anzeige": "46,2 %"
+     }
+    ]
+   },
+   "id": "runway-veroffentlicht-praxis-1-als-offenes-robotermodell",
+   "hinzugefuegt": "2026-11-14T10:58:58Z"
+  },
+  {
    "titel": "Anthropic bringt Claude for Manufacturing in die Fabrik-Software",
    "kurz": "Anthropic hat ein Plugin namens Claude for Manufacturing veröffentlicht, das KI direkt mit Industriesoftware wie Autodesk Fusion, Oracle NetSuite und Infor verbindet. Die Abläufe laufen nur nach menschlicher Freigabe, physische Maschinen steuert das Plugin bislang nicht.",
    "artikel": [
@@ -3740,6 +3786,69 @@
   }
  ],
  "radar": [
+  {
+   "titel": "KI hilft bei der Auswertung von Gödels Notizbüchern",
+   "kurz": "Mit Hilfe des KI-Modells Claude sollen in Kurt Gödels 1.009 Seiten umfassenden Notizbüchern hunderte bisher unbekannte bewiesene Theoreme stecken. Der Befund stammt laut Quelle von Jan von Plato, der das Projekt an der Universität Helsinki leitet.",
+   "artikel": [
+    "Kurt Gödel gilt als einer der originellsten Denker des 20. Jahrhunderts. Seine beiden Unvollständigkeitssätze von 1931 veränderten die Mathematik. Danach veröffentlichte er nur noch wenige Arbeiten, sein unveröffentlichtes Material umfasst aber zehntausende Seiten.",
+    "## Das Projekt in Helsinki",
+    "Seit 2017 leitet der finnische Logiker Jan von Plato an der Universität Helsinki ein Projekt zu 16 Notizbüchern, die Gödel in den frühen 1940er-Jahren schrieb. Die 1.009 Seiten sind dicht beschrieben und großenteils in Gabelsberger geschrieben, einer deutschen Kurzschrift, die schon zu Gödels Zeit veraltet war. Bis September kam die Arbeit laut Quelle nur etwa eine Seite pro Woche voran.",
+    "## Was die KI leistete",
+    "Laut Quelle lieferte das KI-Modell Claude innerhalb weniger Tage eine umfassende Zusammenfassung des gesamten Materials. Dabei sollen sich hunderte Theoreme gezeigt haben, die bisher niemand kannte. Von Plato sagte, die Notizbücher enthielten dutzende Vorwegnahmen von Ergebnissen, die erst in den 1970er- und 1980er-Jahren bekannt wurden, dazu 14 Themen der Logik, die nicht weiterverfolgt wurden.",
+    "Von Plato fütterte Claude mit seinen Transkriptionen, sechs eigenen Büchern zu Gödel und weiterer Fachliteratur. Nach seinen Angaben entstand ein 650 Seiten langer Text zu den Notizbüchern, der Seite für Seite geprüft werden musste. Die Verknüpfung über tausend Seiten hinweg bezeichnete er als etwas, das Menschen kaum leisten können.",
+    "## Das Unabhängigkeitsbeweis-Beispiel",
+    "Paul Cohen erhielt 1966 die Fields-Medaille für den Nachweis, dass Kontinuumshypothese und Auswahlaxiom unabhängig vom System sind. Gödel hatte nach eigener Aussage schon in den 1940er-Jahren einen solchen Beweis gefunden, konnte ihn aber nicht rekonstruieren. Claude fand laut Quelle Hinweise darauf, dass Gödel dem Ergebnis nur einen Schritt entfernt war. Ein Beweis wurde mit dem Beweisassistenten Coq geprüft und bestand die Prüfung laut von Plato.",
+    "Die Quelle ist ein Zeitungsartikel. Die Aussagen zu den Theoremen stammen von von Plato und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "'Ahead of his time': AI helps unlock discoveries hidden in notebooks of man who transformed maths – The Guardian",
+     "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50486748"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer sich für Gödels Arbeit interessiert, kann die Berichterstattung als Einstieg in die Logikgeschichte nutzen.",
+    "Wer mit Forschungsliteratur arbeitet, kann sehen, wie KI bei der Auswertung großer Textmengen helfen soll.",
+    "Wer Beweise prüfen möchte, findet im Artikel ein Beispiel für die Prüfung mit dem Beweisassistenten Coq."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Gödel-Notizbücher · Auswertung",
+    "zeilen": [
+     "> 1.009 Seiten Notizbücher (Gabelsberger)",
+     "✓ Zusammenfassung in wenigen Tagen",
+     "⚠ Ergebnisse noch unabhängig zu prüfen",
+     "+ hunderte Theoreme laut Quelle",
+     "● Status: Projekt läuft an der Universität Helsinki"
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "2026-11-13",
+   "kennzahlen": [
+    {
+     "label": "Seiten Notizbücher",
+     "wert": "1.009"
+    },
+    {
+     "label": "Notizbücher",
+     "wert": "16"
+    },
+    {
+     "label": "Förderung (ERC, laut Quelle)",
+     "wert": "2,5 Mio. €"
+    }
+   ],
+   "signal": "Laut Guardian-Bericht soll ein KI-Modell in Gödels Notizbüchern hunderte bisher unbekannte bewiesene Theoreme gefunden haben. Die Aussagen stammen von den Projektbeteiligten und sind nicht unabhängig geprüft.",
+   "link": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+   "linkLabel": "Guardian-Artikel lesen",
+   "id": "ki-hilft-bei-der-auswertung-von-godels-notizbuchern",
+   "hinzugefuegt": "2026-11-14T10:58:58Z"
+  },
   {
    "titel": "Chinesische KI-Modelle tragen laut Analyse die Signatur von Blackwell-GPUs",
    "kurz": "Eine forensische Analyse öffentlich veröffentlichter Modellgewichte deutet darauf hin, dass Modelle von DeepSeek, Moonshot AI, MiniMax und Ant Group auf NVIDIA-Blackwell-Chips initialisiert oder trainiert wurden, die nicht für China exportiert werden dürfen. Die Methode beweist den Zugang zu den Chips nicht, und auch nicht, wo sie standen.",
@@ -14649,6 +14758,79 @@
  ],
  "projekte": [
   {
+   "titel": "gpucanvas: Tausende echte DOM-Bildschirme auf einer unendlichen Fläche",
+   "kurz": "gpucanvas ist ein Open-Source-Projekt, das Tausende lebendige DOM-Elemente auf einer unendlichen Arbeitsfläche zeigt, die per WebGPU gezeichnet wird. Ein Editor, Shader-Effekte und ein KI-Agent können diese Elemente lesen und gezielt ansprechen.",
+   "artikel": [
+    "gpucanvas ist ein Projekt auf GitHub, das laut Beschreibung tausende lebendige DOM-Knoten auf einer unendlichen Leinwand darstellt. Die Grafikkarte zeichnet die Elemente, während sie weiterhin echte HTML-Elemente bleiben, mit denen man interagieren kann.",
+    "## Wie es funktioniert",
+    "Laut Projektseite werden Knoten, die als Live-React-Komponenten oder normales DOM vorliegen, per WebGPU in einem einzigen instanziierten Zeichenaufruf gezeichnet. Schwenken und Zoomen berühren das DOM dabei nicht, Klicks, Eingaben und Zustand erreichen aber die echten Elemente. WebGPU ist eine moderne Schnittstelle für die Grafikkarte im Browser. Instanziiertes Zeichnen bedeutet, dass viele gleiche Objekte mit einem Befehl gezeichnet werden.",
+    "## Editor und Effekte",
+    "Ein Editor erlaubt Auswählen, Verschieben und Skalieren, mit Einrastlinien an Kanten und Mittelpunkten benachbarter Elemente. Shader, also kleine Programme für die Grafikkarte, können auf Live-Komponenten laufen, etwa für Glaseffekt, Frost oder Glitch. Außerdem gibt es Übergänge wie Auflösen oder Wischen.",
+    "## Agentenansicht",
+    "Eine Agentenansicht liefert den Inhalt der Arbeitsfläche als kurzen JSON-Baum mit IDs sowie ein Bild einer Region. So kann ein KI-Agent lesen, was zu sehen ist, und auf Elemente zeigen. Markierungen wie Pfeile und Kommentarpins sind ebenfalls möglich.",
+    "## Stand des Projekts",
+    "Das Projekt ist laut Readme im frühen Stadium (Version 0.4), die Schnittstelle kann sich also noch ändern. Die Demo braucht WebGPU und HTML-in-Canvas. Laut Angaben der Projektseite läuft sie in Chrome 157 oder neuer auf dem GPU-Pfad. In Firefox, Safari und auf iPhones und iPads gibt es HTML-in-Canvas noch nicht, dort läuft eine DOM-Version. Das Projekt hat 272 Sterne auf GitHub.",
+    "Die Projektseite nennt Messwerte mit 5.000 Live-React-Bildschirmen auf einem MacBook Pro in Chrome. Diese Zahlen sind Herstellerangaben des Autors und sollten selbst geprüft werden."
+   ],
+   "quellen": [
+    {
+     "titel": "berkantay/gpucanvas auf GitHub",
+     "url": "https://github.com/berkantay/gpucanvas"
+    },
+    {
+     "titel": "Live-Demo von gpucanvas",
+     "url": "https://berkantay.github.io/gpucanvas"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Man kann die Live-Demo in Chrome 157 oder neuer öffnen und eine Arbeitsfläche mit vielen Bildschirmen erkunden.",
+    "Wer eigene Oberflächen zeigen will, kann laut Readme React-Komponenten über den Befehl npm install gpucanvas einbinden.",
+    "Entwickler können testen, wie ein KI-Agent eine Arbeitsfläche liest, indem sie agentView.describe() in der Konsole aufrufen."
+   ],
+   "ausprobieren": {
+    "prompt": "npm install gpucanvas",
+    "tool": "gpucanvas",
+    "url": "https://berkantay.github.io/gpucanvas"
+   },
+   "vorschau": {
+    "szene": "sandbox"
+   },
+   "tag": "Open Source",
+   "macher": "Berkant Ay (berkantay)",
+   "branche": "Web-Entwicklung / Frontend",
+   "jahr": 2026,
+   "tools": [
+    "React",
+    "WebGPU",
+    "WGSL",
+    "TypeScript",
+    "npm"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "272"
+    },
+    {
+     "label": "Commits",
+     "wert": "42"
+    },
+    {
+     "label": "Version",
+     "wert": "0.4 (früh, API kann sich ändern)"
+    },
+    {
+     "label": "Bildschirme in Herstellerdemo",
+     "wert": "5.000 (Herstellerangabe)"
+    }
+   ],
+   "link": "https://github.com/berkantay/gpucanvas",
+   "linkLabel": "Zum Repository auf GitHub",
+   "id": "gpucanvas-tausende-echte-dom-bildschirme-auf-einer-unendlich",
+   "hinzugefuegt": "2026-11-14T10:58:58Z"
+  },
+  {
    "titel": "Coway-Luftreiniger per Reverse Engineering von der Cloud lösen",
    "kurz": "Ein Entwickler untersucht, wie sich sein WLAN-Luftreiniger Coway Airmega IconS ohne den Hersteller-Cloud-Dienst steuern lässt. Der Eintrag beschreibt den Aufbau eines Man-in-the-Middle-Setups, um die Kommunikation des Geräts mitzulesen.",
    "artikel": [
@@ -19211,7 +19393,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-14T03:37:19Z",
+  "letzterScan": "2026-11-14T10:58:58Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-11-13T18:33:42Z"
  }
