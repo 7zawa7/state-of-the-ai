@@ -3843,6 +3843,61 @@
  ],
  "radar": [
   {
+   "titel": "Alle KI-generierten Code sollte Open Source sein – so die These eines Blogbeitrags",
+   "kurz": "Der Autor Jakub Jankiewicz argumentiert, dass von KI erzeugter Code als Open Source veröffentlicht oder gemeinfrei gestellt werden sollte. Er begründet das mit den Trainingsdaten der Modelle und mit der urheberrechtlichen Lage.",
+   "artikel": [
+    "Ein Blogbeitrag von Jakub Jankiewicz fordert, dass sämtlicher Code, der von KI erzeugt wird, unter einer Open-Source-Lizenz stehen sollte. Der Beitrag fand auf Hacker News große Aufmerksamkeit mit 1051 Punkten.",
+    "## Die Begründung mit den Trainingsdaten",
+    "Laut dem Autor wurden KI-Modelle mit einer großen Menge Open-Source-Code trainiert, der seit der Gründung des GNU-Projekts und der Free-Software-Bewegung entstanden ist. Dieser Code sei ohne Erlaubnis und ohne korrekte Nennung der Urheber aus dem Internet gesammelt worden. Zusätzlich nennt er Inhalte von Stack Overflow und den Schwesterprojekten von Stack Exchange, die unter Creative-Commons-Lizenzen stehen, welche eine Namensnennung verlangen. Proprietären, geschlossenen Code aus diesem gemeinsamen Wissen zu machen, bezeichnet er als eine Art Lizenz-Wäsche.",
+    "## Das Urheberrechts-Argument",
+    "Der zweite Grund ist rechtlicher Natur. Rein KI-generierter Code wurde nicht von einem Menschen geschrieben und dürfte deshalb nicht urheberrechtlich geschützt sein. Als Grundlage verweist der Autor auf den sogenannten Monkey-Selfie-Streit, in dem entschieden wurde, dass Nicht-Menschen keine Urheberrechte halten können. Auch das U.S. Copyright Office habe sich später in Bezug auf KI auf diesen Präzedenzfall berufen. Nach derselben Logik verlangt Wikimedia Commons, dass rein KI-erzeugte Bilder als Public Domain gekennzeichnet werden. Das Urheberrecht unterscheidet sich jedoch weltweit: In Ländern wie Großbritannien gibt es für computergenerierte Werke einen eingeschränkten Schutz.",
+    "## Die Forderung",
+    "Damit alle Rechtsräume gleich behandelt werden, sollten Entwickler und Unternehmen KI-generierten Code ausdrücklich unter einer Open-Source-Lizenz veröffentlichen oder mit der Creative-Commons-Zero-Lizenz (CC0) in die Gemeinfreiheit entlassen. CC0 ist eine Lizenz, mit der Urheber auf ihre Rechte verzichten.",
+    "Der Autor räumt ein, dass Code selten rein manuell oder rein automatisch entsteht. Er kritisiert aber, dass Entwickler sich zunehmend auf KI verlassen, ohne die Ausgabe zu prüfen oder anzupassen. Code, bei dem Menschen kaum Aufwand leisten außer dem Schreiben von Prompts, solle daher auf jeden Fall Open Source sein. Der Beitrag ist eine Meinungsäußerung des Autors und keine verbindliche rechtliche Auskunft."
+   ],
+   "quellen": [
+    {
+     "titel": "All AI-generated code should be Open Source (Originalbeitrag)",
+     "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50507303"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Eigene KI-generierte Code-Projekte bewusst mit einer Open-Source-Lizenz oder CC0 kennzeichnen.",
+    "Vor der Veröffentlichung prüfen, wie viel des Codes tatsächlich selbst überarbeitet wurde.",
+    "Die Diskussion auf Hacker News lesen, um die Gegenargumente kennenzulernen."
+   ],
+   "quelle": "Hacker News",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Punkte auf Hacker News",
+     "wert": "1051"
+    }
+   ],
+   "signal": "Meinungsbeitrag mit starker Resonanz auf Hacker News; die Thesen sind rechtlich umstritten und keine geltende Regel.",
+   "link": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
+   "linkLabel": "Originalbeitrag lesen",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "ai-code-open-source",
+    "zeilen": [
+     "> Quelle: Blogbeitrag von Jakub Jankiewicz",
+     "✓ KI-Code gilt als nicht urheberrechtlich geschützt (These)",
+     "⚠ Rechtslage in Ländern wie UK abweichend",
+     "- proprietär geschlossener KI-Code",
+     "+ Open Source oder CC0 als Forderung",
+     "● Status: Meinungsbeitrag, 1051 Punkte auf HN"
+    ]
+   },
+   "id": "alle-ki-generierten-code-sollte-open-source-sein-so-die-thes",
+   "hinzugefuegt": "2026-11-15T23:59:02Z"
+  },
+  {
    "titel": "Claude Fable 5.2 malt Bilder mit simulierten Pinselstrichen statt Pixel zu berechnen",
    "kurz": "Anthropics Sprachmodell Claude Fable 5.2 erzeugt Bilder, indem es per Python-Code Hunderttausende simulierter Pinselstriche auf eine virtuelle Leinwand setzt. Laut Herstellerangaben kann es damit sogar fotorealistisch wirkende Szenen erstellen.",
    "artikel": [
@@ -19741,7 +19796,7 @@
  ],
  "bereiche": [
   {
-   "maximum": "Texturierte Modelle aus Foto oder Text in unter einer Minute, CAD-Teile direkt für den Drucker. Ein Open-Source-Werkzeug (sand3d) beschreibt 3D-Objekte als Python-Code für Blender.",
+   "maximum": "Texturierte Modelle aus Foto oder Text in unter einer Minute, CAD-Teile direkt für den Drucker. Ein Open-Source-Werkzeug (sand3d) beschreibt 3D-Objekte als Python-Code für Blender. Ein Addon (mcp-for-blender-pro) lässt einen KI-Assistenten Objekte bauen und Materialien ändern.",
    "name": "3D & CAD",
    "reihenfolge": 7,
    "status": "mid",
@@ -19751,7 +19806,7 @@
     "Tripo",
     "Hunyuan 3D",
     "text-to-cad",
-    "Kimi K3.1 Pro"
+    "mcp-for-blender-pro"
    ],
    "id": "3d"
   },
@@ -19799,7 +19854,7 @@
    "id": "musik"
   },
   {
-   "maximum": "Stimme aus 10 Sekunden klonen, über 90 Sprachen, Live-Gespräche fast ohne Verzögerung.",
+   "maximum": "Stimme aus 10 Sekunden klonen, über 90 Sprachen, Live-Gespräche fast ohne Verzögerung. Haru-4B hört und spricht gleichzeitig wie in einem Telefonat (Forschungsversion).",
    "name": "Stimme",
    "reihenfolge": 4,
    "status": "ok",
@@ -19807,7 +19862,8 @@
    "tools": [
     "ElevenLabs v4",
     "VoiceStudio",
-    "Cartesia"
+    "Cartesia",
+    "Haru-4B"
    ],
    "id": "stimme"
   },
@@ -19843,8 +19899,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-15T20:16:37Z",
-  "neueFunde": 2,
-  "standAktualisiert": "2026-11-14T21:16:54Z"
+  "letzterScan": "2026-11-15T23:59:02Z",
+  "neueFunde": 1,
+  "standAktualisiert": "2026-11-15T23:59:02Z"
  }
 }
