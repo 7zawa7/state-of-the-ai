@@ -1,6 +1,62 @@
 {
  "news": [
   {
+   "titel": "Meituan veröffentlicht LongCat-2.5: 1,6-Billionen-Parameter-Agentenmodell ohne Nvidia-GPUs trainiert",
+   "kurz": "Der chinesische Lieferdienst-Konzern Meituan hat die Gewichte des Agentenmodells LongCat-2.5 veröffentlicht, das nach Herstellerangaben komplett auf chinesischer Hardware trainiert wurde. Auf Terminal Bench v2.1 erreicht es 88,4 Punkte, knapp hinter Claude Opus 5.",
+   "artikel": [
+    "Meituan hat die Gewichte von LongCat-2.5 veröffentlicht, einem Modell mit 1,6 Billionen Parametern, das für KI-Agenten gebaut ist. Diese Agenten arbeiten autonom an langen, mehrstufigen Aufgaben, vor allem beim Programmieren. Nach Angaben des Unternehmens kommt das Modell in mehreren Benchmarks nahe an führende westliche Modelle heran. Alle Angaben stammen von Meituan selbst.",
+    "## Architektur",
+    "LongCat-2.5 ist ein Mixture-of-Experts-Modell (MoE), das bei jedem verarbeiteten Token nur einen Teil seiner spezialisierten Teilnetze aktiviert. Von 1,6 Billionen Parametern sind pro Token etwa 48 Milliarden aktiv. Über die API verarbeitet es bis zu eine Million Token gleichzeitig und erzeugt Antworten mit bis zu 128.000 Token. Es versteht Text, Bilder und Video, antwortet in Text und lässt sich das Reasoning (schrittweises Nachdenken) ein- und ausschalten.",
+    "## Bildverständnis",
+    "Gegenüber dem Vorgänger LongCat-2.0 ist die Bildverarbeitung neu. Viele multimodale Modelle hängen nachträglich einen eigenen Bild-Encoder an. LongCat-2.5 wandelt Bilder dagegen direkt in Token um, die zusammen mit Text verarbeitet werden. Laut Meituan soll das vor allem visuelles Coding, Design und 3D-Aufgaben verbessern.",
+    "## Training",
+    "Für das Reinforcement Learning nutzte das Team echte Softwareaufgaben aus GitHub-Pull-Requests sowie nachgestellte Fehler von Agenten. Damit das Modell die Aufgaben tatsächlich löst, wurde der Internetzugang in den Trainingsumgebungen gesperrt, die Git-Historie entfernt und die Lösungen von einem Sprachmodell auf Tricks geprüft.",
+    "## Hardware und Betrieb",
+    "Meituan quantisiert die Gewichte auf 4-Bit-Präzision, was chinesische Chips nativ verarbeiten können. Laut Herstellerangaben steigt der Durchsatz gegenüber einer 8-Bit-Version um 43,3 Prozent bei der Prompt-Verarbeitung und um 42,77 Prozent bei der Antwortgenerierung, die Genauigkeit bleibt laut Meituan gleich. Die Anleitung für den Eigenbetrieb beschreibt einen Cluster aus 194 Huawei-Ascend-Beschleunigern der Serie Atlas A2. Für Nvidia-GPUs gibt es keine Hinweise.",
+    "## Benchmarks",
+    "Auf Terminal Bench v2.1 erreicht LongCat-2.5 laut Meituan 88,4 Punkte, Claude Opus 5 kommt auf 89,1, GPT-5.6 Sol auf 88,8. Bei DeepSWE, das Bugfixes in echten Code-Repositories misst, steigt das Modell von 9,7 auf 64,6 Punkte. Bei der härteren Variante Terminal Bench v4.0 liegt es mit 38,5 Punkten knapp über GPT-5.6 Sol (37,3), aber deutlich unter Opus 5 (53,9). Bei BrowseComp erzielt es 91,9 Punkte, wobei Meituan diesen Test in der eigenen Umgebung durchführte.",
+    "## Lizenz und Zugang",
+    "Die Gewichte stehen unter der MIT-Lizenz, die kommerzielle Nutzung, Veränderung und Weitergabe erlaubt. Ein Chat ist unter longcat.ai verfügbar. Die API unterstützt die OpenAI- und Anthropic-Formate und lässt sich in Agent-Umgebungen wie Claude Code oder Codex einbinden. Der Einführungspreis liegt laut Meituan zeitlich begrenzt bei etwa 0,27 Euro pro Million Input-Token und 1,07 Euro pro Million Output-Token."
+   ],
+   "quellen": [
+    {
+     "titel": "Meituan releases a 1.6-trillion-parameter agent model that never touched an Nvidia GPU – THE DECODER",
+     "url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Ausprobieren im Chat unter longcat.ai, um Coding-Aufgaben oder Bildanalysen zu testen.",
+    "Die Gewichte unter MIT-Lizenz herunterladen und lokal oder auf eigener Infrastruktur betreiben, falls genügend Hardware vorhanden ist.",
+    "Die API in bestehende Agent-Werkzeuge wie Claude Code einbinden, sofern ein API-Zugang besteht."
+   ],
+   "ausprobieren": {
+    "prompt": "Analysiere dieses Python-Projekt, finde den Fehler in der Funktion parse_config und schlage einen Patch im Diff-Format vor.",
+    "tool": "LongCat Chat",
+    "url": "https://longcat.ai/"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "DeepSWE: Lösungsrate in Punkten",
+    "balken": [
+     {
+      "label": "LongCat-2.0 (Vorgänger)",
+      "wert": 9.7,
+      "anzeige": "9,7"
+     },
+     {
+      "label": "LongCat-2.5",
+      "wert": 64.6,
+      "anzeige": "64,6"
+     }
+    ]
+   },
+   "bereich": "Agenten",
+   "datum": "2026-11-15",
+   "id": "meituan-veroffentlicht-longcat-2-5-1-6-billionen-parameter-a",
+   "hinzugefuegt": "2026-11-15T14:59:21Z"
+  },
+  {
    "titel": "Runway veröffentlicht Praxis-1 als offenes Robotermodell",
    "kurz": "Runway hat sein Robotikmodell Praxis-1 mit offenen Gewichten und Quellcode unter der Apache-2.0-Lizenz veröffentlicht. Das Modell nutzt Wissen aus Videotraining, um Roboter zu steuern, und führt laut Runway in Nvidias RoboLab-120-Benchmark die Kategorie „World Action Models“ an.",
    "artikel": [
@@ -14834,6 +14890,56 @@
  ],
  "projekte": [
   {
+   "titel": "AI Manus: Open-Source-Agent für Code und Browser (GitHub-Fork)",
+   "kurz": "Das GitHub-Repository „Topkiflare74/ai--manus2.0“ beschreibt AI Manus als allgemeinen KI-Agenten, der Werkzeuge und Operationen in einer Sandbox-Umgebung ausführt. Laut Repository-Seite kann er Code ausführen und einen Browser steuern.",
+   "artikel": [
+    "## Was der Eintrag beschreibt",
+    "Das Projekt „ai--manus2.0“ auf GitHub stellt sich als allgemeiner KI-Agent vor. Laut Zusatzinfo kann das System verschiedene Werkzeuge und Operationen innerhalb einer Sandbox-Umgebung ausführen. Eine Sandbox ist eine abgeschottete Umgebung, in der Programme getrennt vom übrigen System laufen.",
+    "## Funktionen laut Repository",
+    "Die Seite nennt drei Schwerpunkte. Der Agent soll eigenständig Code ausführen, einen Browser steuern, also Webseiten öffnen, Formulare ausfüllen und Informationen sammeln, und kleine Alltagsaufgaben übernehmen. Die Beschreibung spricht von Aufgaben wie dem Ordnen von Recherche oder dem Setzen von Erinnerungen.",
+    "## Einordnung",
+    "Das Repository nennt sich selbst eine fokussierte Helferanwendung für Heimnutzung, Studium und kleine Aufgaben und keine große Unternehmensplattform. Die Angaben stammen aus dem Repository-Text und sind Herstellerangaben des Projekts; eine unabhängige Prüfung liegt nicht vor.",
+    "## Systemanforderungen laut Seite",
+    "Als Mindestanforderung nennt die Seite ein modernes 64-Bit-System, einen Dual-Core-Prozessor und 4 GB RAM. Empfohlen werden ein aktueller Mehrkernprozessor und 8 GB RAM oder mehr. Diese Angaben sind ebenfalls Herstellerangaben aus dem Repository."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub – Topkiflare74/ai--manus2.0",
+     "url": "https://github.com/Topkiflare74/ai--manus2.0"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Man kann das Repository herunterladen und testen, ob der Agent eine einfache Aufgabe wie das Öffnen einer Seite erledigt.",
+    "Man kann kleine Recherchen oder wiederkehrende Webabfragen vom Agenten ausführen lassen.",
+    "Man kann die Sandbox-Umgebung nutzen, um Skripte ohne Risiko für das Hauptsystem zu testen."
+   ],
+   "vorschau": {
+    "szene": "sandbox"
+   },
+   "tag": "Open Source · Agent",
+   "tools": [
+    "GitHub"
+   ],
+   "macher": "Topkiflare74 (GitHub-Nutzer)",
+   "branche": "KI-Agenten / Automatisierung",
+   "jahr": "k. A.",
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "678"
+    },
+    {
+     "label": "Commits",
+     "wert": "45"
+    }
+   ],
+   "link": "https://github.com/Topkiflare74/ai--manus2.0",
+   "linkLabel": "Zum Repository",
+   "id": "ai-manus-open-source-agent-fur-code-und-browser-github-fork",
+   "hinzugefuegt": "2026-11-15T14:59:21Z"
+  },
+  {
    "titel": "Haru-4B: Sprachmodell, das gleichzeitig zuhört und spricht",
    "kurz": "Haru-4B ist ein mehrsprachiges Basismodell für Sprach-zu-Sprach-Gespräche, das wie ein Telefonat gleichzeitig hört und antwortet. Es ist laut Herstellerangabe für die Forschung veröffentlicht.",
    "artikel": [
@@ -19607,8 +19713,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-15T07:46:11Z",
-  "neueFunde": 0,
+  "letzterScan": "2026-11-15T14:59:21Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-14T21:16:54Z"
  }
 }
