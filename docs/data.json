@@ -3843,6 +3843,136 @@
  ],
  "radar": [
   {
+   "titel": "Claude Fable 5.2 malt Bilder mit simulierten Pinselstrichen statt Pixel zu berechnen",
+   "kurz": "Anthropics Sprachmodell Claude Fable 5.2 erzeugt Bilder, indem es per Python-Code Hunderttausende simulierter Pinselstriche auf eine virtuelle Leinwand setzt. Laut Herstellerangaben kann es damit sogar fotorealistisch wirkende Szenen erstellen.",
+   "artikel": [
+    "## Malen statt rechnen",
+    "Anthropics neues Sprachmodell Claude Fable 5.2 erstellt Bilder nicht auf die übliche Weise. Gängige Bildmodelle wie Midjourney arbeiten meist mit Diffusion: Ein verrauschtes Bild wird Schritt für Schritt zu einem klaren Ergebnis verfeinert. Fable 5.2 simuliert stattdessen den physischen Malprozess, einschließlich Borstenstruktur, Farbauftrag und Korrekturen über bereits gesetzten Strichen.",
+    "Laut Entwickler Jake Eaton, der bei Anthropic arbeitet, entsteht jedes Bild als Python-Programm mit 1.000 bis 2.000 Zeilen, das eine simulierte Malengine steuert. Ein fotorealistisches Parkhaus-Motiv benötigte etwa 700.000 Striche. Laut Eaton kommt das Modell ohne externes Bildmodell und ohne vorgefertigte oder abgepauste Vorlagen aus.",
+    "## Ohne Rückgängig-Taste",
+    "Ingenieur Michael Graczyk zeigte ein Experiment, bei dem das Modell einen Vogel bei Sonnenaufgang malen sollte. Es musste jeden Strich als eigene Koordinatenzeile ausgeben und konnte bereits gesetzte Striche nicht wieder entfernen. Das Ergebnis besteht aus genau 111 Strichen. Zwischen den Durchgängen betrachtete das Modell die Leinwand und korrigierte Fehler, etwa indem es den zu dünnen Rücken des Vogels mit einem kräftigeren Strich überdeckte.",
+    "## Übertragung auf Roboter",
+    "Laut Anthropic ist das räumliche Planen des Modells auch auf echte Roboter übertragbar. Im firmeninternen Benchmark RoboDojo Sim erreichte Fable 5.2 laut Anthropic 64,9 Prozent, GPT-6 Astra von OpenAI 29,8 Prozent. Im realen Test mit einem Roboterarm, den der KI-Forscher Aris Zhu durchführte, war Astra jedoch schneller, und bei der Feinmotorik zeigte Fable 5.2 Grenzen."
+   ],
+   "quellen": [
+    {
+     "titel": "Anthropic's Claude Fable 5.2 doesn't generate images, it paints them",
+     "url": "https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/"
+    }
+   ],
+   "demo": "bild",
+   "machen": [
+    "Wer mit KI-Bildern experimentiert, kann verfolgen, ob Modelle Bilder künftig über Code statt über Pixelgenerierung erzeugen.",
+    "Kreative können prüfen, ob sich der Ansatz für Illustrationen mit gezielter, nachvollziehbarer Strichführung eignet.",
+    "Interessierte können die von Jake Eaton und Michael Graczyk gezeigten Beispiele als Vergleich zu klassischen Bildmodellen nutzen."
+   ],
+   "radar": true,
+   "quelle": "Fachpresse",
+   "datum": "2026-11-15",
+   "kennzahlen": [
+    {
+     "label": "Striche Parkhaus-Szene",
+     "wert": "ca. 700.000"
+    },
+    {
+     "label": "Striche vogel-Bild",
+     "wert": "111"
+    },
+    {
+     "label": "Python-Programmzeilen pro Bild",
+     "wert": "1.000–2.000"
+    },
+    {
+     "label": "RoboDojo Sim (Herstellerangabe Anthropic)",
+     "wert": "64,9 %"
+    },
+    {
+     "label": "RoboDojo Sim, GPT-6 Astra (Herstellerangabe Anthropic)",
+     "wert": "29,8 %"
+    }
+   ],
+   "signal": "Ein Sprachmodell erzeugt Bilder über Code und simulierte Pinselstriche statt über Diffusion. Die Ergebnisse stammen aus Demos der Entwickler; Anthropic hat die Benchmark-Werte selbst berichtet.",
+   "link": "https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/",
+   "linkLabel": "Artikel auf THE DECODER lesen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Benchmark RoboDojo Sim (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "GPT-6 Astra",
+      "wert": 29.8,
+      "anzeige": "29,8 %"
+     },
+     {
+      "label": "Claude Fable 5.2",
+      "wert": 64.9,
+      "anzeige": "64,9 %"
+     }
+    ]
+   },
+   "id": "claude-fable-5-2-malt-bilder-mit-simulierten-pinselstrichen-",
+   "hinzugefuegt": "2026-11-15T20:16:37Z"
+  },
+  {
+   "titel": "llama.cpp v1.0.0: Stabilere Basis für lokale KI",
+   "kurz": "Das Projekt llama.cpp und die Bibliothek ggml erscheinen erstmals in Version 1.0.0. Künftig zeigen Major-Versionen API- und ABI-Brüche klar an.",
+   "artikel": [
+    "llama.cpp ermöglicht es, multimodale Sprachmodelle (LLMs) auf sehr unterschiedlicher Hardware auszuführen, von privaten Rechnern bis zu leistungsstarken Servern. Laut dem Team geschieht das durch Quantisierung, optimierte Backends und eine portable C/C++-Implementierung. Quantisierung bedeutet, Modellgewichte mit weniger Speicherbedarf zu speichern.",
+    "Mit dem Release v1.0.0 veröffentlicht das Team die Bibliotheken libllama (llama.cpp) und libggml (Tensor-Bibliothek für maschinelles Lernen). Beide Projekte folgen nun dem Semantic Versioning. Ein Breaking Change an der öffentlichen C-API erhöht die Major-Version, neue abwärtskompatible Funktionen die Minor-Version und reine Fehlerbehebungen die Patch-Version.",
+    "## Backends und Modellabdeckung",
+    "Die Engine ggml soll auf praktisch jeder Hardware laufen. Dafür gibt es eigene Backends, die sich als dynamische Bibliothek kompilieren und zur Laufzeit laden lassen. Laut Herstellerangabe unterstützt llama.cpp mehr als 150 Architekturvarianten sowie alle gängigen Verfahren für Speculative Decoding, einer Methode zur Beschleunigung der Textgenerierung.",
+    "## Entwicklung und Verteilung",
+    "Das Team gibt an, KI-Werkzeuge in den Entwicklungsprozess einzubinden, behält aber Codequalität und Architektur im Blick. Die CI-Infrastruktur wurde laut Angaben ausgebaut, unter anderem mit Hugging-Face-Diensten wie HF Buckets und HF Jobs. Hardware-Unterstützung kommt laut Team von NVIDIA, AMD, Qualcomm, Arm, IBM und Intel. Das Projekt ist außerdem über Docker, Homebrew, conda-forge, MacPorts, Winget und als XCFramework für iOS und macOS verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "llama.cpp v1.0.0: A stronger foundation for the local AI ecosystem",
+     "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer eigene Apps baut, kann llama.cpp als Grundlage für lokale KI-Funktionen ohne Cloud-Anbindung nutzen.",
+    "Wer Abhängigkeiten pflegt, kann auf die nun versionierten Schnittstellen bauen und bei Major-Updates mit Anpassungen rechnen.",
+    "Privatpersonen können Modelle auf dem eigenen Rechner ausprobieren, sofern die Hardware dafür passt."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "llama.cpp v1.0.0",
+    "zeilen": [
+     "> Release: libllama v1.0.0",
+     "> Release: libggml v1.0.0",
+     "✓ Semantic Versioning aktiv",
+     "● Backends: über 150 Architekturvarianten laut Herstellerangabe"
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-11-13",
+   "kennzahlen": [
+    {
+     "label": "Version llama.cpp",
+     "wert": "v1.0.0"
+    },
+    {
+     "label": "Version ggml",
+     "wert": "v1.0.0"
+    },
+    {
+     "label": "Unterstützte Architekturvarianten",
+     "wert": "über 150 (Herstellerangabe)"
+    },
+    {
+     "label": "Projektalter",
+     "wert": "3,5 Jahre"
+    }
+   ],
+   "signal": "Das Projekt setzt auf API-Stabilität und richtet sich an Entwickler, die lokale und datenschutzfreundliche KI-Produkte bauen.",
+   "link": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+   "linkLabel": "Originalbeitrag lesen",
+   "id": "llama-cpp-v1-0-0-stabilere-basis-fur-lokale-ki",
+   "hinzugefuegt": "2026-11-15T20:16:37Z"
+  },
+  {
    "titel": "Edge0-145B: 145-Milliarden-Parameter-Modell soll lokal auf dem Laptop laufen",
    "kurz": "Der Anbieter Edge0 hat nach eigenen Angaben das erste Open-Source-On-Device-KI-Modell mit 145 Milliarden Parametern veröffentlicht. Laut Herstellerangaben soll es auf einem kompatiblen Laptop laufen und bei Programmier- und Denkaufgaben mit bestimmten Cloud-Modellen mithalten.",
    "artikel": [
@@ -19713,7 +19843,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-15T14:59:21Z",
+  "letzterScan": "2026-11-15T20:16:37Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-11-14T21:16:54Z"
  }
