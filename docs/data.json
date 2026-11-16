@@ -1,6 +1,58 @@
 {
  "news": [
   {
+   "titel": "Alibaba stellt Qwen4-Max vor: großes Modell mit deutlich niedrigeren Kosten pro Aufgabe",
+   "kurz": "Alibaba hat das neue Flaggschiff Qwen4-Max vorgestellt, das laut Herstellerangaben effizienter arbeitet und pro Aufgabe deutlich weniger kostet. Im Artificial Analysis Intelligence Index liegt es knapp hinter Kimi K3.1 Pro.",
+   "artikel": [
+    "Alibaba hat mit Qwen4-Max ein neues Flaggschiff-Modell vorgestellt, das als Antwort auf Opus 5.5, GPT-6 und Kimi K3.1 Pro gedacht ist. Laut dem Qwen-Team besitzt es 2,4 Billionen Parameter, aktiviert pro Token aber nur 71 Milliarden. Es handelt sich um ein sogenanntes Mixture-of-Experts-Modell, bei dem nur ein Teil des Netzwerks für jede Eingabe rechnet. Das Modell verarbeitet Bilder nativ und bietet laut Angaben ein Kontextfenster von einer Million Token.",
+    "## Hybride Architektur für lange Kontexte",
+    "Alibaba kombiniert laut eigener Darstellung zwei Verfahren. Drei Schichten verdichten den bisherigen Kontext zu einem komprimierten Zustand, danach wählt eine vierte Schicht nur die relevanten Teile aus. Das soll die Rechenkosten bei langen Eingaben deutlich senken. Der Trainingslauf der 2,4-Billionen-Variante verlief laut Alibaba stabil, ohne plötzliche Ausreißer beim Trainingsverlust.",
+    "## Weniger Token, niedrigere Kosten",
+    "Laut Alibaba sinkt bei der Work360-Aufgabenreihe, einem eigenen Benchmark für industrielle Arbeit, die durchschnittliche Kosten pro Aufgabe um 62 Prozent, von 4,43 auf 1,67 Dollar. Der Benchmark-Wert steigt dabei von 47,74 auf 52,69 Punkte. Die Angaben stammen vom Hersteller und sind nicht unabhängig geprüft.",
+    "## Gemischte Ergebnisse bei externen Tests",
+    "Im Artificial Analysis Intelligence Index erreicht Qwen4-Max mit höchster Denkstufe 43 Punkte. Das sind neun Punkte mehr als der Vorgänger Qwen3.8-Max, aber drei Punkte weniger als Kimi K3.1 Pro mit 46 Punkten. Laut Artificial Analysis kostet eine Aufgabe im Index 3,27 Dollar, rund ein Drittel des Vorgängers. Bei Terminal-Bench 4.0 liegt Qwen4-Max mit 48 Prozent hinter Kimi K3.1 Pro mit 67 Prozent. Der Preis über die eigene API liegt laut Alibaba bei 1,50 Dollar pro Million Input-Token und 4,50 Dollar pro Million Output-Token.",
+    "## Live Delivery",
+    "Mit der Funktion „Live Delivery“ liefert das Modell früh eine nutzbare erste Version und baut sie in späteren Durchgängen aus. Nutzer können so während langer Agentenaufgaben eingreifen und den Kurs ändern. Alibaba hat dazu nach eigenen Angaben ein Plugin als Open Source veröffentlicht. Laut Alibaba sollen Automobilpartner die manuelle Programmierzeit für ein Werkstück von etwa 475 auf 24 Minuten verkürzt haben."
+   ],
+   "quellen": [
+    {
+     "titel": "Alibaba's Qwen4-Max takes on Opus 5.5, GPT-6, and Kimi K3.1 Pro at much lower prices (The Decoder)",
+     "url": "https://the-decoder.com/alibabas-qwen4-max-takes-on-opus-5-5-gpt-6-and-kimi-k3-1-pro-at-much-lower-prices/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler können die API-Preise von Qwen4-Max mit anderen Modellen vergleichen, bevor sie ein Projekt planen.",
+    "Wer lange Agentenaufgaben testet, kann mit der Live-Delivery-Funktion Zwischenergebnisse prüfen und eingreifen.",
+    "Interessierte können die angekündigten kleineren Qwen4-Modelle abwarten, die Alibaba als Open Source veröffentlichen will."
+   ],
+   "bereich": "Text",
+   "datum": "2026-11-16",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Kosten pro Artificial-Analysis-Aufgabe (Herstellerangabe bzw. Messung von Artificial Analysis)",
+    "balken": [
+     {
+      "label": "Qwen3.8-Max",
+      "wert": 10.02,
+      "anzeige": "10,02 $"
+     },
+     {
+      "label": "Kimi K3.1 Pro",
+      "wert": 3.68,
+      "anzeige": "3,68 $"
+     },
+     {
+      "label": "Qwen4-Max",
+      "wert": 3.27,
+      "anzeige": "3,27 $"
+     }
+    ]
+   },
+   "id": "alibaba-stellt-qwen4-max-vor-groses-modell-mit-deutlich-nied",
+   "hinzugefuegt": "2026-11-16T23:49:07Z"
+  },
+  {
    "titel": "Meituan veröffentlicht LongCat-2.5: 1,6-Billionen-Parameter-Agentenmodell ohne Nvidia-GPUs trainiert",
    "kurz": "Der chinesische Lieferdienst-Konzern Meituan hat die Gewichte des Agentenmodells LongCat-2.5 veröffentlicht, das nach Herstellerangaben komplett auf chinesischer Hardware trainiert wurde. Auf Terminal Bench v2.1 erreicht es 88,4 Punkte, knapp hinter Claude Opus 5.",
    "artikel": [
@@ -3842,6 +3894,129 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Google: Vollautomatische Cyberangriffe sind Realität",
+   "kurz": "Googles Threat Intelligence Group hat erstmals Angreifer beobachtet, die Schwachstellen ganz ohne menschliches Zutun finden und ausnutzen. Google erwartet, dass solche Angriffe bald deutlich stärker werden.",
+   "artikel": [
+    "Google Threat Intelligence Group (GTIG) berichtet, dass Angreifer zum ersten Mal beobachtet wurden, die das Auffinden und Ausnutzen von Sicherheitslücken vollständig automatisiert haben, ohne menschliche Beteiligung.",
+    "## Was gefunden wurde",
+    "GTIG entdeckte einen ungeschützten Server, auf dem ein KI-Framework mit dem Namen „exploit_agent“ lief. Dieses Framework ist mit mehreren Sprachmodellen verbunden. Es vergleicht den Softwarecode vor und nach einem Sicherheitspatch, erkennt daraus Schwachstellen, entwickelt Exploits (Programme, die eine Lücke ausnutzen) und führt diese selbstständig aus.",
+    "In den Konfigurationsdateien stehen russischsprachige Kommentare, was darauf hindeutet, dass der Betreiber Russisch spricht. Den Serverdaten zufolge zielte er auf französische Websites aus Medien, Unterhaltung und Bildung.",
+    "## Einordnung durch Google",
+    "Google stuft die aktuelle Aktivität auf Stufe 5 ein. Auf dieser Stufe führen KI-Werkzeuge mehrere Phasen eines Angriffs mit minimalem menschlichem Aufwand aus. Laut Google sind leistungsfähigere Angriffe nur noch Monate entfernt.",
+    "GTIG nennt diese Entwicklung einen kritischen Wendepunkt. Die automatisierten Angriffe opfern derzeit allerdings Tarnung zugunsten der Geschwindigkeit. Sie hinterlassen forensische Spuren, was sie leichter erkennbar macht.",
+    "Hinweis: Die Einschätzung zur Entwicklung stammt von Google selbst und ist eine Herstellerangabe. Die Beschreibung der Stufe 5 bezieht sich auf Googles eigene Einstufung."
+   ],
+   "quellen": [
+    {
+     "titel": "Google warns that fully automated cyberattacks have arrived and will get worse fast (The Decoder)",
+     "url": "https://the-decoder.com/google-warns-that-fully-automated-cyberattacks-have-arrived-and-will-get-worse-fast/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Sicherheitsteams können Systeme auf ähnliche Muster prüfen, etwa auf Patch-Vergleiche und ungewöhnlich schnelle Ausnutzung neuer Lücken.",
+    "Privatpersonen sollten zeitnah Software-Updates einspielen, da Angreifer Patches offenbar automatisiert auswerten."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "exploit_agent",
+    "zeilen": [
+     "> Patch-Vergleich vor/nach Update",
+     "✓ Schwachstelle identifiziert",
+     "✓ Exploit erstellt",
+     "⚠ Automatisierte Ausführung ohne Mensch",
+     "● Stufe 5 von 5"
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-11-16",
+   "kennzahlen": [
+    {
+     "label": "Einstufung durch Google",
+     "wert": "Stufe 5"
+    }
+   ],
+   "signal": "Google sieht den ersten beobachteten Fall vollautomatischer Schwachstellenausnutzung und erwartet, dass solche Angriffe bald stärker werden.",
+   "link": "https://the-decoder.com/google-warns-that-fully-automated-cyberattacks-have-arrived-and-will-get-worse-fast/",
+   "linkLabel": "Zum Artikel bei The Decoder",
+   "id": "google-vollautomatische-cyberangriffe-sind-realitat",
+   "hinzugefuegt": "2026-11-16T23:49:07Z"
+  },
+  {
+   "titel": "Unsloth aktualisiert Qwen3.8-27B-Quantisierungen auf Dynamic V3.1",
+   "kurz": "Unsloth hat die GGUF-Quantisierungen des Qwen3.8-27B-Modells mit dem neuen Verfahren Dynamic V3.1 aktualisiert. Laut Hersteller verbessert dies die Genauigkeit bei gleicher Größe um 5 bis 10 Prozent.",
+   "artikel": [
+    "Das Modell Qwen3.8-27B ist ein dichtes Modell mit 27 Milliarden Parametern. Es verarbeitet Bilder, bietet ein Reasoning-Verfahren und ein Kontextfenster von 256K Token. Laut Unsloth lässt es sich auf Systemen mit 17 GB RAM bzw. VRAM lokal betreiben.",
+    "## Update vom 11. November",
+    "Unsloth hat die Quantisierungen von Qwen3.8-27B nun mit dem Verfahren Dynamic V3.1 neu veröffentlicht. Quantisierung bedeutet, die Gewichte eines Modells mit weniger Bits zu speichern, um Speicherbedarf und Rechenaufwand zu senken. Laut Herstellerangabe verbessert V3.1 die durchschnittliche Genauigkeit bei vergleichbarer Größe um 5 bis 10 Prozent. Aktualisiert wurden die Varianten von 2 bis 6 Bit. Die 3-Bit-Variante UD3 wurde nicht ersetzt, da sie laut Unsloth ähnlich gut abschneidet wie UD3.1.",
+    "## Benchmarks und Streit um Messmethoden",
+    "Unsloth nennt als Testgrundlage unter anderem Terminal Bench 2.1, DeepSWE v1.1, LiveCodeBench v6, GPQA Diamond, MMLU-Pro und AIME25. Agentische Tests liefen mit 256K Kontext, die übrigen mit 128K. In der Diskussion auf Hacker News kritisiert Unsloth eine Vergleichsstudie des Anbieters ISTA: Dieser habe nur einen Durchlauf gemacht, Unsloth selbst 14. Laut Unsloth liegt die Wiederherstellungsrate im Mittel bei 93 bis 96 Prozent statt der behaupteten 100 Prozent. Auch bei der Messung mit LiveCodeBench sehe man andere Ergebnisse als ISTA.",
+    "Unsloth verweist außerdem darauf, dass GPUs nicht deterministisch rechnen. Deshalb seien mehrfache Durchläufe nötig. Für Versionen der Quantisierung, die auf Qwen4 und künftige Modelle angewendet werden sollen, arbeitet Unsloth an einer weiter verbesserten Fassung."
+   ],
+   "quellen": [
+    {
+     "titel": "Qwen3.8 - How to Run Locally | Unsloth Documentation",
+     "url": "https://unsloth.ai/docs/models/qwen3.8"
+    },
+    {
+     "titel": "Hacker News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50491980"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Qwen3.8-27B mit einer Quantisierung auf einem Rechner mit etwa 17 GB RAM oder VRAM lokal ausprobieren.",
+    "Die Dynamic-V3.1-Varianten mit den älteren Quantisierungen vergleichen, sofern man eigene Tests fährt.",
+    "Die Hinweise zur Messmethodik beachten, bevor man Benchmark-Angaben von Anbietern übernimmt."
+   ],
+   "ausprobieren": {
+    "prompt": "Erkläre mir in drei Sätzen, was eine GGUF-Quantisierung ist.",
+    "tool": "Unsloth",
+    "url": "https://unsloth.ai/docs/models/qwen3.8"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Genauigkeitsgewinn laut Unsloth (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Dynamic V3",
+      "wert": 100,
+      "anzeige": "Basis"
+     },
+     {
+      "label": "Dynamic V3.1",
+      "wert": 105,
+      "anzeige": "+5 bis 10 % laut Hersteller"
+     }
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "2026-11-11",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "27 Mrd. (dicht)"
+    },
+    {
+     "label": "Kontextfenster",
+     "wert": "256K"
+    },
+    {
+     "label": "Lokaler Speicherbedarf",
+     "wert": "17 GB RAM/VRAM"
+    },
+    {
+     "label": "Genauigkeitsgewinn laut Hersteller",
+     "wert": "5–10 %"
+    }
+   ],
+   "signal": "Unsloth hat die Quantisierungen von Qwen3.8-27B auf Dynamic V3.1 umgestellt. Die Angaben zum Genauigkeitsgewinn stammen vom Anbieter selbst und sind nicht unabhängig überprüft. Die Diskussion auf Hacker News (259 Punkte) dreht sich um die Messmethodik.",
+   "link": "https://unsloth.ai/docs/models/qwen3.8",
+   "linkLabel": "Zur Unsloth-Dokumentation",
+   "id": "unsloth-aktualisiert-qwen3-8-27b-quantisierungen-auf-dynamic",
+   "hinzugefuegt": "2026-11-16T23:49:07Z"
+  },
   {
    "titel": "JEPA-Weltmodelle: Langstrecken-Planung ohne Nachtraining verbessern",
    "kurz": "Ein Blogbeitrag aus 600 Experimenten zeigt, wie sich das JEPA-Weltmodell LeWM ohne neues Training auf lange Aufgaben umstellen lässt. Zerlegung in Zwischenziele hebt die Erfolgsquote bei 75 Schritten von 22 % auf 80 %.",
@@ -20040,8 +20215,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-16T15:31:28Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-16T23:49:07Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-15T23:59:02Z"
  }
 }
