@@ -3843,6 +3843,147 @@
  ],
  "radar": [
   {
+   "titel": "JEPA-Weltmodelle: Langstrecken-Planung ohne Nachtraining verbessern",
+   "kurz": "Ein Blogbeitrag aus 600 Experimenten zeigt, wie sich das JEPA-Weltmodell LeWM ohne neues Training auf lange Aufgaben umstellen lässt. Zerlegung in Zwischenziele hebt die Erfolgsquote bei 75 Schritten von 22 % auf 80 %.",
+   "artikel": [
+    "Im Streit darüber, was ein Weltmodell leisten soll, setzen viele auf generative Modelle, die die Zukunft in Pixeln vorhersagen. Yann LeCun und andere halten das für verschwendete Mühe, weil die meisten Pixel für Handlungsentscheidungen irrelevant sind. Die Alternative heißt JEPA (Joint-Embedding Predictive Architecture). Sie besteht aus einem Encoder, der Bilder in kompakte Vektoren, sogenannte Embeddings, umwandelt, einem Prädiktor, der aus Embedding und Aktion das nächste Embedding vorhersagt, und einem Planer, der viele Aktionsfolgen durchspielt und die wählt, deren Endzustand dem Zielbild am nächsten kommt.",
+    "Der Autor untersuchte LeWM, ein JEPA-Weltmodell, dessen Hauptbenchmark Push-T ist: Ein Roboter schiebt einen grauen T-förmigen Block in eine grüne Zielposition. Ersetzte er den Prädiktor durch die exakte Physik des Simulators, lag die Erfolgsquote bei langen Aufgaben (Ziel 75 Schritte entfernt) bei 77 % statt 78 %. Die Vorhersagen des Modells sind also auf den trainierten Bahnen bereits so gut wie perfekte Physik. Die nächsten Gewinne müssen daher aus der Nutzung der trainierten Architektur kommen.",
+    "## Zwischenziele statt einer langen Suche",
+    "Mit dem Modell wie veröffentlicht gelang nur 22 % der langen Aufgaben. Bei 25 Schritten Entfernung erreichte es das Ziel in 89,7 % der Fälle. Teilte der Autor die Aufgabe in Abschnitte von 25 Schritten mit Zwischenzielen, stieg der Erfolg auf 80 %. Dieses hierarchische Planen, bei dem eine höhere Ebene Zwischenziele setzt und eine untere sie anfährt, gilt laut Beitrag als eines der zentralen offenen Probleme für Weltmodelle. Mehr Rechenaufwand durch mehrfaches Planen brachte dagegen unter einen Prozentpunkt.",
+    "## Latenter Speicher-Graph",
+    "Ohne Expertendemonstrationen als Zwischenziele verband der Autor etwa 460.000 eingebettete Zustände aus Demonstrationen zu einem Graphen. Ein Pfad durch diesen Graphen liefert die Zwischenziele. Anfangs sprangen Pfade unphysikalisch zwischen Demonstrationen; ein Kostenaufschlag auf jeden Sprung hob die Erfolgsquote von 62 % auf 85 %, gleichauf mit der Planung mit Expertenzielen. Laut Beitrag ist die Abstandsmessung im Embedding-Raum in 87 % der Fälle korrekt, was erreichbare von unerreichbaren Zielen unterscheidet.",
+    "Hinweis: Alle Zahlen stammen aus dem Blogbeitrag des Autors und sind nicht unabhängig geprüft. Die Tests liefen nur auf Push-T in einer Simulation."
+   ],
+   "quellen": [
+    {
+     "titel": "After 600 experiments, here's what I discovered about JEPA world models",
+     "url": "https://haddyalchaer.com/jepa"
+    },
+    {
+     "titel": "HN-Diskussion (295 Punkte)",
+     "url": "https://news.ycombinator.com/item?id=50487185"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer mit Simulationen oder Robotik experimentiert, kann Zwischenziele in Planungsschleifen testen.",
+    "Wer JEPA-Ansätze verfolgt, findet in der Diskussion auf Hacker News weitere Einordnungen.",
+    "Wer eigene Pfadplanung baut, kann Sprungkosten in Graphen als einfachen Hebel ausprobieren."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erfolgsquote bei 75 Schritten (250 Aufgaben)",
+    "balken": [
+     {
+      "label": "LeWM wie veröffentlicht",
+      "wert": 22,
+      "anzeige": "22 %"
+     },
+     {
+      "label": "Zwischenziele alle 25 Schritte",
+      "wert": 80,
+      "anzeige": "80 %"
+     },
+     {
+      "label": "Graph mit Sprungkosten",
+      "wert": 85,
+      "anzeige": "85 %"
+     }
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Experimente",
+     "wert": "600"
+    },
+    {
+     "label": "Eingebettete Zustände im Graphen",
+     "wert": "ca. 460.000"
+    },
+    {
+     "label": "Erfolg LeWM wie veröffentlicht (75 Schritte)",
+     "wert": "22 %"
+    },
+    {
+     "label": "Erfolg mit Sprungkosten im Graph",
+     "wert": "85 %"
+    }
+   ],
+   "signal": "Herstellerangaben bzw. Autorenangaben: Die Zahlen stammen vom Autor des Blogs, nicht von einer unabhängigen Prüfung.",
+   "link": "https://haddyalchaer.com/jepa",
+   "linkLabel": "Zum Blogbeitrag",
+   "id": "jepa-weltmodelle-langstrecken-planung-ohne-nachtraining-verb",
+   "hinzugefuegt": "2026-11-16T15:31:28Z"
+  },
+  {
+   "titel": "Agent-Gedächtnis: Anthropic setzt aufs Vergessen statt aufs Speichern",
+   "kurz": "Anthropic zeigt in Tests mit Claude, dass gezielte Notizen bessere Ergebnisse liefern als vollständige Archive. Ein als „Dreaming“ bezeichneter Prozess prüft und korrigiert gespeicherte Notizen nachträglich.",
+   "artikel": [
+    "Wer mit einem KI-Agenten über mehrere Tage an einem Projekt arbeitet, stößt schnell an eine Grenze: Jede neue Sitzung beginnt ohne Vorwissen. Anthropic untersucht, wie Claude trotzdem Wissen über Sitzungen hinweg behalten kann, ohne dass sich das Modell selbst verändert. Claude schreibt dazu Notizen in einen Ordner, aus dem es sie später wieder lesen kann.",
+    "## Wenig speichern ist oft besser",
+    "In einem Test mit Pokémon Red legte das ältere Modell Claude Sonnet 3.7 bei rund 10.000 Spielschritten 413 Dateien in 225 Ordnern an. Das Spielgeschehen ändert sich ständig, deshalb veralteten die Notizen schnell. Das Modell sortierte zeitweise nur noch seine Notizen um, statt zu spielen, und erreichte am Ende lediglich ein Orden.",
+    "Das neuere Modell Claude Fable 5 führte nur wenige Dateien und gewann vier Orden. Es notierte keine Infos, die ohnehin auf dem Bildschirm zu sehen waren, sondern Pläne, Strategien und getestete Regeln. Anthropic stützt sich dabei allerdings nur auf jeweils einen Durchlauf pro Modell.",
+    "## Dreaming korrigiert fehlerhafte Erinnerungen",
+    "Ein Problem entsteht, wenn der Agent falschen Notizen blind vertraut. Dafür beschreibt Anthropic den Prozess „Dreaming“, der sich laut Anthropic auf Forschung von Letta und der UC Berkeley stützt. Dabei geht Claude in Leerlaufphasen alte Sitzungsprotokolle durch und gleicht seine Notizen damit ab. Im Pokémon-Test hatte Claude eine Landmarke falsch notiert, tappte dreimal in dieselbe Falle und verfehlte sein Ziel. Nach einem Dreaming-Durchgang fand es den Fehler und den richtigen Weg.",
+    "## Wikis für große Wissensbestände",
+    "Laut Anthropic baute Claude aus rund 350.000 internen Dokumenten des Softwareunternehmens Stainless ein verlinktes Wiki. Dreaming soll dabei neue Seiten erzeugen und Lücken, Dubletten und defekte Links beheben. Die besten Ergebnisse gab es, wenn das Wiki mit einer Suche kombiniert wurde. In einem juristischen Test von Anthropic erreichte Claude mit Wiki 87 Prozent, mit reiner Suche 73 Prozent, allerdings bei Fragen, deren Antworten auf mehrere Dokumente verteilt waren.",
+    "## Offene Punkte",
+    "Anthropic räumt ein, dass noch wichtige Fragen offen sind. Notizen während einer Aufgabe lenken den Agenten ab, Dreaming kostet zusätzliche Rechenleistung, und die Ergebnisse liegen erst mit Verzögerung vor. Außerdem warnt Anthropic davor, zu viele Erinnerungen automatisch in jede Sitzung zu laden, weil sie Kontext verbrauchen und fehlerhafte Notizen weitergeben.",
+    "Anthropic hatte Dreaming im Mai als Research Preview für Claude Managed Agents vorgestellt. Die Funktion liest laut Anthropic einen bestehenden Speicher und bis zu 100 frühere Sitzungen, entfernt Dubletten und veraltete Einträge und erstellt einen neuen, geordneten Speicher, während das Original unverändert bleibt. Zum Start unterstützte sie nur Claude Opus 4.7 und Sonnet 4.6.",
+    "Auch OpenAI nennt sein überarbeitetes ChatGPT-Gedächtnis „Dreaming“. Laut OpenAI steigerte das die zeitliche Genauigkeit von 52,2 auf 75,1 Prozent. Diese Angabe ist eine Herstellerangabe."
+   ],
+   "quellen": [
+    {
+     "titel": "Anthropic says the key to agent memory is knowing what to forget, not how much to store – The Decoder",
+     "url": "https://the-decoder.com/anthropic-says-the-key-to-agent-memory-is-knowing-what-to-forget-not-how-much-to-store/"
+    }
+   ],
+   "demo": "agent",
+   "quelle": "Fachpresse",
+   "datum": "2026-11-16",
+   "kennzahlen": [
+    {
+     "label": "Pokémon-Test: Dateien (Sonnet 3.7)",
+     "wert": "413 Dateien in 225 Ordnern"
+    },
+    {
+     "label": "Juristischer Test: Wiki vs. Suche",
+     "wert": "87 % vs. 73 %"
+    },
+    {
+     "label": "ChatGPT-Gedächtnis (OpenAI-Angabe): zeitliche Genauigkeit",
+     "wert": "52,2 % → 75,1 %"
+    }
+   ],
+   "signal": "Für Agenten zählt laut Anthropic nicht die Menge gespeicherter Informationen, sondern deren Auswahl und nachträgliche Korrektur. Alle Tests stammen von Anthropic selbst.",
+   "link": "https://the-decoder.com/anthropic-says-the-key-to-agent-memory-is-knowing-what-to-forget-not-how-much-to-store/",
+   "linkLabel": "Originalartikel bei The Decoder",
+   "machen": [
+    "Wer mit einem KI-Agenten länger an einem Projekt arbeitet, kann wichtige Regeln und Strategien gezielt festhalten statt alles mitzuschreiben.",
+    "Notizen sollten regelmäßig gepflegt werden, da sich sonst Fehler und Halluzinationen ansammeln."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Anzahl Dateien im Pokémon-Test",
+    "balken": [
+     {
+      "label": "Sonnet 3.7",
+      "wert": 413,
+      "anzeige": "413 Dateien"
+     },
+     {
+      "label": "Fable 5",
+      "wert": 5,
+      "anzeige": "wenige Dateien"
+     }
+    ]
+   },
+   "id": "agent-gedachtnis-anthropic-setzt-aufs-vergessen-statt-aufs-s",
+   "hinzugefuegt": "2026-11-16T15:31:28Z"
+  },
+  {
    "titel": "Alle KI-generierten Code sollte Open Source sein – so die These eines Blogbeitrags",
    "kurz": "Der Autor Jakub Jankiewicz argumentiert, dass von KI erzeugter Code als Open Source veröffentlicht oder gemeinfrei gestellt werden sollte. Er begründet das mit den Trainingsdaten der Modelle und mit der urheberrechtlichen Lage.",
    "artikel": [
@@ -19899,8 +20040,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-16T06:02:06Z",
-  "neueFunde": 0,
+  "letzterScan": "2026-11-16T15:31:28Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-15T23:59:02Z"
  }
 }
