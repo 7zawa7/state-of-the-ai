@@ -1,6 +1,56 @@
 {
  "news": [
   {
+   "titel": "OpenAI-Modell GPT-6 Astra hilft bei Beweis zum Standardmodell auf dem Gitter",
+   "kurz": "Laut The Decoder hat der OpenAI-Physiker Nathaniel Craig mit GPT-6 Astra einen Beweis erarbeitet, der die vollständige Theorie des Standardmodells auf einem Rechengitter (Lattice) beschreibt. Craig betont, dass bis zu realistischen Simulationen noch viel Arbeit nötig ist.",
+   "artikel": [
+    "Der Physiker Nathaniel Craig von der University of California, Santa Barbara, arbeitet derzeit als Gastwissenschaftler bei OpenAI. Mit dem Modell GPT-6 Astra hat er ein Problem angegangen, das Teilchenphysiker seit über 25 Jahren beschäftigt. Laut der Quelle stellte er den Ansatz im OpenAI-Blog und in einer Preprint-Arbeit vor.",
+    "## Worum es geht",
+    "Physiker können Teile des Standardmodells, der Theorie aller bekannten Elementarteilchen und Grundkräfte, auf einem Rechengitter simulieren. Dieses Gitter wird als Lattice bezeichnet. So gelang etwa die Berechnung der Protonenmasse aus den Grundgesetzen. Die vollständige Theorie auf ein solches Gitter zu bringen, galt bisher jedoch als unmöglich. Der Grund ist die schwache Kraft, die bestimmte radioaktive Zerfälle steuert. Sie behandelt links- und rechtshändige Teilchen unterschiedlich, und auf einfachen Gittern entstehen dadurch störende Geisterteilchen. Sogenannte Overlap-Fermionen können diese herausfiltern, doch die korrekte Phase ließ sich über 25 Jahre lang nicht festlegen.",
+    "## Der Beitrag der KI",
+    "Craig hatte eine Idee, um die Phase zu bestimmen: Man vergleicht immer feinere Gitter. Er konnte aber nicht beweisen, dass dies in allen nötigen Fällen funktioniert. GPT-6 Astra machte aus dieser Idee eine funktionierende Konstruktion und übernahm die Ausarbeitung des detaillierten Beweises. Drei Fachleute für Gitter-Feldtheorie, Maarten Golterman, Andreas Kronfeld und Yigal Shamir, prüften den Beweis und stellten Rückfragen, die laut Craig das Vertrauen in das Ergebnis gestärkt haben.",
+    "## Einordnung",
+    "Craig beschreibt die Arbeit selbst als \"much more a beginning than an end\". Sie ist also eher ein Anfang als ein Abschluss. Der Artikel ordnet den Fall in eine Reihe von KI-Fortschritten in der Mathematik ein, die im Januar 2026 begannen. Dazu gehören laut Quelle ein von OpenAI widerlegtes Erdős-Problem und ein eingereichter, noch in Prüfung befindlicher 166-seitiger Beweis zum Navier-Stokes-Problem. Dessen Lösung ist laut Quelle noch nicht abgeschlossen."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI's GPT-6 Astra tackles the Standard Model's toughest math problem on a lattice",
+     "url": "https://the-decoder.com/openais-gpt-6-astra-tackles-the-standard-models-toughest-math-problem-on-a-lattice/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Man kann verfolgen, wie KI-Modelle zunehmend in der mathematischen Forschung eingesetzt werden.",
+    "Man kann die Erklärungen zu Gittersimulationen und Overlap-Fermionen als Einstieg in die Teilchenphysik nutzen.",
+    "Man sollte Herstellerangaben zu KI-Erfolgen mit dem Hinweis auf noch laufende Prüfungen lesen."
+   ],
+   "bereich": "Text",
+   "datum": "2026-11-16",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Zeitliche Abfolge der KI-Mathe-Meilensteine",
+    "balken": [
+     {
+      "label": "Januar 2026",
+      "wert": 1,
+      "anzeige": "Start der Serie"
+     },
+     {
+      "label": "Mai 2026",
+      "wert": 2,
+      "anzeige": "Erdős-Widerlegung"
+     },
+     {
+      "label": "September 2026",
+      "wert": 3,
+      "anzeige": "Navier-Stokes-Einreichung"
+     }
+    ]
+   },
+   "id": "openai-modell-gpt-6-astra-hilft-bei-beweis-zum-standardmodel",
+   "hinzugefuegt": "2026-11-17T05:15:54Z"
+  },
+  {
    "titel": "Alibaba stellt Qwen4-Max vor: großes Modell mit deutlich niedrigeren Kosten pro Aufgabe",
    "kurz": "Alibaba hat das neue Flaggschiff Qwen4-Max vorgestellt, das laut Herstellerangaben effizienter arbeitet und pro Aufgabe deutlich weniger kostet. Im Artificial Analysis Intelligence Index liegt es knapp hinter Kimi K3.1 Pro.",
    "artikel": [
@@ -3894,6 +3944,157 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Moonshot AI: Kimi-Modelle sollen von Programmieren auf Wissenschaft umschwenken",
+   "kurz": "Das Pekinger Startup Moonshot AI richtet seine Kimi-Sprachmodelle von Coding-Benchmarks auf Biologie, Chemie und Pharmaforschung aus. Der Schritt wird mit abnehmenden Zuwächsen bei Coding-Benchmarks begründet, echte eigenständige Durchbrüche stehen laut Material aber noch aus.",
+   "artikel": [
+    "Moonshot AI sieht bei Programmier-Benchmarks nur noch geringe Fortschritte und lenkt deshalb die Sprachmodelle Kimi auf Biologie, Chemie und Pharmaforschung. Laut dem internationalen Direktor Giacomo Ficari, der auf dem Web Summit in Lissabon sprach, verlangt Wissenschaft intelligentere KI-Modelle als Recht, Finanzen oder Code.",
+    "## Erste Anwendungen",
+    "Das Startup DP Technology bindet Kimi K3.1 Pro in seinen Forschungsassistenten BioMaster ein. In einem Test analysierte das System Gendaten von 3.696 Mauspankreaszellen und markierte 100 Kandidatengene in 90 Minuten. Für menschliche Arbeit wurden dafür geschätzt vier Stunden angesetzt. Diese Zeitangabe stammt aus dem Bericht und ist keine unabhängig geprüfte Messung.",
+    "## Grenzen der Forschung",
+    "Vollständig eigenständige Entdeckungen sind laut dem Artikel noch weit entfernt. Beim TCSExam, einem Benchmark mit 100 theoretischen Informatik-Aufgaben, erstellten führende Modelle überprüfbare Beweise, konnten aber allein keine offenen Vermutungen lösen. Auch US-Anbieter stoßen auf ähnliche Grenzen: Anthropics Claude fand im September ein Enzymsystem, während Mathematiker die behaupteten Durchbrüche von OpenAI in Mathematik und Physik kritisierten.",
+    "## Pharmabranche zurückhaltend",
+    "Eine Umfrage des Finanzhauses Citi unter 50 US-Forschungsleitern vom Juni ergab, dass 72 Prozent KI bereits breit einsetzen. Nur 24 Prozent erwarten davon jedoch eine spürbare Verbesserung der Erfolgsquote bei der Medikamentenentwicklung."
+   ],
+   "quellen": [
+    {
+     "titel": "Moonshot AI pivots Kimi models from coding to science as benchmark gains flatten – The Decoder",
+     "url": "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer in Biologie oder Chemie forscht, kann verfolgen, ob Assistenzsysteme wie BioMaster in Laborroutinen tatsächlich Zeit sparen.",
+    "Interessierte können prüfen, ob Herstellerangaben zu Forschungsleistungen in unabhängigen Tests bestätigt werden."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Analysezeit für 100 Kandidatengene (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Manuelle Analyse (geschätzt)",
+      "wert": 240,
+      "anzeige": "ca. 4 Std."
+     },
+     {
+      "label": "Kimi K3.1 Pro via BioMaster",
+      "wert": 90,
+      "anzeige": "90 Min."
+     }
+    ]
+   },
+   "radar": true,
+   "quelle": "Fachpresse",
+   "datum": "2026-11-16",
+   "kennzahlen": [
+    {
+     "label": "Analysierte Mauspankreaszellen",
+     "wert": "3.696"
+    },
+    {
+     "label": "Markierte Kandidatengene",
+     "wert": "100"
+    },
+    {
+     "label": "Befragte US-Forschungsleiter (Citi-Umfrage)",
+     "wert": "50"
+    },
+    {
+     "label": "Erwarten spürbare Verbesserung der Erfolgsquote",
+     "wert": "24 %"
+    }
+   ],
+   "signal": "Moonshot AI setzt bei Kimi auf Wissenschaft statt auf Coding-Benchmarks. Die gezeigten Ergebnisse stammen überwiegend aus Herstellerangaben und Berichten, nicht aus unabhängigen Prüfungen.",
+   "link": "https://the-decoder.com/moonshot-ai-pivots-kimi-models-from-coding-to-science-as-benchmark-gains-flatten/",
+   "linkLabel": "Originalartikel bei The Decoder",
+   "id": "moonshot-ai-kimi-modelle-sollen-von-programmieren-auf-wissen",
+   "hinzugefuegt": "2026-11-17T05:15:54Z"
+  },
+  {
+   "titel": "Meta setzt LLM-Tests ein, die riskante Code-Änderungen vor dem Merge scheitern lassen",
+   "kurz": "Meta hat sein System JiTTests aus der Forschung in die Produktion überführt. Es erzeugt per LLM ausführbare Tests, die bei fehlerhaften Änderungen fehlschlagen sollen.",
+   "artikel": [
+    "Meta hat Catching Just-in-Time Tests (JiTTests) von einem Forschungsprototyp in die eigene Produktionsinfrastruktur überführt. JiTTests ist ein auf einem Large Language Model (LLM, großes Sprachmodell) basierendes System, das ausführbare Tests für riskante Code-Änderungen (Diffs) schreibt. Schlägt ein solcher Test fehl, ist das ein konkreter Beleg dafür, dass sich das Verhalten durch die Änderung verändert hat.",
+    "## Ablauf der Pipeline",
+    "Das Verfahren läuft nachts auf überschüssiger Rechenkapazität über Metas Backend-Code mit vielen hundert Millionen Zeilen. Zunächst werden die riskanten Änderungen des Vortags ausgewählt. Danach erzeugen zwei diff-bewusste Workflows Kandidaten-Tests. Ein Ensemble aus mehreren LLMs bewertet die fehlschlagenden Tests als Richter. Ein regelbasiertes Filter-Umfeld namens RubFake ergänzt deterministische Prüfungen gegen Fehlalarme. Erst danach entscheidet das System, ob ein Ingenieur kontaktiert wird.",
+    "## Zwei Workflows",
+    "Der Dodgy-Diff-Workflow geht davon aus, dass jede Änderung fehlerhaft sein könnte, und erzeugt Tests, die die Änderung von ihrem Vorgänger unterscheiden. Der intent-aware-Workflow leitet zunächst aus Code, Titel und Zusammenfassung ab, was die Änderung bewirken soll, listet Risiken auf und schreibt Tests gegen dafür gebaute Mutanten. Tests, die auf der echten Änderung fehlschlagen, gelten als sogenannte schwache Treffer. Ein schwacher Treffer ist dabei nur ein Kandidat und kein bestätigter Fehler.",
+    "## Zahlen aus dem Paper",
+    "Die Forschenden analysieren 22.126 erzeugte Tests. Diff-bewusste Methoden lieferten nach Angaben des Papers viermal so viele Kandidaten wie Härtungstests. Der intent-aware-Workflow erzeugte in 6,4 Prozent seiner Tests schwache Treffer, der Dodgy-Diff-Ansatz in 2,5 Prozent. Metas früherer ACH-Ansatz kam auf 0,8 Prozent. Alle diese Werte stammen laut Quelle aus Metas eigener Codebasis und sind Selbstangaben.",
+    "## Betrieb im Vollausbau",
+    "Die erste Einführung war mit 41 gemeldeten Kandidaten bescheiden, davon bestätigten sich 8 (19,5 Prozent). Laut einem späteren Engineering-Beitrag von Meta gaben Ingenieure eine Trefferquote von 60 Prozent an, wobei es sich um eine Selbstauskunft handelt. Im ersten Halbjahr 2026 fing das System 74 Privacy-SEVs (Schwere-Vorfälle) bereits im Diff-Stadium ab. Die Häufigkeit solcher Privacy-SEVs sank im selben Zeitraum laut Angabe um 20 Prozent.",
+    "## Mensch auf dem Laufenden",
+    "Meta beschreibt das Modell als Human-on-the-loop: Ingenieure legen Kriterien fest und beobachten die Ergebnisse aggregiert, statt jeden Test zu prüfen. Sie greifen auf Richtlinienebene ein. Laut Quelle müssen Teammitglieder selten Testcode lesen und bestätigen nur, ob eine beobachtete Verhaltensänderung beabsichtigt war.",
+    "## Nicht öffentlich",
+    "JiTTests ist ausschließlich interne Infrastruktur bei Meta. Code, Modelle oder eine API wurden nicht veröffentlicht. Andere Teams können laut Quelle nur das Muster übernehmen: diff-bewusst generierte Mutations-Tests, ein LLM-Richter-Ensemble, deterministische Filter und aggregierte menschliche Aufsicht."
+   ],
+   "quellen": [
+    {
+     "titel": "Meet Meta's JiTTests: LLM-Generated Tests Designed to Fail Before Risky Code Lands (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/11/16/meta-jittests-llm-catching-tests-privacy-bugs/"
+    },
+    {
+     "titel": "Just-in-Time Catching Test Generation at Meta (FSE 2026)",
+     "url": "https://www.marktechpost.com/2026/11/16/meta-jittests-llm-catching-tests-privacy-bugs/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Ein Team kann das Grundmuster übernehmen: Tests generieren, die auf geänderten Code zielen, und deren Fehlschlag prüfen.",
+    "Wer eigene Pull Requests prüft, kann LLM-Bewertungen von Testergebnissen mit einfachen deterministischen Regeln kombinieren.",
+    "Da JiTTests nicht öffentlich ist, bleibt für Privatpersonen nur das Konzept, kein fertiges Werkzeug."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-11-16",
+   "kennzahlen": [
+    {
+     "label": "Analysierte generierte Tests (Paper)",
+     "wert": "22.126"
+    },
+    {
+     "label": "Privacy-SEVs am Diff-Stadium gefangen (H1 2026, Meta-Angabe)",
+     "wert": "74"
+    },
+    {
+     "label": "Weak Catches pro Test, intent-aware (Paper, Selbstangabe)",
+     "wert": "6,4 % (52 von 811)"
+    },
+    {
+     "label": "Weak Catches pro Test, ACH-Ansatz (Paper, Selbstangabe)",
+     "wert": "0,8 % (6 von 754)"
+    },
+    {
+     "label": "Bestätigte Treffer Erstdeployment (Paper)",
+     "wert": "8 von 41 (19,5 %)"
+    }
+   ],
+   "signal": "Meta setzt LLM-generierte Tests als Filter vor dem Merge produktiv ein. Die Zahlen sind Selbstangaben aus Metas eigener Codebasis, und das System ist nicht öffentlich verfügbar.",
+   "link": "https://www.marktechpost.com/2026/11/16/meta-jittests-llm-catching-tests-privacy-bugs/",
+   "linkLabel": "Originalbeitrag auf MarkTechPost lesen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Weak Catches pro Test (Paper, Selbstangabe)",
+    "balken": [
+     {
+      "label": "ACH-Ansatz",
+      "wert": 0.8,
+      "anzeige": "0,8 %"
+     },
+     {
+      "label": "Dodgy Diff",
+      "wert": 2.5,
+      "anzeige": "2,5 %"
+     },
+     {
+      "label": "Intent-aware (neu)",
+      "wert": 6.4,
+      "anzeige": "6,4 %"
+     }
+    ]
+   },
+   "id": "meta-setzt-llm-tests-ein-die-riskante-code-anderungen-vor-de",
+   "hinzugefuegt": "2026-11-17T05:15:54Z"
+  },
   {
    "titel": "Google: Vollautomatische Cyberangriffe sind Realität",
    "kurz": "Googles Threat Intelligence Group hat erstmals Angreifer beobachtet, die Schwachstellen ganz ohne menschliches Zutun finden und ausnutzen. Google erwartet, dass solche Angriffe bald deutlich stärker werden.",
@@ -20112,7 +20313,7 @@
  ],
  "bereiche": [
   {
-   "maximum": "Texturierte Modelle aus Foto oder Text in unter einer Minute, CAD-Teile direkt für den Drucker. Ein Open-Source-Werkzeug (sand3d) beschreibt 3D-Objekte als Python-Code für Blender. Ein Addon (mcp-for-blender-pro) lässt einen KI-Assistenten Objekte bauen und Materialien ändern.",
+   "maximum": "Texturierte Modelle aus Foto oder Text in unter einer Minute, CAD-Teile direkt für den Drucker. Ein Addon (mcp-for-blender-pro) lässt einen KI-Assistenten Objekte bauen und Materialien ändern.",
    "name": "3D & CAD",
    "reihenfolge": 7,
    "status": "mid",
@@ -20184,7 +20385,7 @@
    "id": "stimme"
   },
   {
-   "maximum": "Selbstständige Recherche, lange Dokumente auswerten, mehrstufige Aufgaben allein erledigen. Im Test der Redaktion löste ein Agent eigenständig Sicherheitslücken in PHP, die Wiz bestätigte.",
+   "maximum": "Selbstständige Recherche, lange Dokumente auswerten, mehrstufige Aufgaben allein erledigen. Im Test der Redaktion löste ein Agent eigenständig Sicherheitslücken in PHP, die Wiz bestätigte. Laut Google-Gruppe Threat Intelligence finden Angreifer inzwischen Schwachstellen ohne menschliches Zutun.",
    "name": "Text & Denken",
    "reihenfolge": 6,
    "status": "ok",
@@ -20215,8 +20416,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-16T23:49:07Z",
+  "letzterScan": "2026-11-17T05:15:54Z",
   "neueFunde": 3,
-  "standAktualisiert": "2026-11-15T23:59:02Z"
+  "standAktualisiert": "2026-11-17T05:15:54Z"
  }
 }
