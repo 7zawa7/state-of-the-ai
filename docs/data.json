@@ -3945,6 +3945,77 @@
  ],
  "radar": [
   {
+   "titel": "ScaleVLA: Roboter-Steuerung mit einem 552-Milliarden-Parameter-Sprachmodell",
+   "kurz": "Forscher um galbot (GalaxyGeneralRobotics) stellen ScaleVLA vor, ein Vision-Language-Action-Modell, das ein 552 Milliarden Parameter großes Sprachmodell als Grundlage für Roboterbewegungen nutzt. Laut Paper übertrifft es kleinere Backbones bei Lerneffizienz, Generalisierung und präziser Manipulation.",
+   "artikel": [
+    "Bisher stützen sich die meisten Vision-Language-Action-Modelle (VLA) für Roboter auf deutlich kleinere Sprachmodelle als Basis. Die Autoren des Papers fragen, ob Repräsentationen aus Spitzenmodellen ein stärkeres Fundament für das Lernen von Robotern liefern können. Ein VLA-Modell verbindet dabei Bild- und Textverarbeitung mit der Ausgabe konkreter Handlungen.",
+    "## Aufbau",
+    "ScaleVLA verbindet ein 552-Milliarden-Parameter-Backbone (DeepSeek-V4.1-Flash) mit einem trainierbaren Action-DiT. Ein DiT ist ein Diffusions-Transformer, der die Bewegungsabfolge erzeugt. Die Autoren vergleichen Sprachmodelle von 2 bis 552 Milliarden Parametern unter gleichem Trainingsaufbau.",
+    "## Ergebnisse",
+    "Laut Paper reichen 10 Demonstrationen für 87,8 Prozent Erfolg, während ein 2-Milliarden-Backbone mit 50 Demonstrationen 85,6 Prozent erreicht. Im Benchmark LIBERO-PRO erzielt ScaleVLA 45,1 Prozent, kleinere Backbones höchstens 31,3 Prozent. Beim realen Einstecken eines Ladegeräts steigt die Erfolgsquote von 4 von 10 auf 9 von 10, vor allem bei kontaktsensiblen Ausrichtungen.",
+    "## Geschwindigkeit",
+    "Trotz der Größe liegt die mediane Latenz pro Aktionsblock laut Angabe der Autoren bei 216 Millisekunden. Die Autoren schließen daraus, dass Frontier-Modelle nicht nur als Denkagenten, sondern auch als Repräsentationsbasis für Roboterrichtlinien dienen können.",
+    "## Einordnung",
+    "Es handelt sich um ein arXiv-Preprint mit Angaben der Autoren. Die Zahlen stammen aus dem Paper und sind nicht unabhängig geprüft. Die im Text erwähnten Modelle wie GPT-6 Astra werden im Paper nur als Beispiel genannt."
+   ],
+   "quellen": [
+    {
+     "titel": "ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters (Hugging Face Paper Page)",
+     "url": "https://huggingface.co/papers/2611.21607"
+    },
+    {
+     "titel": "Projektseite GalaxyGeneralRobotics",
+     "url": "https://galaxygeneralrobotics.github.io/scalevla/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer Robotik-Forschung verfolgt, kann die Projektseite und das Paper auf Vergleichsdaten zu Backbone-Größen prüfen.",
+    "Entwickler können die Ergebnisse zu Demonstrationsanzahl und Generalisierung als Richtwerte für eigene Lernexperimente lesen."
+   ],
+   "quelle": "Hugging Face",
+   "datum": "2026-11-16",
+   "kennzahlen": [
+    {
+     "label": "Backbone-Größe",
+     "wert": "552 Mrd. Parameter (DeepSeek-V4.1-Flash)"
+    },
+    {
+     "label": "Erfolg mit 10 Demonstrationen",
+     "wert": "87,8 %"
+    },
+    {
+     "label": "LIBERO-PRO Erfolg",
+     "wert": "45,1 %"
+    },
+    {
+     "label": "Mediane Latenz pro Aktionsblock",
+     "wert": "216 ms"
+    }
+   ],
+   "signal": "Frontier-Sprachmodelle könnten als Basis für Roboter-Richtlinien genutzt werden, laut Autoren bei vertretbarer Latenz.",
+   "link": "https://huggingface.co/papers/2611.21607",
+   "linkLabel": "Paper auf Hugging Face",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erfolg mit 10 Demonstrationen (Paper-Angabe)",
+    "balken": [
+     {
+      "label": "2B-Backbone (50 Demos)",
+      "wert": 85.6,
+      "anzeige": "85,6 %"
+     },
+     {
+      "label": "ScaleVLA 552B (10 Demos)",
+      "wert": 87.8,
+      "anzeige": "87,8 %"
+     }
+    ]
+   },
+   "id": "scalevla-roboter-steuerung-mit-einem-552-milliarden-paramete",
+   "hinzugefuegt": "2026-11-17T22:35:33Z"
+  },
+  {
    "titel": "Agent-Skill für schnellere lokale LLM-Inferenz: Decode, Prefill, KV-Cache und Startzeit",
    "kurz": "Ein GitHub-Repository mit einem Agent-Skill beschreibt ein Vorgehen, um die Geschwindigkeit eines lokalen LLM-Servers auf beliebiger Hardware und Quantisierung schrittweise zu verbessern. Die Messergebnisse sind Herstellerangaben der Projektbetreiber auf den genannten Testsystemen.",
    "artikel": [
@@ -15656,6 +15727,76 @@
  ],
  "projekte": [
   {
+   "titel": "Boring Marketing Skills: 31 kostenlose Marketing-Skills für KI-Agenten",
+   "kurz": "Ein MIT-lizenziertes Paket mit Marketing-Skills für KI-Agenten wie Claude Code, Codex und Cursor, das ohne kostenpflichtige Tools auskommt. Es deckt Recherche, Texte, SEO, KI-Suche, Anzeigen, E-Mail und Content ab.",
+   "artikel": [
+    "Boring Marketing Skills ist eine Sammlung kostenloser Marketing-Skills für KI-Agenten. Ein Skill ist dabei eine Anleitung, die dem Agenten erklärt, wie er eine bestimmte Aufgabe erledigt. Laut dem Repository umfasst das Paket 31 Skills zu Recherche, Positionierung, Texten, Seiten, SEO, KI-Suche, Anzeigen, E-Mail und Content, dazu ein umfangreiches Paket für lokale Unternehmen.",
+    "## Wie die Skills aufgebaut sind",
+    "Die Skills sind nach der Reihenfolge gegliedert, in der ein Kunde mit einem Unternehmen in Kontakt kommt: zuerst die Grundlagen, dann Auffindbarkeit bei Google, Überzeugungskraft der Seite, Anzeigen und schließlich die Kundenbindung. Ein Einstiegs-Skill namens start-here liest laut Beschreibung die Website und die Bewertungen eines Unternehmens, schreibt Markendateien, die andere Skills nutzen, und schlägt den nächsten Schritt vor.",
+    "## Installation",
+    "Die Skills lassen sich laut Anleitung mit einem npx-Befehl für beliebige Agenten installieren oder als Claude-Code-Plugin einbinden. Der Autor gibt an, dass der erste Durchlauf etwa drei Minuten dauert.",
+    "## Herstellerangaben",
+    "Der Autor James Dickerson gibt an, die Skills seien aus echten Kampagnen entstanden und jeder Skill funktioniere ohne bezahltes Tool. Diese Aussagen stammen vom Hersteller und wurden hier nicht unabhängig geprüft. Das Repository nennt außerdem eine Empfehlung für einen Stack aus Diensten wie Exa, Firecrawl und DataForSEO, die optional sind.",
+    "## Einordnung",
+    "Das Projekt steht unter der MIT-Lizenz und hat auf GitHub laut Seite 511 Sterne. Wer Marketing für lokale Betriebe betreut, findet vor allem den Teil für Google-Profile, Ortsseiten und Bewertungen interessant."
+   ],
+   "quellen": [
+    {
+     "titel": "boringmarketer/boring-marketing-skills auf GitHub",
+     "url": "https://github.com/boringmarketer/boring-marketing-skills"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer eine eigene Website betreibt, kann den Einstiegs-Skill laufen lassen, um Markenstimme und Positionierung aus den vorhandenen Texten ableiten zu lassen.",
+    "Wer Google-Profile oder Anzeigen pflegt, kann Skills für Bewertungsantworten und Tracking nutzen.",
+    "Freelancer können die Skills als Grundlage für Kundenprojekte verwenden, sofern sie die MIT-Lizenz beachten."
+   ],
+   "ausprobieren": {
+    "prompt": "/start-here, Unternehmensname: Bäckerei Mustermann",
+    "tool": "Boring Marketing Skills",
+    "url": "https://github.com/boringmarketer/boring-marketing-skills"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "start-here",
+    "zeilen": [
+     "> /start-here Bäckerei Mustermann",
+     "✓ Website gelesen",
+     "✓ Bewertungen gelesen",
+     "✓ Markendateien geschrieben",
+     "● Nächster Skill: brand-voice"
+    ]
+   },
+   "macher": "James Dickerson (@boringmarketer)",
+   "branche": "Marketing",
+   "jahr": "2026",
+   "tools": [
+    "Claude Code",
+    "Codex",
+    "Cursor",
+    "npx skills"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Skills",
+     "wert": "31 (laut Beschreibung; README nennt 32)"
+    },
+    {
+     "label": "GitHub-Sterne",
+     "wert": "511"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    }
+   ],
+   "link": "https://github.com/boringmarketer/boring-marketing-skills",
+   "linkLabel": "Zum Repository",
+   "id": "boring-marketing-skills-31-kostenlose-marketing-skills-fur-k",
+   "hinzugefuegt": "2026-11-17T22:35:33Z"
+  },
+  {
    "titel": "AI Manus: Open-Source-Agent für Code und Browser (GitHub-Fork)",
    "kurz": "Das GitHub-Repository „Topkiflare74/ai--manus2.0“ beschreibt AI Manus als allgemeinen KI-Agenten, der Werkzeuge und Operationen in einer Sandbox-Umgebung ausführt. Laut Repository-Seite kann er Code ausführen und einen Browser steuern.",
    "artikel": [
@@ -20480,8 +20621,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-17T14:30:22Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-11-17T22:35:33Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-17T05:15:54Z"
  }
 }
