@@ -3945,6 +3945,70 @@
  ],
  "radar": [
   {
+   "titel": "Agent-Skill für schnellere lokale LLM-Inferenz: Decode, Prefill, KV-Cache und Startzeit",
+   "kurz": "Ein GitHub-Repository mit einem Agent-Skill beschreibt ein Vorgehen, um die Geschwindigkeit eines lokalen LLM-Servers auf beliebiger Hardware und Quantisierung schrittweise zu verbessern. Die Messergebnisse sind Herstellerangaben der Projektbetreiber auf den genannten Testsystemen.",
+   "artikel": [
+    "## Worum es geht",
+    "Das Projekt sybil-solutions/inference-optimisation-skill ist ein Agent-Skill, der beim schrittweisen Optimieren eines lokalen LLM-Servers helfen soll. Gemeint sind Decode-Geschwindigkeit (Token-Erzeugung), spekulatives Decoding, Prefill (Verarbeitung des Eingabe-Prompts), KV-Cache-Größe, Startzeit und Time to First Token (TTFT, also die Wartezeit bis zum ersten Token). Der Skill soll unter einer Speicherobergrenze funktionieren.",
+    "## Vorgehen",
+    "Der Ablauf folgt festen Schritten: Zuerst wird die theoretische Obergrenze berechnet, dann wird jeweils nur eine Sache geändert. Ergebnisse werden gegen abwechselnde Kontrollläufe gemessen, alle Ergebnisse protokolliert, und ein Long-Context-Test prüft die Abruffähigkeit. Erst danach wird ein sauberer, fixierter Build veröffentlicht.",
+    "## Berichtete Ergebnisse",
+    "Die Autoren nennen Messwerte aus früheren Optimierungsläufen, etwa auf einer Intel Arc B390 mit einem Ornith-Modell: Decode für einen Nutzer von 43,6 auf 53 Tokens pro Sekunde (Median), Startzeit von 113 auf 43 Sekunden. Auf einer RTX 3090 nennen sie für ein Qwen-Modell mit EXL3 3 bpw und MTP 96,2 Tokens pro Sekunde bei Prosa. Diese Zahlen sind Herstellerangaben der Autoren und auf der jeweiligen Hardware gemessen.",
+    "## Einordnung",
+    "Laut Projekt zeigte die Berechnung der Obergrenze, dass das Ziel von 100 Tokens pro Sekunde mit dem Draft-Modell kaum erreichbar war. Das Team erreichte nach eigenen Angaben etwa 55 Prozent des praktisch möglichen Ziels. Der Skill soll Nutzern früh zeigen, wenn ein Ziel über den physikalischen Grenzen liegt."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: sybil-solutions/inference-optimisation-skill",
+     "url": "https://github.com/sybil-solutions/inference-optimisation-skill"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Den Skill in Claude Code installieren und den eigenen lokalen Server, etwa unter Port 8000, optimieren lassen.",
+    "Vor dem Optimieren mit dem enthaltenen Rechner die theoretische Obergrenze für Tokens pro Sekunde auf der eigenen Hardware ermitteln.",
+    "Die eigenen Messergebnisse mit den Angaben des Projekts vergleichen, bevor man Änderungen übernimmt."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Decode, 1 Nutzer, Intel Arc B390 (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Vorher",
+      "wert": 43.6,
+      "anzeige": "43,6 tok/s"
+     },
+     {
+      "label": "Nachher",
+      "wert": 53,
+      "anzeige": "53 tok/s"
+     }
+    ]
+   },
+   "tag": "Herstellerangabe",
+   "quelle": "GitHub",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Sterne auf GitHub",
+     "wert": "632"
+    },
+    {
+     "label": "Decode, 1 Nutzer (Arc B390)",
+     "wert": "43,6 → 53 tok/s"
+    },
+    {
+     "label": "Startzeit (Arc B390)",
+     "wert": "113 → 43 s"
+    }
+   ],
+   "signal": "Ein GitHub-Projekt bündelt Messmethoden und Ergebnisse zur Optimierung lokaler LLM-Server, mit ausdrücklicher Berechnung theoretischer Obergrenzen vor jeder Änderung.",
+   "link": "https://github.com/sybil-solutions/inference-optimisation-skill",
+   "linkLabel": "Zum Repository",
+   "id": "agent-skill-fur-schnellere-lokale-llm-inferenz-decode-prefil",
+   "hinzugefuegt": "2026-11-17T14:30:22Z"
+  },
+  {
    "titel": "Moonshot AI: Kimi-Modelle sollen von Programmieren auf Wissenschaft umschwenken",
    "kurz": "Das Pekinger Startup Moonshot AI richtet seine Kimi-Sprachmodelle von Coding-Benchmarks auf Biologie, Chemie und Pharmaforschung aus. Der Schritt wird mit abnehmenden Zuwächsen bei Coding-Benchmarks begründet, echte eigenständige Durchbrüche stehen laut Material aber noch aus.",
    "artikel": [
@@ -20416,8 +20480,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-17T05:15:54Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-11-17T14:30:22Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-11-17T05:15:54Z"
  }
 }
