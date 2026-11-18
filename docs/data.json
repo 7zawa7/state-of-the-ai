@@ -3985,6 +3985,171 @@
  ],
  "radar": [
   {
+   "titel": "Microsoft stellt MAI Code 2 und MAI Code 2 Flash vor",
+   "kurz": "Microsoft AI hat zwei neue Coding-Modelle für alltägliche Programmieraufgaben in Unternehmen vorgestellt. Laut Herstellerangaben liefern sie viel Leistung zu deutlich niedrigeren Kosten als Konkurrenzmodelle.",
+   "artikel": [
+    "Microsoft AI hat mit MAI Code 2 und MAI Code 2 Flash zwei neue Modelle für Programmierung vorgestellt. Beide sind auf typische Aufgaben im Unternehmensalltag ausgelegt. Die Angaben dazu stammen vom Hersteller selbst.",
+    "## Was MAI Code 2 können soll",
+    "Laut Microsoft ist MAI Code 2 bei Preis und Leistung für gängige Coding-Aufgaben in Unternehmen weit vorn. Genannt werden unter anderem das Bringen von Code in den Produktivbetrieb, tiefes Debugging, Änderungen über mehrere Dateien, Schlussfolgerungen über ein ganzes Repository und Benutzeroberflächen. Die Änderungen sollen so ausfallen, dass Code-Verantwortliche sie übernehmen würden.",
+    "Für Dashboards und Visualisierungen sei das Modell gezielt abgestimmt. In blinden Tests mit Frontend-Apps hätten Entwickler dessen Ergebnisse in 64 Prozent der Fälle gegenüber GPT-6 Sol bevorzugt. Das sind Herstellerangaben.",
+    "## Was MAI Code 2 Flash leisten soll",
+    "Flash ist laut Microsoft für Arbeit mit hohem Volumen gedacht, etwa Code-Erklärungen, gezielte Änderungen, Routinekorrekturen und schnelle Iterationen. Es soll ein vergleichbares Niveau wie GPT-6 Luna und Claude Haiku 5.5 bei einem deutlich geringeren Preis erreichen, laut Angabe bei 65 Prozent bzw. 20 Prozent der Kosten.",
+    "## Preis und Leistung",
+    "Microsoft gibt an, MAI Code 2 erreiche im Mittel über vier verbreitete Benchmarks 98 Prozent der Leistung von GPT-6.1 Sol bei 40 Prozent der Kosten. Gegenüber Claude Opus 5.5 seien es 96 Prozent der Leistung bei nur 5 Prozent der Kosten. Die Benchmarks sind DeepSWE 1.1, Terminal Bench 2.1, SWE-Atlas und FrontierCode v1.1; sie spiegeln laut Microsoft Aufgaben wider, wie sie in GitHub Copilot vorkommen.",
+    "## Grenzen",
+    "Die Modelle sind laut Hersteller nicht auf schwierige Probleme wie grundlagennahe Forschung oder länger laufende, agentische Arbeit abgestimmt. Ob sich die Zahlen in der Praxis so bestätigen, lässt sich aus der Quelle allein nicht beurteilen.",
+    "Auf Hacker News wurde der Beitrag mit 415 Punkten diskutiert."
+   ],
+   "quellen": [
+    {
+     "titel": "MAI Code 2 and Code 2 Flash – Microsoft AI",
+     "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50535885"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer viel programmiert, kann die Modelle für Code-Erklärungen, Fehlerbehebungen und kleine Änderungen testen.",
+    "Entwickler können Frontend-Oberflächen und Dashboards mit dem Modell erstellen lassen und die Ergebnisse vergleichen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Herstellerangabe: Kosten im Vergleich (Anteil am Preis)",
+    "balken": [
+     {
+      "label": "MAI Code 2 vs. GPT-6.1 Sol",
+      "wert": 40,
+      "anzeige": "40 % der Kosten"
+     },
+     {
+      "label": "MAI Code 2 vs. Claude Opus 5.5",
+      "wert": 5,
+      "anzeige": "5 % der Kosten"
+     }
+    ]
+   },
+   "quelle": "Lab-Blog",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Leistung vs. GPT-6.1 Sol (Herstellerangabe)",
+     "wert": "98 %"
+    },
+    {
+     "label": "Kosten vs. GPT-6.1 Sol (Herstellerangabe)",
+     "wert": "40 %"
+    },
+    {
+     "label": "Leistung vs. Claude Opus 5.5 (Herstellerangabe)",
+     "wert": "96 %"
+    },
+    {
+     "label": "Kosten vs. Claude Opus 5.5 (Herstellerangabe)",
+     "wert": "5 %"
+    }
+   ],
+   "signal": "Microsoft positioniert zwei Coding-Modelle klar über den Preis: viel Leistung für Routineaufgaben, laut eigenen Angaben deutlich günstiger als Konkurrenten.",
+   "link": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+   "linkLabel": "Zur Ankündigung bei Microsoft AI",
+   "id": "microsoft-stellt-mai-code-2-und-mai-code-2-flash-vor",
+   "hinzugefuegt": "2026-11-18T20:41:39Z"
+  },
+  {
+   "titel": "FastFrames-L: Videogenerierung mit interaktiver Latenz",
+   "kurz": "Apple hat auf Hugging Face die Modelle FastFrames-S (1,3 Mrd. Parameter) und FastFrames-L (14 Mrd. Parameter) veröffentlicht, die 480p-Video in interaktiver Geschwindigkeit erzeugen sollen. Die Angaben zur Geschwindigkeit stammen aus dem Repository des Herstellers.",
+   "artikel": [
+    "## Was ist FastFrames?",
+    "Das Repository zu FastFrames stellt die offizielle Umsetzung einer Methode zur Videogenerierung vor, die den Titel „Video Generation at Interactive Latency“ trägt. Veröffentlicht sind die Modelle FastFrames-S mit 1,3 Milliarden und FastFrames-L mit 14 Milliarden Parametern. Beide arbeiten autoregressiv und in zwei Schritten: Sie erzeugen Videos in 480p, und zwar nach Herstellerangabe mit interaktiver Latenz, also mit so kurzen Wartezeiten, dass eine flüssige Nutzung möglich sein soll. Parameter sind die gelernten Gewichte eines Modells, die Latenz bezeichnet die Verzögerung bis zum Ergebnis.",
+    "## Geschwindigkeit laut Hersteller",
+    "Das Repository enthält ein Profiling für FastFrames-S auf einer GPU bei 480p mit vollem KV-Cache. Ein KV-Cache ist ein Zwischenspeicher aus früheren Berechnungen, der wiederholte Arbeit spart. Die Summe der Einzelschritte liegt laut Messung bei 35,4 Millisekunden; im Paper werden 36 Millisekunden angegeben. Diese Zahlen sind Herstellerangaben und wurden nicht unabhängig geprüft.",
+    "## Weitere Bestandteile",
+    "Zusätzlich veröffentlicht Apple eine optimierte Version von LingBot 1,3B, die laut Hersteller 16-mal schneller als das offizielle Modell sein soll und eine kameragesteuerte Bedienung erlaubt. Für Tests gibt es eine interaktive Demo, Skripte zur Videoerzeugung sowie eine Auswertung mit VBench. Die Lizenz unterscheidet sich je nach Bestandteil: Für LingBot-World v2 gilt CC BY-NC-SA 4.0, für den übrigen FastFrames-Code die Apple Sample Code License.",
+    "## Einordnung",
+    "Der Eintrag beruht ausschließlich auf der Seite im Hugging Face Repository und dem dort genannten Paper vom November 2026. Unabhängige Benchmarks oder Nutzerberichte liegen im Material nicht vor. Das Modell wurde laut Seite mit 0 Downloads erfasst, die Zahl 197 Likes zeigt aber Aufmerksamkeit."
+   ],
+   "quellen": [
+    {
+     "titel": "apple/FastFrames-L auf Hugging Face",
+     "url": "https://huggingface.co/apple/FastFrames-L"
+    },
+    {
+     "titel": "arXiv:2611.23226 (FastFrames: Video Generation at Interactive Latency)",
+     "url": "https://arxiv.org/abs/2611.23226"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Mit dem Skript scripts/generate.py lassen sich laut Repository eigene Videos aus einem Textprompt in 832 × 480 Pixeln erzeugen.",
+    "Wer eine GPU mit CUDA-Unterstützung hat, kann die Latenz-Messung lokal nachvollziehen.",
+    "Die interaktive Demo mit LingBot erlaubt kamerageführte Erzeugung im Browser."
+   ],
+   "ausprobieren": {
+    "prompt": "A corgi surfing a wave at sunset",
+    "tool": "FastFrames (Repository auf Hugging Face)",
+    "url": "https://huggingface.co/apple/FastFrames-L"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Latenz FastFrames-S, 1 GPU, 480p (Hersteller-Angabe)",
+    "balken": [
+     {
+      "label": "DiT t=1000",
+      "wert": 16.1,
+      "anzeige": "16,1 ms"
+     },
+     {
+      "label": "DiT t=833",
+      "wert": 16.2,
+      "anzeige": "16,2 ms"
+     },
+     {
+      "label": "KV-Refinement",
+      "wert": 2.2,
+      "anzeige": "2,2 ms"
+     },
+     {
+      "label": "Pixel-Decoder",
+      "wert": 0.9,
+      "anzeige": "0,9 ms"
+     },
+     {
+      "label": "Gesamt",
+      "wert": 35.4,
+      "anzeige": "35,4 ms"
+     }
+    ]
+   },
+   "tag": "Hersteller-Angabe",
+   "datum": "2026-11-30",
+   "quelle": "Hugging Face",
+   "kennzahlen": [
+    {
+     "label": "Parameter FastFrames-S",
+     "wert": "1,3 Mrd."
+    },
+    {
+     "label": "Parameter FastFrames-L",
+     "wert": "14 Mrd."
+    },
+    {
+     "label": "Auflösung",
+     "wert": "480p"
+    },
+    {
+     "label": "Gesamtlatenz FastFrames-S (Hersteller)",
+     "wert": "35,4 ms"
+    }
+   ],
+   "signal": "Apple veröffentlicht offene Video-Modelle, die laut Hersteller auf schnelle, interaktive Erzeugung zielen.",
+   "link": "https://huggingface.co/apple/FastFrames-L",
+   "linkLabel": "Modellseite auf Hugging Face",
+   "id": "fastframes-l-videogenerierung-mit-interaktiver-latenz",
+   "hinzugefuegt": "2026-11-18T20:41:39Z"
+  },
+  {
    "titel": "Weight-Space Programming: Muss es immer ein Transformer sein?",
    "kurz": "Ein arXiv-Paper (Hugging Face: 16 Upvotes) untersucht, ob ein LLM Modellgewichte ohne Gradientenabstieg selbst schreiben kann, und welche Architektur sich dafür eignet. Laut Abstract schlagen dabei spärliche Tabellen- und Assoziativspeicher-Modelle gleich große Transformer bei weniger Parametern.",
    "artikel": [
@@ -20723,8 +20888,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-18T12:20:01Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-11-18T20:41:39Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-18T12:20:01Z"
  }
 }
