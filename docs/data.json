@@ -3945,6 +3945,68 @@
  ],
  "radar": [
   {
+   "titel": "Weight-Space Programming: Muss es immer ein Transformer sein?",
+   "kurz": "Ein arXiv-Paper (Hugging Face: 16 Upvotes) untersucht, ob ein LLM Modellgewichte ohne Gradientenabstieg selbst schreiben kann, und welche Architektur sich dafür eignet. Laut Abstract schlagen dabei spärliche Tabellen- und Assoziativspeicher-Modelle gleich große Transformer bei weniger Parametern.",
+   "artikel": [
+    "Standard-Architekturen wie der Transformer haben sich vor allem deshalb durchgesetzt, weil sie sich mit Gradientenabstieg gut trainieren lassen und auf GPUs schnell laufen. Gradientenabstieg ist ein Verfahren, bei dem Modellgewichte schrittweise angepasst werden, um den Fehler zu verringern.",
+    "Beim sogenannten Weight-Space Programming schreibt ein großes Sprachmodell (LLM) die Zielgewichte direkt, ohne gradientenbasiertes Training. Damit entfallen laut den Autoren die Gründe für die Wahl des Transformers. Die Autoren Hyunjong Ok und Jaeho Lee prüfen, ob er dennoch die beste Bauweise bleibt.",
+    "## Ergebnisse",
+    "Ließ man drei aktuelle LLMs die Architektur frei entwerfen, legten alle drei Fakten aus Klartext in eine spärlich besetzte Tabelle, die über ein festes Verfahren abgefragt wird. Die Testgenauigkeit lag dabei bei bis zu 54,4 Prozent. Laut Abstract nutzte ein vom LLM entworfenes Modell rund 1.800-mal weniger Parameter als der genaueste veröffentlichte Transformer, den dasselbe LLM geschrieben hatte, und erreichte trotzdem eine höhere Testgenauigkeit.",
+    "Ohne Gradienten wählen die Modelle laut Paper eine Tabelle, in der das LLM angeben kann, was jedes Gewicht bedeutet, und eine falsche Stelle finden und neu schreiben kann. Jede falsche Antwort lässt sich einer Zeile zuordnen. Aus diesen Beobachtungen leiten die Autoren ein assoziativspeicherbasiertes Modell ab, das laut Abstract auf GPUs bis zu 17-mal schneller ist als ein gleich großer Transformer.",
+    "## Einschränkungen",
+    "Die Autoren testeten außerdem vortrainierte Gewichte, weitere Benchmarks und Aufgaben, in denen Modelle Antworten frei generieren. Laut Abstract bleiben vortrainierte LLMs genauer. Die Aussage bezieht sich deshalb darauf, welche Struktur man beim Schreiben von Gewichten aufbauen sollte, nicht darauf, dass Transformer generell überholt sind.",
+    "Die Angaben zu 1.800-fach weniger Parametern und 17-facher Geschwindigkeit stammen aus dem Abstract des Papers und sind Ergebnisse der Autoren, keine unabhängig geprüften Werte."
+   ],
+   "quellen": [
+    {
+     "titel": "Weight-Space Programming Doesn't Need Transformers (arXiv 2611.22055)",
+     "url": "https://huggingface.co/papers/2611.22055"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Die Projektseite und den GitHub-Code der Autoren durchsehen, um die Experimente nachzuvollziehen.",
+    "Das Abstract mit eigenen Modellen oder Tabellenansätzen für kleine Wissensaufgaben vergleichen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Parameter-Anzahl im Vergleich (laut Abstract, relativ)",
+    "balken": [
+     {
+      "label": "Transformer (gleiche LLM-Schreibweise)",
+      "wert": 1800,
+      "anzeige": "1.800 Parameter-Einheiten"
+     },
+     {
+      "label": "Vom LLM entworfenes Modell",
+      "wert": 1,
+      "anzeige": "1 Parameter-Einheit (ca. 1.800× weniger)"
+     }
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-11-17",
+   "kennzahlen": [
+    {
+     "label": "Testgenauigkeit (bis zu)",
+     "wert": "54,4 %"
+    },
+    {
+     "label": "Parameter-Reduktion ggü. Transformer",
+     "wert": "ca. 1.800×"
+    },
+    {
+     "label": "GPU-Geschwindigkeit ggü. Transformer (bis zu)",
+     "wert": "17×"
+    }
+   ],
+   "signal": "Ein Paper der Woche stellt die Frage, ob der Transformer bei LLM-geschriebenen Gewichten die richtige Wahl ist. Die Zahlen stammen aus dem Abstract der Autoren und sind noch nicht unabhängig überprüft.",
+   "link": "https://huggingface.co/papers/2611.22055",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "weight-space-programming-muss-es-immer-ein-transformer-sein",
+   "hinzugefuegt": "2026-11-18T03:49:50Z"
+  },
+  {
    "titel": "ScaleVLA: Roboter-Steuerung mit einem 552-Milliarden-Parameter-Sprachmodell",
    "kurz": "Forscher um galbot (GalaxyGeneralRobotics) stellen ScaleVLA vor, ein Vision-Language-Action-Modell, das ein 552 Milliarden Parameter großes Sprachmodell als Grundlage für Roboterbewegungen nutzt. Laut Paper übertrifft es kleinere Backbones bei Lerneffizienz, Generalisierung und präziser Manipulation.",
    "artikel": [
@@ -20621,8 +20683,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-17T22:35:33Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-18T03:49:50Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-11-17T05:15:54Z"
  }
 }
