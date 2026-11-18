@@ -1,6 +1,46 @@
 {
  "news": [
   {
+   "titel": "Suno startet Visuals: KI-Musik bekommt passende KI-Videos",
+   "kurz": "Der KI-Musikgenerator Suno kann zu seinen Songs jetzt Bilder und kurze Videoclips erzeugen. Das neue Feature Visuals läuft laut Suno auf einer angepassten, gefilterten Version des Videomodells H3 von MiniMax.",
+   "artikel": [
+    "Der KI-Musikgenerator Suno erweitert sein Angebot um ein Feature namens Visuals. Damit lassen sich zu den eigenen Songs Bilder und Videoclips erstellen. Laut dem Fachmagazin The Decoder basiert Visuals auf H3 Move, einer von Suno angepassten und mit Sicherheitsfiltern versehenen Variante des Videomodells H3 von MiniMax. Bei H3 Move handelt es sich um eine Herstellerangabe.",
+    "## Was Visuals kann",
+    "Die Clips sind laut Anbieter bis zu 15 Sekunden lang, folgen der Struktur des Songs, greifen Liedtexte auf und unterstützen Lippensynchronisation (Lip Sync). Als Ausgangspunkt dienen ein Referenzfoto, ein Prompt oder eine der voreingestellten Figuren von Suno. Bei Lyric-Videos lassen sich Schriftarten und Farben anpassen, Clips auf einer Zeitleiste verlängern sowie Länge und Seitenverhältnis wählen. Es gibt zwei Qualitätsstufen, „Fast“ und „Standard“.",
+    "## Filter und Kennzeichnung",
+    "Filter blockieren Prompts und Uploads, die sich auf bestimmte Künstler, Prominente oder urheberrechtlich geschützte Werke beziehen. Bevor Inhalte außerhalb von Suno geteilt werden, fügt die Plattform laut Herstellerangabe ein eingebettetes Wasserzeichen hinzu.",
+    "## Verfügbarkeit",
+    "Visuals funktioniert im Web sowie auf iOS und Android. Es benötigt eigene Credits. Abonnenten der Stufen Pro und Premier erhalten laut Suno ein zeitlich begrenztes Kontingent, um das Feature auszuprobieren.",
+    "## Hintergrund",
+    "Ende Juli hat das Landgericht München I in einem Verfahren der GEMA, der deutschen Verwertungsgesellschaft für Musikrechte, gegen Suno entschieden und eine Urheberrechtsverletzung festgestellt. Kurz danach kündigte Suno Werkzeuge an, mit denen von Suno erstellte Songs auf anderen Plattformen als KI-generiert gekennzeichnet werden können. Laut dem Bericht hat Suno eine Einigung mit Warner Music erzielt, während Universal und Sony weiter klagen."
+   ],
+   "quellen": [
+    {
+     "titel": "Suno's new Visuals feature pairs AI-generated music with AI-generated video (The Decoder)",
+     "url": "https://the-decoder.com/sunos-new-visuals-feature-pairs-ai-generated-music-with-ai-generated-video/"
+    }
+   ],
+   "demo": "musik",
+   "machen": [
+    "Zu einem eigenen Song kurze Videoclips oder Lyric-Videos mit passenden Schriften und Farben erstellen.",
+    "Ein Referenzfoto hochladen und daraus einen kurzen Clip mit Lip Sync generieren lassen.",
+    "Die Clips mit eingebettetem Wasserzeichen teilen, da Suno diese Kennzeichnung laut Angabe vor dem Teilen anbringt."
+   ],
+   "bereich": "Musik",
+   "datum": "2026-11-18",
+   "vorschau": {
+    "szene": "musik",
+    "titel": "Visuals",
+    "untertitel": "Suno · KI-Musik mit KI-Video",
+    "zeilen": [
+     "Clips bis 15 Sekunden, Lyric-Videos mit Lip Sync",
+     "Verfügbar im Web, auf iOS und Android"
+    ]
+   },
+   "id": "suno-startet-visuals-ki-musik-bekommt-passende-ki-videos",
+   "hinzugefuegt": "2026-11-18T12:20:01Z"
+  },
+  {
    "titel": "OpenAI-Modell GPT-6 Astra hilft bei Beweis zum Standardmodell auf dem Gitter",
    "kurz": "Laut The Decoder hat der OpenAI-Physiker Nathaniel Craig mit GPT-6 Astra einen Beweis erarbeitet, der die vollständige Theorie des Standardmodells auf einem Rechengitter (Lattice) beschreibt. Craig betont, dass bis zu realistischen Simulationen noch viel Arbeit nötig ist.",
    "artikel": [
@@ -20625,7 +20665,7 @@
    "id": "bild"
   },
   {
-   "maximum": "Komplette Songs mit Gesang in jedem Genre, bis etwa 8 Minuten, mit Einzelspuren.",
+   "maximum": "Komplette Songs mit Gesang in jedem Genre, bis etwa 8 Minuten, mit Einzelspuren. Suno ergänzt seine Songs jetzt um passende Bilder und kurze Videoclips (Feature Visuals).",
    "name": "Musik",
    "reihenfolge": 3,
    "status": "ok",
@@ -20683,8 +20723,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-18T03:49:50Z",
+  "letzterScan": "2026-11-18T12:20:01Z",
   "neueFunde": 1,
-  "standAktualisiert": "2026-11-17T05:15:54Z"
+  "standAktualisiert": "2026-11-18T12:20:01Z"
  }
 }
