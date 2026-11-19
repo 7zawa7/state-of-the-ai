@@ -1,6 +1,58 @@
 {
  "news": [
   {
+   "titel": "Google stellt Gemini 4 Neon vor: Modell für Software, Wissensarbeit und Wissenschaft",
+   "kurz": "Google DeepMind hat mit Gemini 4 Neon ein neues Sprachmodell vorgestellt, das laut Google vor allem bei Programmier-, Büro- und Forschungsaufgaben punkten soll. Die Angaben stammen aus Herstellerangaben und teils aus Drittbewertungen.",
+   "artikel": [
+    "Google hat mit Gemini 4 Neon ein neues KI-Modell vorgestellt. Laut Google-Blog soll es Spitzenleistung mit schneller Ausführung kompletter Aufgaben verbinden, etwa bei Softwareentwicklung, Wissensarbeit und wissenschaftlichen Workflows. Diese Aussagen sind Herstellerangaben.",
+    "## Leistung laut Google und Drittbewertungen",
+    "Im Artificial Analysis Intelligence Index erreicht Neon laut Google Platz 3 gesamt mit 61 Punkten bei der Stufe „xhigh“. Auf dem Vals Index belegt es laut Angabe Platz 2. Beides sind Benchmarks, also standardisierte Testreihen, die von unabhängigen Anbietern durchgeführt werden.",
+    "Für Unternehmen gibt Google an, Neon könne Tabellen, PDFs, Diagramme, Audio und Video in einem Kontext mit einer Million Token verarbeiten. Ein Token ist dabei ein kleiner Textbaustein, und das Kontextfenster bestimmt, wie viel Material das Modell gleichzeitig berücksichtigen kann.",
+    "## Programmierung und Agenten",
+    "Laut Google erreicht Neon im Artificial Analysis Coding Agent Index den ersten Platz mit 58,6 Punkten. Zudem nennt Google Beispiele, in denen Agenten-Schwärme in Google Antigravity komplexe 3D-Szenen, Simulationen und Tabellenmodelle erstellt haben. Auch dies sind Herstellerangaben, die nicht unabhängig geprüft wurden.",
+    "## Preise und Verfügbarkeit",
+    "Laut Google kostet die Nutzung über die API 3 US-Dollar pro Million Eingabe-Token und 15 US-Dollar pro Million Ausgabe-Token. Gecachte Eingaben kosten laut Angabe 0,15 US-Dollar pro Million. Neon ist laut Google über die Gemini API in Google AI Studio, für Gemini for business, für bezahlte Google-AI-Pro- und Ultra-Kunden in Google Antigravity sowie für Pro- und Ultra-Abonnenten in der Gemini-App verfügbar.",
+    "## Einordnung",
+    "Die Ankündigung stammt direkt von Google und enthält viele eigene Benchmark-Ergebnisse. Unabhängige Überprüfungen sind im Material nur teilweise genannt. Auf Hacker News fand der Beitrag mit 456 Punkten viel Beachtung, eine konkrete Bewertung der Diskussion liegt hier nicht vor."
+   ],
+   "quellen": [
+    {
+     "titel": "Introducing Gemini 4 Neon (Google Blog)",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50552424"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Mit einem Abo für Google AI Pro oder Ultra kannst du Neon in Google Antigravity für Programmier- oder Tabellenprojekte ausprobieren.",
+    "Wer Tabellen oder PDFs auswertet, kann laut Google große Dokumentmengen in einem Durchgang analysieren lassen.",
+    "Entwickler können über die Gemini API in Google AI Studio testen, wie sich das Modell in eigenen Anwendungen schlägt."
+   ],
+   "ausprobieren": {
+    "prompt": "Analysiere die beigefügte Tabelle mit Verkaufszahlen und fasse die drei größten Trends in einer kurzen Liste zusammen.",
+    "tool": "Google AI Studio",
+    "url": "https://aistudio.google.com/"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Platz im Artificial Analysis Intelligence Index (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Gemini 4 Neon",
+      "wert": 61,
+      "anzeige": "61 Punkte"
+     }
+    ]
+   },
+   "bereich": "Text",
+   "datum": "2026-11-18",
+   "id": "google-stellt-gemini-4-neon-vor-modell-fur-software-wissensa",
+   "hinzugefuegt": "2026-11-19T02:01:56Z"
+  },
+  {
    "titel": "Suno startet Visuals: KI-Musik bekommt passende KI-Videos",
    "kurz": "Der KI-Musikgenerator Suno kann zu seinen Songs jetzt Bilder und kurze Videoclips erzeugen. Das neue Feature Visuals läuft laut Suno auf einer angepassten, gefilterten Version des Videomodells H3 von MiniMax.",
    "artikel": [
@@ -3984,6 +4036,81 @@
   }
  ],
  "radar": [
+  {
+   "titel": "RepoFactory: Trainingsumgebungen für Coding-Agenten werden während der Erstellung verbessert",
+   "kurz": "Ein Forschungsteam stellt RepoFactory vor, eine Pipeline, die aus echten Software-Repositories Entwicklungsumgebungen für Coding-Agenten baut und diese mit schnellen Proxy-Signalen schrittweise aufwertet. Laut Paper-Angaben entstanden 10.159 Umgebungen in 17 Softwaredomänen.",
+   "artikel": [
+    "Coding-Agenten sollen zunehmend längere und komplexere Entwicklungsaufgaben übernehmen, die den gesamten Projektablauf abdecken. Bestehende Pipelines zur Erstellung von Trainingsumgebungen enden meist bei Ausführung und Validierung. Sie prüfen also, ob eine Aufgabe brauchbar ist, sagen aber wenig darüber aus, wie viel Trainingswert sie bietet und wie sich dieser steigern lässt.",
+    "## Rückkopplung statt langer Testläufe",
+    "Die Autoren übertragen die Idee der rekursiven Selbstverbesserung (RSI, also eine Schleife, in der ein System seine eigenen Trainingsdaten oder Methoden verbessert) auf die Umgebungserstellung. Übliche Verfahren brauchen dafür vollständige Lösungsläufe des Modells oder Auswertungen nach dem Training. Bei langen Aufgaben ist das teuer und langsam. RepoFactory setzt stattdessen auf günstige Proxy-Metriken, also Ersatzmaße, die schnell und ohne vollständige Lösung messbar sind. Als Zielgröße dienen das Produkt aus Plausibilität, Implementierungsumfang und struktureller Kopplung.",
+    "## Wie die Pipeline arbeitet",
+    "Die Pipeline baut vollständige Projektumgebungen aus realen Software-Repositories. Validierungsläufe und Codeanalysen liefern schnelles Feedback. Ein Agent passt darauf hin Aufgabenbeschreibung, Referenzimplementierung und Tests an, sodass die Umgebung gültig bleibt, der nötige Implementierungsaufwand steigt und Komponenten stärker zusammenarbeiten müssen. Jede Runde liefert neue Rückmeldungen für die nächste, ohne auf einen kompletten Lauf des Lösungsmodells zu warten.",
+    "## Ergebnisse laut Autoren",
+    "Insgesamt entstanden 10.159 Umgebungen aus 17 Softwaredomänen. Ein darauf trainiertes Modell namens RepoHorizen-35B-A3B soll auf dem Benchmark NL2Repo-Bench 22,6 Prozentpunkte besser abschneiden als das Ausgangsmodell Qwen3.5-35B-A3B und im Mittel über fünf Benchmarks 8,5 Prozentpunkte gewinnen. Die Umgebungsentwicklung selbst trägt laut Paper 5,1 bzw. 2,1 Prozentpunkte zusätzlich bei. Diese Werte sind Angaben der Autoren und nicht unabhängig geprüft.",
+    "## Verfügbarkeit",
+    "Die Autoren wollen zunächst 200 nicht weiterentwickelte Umgebungen samt passender Docker-Images veröffentlichen. Docker-Images sind gepackte, vorkonfigurierte Laufzeitumgebungen, die sich ohne Installationsaufwand starten lassen."
+   ],
+   "quellen": [
+    {
+     "titel": "From Repositories to Training Environments: Scaling Long-Horizon Coding Agents with Environment Evolution Loop (Paper-Seite, Hugging Face)",
+     "url": "https://huggingface.co/papers/2611.21152"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer selbst Coding-Agenten trainiert oder evaluiert, kann prüfen, ob die veröffentlichten 200 Umgebungen mit Docker-Images für eigene Tests taugen.",
+    "Entwickler, die Agenten an eigenen Projekten messen wollen, können sich den Ansatz mit Proxy-Metriken als Vorlage für günstigere Bewertungen ansehen."
+   ],
+   "quelle": "Hugging Face",
+   "datum": "2026-11-18",
+   "kennzahlen": [
+    {
+     "label": "Erzeugte Umgebungen",
+     "wert": "10.159"
+    },
+    {
+     "label": "Softwaredomänen",
+     "wert": "17"
+    },
+    {
+     "label": "Gewinn NL2Repo-Bench (Herstellerangabe der Autoren)",
+     "wert": "+22,6 Prozentpunkte"
+    },
+    {
+     "label": "Mittelwert über fünf Benchmarks (Angabe der Autoren)",
+     "wert": "+8,5 Prozentpunkte"
+    },
+    {
+     "label": "Zusatzgewinn durch Umgebungsentwicklung (Angabe der Autoren)",
+     "wert": "+5,1 / +2,1 Prozentpunkte"
+    },
+    {
+     "label": "Veröffentlichte Umgebungen",
+     "wert": "200"
+    }
+   ],
+   "signal": "Die Idee, Trainingsumgebungen während der Erstellung anhand schneller Proxy-Signale zu verbessern, könnte Trainingskosten für lange Coding-Aufgaben senken. Die Leistungsangaben stammen von den Autoren selbst und sind bisher nicht unabhängig bestätigt.",
+   "link": "https://huggingface.co/papers/2611.21152",
+   "linkLabel": "Paper auf Hugging Face ansehen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "NL2Repo-Bench: Zugewinn laut Autoren",
+    "balken": [
+     {
+      "label": "Qwen3.5-35B-A3B (Basis)",
+      "wert": 0,
+      "anzeige": "Basis"
+     },
+     {
+      "label": "RepoHorizen-35B-A3B",
+      "wert": 22.6,
+      "anzeige": "+22,6 Pp."
+     }
+    ]
+   },
+   "id": "repofactory-trainingsumgebungen-fur-coding-agenten-werden-wa",
+   "hinzugefuegt": "2026-11-19T02:01:56Z"
+  },
   {
    "titel": "Microsoft stellt MAI Code 2 und MAI Code 2 Flash vor",
    "kurz": "Microsoft AI hat zwei neue Coding-Modelle für alltägliche Programmieraufgaben in Unternehmen vorgestellt. Laut Herstellerangaben liefern sie viel Leistung zu deutlich niedrigeren Kosten als Konkurrenzmodelle.",
@@ -20888,7 +21015,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-18T20:41:39Z",
+  "letzterScan": "2026-11-19T02:01:56Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-11-18T12:20:01Z"
  }
