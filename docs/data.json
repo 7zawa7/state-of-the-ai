@@ -1,6 +1,114 @@
 {
  "news": [
   {
+   "titel": "Google-KI-Übersichten kosten Berlin-Ratgeber All About Berlin rund 70 bis 75 Prozent Traffic",
+   "kurz": "Der Betreiber der Berliner Ratgeber-Website All About Berlin berichtet, dass seine Zugriffe seit Einführung der Google AI Overviews stark eingebrochen sind. Die Seite ist deshalb finanziell bedroht.",
+   "artikel": [
+    "Nicolas Bouliane betreibt die Website All About Berlin seit 2017 und seit 2020 hauptberuflich. Nach sieben Jahren Wachstum hat sie laut seinem Blogbeitrag 70 bis 75 Prozent ihres Traffics verloren, den er auf die Google AI Overviews zurückführt. AI Overviews sind von einer KI generierte Antworten, die oberhalb der klassischen Suchergebnisse erscheinen.",
+    "## Was sich für Websites verändert",
+    "Früher führte eine Google-Suche direkt zur Website. Heute erscheinen laut Bouliane zuerst Werbung, dann eine KI-Antwort, die auf seinen Inhalten trainiert wurde, und erst danach ein Link. Nach seinen Angaben erreicht er nur noch etwa ein Viertel seines früheren Publikums, weshalb er sich bereits Gedanken über eine andere Einnahmequelle macht.",
+    "## Mehr als Geld",
+    "Bouliane betont, dass ihm nicht nur die Einnahmen wichtig sind. Behörden in Berlin und dem Bund verweisen laut seinem Beitrag auf seine Ratgeber, und das Berliner Einwanderungsamt nutzt Daten der Seite. Befürchtet wird, dass seine Inhalte in einer KI-Antwort ihre Stimme und ihren Kontext verlieren.",
+    "## Kein Einzelfall",
+    "Nach seiner Darstellung haben sich weitere Website-Betreiber privat bei ihm gemeldet. Einige haben ihre Inhalte hinter eine Bezahlschranke gestellt, andere pflegen ihre Seiten nicht mehr. Bouliane verweist außerdem auf Ankündigungen von Google, wonach KI-Antworten die klassischen Suchergebnisse vollständig ersetzen und Werbung enthalten sollen. Er selbst weiß nach eigenen Worten nicht, welche Rolle All About Berlin in dieser Zukunft noch spielen kann."
+   ],
+   "quellen": [
+    {
+     "titel": "AI is killing All About Berlin (Nicolas Bouliane)",
+     "url": "https://nicolasbouliane.com/blog/death-by-ai"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50542705"
+    }
+   ],
+   "demo": "modell",
+   "bereich": "Text",
+   "datum": "2026-05-01",
+   "machen": [
+    "Wer eigene Ratgeber-Websites betreibt, kann die Entwicklung seiner Suchzugriffe in der Search Console beobachten.",
+    "Wer Inhalte veröffentlicht, kann prüfen, ob eine Bezahlschranke oder Newsletter-Anmeldung als Alternative zur Suchreichweite sinnvoll wäre."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Traffic von All About Berlin (laut Blogbeitrag)",
+    "balken": [
+     {
+      "label": "Vor KI-Übersichten",
+      "wert": 100,
+      "anzeige": "100 %"
+     },
+     {
+      "label": "Heute",
+      "wert": 25,
+      "anzeige": "etwa 25 %"
+     }
+    ]
+   },
+   "id": "google-ki-ubersichten-kosten-berlin-ratgeber-all-about-berli",
+   "hinzugefuegt": "2026-11-19T19:00:33Z"
+  },
+  {
+   "titel": "Google-KI-Übersichten: Klickverluste von rund 40 Prozent",
+   "kurz": "Laut einem randomisierten Experiment senken Googles KI-Übersichten (AI Overviews) die Klicks auf externe Websites um etwa 40 Prozent. Die Branche hat bisher kaum Wege gefunden, diesen Verlust auszugleichen.",
+   "artikel": [
+    "Googles KI-Übersichten, sogenannte AI Overviews, sind generierte Zusammenfassungen, die oberhalb der normalen Suchergebnisse erscheinen und auf die verwendeten Quellen verlinken. Laut einer Auswertung von DataForSEO erschienen sie im August 2026 bei rund 61 Prozent der erfassten Suchergebnisse, im September 2024 waren es knapp 6 Prozent.",
+    "## Das Experiment",
+    "Die Forscher Saharsh Agarwal und Ananya Sen gaben US-Nutzern von Chrome am Desktop zufällig eine Erweiterung, die entweder die Übersichten ausblendete oder sie anzeigte. Über zwei Wochen im Januar und Februar 2026 zeigte sich: Bei Suchen mit Übersicht gab es pro Suche im Schnitt 0,37 Klicks auf externe Seiten, ohne Übersicht 0,62. Das entspricht laut den Autoren einem Rückgang von 39,8 Prozent. Klicks auf Werbung blieben unverändert.",
+    "## Einordnung",
+    "Es handelt sich um ein Arbeitspapier, das noch nicht begutachtet wurde und nur Desktop-Nutzer betrifft. Der Effekt war bei informierenden Suchen statistisch signifikant, bei Navigations- und Transaktionssuchen reichten die Stichproben nicht aus. Auch Pew Research deutet in eine ähnliche Richtung, wobei dort kein kontrolliertes Experiment vorliegt.",
+    "## Folgen für Websites",
+    "Die Klickrate (Click-through-Rate, also der Anteil der Nutzer, die ein angezeigtes Ergebnis anklicken) des ersten organischen Treffers auf dem Desktop sank laut DataForSEO von 17,83 Prozent im September 2025 auf 7,43 Prozent im August 2026. Die Plattform selbst führt diesen Rückgang nicht eindeutig auf KI-Antworten zurück. Auch Generative Engine Optimization (GEO), also das Optimieren von Inhalten für Zitate in KI-Antworten, zeigt laut dem Bericht bisher keinen klaren Ausgleich.",
+    "Herstellerangaben: Die Zahlen zu Klickrückgängen und Klickraten stammen aus Auswertungen von DataForSEO und der Forschungsarbeit, nicht von Google selbst."
+   ],
+   "quellen": [
+    {
+     "titel": "Google's AI Overviews cut clicks to websites by 40% - RevScope",
+     "url": "https://revscope.co/blog/search-seo-geo-2026/"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50540178"
+    }
+   ],
+   "demo": "security",
+   "bereich": "Apps",
+   "datum": "2026-11-09",
+   "machen": [
+    "Prüfe bei deiner eigenen Website, wie stark Suchklicks zurückgehen, bevor du Inhalte umbaust.",
+    "Schreibe Seiten so, dass Textpassagen leicht zitierbar sind, da das laut der Auswertung der wichtigste GEO-Ansatz ist.",
+    "Verlasse dich nicht allein auf Suchverkehr und baue auch direkte Kanäle wie Newsletter auf."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Klickrate erster organischer Treffer (Desktop)",
+    "balken": [
+     {
+      "label": "Sep 2025",
+      "wert": 17.83,
+      "anzeige": "17,83 %"
+     },
+     {
+      "label": "Feb 2026",
+      "wert": 15.18,
+      "anzeige": "15,18 %"
+     },
+     {
+      "label": "Mär 2026",
+      "wert": 7.94,
+      "anzeige": "7,94 %"
+     },
+     {
+      "label": "Aug 2026",
+      "wert": 7.43,
+      "anzeige": "7,43 %"
+     }
+    ]
+   },
+   "id": "google-ki-ubersichten-klickverluste-von-rund-40-prozent",
+   "hinzugefuegt": "2026-11-19T19:00:33Z"
+  },
+  {
    "titel": "Microsoft ersetzt externe KI-Modelle durch eigene, günstigere Modelle",
    "kurz": "Microsofts KI-Abteilung MAI hat auf der Konferenz Ignite sieben neue Modelle für Code, Sicherheit, Bilder, Sprache und Routing vorgestellt. Sie sollen den Betrieb von dauerhaft laufenden KI-Agenten günstiger machen und OpenAI- sowie Anthropic-Systemen als Alternative dienen.",
    "artikel": [
@@ -4083,6 +4191,139 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Microsoft MAI stellt sieben neue Modelle mit günstigem Preis-Leistungs-Verhältnis vor",
+   "kurz": "Microsoft AI hat laut eigener Ankündigung eine Familie aus sieben Modellen veröffentlicht, die bei niedrigen Kosten hohe Qualität bieten sollen. Die Angaben zu Leistung und Preis stammen vom Hersteller und sind nicht unabhängig geprüft.",
+   "artikel": [
+    "Microsoft AI (MAI) hat eine Familie von sieben neuen Modellen vorgestellt. Der Schwerpunkt liegt auf dem Verhältnis von Leistung zu Preis, weil Kunden Agenten, die rund um die Uhr echte Entwicklungsarbeit erledigen, zu vertretbaren Kosten betreiben wollen.",
+    "## Die Modelle im Überblick",
+    "Laut Herstellerangaben erreicht MAI Code 2 rund 98 Prozent der Codierqualität von GPT-6.1 Sol bei etwa 40 Prozent des Preises. MAI Code 2 Flash soll bei 65 Prozent des Preises vergleichbare Leistung wie GPT-6 Luna bieten. MAI Cyber 2 Flash soll im CyberGym-E2E-Benchmark die Qualität von GPT-6 Astra bei weniger als 2 Prozent der Kosten pro Aufgabe erreichen. MAI Image 2.7 steht laut Hersteller in der Bildbearbeitung auf Platz 1 bei Artificial Analysis und kostet nur ein Fünftel von GPT Image 2.6 Sunburst. MAI Realtime 1 soll GPT-Realtime 2.1 übertreffen und beginnt bei 0,01 US-Dollar pro Audiominute.",
+    "## Spezialmodelle und Hardware",
+    "Dragon Copilot Transcribe basiert laut Microsoft auf MAI Transcribe 2, das als schnellstes und genauestes mehrsprachiges Transkriptionsmodell beschrieben wird. Nach Angaben des Herstellers verarbeitet es monatlich 10 Millionen Patientenkontakte, wobei die Fehlerraten bei mehrsprachigen Aufnahmen halbiert wurden. Decision 1.1 soll laut Microsoft 50-mal schneller und 79-mal günstiger sein als GPT-6.1 Sol. Der Beschleuniger Maia 200, die zweite Generation von Microsoft, läuft laut Ankündigung bereits produktiv mit den größten Modellen des Unternehmens und erreicht 1,7-mal mehr Tokens pro Watt.",
+    "## Einordnung",
+    "Alle Leistungs- und Preisangaben sind Herstellerangaben und stammen aus der Ankündigung von Microsoft. Unabhängige Vergleiche liegen im Material nicht vor. Die Diskussion auf Hacker News mit 590 Punkten zeigt Interesse, enthält im Material aber keine geprüften Zusatzdaten."
+   ],
+   "quellen": [
+    {
+     "titel": "Seven new world-class models at scalable price-performance (Microsoft AI)",
+     "url": "https://microsoft.ai/news/microsoft-ignite-2026/"
+    },
+    {
+     "titel": "HN-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50548021"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer Entwicklungs-Agenten betreibt, kann laut Hersteller Modelle mit niedrigeren Kosten pro Aufgabe testen.",
+    "Entwickler können die Herstellerangaben zu Preis und Leistung anhand eigener Aufgaben gegenprüfen, bevor sie umstellen."
+   ],
+   "radar": true,
+   "quelle": "Hacker News",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "MAI Code 2 Codierqualität vs. GPT-6.1 Sol (Herstellerangabe)",
+     "wert": "98 %"
+    },
+    {
+     "label": "MAI Code 2 Preis vs. GPT-6.1 Sol (Herstellerangabe)",
+     "wert": "ca. 40 %"
+    },
+    {
+     "label": "MAI Realtime 1 Startpreis (Herstellerangabe)",
+     "wert": "ab 0,01 $ pro Audiominute"
+    },
+    {
+     "label": "Maia 200 Tokens pro Watt (Herstellerangabe)",
+     "wert": "1,7-fach"
+    }
+   ],
+   "signal": "Microsoft setzt bei MAI stark auf Preis-Leistung. Alle Zahlen sind Herstellerangaben und noch nicht unabhängig überprüft.",
+   "link": "https://microsoft.ai/news/microsoft-ignite-2026/",
+   "linkLabel": "Ankündigung bei Microsoft AI",
+   "id": "microsoft-mai-stellt-sieben-neue-modelle-mit-gunstigem-preis",
+   "hinzugefuegt": "2026-11-19T19:00:33Z"
+  },
+  {
+   "titel": "FrontierHarness v1.1: Das beste Agenten-Gerüst hängt vom Modell ab",
+   "kurz": "Der Benchmark-Anbieter RUNTA hat zusammen mit Baseten 22 Agenten-Harnesses mit fünf Modellen getestet. Das Ergebnis: Wer das Modell wechselt, sollte oft auch das Harness wechseln, weil sich Kosten und Trefferquote je nach Kombination stark verschieben.",
+   "artikel": [
+    "RUNTA hat mit Baseten einen Vergleich von sogenannten Harnesses veröffentlicht. Ein Harness ist die Umgebung, die ein KI-Modell als Agent steuert, etwa mit Werkzeugen, Dateizugriff und Befehlen im Terminal. Grundlage waren 83 Milliarden Tokens aus 27.280 Agentenläufen.",
+    "## Ergebnisse",
+    "Die Version 1.1 kombiniert 22 Konfigurationen mit fünf Modellen und 62 Terminal-Aufgaben mit jeweils vier Versuchen. Laut den Autoren ist das 76-mal so groß wie die Vorgängerversion 1.0, die nur ein einziges Modell (Kimi K3) prüfte.",
+    "Für jedes Modell gibt es ein anderes bestes Preis-Leistungs-Harness. Genannt werden Codex CLI mit GLM-5.3, Pi mit GLM-5.3 Flash, ZCode mit DeepSeek V4.1 Flash 1017, Oh My Pi mit Muse und Alma mit Kimi-K3. Die Kostenrangliste verschob sich stark: Codex CLI lag mit GLM-5.3 auf Platz 1, mit Kimi-K3 aber auf Platz 16.",
+    "## Kosten und Methodik",
+    "Das Modell bestimmt laut der Auswertung den größten Teil der Kosten (92,8 Prozent der Varianz). Das Harness erklärt 2,3 Prozent, die Kombination aus beidem 4,9 Prozent. Bei festem Modell veränderten die Harnesses die Kosten um den Faktor 1,8 bis 5,0. Die Autoren testeten dazu mit zufällig gemischten Läufen, ob der Unterschied nur Zufall ist, und fanden ihn statistisch belastbar (p = 0,003).",
+    "Die Autoren weisen darauf hin, dass 216 Läufe wegen Reward Hacking als ungültig gewertet wurden, davon 163 wegen Online-Recherchen. Diese Läufe zählten mit null Punkten. Die Ergebnisse stammen vom Anbieter RUNTA und sind als dessen eigene Auswertung zu lesen."
+   ],
+   "quellen": [
+    {
+     "titel": "Introducing FrontierHarness Eval v1.1 – RUNTA Blog",
+     "url": "https://runta.com/blog/introducing-frontierharness-eval-v1-1/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50532191"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer KI-Agenten für Programmieraufgaben nutzt, sollte prüfen, ob beim Modellwechsel auch das Harness angepasst werden muss.",
+    "Vor einer Entscheidung lohnt der Blick auf Kosten pro bestandener Aufgabe statt nur auf den Listenpreis des Modells."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Kosten pro Aufgabe (Gesamtdurchschnitt, Herstellerangabe)",
+    "balken": [
+     {
+      "label": "OpenCode v2",
+      "wert": 0.561,
+      "anzeige": "$0,561"
+     },
+     {
+      "label": "Codex CLI (bester Wert pro Pass, gesamt)",
+      "wert": 0.937,
+      "anzeige": "$0,937 pro Pass"
+     },
+     {
+      "label": "Antigravity CLI (teuerster Wert pro Pass)",
+      "wert": 1.63,
+      "anzeige": "$1,63 pro Pass"
+     }
+    ]
+   },
+   "tag": "Benchmark",
+   "quelle": "Hacker News",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Agentenläufe",
+     "wert": "27.280"
+    },
+    {
+     "label": "Tokens",
+     "wert": "83 Mrd."
+    },
+    {
+     "label": "Konfigurationen",
+     "wert": "22 Harnesses × 5 Modelle"
+    },
+    {
+     "label": "Aufgaben",
+     "wert": "62 Terminal-Aufgaben"
+    },
+    {
+     "label": "Höchste Trefferquote (Herstellerangabe)",
+     "wert": "61,9 %"
+    }
+   ],
+   "signal": "Herstellerangaben: Ein Benchmark-Anbieter zeigt, dass das beste Harness je nach Modell wechselt. Das Ergebnis stammt aus einer Eigenauswertung und wurde auf Hacker News mit 418 Punkten diskutiert.",
+   "link": "https://runta.com/blog/introducing-frontierharness-eval-v1-1/",
+   "linkLabel": "Zum Blogbeitrag",
+   "id": "frontierharness-v1-1-das-beste-agenten-gerust-hangt-vom-mode",
+   "hinzugefuegt": "2026-11-19T19:00:33Z"
+  },
   {
    "titel": "Jeveration: Bilder in einem einzigen Durchlauf erzeugen",
    "kurz": "Ein arXiv-Paper stellt Jeveration vor, ein Modell, das auf einem eingefrorenen Vision-Language-Modell aufbaut und 512x512-Bilder in einem einzigen Vorwärtsdurchlauf erzeugt. Laut Paper dauert das 78 ms und ist bis zu 122-mal schneller als bestehende vereinheitlichte Modelle.",
@@ -21147,8 +21388,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-19T10:08:04Z",
-  "neueFunde": 2,
-  "standAktualisiert": "2026-11-18T12:20:01Z"
+  "letzterScan": "2026-11-19T19:00:33Z",
+  "neueFunde": 4,
+  "standAktualisiert": "2026-11-19T19:00:33Z"
  }
 }
