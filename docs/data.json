@@ -1,6 +1,53 @@
 {
  "news": [
   {
+   "titel": "Microsoft ersetzt externe KI-Modelle durch eigene, günstigere Modelle",
+   "kurz": "Microsofts KI-Abteilung MAI hat auf der Konferenz Ignite sieben neue Modelle für Code, Sicherheit, Bilder, Sprache und Routing vorgestellt. Sie sollen den Betrieb von dauerhaft laufenden KI-Agenten günstiger machen und OpenAI- sowie Anthropic-Systemen als Alternative dienen.",
+   "artikel": [
+    "MAI, die KI-Abteilung von Microsoft, hat auf der Konferenz Ignite sieben neue Modelle vorgestellt. Sie decken Programmierung, IT-Sicherheit, Bildbearbeitung, Sprache und Workflow-Entscheidungen ab. Alle sollen die Betriebskosten für dauerhaft laufende KI-Agenten senken. Die Modelle richten sich gegen die Systeme von OpenAI und Anthropic, die Microsoft als Vergleichsmaßstab nutzt. Die Neuheiten erschienen gebündelt in einer Charge statt über das Jahr verteilt, ähnlich wie auf der Build-Konferenz im Juni.",
+    "## Programmierung",
+    "Das Coding-Modell MAI Code 2 soll laut Microsoft 98 Prozent der Leistung von GPT-6.1 Sol erreichen, bei 40 Prozent der Kosten. Gegenüber Claude Opus 5.5 nennt Microsoft 96 Prozent der Leistung bei 5 Prozent der Kosten. Diese Werte sind Herstellerangaben aus internen Tests. Derzeit ist für das Modell ein Rabatt von 50 Prozent eingeplant. In Vergleichen bei Frontend-Aufgaben bevorzugten menschliche Prüfer die Ergebnisse von MAI Code 2 laut Microsoft in 64 Prozent der Fälle gegenüber GPT-6 Sol.",
+    "## Sicherheit",
+    "MAI Cyber 2 Flash löst laut Microsoft 92,3 Prozent der Aufgaben im CyberGym-E2E-Test zur Suche nach Sicherheitslücken. GPT-6 Astra kommt auf 91,5 Prozent, benötigt dafür aber das doppelte Reasoning-Budget. Reasoning-Budget bezeichnet die Rechenmenge, die ein Modell für das Nachdenken vor der Antwort einsetzen darf. Laut Microsoft kostet das MAI-Modell pro Aufgabe weniger als 2 Prozent von GPT-6 Astra. Microsoft weist zudem darauf hin, dass rund 10 Prozent der Testaufgaben mit Trainingsdaten überlappen. Diese Aufgaben wurden für alle Modelle entfernt.",
+    "## Entscheidungsmodell",
+    "Microsoft-Decision-1.1 übernimmt Routing, Klassifizierung und Priorisierung von Workflows. Die Grundlage ist Googles Gemma 4 26B A4B, ein sogenanntes Mixture-of-Experts-Modell, bei dem nur ein Teil der Parameter pro Anfrage aktiv ist. Laut Microsoft ist das Modell bei gleicher Genauigkeit wie ein großes Sprachmodell 2,2-mal schneller und 4,4-mal günstiger. Auf dem Decision Index v2.1 von Artificial Analysis erreicht es 68 Punkte.",
+    "## Weitere Modelle",
+    "Außerdem nannte Microsoft das Bildmodell MAI Image 2.7, das Sprachmodell MAI Realtime 1 und MAI Work Flash, das in Microsoft 365 läuft. Unternehmenskunden sollen zudem ausgewählte Modellgewichte mit eigenen Daten in der Azure-Cloud feinabstimmen können. Alle Leistungs- und Preisangaben stammen von Microsoft selbst und sind unabhängig nicht überprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Microsoft is replacing outside AI models in its own products with cheaper in-house alternatives – The Decoder",
+     "url": "https://the-decoder.com/microsoft-is-replacing-outside-ai-models-in-its-own-products-with-cheaper-in-house-alternatives/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler können die Preise und Leistungsangaben der MAI-Modelle in Azure oder GitHub Copilot mit den bisherigen Modellen vergleichen.",
+    "Wer eigene KI-Agenten betreibt, kann prüfen, ob ein günstigeres Routing-Modell wie Decision 1.1 die Kosten senkt.",
+    "Unternehmen mit eigenen Daten können prüfen, ob eine Feinabstimmung ausgewählter Modelle in Azure für ihren Anwendungsfall sinnvoll ist."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-11-18",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Preis pro Million Input-Token (MAI Cyber 2 Flash vs. GPT-6 Astra)",
+    "balken": [
+     {
+      "label": "GPT-6 Astra",
+      "wert": 10,
+      "anzeige": "10 $"
+     },
+     {
+      "label": "MAI Cyber 2 Flash",
+      "wert": 0.1,
+      "anzeige": "0,10 $"
+     }
+    ]
+   },
+   "id": "microsoft-ersetzt-externe-ki-modelle-durch-eigene-gunstigere",
+   "hinzugefuegt": "2026-11-19T10:08:04Z"
+  },
+  {
    "titel": "Google stellt Gemini 4 Neon vor: Modell für Software, Wissensarbeit und Wissenschaft",
    "kurz": "Google DeepMind hat mit Gemini 4 Neon ein neues Sprachmodell vorgestellt, das laut Google vor allem bei Programmier-, Büro- und Forschungsaufgaben punkten soll. Die Angaben stammen aus Herstellerangaben und teils aus Drittbewertungen.",
    "artikel": [
@@ -4036,6 +4083,91 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Jeveration: Bilder in einem einzigen Durchlauf erzeugen",
+   "kurz": "Ein arXiv-Paper stellt Jeveration vor, ein Modell, das auf einem eingefrorenen Vision-Language-Modell aufbaut und 512x512-Bilder in einem einzigen Vorwärtsdurchlauf erzeugt. Laut Paper dauert das 78 ms und ist bis zu 122-mal schneller als bestehende vereinheitlichte Modelle.",
+   "artikel": [
+    "Das Paper \"Jeveration: System One Models Now Generate\" überträgt ein Entscheidungsprinzip auf die Bilderzeugung. Die Autoren beschreiben System-One-Modelle als Systeme, die Ergebnisse über schnelle, parallele Vorhersagen liefern. Jeveration soll dieselbe Idee nutzen, um hochwertige Bilder in einem einzigen Vorwärtsdurchlauf zu erzeugen.",
+    "## Grundlage und Herausforderung",
+    "Jeveration baut auf einem eingefrorenen Vision-Language-Modell auf, also einem Modell, das Bild- und Textverständnis verbindet und dessen Gewichte beim Training nicht verändert werden. Dessen visuelles Wissen wird für die ganzheitliche Bilderzeugung weiterverwendet. Die zentrale Schwierigkeit liegt laut Paper darin, globale Konsistenz zu wahren: Ein Prompt lässt viele gültige Bilder zu, und die parallelen Vorhersagen müssen trotzdem zu einem stimmigen Ganzen zusammenlaufen.",
+    "## Zufallszustand und Bildcodes",
+    "Die Autoren verknüpfen alle Positionen mit einem gemeinsamen Zufallszustand, damit die parallelen Vorhersagen koordiniert werden. Jeder Durchlauf liefert so ein anderes, aber in sich kohärentes Bild. Da das Modell diesen Zustand bei direkter Bildüberwachung oft ignoriert, lernt es zunächst eine Verteilung über diskrete Bildcodes, also über komprimierte, aus Symbolen bestehende Bilddarstellungen, die den Durchlauf anleiten.",
+    "## Mehrere Aufgaben in einem Modell",
+    "Neben der Text-zu-Bild-Erzeugung vereint die Architektur auch Bild-zu-Bild-Erzeugung und Dense Prediction, also die pixelweise Vorhersage von Merkmalen. Ein einziger Checkpoint unterstützt damit alle drei Aufgaben, jeweils in einem Durchlauf.",
+    "## Angaben der Autoren",
+    "Die Experimente laut Paper: 78 ms für ein 512x512-Bild, bis zu 122-mal schneller als bestehende vereinheitlichte Modelle, bei laut Autoren konkurrenzfähiger Bildqualität und Dense-Prediction-Leistung. Dies sind Angaben der Autoren und noch nicht unabhängig geprüft. Die Forschungsseite verweist auf Code und Gewichte auf GitHub sowie eine Demo auf Hugging Face."
+   ],
+   "quellen": [
+    {
+     "titel": "Jeveration: System One Models Now Generate (Hugging Face Paper-Seite)",
+     "url": "https://huggingface.co/papers/2611.24738"
+    },
+    {
+     "titel": "arXiv-Paper 2611.24738",
+     "url": "https://arxiv.org/abs/2611.24738"
+    },
+    {
+     "titel": "Projektseite Jeveration",
+     "url": "https://carol-lyh.github.io/Jeveration/"
+    },
+    {
+     "titel": "Code und Gewichte (GitHub)",
+     "url": "https://github.com/Carol-lyh/Jeveration"
+    }
+   ],
+   "demo": "bild",
+   "machen": [
+    "Die Demo auf Hugging Face ausprobieren, um Bilder aus Textprompts zu erzeugen.",
+    "Code und Gewichte auf GitHub prüfen, wenn man das Modell lokal testen möchte.",
+    "Die Ergebnisse verschiedener Zufallsdurchläufe vergleichen, da jeder Durchlauf ein anderes, aber kohärentes Bild liefert."
+   ],
+   "ausprobieren": {
+    "prompt": "Ein Leuchtturm bei Sonnenuntergang über einem ruhigen Meer",
+    "tool": "Jeveration Demo (Hugging Face Space)",
+    "url": "https://huggingface.co/spaces/linlinlinlinsdada/Jeveration"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erzeugungszeit für ein 512x512-Bild (laut Autoren)",
+    "balken": [
+     {
+      "label": "Bestehende vereinheitlichte Modelle (Referenz)",
+      "wert": 9516,
+      "anzeige": "bis zu ca. 9,5 s (berechnet: 78 ms × 122)"
+     },
+     {
+      "label": "Jeveration",
+      "wert": 78,
+      "anzeige": "78 ms"
+     }
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-11-18",
+   "kennzahlen": [
+    {
+     "label": "Erzeugungszeit 512x512",
+     "wert": "78 ms (Herstellerangabe der Autoren)"
+    },
+    {
+     "label": "Geschwindigkeitsvorteil",
+     "wert": "bis zu 122-mal schneller (Angabe der Autoren)"
+    },
+    {
+     "label": "Auflösung",
+     "wert": "512x512"
+    },
+    {
+     "label": "Upvotes auf Hugging Face",
+     "wert": "40"
+    }
+   ],
+   "signal": "Ein Forschungsansatz will Bildgenerierung in einem einzigen Vorwärtsdurchlauf statt in vielen Schritten umsetzen. Die Geschwindigkeitsangaben stammen von den Autoren und sind noch nicht unabhängig überprüft.",
+   "link": "https://huggingface.co/papers/2611.24738",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "jeveration-bilder-in-einem-einzigen-durchlauf-erzeugen",
+   "hinzugefuegt": "2026-11-19T10:08:04Z"
+  },
   {
    "titel": "RepoFactory: Trainingsumgebungen für Coding-Agenten werden während der Erstellung verbessert",
    "kurz": "Ein Forschungsteam stellt RepoFactory vor, eine Pipeline, die aus echten Software-Repositories Entwicklungsumgebungen für Coding-Agenten baut und diese mit schnellen Proxy-Signalen schrittweise aufwertet. Laut Paper-Angaben entstanden 10.159 Umgebungen in 17 Softwaredomänen.",
@@ -21015,7 +21147,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-19T02:01:56Z",
+  "letzterScan": "2026-11-19T10:08:04Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-11-18T12:20:01Z"
  }
