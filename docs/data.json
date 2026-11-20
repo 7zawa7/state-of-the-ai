@@ -1,6 +1,38 @@
 {
  "news": [
   {
+   "titel": "Nvidia will Inception für mindestens 500 Millionen Dollar übernehmen",
+   "kurz": "Nvidia steht laut The Information kurz vor der Übernahme des zwei Jahre alten Startups Inception für mindestens 500 Millionen Dollar. Inception entwickelt Sprachmodelle auf Basis von Diffusionsverfahren.",
+   "artikel": [
+    "Nvidia steht laut einem Bericht von The Information kurz davor, das KI-Startup Inception für mindestens 500 Millionen Dollar zu übernehmen. Die Quelle beruft sich auf drei Personen, die mit den Gesprächen vertraut sind. Die Übernahme sieht laut Bericht auch Leistungsboni für die mehr als 30 Beschäftigten des Startups aus der Region San Francisco Bay Area vor.",
+    "## Diffusion statt Wort-für-Wort",
+    "Inception baut Sprachmodelle mit einem Diffusionsverfahren, das man sonst eher von der Bilderzeugung kennt. Diffusion bedeutet hier, dass eine komplette Antwort schrittweise verfeinert wird. Klassische Modelle wie die hinter ChatGPT und Claude erzeugen dagegen Token für Token, also Wortbausteine nacheinander. Das zuletzt veröffentlichte Modell des Startups heißt Mercury 3.",
+    "## Ziele von Nvidia",
+    "Mit der Übernahme will Nvidia seine quelloffenen Nemotron-Modelle stärken und seine Modelle für Roboter ausbauen. Laut Bericht soll Nvidia damit im Wettbewerb mit OpenAI und Anthropic bestehen, die beide eigene Inferenz-Chips entwickeln. Inference-Chips sind Prozessoren, die fertige Modelle im Betrieb ausführen. Palantir und US-Behörden nutzen Nemotron bereits als Alternative zu chinesischen Modellen.",
+    "## Hintergrund",
+    "Die Gespräche begannen laut Bericht, bevor Nvidia-Chef Jensen Huang zurücktrat. Microsoft hatte zuvor Interesse an Inception gezeigt. Die Mitgründer und Professoren Stefano Ermon, Aditya Grover und Volodymyr Kuleshov sollen laut Bericht hauptberuflich zu Nvidia wechseln. Beide Unternehmen haben sich zunächst nicht öffentlich dazu geäußert. Es handelt sich um einen Bericht über Verhandlungen, nicht um eine bestätigte Übernahme."
+   ],
+   "quellen": [
+    {
+     "titel": "Nvidia bets at least $500 million on Inception's diffusion models to strengthen its open-source Nemotron lineup",
+     "url": "https://the-decoder.com/nvidia-bets-at-least-500-million-on-inceptions-diffusion-models-to-strengthen-its-open-source-nemotron-lineup/"
+    },
+    {
+     "titel": "The Information",
+     "url": "https://www.theinformation.com"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Verfolgen, ob die Übernahme offiziell bestätigt wird und welche Modelle danach verfügbar bleiben.",
+    "Die Entwicklung offener Nemotron-Modelle von Nvidia im Blick behalten, falls man mit quelloffenen Sprachmodellen arbeiten möchte."
+   ],
+   "bereich": "Text",
+   "datum": "2026-11-13",
+   "id": "nvidia-will-inception-fur-mindestens-500-millionen-dollar-ub",
+   "hinzugefuegt": "2026-11-20T17:20:31Z"
+  },
+  {
    "titel": "Google-KI-Übersichten kosten Berlin-Ratgeber All About Berlin rund 70 bis 75 Prozent Traffic",
    "kurz": "Der Betreiber der Berliner Ratgeber-Website All About Berlin berichtet, dass seine Zugriffe seit Einführung der Google AI Overviews stark eingebrochen sind. Die Seite ist deshalb finanziell bedroht.",
    "artikel": [
@@ -4191,6 +4223,122 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Frostbite: CPU-Architektur, die laut Architect Labs von einer KI entworfen und verifiziert wurde",
+   "kurz": "Architect Labs stellt Frostbite vor, eine nach Angaben des Unternehmens vollständig von KI-Systemen entworfene und verifizierte CPU mit neuem Befehlssatz, der auf sogenannten Interaction Nets basiert. Laut Herstellerangabe liegt sie bei 4,59-facher Performance pro Watt gegenüber einem Dual-Issue-In-Order-Kern.",
+   "artikel": [
+    "Architect Labs beschreibt Frostbite als eine Allzweck-CPU mit einem von Grund auf neuen Befehlssatz. Nach eigenen Angaben haben die KI-Systeme des Unternehmens Compiler, Befehlssatz, Architektur, Mikroarchitektur, RTL, Verifikation und das finale GDS-Layout (die Fertigungsdatei des Chips) selbstständig durchlaufen und dabei immer wieder optimiert.",
+    "## Die Grundidee: Interaction Nets",
+    "Interaction Nets sind ein Berechnungsmodell, bei dem ein Programm als Graph aus Knoten vorliegt. Gerechnet wird, indem jeweils zwei verbundene Knoten an ihren Ports umgeschrieben werden. Jede Umschreibung betrifft nur einen kleinen lokalen Teil des Graphen, und Werte werden genau einmal verwendet, es gibt also keinen geteilten veränderlichen Zustand. Laut Architect Labs soll daraus Parallelität direkt aus dem Programm entstehen, ohne Threads oder Locks.",
+    "Als Beispiel nennt der Beitrag das Problem, fünf Damen auf einem Fünf-mal-fünf-Brett zu platzieren. Die Interaction-Net-Variante soll im Schnitt etwa zwölf Umschreibungen gleichzeitig bereit haben, während das sequenzielle C++-Programm einen Kandidaten nach dem anderen prüft. Dabei handelt es sich um eine Darstellung des Herstellers, nicht um unabhängig geprüfte Messung.",
+    "## Herstellerangaben zur Leistung",
+    "Architect Labs gibt an, auf 25 Workloads, davon 15 erst bei der finalen Auswertung genutzte, eine 4,59-fache Performance pro Watt gegenüber einem modernen, silizium-erprobten Superskalar-Kern (Dual-Issue, In-Order) erreicht zu haben. Außerdem sollen Speicherhierarchien und Cache-Kohärenz mit lokalen Speichern neben den Recheneinheiten teilweise entfallen, was Fläche und Leistungsaufnahme spare. Diese Zahlen stammen aus der Selbstdarstellung des Unternehmens und sind bisher nicht unabhängig überprüft.",
+    "## Einordnung",
+    "Der Beitrag ist ein Hersteller-Blog ohne unabhängige Gegenprüfung. Er beschreibt zudem, dass eine frühe, 141 Seiten lange Konzeptsammlung nach dem ersten RTL-Durchlauf verworfen wurde, weil ihre Zahlen physikalisch kaum realisierbar waren. Auf Hacker News fand der Beitrag mit 465 Punkten viel Aufmerksamkeit."
+   ],
+   "quellen": [
+    {
+     "titel": "Introducing Frostbite (Architect Labs)",
+     "url": "https://architectlabs.com/blog/frostbite"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50572503"
+    }
+   ],
+   "demo": "chip",
+   "machen": [
+    "Wer sich für Chipdesign interessiert, kann die Konzepte von Interaction Nets über den verlinkten Hintergrundtext nachvollziehen.",
+    "Entwickler können die Ergebnisse als Hersteller-Behauptung einordnen und auf unabhängige Benchmarks warten, bevor sie Schlüsse ziehen."
+   ],
+   "quelle": "Hacker News",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Performance pro Watt gegenüber Dual-Issue-In-Order-Kern (Herstellerangabe)",
+     "wert": "4,59x"
+    },
+    {
+     "label": "Workloads (davon held-out)",
+     "wert": "25 (15 held-out)"
+    },
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "465"
+    }
+   ],
+   "signal": "Ein Hersteller behauptet, eine CPU-Architektur vollständig mit KI entworfen und verifiziert zu haben, mit 4,59-facher Perf/W in den eigenen Tests. Die Angaben sind nicht unabhängig geprüft.",
+   "link": "https://architectlabs.com/blog/frostbite",
+   "linkLabel": "Architect Labs Blog",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Performance pro Watt (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Dual-Issue-In-Order-Kern",
+      "wert": 1,
+      "anzeige": "1x"
+     },
+     {
+      "label": "Frostbite",
+      "wert": 4.59,
+      "anzeige": "4,59x"
+     }
+    ]
+   },
+   "id": "frostbite-cpu-architektur-die-laut-architect-labs-von-einer-",
+   "hinzugefuegt": "2026-11-20T17:20:31Z"
+  },
+  {
+   "titel": "Wie Vision-Language-Modelle interne Konzepte auswählen: Blick auf MC-Lens",
+   "kurz": "Ein arXiv-Paper (Hugging Face: 33 Upvotes) untersucht mit dem Werkzeug MC-Lens, wie Bild-Sprach-Modelle Konzepte intern bereitstellen und für Berechnungen nutzen. Die Forschenden übertragen dafür Ideen der Global-Workspace-Theorie auf künstliche Systeme.",
+   "artikel": [
+    "Vision-Language-Modelle (VLMs) verbinden Bild- und Textinformationen, doch ihre Ausgaben zeigen nicht, welche Konzepte sie intern repräsentieren. Ein neues Paper mit dem Titel „Probing the ‚Conscious‘ Mind“ setzt genau hier an.",
+    "## Das Werkzeug MC-Lens",
+    "Die Autorinnen und Autoren stellen den Multimodal Concept Lens (MC-Lens) vor, eine Art multimodale Jacobian-Lens. Er bildet Zwischenzustände aus dem Bild-Encoder und dem Sprach-Decoder auf einen gemeinsamen semantischen Raum ab. Dieser Raum wird durch das Ausgabevokabular des Decoders definiert, sodass sich die Zugänglichkeit von Konzepten über beide Modalitäten vergleichen lässt. Zusätzlich erlaubt MC-Lens gezielte Eingriffe in interne Konzepte.",
+    "## Zentrale Befunde",
+    "Laut Paper sind multimodale Konzeptinformationen in Zwischenzuständen lesbar und werden je nach Aufgabe selektiv abgerufen. Kontrafaktische Experimente zeigen, dass die abgerufenen Konzepte an nachgelagerten Berechnungen und Schlussfolgerungen beteiligt sind. Außerdem entwickelt sich eine verlässliche selektive Zugänglichkeit später als die bloße Verfügbarkeit von Konzepten. Über verschiedene Modellfamilien und Größen hinweg fanden die Forschenden ähnliche Muster, obwohl die interne Organisation sich unterscheidet.",
+    "## Einordnung",
+    "Die Global-Workspace-Theorie beschreibt, wie im Gehirn Informationen aus parallelen Prozessen ausgewählt, in einem gemeinsamen Arbeitsraum integriert und spezialisierten Prozessen zugänglich gemacht werden. Das Paper nutzt diese Begriffe als Rahmen, um solche Funktionen in multimodalen Systemen experimentell zu untersuchen. Die Autorinnen und Autoren sehen darin eine Grundlage, um Verbesserungen bei der Abstimmung zwischen Bild und Text zu planen. Das ist eine Forschungsarbeit und kein fertiges Produkt; Aussagen über Bewusstsein lassen die Ergebnisse nicht zu."
+   ],
+   "quellen": [
+    {
+     "titel": "Probing the \"Conscious\" Mind: Selective Access and Global Workspace in Vision-Language Models (Hugging Face Paper-Seite)",
+     "url": "https://huggingface.co/papers/2611.26590"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer sich für Interpretierbarkeit interessiert, kann die Methodik im Paper als Leitfaden für eigene Analysen von VLMs lesen.",
+    "Entwicklerinnen und Entwickler können prüfen, ob Konzepte in ihren Zwischenzuständen lesbar sind, bevor sie Trainingsdaten anpassen."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "MC-Lens",
+    "zeilen": [
+     "> Eingabe: Bild + Textfrage",
+     "✓ Konzepte in Zwischenzuständen lesbar",
+     "● Selektiver Zugriff je nach Aufgabe",
+     "⚠ Verlässlicher Zugriff entwickelt sich später",
+     "+ Gemeinsamer semantischer Raum",
+     "● Status: Forschungspaper (arXiv)"
+    ]
+   },
+   "radar": true,
+   "quelle": "arXiv",
+   "datum": "2026-11-19",
+   "kennzahlen": [
+    {
+     "label": "Upvotes auf Hugging Face",
+     "wert": "33"
+    }
+   ],
+   "signal": "Ein Forschungsansatz, der Interpretierbarkeit von Bild-Sprach-Modellen mit der Global-Workspace-Theorie verbindet und in verschiedenen Modellfamilien ähnliche Muster findet.",
+   "link": "https://huggingface.co/papers/2611.26590",
+   "linkLabel": "Paper auf Hugging Face öffnen",
+   "id": "wie-vision-language-modelle-interne-konzepte-auswahlen-blick",
+   "hinzugefuegt": "2026-11-20T17:20:31Z"
+  },
   {
    "titel": "Coda-DaVinci: Videogenerierung über 3D-Proxies mit Agenten",
    "kurz": "Ein Forschungsteam stellt Coda-DaVinci vor, ein agentenbasiertes Framework, das Videos mithilfe von vom Agenten erstellten 3D-Proxies steuert. Laut Paper verbessert es Befolgung von Anweisungen, Szenenkonsistenz und physikalische Plausibilität gegenüber den verglichenen Baselines.",
@@ -21768,8 +21916,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-20T08:37:19Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-20T17:20:31Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-19T19:00:33Z"
  }
 }
