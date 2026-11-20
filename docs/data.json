@@ -4192,6 +4192,197 @@
  ],
  "radar": [
   {
+   "titel": "Google Genie 4: Interaktive Welten mit Echtzeit-Änderungen und Audio",
+   "kurz": "Google DeepMind rollt Genie 4 zusammen mit einer neuen Project-Genie-Version für zahlende Google-AI-Ultra-Kunden aus. Nutzer können laufende Welten per Textprompt verändern und erhalten dazu Audio in Echtzeit.",
+   "artikel": [
+    "Google hat Genie 4 für berechtigte Abonnenten von Google AI Ultra verfügbar gemacht. Genie 4 ist ein sogenanntes Weltmodell: eine KI, die aus Texteingaben begehbare, interaktive Umgebungen erzeugt. Laut Google handelt es sich um das bisher realistischste und interaktivste Modell dieser Art. Diese Angabe stammt vom Hersteller selbst.",
+    "## Welten während des Spielens verändern",
+    "Nutzer können eine Welt auch während der Erkundung mit neuen Prompts umgestalten. Genannt werden etwa das Wetter ändern, eine Figur hinzufügen oder die Handlung umlenken. Zum ersten Mal kommt dabei Echtzeit-Audio hinzu, das sich an die Szene anpasst, von Umgebungsgeräuschen bis zu Dialogen von Figuren.",
+    "## Neue Funktionen bei Genie 3",
+    "Auch das ältere Modell Genie 3 bleibt im Modellauswahlmenü verfügbar. Laut Google wurden dafür Sitzungen auf bis zu drei Minuten pro Generierung verlängert, statt bisher 60 Sekunden. Außerdem lassen sich mehrere Welten verketten und 360-Grad-Panoramabilder als Ausgangspunkt nutzen.",
+    "## Projekt-Agent und Galerie",
+    "Ein neuer Project-Genie-Agent soll Welten über Alltagssprache erstellen. Er nutzt laut Google mehrere multimodale Modelle, erzeugt Startbilder und passende Hintergrundmusik. Fertige Welten lassen sich in einer Community-Galerie veröffentlichen, anschauen und remixen. Die Galerie enthält außerdem kuratierte Beispiele wie „Villa Giallo“ und „The Life of Ants“, die mit Kreativpartnern entstanden sind.",
+    "Für Nutzer ohne Ultra-Abo gibt es laut Quelle eine Warteliste für Google-AI-Pro-Mitglieder. Google betont zudem, dass generative KI noch experimentell sei."
+   ],
+   "quellen": [
+    {
+     "titel": "Genie 4 is now available – Google Blog",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
+    },
+    {
+     "titel": "Hacker News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50550415"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Mit Textprompts eigene begehbare Welten erstellen, sofern ein Google-AI-Ultra-Abo besteht.",
+    "Laufende Welten während der Erkundung per Prompt verändern, etwa Wetter oder Figuren.",
+    "Eigene Welten in der Community-Galerie veröffentlichen und fremde Welten remixen."
+   ],
+   "ausprobieren": {
+    "prompt": "Eine verlassene Wüstenstadt bei Sonnenuntergang, ein Sandsturm zieht auf – danach eine Figur, die auf einem Kamel vorbeireitet",
+    "tool": "Project Genie",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
+   },
+   "vorschau": {
+    "szene": "sandbox",
+    "titel": "Project Genie"
+   },
+   "tag": "Weltmodell",
+   "quelle": "Lab-Blog",
+   "datum": "2026-11-18",
+   "kennzahlen": [
+    {
+     "label": "Genie-3-Sitzungsdauer pro Generierung (neu)",
+     "wert": "3 Minuten"
+    },
+    {
+     "label": "Genie-3-Sitzungsdauer pro Generierung (vorher)",
+     "wert": "60 Sekunden"
+    },
+    {
+     "label": "Zugang",
+     "wert": "Google AI Ultra (Warteliste für AI Pro)"
+    }
+   ],
+   "signal": "Herstellerangabe: Genie 4 ist laut Google das bislang realistischste und interaktivste Weltmodell. Die Hacker-News-Diskussion mit 287 Punkten bestätigt Interesse, sagt aber nichts über unabhängige Tests aus.",
+   "link": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+   "linkLabel": "Google-Blogbeitrag lesen",
+   "id": "google-genie-4-interaktive-welten-mit-echtzeit-anderungen-un",
+   "hinzugefuegt": "2026-11-20T01:09:58Z"
+  },
+  {
+   "titel": "LLM-gestütztes Reverse Engineering: Ein Entwickler beschreibt seinen Workflow",
+   "kurz": "Ein erfahrener Hardware- und Software-Hacker beschreibt, wie er KI-Agenten zusammen mit Ghidra und Debugging-Skills für Reverse Engineering einsetzt. Der Beitrag stammt von einem persönlichen Blog und ist eine Selbstbeschreibung, keine unabhängige Prüfung.",
+   "artikel": [
+    "Ein Entwickler, der nach eigenen Angaben seit zwei Jahrzehnten Hardware und Software hackt, beschreibt, wie KI-Agenten seine Arbeit im Reverse Engineering deutlich beschleunigen. Reverse Engineering bedeutet, ein fertiges Programm oder Gerät rückwärts zu analysieren, um zu verstehen, wie es funktioniert.",
+    "## Werkzeuge",
+    "Als Modell nennt der Autor DeepSeek (Harness plus „Deepseek v4.1 Flash“), gelegentlich auch Codex. Er bezeichnet DeepSeek als schnell, leistungsfähig und günstig; das ist seine eigene Einschätzung. Als Analysewerkzeug nutzt er Ghidra mit einer MCP-Brücke. MCP (Model Context Protocol) verbindet KI-Agenten mit externen Werkzeugen. Ghidra ist ein kostenloser Disassembler und Dekompiler. Ergänzend nennt er radare2 und Kuna als Kommandozeilenwerkzeuge, die zwar weniger gut seien, aber für KI-Agenten schneller und leichter zu nutzen.",
+    "## Vorgehen",
+    "Der Agent bekommt die Binärdatei und ermittelt zunächst Typ, Plattform und Build. Danach dokumentiert er seine Erkenntnisse in Markdown-Dateien. Das dient dem Verständnis des Menschen, hilft dem Agenten nach einem Kontextverlust und verhindert, dass er sich im Kreis dreht. Anschließend analysiert der Agent Grundstruktur, Hauptfunktionen und Importe. Laut Autor kommen aktuelle KI-Modelle schon mit reinem Assembler-Code (x86 oder ARM) gut zurecht. Bei schwierigen Stellen helfen Breakpoints, Logging oder eine Sonde, die Daten aus dem laufenden Programm schreibt. Außerdem empfiehlt er, den Agenten gezielt auf andere Ansätze zu lenken, etwa Zeichenketten statt Querverweise zu verfolgen, und die Gedankengänge der Modelle zu lesen.",
+    "## Skills und Methode",
+    "Der Autor arbeitet mit wiederverwendbaren Agent-Skills. Dazu gehören ein Skill, der dem Agenten Rückfragen stellt, ein Ghidra-Skill mit Beschreibung der Werkzeuge sowie ein eigener Skill zur Hypothesen-Debugging-Methode. Dabei formuliert der Agent eine Hypothese, hält sie in einer CSV-Tabelle fest, entwirft ein Experiment, das sie eindeutig bestätigt oder widerlegt, und wiederholt den Zyklus. Das soll verhindern, dass der Agent planlos herumprobiert.",
+    "## Umsetzung",
+    "Für eigene Werkzeuge nutzt der Autor Python mit uv für Prototypen und Rust für fertige Hacks, weil der strenge Compiler dem Agenten schnelles Feedback zu Speicher- und Syntaxfehlern gibt.",
+    "## Genannte Ergebnisse",
+    "Laut Beitrag wurden unter anderem ein AlphaSmart NEO, Kommunikationsprotokolle mehrerer Geräte, zwei Sony-Alpha-Kameras, Firmware für Synthesizer (Arturia MiniFreak, Teenage Engineering OP-Z, Akai MPC), ein Xteink-X4-Lesegerät sowie ein alter HP-Drucker für macOS bearbeitet. Diese Angaben stammen vom Autor selbst und sind nicht unabhängig überprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "LLM assisted reverse engineering – Slow Chronicle",
+     "url": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering"
+    },
+    {
+     "titel": "Hacker-News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50553225"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer alte Software oder Geräte mit eigenen Tools erweitern möchte, kann den beschriebenen Ablauf mit Ghidra und einem KI-Agenten ausprobieren.",
+    "Wer Dateiformate oder Protokolle proprietärer Programme verstehen will, kann mit einem Logging-Ansatz beginnen, wie der Autor ihn beschreibt.",
+    "Wer mit KI-Agenten arbeitet, kann die Idee übernehmen, Zwischenergebnisse in Markdown-Dateien festzuhalten."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "ghidra + agent",
+    "zeilen": [
+     "> Binärdatei analysieren",
+     "✓ Typ, Plattform und Build ermittelt",
+     "● Notizen in MD-Dateien gespeichert",
+     "⚠ Agent dreht sich im Kreis",
+     "+ Hypothese in CSV eingetragen",
+     "- Hypothese verworfen"
+    ]
+   },
+   "tag": "Reverse Engineering",
+   "bereich": "Agenten",
+   "datum": "2026-01-01",
+   "quelle": "Hacker News",
+   "kennzahlen": [
+    {
+     "label": "Punkte auf Hacker News",
+     "wert": "296"
+    }
+   ],
+   "signal": "Ein Hacker beschreibt aus eigener Erfahrung, wie KI-Agenten mit Ghidra und einer Hypothesen-Methode Reverse Engineering beschleunigen. Die Aussagen sind Selbstberichte und nicht unabhängig geprüft.",
+   "link": "https://www.slowchronicle.com/posts/llm-assisted-reverse-engineering",
+   "linkLabel": "Zum Beitrag",
+   "id": "llm-gestutztes-reverse-engineering-ein-entwickler-beschreibt",
+   "hinzugefuegt": "2026-11-20T01:09:58Z"
+  },
+  {
+   "titel": "KI-Coding-Agenten: Mehr Code, aber der Review-Engpass wächst",
+   "kurz": "Eine Harvard-Arbeitspapier-Studie (Chen und Stratton, 718 Firmen) zeigt: Nach Einführung von KI-Coding-Agenten stieg die Codemenge um etwa 30 Prozent, abgeschlossene Arbeit aber nicht messbar, und die Code-Review dauerte 49 Prozent länger. Die Studie ist noch nicht peer-reviewed und betrifft Software, nicht Rechtsarbeit.",
+   "artikel": [
+    "Ingenieure in Firmen, die KI-Coding-Agenten eingeführt haben, schrieben laut einem Harvard-Arbeitspapier rund 30 Prozent mehr Code. Die fertig abgeschlossene Arbeit stieg dagegen nicht messbar. Gemessen wurden 725.938 Beschäftigte in 718 Unternehmen von Januar 2021 bis März 2026. Die Autoren sind die Doktoranden Fiona Chen und James Stratton.",
+    "## Datenbasis",
+    "Die Daten stammen teilweise vom Anbieter Jellyfish, der eine Analyseplattform für Engineering-Aktivität verkauft, und wurden mit LinkedIn-Beschäftigungsdaten von Revelio Labs verknüpft. Die Studie nutzt eine sogenannte Difference-in-Differences-Analyse, die Veränderungen bei früh und spät einführenden Firmen vergleicht. Die Einführungszeitpunkte hingen laut Autoren vor allem von Beschaffungsdauer ab, also Freigaben durch Einkauf, Recht und Sicherheit.",
+    "## Output und Review",
+    "Gemessen wurden abgeschlossene Jira-Aufgaben, die als fertig gelten, wenn ihr Code produktiv ausgeliefert ist. Dieser Wert stieg kaum; die Konfidenzintervalle schließen einen Anstieg über etwa 12 Prozent aus. Die Zeit von Pull Request bis Merge stieg um 49 Prozent, der Anteil formaler Änderungswünsche fast verdoppelte sich. Der Engpass liegt also in der Prüfung, nicht im Schreiben.",
+    "## Einordnung",
+    "Das Papier ist ein Job-Market-Paper ohne abgeschlossene Peer-Review. Untersucht wurde Software, keine Rechtsarbeit. Die Autoren vermuten, verbleibende versteckte Verzerrungen würden eher KI produktiver erscheinen lassen. Für Legal-AI-Käufer schlägt die Studie vor, neben Entwurfsmenge auch genehmigte Arbeitsprodukte, Überarbeitungsraten und Prüfzeit zu messen."
+   ],
+   "quellen": [
+    {
+     "titel": "Harvard researchers find AI coding agents shifted the bottleneck to code review (ComplexDiscovery)",
+     "url": "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50538303"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer KI-generierten Code im Team nutzt, sollte Prüfzeit und Überarbeitungsrate bewusst mitzählen.",
+    "Wer Tools bewertet, kann nach genehmigten Ergebnissen statt nach reiner Ausgabemenge fragen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Pro Arbeitnehmer und Monat (Studienangaben)",
+    "balken": [
+     {
+      "label": "Code-Zeilen",
+      "wert": 30,
+      "anzeige": "+30 %"
+     },
+     {
+      "label": "Abgeschlossene Aufgaben",
+      "wert": 3,
+      "anzeige": "+0,12 (nicht signifikant)"
+     },
+     {
+      "label": "Review-Dauer bis Merge",
+      "wert": 49,
+      "anzeige": "+49 %"
+     }
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "2026-10-13",
+   "kennzahlen": [
+    {
+     "label": "Mehr Code pro Arbeitnehmer",
+     "wert": "+30 %"
+    },
+    {
+     "label": "Zeit bis Merge",
+     "wert": "+49 % (3,45 Tage)"
+    },
+    {
+     "label": "Untersuchte Firmen",
+     "wert": "718"
+    }
+   ],
+   "signal": "Der Engpass verschiebt sich von der Programmierung zur Code-Prüfung. Die Studie ist ein unbegutachtetes Arbeitspapier und misst Software, nicht Recht.",
+   "link": "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/",
+   "linkLabel": "Zum Artikel",
+   "id": "ki-coding-agenten-mehr-code-aber-der-review-engpass-wachst",
+   "hinzugefuegt": "2026-11-20T01:09:58Z"
+  },
+  {
    "titel": "Microsoft MAI stellt sieben neue Modelle mit günstigem Preis-Leistungs-Verhältnis vor",
    "kurz": "Microsoft AI hat laut eigener Ankündigung eine Familie aus sieben Modellen veröffentlicht, die bei niedrigen Kosten hohe Qualität bieten sollen. Die Angaben zu Leistung und Preis stammen vom Hersteller und sind nicht unabhängig geprüft.",
    "artikel": [
@@ -16494,6 +16685,71 @@
  ],
  "projekte": [
   {
+   "titel": "mcp-for-blender-pro: KI-Assistent und MCP-Server für Blender",
+   "kurz": "Ein Open-Source-Addon für Blender, das einen KI-Assistenten mit Chatfenster, 21 Szenen-Werkzeugen und einem MCP-Server kombiniert. Laut Projektseite lässt es sich mit mehreren KI-Anbietern und lokalen Modellen nutzen.",
+   "artikel": [
+    "## Was das Projekt ist",
+    "Das Projekt mcp-for-blender-pro bringt einen KI-Assistenten direkt in Blender. Der Assistent kann die Szene untersuchen, Objekte erstellen, Materialien ändern, Assets suchen und mehrstufige Abläufe ausführen. Laut Projektseite richtet es sich an Künstler, technische Artists und Entwickler, die KI-Werkzeuge an Blender anbinden wollen.",
+    "## Chat, Werkzeuge und Modelle",
+    "Über eine Studio-Oberfläche lassen sich Chat, Szenenobjekte, Viewport-Schnappschüsse und eine Aufgabenliste nutzen. Unterstützt werden laut Projektseite OpenAI, Anthropic Claude, Google Gemini, OpenRouter, OpenCode Zen, Ollama sowie eigene Schnittstellen. Der Entwickler weist darauf hin, dass für Modelle Tool-Calling-Unterstützung nötig ist. Als MCP (Model Context Protocol) wird ein offener Standard bezeichnet, über den KI-Programme Werkzeuge anderer Software ansprechen können.",
+    "## Agententeam statt Einzelassistent",
+    "Für größere Aufgaben lässt sich eine Teamkette mit Managern, Workern und Prüfern einrichten. Laut Projektseite laufen Aufgaben nacheinander ab, damit Szenenänderungen geordnet bleiben. Eine blockierte Aufgabe erhält einen Korrekturversuch; scheitert auch die zweite Prüfung, stoppt der Ablauf.",
+    "## Installation und Kontrolle",
+    "Laut Projektseite wird die ZIP-Datei aus den Releases über die Erweiterungsverwaltung von Blender installiert. Das Release-Paket zielt auf Windows x64 und Blender 4.2 oder neuer. Änderungen lassen sich über Freigaben steuern und mit benannten Rückgängig-Schritten zurücknehmen. Die Projektseite betont zudem, dass die Python-Prüfung von Werkzeugen keine Sicherheitsumgebung ist. Lizenz laut Repository: MIT. Das Projekt ist unabhängig und nicht mit der Blender Foundation oder KI-Anbietern verbunden."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: bookwjitchieni1986/blender-ai-mcp-addon",
+     "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Mit Textbefehlen eine Szene prüfen, Objekte anlegen oder Materialien zuweisen lassen.",
+    "Eine Produktanzeige mit Sockel, Kamera und Lichtern per Prompt aufbauen und im Viewport kontrollieren.",
+    "Vor dem Import eines Assets aus Poly Haven oder Sketchfab fragen lassen und Lizenzen der Assets beachten."
+   ],
+   "ausprobieren": {
+    "prompt": "Inspect this scene and explain its object structure before making any changes.",
+    "tool": "mcp-for-blender-pro",
+    "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon"
+   },
+   "vorschau": {
+    "szene": "sandbox"
+   },
+   "tag": "Blender-Addon",
+   "macher": "bookwjitchieni1986 (GitHub-Nutzer)",
+   "branche": "3D / Blender-Werkzeuge",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "Blender 4.2+",
+    "MCP",
+    "OpenAI",
+    "Anthropic Claude",
+    "Google Gemini",
+    "Ollama",
+    "OpenCode"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "551 ★"
+    },
+    {
+     "label": "Werkzeuge im Addon (Herstellerangabe)",
+     "wert": "21"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    }
+   ],
+   "link": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
+   "linkLabel": "Zum Repository auf GitHub",
+   "id": "mcp-for-blender-pro-ki-assistent-und-mcp-server-fur-blender-1795137013",
+   "hinzugefuegt": "2026-11-20T01:09:58Z"
+  },
+  {
    "titel": "Boring Marketing Skills: 31 kostenlose Marketing-Skills für KI-Agenten",
    "kurz": "Ein MIT-lizenziertes Paket mit Marketing-Skills für KI-Agenten wie Claude Code, Codex und Cursor, das ohne kostenpflichtige Tools auskommt. Es deckt Recherche, Texte, SEO, KI-Suche, Anzeigen, E-Mail und Content ab.",
    "artikel": [
@@ -21388,7 +21644,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-19T19:00:33Z",
+  "letzterScan": "2026-11-20T01:09:58Z",
   "neueFunde": 4,
   "standAktualisiert": "2026-11-19T19:00:33Z"
  }
