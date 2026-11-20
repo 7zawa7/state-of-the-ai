@@ -4192,6 +4192,72 @@
  ],
  "radar": [
   {
+   "titel": "Coda-DaVinci: Videogenerierung über 3D-Proxies mit Agenten",
+   "kurz": "Ein Forschungsteam stellt Coda-DaVinci vor, ein agentenbasiertes Framework, das Videos mithilfe von vom Agenten erstellten 3D-Proxies steuert. Laut Paper verbessert es Befolgung von Anweisungen, Szenenkonsistenz und physikalische Plausibilität gegenüber den verglichenen Baselines.",
+   "artikel": [
+    "Code2Video steuert die Videoerzeugung über 3D-Proxies: vereinfachte dreidimensionale Modelle, die Struktur und Bewegung vorgeben. Offen war bisher, wie grob oder fein diese Proxies sein sollten und welche Prompts am besten dazu passen. Das Team hat dazu kontrollierte Experimente und eine verblindete menschliche Bewertung durchgeführt.",
+    "## Zentrale Erkenntnisse",
+    "Die Ergebnisse zeigen aufgabenabhängige Abwägungen: Grobe Proxies begünstigen natürliche Bewegung, mittelfeine Proxies sorgen eher für Konsistenz. Physiksimulation und Prompts, die am Proxy ausgerichtet sind, verbessern die durchschnittliche Qualität zusätzlich.",
+    "## Coda-DaVinci",
+    "Auf Basis dieser Befunde entstand Coda-DaVinci. Das Framework wählt je nach Aufgabe zwischen proxygestützter und direkter Generierung, passt die Modellierungsfeinheit jedes Objekts an und koppelt Simulation mit proxybasierten Prompts. Ein Multi-Agenten-Aufbau bewahrt Szenen-Assets und prüft Korrekturen per visueller Kontrolle und unabhängiger Zweitprüfung.",
+    "## Ergebnisse und Grenzen",
+    "Laut den Autoren erreicht das System die beste Befolgung von Anweisungen auf dem Benchmark VTR und die beste Szenenkonsistenz auf R2M. Die physikalische Plausibilität liegt über der direkten Generierung, die visuelle Realität über den verglichenen Code2Video-Baselines. Bei langen Videos zeigen sich Fortschritte im Ereignisablauf, aber Schwächen bei der Stabilität von Übergängen und bei der Einhaltung der Szenenvorgaben."
+   ],
+   "quellen": [
+    {
+     "titel": "Paper page - Coda-DaVinci: Reimagining Video Generation with Code2Video",
+     "url": "https://huggingface.co/papers/2611.26595"
+    },
+    {
+     "titel": "Projektseite Coda-DaVinci",
+     "url": "https://coda-davinci.github.io/"
+    },
+    {
+     "titel": "GitHub-Repository FrankYang-17/Coda",
+     "url": "https://github.com/FrankYang-17/Coda"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Wer Videogenerierung nutzt, kann die Erkenntnis übernehmen, dass grobe Proxies natürliche Bewegung und mittlere Proxies Konsistenz begünstigen.",
+    "Entwickler können das öffentliche Repository prüfen, um den Ansatz nachzuvollziehen.",
+    "Kreative können Prompts stärker an der Struktur des Proxies ausrichten, wie es die Studie nahelegt."
+   ],
+   "quelle": "Hugging Face",
+   "datum": "2026-11-19",
+   "kennzahlen": [
+    {
+     "label": "Upvotes auf Hugging Face",
+     "wert": "24"
+    },
+    {
+     "label": "GitHub-Sterne",
+     "wert": "5"
+    }
+   ],
+   "signal": "Das Paper beschreibt einen Ansatz, bei dem Agenten 3D-Proxies erstellen, um Struktur und Dynamik von Videos explizit zu steuern. Die Ergebnisse stammen laut Quelle aus Experimenten und einer verblindeten Bewertung; unabhängige Überprüfung liegt nicht vor.",
+   "link": "https://huggingface.co/papers/2611.26595",
+   "linkLabel": "Paper auf Hugging Face",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Ausrichtung auf Gesamtqualität (Herstellerangabe aus Paper)",
+    "balken": [
+     {
+      "label": "Direkte Generierung",
+      "wert": 1,
+      "anzeige": "Basis"
+     },
+     {
+      "label": "Coda-DaVinci",
+      "wert": 2,
+      "anzeige": "höher laut Paper"
+     }
+    ]
+   },
+   "id": "coda-davinci-videogenerierung-uber-3d-proxies-mit-agenten",
+   "hinzugefuegt": "2026-11-20T08:37:19Z"
+  },
+  {
    "titel": "Google Genie 4: Interaktive Welten mit Echtzeit-Änderungen und Audio",
    "kurz": "Google DeepMind rollt Genie 4 zusammen mit einer neuen Project-Genie-Version für zahlende Google-AI-Ultra-Kunden aus. Nutzer können laufende Welten per Textprompt verändern und erhalten dazu Audio in Echtzeit.",
    "artikel": [
@@ -16685,6 +16751,64 @@
  ],
  "projekte": [
   {
+   "titel": "KPMG testet über 100 KI-Agenten in Prüfung eines FTSE-250-Unternehmens",
+   "kurz": "KPMG UK hat im Projekt „Project Exponential“ mehr als 100 KI-Agenten bei der Prüfung eines börsennotierten Unternehmens eingesetzt. Laut KPMG stellten die Agenten teils tiefere Nachfragen als das menschliche Prüfteam.",
+   "artikel": [
+    "KPMG UK hat ein Experiment mit über 100 KI-Agenten durchgeführt. Die Agenten prüften die Abschlüsse eines nicht namentlich genannten FTSE-250-Unternehmens. Laut Financial Times trug das Projekt den Codenamen „Project Exponential“. Die Agenten arbeiteten neben einem klassischen Prüfteam und übernahmen Aufgaben über den gesamten Prüfprozess hinweg, nicht nur einzelne Verwaltungsarbeiten.",
+    "## Von Assistenz zu eigenständiger Prüfung",
+    "Die Agenten sammelten Informationen, analysierten und dokumentierten Daten, formulierten Entwürfe für Schlussfolgerungen und Beobachtungen und schlugen nächste Schritte vor. Sie stimmten sich untereinander ab und teilten Zuständigkeiten untereinander auf. Entwickelt wurde die Technologie in etwa vier Monaten.",
+    "KPMG-Prüfungsleiterin Cath Burnet sagte laut Bericht, die Technologie sei in mehreren Fällen deutlich tiefer in Probleme eingestiegen als das reguläre Team. Sie habe Bereiche markiert, die weiter untersucht werden müssten, und Fragen gestellt, die menschliche Prüfer nicht unbedingt aufgeworfen hatten.",
+    "## Grenzen des Experiments",
+    "KPMG betont, dass es sich nicht um eine formell genehmigte gesetzliche Prüfung handelte. Ein Prüfungspartner zeichnete das Experiment zwar ab, die Ergebnisse dienten aber nicht als Grundlage für die Testierung der Bilanz. Während des Versuchs musste ein Prüfer eingreifen, weil ein Agent gesetzliche Anforderungen nicht korrekt mit den Unterlagen des Unternehmens abglich. Zudem fehlt vielen Unternehmen die saubere, strukturierte Datenbasis, die Agenten benötigen.",
+    "KPMG plant, die Initiative auf bis zu 20 größere Prüfungen auszuweiten. Die Technologie gilt laut Unternehmen jedoch noch nicht als ausgereift genug, um tausende Aufträge abzudecken.",
+    "## Auswirkungen auf die Branche",
+    "Klassische Prüfungen stützen sich auf große Teams junger Prüfer, die detaillierte, wiederkehrende Arbeit leisten. KI-Agenten könnten Datenerfassung, Analyse und Dokumentation großteils automatisieren, sodass erfahrene Fachleute sich auf komplexe Urteile konzentrieren. Ob Kostenersparnisse an Mandanten weitergegeben werden, ist offen; KPMG hat laut Bericht nicht bestätigt, ob niedrigere Prüfungshonorare folgen.",
+    "## Regulierung und menschliche Verantwortung",
+    "Die britische Financial Reporting Council warnt, KI dürfe die Unabhängigkeit, Integrität und professionelle Skepsis von Prüfern nicht untergraben. Bedenken gibt es auch zu Datensicherheit, Überabhängigkeit von automatisierten Ergebnissen und möglichen fehlerhaften oder erfundenen Angaben der KI. Die Verantwortung für das Prüfurteil bleibt laut Bericht beim Menschen."
+   ],
+   "quellen": [
+    {
+     "titel": "AI Agents Ask Better Questions Than KPMG Accountants (European Business Magazine)",
+     "url": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50547777"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer mit Buchhaltung oder Prüfung zu tun hat, kann verfolgen, wie KI-Agenten Arbeitsschritte übernehmen und wo menschliche Kontrolle nötig bleibt.",
+    "Unternehmen mit sauber strukturierten Finanzdaten können prüfen, ob sich ihre Unterlagen für den Einsatz von KI-Agenten eignen."
+   ],
+   "macher": "KPMG UK",
+   "branche": "Wirtschaftsprüfung / Professional Services",
+   "jahr": 2026,
+   "tools": [],
+   "kennzahlen": [
+    {
+     "label": "Eingesetzte KI-Agenten",
+     "wert": "über 100"
+    },
+    {
+     "label": "Entwicklungsdauer",
+     "wert": "ca. 4 Monate"
+    },
+    {
+     "label": "geplante Ausweitung",
+     "wert": "bis zu 20 größere Prüfungen"
+    }
+   ],
+   "link": "https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/",
+   "linkLabel": "Originalartikel lesen",
+   "vorschau": {
+    "szene": "agent",
+    "titel": "Project Exponential"
+   },
+   "id": "kpmg-testet-uber-100-ki-agenten-in-prufung-eines-ftse-250-un",
+   "hinzugefuegt": "2026-11-20T08:37:19Z"
+  },
+  {
    "titel": "mcp-for-blender-pro: KI-Assistent und MCP-Server für Blender",
    "kurz": "Ein Open-Source-Addon für Blender, das einen KI-Assistenten mit Chatfenster, 21 Szenen-Werkzeugen und einem MCP-Server kombiniert. Laut Projektseite lässt es sich mit mehreren KI-Anbietern und lokalen Modellen nutzen.",
    "artikel": [
@@ -21644,8 +21768,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-20T01:09:58Z",
-  "neueFunde": 4,
+  "letzterScan": "2026-11-20T08:37:19Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-19T19:00:33Z"
  }
 }
