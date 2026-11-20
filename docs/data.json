@@ -1,6 +1,67 @@
 {
  "news": [
   {
+   "titel": "Inkling 2 Mini: Kleines Open-Weights-Modell mit gelooptem Transformer für Laptops",
+   "kurz": "Thinking Machines Lab hat Inkling 2 Mini veröffentlicht, ein Open-Weights-Modell mit rund 20 GB Speicherbedarf, das auf lokalen Geräten laufen soll. Laut Herstellerangabe führt es unter den Open-Weights-Modellen unter 100B Parametern mehrere Agenten-Coding-Benchmarks an.",
+   "artikel": [
+    "Das Team Thinking Machines Lab hat mit Inkling 2 Mini ein kompaktes Sprachmodell vorgestellt, das laut eigener Aussage klein genug ist, um auf einem Laptop zu laufen. Die Gewichte sind als Open Weights verfügbar und können über die Plattform Tinker sowie auf Hugging Face genutzt werden.",
+    "## Gelooptes Transformer-Design",
+    "Das Modell ist ein sogenannter gelooptes Transformer (Looped Transformer): Die mittleren Schichten werden pro Token dreimal durchlaufen. Das soll dem Modell erlauben, mehr Schlussfolgerungen zu ziehen und mit weniger Tokens zur richtigen Antwort zu kommen. Laut Hersteller hilft das besonders bei agentischem Programmieren. Das Modell ist außerdem ein Mixture-of-Experts-Modell mit 26,4 Mrd. Parametern insgesamt, von denen 3,4 Mrd. pro Token aktiv sind.",
+    "## Herstellerangaben zu Benchmarks",
+    "Thinking Machines gibt an, Inkling 2 Mini führe alle Open-Weights-Modelle mit weniger als 100 Mrd. Parametern bei Benchmarks wie DeepSWE v1.1 (48,2 %) und Vals Index v2.2 (46,5 %) an. Diese Werte stammen vom Hersteller; die Auswertungsbedingungen unterscheiden sich je nach Modell. Bei Wissensfragen liegt das Modell laut Angabe im Bereich vergleichbar großer Modelle, da Faktenwissen vor allem von der Parameterzahl abhängt.",
+    "## Überwachbarkeit der Schlussfolgerungen",
+    "Das Team untersuchte zusätzlich, wie sich Looping auf die Überwachbarkeit auswirkt, also darauf, ob man die Gedankenkette (Chain of Thought) des Modells lesen und verstehen kann. Mit mehr Schleifen wurde die Gedankenkette kürzer, blieb aber laut Angabe lesbar. Eine Tendenz zu mehr agentischer Sabotage zeigte sich nicht.",
+    "## Lauffähigkeit auf lokalen Geräten",
+    "Das Gesamtgewicht liegt laut Hersteller bei etwa 20 GB. Demonstriert wurde ein Lauf offline auf einem MacBook Pro mit M5 Pro, auf dem das Modell in wenigen Minuten einen spielbaren Flugsimulator erstellt haben soll. Die Angaben zur Geschwindigkeit sind theoretische Obergrenzen, keine gemessenen Werte."
+   ],
+   "quellen": [
+    {
+     "titel": "Introducing Inkling 2 Mini – Thinking Machines Lab",
+     "url": "https://thinkingmachines.ai/news/inkling-2-mini/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50581260"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Das Modell lokal auf einem leistungsstarken Laptop oder Desktop ausprobieren, sofern genug Arbeitsspeicher vorhanden ist.",
+    "Über Tinker für Inferenz oder eigene Anpassungen testen, ohne eigene Infrastruktur aufzubauen.",
+    "Die Gewichte von Hugging Face herunterladen und für eigene Coding-Experimente nutzen."
+   ],
+   "ausprobieren": {
+    "prompt": "Baue mir eine einfache Flugsimulator-Webseite in HTML und JavaScript, die im Browser läuft.",
+    "tool": "Tinker",
+    "url": "https://thinkingmachines.ai/"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "DeepSWE v1.1 – gelöste Aufgaben (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Gemma 4 31B",
+      "wert": 4.4,
+      "anzeige": "4,4 %"
+     },
+     {
+      "label": "Qwen3.8-27B",
+      "wert": 42.2,
+      "anzeige": "42,2 %"
+     },
+     {
+      "label": "Inkling 2 Mini",
+      "wert": 48.2,
+      "anzeige": "48,2 %"
+     }
+    ]
+   },
+   "bereich": "Text",
+   "datum": "2026-11-20",
+   "id": "inkling-2-mini-kleines-open-weights-modell-mit-gelooptem-tra",
+   "hinzugefuegt": "2026-11-20T23:11:04Z"
+  },
+  {
    "titel": "Nvidia will Inception für mindestens 500 Millionen Dollar übernehmen",
    "kurz": "Nvidia steht laut The Information kurz vor der Übernahme des zwei Jahre alten Startups Inception für mindestens 500 Millionen Dollar. Inception entwickelt Sprachmodelle auf Basis von Diffusionsverfahren.",
    "artikel": [
@@ -4223,6 +4284,123 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Sprachmodelle können ihre eigenen Gewichte umschreiben",
+   "kurz": "Ein arXiv-Paper beschreibt ein Verfahren, bei dem ein offenes 27B-Sprachmodell seine eigenen Gewichte ohne Gradienten und ohne Training verbessert. Laut Autoren ist das ein möglicher Schritt Richtung rekursiver Selbstverbesserung.",
+   "artikel": [
+    "Ein Sprachmodell wird normalerweise einmal trainiert und danach eingefroren. Verbessern lässt es sich bisher nur durch einen weiteren Trainingslauf, durch einen Prompt, ein Harness (also ein Rahmenprogramm um das Modell) oder zusätzliche Rechenzeit bei der Antwort. Ein Paper auf arXiv beschreibt nun einen dritten Weg, das sogenannte Self-Rewriting.",
+    "## Was die Autoren gezeigt haben",
+    "Nach Angaben der Autoren schreibt ein Modell seine Gewichte selbst um, also die Zahlenwerte, aus denen es besteht. Dafür nutzt es sein eigenes Schlussfolgern. Die Autoren nennen ein offenes 27B-Modell als Beispiel. Es erhält seine Gewichte, seine bewerteten Antworten und die Möglichkeit, sich selbst auszuführen. Anschließend diagnostiziert es seine Fehler und passt die Gewichte entsprechend an.",
+    "Laut Paper erreicht das Modell auf ihm unbekannten Aufgaben 6,6 Punkte mehr Genauigkeit. Über acht aufeinanderfolgende Sitzungen soll die Genauigkeit laut den Autoren nur steigen. Außerdem kann es eine beschädigte Kopie seiner selbst reparieren und bringt sie auf über 80 Prozent der ursprünglichen Genauigkeit bei Bildaufgaben, ohne das Original-Gewicht gesehen zu haben.",
+    "## Einordnung",
+    "Die Autoren schreiben, die Fähigkeit tauche erst bei größeren Modellen auf. In einer Modellfamilie veränderten kleinere Modelle sich nicht sinnvoll oder machten sich kaputt, nur das größte verbesserte sich selbst. Im Unterschied zu Test-Time-Scaling schreibt Self-Rewriting den Gewinn in die Gewichte, sodass pro Antwort keine Zusatzkosten entstehen. Im Unterschied zum Training laufen nur Vorwärtsdurchläufe, wie beim normalen Betrieb.",
+    "Die Autoren halten das für einen notwendigen Schritt Richtung rekursiver Selbstverbesserung. Das ist eine Einschätzung der Autoren und noch keine unabhängig geprüfte Tatsache. Die Ergebnisse stammen aus einem einzelnen Preprint, und ob sie sich außerhalb des Papers reproduzieren lassen, ist nach dem vorliegenden Material offen. Die Diskussion auf Hacker News hatte zum Zeitpunkt der Quelle 312 Punkte."
+   ],
+   "quellen": [
+    {
+     "titel": "Language Models Can Rewrite Their Own Weights (arXiv:2611.21885)",
+     "url": "https://arxiv.org/abs/2611.21885"
+    },
+    {
+     "titel": "HN-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50577265"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Das Paper lesen, um das Verfahren des Self-Rewriting im Original nachzuvollziehen.",
+    "Die HN-Diskussion durchsehen, um Einwände und Rückfragen aus der Community zu finden.",
+    "Beobachten, ob unabhängige Gruppen die Ergebnisse reproduzieren."
+   ],
+   "quelle": "arXiv",
+   "datum": "2026-11-16",
+   "kennzahlen": [
+    {
+     "label": "Genauigkeitsgewinn auf unbekannten Aufgaben",
+     "wert": "6,6 Punkte"
+    },
+    {
+     "label": "Wiederherstellung beschädigter Kopie (Bildaufgaben)",
+     "wert": "über 80 % der Originalgenauigkeit"
+    },
+    {
+     "label": "Modellgröße (offenes Modell)",
+     "wert": "27B"
+    },
+    {
+     "label": "Aufeinanderfolgende Sitzungen mit steigender Genauigkeit",
+     "wert": "8"
+    }
+   ],
+   "signal": "Laut Autoren ein möglicher Schritt Richtung rekursiver Selbstverbesserung. Die Ergebnisse sind Angaben aus einem Preprint und noch nicht unabhängig geprüft.",
+   "link": "https://arxiv.org/abs/2611.21885",
+   "linkLabel": "Paper auf arXiv",
+   "id": "sprachmodelle-konnen-ihre-eigenen-gewichte-umschreiben",
+   "hinzugefuegt": "2026-11-20T23:11:04Z"
+  },
+  {
+   "titel": "OpenAI erschwert das Auslesen interner Denkprozesse seiner neuesten Modelle",
+   "kurz": "OpenAI hat laut eigenen Angaben die Schutzmaßnahmen gegen das Extrahieren interner Begründungsschritte bei GPT-6.2 Astra und GPT-6.2 Sol deutlich verstärkt. Gleichzeitig sperrt das Unternehmen wöchentlich Konten, die an koordinierten Destillationskampagnen beteiligt sein sollen.",
+   "artikel": [
+    "Laut einem Bericht von The Decoder hat OpenAI die Sicherheitsvorkehrungen gegen das Auslesen interner Argumentationsschritte, also des sogenannten Reasoning, bei GPT-6.2 Astra und GPT-6.2 Sol deutlich verschärft. Die Angaben stammen von OpenAI selbst und beziehen sich auf interne automatisierte Tests.",
+    "## Die Testergebnisse",
+    "Bei Angriffen, die geschützte Begründungen aus früheren Anfragen herausziehen sollten, sank die Erfolgsquote laut OpenAI von 54,0 Prozent bei GPT-6 Astra auf 0,2 Prozent bei GPT-6.2 Astra. Bei aktiven Anfragen fiel sie von 22,9 auf 0,9 Prozent. Diese Werte sind Herstellerangaben. Der Test nutzte adaptive Black-Box-Angriffe, die Ergebnisse wurden über sechs Angreifermodelle gemittelt. Ein niedrigerer Wert bedeutet dabei einen besseren Schutz.",
+    "## Zwei Schutzebenen",
+    "Auf Ebene einzelner Anfragen kombiniert OpenAI gezieltes Training mit Eingabe- und Ausgabefiltern für Nachrichten und Tool-Aufrufe. Zusätzlich sperren API-Blockaden ältere Modelle, damit diese die geschützten Begründungen nicht lesen können. Gegen koordinierte Kampagnen sperrt OpenAI nach eigenen Angaben wöchentlich tausende bis zehntausende Konten.",
+    "## Einordnung",
+    "Der Artikel verweist auch auf Anthropic, das ebenfalls gegen systematische Destillationsangriffe vorgeht und nach eigenen Angaben zehntausende Konten gesperrt hat. Laut Bericht soll Anthropic in 90 bis 99 Prozent der Fälle erfolgreich sein; diese Zahl wird als Berichtsangabe gekennzeichnet. Anthropic fordert zudem eine abgestimmte Reaktion von Industrie und Politik. OpenAI kündigte außerdem an, ausgewählte Verbesserungen auch auf GPT-6 Astra zu übertragen."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI makes it much harder for attackers to extract how its latest AI models think",
+     "url": "https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wer selbst KI-Dienste betreibt, kann prüfen, ob Modelle Begründungen ungeschützt ausgeben und welche Filter nötig sind.",
+    "Entwickler können Sperren und Missbrauchsmuster als Beispiel für den Umgang mit API-Missbrauch nachvollziehen.",
+    "Privatpersonen können bei KI-Diensten auf Nutzungsbedingungen achten, da Konten bei koordiniertem Missbrauch gesperrt werden."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Erfolgsquote von Extraktionsangriffen (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Geschützte Begründung, frühere Anfrage (GPT-6 Astra)",
+      "wert": 54.0,
+      "anzeige": "54,0 %"
+     },
+     {
+      "label": "Geschützte Begründung, frühere Anfrage (GPT-6.2 Astra)",
+      "wert": 0.2,
+      "anzeige": "0,2 %"
+     }
+    ]
+   },
+   "radar": true,
+   "quelle": "Fachpresse",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Erfolgsquote frühere Anfrage (GPT-6 Astra → GPT-6.2 Astra)",
+     "wert": "54,0 % → 0,2 %"
+    },
+    {
+     "label": "Erfolgsquote aktive Anfrage (GPT-6 Astra → GPT-6.2 Astra)",
+     "wert": "22,9 % → 0,9 %"
+    },
+    {
+     "label": "Gesperrte Konten pro Woche (Herstellerangabe)",
+     "wert": "tausende bis zehntausende"
+    }
+   ],
+   "signal": "OpenAI verschärft den Schutz von Modell-Denkprozessen deutlich und setzt auf Kontosperren gegen Destillationskampagnen.",
+   "link": "https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/",
+   "linkLabel": "Zum Artikel bei The Decoder",
+   "id": "openai-erschwert-das-auslesen-interner-denkprozesse-seiner-n",
+   "hinzugefuegt": "2026-11-20T23:11:04Z"
+  },
   {
    "titel": "Frostbite: CPU-Architektur, die laut Architect Labs von einer KI entworfen und verifiziert wurde",
    "kurz": "Architect Labs stellt Frostbite vor, eine nach Angaben des Unternehmens vollständig von KI-Systemen entworfene und verifizierte CPU mit neuem Befehlssatz, der auf sogenannten Interaction Nets basiert. Laut Herstellerangabe liegt sie bei 4,59-facher Performance pro Watt gegenüber einem Dual-Issue-In-Order-Kern.",
@@ -21900,7 +22078,7 @@
    "id": "text"
   },
   {
-   "maximum": "Bis zu 15 Sekunden pro Clip mit Ton und Lippensynchronität. Längere Filme entstehen im Schnitt.",
+   "maximum": "Bis zu 15 Sekunden pro Clip mit Ton und Lippensynchronität. Längere Filme entstehen im Schnitt. Google Genie 4 erzeugt interaktive Welten mit Echtzeit-Änderungen und Audio (nur für zahlende Ultra-Kunden).",
    "name": "Video",
    "reihenfolge": 1,
    "status": "mid",
@@ -21916,8 +22094,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-20T17:20:31Z",
+  "letzterScan": "2026-11-20T23:11:04Z",
   "neueFunde": 3,
-  "standAktualisiert": "2026-11-19T19:00:33Z"
+  "standAktualisiert": "2026-11-20T23:11:04Z"
  }
 }
