@@ -1,6 +1,48 @@
 {
  "news": [
   {
+   "titel": "Anthropic meldet Claude-Beweis der Riemann-Hypothese – Stanford legt menschlichen Konkurrenzentwurf vor",
+   "kurz": "Anthropic-Mathematiker Levent Alpöge sagt, er habe mit Claude einen Beweis der Riemann-Hypothese gefunden, der in Lean formalisiert ist. Wenige Stunden später veröffentlichte ein Stanford-Team einen unabhängigen, rein menschlichen Entwurf; die Fachwelt prüft nun beide.",
+   "artikel": [
+    "Der Anthropic-Mathematiker Levent Alpöge erklärte, er habe zusammen mit dem KI-Modell Claude einen Beweis für die Riemann-Hypothese gefunden. Sie gilt als eines der bekanntesten offenen Probleme der Mathematik und ist seit 1859 unbewiesen. Alpöge veröffentlichte Beweis und Computercode auf seiner Website. Laut Herstellerangabe bzw. seiner eigenen Darstellung umfasst der Beweis, ausgedruckt, über 250.000 Seiten.",
+    "Nach Alpöges Angaben geht seine Methode über die ursprüngliche Frage hinaus und löst auch die Verallgemeinerte Riemann-Hypothese (GRH). Diese erweitert die Aussage auf eine große Familie verwandter Gleichungen. Die Riemann-Hypothese betrifft die Verteilung der Primzahlen.",
+    "## Lean als digitaler Prüfer",
+    "Der Beweis wurde in der Programmiersprache Lean formuliert. Lean prüft Schritt für Schritt, ob jede logische Folgerung aus den Grundregeln der Mathematik folgt. Ein Restrisiko bleibt, falls die Ausgangsfrage beim Übertragen in Code falsch kodiert wurde. Laut Scientific American sollte sich das aber mit überschaubarem Aufwand prüfen lassen. Alpöge veröffentlichte den Beweis nur in Lean, aufgeteilt in 14 Datenpakete.",
+    "## Stanford legt einen menschlichen Entwurf nach",
+    "Kurz nach Alpöges Ankündigung veröffentlichte der Stanford-Professor und AMS-Präsident Ravi Vakil in seinem Blog einen unabhängigen Entwurf der Verallgemeinerten Riemann-Hypothese. Verfasst hat ihn der Mathematiker Alessandro Masullo. Vakil schrieb, der Beweis sei vollständig menschlich, ohne KI. Der Zahlentheoretiker Brian Conrad habe die Arbeit seit Monaten begleitet. Eigentlich war eine weitere Verfeinerung in Stanford geplant, doch die KI-Ankündigung zwang zur früheren Veröffentlichung.",
+    "Acht Stunden später aktualisierte Vakil seinen Beitrag: Mehrere Personen hätten Probleme im vorgeschlagenen Beweis gemeldet, die teilweise mithilfe verschiedener KI-Modelle gefunden worden seien. Vakil betonte, alle Fragen müssten zur Zufriedenheit der Fachgemeinschaft geklärt sein, bevor der Beweis als gültig gelte.",
+    "## Offene Fragen",
+    "Beide Ansätze haben unterschiedliche Stärken: Masullos Beweis wurde über Monate geprüft, Alpöges Beweis ist maschinell verifiziert. Alpöge räumte ein, dass Claude ihm in manchen Teilgebieten weit voraus war und er den umgebenden Stoff noch nicht vollständig beherrsche. Er plant eine für Menschen lesbare, kürzere Fassung in den kommenden Monaten.",
+    "Die Ankündigung fiel einen Tag nach dem großen Börsengang von Anthropic. Alpöge bezeichnete das Timing als sehr ungünstig, wies aber den Vorwurf eines PR-Stunts zurück. Bereits 2026 hatte Claude laut dem Bericht mehrere offene Mathematikprobleme gelöst, darunter die Jacobi-Vermutung; ob sich das bestätigt, bleibt abzuwarten."
+   ],
+   "quellen": [
+    {
+     "titel": "Hours after Anthropic claims a Claude proof of the Riemann hypothesis, Stanford releases an all-human competing draft – The Decoder",
+     "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Verfolge die Prüfung der beiden Beweise, die in den kommenden Wochen in der Fachwelt stattfinden.",
+    "Wenn du selbst Mathematik lernst, schau dir an, wie Lean Beweise maschinell auf Fehler prüft."
+   ],
+   "bereich": "Text",
+   "datum": "2026-01-01",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Beweisumfang laut Alpöge (Seiten, ausgedruckt)",
+    "balken": [
+     {
+      "label": "Claude-Beweis",
+      "wert": 250000,
+      "anzeige": "über 250.000 Seiten"
+     }
+    ]
+   },
+   "id": "anthropic-meldet-claude-beweis-der-riemann-hypothese-stanfor",
+   "hinzugefuegt": "2026-11-21T23:57:21Z"
+  },
+  {
    "titel": "Buddhistisches Kloster Maple: Vorwürfe über Kult-Strukturen im Silicon Valley",
    "kurz": "Das Vermonter Kloster Maple wirbt bei Tech-Beschäftigten um spirituelle Autorität und soll Atemaufnahmen zum Training einer KI nutzen, die auf seinem Gründer basiert. Ehemalige Mitglieder berichten von Manipulation und psychischen Zusammenbrüchen; die Leitung bestreitet die meisten Vorwürfe.",
    "artikel": [
@@ -4393,6 +4435,97 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Inkling 2 Mini: Offenes Modell denkt in Schleifen und läuft auf dem Laptop",
+   "kurz": "Thinking Machines hat Inkling 2 Mini veröffentlicht, ein offenes Modell, das bestimmte Layer pro Token mehrfach durchläuft. Laut Hersteller erreicht es bei Artificial Analysis gleichauf mit Qwen3.8 27B, bei rund sechsfach geringeren Kosten.",
+   "artikel": [
+    "## Schleifen statt mehr Text",
+    "Thinking Machines hat Inkling 2 Mini vorgestellt. Das Modell ist ein sogenannter Looped Transformer: Es führt bestimmte Schichten (Layer) für jedes Token mehrfach aus. Konkret laufen 12 seiner 24 Layer dreimal hintereinander. Ein Token ist dabei ein kleiner Textabschnitt, mit dem das Modell rechnet.",
+    "Laut Hersteller kann das Modell dadurch intern länger nachdenken, ohne mehr Text zu erzeugen. Es soll so mit weniger Tokens zur richtigen Antwort kommen. Diese Aussagen stammen von Thinking Machines und sind nicht unabhängig geprüft.",
+    "## Eckdaten",
+    "Das Mixture-of-Experts-Modell (ein Modell, das pro Durchlauf nur einen Teil seiner Experten-Teilnetze nutzt) hat laut Anbieter 26,4 Milliarden Parameter, davon 5,4 Milliarden aktiv pro Token. Es verarbeitet Text und Bilder, hat ein Kontextfenster von 1 Million Tokens und steht unter der Apache-2.0-Lizenz.",
+    "## Leistung laut Angaben",
+    "Der Hersteller gibt an, dass Inkling 2 Mini bei agentischen Programmieraufgaben alle offenen Modelle unter 100 Milliarden Parametern anführt, mit 48,2 Prozent bei DeepSWE v1.1 und 46,5 Prozent beim Vals Index v2.2. Der Intelligence Index von Artificial Analysis vergibt 20 Punkte und setzt das Modell damit gleichauf mit Qwen3.8 27B, bei laut Quelle etwa sechsfach geringeren Kosten und viermal höherer Geschwindigkeit.",
+    "## Lokal nutzbar",
+    "Das Modell läuft laut Angaben auf Macs mit mindestens 32 GB Speicher und auf Nvidias DGX Spark. Die Gewichte sowie eine Forschungsversion mit variabler Schleifenzahl gibt es auf Hugging Face. Ausprobieren lässt es sich im Tinker Playground."
+   ],
+   "quellen": [
+    {
+     "titel": "The Decoder: New open model Inkling 2 Mini thinks in loops to solve problems with fewer words and still runs on a laptop",
+     "url": "https://the-decoder.com/new-open-model-inkling-2-mini-thinks-in-loops-to-solve-problems-with-fewer-words-and-still-runs-on-a-laptop/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Lokal auf einem Mac mit mindestens 32 GB Speicher testen, sofern die Gewichte von Hugging Face geladen werden können.",
+    "Im Tinker Playground ausprobieren, ohne eigene Installation.",
+    "Die Leistungsangaben mit eigenen Aufgaben vergleichen, bevor man sich darauf verlässt."
+   ],
+   "radar": true,
+   "quelle": "Fachpresse",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Parameter gesamt (Hersteller)",
+     "wert": "26,4 Mrd."
+    },
+    {
+     "label": "Aktive Parameter pro Token (Hersteller)",
+     "wert": "5,4 Mrd."
+    },
+    {
+     "label": "Kontextfenster (Hersteller)",
+     "wert": "1 Mio. Tokens"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    },
+    {
+     "label": "Intelligence Index (Artificial Analysis)",
+     "wert": "20 Punkte"
+    },
+    {
+     "label": "DeepSWE v1.1 (Hersteller)",
+     "wert": "48,2 %"
+    },
+    {
+     "label": "Vals Index v2.2 (Hersteller)",
+     "wert": "46,5 %"
+    }
+   ],
+   "signal": "Ein offenes Modell mit wenigen aktiven Parametern soll lokal lauffähig sein und bei Artificial Analysis mit deutlich größeren Modellen gleichziehen. Die Werte stammen größtenteils vom Hersteller bzw. aus der Quelle und sind noch nicht unabhängig überprüft.",
+   "link": "https://the-decoder.com/new-open-model-inkling-2-mini-thinks-in-loops-to-solve-problems-with-fewer-words-and-still-runs-on-a-laptop/",
+   "linkLabel": "Originalartikel bei The Decoder",
+   "ausprobieren": {
+    "prompt": "Erkläre in drei Sätzen, was ein Looped Transformer ist.",
+    "tool": "Tinker Playground",
+    "url": "https://thinkingmachines.ai"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Intelligence Index (Artificial Analysis)",
+    "balken": [
+     {
+      "label": "Inkling 2 Mini",
+      "wert": 20,
+      "anzeige": "20 Punkte"
+     },
+     {
+      "label": "Qwen3.8 27B",
+      "wert": 20,
+      "anzeige": "20 Punkte"
+     },
+     {
+      "label": "Nanbeige4.3-33B",
+      "wert": 20,
+      "anzeige": "20 Punkte"
+     }
+    ]
+   },
+   "id": "inkling-2-mini-offenes-modell-denkt-in-schleifen-und-lauft-a",
+   "hinzugefuegt": "2026-11-21T23:57:21Z"
+  },
   {
    "titel": "Nvidia-Forscher: Riesige Kontextfenster sind eine Sackgasse",
    "kurz": "Ein Forschungsteam von Nvidia hält es für oft unnötig, Sprachmodelle mit vollen Kontextfenstern arbeiten zu lassen. Periodische Zusammenfassungen und gezielte Suchen lieferten in Tests etwa gleich gute Ergebnisse zu einem Bruchteil der Kosten.",
@@ -22330,8 +22463,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-21T19:41:43Z",
+  "letzterScan": "2026-11-21T23:57:21Z",
   "neueFunde": 2,
-  "standAktualisiert": "2026-11-20T23:11:04Z"
+  "standAktualisiert": "2026-11-21T23:57:21Z"
  }
 }
