@@ -1,6 +1,77 @@
 {
  "news": [
   {
+   "titel": "Signal blockiert Screenshots gegen KI-Agenten in Betriebssystemen",
+   "kurz": "Der Messenger Signal schränkt eingebaute KI-Agenten von iOS 27 und Android ein, die Bildschirminhalte auslesen könnten. Signal sieht darin eine Gefahr für den Datenschutz, weil die Betriebssysteme keine Werkzeuge für Entwickler bieten, um KI-Zugriffe sicher auszuschließen.",
+   "artikel": [
+    "Der Messenger Signal reagiert auf KI-Agenten, die direkt in Betriebssysteme eingebaut sind. Laut einem Blogbeitrag von Meredith Whittaker vom 20. November 2026 blockiert Signal auf iOS 27 Screenshots in der App. Auf Android geschieht dies, sobald ein KI-Assistent versucht, den Bildschirminhalt von Signal auszulesen.",
+    "## Warum Signal handelt",
+    "Google, Apple und Microsoft integrieren agentische Funktionen tief in ihre Systeme, etwa Gemini-Funktionen bei Google und Onscreen Awareness bei Siri. Diese KI-Agenten „scannen“ den Bildschirm, um Fragen zu beantworten. Dabei werden Signal-Inhalte erfasst, gespeichert und für andere Systeme zugänglich. Nach Angaben von Signal liegt danach nichts mehr in der Kontrolle der App.",
+    "## Grenzen der Maßnahme",
+    "Signal weist selbst darauf hin, dass der Schutz unvollständig ist. Auch der Zugriff auf Dateien im Dateisystem bleibt möglich. Auf macOS kann Signal diese Blockade derzeit nicht umsetzen. Nutzer können den Schutz in den Einstellungen abschalten, wodurch ihre Inhalte und die ihrer Kontakte für KI-Agenten sichtbar werden.",
+    "## Forderungen an die Hersteller",
+    "Signal fordert von Apple, Google und Microsoft einfach nutzbare Werkzeuge, mit denen Apps KI-Zugriffe abschalten können, sowie bessere technische Dokumentation der KI-Agenten. Außerdem kritisiert Signal, dass Drittanbieter-Agenten wie Metas Muse über Bedienungshilfen weitreichende Rechte erhalten. Der Dienst gibt an, mit Google und Apple im Gespräch zu sein, und hofft auf standardisierte Lösungen.",
+    "Confidential Computing, also die verschlüsselte Verarbeitung in abgesicherten Rechenumgebungen, hält Signal ausdrücklich nicht für eine vollständige Lösung, weil die Anbieter weiterhin über den Umfang des Datenschutzes bestimmen."
+   ],
+   "quellen": [
+    {
+     "titel": "Signal Blog: Signal is Serious About Protecting Your Privacy",
+     "url": "https://signal.org/blog/protecting-your-privacy/"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50572348"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Prüfe in den Datenschutzeinstellungen deines Smartphones, welche KI-Assistenten Zugriff auf den Bildschirm haben.",
+    "Achte bei sensiblen Chats darauf, ob Screenshot-Schutz aktiv ist, bevor du einen KI-Assistenten nutzt."
+   ],
+   "vorschau": {
+    "szene": "logo",
+    "titel": "Signal"
+   },
+   "bereich": "Apps",
+   "datum": "2026-11-20",
+   "id": "signal-blockiert-screenshots-gegen-ki-agenten-in-betriebssys",
+   "hinzugefuegt": "2026-11-21T04:00:09Z"
+  },
+  {
+   "titel": "Google bringt „Computer Use“ in die Gemini-Mac-App",
+   "kurz": "Googles Gemini-Mac-App kann jetzt Aufgaben auf dem Mac selbst erledigen, während Nutzer weiterarbeiten. Die Funktion ist laut Google zunächst auf Englisch und in den USA verfügbar.",
+   "artikel": [
+    "Google erweitert die Mac-App seines KI-Assistenten Gemini um eine Funktion namens „Computer Use“. Damit kann die KI Aufgaben über mehrere Schritte hinweg erledigen, die lokale Dateien, Desktop-Programme und Webseiten betreffen.",
+    "## So funktioniert es",
+    "Laut Google beschreiben Nutzer einfach ein Ziel. Gemini klickt, tippt und navigiert dann durch Menüs und Formulare. Die Arbeit läuft in einem isolierten Hintergrundfenster mit einer Live-Vorschau des Chats. Dadurch bleiben Bildschirm und Mauszeiger für den Nutzer frei.",
+    "Nutzer können auswählen, auf welche Apps Gemini zugreifen darf. Sie können jeden Schritt live verfolgen, die Arbeit jederzeit anhalten und wichtige Aktionen vorab genehmigen.",
+    "## Beispiele von Google",
+    "Als Anwendungsbeispiele nennt Google das Stapelbearbeiten von Fotos und 3D-Szenen, das Ausfüllen von Versandformularen anhand lokaler PDF-Dateien sowie das Erstellen von Präsentationen.",
+    "## Verfügbarkeit und Wettbewerb",
+    "Computer Use startet laut Google heute in den USA und nur auf Englisch. Die Gemini-Mac-App kann bereits heruntergeladen werden. Der Artikel weist außerdem darauf hin, dass sich auch OpenAI in letzter Zeit stark auf Computer Use konzentriert, mit seinem Modell Astra.",
+    "Hinweis: Die Angaben zu Funktionen und Verfügbarkeit stammen aus Herstellerangaben von Google."
+   ],
+   "quellen": [
+    {
+     "titel": "The Decoder: Google's Gemini can now run Mac apps and finish desktop chores in the background while you keep working",
+     "url": "https://the-decoder.com/googles-gemini-can-now-run-mac-apps-and-finish-desktop-chores-in-the-background-while-you-keep-working/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Man kann Gemini eine mehrstufige Aufgabe beschreiben, etwa das Ausfüllen eines Formulars aus lokalen PDFs, und den Verlauf live mitverfolgen.",
+    "Fotos oder Präsentationen lassen sich laut Google per Auftrag stapelweise vorbereiten, während man selbst weiterarbeitet.",
+    "Über die Auswahl erlaubter Apps und die Freigabe wichtiger Aktionen behält man die Kontrolle über den Zugriff."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-11-20",
+   "vorschau": {
+    "szene": "sandbox"
+   },
+   "id": "google-bringt-computer-use-in-die-gemini-mac-app",
+   "hinzugefuegt": "2026-11-21T04:00:09Z"
+  },
+  {
    "titel": "Inkling 2 Mini: Kleines Open-Weights-Modell mit gelooptem Transformer für Laptops",
    "kurz": "Thinking Machines Lab hat Inkling 2 Mini veröffentlicht, ein Open-Weights-Modell mit rund 20 GB Speicherbedarf, das auf lokalen Geräten laufen soll. Laut Herstellerangabe führt es unter den Open-Weights-Modellen unter 100B Parametern mehrere Agenten-Coding-Benchmarks an.",
    "artikel": [
@@ -4284,6 +4355,79 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Gemini 4 Neon führt den Models Engineering Index an",
+   "kurz": "Ein inoffizieller Index, der KI-Modelle nach Leistung, Kosten und Tokenverbrauch vergleicht, sieht Googles Gemini 4 Neon auf Platz eins. Der Eintrag wurde auf Hacker News mit 367 Punkten diskutiert.",
+   "artikel": [
+    "Auf der Seite Models Engineering Index werden Sprachmodelle in einer Rangliste verglichen. Die Gesamtwertung (Index) fasst mehrere Benchmarks zusammen. Dazu kommen Kosten und Tokenverbrauch, jeweils im Verhältnis zu einem Referenzwert. Gemini 4 Neon erreicht dort 68,4 Punkte und liegt damit vor allen anderen gelisteten Modellen.",
+    "Auf Platz zwei folgt 6.2 Astra von OpenAI mit 67,1 Punkten, auf Platz drei Fable 5.2 von Anthropic mit 66,7 Punkten. Bei den Kosten liegt Gemini 4 Neon bei etwa dem Zweifachen des Referenzwerts, bei den Tokens bei 0,8. Wie bei jedem Vergleich dieser Art hängt die Aussagekraft davon ab, welche Aufgaben in die Wertung einfließen.",
+    "## Einordnung",
+    "Die Seite listet außerdem Benchmarks wie SWE-bench, Terminal-Bench und CursorBench, die Programmier- und Agentenaufgaben messen. Die Zahlen stammen von der Seite selbst und sind nicht unabhängig geprüft. Die Angaben zu Leistung und Kosten sind deshalb als Herstellerangaben beziehungsweise Angaben des Index-Betreibers zu lesen, nicht als gesicherte Messergebnisse Dritter.",
+    "Im Hacker-News-Thread wurde der Index mit 367 Punkten bewertet. Der Quelltext der Seite ist auf GitHub veröffentlicht, was eine Nachprüfung der Methode erleichtert."
+   ],
+   "quellen": [
+    {
+     "titel": "Models Engineering Index",
+     "url": "https://git-aarvin.github.io/mei/"
+    },
+    {
+     "titel": "Hacker-News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50568130"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Vergleiche Modelle für eigene Aufgaben, bevor du dich für eines entscheidest.",
+    "Achte neben der Gesamtnote auch auf Kosten und Tokenverbrauch.",
+    "Prüfe die Methodik des Index, bevor du die Rangfolge übernimmst."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Index-Wertung (Auszug)",
+    "balken": [
+     {
+      "label": "6.2 Astra",
+      "wert": 67.1,
+      "anzeige": "67,1"
+     },
+     {
+      "label": "Fable 5.2",
+      "wert": 66.7,
+      "anzeige": "66,7"
+     },
+     {
+      "label": "4 Neon",
+      "wert": 68.4,
+      "anzeige": "68,4"
+     }
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Index-Wertung Gemini 4 Neon",
+     "wert": "68,4"
+    },
+    {
+     "label": "Kosten (Verhältnis)",
+     "wert": "2,1×"
+    },
+    {
+     "label": "Tokens (Verhältnis)",
+     "wert": "0,8×"
+    },
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "367"
+    }
+   ],
+   "signal": "Gemini 4 Neon steht laut dem Index auf Platz eins. Die Werte stammen von der Seite des Index-Betreibers und sind nicht unabhängig geprüft.",
+   "link": "https://git-aarvin.github.io/mei/",
+   "linkLabel": "Zum Models Engineering Index",
+   "id": "gemini-4-neon-fuhrt-den-models-engineering-index-an",
+   "hinzugefuegt": "2026-11-21T04:00:09Z"
+  },
   {
    "titel": "Sprachmodelle können ihre eigenen Gewichte umschreiben",
    "kurz": "Ein arXiv-Paper beschreibt ein Verfahren, bei dem ein offenes 27B-Sprachmodell seine eigenen Gewichte ohne Gradienten und ohne Training verbessert. Laut Autoren ist das ein möglicher Schritt Richtung rekursiver Selbstverbesserung.",
@@ -22094,7 +22238,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-20T23:11:04Z",
+  "letzterScan": "2026-11-21T04:00:09Z",
   "neueFunde": 3,
   "standAktualisiert": "2026-11-20T23:11:04Z"
  }
