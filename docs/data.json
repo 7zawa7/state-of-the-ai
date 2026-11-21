@@ -1,6 +1,44 @@
 {
  "news": [
   {
+   "titel": "Buddhistisches Kloster Maple: Vorwürfe über Kult-Strukturen im Silicon Valley",
+   "kurz": "Das Vermonter Kloster Maple wirbt bei Tech-Beschäftigten um spirituelle Autorität und soll Atemaufnahmen zum Training einer KI nutzen, die auf seinem Gründer basiert. Ehemalige Mitglieder berichten von Manipulation und psychischen Zusammenbrüchen; die Leitung bestreitet die meisten Vorwürfe.",
+   "artikel": [
+    "Ein buddhistisches Kloster in Vermont namens Maple will laut einem Bericht des New Yorker zur offiziellen spirituellen Instanz der KI-Branche werden. Autor Sam Kriss nennt es „a Scientology for Silicon Valley“. Öffentlich verspricht die Gruppe, die Menschheit vor einer KI-Apokalypse zu retten.",
+    "## Vorwürfe ehemaliger Mitglieder",
+    "Laut ehemaligen Mitgliedern zeichnet das Kloster jeden Atemzug seiner Bewohner auf, um eine KI auf Basis des Geistes von Gründer Soryu Forall zu trainieren. Ein früheres Mitglied sagt, dies wäre „Soryu's mind as an A.I. god“. Ehemalige Mitglieder werfen der Gruppe außerdem systematische Manipulation vor, etwa Bloßstellung wegen früherer Entscheidungen und Pflicht-Texte über Formans Weisheit. Ein Achtsamkeitscoach berichtet von psychotischen Brüchen bei Teilnehmenden, die danach aus der Gemeinschaft entfernt worden seien.",
+    "Forall bestreitet die Vorwürfe. Die Leitung erklärt, es gebe eine geheime Lehre, doch die Aufnahmen seien Teil eines Vertrauensprozesses. Forall sagt, er kenne niemanden, der das Kloster freiwillig verlassen habe, und verweist auf Menschen mit psychiatrischer Vorgeschichte.",
+    "## Warum Entwickler anfällig wirken",
+    "Kriss sieht den enormen psychischen Druck in KI-Laboren als möglichen Grund, warum hochqualifizierte Fachleute zu solchen Gruppen finden. Ein bekannter KI-Forscher beschreibt die Stimmung in San Francisco als „religious terror of the future“. Auch Führungskräfte äußern sich laut Bericht teils in religiösen Bildern: Rayan Krishnan, Chef des Benchmark-Unternehmens Vals AI, sagt, Leute sprächen ganz nüchtern davon, eine „Maschinengottheit“ bauen zu wollen.",
+    "Einordnung: Die Berichte stützen sich auf ehemalige Mitglieder und den Artikel von Kriss. Viele Vorwürfe sind von der Gegenseite bestritten."
+   ],
+   "quellen": [
+    {
+     "titel": "Silicon Valley's growing obsession with AI doomsday is turning parts of the tech industry toward cult-like devotion (The Decoder)",
+     "url": "https://the-decoder.com/silicon-valleys-growing-obsession-with-ai-doomsday-is-turning-parts-of-the-tech-industry-toward-cult-like-devotion/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Verfolgen Sie, wie Tech-Unternehmen mit Glaubensgemeinschaften und Heilsversprechen umgehen, bevor Sie solchen Angeboten Geld oder Zeit geben.",
+    "Prüfen Sie bei Gruppen mit Aufnahmepflicht und Kontrolle von außen, ob es unabhängige Berichte oder Aussteiger-Stimmen gibt."
+   ],
+   "bereich": "Agenten",
+   "datum": "2026-01-01",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "maple-bericht.txt",
+    "zeilen": [
+     "> Quelle: The Decoder, New Yorker-Bericht",
+     "⚠ Vorwürfe ehemaliger Mitglieder",
+     "✓ Leitung bestreitet die meisten Vorwürfe",
+     "● Status: Berichterstattung, keine Gerichtsentscheidung"
+    ]
+   },
+   "id": "buddhistisches-kloster-maple-vorwurfe-uber-kult-strukturen-i",
+   "hinzugefuegt": "2026-11-21T19:41:43Z"
+  },
+  {
    "titel": "Signal blockiert Screenshots gegen KI-Agenten in Betriebssystemen",
    "kurz": "Der Messenger Signal schränkt eingebaute KI-Agenten von iOS 27 und Android ein, die Bildschirminhalte auslesen könnten. Signal sieht darin eine Gefahr für den Datenschutz, weil die Betriebssysteme keine Werkzeuge für Entwickler bieten, um KI-Zugriffe sicher auszuschließen.",
    "artikel": [
@@ -4355,6 +4393,60 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Nvidia-Forscher: Riesige Kontextfenster sind eine Sackgasse",
+   "kurz": "Ein Forschungsteam von Nvidia hält es für oft unnötig, Sprachmodelle mit vollen Kontextfenstern arbeiten zu lassen. Periodische Zusammenfassungen und gezielte Suchen lieferten in Tests etwa gleich gute Ergebnisse zu einem Bruchteil der Kosten.",
+   "artikel": [
+    "Ein Sprachmodell nutzt ein sogenanntes Kontextfenster als eine Art Arbeitsspeicher: Es umfasst alles, was das Modell beim Erzeugen einer Antwort gerade im Blick hat. Dieses Fenster ist in den vergangenen Jahren stark gewachsen. GPT-4 startete im März 2023 mit 8.192 Token. Laut dem Artikel verarbeitet GPT 5.6 Sol heute rund eine Million Token, etwa das 120-Fache und genug für Tolstois „Krieg und Frieden“. Hinweis: Die Angabe zu GPT 5.6 Sol stammt aus dem Artikel und ist eine Herstellerangabe bzw. Angabe der Quelle, nicht unabhängig geprüft.",
+    "## Was Nvidia vorschlägt",
+    "Laut den Nvidia-Forschern sind große Kontextfenster oft zu langsam, zu teuer und anfällig für Fehler. Die Forscher zeigen in ihren Tests, dass Modelle häufig gar nicht das gesamte Fenster brauchen. Stattdessen schlagen sie vor, mit periodischen Zusammenfassungen und gezielter Stichwortsuche zu arbeiten. In den Tests erreichten diese Verfahren meist etwa dieselben Ergebnisse wie die volle Kontextverarbeitung, bei deutlich geringeren Kosten.",
+    "Außerdem skizziert das Team eine neue Klasse von Modellen, die mit kurzen Notizen statt mit langen Kontexten arbeitet. Wie gut sich dieser Ansatz in der Praxis über die getesteten Fälle hinaus bewährt, geht aus dem vorliegenden Material nicht hervor."
+   ],
+   "quellen": [
+    {
+     "titel": "Nvidia researchers argue huge AI context windows are a dead end – THE DECODER",
+     "url": "https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Lange Dokumente nicht komplett in den Chat kopieren, sondern zuerst gezielt nach Stichworten suchen lassen.",
+    "Bei langen Texten zwischendurch Zusammenfassungen erstellen lassen und mit diesen weiterarbeiten."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Kontextfenster: Tokens pro Modell (laut Artikel)",
+    "balken": [
+     {
+      "label": "GPT-4 (03/2023)",
+      "wert": 8192,
+      "anzeige": "8.192 Token"
+     },
+     {
+      "label": "GPT 5.6 Sol",
+      "wert": 1000000,
+      "anzeige": "rund 1 Mio. Token"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "GPT-4 Kontextfenster (03/2023)",
+     "wert": "8.192 Token"
+    },
+    {
+     "label": "GPT 5.6 Sol Kontextfenster (laut Artikel)",
+     "wert": "rund 1 Mio. Token"
+    }
+   ],
+   "signal": "Nvidia-Forscher stellen die Annahme infrage, dass immer größere Kontextfenster der bessere Weg sind, und setzen auf Zusammenfassungen und gezielte Suche.",
+   "link": "https://the-decoder.com/nvidia-researchers-argue-huge-ai-context-windows-are-a-dead-end/",
+   "linkLabel": "Originalartikel bei THE DECODER lesen",
+   "id": "nvidia-forscher-riesige-kontextfenster-sind-eine-sackgasse",
+   "hinzugefuegt": "2026-11-21T19:41:43Z"
+  },
   {
    "titel": "Gemini 4 Neon führt den Models Engineering Index an",
    "kurz": "Ein inoffizieller Index, der KI-Modelle nach Leistung, Kosten und Tokenverbrauch vergleicht, sieht Googles Gemini 4 Neon auf Platz eins. Der Eintrag wurde auf Hacker News mit 367 Punkten diskutiert.",
@@ -22238,8 +22330,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-21T12:24:09Z",
-  "neueFunde": 0,
+  "letzterScan": "2026-11-21T19:41:43Z",
+  "neueFunde": 2,
   "standAktualisiert": "2026-11-20T23:11:04Z"
  }
 }
