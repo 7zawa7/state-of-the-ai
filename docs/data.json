@@ -1,6 +1,45 @@
 {
  "news": [
   {
+   "titel": "Bytedance: Drei Trainingsphasen reichen für konkurrenzfähiges KI-Agentenmodell",
+   "kurz": "Ein Team von Bytedance und mehreren US-Universitäten stellt das frei verfügbare Agentenmodell Axion 1.0 vor, das nach nur drei Trainingsphasen auf Benchmarks mit führenden kommerziellen Modellen mithalten soll. Die Forschenden führen den Erfolg vor allem auf sorgfältig kuratierte Trainingsdaten statt auf immer mehr Trainingsschritte zurück.",
+   "artikel": [
+    "KI-Agenten, also Programme, die selbstständig im Web recherchieren, Code ausführen und mehrstufige Aufgaben lösen, basieren oft auf komplexen Trainingsketten. Viele Entwickelnde stapeln dabei zahlreiche Trainingsphasen hintereinander.",
+    "## Drei Phasen statt vieler",
+    "Ein Team um Bytedance, den Mutterkonzern von TikTok, und mehrere US-Universitäten will laut einem neuen Paper zeigen, dass drei Schritte genügen. Die Autorinnen und Autoren argumentieren, dass kaum noch erkennbar sei, welcher Schritt tatsächlich hilft, und dass die Nachbildung solcher Arbeiten teuer werde.",
+    "## Das Modell Axion 1.0",
+    "Mit dem Modell Axion 1.0 belegen die Forschenden ihre These. Laut Bericht erreicht es auf Benchmarks, also standardisierten Testverfahren, Ergebnisse, die mit führenden kommerziellen Modellen von OpenAI und Anthropic vergleichbar sind. Die Forschenden führen die Fortschritte auf sorgfältig ausgewählte Trainingsdaten zurück und nicht auf zusätzliche Trainingsschritte.",
+    "Modell, Daten und Code sind laut Quelle frei verfügbar. Die Angaben zur Leistung stammen aus der Darstellung des Artikels und sind nicht unabhängig geprüft.",
+    "## Einordnung",
+    "Der Artikel stammt von The Decoder, einem Fachmedium für KI. Der Auszug der Website enthält zudem Werbung und ein Abo-Angebot, die für die Sachaussage nicht relevant sind."
+   ],
+   "quellen": [
+    {
+     "titel": "Bytedance argues most AI training phases are unnecessary and backs it up with a competitive open model",
+     "url": "https://the-decoder.com/bytedance-argues-most-ai-training-phases-are-unnecessary-and-backs-it-up-with-a-competitive-open-model/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer mit KI-Agenten experimentiert, kann prüfen, ob ein schlankerer Trainingsablauf für eigene Anwendungen ausreicht.",
+    "Interessierte können Modell, Daten und Code des frei verfügbaren Projekts herunterladen und selbst testen.",
+    "Wer Forschung verfolgt, kann die Benchmark-Angaben mit eigenen Tests gegenprüfen."
+   ],
+   "bereich": "Agenten",
+   "datum": "2025-01-01",
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Bytedance",
+     "US-Universitäten",
+     "Axion 1.0",
+     "3 Trainingsphasen"
+    ]
+   },
+   "id": "bytedance-drei-trainingsphasen-reichen-fur-konkurrenzfahiges",
+   "hinzugefuegt": "2026-11-22T06:22:09Z"
+  },
+  {
    "titel": "Anthropic meldet Claude-Beweis der Riemann-Hypothese – Stanford legt menschlichen Konkurrenzentwurf vor",
    "kurz": "Anthropic-Mathematiker Levent Alpöge sagt, er habe mit Claude einen Beweis der Riemann-Hypothese gefunden, der in Lean formalisiert ist. Wenige Stunden später veröffentlichte ein Stanford-Team einen unabhängigen, rein menschlichen Entwurf; die Fachwelt prüft nun beide.",
    "artikel": [
@@ -4435,6 +4474,149 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Inkling 2 Mini: 26B-Modell mit geloopten Schichten läuft auf einem 32-GB-Mac",
+   "kurz": "Thinking Machines hat Inkling 2 Mini veröffentlicht, ein offenes Modell mit 26,4 Mrd. Parametern, das seine mittleren Schichten mehrfach durchläuft. Laut Herstellerangaben läuft es lokal auf einem 32-GB-Mac oder einem DGX Spark.",
+   "artikel": [
+    "Thinking Machines Lab hat Inkling 2 Mini veröffentlicht, ein Open-Weight-Modell mit 26,4 Mrd. Parametern insgesamt. Es ist als lokale Option für agentisches Programmieren, Tool-Nutzung und Dokumentenarbeit gedacht. Die Gewichte stehen unter Apache-2.0-Lizenz auf Hugging Face bereit. Die Angaben zur Leistung stammen vom Hersteller selbst.",
+    "## Gespeicherte Schichten, mehrfach durchlaufen",
+    "Das Modell speichert 24 Schichten, die in 4 Blöcke zu je 6 Schichten gegliedert sind. Der erste und der letzte Block laufen einmal, die beiden mittleren Blöcke dreimal mit gemeinsam genutzten Gewichten. So entstehen pro Token 48 Schichtdurchläufe aus 24 Schichten an Gewichten. Ein sogenanntes Looped Transformer bezeichnet diese Wiederverwendung von Schichten. Laut Hersteller brachte das Loopen der mittleren Schichten einen rechnerischen Gewinn von 1,51- bis 1,91-fach, das Loopen der letzten Schichten dagegen nur 1,24- bis 1,36-fach.",
+    "## Training und Expertenauswahl",
+    "Das Training begann mit 384 Experten pro Schicht, von denen pro Token 8 aktiv sind. In der Mitte des Trainings wurden zwei Drittel davon entfernt und die 128 meistgenutzten behalten. Ein Mixture-of-Experts-Modell (MoE) aktiviert pro Token nur einen Teil seiner Experten. Expertenschichten werden in NVFP4 trainiert und ausgeliefert, die letzten 4 Schichten in MXFP8. Nach Herstellerangaben vermeidet das Verluste durch Quantisierung.",
+    "## Leistung laut Hersteller",
+    "Alle Benchmark-Werte sind Selbstangaben von Thinking Machines. Die größte Stärke liegt beim Programmieren: 79,2 % bei SWE-bench Verified (nur bash) und 48,2 % bei DeepSWE v1.1. Auf dem Artificial Analysis Index erreicht das Modell 20,1 und liegt damit gleichauf mit Qwen3.8-27B. Schwächer ist es beim Wissen und bei Mehrfach-Dialogen: 15,2 % bei HLE-Diamond und 50,0 % bei MultiChallenge.",
+    "## Hardware",
+    "Der Checkpoint ist etwa 20 GB groß. Unterstützt werden ein NVIDIA DGX Spark, Apple-Silicon-Geräte mit mindestens 32 GB Speicher oder andere GPUs mit mindestens 32 GB VRAM. GGUF-Versionen gibt es über Unsloth und llama.cpp."
+   ],
+   "quellen": [
+    {
+     "titel": "Meet Thinking Machines Inkling 2 Mini: 26B Looped MoE Runs on a 32GB Mac (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/11/21/thinking-machines-inkling-2-mini-looped-transformer/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Ein Open-Weight-Modell lokal auf einem 32-GB-Mac für Programmieraufgaben oder Dokumente testen.",
+    "Mit GGUF-Versionen über llama.cpp oder Ollama ausprobieren, ob sich das Modell für eigene Textarbeit eignet.",
+    "Die Leistungsangaben kritisch prüfen, da sie vom Hersteller stammen und nicht unabhängig belegt sind."
+   ],
+   "ausprobieren": {
+    "prompt": "vllm serve \"thinkingmachines/Inkling-2-Mini\"",
+    "tool": "vLLM",
+    "url": "https://github.com/vllm-project/vllm"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "SWE-bench Verified (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Qwen3.8-27B",
+      "wert": 73.4,
+      "anzeige": "73,4 %"
+     },
+     {
+      "label": "Inkling 2 Mini",
+      "wert": 79.2,
+      "anzeige": "79,2 %"
+     }
+    ]
+   },
+   "datum": "2026-11-21",
+   "quelle": "Fachpresse",
+   "kennzahlen": [
+    {
+     "label": "Gesamtparameter",
+     "wert": "26,4 Mrd."
+    },
+    {
+     "label": "Aktive Parameter",
+     "wert": "3,4 Mrd. (5,4 effektiv mit Looping)"
+    },
+    {
+     "label": "Kontext",
+     "wert": "bis 1 Mio. Token"
+    },
+    {
+     "label": "Checkpoint",
+     "wert": "ca. 20 GB"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "Apache 2.0"
+    }
+   ],
+   "signal": "Ein offenes Modell mit geloopten Schichten soll starkes agentisches Programmieren auf Consumer-Hardware ermöglichen. Alle Werte sind Herstellerangaben.",
+   "link": "https://www.marktechpost.com/2026/11/21/thinking-machines-inkling-2-mini-looped-transformer/",
+   "linkLabel": "Zum Originalartikel",
+   "id": "inkling-2-mini-26b-modell-mit-geloopten-schichten-lauft-auf-",
+   "hinzugefuegt": "2026-11-22T06:22:09Z"
+  },
+  {
+   "titel": "TensorLean: Lean-basierte Verifikation von GPU-Kerneln auf PTX-Ebene",
+   "kurz": "Forscher der Columbia University und von CertiK stellen TensorLean vor, ein Framework, das GPU-Kernel auf PTX-Ebene mit dem Beweiser Lean formal prüft. Von 149 geprüften Kernel-Instanzen bewiesen sie 83 als korrekt und fanden 38 Korrektheitsfehler.",
+   "artikel": [
+    "Forscher der Columbia University und der Firma CertiK haben TensorLean vorgestellt, ein Framework zur formalen Verifikation von GPU-Kerneln auf der Ebene von PTX. PTX ist eine Zwischensprache, in die Nvidia-Compiler den Kernel-Code übersetzen. Formale Verifikation bedeutet, dass ein Programm mathematisch bewiesen und nicht nur getestet wird.",
+    "## Wie das Verfahren funktioniert",
+    "Ausgangspunkt ist unveränderter Quellcode. Entwickler schreiben in Lean eine Spezifikation auf Tensor-Ebene, also eine mathematische Beschreibung dessen, was der Kernel berechnen soll. TensorLean prüft dann vier Eigenschaften: keine Datenrennen, Termination, korrekte Ausgabe innerhalb einer Toleranz und unverändert bleibender Speicher an anderen Stellen. Die Spezifikation baut auf der Mathematikbibliothek Mathlib auf und benennt Tensoroperatoren nach PyTorch.",
+    "Um große Kernel handhabbar zu machen, nutzt das Team mehrere Techniken. Rennfreiheit wird über einen sogenannten Happens-before-Graphen geprüft, der alle Blöcke, Threads und Schleifendurchläufe symbolisch abdeckt. Für gekachelte Schleifen werden Schleifeninvarianten verwendet. Laut Angaben des Teams umfasst die Spezifikation insgesamt 10.278 Zeilen gegenüber 151.285 Zeilen Kernel-Quellcode.",
+    "## Gefundene Fehler",
+    "Laut dem GitHub-README listet das Projekt 38 Fehler, die alle an die jeweiligen Projekte gemeldet wurden. 23 davon betreffen FlashAttention, 7 Liger Kernel, 3 TileOPs, 2 TileLang, 2 DeepGEMM und 1 Triton. Ein Beispiel ist ein Datenrennen in FlashAttention-4, das in 17.760 Testläufen nie auftrat, vom Verfahren aber gefunden wurde. Von 102 FlashAttention-Instanzen bestanden 56 alle vier Eigenschaften.",
+    "## Einordnung im Vergleich",
+    "Im Vergleich mit anderen Verifikationswerkzeugen hebt das Team vor allem die Abdeckung von Konfigurationen hervor. Equivalence-Checker rollen Schleifen für jeweils eine konkrete Einstellung aus, TensorLean verwendet dagegen symbolische Parameter. Die Prüfzeit gibt das Team mit etwa zehn Minuten im Median und maximal 50 Minuten an. Der Code ist laut Projektseite noch nicht veröffentlicht; das ist eine Angabe des Projekts."
+   ],
+   "quellen": [
+    {
+     "titel": "A Team of Researchers from Columbia and CertiK Introduce TensorLean for Formal Verification of GPU Kernels",
+     "url": "https://www.marktechpost.com/2026/11/21/columbia-certik-tensorlean-formal-verification-gpu-kernels/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Entwickler von GPU-Kerneln können prüfen, welche Verifikationswerkzeuge für eigene Kernel infrage kommen.",
+    "Wer sich für formale Methoden interessiert, kann die Lean-Spezifikationen studieren, sobald der Code veröffentlicht ist."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-11-21",
+   "kennzahlen": [
+    {
+     "label": "Geprüfte Kernel-Instanzen",
+     "wert": "149"
+    },
+    {
+     "label": "Als korrekt bewiesen",
+     "wert": "83"
+    },
+    {
+     "label": "Gefundene Fehler",
+     "wert": "38"
+    },
+    {
+     "label": "Spezifikation vs. Quellcode",
+     "wert": "10.278 vs. 151.285 Zeilen"
+    }
+   ],
+   "signal": "Formale Verifikation könnte Fehler in produktiven GPU-Kerneln wie FlashAttention finden, die Tests übersehen.",
+   "link": "https://www.marktechpost.com/2026/11/21/columbia-certik-tensorlean-formal-verification-gpu-kernels/",
+   "linkLabel": "Originalartikel bei MarkTechPost",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Geprüfte Kernel-Instanzen nach Ergebnis",
+    "balken": [
+     {
+      "label": "Als korrekt bewiesen",
+      "wert": 83,
+      "anzeige": "83"
+     },
+     {
+      "label": "Fehler gefunden (Rest)",
+      "wert": 66,
+      "anzeige": "66 (38 Fehler)"
+     }
+    ]
+   },
+   "id": "tensorlean-lean-basierte-verifikation-von-gpu-kerneln-auf-pt",
+   "hinzugefuegt": "2026-11-22T06:22:09Z"
+  },
   {
    "titel": "Inkling 2 Mini: Offenes Modell denkt in Schleifen und läuft auf dem Laptop",
    "kurz": "Thinking Machines hat Inkling 2 Mini veröffentlicht, ein offenes Modell, das bestimmte Layer pro Token mehrfach durchläuft. Laut Hersteller erreicht es bei Artificial Analysis gleichauf mit Qwen3.8 27B, bei rund sechsfach geringeren Kosten.",
@@ -22463,8 +22645,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-21T23:57:21Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-22T06:22:09Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-21T23:57:21Z"
  }
 }
