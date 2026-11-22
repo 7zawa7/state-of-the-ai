@@ -4475,6 +4475,185 @@
  ],
  "radar": [
   {
+   "titel": "KI-Coding-Agenten scheitern im simulierten Arbeitsalltag",
+   "kurz": "Im Test einer simulierten Softwarefirma lösen KI-Coding-Agenten laut Bericht weniger als jede zehnte Aufgabe vollständig, obwohl sie isolierte Benchmarks fast meistern. Die Modelle arbeiten einzelne, klar abgegrenzte Aufgaben schnell ab, verlieren aber den Überblick, wenn sie eigenständig als Entwickler arbeiten sollen.",
+   "artikel": [
+    "Viele KI-Coding-Agenten erreichen bei Standard-Benchmarks wie SWE-bench inzwischen nahezu Spitzenwerte. Ein Benchmark ist ein standardisierter Test, mit dem Modelle verglichen werden. Genau solche Tests bilden die Arbeit in echten Softwareprojekten allerdings nur begrenzt ab.",
+    "Ein neues Experiment setzt die Agenten deshalb erstmals als digitale Mitarbeiter in eine simulierte Softwarefirma. Dort gibt es Kollegen, Projekt-Boards und Chatverläufe. Die Agenten sollen die Entwicklung selbstständig fortführen und offene Tickets in einem unübersichtlichen Alltag zuverlässig schließen.",
+    "Das Ergebnis ist ernüchternd: Selbst Claude Opus 5.5 und GPT-6 Astra lösen weniger als eine von zehn Aufgaben vollständig. Laut Bericht erledigen die Modelle klare, eigenständige Aufträge zwar schnell, verlieren als autonome Entwickler jedoch den Faden.",
+    "## Einordnung",
+    "Die Angaben stammen aus einem Bericht der Fachpresse über ein einzelnes Experiment. Die Modellnamen sind Herstellerbezeichnungen beziehungsweise Bezeichnungen aus der Quelle und wurden im Bericht nicht unabhängig weiter überprüft. Für den Alltag bedeutet der Befund vor allem: Hohe Werte in Einzeltests sagen wenig darüber aus, wie zuverlässig ein Agent in einem laufenden Team arbeitet."
+   ],
+   "quellen": [
+    {
+     "titel": "AI coding agents ace isolated tests but complete fewer than one in ten tasks in a simulated workplace",
+     "url": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Agenten-Ergebnisse nicht nur anhand von Einzeltests bewerten, sondern an realistischen Aufgaben mit Kontext prüfen.",
+    "Bei eigenen KI-Coding-Projekten offene Aufgaben klar und abgeschlossen formulieren, da die Modelle eigenständige Aufträge am besten lösen.",
+    "Ergebnisse von Agenten bei mehrteiligen Aufgaben stichprobenartig kontrollieren, weil sie den Überblick verlieren können."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Vollständig gelöste Aufgaben (Anteil laut Bericht)",
+    "balken": [
+     {
+      "label": "Opus 5.5 / GPT-6 Astra",
+      "wert": 10,
+      "anzeige": "< 1 von 10"
+     }
+    ]
+   },
+   "tag": "Agenten",
+   "quelle": "Fachpresse",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Vollständig gelöste Aufgaben",
+     "wert": "weniger als 1 von 10"
+    }
+   ],
+   "signal": "Benchmark-Erfolge in Einzeltests übertragen sich laut diesem Experiment nicht auf autonome Arbeit in einem simulierten Team.",
+   "link": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/",
+   "linkLabel": "Originalbericht bei THE DECODER",
+   "id": "ki-coding-agenten-scheitern-im-simulierten-arbeitsalltag",
+   "hinzugefuegt": "2026-11-22T20:50:40Z"
+  },
+  {
+   "titel": "Perplexity startet Monitor API für dauerhafte Websuche",
+   "kurz": "Perplexity hat eine Monitor API vorgestellt, die Websuchen nach Zeitplan wiederholt und Agenten nur bei relevanten Änderungen per Webhook benachrichtigt. Das Unternehmen sieht darin einen Weg, sich im Entwicklergeschäft von austauschbaren Chatbots abzuheben.",
+   "artikel": [
+    "Perplexity hat eine neue Schnittstelle namens Monitor API vorgestellt. Sie durchsucht das Web nach einem festgelegten Zeitplan und schickt relevante Änderungen per Webhook direkt an Apps und KI-Agenten. Bisher mussten Entwicklerteams wiederkehrende Suchen selbst auslösen und eigenen Code für das Entfernen von Duplikaten und das Erkennen von Änderungen pflegen.",
+    "## Zwei Betriebsarten",
+    "Web-Monitore führen eine Suchanfrage regelmäßig über die Web- und Nachrichtensuche von Perplexity aus, etwa um neue Finanzierungsrunden zu erkennen. Seitenmonitore beobachten bis zu 10 Seiten, zum Beispiel Preisseiten, Changelogs oder Richtlinien. Beim ersten Lauf speichern sie eine Ausgangsfassung und liefern danach einen Textvergleich (Diff) der Änderungen.",
+    "## Filter durch ein Entscheidungsmodell",
+    "Ein eigenes Bewertungsmodell von Perplexity prüft die Ergebnisse anhand eines Ziels, das Entwickler in natürlicher Sprache formulieren. Websuchergebnisse müssen Kriterien wie Relevanz, Quellenglaubwürdigkeit, Neuheit und Aktualität erfüllen. Die Benachrichtigung enthält einen Konfidenzwert und kommt nur, wenn alle Schwellen erreicht sind. Vorschauen, Gerüchte und Rückblicke werden laut Anbieter aussortiert.",
+    "## Herstellerangaben zur Leistung",
+    "Perplexity nennt in internen Tests bessere Ergebnisse als Firecrawl, Exa und Parallel. Über 60 Themen lieferte die Monitor API in den ersten acht Stunden 63 frische, relevante Seiten, verglichen mit 20 bei Firecrawl, 15 bei Exa und jeweils 10 bei Parallel Core und Lite. Perplexity beschreibt dies ausdrücklich als frühe interne Ergebnisse. Im August hatten die drei Konkurrenten in einem unabhängigen Benchmark für Such-APIs für KI-Agenten vorne gelegen, Perplexity war dort nicht enthalten.",
+    "## Preise und Einsatz",
+    "Ein Web-Monitor kostet laut Perplexity 1 US-Dollar pro 1.000 erfolgreiche Läufe, ein Seitenmonitor 1 US-Dollar pro 1.000 abgerufene URLs. Genannte Anwendungen sind Vertriebsteams, die Finanzierungen verfolgen, Analysten mit Blick auf Quartalszahlen oder Preisänderungen der Konkurrenz sowie Compliance-Teams bei neuen Regeln."
+   ],
+   "quellen": [
+    {
+     "titel": "Perplexity's new Monitor API turns web search from a one-off query into a nonstop watchdog",
+     "url": "https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog/"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Entwickler können einen Monitor für eigene Suchthemen anlegen, der bei neuen Treffern eine Nachricht an ihre App schickt.",
+    "Teams können eine Preis- oder Changelog-Seite beobachten lassen und sich nur bei Textänderungen melden lassen."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-11-06",
+   "kennzahlen": [
+    {
+     "label": "Preis Web-Monitor",
+     "wert": "1 US-Dollar pro 1.000 erfolgreiche Läufe (Herstellerangabe)"
+    },
+    {
+     "label": "Preis Seitenmonitor",
+     "wert": "1 US-Dollar pro 1.000 abgerufene URLs (Herstellerangabe)"
+    },
+    {
+     "label": "Seiten pro Seitenmonitor",
+     "wert": "bis zu 10"
+    },
+    {
+     "label": "Intervall",
+     "wert": "alle 15 Minuten bis wöchentlich oder Cron-Zeitplan"
+    }
+   ],
+   "signal": "Perplexity setzt mit Entwickler-Werkzeugen auf ein Geschäft neben dem Chatbot, weil Websuche in Chatbots inzwischen Standard ist. Die Leistungsvergleiche stammen vom Anbieter selbst und sind nicht unabhängig geprüft.",
+   "link": "https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog/",
+   "linkLabel": "Artikel bei The Decoder lesen",
+   "id": "perplexity-startet-monitor-api-fur-dauerhafte-websuche",
+   "hinzugefuegt": "2026-11-22T20:50:40Z"
+  },
+  {
+   "titel": "NVIDIA Alpamayo 2 Edge: 2B-Reasoning-VLA für Autos mit DRIVE AGX Thor",
+   "kurz": "NVIDIA hat Alpamayo 2 Edge veröffentlicht, ein kompaktes Vision-Language-Action-Modell, das im Fahrzeug Fahrtrajektorien plant und erklärt. Laut Hersteller liegt die Latenz von Pixel bis Trajektorie bei 160 bis 190 ms auf DRIVE AGX Thor.",
+   "artikel": [
+    "Mit Alpamayo 2 Edge stellt NVIDIA ein offenes Modell vor, das Video mehrerer Kameras in einen Fahrplan übersetzt und diesen zugleich begründet. Ein Vision-Language-Action-Modell (VLA) verbindet Bildverarbeitung, Sprachverständnis und die Steuerung von Handlungen. Das Modell hat laut Herstellerangabe rund 2 Milliarden Parameter, die Modellkarte nennt 2,45 Milliarden für das Grundgerüst plus 0,2 Milliarden für den Aktionsteil, Hugging Face zeigt dagegen 3 Milliarden an.",
+    "## Eingaben und Ausgaben",
+    "Das Modell verarbeitet sechs Kameras mit 22 Bildern pro Beobachtung sowie eine Navigationsanweisung und 20 frühere Eigenposen des Fahrzeugs. Ausgegeben werden 64 Wegpunkte für 6,4 Sekunden. Zusätzlich entsteht eine Begründungsspur im Format Chain-of-Causation. Adaptive Begründung bedeutet, dass das Modell bei unauffälligen Szenen spezielle NOMINAL-Token statt einer vollständigen Begründung ausgibt, was Rechenaufwand spart.",
+    "## Leistung auf Thor",
+    "Laut NVIDIA läuft die Echtzeitnutzung auf DRIVE AGX Thor nur mit einem eigenen Optimierungsrezept, das FP8-Quantisierung und TensorRT nutzt. Die reine BF16-Version in PyTorch plante in der Demo mit 0,76 Hz, die optimierte Thor-Pipeline mit 13,02 Hz. Der Partner Embedl berichtet von 10 Hz auf AGX Thor. Für Workstations empfiehlt die Modellkarte mindestens 16 GB Speicher; getestet wurde auf einer H100 mit 80 GB. Andere GPU-Architekturen sind laut Angaben noch nicht validiert.",
+    "## Benchmarks mit Vorsicht lesen",
+    "In der Closed-Loop-Simulation AlpaSim schafft Alpamayo 2 Edge laut NVIDIA 15,15 km zwischen sicherheitsrelevanten Unfällen, Qwen-Drive-1.0 4B dagegen 0,25 km. Das entspricht etwa dem Sechzigfachen. Alle Zahlen stammen von NVIDIA selbst. Bei LingoQA erreicht das Modell 75,2 Punkte und liegt damit unter dem größeren Alpamayo 2 Super mit 79,2. Die Fehlermetriken unterscheiden sich zwischen Quellen, deshalb sind Vergleiche nur innerhalb derselben Metrik sinnvoll.",
+    "## Training und Lizenz",
+    "Trainiert wurde per Destillation aus Begründungsdaten des großen Alpamayo 2 Super, mit rund 115.000 Stunden Fahrvideo und etwa 3,7 Millionen Begründungsspuren, dazu Reinforcement-Learning in einer Simulation. Die Gewichte stehen unter der Lizenz OpenMDW-1.1, der Inferenzcode unter Apache 2.0. Zusätzlich wurde AlpaJudge veröffentlicht, ein Bewertungsmodell für Begründungen, das laut NVIDIA die Begründungsqualität je nach Messung um 10,2 bzw. 11,4 Prozent steigerte."
+   ],
+   "quellen": [
+    {
+     "titel": "NVIDIA Releases Alpamayo 2 Edge: A 2B Reasoning VLA for DRIVE Thor (MarkTechPost)",
+     "url": "https://www.marktechpost.com/2026/11/22/nvidia-alpamayo-2-edge-2b-reasoning-vla-drive-thor/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Entwickler können die offenen Gewichte von Hugging Face laden und das Modell für eigene Fahrzeug- oder Robotik-Projekte feinabstimmen.",
+    "Forschende können die Begründungsspuren und den Bewertungsansatz AlpaJudge für eigene Auswertungen nutzen.",
+    "Wer mit Autonomie experimentiert, findet im Inferenzcode auf GitHub einen Ausgangspunkt für eigene Tests."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "AlpaSim: km zwischen Unfällen mit Eigenverschulden (NVIDIA-Angabe)",
+    "balken": [
+     {
+      "label": "Qwen-Drive-1.0 4B",
+      "wert": 0.25,
+      "anzeige": "0,25 km"
+     },
+     {
+      "label": "Alpamayo 2 Edge",
+      "wert": 15.15,
+      "anzeige": "15,15 km"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "2026-11-22",
+   "kennzahlen": [
+    {
+     "label": "Parameter",
+     "wert": "2B-Klasse (Herstellerangabe); 2,45B Grundgerüst + 0,2B Aktionsteil"
+    },
+    {
+     "label": "Eingabe",
+     "wert": "6 Kameras, 22 Bilder pro Beobachtung, 20 Eigenposen"
+    },
+    {
+     "label": "Ausgabe",
+     "wert": "64 Wegpunkte über 6,4 s"
+    },
+    {
+     "label": "Latenz (Herstellerangabe)",
+     "wert": "160–190 ms auf DRIVE AGX Thor"
+    },
+    {
+     "label": "Speicher (Modellkarte)",
+     "wert": "mind. 16 GB; 12,06 GiB Spitze auf 1x H100"
+    },
+    {
+     "label": "LingoQA (Herstellerangabe)",
+     "wert": "75,2"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "OpenMDW-1.1 (Gewichte), Apache 2.0 (Code)"
+    }
+   ],
+   "signal": "Ein offenes, kompaktes Reasoning-VLA zielt direkt auf Bordrechner im Auto statt auf Rechenzentren. Die Leistungsangaben stammen aber durchweg von NVIDIA und sind noch nicht unabhängig geprüft.",
+   "link": "https://www.marktechpost.com/2026/11/22/nvidia-alpamayo-2-edge-2b-reasoning-vla-drive-thor/",
+   "linkLabel": "Originalbericht lesen",
+   "id": "nvidia-alpamayo-2-edge-2b-reasoning-vla-fur-autos-mit-drive-",
+   "hinzugefuegt": "2026-11-22T20:50:40Z"
+  },
+  {
    "titel": "Billige KI-Inferenz-Anbieter: Zwischenhändler können Schlüssel stehlen und mitlesen",
    "kurz": "Forscher von Dragos zeigten mit rund zwei Millionen Testanfragen, dass Zwischenhändler und Modell-Marktplätze für KI-Anfragen Zugangsschlüssel abgreifen und Kundenanfragen lesen können. OpenRouter entfernte daraufhin drei Anbieter und widerrief die ZDR-Freigabe für 125 Endpunkte.",
    "artikel": [
@@ -22893,8 +23072,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-22T14:44:04Z",
-  "neueFunde": 4,
+  "letzterScan": "2026-11-22T20:50:40Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-21T23:57:21Z"
  }
 }
