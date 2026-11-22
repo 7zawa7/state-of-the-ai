@@ -4475,6 +4475,187 @@
  ],
  "radar": [
   {
+   "titel": "Billige KI-Inferenz-Anbieter: Zwischenhändler können Schlüssel stehlen und mitlesen",
+   "kurz": "Forscher von Dragos zeigten mit rund zwei Millionen Testanfragen, dass Zwischenhändler und Modell-Marktplätze für KI-Anfragen Zugangsschlüssel abgreifen und Kundenanfragen lesen können. OpenRouter entfernte daraufhin drei Anbieter und widerrief die ZDR-Freigabe für 125 Endpunkte.",
+   "artikel": [
+    "## Was die Forscher getestet haben",
+    "Die Sicherheitsforscher von Dragos schickten rund zwei Millionen KI-Anfragen mit gefälschten Zugangsdaten an KI-Anbieter. Die Tests liefen von Juli bis November 2026. Dabei fanden sie mindestens drei kompromittierte Anbieter, bei denen Angreifer aktiv Daten abgriffen. Keiner der drei hatte den Angriff bemerkt, bis Dragos ihn meldete.",
+    "## Gestohlene Schlüssel und Marktplatz-Wiederverkäufer",
+    "Beim größten Vorfall sammelten Angreifer hunderte AWS-Schlüssel, darunter auch aus Anfragen, die der Anbieter bereits abgelehnt hatte. Teilweise testeten sie die Schlüssel innerhalb von Stunden, durchsuchten S3-Speicher und versuchten, dauerhaften Zugang einzurichten. Ein Angreifer nutzte außerdem ARTEX, ein KI-gestütztes Angriffswerkzeug. Auch Wiederverkäufer auf Modell-Marktplätzen lasen Kundenanfragen mit. Dafür brauchten sie keine Sicherheitslücke: Es genügte, ein Modell zum niedrigsten Preis anzubieten und das Logging einzuschalten.",
+    "## Datenschutzeinstellungen wurden oft ignoriert",
+    "Einstellungen wie „Zero Data Retention“ (ZDR), also die Zusage, Daten nicht zu speichern, wurden laut Dragos häufig nicht eingehalten. Nach Angaben der Forscher griff ein chinesisches KI-Labor auf die geheimen Test-URLs in mehr als der Hälfte aller Anfragen zu, selbst wenn diese über US-Anbieter liefen. Auch große US-Anbieter hielten ihre eigenen Richtlinien nicht ein. Ein Link tauchte 24 Tage nach der Anfrage in einem internen Chat des Dienstes Feishu (international als Lark bekannt) auf.",
+    "## Reaktion von OpenRouter",
+    "OpenRouter entfernte drei Anbieter von seiner Plattform und widerrief die ZDR-Freigabe für 125 Endpunkte, teils wegen der Forschungsergebnisse, teils vorsorglich. Betroffene Nutzer wurden per E-Mail gewarnt, dass Dritte Anfragen an MiniMax-Modelle gelesen haben könnten.",
+    "## Zwischenhändler als Schwachstelle",
+    "KI-Router wie OpenRouter bieten eine einzige Schnittstelle für Modelle verschiedener Firmen. Anfragen werden an einen Pool von Anbietern weitergeleitet, manchmal über mehrere Stationen. Laut Dragos kann jede Station die gesamte Anfrage und Antwort lesen. Dragos rät Unternehmen, keine Zugangsdaten über Zwischenhändler zu senden, das Routing selbst zu steuern, ihre Datenschutzeinstellungen zu prüfen und sogenannte Canary-Tokens zu verwenden. Das sind gefälschte Zugangsdaten, die den Einsatz durch Unbefugte sofort verraten."
+   ],
+   "quellen": [
+    {
+     "titel": "Security researchers show how cheap AI inference providers steal keys and snoop on users – The Decoder",
+     "url": "https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Prüfen, ob eigene KI-Dienste über Zwischenhändler laufen und welcher Anbieter die Anfragen tatsächlich verarbeitet.",
+    "Keine Passwörter oder API-Schlüssel in Prompts einfügen.",
+    "Datenschutzeinstellungen wie Zero Data Retention beim Anbieter kontrollieren und nicht nur vertrauen."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "dragos-test",
+    "zeilen": [
+     "> 2.000.000 Testanfragen mit Fake-Zugangsdaten",
+     "✓ 3 kompromittierte Anbieter gefunden",
+     "⚠ Hunderte AWS-Schlüssel abgegriffen",
+     "- 3 Anbieter entfernt (OpenRouter)",
+     "+ ZDR für 125 Endpunkte widerrufen",
+     "● Status: Untersuchung laufend"
+    ]
+   },
+   "datum": "2026-11-17",
+   "quelle": "Fachpresse",
+   "kennzahlen": [
+    {
+     "label": "Testanfragen",
+     "wert": "ca. 2 Mio."
+    },
+    {
+     "label": "Kompromittierte Anbieter",
+     "wert": "mindestens 3"
+    },
+    {
+     "label": "Entfernte Endpunkte bei OpenRouter",
+     "wert": "125"
+    },
+    {
+     "label": "Zeitraum der Tests",
+     "wert": "Juli bis November 2026"
+    }
+   ],
+   "signal": "Zwischenhändler und Marktplätze für KI-Modelle sind ein zentrales Sicherheitsrisiko: Jede Station kann Anfragen mitlesen, unabhängig von Datenschutzzusagen.",
+   "link": "https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/",
+   "linkLabel": "Originalartikel bei The Decoder",
+   "id": "billige-ki-inferenz-anbieter-zwischenhandler-konnen-schlusse",
+   "hinzugefuegt": "2026-11-22T14:44:04Z"
+  },
+  {
+   "titel": "METR warnt: KI wird schneller besser, als Experten Sicherheit zuverlässig prüfen können",
+   "kurz": "Die Forschungsorganisation METR sieht KI-Modelle bei Forschungsaufgaben rasant zulegen, zugleich wird ihre Leistung schwerer messbar. Aktuelle öffentliche Daten reichen nach METR-Angaben nicht aus, um eine drastische Beschleunigung der KI-Forschung auszuschließen.",
+   "artikel": [
+    "Die Forschungsorganisation METR warnt, dass sich KI-Modelle bei Aufgaben aus der KI-Forschung schnell verbessern und dass sich diese Fortschritte immer schwerer messen lassen. Laut METR reichen die aktuell öffentlich verfügbaren Daten nicht aus, um eine drastische Beschleunigung der KI-Forschung in den kommenden Jahren auszuschließen. Menschen könnten dann Risiken neuer KI-Systeme womöglich nicht mehr verlässlich verstehen, bewerten und darauf reagieren.",
+    "## Was METR gemessen hat",
+    "Bei klar definierten Programmier- und Rechenaufgaben mit direktem Feedback schlagen die Modelle laut METR erfahrene Fachleute meist. Gegen große Gruppen von Spitzenexperten haben sie sich jedoch noch nicht durchgesetzt. Bei Aufgaben, die Menschen länger dauern, verdoppelt sich die Aufgabenlänge, die die Modelle bewältigen können, etwa alle 3,6 Monate. Eine einfache Hochrechnung dieser Daten sieht eine 50-Prozent-Erfolgsquote bei den längsten, 200 Stunden dauernden Aufgaben bis Juli 2027 vor. Die Analyse zeigt den stetigen Anstieg der Fähigkeiten führender Modelle bis hin zu Opus 5.5 und GPT-6 Astra; dabei handelt es sich um Modellnamen, wie sie im Artikel genannt werden.",
+    "## Wo die Modelle noch schwächeln",
+    "Schwierigkeiten haben die Systeme laut METR mit offenen Fragen, bei denen es kein sofortiges Feedback gibt und echtes Urteilsvermögen gefragt ist. Auch Situationen, die sich für das Training schwer nachbilden lassen, bereiten ihnen Probleme. Zudem warnt die Organisation, dass gängige, leicht durchzuführende Tests die Leistung in realen Anwendungen überschätzen könnten, weil Entwickler die Modelle in sehr ähnlichen Testumgebungen trainieren.",
+    "## Einordnung",
+    "Die Warnung betrifft also weniger einzelne Ergebnisse als die Frage, ob Prüfmethoden mit der Entwicklung Schritt halten. METR selbst betont, dass die Tests die Fähigkeiten auch unterschätzen oder überschätzen können; verlässlich ausschließen lässt sich eine schnelle Beschleunigung mit den vorliegenden Daten nach Angaben der Organisation nicht."
+   ],
+   "quellen": [
+    {
+     "titel": "AI is getting better faster than experts can reliably test whether new systems are safe, METR warns – The Decoder",
+     "url": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Lies die Originalanalyse von METR, wenn du verstehen willst, wie Fähigkeiten von KI-Modellen gemessen werden.",
+    "Achte bei KI-Werkzeugen darauf, ob Herstellerangaben aus Tests stammen, die dem realen Einsatz nahekommen.",
+    "Verfolge, ob Prüforganisationen neue Testverfahren für offene, schwer messbare Aufgaben entwickeln."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "2026-11-22",
+   "kennzahlen": [
+    {
+     "label": "Verdopplungszeit der Aufgabenlänge",
+     "wert": "3,6 Monate"
+    },
+    {
+     "label": "Ziel-Aufgabenlänge (50-Prozent-Erfolg)",
+     "wert": "200 Stunden bis Juli 2027 (Hochrechnung)"
+    }
+   ],
+   "signal": "Fähigkeiten steigen schneller, als sich Sicherheit verlässlich prüfen lässt. METR nennt die Hochrechnung ausdrücklich als naive Extrapolation.",
+   "link": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/",
+   "linkLabel": "Originalartikel bei The Decoder",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Aufgabenlänge, die Modelle bewältigen (Verdopplungszeit)",
+    "balken": [
+     {
+      "label": "Verdopplung alle 3,6 Monate",
+      "wert": 1,
+      "anzeige": "1x"
+     },
+     {
+      "label": "nach 3,6 Monaten",
+      "wert": 2,
+      "anzeige": "2x"
+     },
+     {
+      "label": "nach 7,2 Monaten",
+      "wert": 4,
+      "anzeige": "4x"
+     }
+    ]
+   },
+   "id": "metr-warnt-ki-wird-schneller-besser-als-experten-sicherheit-",
+   "hinzugefuegt": "2026-11-22T14:44:04Z"
+  },
+  {
+   "titel": "OpenAI veröffentlicht neue Prompt-Vorlagen für GPT-6.2 Astra und Sol",
+   "kurz": "OpenAI hat Prompt-Vorlagen für GPT-6.2 Astra und Sol veröffentlicht, die kurze Antworten und unnötige Rückfragen eindämmen sollen. Zusätzlich ändert sich die API: Wer die Gesprächshistorie bearbeitet, kann frühere Denkschritte verlieren.",
+   "artikel": [
+    "## Kürzere Antworten als Standard",
+    "Laut OpenAI antworten GPT-6.2 Astra und Sol standardmäßig knapper und direkter als frühere Modelle. Entwickler, die umstellen, sollten Anweisungen wie „be concise“ deshalb überprüfen. Die Vorlagen für den Einsatz als Kollege empfehlen, die Begriffe von Nutzer und Quelle zu übernehmen, aktive Sprache zu verwenden und die wichtigsten Punkte nach vorne zu stellen.",
+    "## Annahmen statt Rückfragen",
+    "Laut Hersteller stellte GPT-6.2 bei unklarer Absicht manchmal einen nächsten Schritt vor und wartete dann auf Bestätigung. Die Vorlage weist das Modell an, erlaubte Schritte selbst auszuführen und reversible Annahmen zu kennzeichnen. Nachfragen sollen nur bei größeren Änderungen des Auftrags, echten Blockaden, Entscheidungen der Nutzer oder unumkehrbaren Aktionen erfolgen.",
+    "## Schlankerer Code",
+    "OpenAI gibt an, dass GPT-6.2 effizienteren Code schreibt. Die Vorlage verlangt, vorhandene Logik wiederzuverwenden, unnötige Hilfsfunktionen zu vermeiden und neue Tests nur auf Wunsch oder bei konkreten Regressionen hinzuzufügen. Kürzere Zeilen oder Variablennamen seien dabei kein Ersatz für Einfachheit.",
+    "## Änderungen in der API",
+    "Laut OpenAI verwirft die Responses API frühere Denkinhalte, wenn Entwickler die Gesprächshistorie bearbeiten, zwischen bestimmten Modellen wechseln oder Endnutzer bzw. Organisation ändern. Das kann die Antwortqualität senken und den Token-Verbrauch erhöhen. Für neue Integrationen empfiehlt OpenAI die Reasoning-Stufe „medium“, bestehende Setups mit „none“ oder „minimal“ sollen auf „low“ wechseln. Parameter wie temperature und top_p werden nicht mehr unterstützt."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI shares new prompting tips for GPT-6.2 Astra and Sol to fix brief answers and unnecessary questions",
+     "url": "https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Entwickler können ihre System-Prompts an GPT-6.2 anpassen, etwa indem sie Vorgaben wie „be concise“ prüfen.",
+    "Wer eine Integration betreibt, kann die Reasoning-Stufe laut Empfehlung auf „medium“ bzw. „low“ setzen und Änderungen am Gesprächsverlauf vermeiden."
+   ],
+   "quelle": "Fachpresse",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Empfohlene Reasoning-Stufe für neue Integrationen",
+     "wert": "medium"
+    },
+    {
+     "label": "Empfohlene Stufe für bisherige none/minimal-Setups",
+     "wert": "low"
+    }
+   ],
+   "signal": "Herstellerangabe: OpenAI empfiehlt, Prompts bei GPT-6.2 neu zu prüfen, da sich Antwortstil, Rückfrageverhalten und API-Parameter gegenüber früheren Modellen ändern.",
+   "link": "https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/",
+   "linkLabel": "Originalartikel bei The Decoder",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "GPT-6.2 Prompt-Check",
+    "zeilen": [
+     "> System-Prompt laden",
+     "⚠ „be concise“ prüfen",
+     "- temperature entfernen",
+     "+ Reasoning-Stufe: medium",
+     "● Status: Vorlagen bereit"
+    ]
+   },
+   "id": "openai-veroffentlicht-neue-prompt-vorlagen-fur-gpt-6-2-astra",
+   "hinzugefuegt": "2026-11-22T14:44:04Z"
+  },
+  {
    "titel": "Inkling 2 Mini: 26B-Modell mit geloopten Schichten läuft auf einem 32-GB-Mac",
    "kurz": "Thinking Machines hat Inkling 2 Mini veröffentlicht, ein offenes Modell mit 26,4 Mrd. Parametern, das seine mittleren Schichten mehrfach durchläuft. Laut Herstellerangaben läuft es lokal auf einem 32-GB-Mac oder einem DGX Spark.",
    "artikel": [
@@ -17628,6 +17809,73 @@
  ],
  "projekte": [
   {
+   "titel": "fast-anything: Nur die langsamen 5 % in Rust umschreiben",
+   "kurz": "Das Open-Source-Werkzeug fast-anything findet die zeitintensiven Funktionen einer Python-, Node-, Ruby- oder anderen Anwendung, lässt sie per Coding-Agent als Rust-Port neu schreiben und prüft das Ergebnis gegen echte Aufrufe. Laut Herstellerangabe sind die Ports erst aktiv, wenn alle Prüfungen bestehen.",
+   "artikel": [
+    "Das GitHub-Projekt EL4CTEO/fast-anything (laut Repository-Anzeige rund 1.060 Sterne) verfolgt einen klaren Grundsatz: Man muss nicht die ganze Anwendung in Rust neu schreiben, sondern nur die paar Funktionen, die den Großteil der Laufzeit verbrauchen. Laut Readme dauert eine komplette Neuschreibung Monate, dazu kommen lange Kompilierzeiten.",
+    "## So funktioniert es",
+    "Das Werkzeug profiliert die Anwendung (scan), wählt Funktionen nach Laufzeitanteil und Portierbarkeit aus und lässt einen Coding-Agenten nur diese Funktion nach Rust portieren (port). Anschließend wird der Port gegen bis zu 500 aufgezeichnete echte Aufrufe geprüft (verify). Erst danach wird er eingeschaltet (enable), und mit FAST_ANYTHING_DISABLE=1 läuft wieder das Original.",
+    "## Prüfung statt Bauchgefühl",
+    "Laut Readme fand die Prüfung in einem Fall 148 von 500 Aufrufen, bei denen ein Port nur Bytes statt Zeichen verglich. Zusätzlich leitet das Werkzeug Randfälle ab, etwa NaN, unendlich, leere oder sehr große Eingaben, und lässt das Original diese beantworten. Ein Port, der zwar korrekt, aber pro Aufruf langsamer ist, wird ebenfalls nicht aktiviert.",
+    "## Herstellerangaben zu Ergebnissen",
+    "Die folgenden Zahlen nennt der Hersteller im Readme (Messung auf einem Intel i5-10500 mit Windows 11; C und C++ auf einem Linux-Runner). Sie sind unabhängig nicht überprüft: Python-Fuzzy-Dedupe von 4,91 s auf 42 ms, TypeScript von 3,11 s auf 155 ms, PHP von 2,94 s auf 53 ms, Go von 3,02 s auf 144 ms. Bei Java ist der Gewinn laut Angabe kleiner, weil JVM-Start die Laufzeit mitbestimmt.",
+    "## Einordnung",
+    "Laut Readme portiert das Werkzeug möglichst die äußerste Schleife statt kleiner Hilfsfunktionen, damit die Anwendung nur einmal statt millionenfach in Rust wechselt. Unterstützt werden laut Angabe Python, JavaScript/TypeScript, Ruby, Java, Go, PHP, C, C++ und C#. Das Projekt steht unter MIT-Lizenz."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: EL4CTEO/fast-anything",
+     "url": "https://github.com/EL4CTEO/fast-anything"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Einen eigenen langsamen Python- oder Node-Skript mit fast-anything profilieren, um zu sehen, welche Funktion die meiste Zeit kostet.",
+    "Die Installation per npm (npm i -g @el4cteo/fast-anything) testen und den Befehl fast-anything scan auf ein eigenes Projekt anwenden.",
+    "Die Benchmark-Beispiele im Ordner examples nachstellen, um die Herstellerangaben selbst zu prüfen."
+   ],
+   "ausprobieren": {
+    "prompt": "fast-anything scan -- python app.py",
+    "tool": "fast-anything",
+    "url": "https://github.com/EL4CTEO/fast-anything"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "fast-anything",
+    "zeilen": [
+     "> fast-anything scan -- python app.py",
+     "● Profiliere Anwendung",
+     "✓ Funktion für Rust-Port gefunden",
+     "⚠ Prüfung läuft gegen aufgezeichnete Aufrufe",
+     "+ Port aktiviert nach bestandenen Tests"
+    ]
+   },
+   "macher": "EL4CTEO",
+   "branche": "Entwicklerwerkzeuge",
+   "jahr": "",
+   "tools": [
+    "Rust",
+    "Python",
+    "Node.js",
+    "Ruby",
+    "Coding-Agenten (Claude, Codex)"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne (laut Anzeige)",
+     "wert": "1.061"
+    },
+    {
+     "label": "Python-Fuzzy-Dedupe (Herstellerangabe)",
+     "wert": "4,91 s → 42 ms"
+    }
+   ],
+   "link": "https://github.com/EL4CTEO/fast-anything",
+   "linkLabel": "Zum Repository",
+   "id": "fast-anything-nur-die-langsamen-5-in-rust-umschreiben",
+   "hinzugefuegt": "2026-11-22T14:44:04Z"
+  },
+  {
    "titel": "KPMG testet über 100 KI-Agenten in Prüfung eines FTSE-250-Unternehmens",
    "kurz": "KPMG UK hat im Projekt „Project Exponential“ mehr als 100 KI-Agenten bei der Prüfung eines börsennotierten Unternehmens eingesetzt. Laut KPMG stellten die Agenten teils tiefere Nachfragen als das menschliche Prüfteam.",
    "artikel": [
@@ -22645,8 +22893,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-22T06:22:09Z",
-  "neueFunde": 3,
+  "letzterScan": "2026-11-22T14:44:04Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-11-21T23:57:21Z"
  }
 }
