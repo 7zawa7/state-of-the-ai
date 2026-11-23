@@ -1,6 +1,59 @@
 {
  "news": [
   {
+   "titel": "OpenAI veröffentlicht Perplexity-Werte und fordert gemeinsame Grenzen für KI-Labore",
+   "kurz": "OpenAI-Chefwissenschaftler Jakub Pachocki hat interne Perplexity-Werte der GPT-Reihe veröffentlicht und schlägt vor, die Kennzahl als Branchenstandard zu nutzen. Er plädiert zudem dafür, dass führende Labore sich auf gemeinsame Grenzen einigen, bis bessere Aufsichtsmethoden existieren.",
+   "artikel": [
+    "Laut einem Bericht von THE DECODER hat OpenAI-Chefwissenschaftler Jakub Pachocki erstmals interne Perplexity-Werte für die gesamte GPT-Reihe veröffentlicht. Die Angaben reichen bis zu einem nicht veröffentlichten Modell jenseits von GPT-6. Die Werte stammen aus einem Blogbeitrag von OpenAI; die Angaben selbst sind daher Herstellerangaben.",
+    "## Was Perplexity misst",
+    "Perplexity ist eine Kennzahl aus der KI-Forschung, die angibt, wie gut ein vortrainiertes Basismodell das nächste Token in einem Text vorhersagt. Niedrige Werte bedeuten genauere Vorhersagen. Ein Wert von etwa 2 entspricht grob einer Unsicherheit, als müsste das Modell zwischen zwei gleich wahrscheinlichen Optionen wählen. Ein Token ist dabei ein Textbaustein, etwa ein Wort oder Wortteil.",
+    "## Fähigkeiten bei bestimmten Schwellen",
+    "Pachocki berichtet, dass viele Fähigkeiten moderner Modelle erstaunlich genau bestimmten Perplexity-Werten zuzuordnen sind. Er nutzt dafür die logarithmische Skala Log-Perplexity, bei der niedrigere Werte ebenfalls besser sind. Demnach ermöglichte GPT-3.5 bei etwa 0,99 flüssige Konversation, was die Grundlage des ursprünglichen ChatGPT bildete. Bei etwa 0,91 erschloss GPT-4 schrittweises Schlussfolgern, das sogenannte Chain-of-Thought-Reasoning. Unter 0,8 entstanden laut Pachocki transformative Fähigkeiten in Cybersicherheit und Mathematik.",
+    "## Mathematische Durchbrüche",
+    "Seit mehr als einem Jahr füttert OpenAI seine Modelle mit offenen Mathematikproblemen. Ab einem Wert von etwa 0,76 erzielten die Modelle laut Pachocki Durchbrüche. Zu den genannten Ergebnissen gehört eine Lösung des Navier-Stokes-Problems, eines der Millennium-Probleme, die aber noch nicht vollständig verifiziert ist. Pachocki hält es für möglich, dass auch die Deep-Learning-Forschung selbst bis 2027 ähnliche Sprünge erlebt.",
+    "## Warnung vor schwindender Aufsicht",
+    "Zwischen 0,68 und 0,7 erwartet Pachocki weitere transformative Fähigkeiten, die er nicht vorhersagen kann. Gleichzeitig warnt er, dass Standardmethoden zur Alignment-Prüfung, also der Kontrolle, ob ein Modell menschlichen Anweisungen folgt, an Wirkung verlieren dürften. Er fordert daher, dass Frontier-Labore gemeinsame Grenzen vereinbaren, die niemand überschreitet, bis die KI-Überwachung einen klar definierten Meilenstein erreicht.",
+    "## Grenzen der Kennzahl",
+    "Unterschiedliche Labore nutzen verschiedene Testdatensätze, weshalb direkte Vergleiche schwerer fallen. Die Kennzahl misst keine Leistung bei nützlichen Aufgaben direkt. Pachocki betont zudem, dass er die Untergrenze nicht kennt. Anthropic hatte im Juni eine verifizierbare globale Entwicklungspause ins Spiel gebracht, und OpenAI hatte im September laut Bericht das Training seiner leistungsfähigsten internen Modelle vorübergehend gestoppt."
+   ],
+   "quellen": [
+    {
+     "titel": "OpenAI warns that upcoming AI systems could outpace safety checks and urges rivals to agree on shared limits – THE DECODER",
+     "url": "https://the-decoder.com/openai-warns-that-upcoming-ai-systems-could-outpace-safety-checks-and-urges-rivals-to-agree-on-shared-limits/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Verfolgen, wie Fachleute Fortschritt in KI messen wollen, um Hypes von belegbaren Fortschritten zu unterscheiden.",
+    "Die Debatte um gemeinsame Sicherheitsgrenzen für KI-Labore als Grundlage für eigene Diskussionen oder Texte nutzen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Log-Perplexity nach Modell (laut OpenAI)",
+    "balken": [
+     {
+      "label": "GPT-3.5",
+      "wert": 0.99,
+      "anzeige": "~0,99 flüssige Konversation"
+     },
+     {
+      "label": "GPT-4",
+      "wert": 0.91,
+      "anzeige": "~0,91 Chain-of-Thought"
+     },
+     {
+      "label": "Mathe-Durchbruch",
+      "wert": 0.76,
+      "anzeige": "~0,76 Durchbrüche"
+     }
+    ]
+   },
+   "bereich": "Text",
+   "datum": "2026-11-01",
+   "id": "openai-veroffentlicht-perplexity-werte-und-fordert-gemeinsam",
+   "hinzugefuegt": "2026-11-23T21:29:13Z"
+  },
+  {
    "titel": "Lean-Community bestätigt Beweis der Riemann-Hypothese von Levent Alpöge",
    "kurz": "Die Lean- und Mathlib-Community hat einen von Levent Alpöge veröffentlichten Beweis der Riemann-Hypothese offiziell als korrekt bestätigt. Die Prüfung erfolgte mit dem Beweisprüfer Lean, unabhängig von mehreren Personen.",
    "artikel": [
@@ -4513,6 +4566,94 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Eigene KI zu Hause: Leitfaden für lokale Modelle mit Unsloth auf Windows",
+   "kurz": "Ein Praxisleitfaden zeigt, wie man mit der Desktop-App Unsloth und einem quantisierten Modell wie Qwen3.8-27B eine lokale KI auf einem Windows-PC mit starker Grafikkarte betreibt. Das Setup dauert laut Autor etwa 10 bis 15 Minuten, ohne Terminal-Befehle.",
+   "artikel": [
+    "Der Autor beschreibt, wie er eine lokale KI als Ersatz für Cloud-Dienste wie ChatGPT oder Claude aufgesetzt hat. Als Motive nennt er Datenschutz, steigende Kosten und Nutzungslimits. Zusätzlich verweist er auf Modelle mit offenen Gewichten, sogenannte Open-Weight-Modelle, deren Gewichte frei verfügbar sind.",
+    "## Was man braucht",
+    "Nötig sind ein Windows-PC mit Grafikkarte, die kostenlose Desktop-App Unsloth und ein Modell, das in den Speicher der Karte passt. Der Autor nutzt eine RTX 5090 mit 32 GB VRAM. VRAM ist der Grafikspeicher, der die Größe des lauffähigen Modells bestimmt.",
+    "## Modell passend zur Grafikkarte wählen",
+    "Als grobe Orientierung nennt der Leitfaden Modellgrößen je nach VRAM: 8 bis 12 GB für kleinere Modelle mit etwa 9 bis 12 Milliarden Parametern, 32 GB für Modelle um 27 bis 35 Milliarden Parameter. Ein Modell kann dabei quantisiert werden, also mit geringerer Genauigkeit der Gewichte gespeichert werden. Das spart Speicher, kann aber die Qualität mindern. Je nach Aufgabe fällt dieser Verlust unterschiedlich stark auf.",
+    "Der Autor wählt Qwen3.8-27B mit 4-Bit-Quantisierung und 128K Kontextgröße. Der Kontext bestimmt, wie viel vom Gespräch das Modell gleichzeitig berücksichtigen kann.",
+    "## Inkling 2 Mini als Alternative",
+    "Laut Leitfaden hat Thinking Machines Lab das Modell Inkling 2 Mini am 17. November veröffentlicht. Es hat 26,4 Milliarden Parameter, steht unter der Apache-2.0-Lizenz, unterstützt Bilder und hat ein Kontextfenster von 1 Million Tokens. Die von Unsloth empfohlene Datei UD-Q4_K_XL ist 17,6 GB groß und passt laut Autor auf eine 32-GB-Karte. Inkling 2 Small nennt er für diese Karte dagegen als nicht lauffähig.",
+    "Die Angaben zu Modellgrößen und Speicherbedarf stammen aus dem Leitfaden des Anbieters GPU Partner und sind daher als Herstellerangaben zu verstehen."
+   ],
+   "quellen": [
+    {
+     "titel": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth (GPU Partner)",
+     "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50603845"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Auf einem eigenen Windows-PC mit ausreichend VRAM ein privates Chat-Modell für das Heimnetzwerk einrichten.",
+    "Rechenintensive Aufgaben wie Recherche, Datensammlung oder Programmierhilfe lokal erledigen, ohne Nutzungslimits.",
+    "Mit kleineren Modellen für 8 bis 12 GB VRAM experimentieren und die Qualität bei verschiedenen Quantisierungen vergleichen."
+   ],
+   "ausprobieren": {
+    "prompt": "Fasse mir die Vor- und Nachteile von 4-Bit-Quantisierung für ein lokales Sprachmodell in drei Stichpunkten zusammen.",
+    "tool": "Unsloth Desktop",
+    "url": "https://unsloth.ai"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "VRAM-Bedarf Inkling 2 Mini (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "2-Bit",
+      "wert": 11,
+      "anzeige": "10–11 GB"
+     },
+     {
+      "label": "3-Bit",
+      "wert": 15,
+      "anzeige": "13–15 GB"
+     },
+     {
+      "label": "4-Bit (empfohlen)",
+      "wert": 18,
+      "anzeige": "17–18 GB"
+     },
+     {
+      "label": "8-Bit (verlustfrei)",
+      "wert": 24,
+      "anzeige": "24 GB"
+     }
+    ]
+   },
+   "tag": "Lokale KI",
+   "quelle": "Hacker News",
+   "datum": "2026-11-22",
+   "kennzahlen": [
+    {
+     "label": "Qwen3.8-27B, Kontext",
+     "wert": "128K bei 4-Bit auf 32 GB VRAM"
+    },
+    {
+     "label": "Inkling 2 Mini UD-Q4_K_XL",
+     "wert": "17,6 GB"
+    },
+    {
+     "label": "Inkling 2 Mini Parameter",
+     "wert": "26,4 Mrd."
+    },
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "725"
+    }
+   ],
+   "signal": "Der Leitfaden zeigt, dass lokale KI auf Consumer-Hardware mit einfachen Desktop-Tools inzwischen für Einsteiger machbar ist. Die Angaben stammen vom Anbieter GPU Partner und sind nicht unabhängig geprüft.",
+   "link": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+   "linkLabel": "Zum Leitfaden",
+   "id": "eigene-ki-zu-hause-leitfaden-fur-lokale-modelle-mit-unsloth-",
+   "hinzugefuegt": "2026-11-23T21:29:13Z"
+  },
   {
    "titel": "Meta TLX: GPU-Steuerung auf Warp-Group-Ebene für Triton",
    "kurz": "Meta hat TLX vorgestellt, eine Erweiterung für Triton, mit der Python-Kernel gezielt Warp-Groups, Barrieren, TMA und Cluster steuern können. Laut Meta-Angaben läuft es in Produktion auf Hopper-, Blackwell- und AMD-MI350-GPUs.",
@@ -18156,6 +18297,77 @@
  ],
  "projekte": [
   {
+   "titel": "safe-anything: Rust-Scanner sucht Sicherheitslücken, Geheimnisse und Agenten-Konfigurationen",
+   "kurz": "safe-anything ist ein Kommandozeilen-Werkzeug in Rust, das Code, Geheimnisse, Konfigurationen und Abhängigkeiten auf Sicherheitslücken prüft. Laut Repository ist es auch als MCP-Server für KI-Agenten nutzbar.",
+   "artikel": [
+    "Das Open-Source-Projekt safe-anything von erKam Yaman steht auf GitHub und hat laut Seite 456 Sterne. Es ist nach Angaben des Repositories vollständig in Rust geschrieben und soll mit einem einzigen Befehl Schwachstellen wie XSS und SQL-Injection, geleakte Zugangsdaten, riskante Mobil- und Cloud-Konfigurationen sowie verwundbare Abhängigkeiten finden.",
+    "## Was geprüft wird",
+    "Laut Readme deckt das Werkzeug 74 Regeln ab. Dazu gehören Injection-Muster in neun Sprachen und SQL, Schlüssel für Cloud- und KI-Dienste, Einstellungen für Android, iOS, Docker, GitHub Actions, Kubernetes und Terraform sowie Abhängigkeiten, die gegen die Datenbank OSV.dev geprüft werden. Jeder Fund soll Zeile, Begründung und Korrektur nennen. Die Ausgabe von Geheimnissen ist laut Readme geschwärzt.",
+    "## KI-Agenten als Prüfobjekt",
+    "Ein besonderer Schwerpunkt liegt auf den Einstellungen von KI-Agenten wie Claude Code, Codex, Cursor, Gemini und OpenCode. Geprüft werden unter anderem Berechtigungen wie bypassPermissions, MCP-Server mit ungepinnten Paketen und Skripte in Hooks, die etwa curl mit einer Pipe an sh übergeben. Das Werkzeug kann laut Readme auch als MCP-Server eingebunden werden, sodass ein Agent vor einem Commit selbst scannen kann.",
+    "## Bedienung",
+    "Der Aufruf erfolgt über cargo install safe-anything oder npx safe-anything. Das Werkzeug läuft ohne Konto und ohne Upload. Es beendet sich mit Fehlercode 1, wenn etwas Hohes oder Kritisches gefunden wird, und eignet sich daher für Pre-Commit- oder CI-Prüfungen. Für GitHub-Code-Scanning gibt es eine SARIF-Ausgabe.",
+    "## Herstellerangaben",
+    "Die Angabe, dass ein Lauf auf OWASP Juice Shop 1.195 Dateien mit 67 Funden prüfte, stammt laut Readme vom Autor selbst. Die Messung lief mit einem Release-Build auf einem Apple M4 im Offline-Modus, und die Funde wurden nach Angaben des Autors von Hand gelesen. Diese Zahlen sind Herstellerangaben und nicht unabhängig überprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub - erkamyaman/safe-anything",
+     "url": "https://github.com/erkamyaman/safe-anything"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Vor dem nächsten Commit eines eigenen Projekts den Scanner lokal laufen lassen, um fest eingecheckte Schlüssel oder .env-Fehler zu finden.",
+    "Eine fremde Skill- oder MCP-Erweiterung vor der Installation mit dem Scanner prüfen lassen.",
+    "Die Ausgabe als SARIF in GitHub-Code-Scanning einbinden, falls ein eigenes Repository auf GitHub liegt."
+   ],
+   "ausprobieren": {
+    "prompt": "safe-anything . --severity medium",
+    "tool": "safe-anything",
+    "url": "https://github.com/erkamyaman/safe-anything"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "safe-anything",
+    "zeilen": [
+     "> safe-anything . --severity medium",
+     "✓ Scan abgeschlossen",
+     "⚠ Fund: hartcodierter Schlüssel",
+     "- .env ist committed",
+     "+ Korrektur wird angezeigt",
+     "● Status: Exit-Code 1 bei hohen Funden"
+    ]
+   },
+   "macher": "erKam Yaman",
+   "branche": "Software-Sicherheit / Entwicklerwerkzeuge",
+   "jahr": "",
+   "tools": [
+    "Rust",
+    "OSV.dev",
+    "SARIF",
+    "MCP"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "456"
+    },
+    {
+     "label": "Regeln",
+     "wert": "74"
+    },
+    {
+     "label": "Sprachen (Code)",
+     "wert": "9 plus SQL"
+    }
+   ],
+   "link": "https://github.com/erkamyaman/safe-anything",
+   "linkLabel": "Zum Repository",
+   "id": "safe-anything-rust-scanner-sucht-sicherheitslucken-geheimnis",
+   "hinzugefuegt": "2026-11-23T21:29:13Z"
+  },
+  {
    "titel": "Pi Bot: Open-Source-KI-Agententeam für den Desktop",
    "kurz": "Pi Bot ist eine quelloffene, lokal laufende Desktop-App, in der benannte KI-Bots am eigenen Rechner arbeiten, auch gemeinsam in Gruppenchats. Riskante Schritte warten auf Freigabe.",
    "artikel": [
@@ -23308,8 +23520,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-23T09:10:07Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-23T21:29:13Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-23T01:09:38Z"
  }
 }
