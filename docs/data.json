@@ -4475,6 +4475,67 @@
  ],
  "radar": [
   {
+   "titel": "OpenAI verschärft Schutz gegen adversariale Distillation",
+   "kurz": "OpenAI beschreibt, wie es unautorisiertes Abschöpfen von Modellfähigkeiten erkennt und blockiert. Besonders geschützt werden die internen Denkschritte der Modelle, weil sie als Trainingsdaten für andere Modelle sehr wertvoll sind.",
+   "artikel": [
+    "Mit wachsender Leistungsfähigkeit von Spitzenmodellen werden Schutzmechanismen immer wichtiger. Bei der sogenannten adversarialen Distillation versuchen Akteure, die Ausgaben eines fremden Modells ohne Erlaubnis zu nutzen, um ein eigenes Modell mit ähnlichen Fähigkeiten zu trainieren. Dieses Modell wird dann oft ohne vergleichbare Schutzmaßnahmen betrieben.",
+    "Distillation bezeichnet eine verbreitete Trainingstechnik, bei der ein Modell aus Daten lernt, die ein anderes Modell erzeugt hat. Ein Schüler-Modell kann dabei Antworten, Begründungswege oder Bewertungen des Lehrer-Modells übernehmen.",
+    "## Warum das ein Sicherheitsproblem ist",
+    "OpenAI sieht in unautorisierter Distillation neben Fragen des geistigen Eigentums ernste Sicherheitsrisiken. Ein Schüler-Modell könnte Fähigkeiten etwa in Cybersicherheit oder Biologie übernehmen, ohne die Schutzvorgaben des Originals zu erben. Das Unternehmen nennt ausdrücklich den Fall, dass ein solches Modell bei Cyberangriffen helfen könnte, die das Original abgelehnt hätte.",
+    "## Denkspuren als besonders sensible Daten",
+    "Die sogenannte Chain-of-Thought, also die internen Zwischenschritte eines Modells auf dem Weg zur Antwort, können Informationen enthalten, die in der Endantwort fehlen. OpenAI hat deshalb die Abwehr gegen die Extraktion dieser geschützten Denkspuren verstärkt. In einer internen Auswertung mit automatisiertem Red-Teaming sank die durchschnittliche Erfolgsquote von Angriffen laut Unternehmen von 54,0 Prozent bei GPT-6 Astra mit ursprünglichen Schutzmaßnahmen auf 0,2 Prozent bei GPT-6.2 Astra mit aktualisierten Schutzmaßnahmen.",
+    "## Eigene Studie zur Cyber-Distillation",
+    "In einer internen Studie verglich OpenAI Schüler-Modelle, die auf exakte Denkspuren trainiert wurden, mit solchen, die nur Zusammenfassungen erhielten. Nach dem überwachten Feintuning schnitten die Modelle mit exakten Spuren im Allgemeinen besser ab. Nach einer kurzen Verstärkungslernphase lag das Modell mit exakten Spuren bei der größten getesteten Rechenbudgetstufe weiter vorn, bei kleineren Budgets dagegen das mit Zusammenfassungen. Das Unternehmen schließt daraus, dass der Schutz von Denkspuren die Übertragung von Cyberfähigkeiten begrenzen kann.",
+    "## Mehrstufige Abwehr",
+    "OpenAI kombiniert Schutz auf Anfrageebene mit Kampagnenerkennung. Dazu gehören adversariales Training, Eingabe- und Ausgabeklassifikatoren, Kontrollen auf API-Ebene sowie Untersuchungen koordinierter Extraktionsversuche. Erkenntnisse aus solchen Fällen fließen wiederum als Beispiele in das Training und Testen der Schutzmaßnahmen ein. Die Klassifikatoren sollen dabei auch Werkzeugaufrufe abdecken, über die Denkspuren ebenfalls preisgegeben werden könnten."
+   ],
+   "quellen": [
+    {
+     "titel": "Combatting adversarial distillation – OpenAI",
+     "url": "https://openai.com/index/combatting-adversarial-distillation"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Wer eigene Modelle trainiert, sollte prüfen, ob Ausgaben fremder Modelle ohne Lizenz verwendet werden.",
+    "Entwickler können die beschriebenen Ansätze wie Klassifikatoren und API-Kontrollen als Vorlage für eigene Schutzmaßnahmen betrachten.",
+    "Wer Modelle über eine API anbietet, kann auf Muster koordinierter Anfragen achten."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Angriffserfolg bei Denkspuren-Extraktion (laut OpenAI)",
+    "balken": [
+     {
+      "label": "GPT-6 Astra (ursprüngliche Schutzmaßnahmen)",
+      "wert": 54.0,
+      "anzeige": "54,0 %"
+     },
+     {
+      "label": "GPT-6.2 Astra (aktualisierte Schutzmaßnahmen)",
+      "wert": 0.2,
+      "anzeige": "0,2 %"
+     }
+    ]
+   },
+   "quelle": "Lab-Blog",
+   "datum": "2026-11-20",
+   "kennzahlen": [
+    {
+     "label": "Durchschnittliche Angriffserfolgsquote GPT-6 Astra (Herstellerangabe)",
+     "wert": "54,0 %"
+    },
+    {
+     "label": "Durchschnittliche Angriffserfolgsquote GPT-6.2 Astra (Herstellerangabe)",
+     "wert": "0,2 %"
+    }
+   ],
+   "signal": "Hersteller-Blog zeigt, dass Denkspuren als eigenes Schutzziel behandelt werden; die Zahlen stammen aus internen Tests von OpenAI.",
+   "link": "https://openai.com/index/combatting-adversarial-distillation",
+   "linkLabel": "Zum Originalbeitrag",
+   "id": "openai-verscharft-schutz-gegen-adversariale-distillation",
+   "hinzugefuegt": "2026-11-23T01:09:38Z"
+  },
+  {
    "titel": "KI-Coding-Agenten scheitern im simulierten Arbeitsalltag",
    "kurz": "Im Test einer simulierten Softwarefirma lösen KI-Coding-Agenten laut Bericht weniger als jede zehnte Aufgabe vollständig, obwohl sie isolierte Benchmarks fast meistern. Die Modelle arbeiten einzelne, klar abgegrenzte Aufgaben schnell ab, verlieren aber den Überblick, wenn sie eigenständig als Entwickler arbeiten sollen.",
    "artikel": [
@@ -17988,6 +18049,74 @@
  ],
  "projekte": [
   {
+   "titel": "Pi Bot: Open-Source-KI-Agententeam für den Desktop",
+   "kurz": "Pi Bot ist eine quelloffene, lokal laufende Desktop-App, in der benannte KI-Bots am eigenen Rechner arbeiten, auch gemeinsam in Gruppenchats. Riskante Schritte warten auf Freigabe.",
+   "artikel": [
+    "Pi Bot ist eine Desktop-App, in der ein Team benannter KI-Bots auf dem eigenen Computer arbeitet. Man chattet direkt mit einem Bot oder setzt mehrere in einen Gruppenchat. Die Bots planen, führen Befehle aus, bearbeiten Dateien und können im Web surfen. Jeder riskante Schritt wartet auf die Zustimmung des Nutzers.",
+    "## Bots, Gruppen und Ordner",
+    "Bots erhalten einen Namen, eine Rolle wie Entwickler, Rechercheur oder Übersetzer sowie eigene Modelle, Fähigkeiten, Rechte und ein Gedächtnis. In einer Gruppe koordiniert ein Koordinator den Plan, verteilt Schritte an die Mitglieder und sammelt die Ergebnisse. Der Nutzer bestätigt den Plan, bevor er läuft. Die Bots arbeiten nur in Ordnern, die man selbst auswählt. Alle Änderungen sind nachvollziehbar und sollen auf macOS über automatische Checkpoints wiederherstellbar sein.",
+    "## Freigaben und Sicherheit",
+    "Jeder Werkzeugaufruf läuft über eine zentrale Richtlinien-Engine. Befehle laufen in einer Sandbox, die laut Projekt auf das Paket @anthropic-ai/sandbox-runtime setzt. Freigaben, Befehle und ausgehende Daten werden in einem Audit-Log festgehalten. Geplante Aufgaben, ordnerbasierte und verbindungsbasierte Routinen sind ebenfalls vorgesehen.",
+    "## Modelle und Verbindungen",
+    "Angebunden werden lokale Modelle über Ollama, OpenRouter, eigene API-Schlüssel und unterstützte Abo-Anmeldungen. Außerdem nennt das Projekt Apps, MCP-Server (ein Standard, über den KI-Programme Werkzeuge einbinden), Skills und Wissensdatenbanken. Optional gibt es eine Android-App, Runner auf anderen Rechnern und ein Relay, das man selbst hosten kann.",
+    "## Datenschutz",
+    "Laut Herstellerangaben bleiben Chats, Dateien, Gedächtnis und Schlüssel lokal. Nur der gewählte Modellanbieter sieht die gesendeten Prompts. Pi Bot sagt von sich, keine Telemetrie zu enthalten. Weitere Verbindungen gibt es nur für Update-Prüfungen, Webseiten und Suchen der Bots sowie für Funktionen, die der Nutzer aktiviert.",
+    "## Hintergrund",
+    "Pi Bot basiert auf dem Agenten-Kern pi, der als npm-Abhängigkeit eingebunden ist. Das Projekt steht unter der Apache-Lizenz 2.0. Auf GitHub hat das Repository zum Zeitpunkt der Quelle 386 Sterne und 53 Forks. Die Software läuft laut Angaben auf macOS 13 oder neuer, Windows 10/11 und 64-Bit-Linux."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: w01fb0ss/PiBot",
+     "url": "https://github.com/w01fb0ss/PiBot"
+    },
+    {
+     "titel": "Pi Bot Website (Herstellerangabe)",
+     "url": "https://pibot.space"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Einen Bot als Entwickler oder Rechercheur mit einem eigenen Ordner einrichten und Änderungen vor der Übernahme prüfen.",
+    "Einen Gruppenchat mit mehreren Bots starten und den Plan vor dem Ausführen bestätigen.",
+    "Lokale Modelle über Ollama einbinden, damit Chats und Dateien auf dem eigenen Rechner bleiben."
+   ],
+   "ausprobieren": {
+    "prompt": "Lege einen Ordner für mein Projekt an und plane mit dem Rechercheur-Bot eine kurze Übersicht der Quellen zum Thema, bevor du etwas änderst.",
+    "tool": "Pi Bot",
+    "url": "https://pibot.space"
+   },
+   "vorschau": {
+    "szene": "agent",
+    "titel": "Gruppenchat"
+   },
+   "tag": "Open Source",
+   "macher": "w01fb0ss (GitHub-Nutzer; weitere Angaben im Material nicht vorhanden)",
+   "branche": "KI-Agenten / Desktop-Software",
+   "jahr": "<UNKNOWN>",
+   "tools": [
+    "pi (Agenten-Kern)",
+    "Electron",
+    "MCP",
+    "Ollama",
+    "OpenRouter",
+    "Android (React Native/Expo)"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "386"
+    },
+    {
+     "label": "Forks",
+     "wert": "53"
+    }
+   ],
+   "link": "https://github.com/w01fb0ss/PiBot",
+   "linkLabel": "Zum GitHub-Repository",
+   "id": "pi-bot-open-source-ki-agententeam-fur-den-desktop",
+   "hinzugefuegt": "2026-11-23T01:09:38Z"
+  },
+  {
    "titel": "fast-anything: Nur die langsamen 5 % in Rust umschreiben",
    "kurz": "Das Open-Source-Werkzeug fast-anything findet die zeitintensiven Funktionen einer Python-, Node-, Ruby- oder anderen Anwendung, lässt sie per Coding-Agent als Rust-Port neu schreiben und prüft das Ergebnis gegen echte Aufrufe. Laut Herstellerangabe sind die Ports erst aktiv, wenn alle Prüfungen bestehen.",
    "artikel": [
@@ -23072,8 +23201,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-22T20:50:40Z",
-  "neueFunde": 3,
-  "standAktualisiert": "2026-11-21T23:57:21Z"
+  "letzterScan": "2026-11-23T01:09:38Z",
+  "neueFunde": 2,
+  "standAktualisiert": "2026-11-23T01:09:38Z"
  }
 }
