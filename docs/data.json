@@ -1,6 +1,45 @@
 {
  "news": [
   {
+   "titel": "Lean-Community bestätigt Beweis der Riemann-Hypothese von Levent Alpöge",
+   "kurz": "Die Lean- und Mathlib-Community hat einen von Levent Alpöge veröffentlichten Beweis der Riemann-Hypothese offiziell als korrekt bestätigt. Die Prüfung erfolgte mit dem Beweisprüfer Lean, unabhängig von mehreren Personen.",
+   "artikel": [
+    "Die Lean- und Mathlib-Community hat bestätigt, dass der Beweis der Riemann-Hypothese von Levent Alpöge korrekt ist. In einer Stellungnahme schreibt die Community, man habe volles Vertrauen in den Beweis und gratuliere ihm zu diesem Erfolg.",
+    "Die Riemann-Hypothese gehört zu den berühmtesten ungelösten Problemen der Mathematik. Sie macht eine Aussage darüber, wie Primzahlen verteilt sind.",
+    "## Wie der Beweis geprüft wurde",
+    "Alpöge, ein Mathematiker aus Stanford, veröffentlichte den Beweis am 20. November 2026. Er umfasst 17 Millionen Zeilen Code, geschrieben in Lean. Lean ist ein Werkzeug, das mathematische Beweise maschinell auf Fehler prüft. Laut Beschreibung sind die Prüfprogramme so angelegt, dass sie einen fehlerhaften Beweis nachweislich nicht akzeptieren können.",
+    "Dutzende Personen ließen den Code unabhängig voneinander laufen und erhielten dasselbe Ergebnis. Der MIT-Mathematiker Andrew Sutherland führt die unabhängigen Prüfungen auf seiner Webseite auf.",
+    "## Schneller als erwartet",
+    "Die Lösung kam deutlich früher als gedacht. Laut dem Artikel lag die Prognose der Vorhersage-Plattform Metaculus für den Zeitpunkt bei Mai 2035. Der Mathematiker Terence Tao sagte im Vormonat, er erwarte eine Lösung durch „eine Kombination aus Menschen und KI etwa um 2050“. Tao hatte also nicht erwartet, dass KI das Problem allein lösen würde.",
+    "Hinweis: Die Angaben zur Verifikation stammen aus der Berichterstattung und der Stellungnahme der Lean-Community. Ein Video zum Beweis wurde im Artikel laut Angabe mit dem Modell Fable 5.2 erzeugt; das ist eine Herstellerangabe bzw. Angabe des Artikels und nicht geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "The Decoder: Lean and Mathlib community officially confirms Levent Alpöge's proof of the Riemann hypothesis is correct",
+     "url": "https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Lean-Beweise lassen sich über die Mathlib-Bibliothek nachvollziehen, wenn man sich für formale Mathematik interessiert.",
+    "Wer Mathematik lehrt, kann maschinell geprüfte Beweise als Beispiel für Präzision im Unterricht nutzen."
+   ],
+   "bereich": "Text",
+   "datum": "2026-11-20",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "lean – Beweisprüfung",
+    "zeilen": [
+     "> Beweis eingereicht: 17 Mio. Zeilen Lean",
+     "✓ Unabhängige Prüfung durch Dutzende Personen",
+     "✓ Ergebnis: identisch",
+     "● Status: von Lean-Community bestätigt"
+    ]
+   },
+   "id": "lean-community-bestatigt-beweis-der-riemann-hypothese-von-le",
+   "hinzugefuegt": "2026-11-23T09:10:07Z"
+  },
+  {
    "titel": "Bytedance: Drei Trainingsphasen reichen für konkurrenzfähiges KI-Agentenmodell",
    "kurz": "Ein Team von Bytedance und mehreren US-Universitäten stellt das frei verfügbare Agentenmodell Axion 1.0 vor, das nach nur drei Trainingsphasen auf Benchmarks mit führenden kommerziellen Modellen mithalten soll. Die Forschenden führen den Erfolg vor allem auf sorgfältig kuratierte Trainingsdaten statt auf immer mehr Trainingsschritte zurück.",
    "artikel": [
@@ -4474,6 +4513,74 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Meta TLX: GPU-Steuerung auf Warp-Group-Ebene für Triton",
+   "kurz": "Meta hat TLX vorgestellt, eine Erweiterung für Triton, mit der Python-Kernel gezielt Warp-Groups, Barrieren, TMA und Cluster steuern können. Laut Meta-Angaben läuft es in Produktion auf Hopper-, Blackwell- und AMD-MI350-GPUs.",
+   "artikel": [
+    "TLX steht für Triton Low-Level Extensions. Triton ist eine Python-Sprache zum Schreiben von GPU-Kernels auf Blockebene, CUDA arbeitet dagegen auf Thread-Ebene. TLX soll die Lücke dazwischen schließen, indem es Entwicklern Kontrolle über die Orchestrierung gibt, ohne die Triton-Sprache zu verlassen. Laut Fachbericht handelt es sich um eine Erweiterung und nicht um eine neue Sprache.",
+    "## Wie TLX arbeitet",
+    "Im Zentrum steht die Warp-Group als Grundeinheit. Warp-Groups erhalten Rollen wie Producer, Consumer oder Epilogue. Die Synchronisation läuft über Hardware-Barrieren (mbarriers), TMA-Zugriffe und Cluster-Ausführung über verteilten Shared Memory. Layouts bestimmt der Compiler, Programmierer können sie nur zur Beschleunigung überschreiben.",
+    "## Leistungsangaben",
+    "Alle Zahlen stammen laut Meta selbst. Bei H100-FP16-GEMM liegt TLX zwischen -0,9 und +3,7 Prozent von cuBLAS. Auf MI350 schlägt es rocBLAS um 11,8 bis 15,2 Prozent bei quadratischen Formen. Bei dichter LLM-artigen Attention auf B200 erreicht der Forward-Pass etwa 87 Prozent von FlashAttention-4. Unabhängige Benchmarks gibt es bisher nicht.",
+    "## Einsatz bei Meta",
+    "Meta nennt drei Fallstudien: Im Training des Generative Ads Model werden 20 bis 25 Prozent End-to-End-MFU auf tausenden GPUs angegeben. Ein warp-spezialisierter Linear-Compression-Kernel für Ads-Inferenz soll auf H100 um den Faktor 4 schneller sein. Außerdem wird ein verteiltes Grouped GEMM für Mixture-of-Experts auf Blackwell genannt, ohne Zahlen.",
+    "## Verfügbarkeit",
+    "TLX liegt im Triton-Fork von Meta unter MIT-Lizenz. Zusätzlich gibt es das Paket triton-utlx auf PyPI als Plugin für Upstream-Triton."
+   ],
+   "quellen": [
+    {
+     "titel": "Meta TLX Brings Warp-Group GPU Control to Triton on Hopper, Blackwell, AMD",
+     "url": "https://www.marktechpost.com/2026/11/23/meta-tlx-triton-low-level-extensions/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Ein Entwickler kann TLX-Aufrufe nur an den Stellen ergänzen, an denen Steuerung zählt, und den Rest als normales Triton schreiben.",
+    "Wer GPU-Kernels testen will, kann das Triton-Plugin triton-utlx von PyPI installieren und die Beispiele aus dem Repo ausprobieren."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "H100 FP16 GEMM, 8192x8192x8192 (TFLOPS, Herstelleraangabe)",
+    "balken": [
+     {
+      "label": "cuBLAS",
+      "wert": 582.3,
+      "anzeige": "582,3"
+     },
+     {
+      "label": "TLX",
+      "wert": 577.0,
+      "anzeige": "577,0"
+     }
+    ]
+   },
+   "radar": true,
+   "quelle": "Fachpresse",
+   "datum": "2026-11-23",
+   "kennzahlen": [
+    {
+     "label": "Hardware",
+     "wert": "NVIDIA Hopper (H100), Blackwell (B200, GB200), AMD MI300 und MI350"
+    },
+    {
+     "label": "Lizenz",
+     "wert": "MIT"
+    },
+    {
+     "label": "H100 FP16 GEMM vs. cuBLAS (Herstelleraangabe)",
+     "wert": "-0,9 % bis +3,7 %"
+    },
+    {
+     "label": "Installation",
+     "wert": "triton-utlx auf PyPI"
+    }
+   ],
+   "signal": "Meta bringt Warp-Group-Steuerung in Triton. Die Leistungszahlen sind Herstellerangaben und noch nicht unabhängig geprüft.",
+   "link": "https://www.marktechpost.com/2026/11/23/meta-tlx-triton-low-level-extensions/",
+   "linkLabel": "Zum Fachartikel",
+   "id": "meta-tlx-gpu-steuerung-auf-warp-group-ebene-fur-triton",
+   "hinzugefuegt": "2026-11-23T09:10:07Z"
+  },
   {
    "titel": "OpenAI verschärft Schutz gegen adversariale Distillation",
    "kurz": "OpenAI beschreibt, wie es unautorisiertes Abschöpfen von Modellfähigkeiten erkennt und blockiert. Besonders geschützt werden die internen Denkschritte der Modelle, weil sie als Trainingsdaten für andere Modelle sehr wertvoll sind.",
@@ -23201,7 +23308,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-23T01:09:38Z",
+  "letzterScan": "2026-11-23T09:10:07Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-11-23T01:09:38Z"
  }
