@@ -18297,6 +18297,78 @@
  ],
  "projekte": [
   {
+   "titel": "agent-sim: iOS-Simulator für KI-Agenten auf normalen Linux-Rechnern",
+   "kurz": "Das Projekt agent-sim lässt KI-Agenten iOS-Apps auf gewöhnlichen Linux-Rechnern testen, ohne Mac und ohne GPU. Es nutzt Apples iOS-Laufzeit, die über x86Sim auf x86-64 läuft.",
+   "artikel": [
+    "agent-sim ist ein Open-Source-Projekt auf GitHub, das iOS-Simulatoren für KI-Agenten bereitstellt. Laut Projektbeschreibung läuft es auf gewöhnlichen Linux-Rechnern, ohne Mac und ohne GPU. Das Repository hat zum Zeitpunkt der Erfassung 454 Sterne.",
+    "## Was das Werkzeug kann",
+    "Agenten können eine iOS-App installieren, den Bildschirm als Text auslesen, tippen, schreiben und scrollen. Die Oberfläche gibt es als Kommandozeile für Skripte und CI sowie als MCP-Server für Agenten wie Claude Code, Cursor oder Codex. Der Status wird im Projekt selbst als früh beschrieben, mit Ecken und Kanten.",
+    "## Technik",
+    "Die Grundlage ist x86Sim. Es lässt Apples arm64-Simulator-Laufzeit auf x86-64-Linux laufen. Darling stellt die macOS-Kernelschnittstellen bereit, dynarmic übersetzt den ARM-Code, und Mesas CPU-Vulkan-Treiber zeichnet Metal über metal2vulkan. Laut Projekt läuft das Scrollen auf einer VM mit Zen-5-CPU mit etwa 55 Bildern pro Sekunde (Herstellerangabe des Projekts).",
+    "## Einrichtung",
+    "Vorausgesetzt werden ein x86-64-Linux mit Ubuntu 24.04, mindestens 8 CPUs, 16 GB Speicher und 60 GB freier Festplatte. Die einmalige Einrichtung dauert laut Readme etwa eine halbe Stunde. Apples Laufzeit (rund 8 GB) wird von Apple auf den eigenen Rechner geladen und ist nicht Teil des Repositorys.",
+    "Ein Hinweis: Verschlüsselte App-Store-Downloads funktionieren nicht. Nötig sind Ad-Hoc-, Development- oder Enterprise-Exporte oder ein Build für den Simulator."
+   ],
+   "demo": "agent",
+   "machen": [
+    "Entwickler können ihre iOS-App automatisiert auf einem Linux-Server testen lassen.",
+    "Wer mit KI-Agenten arbeitet, kann den MCP-Server in Claude Code oder Cursor einbinden.",
+    "Interessierte können den Bildschirm im Browser live mitverfolgen, sobald der Server gestartet ist."
+   ],
+   "ausprobieren": {
+    "prompt": "agent-sim launch com.apple.Preferences && agent-sim snapshot",
+    "tool": "agent-sim",
+    "url": "https://github.com/Developing-Gamer/agent-sim"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "agent-sim",
+    "zeilen": [
+     "> agent-sim launch com.apple.Preferences",
+     "✓ App gestartet",
+     "> agent-sim snapshot",
+     "● @e2 button \"General\"",
+     "> agent-sim tap @e2",
+     "✓ getippt: General"
+    ]
+   },
+   "quellen": [
+    {
+     "titel": "GitHub: Developing-Gamer/agent-sim",
+     "url": "https://github.com/Developing-Gamer/agent-sim"
+    }
+   ],
+   "macher": "Developing-Gamer (GitHub-Nutzer)",
+   "branche": "Entwicklertools / Mobile-Testing",
+   "jahr": "",
+   "tools": [
+    "x86Sim",
+    "Darling",
+    "dynarmic",
+    "metal2vulkan",
+    "MCP",
+    "Rust"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "454"
+    },
+    {
+     "label": "Commits",
+     "wert": "42"
+    },
+    {
+     "label": "Mindest-RAM",
+     "wert": "16 GB"
+    }
+   ],
+   "link": "https://github.com/Developing-Gamer/agent-sim",
+   "linkLabel": "Zum Repository auf GitHub",
+   "id": "agent-sim-ios-simulator-fur-ki-agenten-auf-normalen-linux-re",
+   "hinzugefuegt": "2026-11-24T16:14:57Z"
+  },
+  {
    "titel": "safe-anything: Rust-Scanner sucht Sicherheitslücken, Geheimnisse und Agenten-Konfigurationen",
    "kurz": "safe-anything ist ein Kommandozeilen-Werkzeug in Rust, das Code, Geheimnisse, Konfigurationen und Abhängigkeiten auf Sicherheitslücken prüft. Laut Repository ist es auch als MCP-Server für KI-Agenten nutzbar.",
    "artikel": [
@@ -23520,8 +23592,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-24T05:28:44Z",
-  "neueFunde": 0,
+  "letzterScan": "2026-11-24T16:14:57Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-11-24T05:28:44Z"
  }
 }
