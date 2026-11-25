@@ -4567,6 +4567,74 @@
  ],
  "radar": [
   {
+   "titel": "LoopRes: Schleifen-Residuen sollen vortrainierte LLMs gezielt verbessern",
+   "kurz": "Ein arXiv-Paper schlägt LoopRes vor, eine Methode, mit der sich vortrainierte Sprachmodelle in Schleifenstrukturen besser nachtrainieren lassen. Laut Autoren verbessert sie die Leistung konsistent und skaliert bei mehr Rechenaufwand steiler als SFT.",
+   "artikel": [
+    "Looped Transformers wiederholen einen gemeinsamen Block von Schichten mehrfach. So steigt der Rechenaufwand, ohne dass zusätzliche Parameter nötig sind. Bisher musste diese Bauweise meist von Grund auf trainiert werden, und bei LLMs brachte sie nur bescheidene Zuwächse. Nachträgliches Umbauen bestehender Modelle ist deutlich günstiger, lieferte laut Paper aber gegenüber SFT (überwachtem Feintuning) nur geringe Verbesserungen.",
+    "## Der Ansatz LoopRes",
+    "LoopRes baut auf sogenannten Attention Residuals auf. Jede Schleifenschicht kann dabei direkt auf die Ausgaben früherer Schleifen zugreifen. Weil sich diese Ausgaben ähnlich sehen, erhält jede Schleife einen trainierbaren, schleifenbewussten Schlüssel, der ihre strukturelle Position kodiert. Damit das Modell nicht einfach Zwischenschritte überspringt, ist der Zugriff auf die letzten W Schleifen begrenzt.",
+    "## Ergebnisse laut Paper",
+    "Die Autoren testen sechs vortrainierte LLMs aus drei Modellfamilien auf neun Benchmarks. Bei doppeltem Rechenaufwand verbessert LoopRes Qwen3-1.7B-Base laut Angabe um 29,1 Prozent gegenüber SFT. Das ist mehr als das Doppelte des Zuwachses der bisherigen Vergleichsmethode. Die Gewinne sollen bei Modellen bis 30 Milliarden Parametern bestehen. Von 1,7 auf 8 Milliarden Parameter skaliert LoopRes laut Paper steiler als SFT und erreicht eine höhere Obergrenze.",
+    "## Einordnung",
+    "Die Ergebnisse stammen aus dem Paper der Autoren und sind bisher nicht unabhängig geprüft. Der Code ist laut Repository auf GitHub verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "Unlocking the Power of Loops in Pretrained LLMs with Loop Residuals (Hugging Face Paper-Seite)",
+     "url": "https://huggingface.co/papers/2611.31094"
+    },
+    {
+     "titel": "Projektseite LoopRes",
+     "url": "https://oahzxl.github.io/LoopRes/"
+    },
+    {
+     "titel": "GitHub-Repository LoopRes",
+     "url": "https://github.com/NUS-HPC-AI-Lab/LoopRes"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Forschende können den veröffentlichten Code nutzen, um Schleifenansätze an eigenen vortrainierten Modellen zu testen.",
+    "Wer mit LLMs arbeitet, kann prüfen, ob sich Rechenaufwand zur Laufzeit durch Schleifen effizienter einsetzen lässt."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Qwen3-1.7B-Base bei 2x Rechenaufwand (laut Paper, Verbesserung gegenüber SFT)",
+    "balken": [
+     {
+      "label": "Gewinn LoopRes",
+      "wert": 29.1,
+      "anzeige": "+29,1 %"
+     }
+    ]
+   },
+   "quelle": "Hugging Face",
+   "datum": "2026-11-24",
+   "kennzahlen": [
+    {
+     "label": "Getestete LLMs",
+     "wert": "6 aus 3 Modellfamilien"
+    },
+    {
+     "label": "Benchmarks",
+     "wert": "9"
+    },
+    {
+     "label": "Größte getestete Modelle",
+     "wert": "bis 30B"
+    },
+    {
+     "label": "Gewinn Qwen3-1.7B-Base bei 2x Compute gegenüber SFT",
+     "wert": "+29,1 %"
+    }
+   ],
+   "signal": "Schleifen-Architekturen könnten mit LoopRes auch nachträglich an bestehenden LLMs wirksam werden, statt nur beim Training von Grund auf. Die Angaben stammen von den Autoren und sind noch nicht unabhängig bestätigt.",
+   "link": "https://huggingface.co/papers/2611.31094",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "loopres-schleifen-residuen-sollen-vortrainierte-llms-gezielt",
+   "hinzugefuegt": "2026-11-25T00:48:52Z"
+  },
+  {
    "titel": "Eigene KI zu Hause: Leitfaden für lokale Modelle mit Unsloth auf Windows",
    "kurz": "Ein Praxisleitfaden zeigt, wie man mit der Desktop-App Unsloth und einem quantisierten Modell wie Qwen3.8-27B eine lokale KI auf einem Windows-PC mit starker Grafikkarte betreibt. Das Setup dauert laut Autor etwa 10 bis 15 Minuten, ohne Terminal-Befehle.",
    "artikel": [
@@ -23592,7 +23660,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-24T16:14:57Z",
+  "letzterScan": "2026-11-25T00:48:52Z",
   "neueFunde": 1,
   "standAktualisiert": "2026-11-24T05:28:44Z"
  }
