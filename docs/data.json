@@ -4567,6 +4567,110 @@
  ],
  "radar": [
   {
+   "titel": "LLM-Agenten arbeiten für ihre Betreiber, nicht unbedingt für dich",
+   "kurz": "Ein Blogger beschreibt, dass sein KI-Agent Bandcamp-Käufe blockiert hat, während der Download von YouTube funktionierte. Daraus leitet er ab, dass Modelle die Interessen ihrer Anbieter widerspiegeln und er ein lokales Modell bevorzugt.",
+   "artikel": [
+    "Der Autor Michael Harley hat mit Claude Code einen Skill gebaut. Dieser erkennt aus einem Instagram-Reel Künstler und Song, prüft, ob es eine Bandcamp-Seite gibt, und liefert den Link zum Kauf. Zuletzt funktionierte das nicht mehr, weil Bandcamp auf seiner Such-API-Seite eine Challenge eingeführt hat. Der Agent wollte den Schutz laut Bericht nicht umgehen. Der Zweig, der Songs über YouTube sucht und herunterlädt, lief weiter.",
+    "## Herstellerfrage statt Technik",
+    "Harley kritisiert, dass Anbieter wie Anthropic oder OpenAI bestimmen, was ihre Modelle tun dürfen. Er vermutet, dass Antworten irgendwann durch bezahlte Produktplatzierungen beeinflusst sein könnten. Das ist seine Einschätzung und keine belegte Tatsache. Als Beispiel nennt er, dass Modelle aus China laut seiner Vermutung Fragen zu Taiwan ausweichen könnten.",
+    "## Lokale Modelle als Ausweg",
+    "Der Autor zieht den Schluss, dass ein lokales Modell im eigenen Heimnetz sein Ziel besser abbildet. Er stellt außerdem fest, dass der Begriff „offene Modelle“ nicht einfach dem Verständnis von freier Software entspricht, weil es vor allem auf das Training ankommt. Ein Kommentator erwähnt ein kleines, unzensiertes lokales Modell als Option. Diese Angaben stammen aus den Kommentaren und sind nicht geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "LLM agents work for their parent companies, not for you",
+     "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/"
+    },
+    {
+     "titel": "HN-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50627340"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Eigene Skripte oder Agenten so bauen, dass sie Käufe bei Künstlern direkt unterstützen, statt nur Streaming-Links zu liefern.",
+    "Prüfen, welche Aufgaben ein Cloud-Modell verweigert und ob ein lokal betriebenes Modell diese übernehmen könnte.",
+    "Beim Einsatz von KI-Agenten festhalten, welche Anbieterregeln gelten, bevor man sich auf Empfehlungen verlässt."
+   ],
+   "radar": true,
+   "quelle": "Hacker News",
+   "datum": "2026-11-01",
+   "kennzahlen": [
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "971"
+    }
+   ],
+   "signal": "Ein Praxisbericht über Anbieterregeln bei KI-Agenten, der auf Hacker News breit diskutiert wurde.",
+   "link": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+   "linkLabel": "Originalbeitrag",
+   "id": "llm-agenten-arbeiten-fur-ihre-betreiber-nicht-unbedingt-fur-",
+   "hinzugefuegt": "2026-11-25T09:16:07Z"
+  },
+  {
+   "titel": "LoopedWSP: Claude schreibt Transformer-Gewichte von Hand, die Labyrinthe und Hanoi-Türme lösen",
+   "kurz": "Ein Forschungsprojekt der MBZUAI zeigt, dass Claude Opus 5.5 einen Transformer ohne Training per Hand mit Gewichten belegt, der 30×30-Labyrinthe vollständig löst. Der Trick ist eine Schleife: Ein einzelner Block wird wiederholt durchlaufen.",
+   "artikel": [
+    "Das Projekt „Looped Weight-Space Programming“ von Forschenden der MBZUAI untersucht, ob ein großes Sprachmodell selbst einen Transformer entwerfen kann, statt ihn trainieren zu lassen. Ausgangspunkt war die Aufgabe, kürzeste Wege in schwierigen 30×30-Labyrinthen aus dem Benchmark Maze-Hard zu finden. Claude Opus 5.5 löste dabei nur 26 Prozent der Testlabyrinthe. Daraufhin bat das Team das Modell, stattdessen einen Transformer zu bauen, der die Labyrinthe löst.",
+    "## Die Schleife als Kernidee",
+    "Ein Transformer ist ein neuronales Netz, das Eingaben über sogenannte Gewichte verarbeitet. In diesem Fall besteht das Netz aus einem einzigen Block, der immer wieder durchlaufen wird. Jeder Durchlauf bringt die Suche nach dem kürzesten Weg einen Schritt weiter. Größere Labyrinthe brauchen deshalb mehr Durchläufe, aber nicht mehr Gewichte. Laut Angaben der Autoren löst dieselbe Konstruktion Labyrinthe mit 60×60 und 100×100 Feldern vollständig, obwohl Claude nur Labyrinthe bis 45×45 geprüft hat.",
+    "## Eigene Angaben des Teams",
+    "Laut Repository hat Claude alle 19.936 Gewichte in einer einzigen Sitzung ohne Training festgelegt. Die Autoren geben an, dass die Gewichte nach 39 Minuten fertig waren und etwa 19 Dollar an Tokenkosten verursachten. Eine neue Sitzung mit einer Obergrenze von 1.000 Gewichten kam laut Angaben auf 928 Gewichte. Zum Vergleich nennen die Autoren trainierte Modelle, die etwa 1.900-mal so viele Gewichte nutzen. Werden die Gewichte dagegen zufällig gesetzt und auf 1.000 Trainingslabyrinthen trainiert, lösten alle Läufe 0 Prozent der Testlabyrinthe. Gradientenabstieg, also das übliche Training per Fehlerrückführung, fand diese Lösung demnach nicht.",
+    "## Weitere Aufgaben",
+    "Das Team nutzte den Ansatz laut Angaben für acht weitere Aufgaben aus bekannten Benchmarks. Genannt werden Sudoku-Extreme mit 141.040 getesteten Rätseln, Tower of Hanoi mit allen 1.048.575 Zügen des 20-Scheiben-Rätsels sowie GraphWalks mit Prompts von bis zu einer Million Tokens. Diese Ergebnisse stammen aus den Angaben der Autoren und wurden nicht unabhängig geprüft.",
+    "## Einordnung",
+    "Die Gewichte, Prompts und ein kleines Skript zum Ausführen liegen laut Repository auf GitHub. Das Projekt ist ein Blog-Beitrag mit Forschungscharakter und steht unter MIT-Lizenz."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: mbzuai-oryx/LoopedWSP",
+     "url": "https://github.com/mbzuai-oryx/LoopedWSP"
+    },
+    {
+     "titel": "Blog-Beitrag LoopedWSP",
+     "url": "https://mbzuai-oryx.github.io/LoopedWSP/"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Das Skript run.py mit wenigen Befehlen ausprobieren, um die Labyrinth- oder Hanoi-Lösung nachzuvollziehen.",
+    "Die veröffentlichten Prompts lesen, um zu sehen, wie man ein Modell gezielt Schritt für Schritt Gewichte entwerfen lässt."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "run.py",
+    "zeilen": [
+     "> cd weights",
+     "> python run.py maze --random 30",
+     "✓ Erfolg: Labyrinth gelöst (Angabe Repository)",
+     "> python run.py hanoi 10",
+     "✓ Erfolg: Hanoi-Lösung geprüft"
+    ]
+   },
+   "radar": true,
+   "quelle": "GitHub",
+   "datum": "2026-11-01",
+   "kennzahlen": [
+    {
+     "label": "Gewichte (Maze-Transformer, laut Angabe)",
+     "wert": "19.936"
+    },
+    {
+     "label": "Testlabyrinthe gelöst (laut Angabe)",
+     "wert": "100 %"
+    },
+    {
+     "label": "Sterne auf GitHub",
+     "wert": "108"
+    }
+   ],
+   "signal": "Ein Modell hat laut Angaben der Autoren einen Transformer ohne Training per Hand festgelegt, der Aufgaben löst, die trainierte Modelle nicht erreichen. Die Ergebnisse stammen von den Autoren selbst.",
+   "link": "https://github.com/mbzuai-oryx/LoopedWSP",
+   "linkLabel": "Zum Repository",
+   "id": "loopedwsp-claude-schreibt-transformer-gewichte-von-hand-die-",
+   "hinzugefuegt": "2026-11-25T09:16:07Z"
+  },
+  {
    "titel": "LoopRes: Schleifen-Residuen sollen vortrainierte LLMs gezielt verbessern",
    "kurz": "Ein arXiv-Paper schlägt LoopRes vor, eine Methode, mit der sich vortrainierte Sprachmodelle in Schleifenstrukturen besser nachtrainieren lassen. Laut Autoren verbessert sie die Leistung konsistent und skaliert bei mehr Rechenaufwand steiler als SFT.",
    "artikel": [
@@ -23660,8 +23764,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-25T00:48:52Z",
-  "neueFunde": 1,
-  "standAktualisiert": "2026-11-24T05:28:44Z"
+  "letzterScan": "2026-11-25T09:16:07Z",
+  "neueFunde": 2,
+  "standAktualisiert": "2026-11-25T09:16:07Z"
  }
 }
