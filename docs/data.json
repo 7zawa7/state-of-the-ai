@@ -4611,6 +4611,72 @@
  ],
  "radar": [
   {
+   "titel": "Mixture-of-Loops Transformer: Wiederverwendete Schichten mit KV-Gedächtnis",
+   "kurz": "Ein Forschungspapier stellt den Mixture-of-Loops Transformer (MoLT) vor, der Key-Value-Speicher über Schleifen hinweg wiederverwendet. Laut Autoren erreicht die U-förmige Variante bei Pretraining-Effizienz und Inferenz-Latenz Verbesserungen gegenüber OLMo3.",
+   "artikel": [
+    "Looped Transformers verwenden dieselben Schichten mehrfach hintereinander (in sogenannten Schleifen). Das steigert die Ausdruckskraft des Modells, kostet aber Effizienz. Die Autoren fragen deshalb, was von einer Schleife zur nächsten weitergereicht werden sollte.",
+    "## Der Ansatz",
+    "Die Autoren stellen den Mixture-of-Loops Transformer (MoLT) vor. Sein Kernmechanismus heißt Mixture-of-Loops Attention (MoLA): Keys und Values (KV, die Schlüssel- und Wertevektoren der Aufmerksamkeit) dienen als Gedächtnis, aus dem selektiv über Tiefen und Schleifen hinweg gelesen wird. Es gibt zwei Varianten: MoLT-R behält den Residualstrom bei und ist auf Ausdruckskraft ausgelegt, MoLT-KV startet dagegen bei den Embeddings neu und ist auf Effizienz ausgelegt. Die U-förmige Variante U-MoLT trennt den Aufbau des Gedächtnisses von der Vorhersage und überspringt ungenutzte Decoder-Durchläufe, ohne die Vorhersagen zu verändern.",
+    "## Ergebnisse laut Autoren",
+    "In einem Pretraining mit 400 Milliarden Token übertraf U-MoLT laut Papier OLMo3 bei Modellen mit 700M und 1,5B Parametern (dicht) sowie einem 3B-MoE-Modell. Bei 700M nennen die Autoren eine 1,7-fache Token-Effizienz bei der Validierungs-Cross-Entropy. Beim 3B-MoE verbesserte sich die Perplexität über zehn Domänen um 0,75 und die Genauigkeit über zehn Aufgaben um 2,1 Prozentpunkte. Bei einem Continued Pretraining von Qwen3.5-0.8B-Base mit 100 Milliarden Token sank die Cross-Entropy in allen 11 Domänen, mit 1,4-facher mittlerer Token-Effizienz.",
+    "Bei der Inferenz erreichte U-MoLT mit MoL-Hybrid-2 auf S-Modellen (etwa 113M Parameter) laut Angabe eine Latenz von 996,6 ms gegenüber 1.000,6 ms für das nicht geschleifte OLMo3.",
+    "Hinweis: Alle Zahlen stammen aus den Angaben der Autoren im Paper und sind nicht unabhängig geprüft. Der Code ist laut Paper auf GitHub verfügbar."
+   ],
+   "quellen": [
+    {
+     "titel": "Paper page – Mixture-of-Loops Transformer (Hugging Face)",
+     "url": "https://huggingface.co/papers/2611.34923"
+    },
+    {
+     "titel": "Code-Repository MoLT (GitHub)",
+     "url": "https://github.com/hustvl/MoLT"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Wer Sprachmodelle trainiert oder feinabstimmt, kann den verlinkten Code auf eigenen Daten testen.",
+    "Privatpersonen ohne Trainingsaufwand können das Paper lesen, um das Prinzip der Schleifen-Architekturen zu verstehen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Token-Effizienz bei 700M (Validierungs-Cross-Entropy, laut Autoren)",
+    "balken": [
+     {
+      "label": "OLMo3",
+      "wert": 1,
+      "anzeige": "1,0x"
+     },
+     {
+      "label": "U-MoLT",
+      "wert": 1.7,
+      "anzeige": "1,7x"
+     }
+    ]
+   },
+   "tag": "Forschung",
+   "quelle": "Hugging Face",
+   "datum": "2026-11-26",
+   "kennzahlen": [
+    {
+     "label": "Pretraining",
+     "wert": "400B Token"
+    },
+    {
+     "label": "Token-Effizienz (700M)",
+     "wert": "1,7x (laut Autoren)"
+    },
+    {
+     "label": "Inferenz-Latenz (S, ~113M)",
+     "wert": "996,6 ms vs. 1.000,6 ms (laut Autoren)"
+    }
+   ],
+   "signal": "Schleifen-Modelle könnten bei gleicher Ausdruckskraft effizienter werden, wenn der Speicher über Schleifen gezielt wiederverwendet wird. Die Ergebnisse stammen bisher nur aus dem Paper.",
+   "link": "https://huggingface.co/papers/2611.34923",
+   "linkLabel": "Paper auf Hugging Face",
+   "id": "mixture-of-loops-transformer-wiederverwendete-schichten-mit-",
+   "hinzugefuegt": "2026-11-26T20:03:55Z"
+  },
+  {
    "titel": "Modelle können trotz Sandbox über Inference-Server kommunizieren",
    "kurz": "Zwei KI-Agenten auf demselben Inference-Server können sich laut einem LessWrong-Beitrag zuverlässig Informationen übermitteln, obwohl sie weder Nachrichten senden noch auf dieselben Dateien zugreifen können. Der Weg führt über sogenannte Seitenkanäle, also kleine Effekte in der Rechenlogik des Servers.",
    "artikel": [
@@ -18584,6 +18650,79 @@
  ],
  "projekte": [
   {
+   "titel": "OpenGame: Open-Source-Werkzeug will KI-Agenten in ein Spielestudio verwandeln",
+   "kurz": "OpenGame ist ein Open-Source-Projekt auf GitHub, das laut Eigenbeschreibung Coding-Agenten wie Claude Code oder Codex in ein KI-Spielestudio verwandelt. Das Repository hat 694 Sterne und enthält 25 spielbare Vorlagen.",
+   "artikel": [
+    "OpenGame heißt sich selbst den ersten Open-Source-„Super Game Agent“. Gemeint ist ein Werkzeug, das vorhandene Coding-Agenten, also KI-Programmierassistenten, zu einer Art Spielestudio machen soll. Laut Projektbeschreibung lassen sich Claude Code, Codex, DeepSeek und weitere lokale Agenten einbinden. Die Macher vergleichen ihr Werk selbst mit den Spiele-Engines Unity und Unreal.",
+    "## Vorlagen und Remix",
+    "Nach Angaben des Projekts liegen 25 spielbare Vorlagen im Ordner templates/games bereit, darunter 3D-, Voxel- und Actionspiele im Format 16:9 sowie Titel im Hochformat 9:16. Die Quelltexte basieren auf HTML5 und Three.js und sind editierbar. Nutzer können ein Spiel also übernehmen, Figuren, Welten oder Grafikstil austauschen und es neu gestalten.",
+    "## Veröffentlichung",
+    "Die Projektseite nennt als Ziele unter anderem WeChat Mini Games, TikTok und Douyin. Außerdem sollen sich Spiele als Weblink bereitstellen und als einzelne 9:16-Datei für Werbeanzeigen exportieren lassen. Zur Qualitätssicherung nennt das Projekt automatische Logikprüfungen, Balance-Simulationen und Playtests ohne Oberfläche (headless). Diese Angaben stammen vom Projekt selbst und sind nicht unabhängig geprüft.",
+    "## Installation",
+    "Die Installation erfolgt laut Anleitung über Git, Git LFS, npm und Node.js ab Version 22.18. Der Studio-Start läuft lokal aus dem Quellcode. Für die Einbindung von Agenten gibt es einen Skill über die Skills-CLI und 12 MCP-Werkzeuge. MCP (Model Context Protocol) ist ein Standard, mit dem KI-Assistenten externe Werkzeuge ansprechen können.",
+    "## Einordnung",
+    "Die Angaben zu Lizenz, Nutzerzahlen oder Erfolg der veröffentlichten Spiele finden sich im Auszug nicht. Der Stand von 694 Sternen auf GitHub ist nur ein grober Hinweis auf Aufmerksamkeit."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: nexu-io/opengame",
+     "url": "https://github.com/nexu-io/opengame"
+    }
+   ],
+   "demo": "game",
+   "machen": [
+    "Einen der 25 Beispiel-Spiele lokal öffnen, spielen und mit eigenen Figuren oder Grafiken umgestalten.",
+    "Mit einem bereits installierten Coding-Agenten ein kleines Browserspiel per Anleitung erstellen lassen.",
+    "Die Vorlagen als Ausgangspunkt für eigene Mini-Spiele nutzen, die später als Weblink bereitgestellt werden."
+   ],
+   "ausprobieren": {
+    "prompt": "Folge https://github.com/nexu-io/opengame/blob/main/docs/opengame-setup.md, um OpenGame mit meinem lokalen Agenten zu verbinden. Öffne danach die Spielvorlagen-Galerie, damit ich ein Spiel auswählen kann.",
+    "tool": "OpenGame",
+    "url": "https://github.com/nexu-io/opengame"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "opengame — Studio-Start",
+    "zeilen": [
+     "> npm ci",
+     "> npm run build:studio",
+     "✓ Studio gebaut",
+     "⚠ Git LFS nicht installiert",
+     "● Vorlagen: 25 verfügbar",
+     "● Status: lokal bereit"
+    ]
+   },
+   "projekte": true,
+   "macher": "nexu-io (Organisation auf GitHub)",
+   "branche": "Spieleentwicklung / KI-Agenten",
+   "jahr": "",
+   "tools": [
+    "Claude Code",
+    "Codex",
+    "DeepSeek",
+    "Three.js",
+    "MCP"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "694"
+    },
+    {
+     "label": "Spielvorlagen",
+     "wert": "25"
+    },
+    {
+     "label": "Unterstützte lokale Agenten (Herstellerangabe)",
+     "wert": "22"
+    }
+   ],
+   "link": "https://github.com/nexu-io/opengame",
+   "linkLabel": "Zum Repository",
+   "id": "opengame-open-source-werkzeug-will-ki-agenten-in-ein-spieles",
+   "hinzugefuegt": "2026-11-26T20:03:55Z"
+  },
+  {
    "titel": "Garimpo: Open-Source-Prospektion von Google Maps bis zur Pix-Zahlung",
    "kurz": "Garimpo ist ein kostenloses Open-Source-System aus Brasilien, das Unternehmen auf Google Maps findet, ihnen eine Vorschau-Website erstellt, sie über WhatsApp kontaktiert und Zahlungen per Pix, Mercado Pago oder Stripe abwickelt. Es läuft auf dem eigenen Rechner, einem VPS oder Vercel.",
    "artikel": [
@@ -24212,7 +24351,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-26T10:59:09Z",
+  "letzterScan": "2026-11-26T20:03:55Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-11-26T10:59:09Z"
  }
