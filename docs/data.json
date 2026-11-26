@@ -18584,6 +18584,131 @@
  ],
  "projekte": [
   {
+   "titel": "Garimpo: Open-Source-Prospektion von Google Maps bis zur Pix-Zahlung",
+   "kurz": "Garimpo ist ein kostenloses Open-Source-System aus Brasilien, das Unternehmen auf Google Maps findet, ihnen eine Vorschau-Website erstellt, sie über WhatsApp kontaktiert und Zahlungen per Pix, Mercado Pago oder Stripe abwickelt. Es läuft auf dem eigenen Rechner, einem VPS oder Vercel.",
+   "artikel": [
+    "Garimpo ist ein Projekt des Entwicklers matheusmongarde, das auf GitHub veröffentlicht ist und dort aktuell 190 Sterne hat. Der Name und die Beschreibung stammen aus dem Repository und sind in Portugiesisch verfasst. Der Kern ist eine Prospektion, also die gezielte Suche nach potenziellen Kunden, die ohne Tabellenkalkulation auskommen soll.",
+    "## Ablauf in vier Schritten",
+    "Das System sucht Unternehmen über Google Maps, indem es einen echten Browser steuert. Jedes gefundene Geschäft durchläuft danach eine Pipeline: gefunden, Vorschau fertig, kontaktiert, geantwortet und abgeschlossen. Für jedes Unternehmen wird eine Vorschauseite mit Name, Telefon, Bewertung und Adresse erzeugt. Wer bezahlt, wird laut Projektbeschreibung automatisch als abgeschlossen markiert.",
+    "## Kontakt und Schutzmechanismen",
+    "Für WhatsApp stehen mehrere Anbindungen zur Auswahl: eine Verbindung per QR-Code über die Bibliothek Baileys, Evolution API, die offizielle API von Meta oder Z-API. Damit Nachrichten nicht unkontrolliert versendet werden, gibt es einen Testmodus, eine Tageshöchstgrenze, Pausen zwischen Erstkontakten und eine Sperrliste mit Begriffen, die nie in einem Text vorkommen dürfen.",
+    "## Zahlungen und Agenten",
+    "Zahlungslinks lassen sich über Mercado Pago, Stripe, Asaas oder direkt per Pix mit dem eigenen Schlüssel erstellen. Eine API unter /api/v1 erlaubt es KI-Agenten wie Claude Code, Codex oder n8n, die Funktionen des Panels zu bedienen. Laut Repository werden API-Schlüssel nicht vom Entwickler mitgeliefert, sondern von jeder Person im Panel eingetragen und verschlüsselt in der eigenen Datenbank gespeichert.",
+    "## Einordnung",
+    "Die Angaben stammen aus der Projektseite und der Beschreibung auf GitHub; eine unabhängige Prüfung liegt nicht vor. Das Projekt verlangt außerdem, dass Nutzer dem Entwickler auf X folgen oder ihr Projekt in einem Ranking eintragen, was im Repository als „Pedágio“ beschrieben wird."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub: matheusmongarde/garimpo",
+     "url": "https://github.com/matheusmongarde/garimpo"
+    }
+   ],
+   "demo": "agent",
+   "machen": [
+    "Wer Kundenakquise für kleine lokale Betriebe betreibt, kann das System auf dem eigenen Rechner testen.",
+    "Entwickler können die API an einen Agenten wie n8n oder Claude Code anbinden und Abläufe automatisieren.",
+    "Interessierte können den Quellcode lesen, um zu sehen, wie Pipeline, Sperrliste und Zahlungsanbindung umgesetzt sind."
+   ],
+   "tag": "Open Source",
+   "macher": "matheusmongarde",
+   "branche": "Vertrieb / Kundenakquise",
+   "jahr": "",
+   "tools": [
+    "Google Maps",
+    "WhatsApp (Baileys, Evolution API, Meta, Z-API)",
+    "Mercado Pago",
+    "Stripe",
+    "Pix",
+    "Next.js",
+    "Prisma",
+    "Claude Code",
+    "Codex",
+    "n8n"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "190"
+    }
+   ],
+   "link": "https://github.com/matheusmongarde/garimpo",
+   "linkLabel": "Zum Repository",
+   "id": "garimpo-open-source-prospektion-von-google-maps-bis-zur-pix-",
+   "hinzugefuegt": "2026-11-26T10:59:09Z"
+  },
+  {
+   "titel": "Amateurastronomen suchen mit Codex und Astra nach Exoplaneten",
+   "kurz": "Zwei Hobby-Astronomen nutzten die KI-Werkzeuge Codex und Astra, um in öffentlichen Daten der Weltraumteleskope Kepler und TESS nach Hinweisen auf Planeten zu suchen. Ihre Kandidaten werden inzwischen von Profi-Astronomen geprüft.",
+   "artikel": [
+    "Bisher haben Astronomen über 6.400 Planeten außerhalb unseres Sonnensystems bestätigt. Ein weltweites Netzwerk von Amateurastronomen beteiligt sich seit Langem an der Suche, indem es öffentliche Teleskopdaten nach kleinen, wiederkehrenden Helligkeitseinbrüchen durchsucht.",
+    "## Die Methode",
+    "Ein Planet, der von der Erde aus gesehen vor seinem Stern vorbeizieht, blockiert einen winzigen Teil des Sternlichts. Dieser Vorgang heißt Transit. In einer Helligkeitskurve, dem sogenannten Light Curve, zeigt er sich als Einbruch. Kehrt dieser in regelmäßigen Abständen zurück, lässt sich der nächste Durchgang vorhersagen.",
+    "## Zwei Suchprojekte",
+    "Kevin Bond, Ingenieur bei OpenAI, untersuchte mit Codex Beobachtungen von rund 100.000 Sternen des Kepler-Teleskops. Ethan Byrd, Gründer des Start-ups Primitive, analysierte mit Astra Daten zu etwa 19 Millionen Sternen. Beide Suchen fanden potenzielle Exoplaneten. Bonds Programm markierte über 200 Signale, darunter 10 von bereits bestätigten Planeten, was ihm Vertrauen in die Methode gab.",
+    "## Unabhängige Prüfung",
+    "Ein Astronom des SETI Institute führte eine eigene Suche durch und fand zwei der gleichen Signale in den Kepler-Daten. Byrd schickte einen seiner stärksten Kandidaten an Forschende des TESS-Missionsteams, dort wartet er auf weitere Analyse. Ob die Einbrüche tatsächlich von Planeten stammen, kann Monate oder Jahre dauern, denn auch zwei aneinander vorbeiziehende Sterne oder Temperaturänderungen am Teleskop können ähnliche Einbrüche erzeugen.",
+    "Der Projektbericht betont, dass KI hier vor allem bei der Suche selbst hilft: Ein KI-Agent sichtet die Lichtkurven, ein zweiter prüft die markierten Kandidaten genauer. Die Auswertung der Ergebnisse bleibt jedoch Aufgabe der professionellen Astronomie."
+   ],
+   "quellen": [
+    {
+     "titel": "Searching for distant planets with Astra",
+     "url": "https://openai.com/index/searching-for-distant-planets-with-astra"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Öffentliche Daten von Weltraumteleskopen wie Kepler oder TESS lassen sich für eigene Auswertungen nutzen.",
+    "Mit Hilfe von KI-Werkzeugen kann man Suchprogramme planen und testen, ohne alles selbst programmieren zu müssen.",
+    "Kandidaten lassen sich über Forschungsteams weitergeben, die sie unabhängig prüfen."
+   ],
+   "ausprobieren": {
+    "prompt": "Schreibe ein Python-Skript, das Helligkeitskurven eines Sterns einliest und nach regelmäßig wiederkehrenden Einbrüchen sucht.",
+    "tool": "Codex",
+    "url": "https://openai.com/codex"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Signale im Kepler-Datensatz",
+    "balken": [
+     {
+      "label": "Markierte Signale",
+      "wert": 200,
+      "anzeige": "über 200"
+     },
+     {
+      "label": "Bekannte Planeten darunter",
+      "wert": 10,
+      "anzeige": "10"
+     }
+    ]
+   },
+   "macher": "Kevin Bond (OpenAI), Ethan Byrd (Primitive)",
+   "branche": "Astronomie / Exoplanetenforschung",
+   "jahr": 2026,
+   "tools": [
+    "Codex",
+    "Astra"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Analysierte Sterne (Bond)",
+     "wert": "rund 100.000"
+    },
+    {
+     "label": "Analysierte Sterne (Byrd)",
+     "wert": "rund 19 Millionen"
+    },
+    {
+     "label": "Bestätigte Exoplaneten laut Quelle",
+     "wert": "über 6.400"
+    }
+   ],
+   "link": "https://openai.com/index/searching-for-distant-planets-with-astra",
+   "linkLabel": "Originalbeitrag bei OpenAI",
+   "id": "amateurastronomen-suchen-mit-codex-und-astra-nach-exoplanete",
+   "hinzugefuegt": "2026-11-26T10:59:09Z"
+  },
+  {
    "titel": "llm.asm: Drei KI-Projekte in reinem x86-64-Assembler",
    "kurz": "Das GitHub-Projekt alesha-pro/llm.asm umfasst drei LLM-Anwendungen, die komplett in NASM-Assembler geschrieben sind, darunter Qwen3-0.6B-Inferenz in 14 KB, ein bootbares Mini-Betriebssystem und ein Mini-GPT-Trainer. Laut Repository kommt ganz ohne C, libc oder Abhängigkeiten aus.",
    "artikel": [
@@ -24087,8 +24212,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-26T02:17:52Z",
-  "neueFunde": 3,
-  "standAktualisiert": "2026-11-25T09:16:07Z"
+  "letzterScan": "2026-11-26T10:59:09Z",
+  "neueFunde": 2,
+  "standAktualisiert": "2026-11-26T10:59:09Z"
  }
 }
