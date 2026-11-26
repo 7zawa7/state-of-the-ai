@@ -1,6 +1,50 @@
 {
  "news": [
   {
+   "titel": "US-Chipbeschränkungen bremsen laut Bericht chinesische KI-Labore",
+   "kurz": "Laut einem Bericht von The Information spüren chinesische KI-Entwickler wie Deepseek, Moonshot AI und Alibaba schon jetzt den Druck durch US-Exportbeschränkungen und Anti-Distillations-Maßnahmen. Viele Projekte verzögern sich.",
+   "artikel": [
+    "Laut einem Bericht des Magazins The Information verschärfen die USA ihren Griff im KI-Wettlauf mit China, und dieser Druck wirkt bereits. Betroffen sind unter anderem Deepseek, Moonshot AI und Alibaba. Seit September stehen diese Firmen unter Druck.",
+    "Zwei Faktoren werden genannt. Erstens schränken Beschränkungen den Fernzugriff chinesischer Firmen auf moderne Nvidia-Chips in Rechenzentren im Ausland ein. Zweitens verweist der Bericht auf erfolgreiche Anti-Distillations-Maßnahmen von OpenAI und Anthropic. Distillation bezeichnet dabei das Training eines kleineren Modells mit den Antworten eines größeren Modells; Anti-Distillation soll solches Abgreifen erschweren.",
+    "## Folgen für die Entwicklung",
+    "Laut dem Bericht sind viele laufende Projekte verzögert. Deepseek-Forscher schätzen intern, dass ihr Rückstand zu den besten US-Modellen von drei bis sechs Monaten auf neun Monate wachsen könnte, falls Distillation vollständig wegfällt. Moonshot AI hat außerdem einen Deal über Nvidia-Blackwell-Chips im Wert von 150 Millionen US-Dollar in Indonesien gestrichen.",
+    "## Ausweichstrategien",
+    "Die Firmen suchen laut dem Bericht nach Umgehungswegen. Manche mieten Rechenleistung über nicht-chinesische Drittanbieter. Andere, darunter MiniMax, Mihoyo und Alibaba, setzen stärker auf heimische Chips. Zudem fließt mehr Geld in Trainingsdaten für das eigene Reinforcement Learning, also das Training durch Belohnungssignale.",
+    "Hinweis: Alle Angaben stammen aus dem Bericht von The Information, wie The Decoder ihn wiedergibt. Unabhängig geprüft wurden sie hier nicht."
+   ],
+   "quellen": [
+    {
+     "titel": "US chip-access curbs and anti-distillation measures are reportedly already slowing Chinese AI labs – The Decoder",
+     "url": "https://the-decoder.com/us-chip-access-curbs-and-anti-distillation-measures-are-reportedly-already-slowing-chinese-ai-labs/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Verfolge, wie sich der Zugang zu KI-Hardware international entwickelt, um Trends bei Modellen und Preisen besser einzuordnen.",
+    "Prüfe bei eigenen Projekten, welche Nutzungsbedingungen für Modellausgaben und Distillation gelten."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Rückstand chinesischer Labore zu US-Modellen (Monate, Deepseek-Schätzung)",
+    "balken": [
+     {
+      "label": "Bisher",
+      "wert": 3,
+      "anzeige": "3 Monate"
+     },
+     {
+      "label": "Ohne Distillation",
+      "wert": 9,
+      "anzeige": "9 Monate"
+     }
+    ]
+   },
+   "bereich": "Text",
+   "datum": "2026-11-20",
+   "id": "us-chipbeschrankungen-bremsen-laut-bericht-chinesische-ki-la",
+   "hinzugefuegt": "2026-11-26T02:17:52Z"
+  },
+  {
    "titel": "OpenAI veröffentlicht Perplexity-Werte und fordert gemeinsame Grenzen für KI-Labore",
    "kurz": "OpenAI-Chefwissenschaftler Jakub Pachocki hat interne Perplexity-Werte der GPT-Reihe veröffentlicht und schlägt vor, die Kennzahl als Branchenstandard zu nutzen. Er plädiert zudem dafür, dass führende Labore sich auf gemeinsame Grenzen einigen, bis bessere Aufsichtsmethoden existieren.",
    "artikel": [
@@ -18540,6 +18584,157 @@
  ],
  "projekte": [
   {
+   "titel": "llm.asm: Drei KI-Projekte in reinem x86-64-Assembler",
+   "kurz": "Das GitHub-Projekt alesha-pro/llm.asm umfasst drei LLM-Anwendungen, die komplett in NASM-Assembler geschrieben sind, darunter Qwen3-0.6B-Inferenz in 14 KB, ein bootbares Mini-Betriebssystem und ein Mini-GPT-Trainer. Laut Repository kommt ganz ohne C, libc oder Abhängigkeiten aus.",
+   "artikel": [
+    "Das Projekt »llm.asm« besteht aus drei eigenständigen Teilprojekten, die vollständig in 100 % reinem x86-64-NASM-Assembler geschrieben sind. Laut Repository wird ohne C, C++, Rust, libc, libm oder Laufzeitabhängigkeiten gearbeitet. Gebaut wird mit nasm und dem Linker ld. Insgesamt umfasst der Code laut Angabe 17.252 Zeilen.",
+    "## Inferenz: Qwen3-0.6B in 14 KB",
+    "Das erste Teilprojekt ist ein statisches Linux-Programm, das das Sprachmodell Qwen3-0.6B im Q8_0-Format ausführt. Der Tokenizer (BPE, Zerlegung von Text in Wortstücke) ist eingebaut. Laut Projektangabe liegt die Binärdatei bei 14.712 Byte. Die Angabe von 126,8 Token pro Sekunde beim Decodieren mit 40 Threads ist eine Messung des Autors, keine unabhängige Prüfung. Der Autor vergleicht sie mit llama.cpp auf derselben Maschine und nennt dabei einen Vorsprung von 18 bis 36 Prozent.",
+    "## Bootbares Mini-Betriebssystem",
+    "Das zweite Teilprojekt startet das Modell direkt auf Hardware, ohne Linux oder Windows. Laut Repository durchläuft der Start Multiboot, den Long Mode und SMP-Unterstützung über ACPI und APIC. Die Chat-Ausgabe läuft über VGA, PS/2 und COM1. Die Angaben zu Startzeit (74 bis 94 ms) und Geschwindigkeit (134,9 Token pro Sekunde in einer KVM-Umgebung) stammen laut Autor aus eigenen Messungen.",
+    "## Mini-GPT-Trainer mit Braille-Oberfläche",
+    "Das dritte Teilprojekt trainiert ein kleines GPT-Modell von Grund auf und zeigt den Fortschritt in einer Terminal-Oberfläche aus Braille-Zeichen (TUI). Laut Angabe wird ein vollständiger analytischer Rückwärtsdurchlauf (Backpropagation) genutzt, und der Verlust (val_loss) sinkt laut Repository von 4,19 auf 1,51 auf dem Datensatz TinyShakespeare in vier Minuten. Auch diese Zahlen sind Herstellerangaben."
+   ],
+   "quellen": [
+    {
+     "titel": "alesha-pro/llm.asm auf GitHub",
+     "url": "https://github.com/alesha-pro/llm.asm"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer Assembler lernen will, kann die Quelltexte als Beispiel für Low-Level-Programmierung von Transformer-Modellen durchgehen.",
+    "Mit der Anleitung im Repository lässt sich das Qwen3-0.6B-Modell lokal als Kommandozeilen-Chat starten, sofern Modellgewichte vorhanden sind.",
+    "Der Mini-GPT-Trainer eignet sich, um an einem kleinen Textdatensatz nachzuvollziehen, wie ein Sprachmodell von Grund auf trainiert wird."
+   ],
+   "ausprobieren": {
+    "prompt": "git clone https://github.com/alesha-pro/llm.asm.git && cd llm.asm && make all",
+    "tool": "llm.asm (GitHub-Repository)",
+    "url": "https://github.com/alesha-pro/llm.asm"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "asm-gpt-train",
+    "zeilen": [
+     "> make all",
+     "✓ Build erfolgreich",
+     "● Step 400/400 · 100%",
+     "loss=1.6604 val=1.8399",
+     "- Python nicht nötig",
+     "+ Braille-TUI aktiv"
+    ]
+   },
+   "tag": "Assembler · Open Source",
+   "macher": "alesha-pro (GitHub-Nutzer)",
+   "branche": "Open-Source-Software / KI-Infrastruktur",
+   "jahr": "",
+   "tools": [
+    "NASM",
+    "ld",
+    "GitHub"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Repository-Sterne",
+     "wert": "318 ★"
+    },
+    {
+     "label": "Quellcode",
+     "wert": "17.252 Zeilen Assembler"
+    },
+    {
+     "label": "Inferenz-Binärdatei",
+     "wert": "14.712 Byte"
+    },
+    {
+     "label": "Bootbares OS",
+     "wert": "24.252 Byte"
+    },
+    {
+     "label": "Mini-GPT-Trainer",
+     "wert": "32.944 Byte"
+    }
+   ],
+   "link": "https://github.com/alesha-pro/llm.asm",
+   "linkLabel": "Zum Repository auf GitHub",
+   "id": "llm-asm-drei-ki-projekte-in-reinem-x86-64-assembler",
+   "hinzugefuegt": "2026-11-26T02:17:52Z"
+  },
+  {
+   "titel": "shrink-anything: Werkzeug entfernt toten Code und prüft jeden Schnitt mit eigenen Tests",
+   "kurz": "shrink-anything ist ein Open-Source-Werkzeug (MIT-Lizenz), das ungenutzten Code, Dateien, Abhängigkeiten und Assets in Projekten findet und entfernt. Jeder Schnitt bleibt nur, wenn die eigenen Tests weiterhin bestehen.",
+   "artikel": [
+    "## Worum es geht",
+    "Coding-Agenten schreiben Code schneller, als jemand ihn wieder entfernt. Das Projekt shrink-anything setzt genau dort an: Es sucht Funktionen, die niemand aufruft, Dateien, die niemand importiert, Pakete, die niemand nutzt, und Bilder, die niemand zeigt. Laut Projektbeschreibung soll so das Lesen für Agenten und das Bauen in der CI weniger Aufwand kosten.",
+    "## So arbeitet das Werkzeug",
+    "shrink-anything zählt Namen statt einen Aufrufgraphen zu bauen. Erwähnt ein Name nur seine eigene Definition, gilt er als tot. Jeder Schnitt wird als Stapel angewendet und danach mit dem eigenen Testbefehl geprüft. Besteht der Test nicht, wird der Schnitt zurückgenommen. Vor dem Test prüft das Werkzeug jede geänderte Datei mit dem Parser der jeweiligen Sprache. Tests werden nicht verändert, und mit einem Undo-Befehl lassen sich Dateien byte-genau wiederherstellen.",
+    "## Grenzen",
+    "Öffentliche Funktionen, Exporte von Bibliotheken oder Dateien, die ein Framework per Konvention lädt, werden nicht blind entfernt. Sie gehen an einen Agenten mit Begründung oder nur mit der Option --aggressive. Ohne Tests liefert das Werkzeug laut Readme nur eine Analyse, keinen vertrauenswürdigen Schnitt.",
+    "## Ergebnisse der Demo-Projekte",
+    "Im Repository liegen Demoprojekte mit absichtlich eingebautem toten Code. Die Angaben dazu stammen aus dem Readme des Projekts. Beim TypeScript-Warenkorb sank der Umfang von 106 auf 58 Zeilen, bei einem Python-Shop von 142 auf 86 Zeilen. Eine statische Seite schrumpfte von 913 KB auf 398 KB. Das Readme nennt außerdem 46 Prozent weniger Tokens zum Lesen auf der Demo-App. Das sind Herstellerangaben des Projekts, keine unabhängig geprüften Werte. Auf echten Projekten sei weniger pro Lauf zu erwarten."
+   ],
+   "quellen": [
+    {
+     "titel": "GitHub - EL4CTEO/shrink-anything",
+     "url": "https://github.com/EL4CTEO/shrink-anything"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Ein eigenes Projekt mit einem Testbefehl wie npm test oder pytest durchlaufen lassen, um ungenutzten Code aufzuspüren, ohne ihn sofort zu löschen.",
+    "Mit dem Befehl scan nur eine Liste der Kandidaten erstellen lassen, ohne etwas zu verändern.",
+    "Vor einem Pull Request einen Bericht als Markdown erzeugen lassen."
+   ],
+   "ausprobieren": {
+    "prompt": "shrink-anything go --agent claude -- npm test",
+    "tool": "shrink-anything",
+    "url": "https://github.com/EL4CTEO/shrink-anything"
+   },
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "shrink-anything",
+    "zeilen": [
+     "> shrink-anything scan",
+     "✓ Kandidaten gefunden",
+     "- toten Code entfernt",
+     "⚠ Schnitt zurückgenommen, Test schlägt fehl",
+     "+ Bericht erstellt",
+     "● Status: alle Schnitte geprüft"
+    ]
+   },
+   "tag": "Open Source",
+   "macher": "EL4CTEO (GitHub-Nutzer)",
+   "branche": "Softwareentwicklung",
+   "jahr": "",
+   "tools": [
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "Rust",
+    "Go",
+    "npm",
+    "Cargo"
+   ],
+   "kennzahlen": [
+    {
+     "label": "GitHub-Sterne",
+     "wert": "281"
+    },
+    {
+     "label": "Forks",
+     "wert": "17"
+    },
+    {
+     "label": "Sprachen",
+     "wert": "19"
+    }
+   ],
+   "link": "https://github.com/EL4CTEO/shrink-anything",
+   "linkLabel": "Repository auf GitHub",
+   "id": "shrink-anything-werkzeug-entfernt-toten-code-und-pruft-jeden",
+   "hinzugefuegt": "2026-11-26T02:17:52Z"
+  },
+  {
    "titel": "GameAnything: Eigene Fotos und Geschichten als Mod in bestehende Spiele bauen",
    "kurz": "GameAnything ist ein Open-Source-Projekt auf GitHub, das Fotos, Videos, Romane oder Filme in spielbare Welten für Spiele übersetzt, die man bereits besitzt. Die Umsetzung übernehmen Coding-Agenten, während man im Chat und auf einer lokalen Webseite steuert.",
    "artikel": [
@@ -23892,8 +24087,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-25T19:21:02Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-26T02:17:52Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-25T09:16:07Z"
  }
 }
