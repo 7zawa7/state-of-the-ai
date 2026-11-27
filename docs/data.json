@@ -1,6 +1,45 @@
 {
  "news": [
   {
+   "titel": "Verbotene Nvidia-Blackwell-Chips in Shanghaier Rechenzentrum aufgetaucht",
+   "kurz": "Laut einer Recherche von Bloomberg haben zwei chinesische Firmen Nvidia-Blackwell-Chips in einem Rechenzentrum in Shanghai installiert, das mit Alice Huang in Verbindung steht. Der Export dieser Chips nach China ohne US-Lizenz ist verboten.",
+   "artikel": [
+    "Laut einer Recherche von Bloomberg stehen in einem Rechenzentrum in Shanghai Nvidia-Blackwell-Chips, deren Export nach China ohne US-Lizenz verboten ist. Das Rechenzentrum wird mit Alice Huang in Verbindung gebracht, die laut Bericht eine Affäre mit Nvidia-CEO Jensen Huang hatte. Die Angaben stammen aus Dokumenten, die bei chinesischen Behörden eingereicht wurden und die Bloomberg einsehen konnte.",
+    "## Kredite mit Chips als Sicherheit",
+    "Aus den Unterlagen geht hervor, dass das Unternehmen Shanghai Shuoyao einen GB300-NVL72-Rack als Sicherheit für einen Kredit über 96 Millionen Yuan (rund 14 Millionen US-Dollar) bei der Shanghai Innovation Bank angeboten hat. Ein zweites Unternehmen, Shanghai Kezhan, führte in seinen Kreditunterlagen einen GB200-Server am selben Standort auf.",
+    "## Spur zu Gigabyte und Megaspeed",
+    "Bloomberg verfolgte das Rack über eine Seriennummer in einer öffentlichen Garantiedatenbank bis zum taiwanesischen Hersteller Gigabyte. Shanghai Shuoyao ist laut Bloomberg eng mit dem in Singapur ansässigen Unternehmen Megaspeed verbunden. Die US-Regierung setzte Megaspeed diesen Monat auf eine Handelsschwarzliste, weil der Verdacht auf Chipschmuggel besteht. Alice Huang gründete Megaspeed laut Bericht 2023, Nvidia nahm das Unternehmen innerhalb von vier Tagen als Partner auf. Später wurde Megaspeed laut Bloomberg Nvidias größter Kunde in Südostasien.",
+    "## Folgen für chinesische Startups",
+    "Die verschärften US-Exportregeln und Maßnahmen gegen die Verbreitung von KI-Technik (sogenannte Anti-Diffusion-Maßnahmen, also Regeln, die den Zugang zu fortgeschrittener Hardware in Drittländern begrenzen) bereiten chinesischen KI-Startups laut Berichten bereits Probleme."
+   ],
+   "quellen": [
+    {
+     "titel": "Banned Nvidia Blackwell chips turn up in a Shanghai data center linked to Alice Huang, Bloomberg reports (The Decoder)",
+     "url": "https://the-decoder.com/banned-nvidia-blackwell-chips-turn-up-in-a-shanghai-data-center-linked-to-alice-huang-bloomberg-reports/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Die Meldung zeigt, wie wichtig Lieferketten-Nachweise für Hardware sind, die in KI-Projekten eingesetzt wird.",
+    "Wer Hardware gebraucht kauft oder least, sollte auf Herkunft und Exportbestimmungen achten."
+   ],
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Exportkontrolle",
+    "zeilen": [
+     "> Seriennummer: Gigabyte-Rack geprüft",
+     "⚠ Chip-Export ohne US-Lizenz verboten",
+     "- Shanghai Shuoyao (Kredit 96 Mio. Yuan)",
+     "+ Megaspeed auf US-Handelsschwarzliste",
+     "● Status: Recherche von Bloomberg"
+    ]
+   },
+   "bereich": "Recht",
+   "datum": "2026-11-25",
+   "id": "verbotene-nvidia-blackwell-chips-in-shanghaier-rechenzentrum",
+   "hinzugefuegt": "2026-11-27T20:13:45Z"
+  },
+  {
    "titel": "NYT untersagt Fotografen Photoshop 2027 wegen KI-Metadaten",
    "kurz": "Die New York Times bittet freie Fotografen, die neueste Photoshop-Version 2027 bei Aufträgen nicht zu verwenden. Grund sind KI-Funktionen, die laut Redaktion Metadaten erzeugen können, die Fotos als KI-generiert kennzeichnen.",
    "artikel": [
@@ -4739,6 +4778,80 @@
   }
  ],
  "radar": [
+  {
+   "titel": "llama-cpp-rdna-boosts: AMD-spezifischer Fork von llama.cpp",
+   "kurz": "Ein Entwickler berichtet, dass ein Patch-Set für llama.cpp auf AMD-Grafikkarten Prefill und Token-Generierung deutlich beschleunigt. Die Zahlen stammen aus seinem eigenen Setup und sind laut ihm nicht verallgemeinerbar.",
+   "artikel": [
+    "Ein Hacker-News-Beitrag mit 429 Punkten stellt llama-cpp-rdna-boosts vor, ein Repository mit einem kleinen Satz an AMD-spezifischen Änderungen. Diese werden auf einen festgelegten Commit von llama.cpp angewendet und bei neueren Versionen der Basis erneut eingespielt. Der Autor beschreibt das Projekt daher eher als Patch-Sammlung denn als eigenständigen Fork.",
+    "## Hintergrund",
+    "Der Autor beschreibt eine Welle spezialisierter Inferenz-Engines, die sich auf bestimmte Modelle oder Hardware konzentrieren und oft mit Hilfe von LLMs entwickelt werden. Er kritisiert, dass einige dieser Projekte ihre Geschwindigkeitsgewinne über Änderungen am Modellverhalten statt an der Hardware erzielen, etwa indem bevorzugt Experten aus dem VRAM gewählt werden. Llama-cpp-rdna-boosts sieht er dagegen als transparenter an, auch wenn der Code laut Autor stark KI-generiert ist.",
+    "## Messwerte",
+    "Auf einer AMD R9700, die über eine eGPU-Schnittstelle an einem Laptop hängt, verbesserten sich laut Autor die Werte beim Modell Swift-1.5-Qwen3.8-27B (Q6_K_L) mit aktiviertem MTP. Die Prefill-Rate stieg von etwa 700 auf etwa 1300 Tokens pro Sekunde, die Token-Generierung von etwa 35 auf etwa 55 Tokens pro Sekunde. Der Autor betont selbst, dass seine Ergebnisse je nach Setup abweichen können.",
+    "## Installation",
+    "Der Autor nutzte vorgefertigte Container-Images statt eines eigenen Builds mit ROCm-Bibliotheken. Das Image läuft laut Beitrag über Podman und bekommt Zugriff auf die GPU-Geräte des Systems. ROCm ist AMDs Software-Plattform für GPU-Berechnungen, MTP steht für Multi-Token-Prediction, eine Technik zur schnelleren Textgenerierung."
+   ],
+   "quellen": [
+    {
+     "titel": "AMD-specific fork of llama.cpp (devnull.land)",
+     "url": "https://devnull.land/amd-specific-llama-cpp"
+    },
+    {
+     "titel": "Hacker-News-Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50657265"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Wer eine AMD-Grafikkarte besitzt, kann llama.cpp mit den rdna-boosts-Patches testen und die eigenen Werte vergleichen.",
+    "Privatnutzer mit lokalen Sprachmodellen können das vorgefertigte Container-Image per Podman ausprobieren, ohne ROCm selbst zu installieren."
+   ],
+   "ausprobieren": {
+    "prompt": "podman pull ghcr.io/stew675/llama-cpp-rdna-boosts:server-rocm-10.1",
+    "tool": "llama-cpp-rdna-boosts",
+    "url": "https://github.com/stew675/llama-cpp-rdna-boosts"
+   },
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Token-Generierung (Tokens/s, Herstellerunabhängiger Erfahrungswert des Autors)",
+    "balken": [
+     {
+      "label": "Vorher",
+      "wert": 35,
+      "anzeige": "~35 t/s"
+     },
+     {
+      "label": "Nachher (rdna-boosts)",
+      "wert": 55,
+      "anzeige": "~55 t/s"
+     }
+    ]
+   },
+   "quelle": "Hacker News",
+   "datum": "2026-11",
+   "kennzahlen": [
+    {
+     "label": "Hardware",
+     "wert": "AMD R9700 via eGPU (Setup des Autors)"
+    },
+    {
+     "label": "Prefill",
+     "wert": "~700 → ~1300 t/s"
+    },
+    {
+     "label": "Token-Generierung",
+     "wert": "~35 → ~55 t/s"
+    },
+    {
+     "label": "Modell",
+     "wert": "Swift-1.5-Qwen3.8-27B (Q6_K_L), MTP aktiv"
+    }
+   ],
+   "signal": "Ein kleines, nachvollziehbares Patch-Set für llama.cpp statt eines eigenen Forks soll AMD-Karten deutlich schneller machen. Die Messwerte stammen von einem einzelnen Nutzer und sind nicht unabhängig geprüft.",
+   "link": "https://devnull.land/amd-specific-llama-cpp",
+   "linkLabel": "Originalbeitrag lesen",
+   "id": "llama-cpp-rdna-boosts-amd-spezifischer-fork-von-llama-cpp",
+   "hinzugefuegt": "2026-11-27T20:13:45Z"
+  },
   {
    "titel": "Stable GDN-2: Stabilere Lineare Aufmerksamkeit für lange Kontexte",
    "kurz": "Forscher beschreiben, warum das Training von Gated DeltaNet-2 bei langen Kontexten scheitern kann, und schlagen mit Stable GDN-2 eine Variante vor, die den rekurrenten Zustand kontrolliert. Die Angaben stammen aus dem arXiv-Paper und der Hugging-Face-Seite.",
@@ -24637,7 +24750,7 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-27T11:26:56Z",
+  "letzterScan": "2026-11-27T20:13:45Z",
   "neueFunde": 2,
   "standAktualisiert": "2026-11-27T11:26:56Z"
  }
