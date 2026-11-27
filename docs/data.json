@@ -4740,6 +4740,115 @@
  ],
  "radar": [
   {
+   "titel": "Stable GDN-2: Stabilere Lineare Aufmerksamkeit für lange Kontexte",
+   "kurz": "Forscher beschreiben, warum das Training von Gated DeltaNet-2 bei langen Kontexten scheitern kann, und schlagen mit Stable GDN-2 eine Variante vor, die den rekurrenten Zustand kontrolliert. Die Angaben stammen aus dem arXiv-Paper und der Hugging-Face-Seite.",
+   "artikel": [
+    "Lineare Aufmerksamkeit ist eine Alternative zur klassischen Aufmerksamkeit in Sprachmodellen. Sie skaliert linear mit der Textlänge und arbeitet mit einem rekurrenten Zustand fester Größe. Gated DeltaNet-2 (GDN-2) erlaubt, Löschen und Schreiben für jeden Kanal getrennt zu steuern. Das verbessert die Ausdruckskraft und das Abrufen von Informationen aus dem Kontext.",
+    "## Problem: Instabiles Training",
+    "Beim Training mit langen Kontexten scheiterte GDN-2 laut den Autoren teilweise. Die Ursache sehen sie in einer Asymmetrie zwischen Lese- und Änderungsrichtung beim Löschen. Dadurch entstehen nicht-normale Löschoperatoren, deren Verstärkungen sich über Tokens aufsummieren. Der Zustand kann dann exponentiell wachsen, selbst ohne neue Schreibvorgänge.",
+    "## Lösungsansatz",
+    "Stable GDN-2 verwendet symmetrisches Löschen, damit sich der Zustand nicht aufbläht. Zusätzlich schreibt es Reste abhängig von einer Zerfallsregelung, damit das Schreiben flexibel bleibt. Die Autoren leiten eine obere Schranke von O(√T) für das Wachstum des Zustands her, wobei die blockweise parallele Berechnung erhalten bleibt.",
+    "## Ergebnisse",
+    "In Experimenten mit Modellen von rund 1,6 Milliarden Parametern trainierte Stable GDN-2 stabil und zeigte bessere Leistung beim Abrufen aus langen Kontexten. Im rekurrenten Setting verbesserte es den RULER-Durchschnitt bei 128K um 6,80 Punkte gegenüber GDN-2. Im hybriden Setting stieg die durchschnittliche Genauigkeit über neun Downstream-Aufgaben um 0,62 Punkte. Die Zahlen stammen aus den Angaben der Autoren und sind nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Paper page – Stable Gated DeltaNet-2 (Hugging Face)",
+     "url": "https://huggingface.co/papers/2611.34051"
+    }
+   ],
+   "demo": "paper",
+   "machen": [
+    "Das Paper lesen, um zu verstehen, warum lineare Aufmerksamkeit bei langen Kontexten instabil werden kann.",
+    "Die Ergebnisse als Referenz nutzen, wenn man eigene Architekturen mit rekurrenten Zuständen vergleicht."
+   ],
+   "quelle": "Hugging Face",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Modellgröße in Experimenten",
+     "wert": "ca. 1,6 Mrd. Parameter"
+    },
+    {
+     "label": "RULER-Verbesserung bei 128K (rekurrent)",
+     "wert": "+6,80 Punkte"
+    },
+    {
+     "label": "Genauigkeit über 9 Aufgaben (hybrid)",
+     "wert": "+0,62 Punkte"
+    },
+    {
+     "label": "Obere Schranke Zustandswachstum",
+     "wert": "O(√T)"
+    }
+   ],
+   "signal": "Die Autoren berichten über ein konkretes Stabilitätsproblem bei einer Architektur für lange Sequenzen und einen Lösungsvorschlag mit eigenen Messwerten.",
+   "link": "https://huggingface.co/papers/2611.34051",
+   "linkLabel": "Paper auf Hugging Face ansehen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "RULER-Score bei 128K (Verbesserung gegenüber GDN-2, laut Autoren)",
+    "balken": [
+     {
+      "label": "Stable GDN-2",
+      "wert": 6.8,
+      "anzeige": "+6,80 Punkte"
+     }
+    ]
+   },
+   "id": "stable-gdn-2-stabilere-lineare-aufmerksamkeit-fur-lange-kont",
+   "hinzugefuegt": "2026-11-27T11:26:56Z"
+  },
+  {
+   "titel": "llama.cpp-Benchmark-Dashboard für AMD Ryzen und Radeon",
+   "kurz": "Hugging Face stellt ein Dashboard bereit, mit dem sich die lokale KI-Inferenz auf AMD-Hardware über Builds, Modelle und Quantisierungen hinweg vergleichen lässt. Die Benchmark-Daten sind öffentlich einsehbar.",
+   "artikel": [
+    "Das ggml-org-Team hat auf Hugging Face ein Benchmark-Dashboard für llama.cpp auf AMD-Hardware veröffentlicht. Es zeigt, wie sich die Geschwindigkeit der lokalen Inferenz bei Ryzen- und Radeon-Systemen über verschiedene llama.cpp-Builds, Modelle und Quantisierungen entwickelt.",
+    "## Bedienung",
+    "Im Dashboard wählt man in der Seitenleiste Hardware, Modell und llama.cpp-Build. Derzeit stehen die Radeon 8060S (gfx1151) und die Radeon AI Pro R9700S (gfx1201) zur Auswahl. Der Reiter Overview vergleicht Quantisierungen für eine Hardware, ein Modell und einen Build. Build history zeigt die Werte über alle erfassten Builds, Context scaling die Token-Generierung bei wachsendem Kontext.",
+    "## Was die Zahlen bedeuten",
+    "Gemessen werden zwei Tests in Tokens pro Sekunde. PP512 verarbeitet 512 Eingabe-Tokens ohne Generierung und zeigt, wie schnell ein Prompt verarbeitet wird. TG128 erzeugt 128 Tokens und zeigt die Ausgabegeschwindigkeit. Beide starten ohne vorherigen Kontext (Kontexttiefe null). Dargestellt wird der Mittelwert des Durchsatzes.",
+    "## Methodik",
+    "Getestet werden die vorkompilierten Binärdateien, die über llama-install.sh verteilt werden. Laut Team laufen die Workflows für gfx1151 und gfx1201 wöchentlich mit dem Tool llama-bench, jeweils mit Flash Attention an und aus und mit zehn Wiederholungen pro Konfiguration. Die Modellauswahl umfasst unter anderem Qwen, Gemma, gpt-oss und LFM, sowohl dichte als auch Mixture-of-Experts-Architekturen. Verfügbar sind Formate wie Q4_K_M und Q8_0 sowie höher genauere Formate wie BF16 und F16.",
+    "## Daten nutzen",
+    "Das Dashboard liest direkt aus einem öffentlichen Storage Bucket auf Hugging Face. Die Rohdaten lassen sich also für eigene Auswertungen oder den Vergleich mit lokalen Messungen verwenden.",
+    "Hinweis: Die Angaben zu Testaufbau und Hardware stammen von den Entwicklern selbst (Herstellerangaben des Projekts) und wurden nicht unabhängig geprüft."
+   ],
+   "quellen": [
+    {
+     "titel": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+     "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench"
+    }
+   ],
+   "demo": "bild",
+   "machen": [
+    "Mit dem Dashboard lässt sich prüfen, welche Quantisierung auf der eigenen AMD-Grafikkarte am schnellsten läuft.",
+    "Man kann die Build-Historie verfolgen, um zu sehen, ob neue llama.cpp-Versionen die Geschwindigkeit verbessern.",
+    "Die Rohdaten lassen sich herunterladen, um eigene Diagramme zu erstellen oder mit einem lokalen Testlauf zu vergleichen."
+   ],
+   "quelle": "Hugging Face",
+   "datum": "2026-11-26",
+   "kennzahlen": [
+    {
+     "label": "Getestete Hardware",
+     "wert": "Radeon 8060S (gfx1151), Radeon AI Pro R9700S (gfx1201)"
+    },
+    {
+     "label": "Wiederholungen pro Konfiguration",
+     "wert": "10"
+    },
+    {
+     "label": "Testlänge PP512 / TG128",
+     "wert": "512 Eingabe-Tokens / 128 generierte Tokens"
+    }
+   ],
+   "signal": "Ein öffentliches, nachvollziehbares Benchmark-Werkzeug für lokale KI auf AMD-Hardware, das Entwicklern den Vergleich von Builds und Quantisierungen erleichtert.",
+   "link": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+   "linkLabel": "Zum Blogbeitrag",
+   "id": "llama-cpp-benchmark-dashboard-fur-amd-ryzen-und-radeon",
+   "hinzugefuegt": "2026-11-27T11:26:56Z"
+  },
+  {
    "titel": "Microsoft beschreibt ARTEX: KI-Framework automatisiert Cyberangriffe",
    "kurz": "Microsoft hat die technische Architektur des KI-Frameworks ARTEX veröffentlicht, mit dem staatlich unterstützte Gruppen und Kriminelle Cyberangriffe weitgehend ohne menschliches Zutun ausführen. Als Gegenmaßnahme empfiehlt der Konzern Täuschungstechniken wie Honeypots und gefälschte Erfolgsmeldungen.",
    "artikel": [
@@ -24528,8 +24637,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-27T02:45:32Z",
-  "neueFunde": 4,
-  "standAktualisiert": "2026-11-26T10:59:09Z"
+  "letzterScan": "2026-11-27T11:26:56Z",
+  "neueFunde": 2,
+  "standAktualisiert": "2026-11-27T11:26:56Z"
  }
 }
