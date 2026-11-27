@@ -1,6 +1,135 @@
 {
  "news": [
   {
+   "titel": "NYT untersagt Fotografen Photoshop 2027 wegen KI-Metadaten",
+   "kurz": "Die New York Times bittet freie Fotografen, die neueste Photoshop-Version 2027 bei Aufträgen nicht zu verwenden. Grund sind KI-Funktionen, die laut Redaktion Metadaten erzeugen können, die Fotos als KI-generiert kennzeichnen.",
+   "artikel": [
+    "Die New York Times bittet freie Fotografen, bei Aufträgen für die Zeitung nicht die neueste Version von Adobe Photoshop zu verwenden. Grund sind KI-Funktionen im Update 2027, die laut einer internen E-Mail \"in Weisen genutzt werden, die für Nutzer möglicherweise nicht erkennbar sind\". Die E-Mail stammt von den Fotografie-Verantwortlichen Meaghan Looram und Josh Haner und wurde von The Verge eingesehen.",
+    "## Warum die Metadaten zum Problem werden",
+    "Nach Angaben der Redaktion können diese Funktionen dazu führen, dass Metadaten Fotos als KI-generiert ausweisen. Metadaten sind versteckte Zusatzinformationen in einer Bilddatei, etwa über Herkunft und Bearbeitung. Die Times betont, dass sie Fotos nicht retuschiert oder digital manipuliert und nur minimale Farbanpassungen zulässt. Deshalb könnten solche Kennzeichnungen das Vertrauen der Leser beeinträchtigen.",
+    "## Neue KI-Funktionen in Photoshop",
+    "Laut dem Bericht gehören zum Update unter anderem eine Ansicht namens \"AI Assisted Editor\", ein KI-Assistent für schrittweise Bearbeitungsanleitungen, promptbasierte Bildbearbeitung, neue KI-Hochskalierung und ein Werkzeug, das Bilder für andere Formate neu anordnet. Unklar ist, welche Werkzeuge genau KI nutzen. Selbst ältere Auswahlwerkzeuge könnten inzwischen zur KI-Sammlung zählen.",
+    "## Adobes C2PA-Kennzeichnung",
+    "Adobe hat im August begonnen, C2PA-Metadaten in seine Apps einzubauen. C2PA ist ein Standard, der anzeigt, ob ein Bild KI-generiert oder mit KI-Funktionen bearbeitet wurde. Die Times will verhindern, dass diese Kennzeichnungen ungewollt in ihren Fotos auftauchen.",
+    "## Stellungnahme",
+    "Eine Sprecherin der Times, Graham James, bestätigte die Vorgabe gegenüber The Verge. Welche Photoshop-Funktionen genau gemeint sind, blieb offen. Adobe hat auf eine Anfrage zunächst nicht reagiert."
+   ],
+   "quellen": [
+    {
+     "titel": "The New York Times warns photographers not to update Photoshop over AI features (The Verge)",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50647673"
+    }
+   ],
+   "demo": "bild",
+   "machen": [
+    "Vor einem Update bei Adobe-Software prüfen, welche KI-Funktionen neu hinzukommen und ob sie Metadaten verändern.",
+    "Bei Fotos für Auftraggeber nachfragen, welche Kennzeichnungs- oder Bearbeitungsregeln gelten.",
+    "Die Metadaten eigener Bilder kontrollieren, bevor sie veröffentlicht werden."
+   ],
+   "bereich": "Bild",
+   "datum": "2026-11-24",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "Photoshop 2027 (28.0.0)",
+    "zeilen": [
+     "> Update 28.0.0 installieren",
+     "⚠ KI-Funktionen erkannt",
+     "- Metadaten: unverändert",
+     "+ C2PA-Kennzeichnung möglich",
+     "● Status: Freigabe für NYT-Aufträge gesperrt"
+    ]
+   },
+   "id": "nyt-untersagt-fotografen-photoshop-2027-wegen-ki-metadaten",
+   "hinzugefuegt": "2026-11-27T02:45:32Z"
+  },
+  {
+   "titel": "FCC genehmigt SpaceX bis zu 1 Million Starmind-Satelliten für KI-Rechenzentren im All",
+   "kurz": "Die US-Behörde FCC hat SpaceX erlaubt, bis zu eine Million Satelliten für die Verarbeitung von KI-Daten im Orbit einzusetzen. Der Start ist für 2027 geplant, der volle Ausbau soll bis 2040 abgeschlossen sein.",
+   "artikel": [
+    "Die US-Kommunikationsbehörde Federal Communications Commission (FCC) hat dem Raumfahrtunternehmen SpaceX die Genehmigung erteilt, bis zu eine Million Satelliten für sogenannte orbitale Rechenzentren einzusetzen. Laut Bericht der Nachrichtenagentur Reuters, auf die sich The Decoder beruft, sollen diese Satelliten KI-Daten direkt im Orbit verarbeiten.",
+    "Das Vorhaben trägt den Namen Starmind. Dabei handelt es sich um eine Konstellation aus Satelliten, die als orbitale Rechenmodule dienen. Ziel ist es, einen Teil des stark wachsenden Bedarfs an KI-Rechenleistung zu decken, der bisher auf der Erde anfällt.",
+    "## Zeitplan",
+    "SpaceX plant nach Angaben des Artikels die ersten Starts im Jahr 2027. Die gesamte Konstellation soll laut Zusatzinformationen bis 2040 in Betrieb sein.",
+    "## Technik und Kontrolle",
+    "Die Behörde hat außerdem Funkverbindungen genehmigt. Diese ermöglichen es SpaceX, die Satelliten zu überwachen und zu steuern, falls die optischen Verbindungen zwischen ihnen ausfallen. Optische Verbindungen sind Datenverbindungen per Laserlicht.",
+    "## Konkurrenz und Kosten",
+    "Auch Google und Blue Origin arbeiten laut Artikel an KI-Infrastruktur im All. Die Unternehmensberatung Boston Consulting Group schätzt jedoch, dass die Kosten im Weltraum vorerst deutlich über denen erdgebundener Rechenzentren liegen werden.",
+    "Die Angaben zu Zeitplan und Kosten stammen aus der Berichterstattung von The Decoder und sind keine bestätigten Projektpläne der Unternehmen selbst."
+   ],
+   "quellen": [
+    {
+     "titel": "FCC clears SpaceX to deploy up to 1 million Starmind satellites for orbital AI data centers by 2040 – The Decoder",
+     "url": "https://the-decoder.com/fcc-clears-spacex-to-deploy-up-to-1-million-starmind-satellites-for-orbital-ai-data-centers-by-2040/"
+    }
+   ],
+   "demo": "3d",
+   "machen": [
+    "Die Meldung lässt sich als Hintergrund nutzen, um zu verstehen, wie Unternehmen Rechenleistung für KI künftig organisieren könnten.",
+    "Wer Projekte zu Raumfahrt oder KI-Infrastruktur plant, kann den Zeitplan 2027 bis 2040 als Orientierung für eigene Recherchen verwenden."
+   ],
+   "bereich": "Recht",
+   "datum": "2026-01-01",
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "FCC-Genehmigung",
+     "Starmind-Satelliten",
+     "Orbitale Rechenzentren",
+     "Start 2027"
+    ]
+   },
+   "id": "fcc-genehmigt-spacex-bis-zu-1-million-starmind-satelliten-fu",
+   "hinzugefuegt": "2026-11-27T02:45:32Z"
+  },
+  {
+   "titel": "Nvidia stoppt Serverlieferungen nach Malaysia, Singapur, Thailand und Indonesien",
+   "kurz": "Laut Financial Times hat Nvidia Partnern wie Dell und Supermicro untersagt, Server in vier südostasiatische Länder zu liefern. Auslöser sind verschärfte US-Exportkontrollen gegen den indirekten Zugang chinesischer Firmen zu KI-Rechenleistung.",
+   "artikel": [
+    "Nvidia hat laut Bericht der Financial Times seinen Herstellerpartnern, darunter Dell und Supermicro, gestoppt, Server nach Malaysia, Singapur, Thailand und Indonesien auszuliefern. Dem Bericht zufolge stützt sich die Meldung auf drei Personen, die mit der Sache vertraut sind. Unklar ist, ob der Stopp nur vorübergehend ist.",
+    "## Hintergrund: neue US-Exportkontrollen",
+    "Auslöser ist eine verschärfte Regelung des US-Handelsministeriums, konkret der Behörde Bureau of Industry and Security. Sie soll verhindern, dass chinesische Unternehmen bestehende Verkaufsverbote umgehen, indem sie Rechenleistung bei ausländischen Cloud-Anbietern mieten. US-Handelsbeauftragter Jamieson Greer nannte als Ziel, indirekten Zugang zu blockieren, etwa Schmuggel über Südostasien oder Fernzugriff auf Rechenzentren in Drittländern.",
+    "## Gebrauchte Chips auf dem Markt",
+    "Laut CNBC haben Händler seit Ankündigung ungewöhnlich viele Nvidia-GPUs zum Verkauf angeboten. Der Präsident des KI-Infrastruktur-Marktplatzes GPU Mart, Jack Duhamel, sowie zwei weitere Insider bestätigten, dass der Anstieg direkt auf die neue Regel zurückgeht. Unter den Angeboten sind tausende B300-Chips, eines der fortschrittlichsten Nvidia-Modelle. Sie waren ursprünglich für Rechenzentren mit chinesischen Mietkunden vorgesehen.",
+    "## Unsicherheit für Cloud-Anbieter",
+    "Cloud-Anbieter in Südostasien haben laut Financial Times 90 Tage Zeit, eine Lizenz zu beantragen und nachzuweisen, dass keine eingeschränkten Unternehmen zu ihren Endkunden gehören. Ein Cloud-Manager beschrieb die Lage als „chaos“, da es keine Anleitung zur Antragstellung gebe. Außerdem haben Banken laut Bericht rund 500 Millionen US-Dollar an Krediten für den Singapurer Anbieter Aolani gestoppt. Aolani wollte Rechenleistung an ByteDance, die Muttergesellschaft von TikTok, vermieten. ByteDance könnte deshalb aus dem Geschäft aussteigen."
+   ],
+   "quellen": [
+    {
+     "titel": "Nvidia halts server shipments to Malaysia, Singapore, Thailand, and Indonesia after tighter US export controls – The Decoder",
+     "url": "https://the-decoder.com/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-after-tighter-us-export-controls/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Wer Cloud-GPUs mietet, sollte prüfen, wie sich die neuen Exportregeln auf Anbieter in Südostasien auswirken können.",
+    "Wer Hardware kaufen will, sollte bei Gebrauchtangeboten genau auf Herkunft und Lieferstatus achten, da die Lage laut Bericht unübersichtlich ist."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Gebrauchte Angebote mit Nvidia-GPUs (Anstieg laut CNBC, ohne Zahlenangabe)",
+    "balken": [
+     {
+      "label": "Vor der Regel",
+      "wert": 1,
+      "anzeige": "normal"
+     },
+     {
+      "label": "Nach der Regel",
+      "wert": 3,
+      "anzeige": "ungewöhnlich viele"
+     }
+    ]
+   },
+   "bereich": "Recht",
+   "datum": "2026-11-19",
+   "id": "nvidia-stoppt-serverlieferungen-nach-malaysia-singapur-thail",
+   "hinzugefuegt": "2026-11-27T02:45:32Z"
+  },
+  {
    "titel": "US-Chipbeschränkungen bremsen laut Bericht chinesische KI-Labore",
    "kurz": "Laut einem Bericht von The Information spüren chinesische KI-Entwickler wie Deepseek, Moonshot AI und Alibaba schon jetzt den Druck durch US-Exportbeschränkungen und Anti-Distillations-Maßnahmen. Viele Projekte verzögern sich.",
    "artikel": [
@@ -4610,6 +4739,54 @@
   }
  ],
  "radar": [
+  {
+   "titel": "Microsoft beschreibt ARTEX: KI-Framework automatisiert Cyberangriffe",
+   "kurz": "Microsoft hat die technische Architektur des KI-Frameworks ARTEX veröffentlicht, mit dem staatlich unterstützte Gruppen und Kriminelle Cyberangriffe weitgehend ohne menschliches Zutun ausführen. Als Gegenmaßnahme empfiehlt der Konzern Täuschungstechniken wie Honeypots und gefälschte Erfolgsmeldungen.",
+   "artikel": [
+    "Microsoft hat in einer Analyse beschrieben, wie das KI-Framework ARTEX funktioniert und wie weit es verbreitet ist. Laut Fachpresse ist ARTEX seit Juli 2026 in breiter Nutzung und gilt als bevorzugtes Werkzeug für Cyberangriffe. Den Quellcode veröffentlichte ein GitHub-Nutzer im Juli und löschte ihn im Oktober; andere Entwickler verbreiten weiterhin Kopien. Der chinesische Sicherheitsanbieter ThreatBook verkauft außerdem eine kommerzielle Pro-Version.",
+    "## Mehrere spezialisierte Agenten",
+    "ARTEX erfindet laut Microsoft keine neuen Angriffstechniken. Stattdessen steuert es bestehende Sicherheitswerkzeuge wie Nmap, Sqlmap, Metasploit und automatisierte Headless-Browser mit kaum menschlichem Eingreifen. Angreifer können beliebige große Sprachmodelle anbinden, auch Varianten ohne Sicherheitsvorkehrungen. Eine eingebaute Pooling-Funktion wechselt bei Fehlern oder Nutzungslimits automatisch Modelle oder API-Schlüssel.",
+    "Die Architektur ist laut Microsoft ein Multi-Agenten-System. Ein Zielmodell zerlegt die Anweisung in überprüfbare Teilziele. Ein Planungsagent wertet fortlaufend einen Wissensgraphen aus, also eine dynamische Karte entdeckter Systeme und Schwachstellen, und verteilt kurze Aufgaben an Worker-Agenten. Diese führen Systembefehle aus, etwa das Ablegen von Web-Shells oder das Übernehmen von Cloud-Konten. Ein Berichtsagent dokumentiert am Ende alle ausgenutzten Schwachstellen.",
+    "## Angriffe in Minuten",
+    "Laut Microsoft verkürzt die Automatisierung die Reaktionszeit der Verteidiger auf wenige Minuten. In einem Fall suchte ein Agent nach versehentlich offengelegten Zugangsdaten auf GitHub und zog Daten aus Azure Key Vault, einem Cloud-Schlüsselspeicher, in nur fünf Minuten. In einer Storm-0940-Kampagne zählte Microsoft mehr als 151.000 fehlgeschlagene Anmeldeversuche durch automatisches Passwort-Raten, mit Spitzen von 2.900 pro Minute.",
+    "## Microsofts Gegenmaßnahmen",
+    "Klassische regelbasierte Filter greifen laut Microsoft oft nicht, weil ARTEX Markierungen wie bekannte IP-Adressen oder die Browserkennungen „artex-enrich“ und „norma“ ständig wechselt. Microsoft empfiehlt daher Täuschungstechnik: Honeypots sind attraktive, aber wertlose Köder-Systeme. Tarpits verlangsamen Anfragen und zehren am Zeit- und Rechenbudget des Agenten. Gefälschte Erfolgsmeldungen wirken laut Microsoft besonders gut, weil das Zielmodell nach überprüfbaren Beweisen sucht und den Angriff bei einer überzeugenden Fake-Meldung selbst abbricht. Honeytokens, also Köder-Zugangsdaten, lösen frühe Warnungen aus.",
+    "Microsoft gibt an, dass diese Maßnahmen den erfolgreichen Angriffsverkehr auf echte Systeme in eigenen Tests deutlich senken. Offen bleibt laut Analyse, wie lange sie wirken: Die Schutzmaßnahmen setzen voraus, dass ARTEX laut und sichtbar bleibt. Schwellenwertfilter und Köder dürften an Grenzen stoßen, sobald Angreifer ihre Anfragen streuen."
+   ],
+   "quellen": [
+    {
+     "titel": "Microsoft details how state-backed hackers use the ARTEX AI framework to automate cyberattacks",
+     "url": "https://the-decoder.com/microsoft-details-how-state-backed-hackers-use-the-artex-ai-framework-to-automate-cyberattacks/"
+    }
+   ],
+   "demo": "security",
+   "machen": [
+    "Prüfen Sie, ob Zugangsdaten versehentlich öffentlich auf GitHub oder in ähnlichen Quellen liegen.",
+    "Setzen Sie Mehrfaktor-Anmeldung und Begrenzungen für Anmeldeversuche ein, um automatisiertes Passwort-Raten zu erschweren."
+   ],
+   "radar": true,
+   "quelle": "Fachpresse",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Fehlgeschlagene Anmeldeversuche (Storm-0940-Kampagne)",
+     "wert": "mehr als 151.000"
+    },
+    {
+     "label": "Spitze pro Minute",
+     "wert": "2.900"
+    },
+    {
+     "label": "Dauer Datenabzug nach Fund (ein Fall)",
+     "wert": "5 Minuten"
+    }
+   ],
+   "signal": "ARTEX automatisiert Angriffe mit spezialisierten Agenten und wechselt bei Fehlern selbstständig Modelle; Microsoft empfiehlt Täuschung statt reiner Filter.",
+   "link": "https://the-decoder.com/microsoft-details-how-state-backed-hackers-use-the-artex-ai-framework-to-automate-cyberattacks/",
+   "linkLabel": "Zum Artikel bei The Decoder",
+   "id": "microsoft-beschreibt-artex-ki-framework-automatisiert-cybera",
+   "hinzugefuegt": "2026-11-27T02:45:32Z"
+  },
   {
    "titel": "Mixture-of-Loops Transformer: Wiederverwendete Schichten mit KV-Gedächtnis",
    "kurz": "Ein Forschungspapier stellt den Mixture-of-Loops Transformer (MoLT) vor, der Key-Value-Speicher über Schleifen hinweg wiederverwendet. Laut Autoren erreicht die U-förmige Variante bei Pretraining-Effizienz und Inferenz-Latenz Verbesserungen gegenüber OLMo3.",
@@ -24351,8 +24528,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-26T20:03:55Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-27T02:45:32Z",
+  "neueFunde": 4,
   "standAktualisiert": "2026-11-26T10:59:09Z"
  }
 }
