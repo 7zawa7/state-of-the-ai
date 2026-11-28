@@ -4779,6 +4779,56 @@
  ],
  "radar": [
   {
+   "titel": "Drei Studien stützen LeCuns JEPA-Weltmodelle gegenüber Sprachmodellen",
+   "kurz": "Drei neue Studien von Meta und AMI Labs zeigen Fortschritte bei JEPA-Weltmodellen in Robotik-Planung, effizienterem Training und Fehlerkorrektur. Die Bausteine müssen aber noch stärker zusammenwachsen.",
+   "artikel": [
+    "Yann LeCun glaubt nicht, dass Sprachmodelle allein zu menschenähnlicher Intelligenz führen. Mit seiner JEPA-Architektur (Joint Embedding Predictive Architecture) verfolgt er Maschinen, die Ursache und Wirkung modellieren und ihre Handlungen im Voraus planen. Ein solches Modell, das die Welt intern abbildet, nennt man Weltmodell.",
+    "Drei neue Studien zeigen laut dem Bericht, wie die Teile dieses Projekts zusammenpassen, und wo die Physik Grenzen setzt. Genannt werden Fortschritte bei der Roboterplanung, ein effizienteres Training und die Korrektur von Fehlern. Die Teile müssen aber noch zusammenwachsen.",
+    "## Hintergrund",
+    "LeCun hat Meta Ende 2025 verlassen, nachdem er zwölf Jahre lang die KI-Forschung des Unternehmens geprägt hatte. Als einen Grund nannte er den wachsenden Fokus des Konzerns auf große Sprachmodelle. Danach gründete er das Pariser Startup AMI Labs und sammelte nach Angaben des Berichts mehr als eine Milliarde US-Dollar ein.",
+    "Während ein Großteil der Branche immer größere Chatbots trainiert, konzentriert sich LeCun auf Systeme für Robotik, Industrie und tragbare Geräte, die in der physischen Welt arbeiten sollen."
+   ],
+   "quellen": [
+    {
+     "titel": "Three studies from Meta and AMI Labs back Yann LeCun's bet on JEPA world models over large language models",
+     "url": "https://the-decoder.com/three-studies-from-meta-and-ami-labs-back-yann-lecuns-bet-on-jepa-world-models-over-large-language-models/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Verfolge, ob JEPA-basierte Ansätze in Robotik-Demos praktisch eingesetzt werden.",
+    "Vergleiche die Argumente für Weltmodelle mit der Sicht, dass Sprachmodelle ausreichen."
+   ],
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Fortschritt laut Quelle",
+    "balken": [
+     {
+      "label": "Nur qualitativ",
+      "wert": 1,
+      "anzeige": "keine Zahlen im Material"
+     }
+    ]
+   },
+   "quelle": "Fachpresse",
+   "datum": "",
+   "kennzahlen": [
+    {
+     "label": "Finanzierung AMI Labs",
+     "wert": "mehr als 1 Mrd. US-Dollar (laut Bericht)"
+    },
+    {
+     "label": "LeCun bei Meta",
+     "wert": "12 Jahre"
+    }
+   ],
+   "signal": "LeCun setzt auf Weltmodelle statt allein auf Sprachmodelle; Studien sollen Fortschritte zeigen, die Quelle nennt aber keine konkreten Messwerte.",
+   "link": "https://the-decoder.com/three-studies-from-meta-and-ami-labs-back-yann-lecuns-bet-on-jepa-world-models-over-large-language-models/",
+   "linkLabel": "Originalartikel bei THE DECODER",
+   "id": "drei-studien-stutzen-lecuns-jepa-weltmodelle-gegenuber-sprac",
+   "hinzugefuegt": "2026-11-28T02:44:00Z"
+  },
+  {
    "titel": "llama-cpp-rdna-boosts: AMD-spezifischer Fork von llama.cpp",
    "kurz": "Ein Entwickler berichtet, dass ein Patch-Set für llama.cpp auf AMD-Grafikkarten Prefill und Token-Generierung deutlich beschleunigt. Die Zahlen stammen aus seinem eigenen Setup und sind laut ihm nicht verallgemeinerbar.",
    "artikel": [
@@ -24750,8 +24800,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-27T20:13:45Z",
-  "neueFunde": 2,
+  "letzterScan": "2026-11-28T02:44:00Z",
+  "neueFunde": 1,
   "standAktualisiert": "2026-11-27T11:26:56Z"
  }
 }
