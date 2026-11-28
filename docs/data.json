@@ -4779,6 +4779,148 @@
  ],
  "radar": [
   {
+   "titel": "Google DeepCrossAttention: Transformer-Residualverbindungen dynamisch steuern",
+   "kurz": "Google Research stellt DeepCrossAttention (DCA) vor, eine Architekturerweiterung für Transformer, die laut Herstellerangabe gleiche Modellqualität bis zu dreimal schneller erreicht. Die Methode wurde auf der ICML 2025 vorgestellt.",
+   "artikel": [
+    "Bei tiefen neuronalen Netzen werden Transformer durch sogenannte Residualverbindungen („Skip-Connections“) trainierbar. Sie leiten die ursprüngliche Eingabe direkt am Layer vorbei und addieren sie zum Ausgang. Das Problem dabei: Alle früheren Schichten werden gleich gewichtet, wodurch feine Details über viele Layer verwässern können.",
+    "## Dynamisches Routing statt starrer Addition",
+    "DeepCrossAttention (DCA) ersetzt die starre Addition durch ein gelerntes Routing. Pro Token berechnet ein leichtgewichtiges Modul Mischgewichte, die von einer festen, trainierbaren Basis und einer eingabeabhängigen Projektion abhängen. Jede Schicht kann so frühere Schichten gezielt auswählen. Tiefen-Cross-Attention bedeutet dabei: Die Aufmerksamkeit läuft nicht über Tokens einer Sequenz, sondern über die Schichten eines Netzes.",
+    "## Angaben aus dem Paper und vom Hersteller",
+    "Laut Google erreicht DCA in Tests mit C4- und LM1B-Datensätzen die Leistung klassischer Transformer in bis zu fünfmal weniger Trainingsschritten. Für ein Perplexity-Ziel von unter 14 auf LM1B benötigte ein Standard-Transformer 42 Layer, DCA kam mit 30 Layern aus. Die Parameterzahl steige dabei nur um weniger als 0,2 Prozent. Diese Zahlen stammen aus Googles eigenen Angaben und sind nicht unabhängig geprüft.",
+    "## Nachtraining möglich",
+    "Laut Blog lässt sich DCA so initialisieren, dass es sich zunächst wie ein Standard-Residualnetz verhält. Dadurch kann es auch nachträglich auf einen bereits vortrainierten Transformer aufgesetzt werden. Auf LM1B senkte das die Perplexity um 0,19, bei normalem Weitertraining nur um 0,02.",
+    "## Einordnung",
+    "Die Diskussion auf Hacker News erhielt rund 415 Punkte. Die Autoren sehen DCA als Teil einer breiteren Entwicklung hin zu dynamischem Residual-Routing bei großen Sprachmodellen."
+   ],
+   "quellen": [
+    {
+     "titel": "Supercharging transformer residual connections (Google Research)",
+     "url": "https://research.google/blog/supercharging-transformer-residual-connections/"
+    },
+    {
+     "titel": "Hacker News Diskussion",
+     "url": "https://news.ycombinator.com/item?id=50672565"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Die Methode ist eine Forschungsarchitektur; ohne eigenes Training lässt sie sich als Privatperson derzeit kaum direkt nutzen.",
+    "Wer Trainingsläufe von Transformern betreibt, kann prüfen, ob sich der Ansatz im eigenen Setup bestätigt.",
+    "Interessierte können das verlinkte Paper lesen, um Details zur Architektur nachzuvollziehen."
+   ],
+   "quelle": "Lab-Blog",
+   "datum": "2026-11-23",
+   "signal": "Google Research beschreibt eine Architekturänderung, die Trainingsschritte und Parameter sparen soll. Die Angaben stammen vom Hersteller und sind bisher nicht unabhängig bestätigt.",
+   "kennzahlen": [
+    {
+     "label": "Beschleunigung (Herstellerangabe)",
+     "wert": "bis zu 3x bei gleicher Qualität"
+    },
+    {
+     "label": "Trainingsschritte bis Standardleistung (Herstellerangabe)",
+     "wert": "bis zu 5x weniger"
+    },
+    {
+     "label": "Zusätzliche Parameter",
+     "wert": "< 0,2 % der Modellgröße"
+    },
+    {
+     "label": "Layer-Reduktion auf LM1B (Herstellerangabe)",
+     "wert": "42 → 30 Layer"
+    }
+   ],
+   "link": "https://research.google/blog/supercharging-transformer-residual-connections/",
+   "linkLabel": "Google-Blog lesen",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Layer für Perplexity < 14 auf LM1B (Herstellerangabe)",
+    "balken": [
+     {
+      "label": "Standard-Transformer",
+      "wert": 42,
+      "anzeige": "42 Layer"
+     },
+     {
+      "label": "DCA",
+      "wert": 30,
+      "anzeige": "30 Layer"
+     }
+    ]
+   },
+   "id": "google-deepcrossattention-transformer-residualverbindungen-d",
+   "hinzugefuegt": "2026-11-28T10:55:47Z"
+  },
+  {
+   "titel": "Videos mit LTX-2.5 auf AWS Trainium3 erzeugen",
+   "kurz": "Hugging Face hat getestet, wie sich das Videomodell LTX-2.5 mit Ton auf AWS Trainium3 nutzen lässt. Ein 10-Sekunden-Clip mit Ton entstand in 22 bis 23 Sekunden, sofern die Modelle geladen sind.",
+   "artikel": [
+    "Hugging Face hat auf einer von AWS bereitgestellten Trainium3-Maschine (trn3.48xlarge mit 64 NeuronCores) einen Monat lang Modelle getestet. Zum Abschluss wurde LTX-2.5 von Lightricks ausprobiert, ein Modell, das Video und Ton gemeinsam erzeugt.",
+    "## Ziel und Vergleich",
+    "Ziel war zum einen, Videos mit diffusers auf Trainium3 zu erzeugen, und zum anderen eine Geschwindigkeit, die nah an CUDA oder an der API von LTX liegt. Für CUDA fand der Autor keine belastbare Vergleichszahl. LTX gibt 6,8 Sekunden für einen 10-Sekunden-Clip mit 720p auf vier B200-GPUs an, ohne Angabe zur Messmethode. Verglichen wurde deshalb mit der Online-API von LTX, die laut LTX 23,7 Sekunden für einen 10-Sekunden-Clip in 1080p braucht. Der Aufbau auf Trainium3 erreicht laut Autor 22 bis 23 Sekunden für 2048×1024 und liegt damit knapp darunter.",
+    "## Ablauf eines Films",
+    "Ein Film ist eine JSON-Liste von Einstellungen mit Name und Prompt. Die Einstellungen lassen sich über zwei Schlüssel verketten: „from“ startet eine Einstellung mit den letzten Frames einer früheren, „to“ endet sie mit den ersten Frames einer späteren. So bleibt ein Motiv über einen Schnitt hinweg gleich. Der Autor nennt das Vorgehen „Pose to Pose“, angelehnt an die Animation: Zuerst wird die Schlüsselszene erzeugt, danach werden die davorliegenden und dahinterliegenden Einstellungen daran ausgerichtet.",
+    "Drei Pipelines teilen sich die Modelle von LTX-2.5: LTX2Pipeline erzeugt Einstellungen aus dem Prompt allein, LTX2ConditionPipeline erzeugt Einstellungen, die an Frames einer anderen anknüpfen. Beide folgen dem zweistufigen destillierten Rezept aus der Model Card mit 8 Schritten. Danach vergrößert LTX2LatentUpsamplePipeline die Latents um den Faktor 2, gefolgt von 3 Schritten. Der Filmteil umfasst laut Autor rund 160 Zeilen Python. Der Code liegt auf GitHub unter dacorvo/video-generation.",
+    "## Laufzeit auf Trainium3",
+    "Ohne Anpassungen läuft das Modell nicht auf den NeuronCores, weil der Transformer auf einen Kern nicht passt. Der erste lauffähige Versuch brauchte etwa 5 Minuten 20 Sekunden für einen 10-Sekunden-Clip bei 960×544, wobei die NeuronCores nur rund 45 Sekunden tatsächlich rechneten. Nach fünf Tagen Optimierung lag die Zeit bei 22 bis 23 Sekunden für 2048×1024 mit 32 Kernen. Laut Autor waren dafür Tensor-Parallelismus, die Aufteilung über mehr Kerne (Sequence-Parallelism als Fachbegriff für das Aufteilen der Videotokens) und eine schnellere Arbeit des Hosts nötig. Die größten Einsparungen kamen vom Host."
+   ],
+   "quellen": [
+    {
+     "titel": "Taking Trainium3 to the Track: Generating Videos with LTX-2.5",
+     "url": "https://huggingface.co/blog/video-trainium3"
+    },
+    {
+     "titel": "dacorvo/video-generation (Code)",
+     "url": "https://github.com/dacorvo/video-generation"
+    }
+   ],
+   "demo": "video",
+   "machen": [
+    "Mit einem JSON-Storyboard mehrere Einstellungen mit Prompt beschreiben und zu einem kurzen Film zusammensetzen.",
+    "Einzelne Einstellungen über Frame-Verkettung an vorherige Szenen anschließen, damit Figuren über Schnitte hinweg gleich bleiben."
+   ],
+   "quelle": "Lab-Blog",
+   "datum": "2026-11-27",
+   "kennzahlen": [
+    {
+     "label": "Hardware",
+     "wert": "AWS trn3.48xlarge, 64 NeuronCores (Herstellerangabe AWS)"
+    },
+    {
+     "label": "Zeit 10-s-Clip mit Ton, 2048×1024",
+     "wert": "22–23 s (auf halber Maschine, 32 Kerne)"
+    },
+    {
+     "label": "Vergleich LTX-API, 10-s-Clip 1080p",
+     "wert": "23,7 s (laut LTX)"
+    },
+    {
+     "label": "LTX-Angabe CUDA, 10-s-Clip 720p",
+     "wert": "6,8 s auf vier B200 (laut LTX, Messmethode unbekannt)"
+    }
+   ],
+   "signal": "Ein Lab-Test zeigt, dass ein Videomodell mit Ton auf Trainium3 in der Größenordnung der API-Zeit eines Anbieters läuft. Die Zahlen stammen vom Autor und sind nicht unabhängig geprüft.",
+   "link": "https://huggingface.co/blog/video-trainium3",
+   "linkLabel": "Zum Blog-Eintrag",
+   "vorschau": {
+    "szene": "balken",
+    "titel": "Zeit für 10-s-Clip mit Ton",
+    "balken": [
+     {
+      "label": "Erster Versuch, 960×544",
+      "wert": 320,
+      "anzeige": "5 min 20 s"
+     },
+     {
+      "label": "Optimiert, 2048×1024",
+      "wert": 22.5,
+      "anzeige": "22–23 s"
+     }
+    ]
+   },
+   "id": "videos-mit-ltx-2-5-auf-aws-trainium3-erzeugen",
+   "hinzugefuegt": "2026-11-28T10:55:47Z"
+  },
+  {
    "titel": "Drei Studien stützen LeCuns JEPA-Weltmodelle gegenüber Sprachmodellen",
    "kurz": "Drei neue Studien von Meta und AMI Labs zeigen Fortschritte bei JEPA-Weltmodellen in Robotik-Planung, effizienterem Training und Fehlerkorrektur. Die Bausteine müssen aber noch stärker zusammenwachsen.",
    "artikel": [
@@ -19099,6 +19241,52 @@
  ],
  "projekte": [
   {
+   "titel": "Der vergessene Architekt aus Lahore: Kamil Khan Mumtaz",
+   "kurz": "Der pakistanische Architekt Kamil Khan Mumtaz ist in seiner Heimat hoch geschätzt, im Ausland kaum bekannt. Seine Bauten verbinden moderne Architektur mit traditioneller Handwerkskunst aus Lahore und Pakistan.",
+   "artikel": [
+    "Kamil Khan Mumtaz wurde 1939 in Kalkutta geboren und wuchs im späteren Pakistan auf. Er studierte in London an der Architectural Association, wo er eine standardmäßige modernistische Lehre übernahm. Nach seiner Rückkehr nach Pakistan 1966 begann er als Architekt zu arbeiten.",
+    "Parallel engagierte er sich politisch als kommunistischer Aktivist und saß deshalb zweimal unter der Militärdiktatur im Gefängnis. Architektonisch blieb er modernistisch, interessierte sich aber zunehmend für das lokale Klima und regionale Baumaterialien.",
+    "## Umdenken in den 1970er-Jahren",
+    "In den 1970er-Jahren zweifelte Mumtaz an seinem Ansatz, weil er sich von seinem Publikum nicht verstanden fühlte. 1980 las er ein Buch des iranischen Architekten Nader Ardalan über die Sufi-Tradition in der persischen Architektur. Das veränderte seine Sicht laut eigener Aussage grundlegend.",
+    "Er berichtete, dass ihn das Buch als Marxisten, Materialisten, Atheisten und Modernisten erschüttert habe. Seitdem arbeitet er daran, ältere architektonische Traditionen Pakistans wiederzubeleben, besonders in Lahore. Zu seinen Projekten zählen Wohnhäuser, Büros, Moscheen und Schulen.",
+    "## Handwerk als Schlüssel",
+    "Traditionelle Elemente lassen sich zwar teilweise in Fabriken vorfertigen, der Einbau erfordert jedoch Können. Mumtaz fand in Pakistan noch Reste hereditärer Handwerkerfamilien, mit denen er zusammenarbeitete. Gemeinsam wiederentdeckten sie Techniken wie bestimmte Ziegelverbände, die flache Kuppel und Muqarnas, also ornamentale Gewölbe.",
+    "Die Werke wurden über die Jahre technisch anspruchsvoller. Die Quelle nennt als Beispiele das Chale-Sharif-Moschee-Projekt im Punjab sowie das Hauptquartier der Oxford University Press in Karachi, dessen getriebene Kupfer- und Bronzetüren ein Metallhandwerker gefertigt hat.",
+    "## Einordnung",
+    "Der Text stammt aus dem Magazin Works in Progress, das Mumtaz als einen der fähigsten und durchdachtesten Architekten der Gegenwart vorstellt. Die Fotostrecke zeigt überwiegend Arbeiten, die vorher außerhalb Pakistans kaum zu sehen waren."
+   ],
+   "quellen": [
+    {
+     "titel": "The greatest architect you've never heard of is in Pakistan – Works in Progress",
+     "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50659841"
+    }
+   ],
+   "demo": "bild",
+   "machen": [
+    "Traditionelle Ornamente wie Muqarnas oder Ziegelverbände als Inspiration für Entwürfe oder Fotoprojekte nutzen.",
+    "Recherchieren, wie sich moderne Architektur an Klima und lokale Materialien anpassen lässt.",
+    "Handwerksbetriebe in der eigenen Region suchen, die traditionelle Techniken noch beherrschen."
+   ],
+   "vorschau": {
+    "szene": "logo",
+    "titel": "Kamil Khan Mumtaz"
+   },
+   "tag": "Architektur",
+   "macher": "Kamil Khan Mumtaz",
+   "branche": "Architektur",
+   "jahr": "1939",
+   "tools": [],
+   "kennzahlen": [],
+   "link": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+   "linkLabel": "Originalartikel lesen",
+   "id": "der-vergessene-architekt-aus-lahore-kamil-khan-mumtaz",
+   "hinzugefuegt": "2026-11-28T10:55:47Z"
+  },
+  {
    "titel": "OpenGame: Open-Source-Werkzeug will KI-Agenten in ein Spielestudio verwandeln",
    "kurz": "OpenGame ist ein Open-Source-Projekt auf GitHub, das laut Eigenbeschreibung Coding-Agenten wie Claude Code oder Codex in ein KI-Spielestudio verwandelt. Das Repository hat 694 Sterne und enthält 25 spielbare Vorlagen.",
    "artikel": [
@@ -24800,8 +24988,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-28T02:44:00Z",
-  "neueFunde": 1,
+  "letzterScan": "2026-11-28T10:55:47Z",
+  "neueFunde": 3,
   "standAktualisiert": "2026-11-27T11:26:56Z"
  }
 }
