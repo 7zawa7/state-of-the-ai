@@ -1,6 +1,42 @@
 {
  "news": [
   {
+   "titel": "Robotik-Startup Embo sammelt 110 Mio. Dollar für Weltmodell-KI ein",
+   "kurz": "Das Robotik-Startup Embo hat in einer Seed-Runde 110 Millionen Dollar eingesammelt, um eine KI für alltagstaugliche Roboter zu entwickeln. Laut Unternehmensangaben lernt das System aus Internetvideos und übt Bewegungen in Simulationen.",
+   "artikel": [
+    "Das Robotik-Startup Embo hat nach eigenen Angaben 110 Millionen Dollar in einer Seed-Finanzierungsrunde eingesammelt. Ziel ist ein Modell für intelligentere Roboter im Alltag. Angeführt wurde die Runde von Andreessen Horowitz; weitere Investoren sind Khosla Ventures, DST Global und Nvidia. Diese Angaben stammen vom Unternehmen selbst.",
+    "## Ein Weltmodell als Grundlage",
+    "Embo setzt auf ein sogenanntes Weltmodell. Dabei handelt es sich um ein KI-System, das lernt, wie sich Objekte bewegen und wie physikalische Wechselwirkungen ablaufen. Vortrainiert wird es mit großen Mengen an Internetvideos. Anschließend übt die KI Bewegungsabläufe in simulierten Szenarien und wird danach mit Erfahrungsdaten einer Flotte humanoider Roboter feinjustiert.",
+    "Laut Embo sollen heutige Roboter häufig scheitern, wenn sie ungewohnte Situationen antreffen. Das Unternehmen will dem entgegenwirken, indem es ein Modell von Grund auf mit Verstärkendem Lernen trainiert. Verstärkendes Lernen bedeutet, dass ein System durch Versuch und Belohnung dazulernt.",
+    "## Ein wachsendes Feld",
+    "Embo ist nicht allein. Laut dem Bericht gelten sogenannte Welt-Aktionsmodelle als nächster Ansatz in der Robotik. Dabei liefern Weltmodelle vorgestellte künftige Bilder an eine vortrainierte Robotik-KI. Auch World Labs, gegründet 2024 von Stanford-Professorin Fei-Fei Li, sammelte laut Bericht 230 Millionen Dollar für sogar räumliche Intelligenz ein; auch dort sind Andreessen Horowitz und Nvidia beteiligt."
+   ],
+   "quellen": [
+    {
+     "titel": "Robotics startup Embo raises $110 million in seed funding to build world-model AI for robots – The Decoder",
+     "url": "https://the-decoder.com/robotics-startup-embo-raises-110-million-in-seed-funding-to-build-world-model-ai-for-robots/"
+    }
+   ],
+   "demo": "modell",
+   "machen": [
+    "Verfolge, ob Weltmodelle künftig in Haushaltsrobotern ankommen, um die Entwicklung im Alltag einzuschätzen.",
+    "Lies die Herstellerangaben zu Embo kritisch, da bisher keine unabhängigen Leistungsdaten im Material stehen."
+   ],
+   "vorschau": {
+    "szene": "netz",
+    "zeilen": [
+     "Video-Daten",
+     "Weltmodell",
+     "Simulation",
+     "Roboter-Flotte"
+    ]
+   },
+   "bereich": "Agenten",
+   "datum": "2026-05-17",
+   "id": "robotik-startup-embo-sammelt-110-mio-dollar-fur-weltmodell-k",
+   "hinzugefuegt": "2026-11-28T18:46:53Z"
+  },
+  {
    "titel": "Verbotene Nvidia-Blackwell-Chips in Shanghaier Rechenzentrum aufgetaucht",
    "kurz": "Laut einer Recherche von Bloomberg haben zwei chinesische Firmen Nvidia-Blackwell-Chips in einem Rechenzentrum in Shanghai installiert, das mit Alice Huang in Verbindung steht. Der Export dieser Chips nach China ohne US-Lizenz ist verboten.",
    "artikel": [
@@ -19241,6 +19277,70 @@
  ],
  "projekte": [
   {
+   "titel": "KI macht Self-Hosting wieder Spaß",
+   "kurz": "Der Entwickler Jan-Lukas Else beschreibt, wie KI-Coding-Agenten den Aufwand für seine selbst betriebene Infrastruktur senken. Dadurch probiert er wieder mehr Neues aus und automatisiert Updates und Deployments.",
+   "artikel": [
+    "Jan-Lukas Else betreibt seit vielen Jahren eigene Dienste auf Servern zu Hause und auf einem VPS. Eine Zeit lang ließ seine Lust am Ausprobieren nach, weil die Wartung des Vorhandenen genügte. In den letzten Monaten ist sie laut seinem Blog jedoch zurückgekehrt, und er nennt KI als einen wichtigen Grund dafür.",
+    "## Weniger Reibung",
+    "Seine Infrastruktur liegt größtenteils in Git-Repositories, etwa als Docker-Compose-Dateien und Skripte. Dadurch können KI-Coding-Agenten daran arbeiten wie an jedem anderen Softwareprojekt. Neue Dienste ausprobieren oder Konfigurationen anpassen erfordert laut Else deutlich weniger Aufwand als früher, als er Changelogs und Dokumentation lesen und Fehler suchen musste.",
+    "## Technologien, die er bisher gemieden hat",
+    "NixOS, ein Linux-System, das ganze Systemkonfigurationen deklarativ beschreibt, nutzt er mit KI-Hilfe nun ausgiebiger auf seinem Heimserver. Für seinen VPS baut er zudem ein auf Debian basierendes bootc-Image, also ein startbares Container-Image des Betriebssystems. Das Setup dauerte laut Else mit KI einen halben Tag; ohne KI hätte es vermutlich mindestens eine Woche gedauert.",
+    "## Automatisierung",
+    "Build-, Update- und Deployment-Prozesse hat er weitgehend automatisiert. Das Tool Renovate erstellt Pull Requests für Software-Updates, die er oft nur prüfen und zusammenführen muss, auch unterwegs am Handy. Ein Git-Push startet GitHub Actions oder Forgejo Actions, die Container bauen und Änderungen ausrollen.",
+    "## Eigene Werkzeuge",
+    "Für kleinere Probleme, für die es keine passende Software gibt, baut er inzwischen lieber eigene Tools, etwa zum automatischen Herunterladen von Rechnungen oder E-Papers. Diese schreibt er oder lässt sie von einer KI in Go erstellen und passt sie genau an seine Bedürfnisse an. Die gesamte Strecke von der Idee bis zum laufenden Dienst auf dem Heimserver sei dadurch deutlich einfacher geworden."
+   ],
+   "quellen": [
+    {
+     "titel": "AI made self-hosting fun again – Jan-Lukas Else (Blog)",
+     "url": "https://janlukas.blog/posts/ai-self-hosting"
+    },
+    {
+     "titel": "Diskussion auf Hacker News",
+     "url": "https://news.ycombinator.com/item?id=50660180"
+    }
+   ],
+   "demo": "code",
+   "machen": [
+    "Eigene Dienste wie einen Dateiserver oder eine Medienbibliothek zu Hause mit KI-Hilfe einrichten und Schritt für Schritt erweitern.",
+    "Kleine Automatisierungen bauen, etwa für wiederkehrende Downloads oder Dateiverwaltung, die nur den eigenen Bedarf abdecken.",
+    "Konfigurationen in einem Git-Repository ablegen und Updates mit einem Tool wie Renovate automatisch vorschlagen lassen."
+   ],
+   "projekte": true,
+   "macher": "Jan-Lukas Else",
+   "branche": "Software / Self-Hosting",
+   "jahr": 2026,
+   "tools": [
+    "Docker Compose",
+    "NixOS",
+    "bootc",
+    "Renovate",
+    "GitHub Actions",
+    "Forgejo Actions",
+    "Go"
+   ],
+   "kennzahlen": [
+    {
+     "label": "Hacker-News-Punkte",
+     "wert": "1141"
+    }
+   ],
+   "link": "https://janlukas.blog/posts/ai-self-hosting",
+   "linkLabel": "Originalbeitrag lesen",
+   "vorschau": {
+    "szene": "terminal",
+    "titel": "git push",
+    "zeilen": [
+     "> git push origin main",
+     "✓ Pipeline gestartet",
+     "+ Container-Image gebaut",
+     "● Deployment auf Heimserver aktiv"
+    ]
+   },
+   "id": "ki-macht-self-hosting-wieder-spas",
+   "hinzugefuegt": "2026-11-28T18:46:53Z"
+  },
+  {
    "titel": "Der vergessene Architekt aus Lahore: Kamil Khan Mumtaz",
    "kurz": "Der pakistanische Architekt Kamil Khan Mumtaz ist in seiner Heimat hoch geschätzt, im Ausland kaum bekannt. Seine Bauten verbinden moderne Architektur mit traditioneller Handwerkskunst aus Lahore und Pakistan.",
    "artikel": [
@@ -24988,8 +25088,8 @@
   }
  ],
  "meta": {
-  "letzterScan": "2026-11-28T10:55:47Z",
-  "neueFunde": 3,
-  "standAktualisiert": "2026-11-27T11:26:56Z"
+  "letzterScan": "2026-11-28T18:46:53Z",
+  "neueFunde": 2,
+  "standAktualisiert": "2026-11-28T18:46:53Z"
  }
 }
